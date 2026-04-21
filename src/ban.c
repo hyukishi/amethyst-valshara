@@ -1264,6 +1264,9 @@ bool check_expire( BAN_DATA *pban )
 
 void dispose_ban ( BAN_DATA *pban , int type)
 {
+  BAN_DATA **first;
+  BAN_DATA **last;
+
   if ( !pban )
         return;
 
@@ -1273,9 +1276,25 @@ void dispose_ban ( BAN_DATA *pban , int type)
         return;
   }
 
+  if ( type == BAN_SITE )
+  {
+        first = &first_ban;
+        last = &last_ban;
+  }
+  else if ( type == BAN_CLASS )
+  {
+        first = &first_ban_class;
+        last = &last_ban_class;
+  }
+  else
+  {
+        first = &first_ban_race;
+        last = &last_ban_race;
+  }
+
   UNLINK( pban,
-    (type==BAN_SITE)?first_ban:(type==BAN_CLASS)?first_ban_class:first_ban_race,
-    (type==BAN_SITE)?last_ban:(type==BAN_CLASS)?last_ban_class:last_ban_race,
+    *first,
+    *last,
     next, prev );
   free_ban( pban );
   return;
@@ -1297,4 +1316,3 @@ void free_ban( BAN_DATA *pban )
      DISPOSE( pban->ban_time );
   DISPOSE( pban );                                          
 }
-

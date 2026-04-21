@@ -109,21 +109,16 @@ CON_PLAYING)
         char            ttbuf[MAX_INPUT_LENGTH];
 
         ttbuf[0] = '\0';
-        sprintf(buffer, "%sPlayers %s[%sGod Version -? for 
-Help%s]\n\r---------------------------------\n\r",s3,s2,s3,s2);
+        sprintf(buffer, "%sPlayers %s[%sGod Version -? for Help%s]\n\r---------------------------------\n\r", s3, s2, s3, s2);
 
         if (index(flags, '?')) {
             strcat(retbuf,color_str(AT_PURPLE,ch));
             strcat(retbuf,buffer);
             strcat(retbuf,"[-]z=zone\n\r");
-            strcat(retbuf,"[-]e=experience a=alignment q=gold m=gains 
-n=diety b=odds k=kills\n\r");
-            strcat(retbuf,"[-]i=idle l=levels t=title h=hit/mana/move 
-s=stats r=race f=fighting\n\r");
-            strcat(retbuf,"[-]d=linkdead g=God o=Mort 
-[1]Mage[2]Cleric[3]War[4]Thief[5]Druid\n\r");
-            strcat(retbuf,"[-][v]=invis lev 
-[6]Monk[7]Barb[8]Sorc[9]Paladin[!]Ranger[@]Psi\n\r");
+            strcat(retbuf,"[-]e=experience a=alignment q=gold m=gains n=diety b=odds k=kills\n\r");
+            strcat(retbuf,"[-]i=idle l=levels t=title h=hit/mana/move s=stats r=race f=fighting\n\r");
+            strcat(retbuf,"[-]d=linkdead g=God o=Mort [1]Mage[2]Cleric[3]War[4]Thief[5]Druid\n\r");
+            strcat(retbuf,"[-][v]=invis lev [6]Monk[7]Barb[8]Sorc[9]Paladin[!]Ranger[@]Psi\n\r");
             strcat(retbuf,"\n\rStatus Bar Key:\n\r");
             strcat(retbuf,color_str(AT_DGREY,ch));
             strcat(retbuf,"---------------\n\r");
@@ -250,34 +245,28 @@ person->timer);
                                 strcat(tbuf, "]");
 				break;
 			    case 'h':
-				sprintf(ttbuf, "Hit:[%-4d/%-4d] 
-Mana:[%-4d/%-4d] Move:[%-4d/%-4d] ", person->hit, person->max_hit, 
-person->mana, person->max_mana, person->move, person->max_move);
+				sprintf(ttbuf, "Hit:[%-4d/%-4d] Mana:[%-4d/%-4d] Move:[%-4d/%-4d] ",
+					person->hit, person->max_hit, person->mana, person->max_mana,
+					person->move, person->max_move);
 				strcat(tbuf, ttbuf);
 				break;
 			    case 's':
-				sprintf(ttbuf, "[S:%-2d I:%-2d W:%-2d 
-C:%-2d D:%-2d CH:%-2d L:%-2d] ",
-                                        get_curr_str(person), 
-get_curr_int(person), get_curr_wis(person),
-                                        get_curr_con(person), 
-get_curr_dex(person), get_curr_cha(person),
-                                        get_curr_lck(person));
+				sprintf(ttbuf, "[S:%-2d I:%-2d W:%-2d C:%-2d D:%-2d CH:%-2d L:%-2d] ",
+					get_curr_str(person), get_curr_int(person), get_curr_wis(person),
+					get_curr_con(person), get_curr_dex(person), get_curr_cha(person),
+					get_curr_lck(person));
 				strcat(tbuf, ttbuf);
                                 break;
                             case 'v':
                                 sprintf(ttbuf, "INV:[");
                                 if (DBW_IS_IMMORTAL(person) && 
 !IS_NPC(person) && person->pcdata->wizinvis)
-				    sprintf(ttbuf + strlen(ttbuf), "%-3d] 
-", person->pcdata->wizinvis);
+				    sprintf(ttbuf + strlen(ttbuf), "%-3d] ", person->pcdata->wizinvis);
 				else if (IS_AFFECTED(person, 
 AFF_INVISIBLE))
-				    sprintf(ttbuf + strlen(ttbuf), "1  ] 
-");
+				    sprintf(ttbuf + strlen(ttbuf), "1  ] ");
 				else
-				    sprintf(ttbuf + strlen(ttbuf), "0  ] 
-");
+				    sprintf(ttbuf + strlen(ttbuf), "0  ] ");
 				strcat(tbuf, ttbuf);
 				break;
 			    case 'f':
@@ -352,4 +341,3 @@ void dale_who(CHAR_DATA * ch, char *argument)
 
     send_to_pager_color(buf,ch);
 }
-

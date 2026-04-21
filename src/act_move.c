@@ -602,7 +602,7 @@ ROOM_INDEX_DATA *generate_exit( ROOM_INDEX_DATA *in_room, EXIT_DATA **pexit )
 	  bxit->distance = fulldist - distance;
 	}
     }
-    (EXIT_DATA *) pexit = xit;
+    *pexit = xit;
     return room;
 }
 
@@ -2863,4 +2863,3 @@ ch_ret pullcheck( CHAR_DATA *ch, int pulse )
      ch_printf (ch, "You see no %s here.\n\r", arg);
      return;
   }
-

@@ -23,7 +23,11 @@
 #include <assert.h>
 /*cbusch was here*/
 #include <dlfcn.h> /*this might not be necessary for your UNIX machine.*/
-#include "../eliza/chatlink.h"
+#if defined(__has_include)
+#  if __has_include("../eliza/chatlink.h")
+#    include "../eliza/chatlink.h"
+#  endif
+#endif
 #include "multiclass.h"
 /* force the who command to require an argument (should use cset) */
 /* #define REQWHOARG */
@@ -41,24 +45,6 @@
   #include <sys/cdefs.h>
 #else
   #include <re_comp.h>
-#ifndef MUD_H
-#define MUD_H
-
-
-// Character macros
-#define GET_INTF(ch) ((IS_NPC((ch))) ? INT_DEFAULT : ((ch)->pcdata->interface))
-#define IS_NPC(ch) (xIS_SET((ch)->act, ACT_IS_NPC))
-#define IS_IMMORTAL(ch) (get_trust((ch)) >= LEVEL_IMMORTAL)
-#define IS_HERO(ch) (get_trust((ch)) >= LEVEL_HERO)
-#define IS_AV(ch) (get_trust((ch)) >= LEVEL_AVATAR)
-
-
-// Skill-related macros
-#define ASSIGN_GSN(gsn, skill) do { if ((gsn) = skill_lookup((skill))) == -1) fprintf(stderr, "ASSIGN_GSN: Skill %s not found.\n", (skill)); } while(0)
-
-
-// Link list management macros
-#define UNLINK(link, first, last, next, prev) do { if (!(link)->prev) (first) = (link)->next; else (link)->prev->next = (link)->next; if (!(link)->next) (last) = (link)->prev; else (link)->prev; } while(0);
 #endif
   #include <sys/time.h>
 #endif
@@ -1015,6 +1001,12 @@ typedef enum { TO_ROOM, TO_NOTVICT, TO_VICT, TO_CHAR, TO_CANSEE } to_types;
    AT_TOPCOLOR
  } at_color_types;
  #define AT_MAXCOLOR	(AT_TOPCOLOR-AT_COLORBASE)
+
+ struct at_color_type
+ {
+   char *name;
+   sh_int def_color;
+ };
  
 #define INIT_WEAPON_CONDITION    12
 
@@ -5552,11 +5544,6 @@ void Win32_Exit(int exit_code);
 #define MAX_RGRID_ROOMS		4096 /* for rgrid - Drac */
 #define SAVEVERSION		   3 /* for revert and version - Kyorlin */
 
- struct at_color_type
- {
-   char *name;
-   sh_int def_color;
- };
 /* for recent -- Kyorlin */
 extern RECENT_DATA * recent_first;
 extern RECENT_DATA * recent_free;

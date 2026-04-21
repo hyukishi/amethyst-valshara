@@ -24,7 +24,7 @@ NEED_CRYPT = -lcrypt
 #OPT_FLAG = -finline-functions -funroll-loops -fdefer-pop -fstrength-reduce
 OPT_FLAG = -DDNS_SLAVE
 
-C_FLAGS = $(OPT_FLAG) -O -g3 -Wall -Wuninitialized $(PROF) $(NOCRYPT) $(DBUGFLG) -DSMAUG $(SOLARIS_FLAG)
+C_FLAGS = $(OPT_FLAG) -std=gnu89 -fcommon -O -g3 -Wall -Wuninitialized $(PROF) $(NOCRYPT) $(DBUGFLG) -DSMAUG $(SOLARIS_FLAG)
 L_FLAGS = $(OPT_FLAG) $(PROF) $(SOLARIS_LINK) $(NEED_CRYPT)
 #D_FLAGS : For DNS slave process no linking in extra libs for this
 D_flags = $(PROF) $(SOLARIS_LINK)

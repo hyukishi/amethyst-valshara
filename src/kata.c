@@ -25,7 +25,7 @@
 
 void kata( CHAR_DATA *ch, CHAR_DATA *victim)
 {
-  int damage = number_range(1, ch->level[best_fighting_class(ch)]);
-  global_retcode = damage( ch, victim, damage, gsn_claw );
+  int dam = number_range(1, ch->level[best_fighting_class(ch)]);
+  global_retcode = damage( ch, victim, dam, gsn_claw );
   return;
 }

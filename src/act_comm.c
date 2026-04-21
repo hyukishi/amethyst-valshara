@@ -3651,8 +3651,7 @@ void do_interface(CHAR_DATA *ch, char *argument)
 {
     
     if (IS_NPC(ch)) {
-        send_to_char("Creatures such as yourself can't see the world in 
-any other way!\n\r", ch);
+        send_to_char("Creatures such as yourself can't see the world in any other way!\n\r", ch);
         return;
     }
     
@@ -3699,10 +3698,8 @@ any other way!\n\r", ch);
     else {
         ch->pcdata->interface = INT_DEFAULT;
         send_to_char("Interface set to Default!\n\r", ch);
-        send_to_char("Interface can be: dale/silly, smaug, 
-merc/envy\n\r",ch);
+        send_to_char("Interface can be: dale/silly, smaug, merc/envy\n\r", ch);
         do_colorize(ch, "rmdesc 7 s");
         do_colorize(ch, "rmname 7 s");
     }
 }
-

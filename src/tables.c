@@ -1425,22 +1425,6 @@ bool load_class_file( char *fname )
     struct class_type *class;
     int cl = -1;
     int tlev = 0;
-#include <stdlib.h>
-#include "structs.h"
-
-// Define table size limits
-#define MAX_CLASS 1000
-#define MAX_LANG 500
-#define MAX_TONGUE 500
-
-// Forward declarations
-void fread_class(FILE *fp, CLASS_DATA **first_class, CLASS_DATA **last_class);
-void fread_lang(FILE *fp, LANG_DATA **first_lang, LANG_DATA **last_lang);
-void fwrite_class(void);
-void fwrite_langs(void);
-
-// Load classes table from file
-void load_classes() {
     FILE *fp;
 
     sprintf( buf, "%s%s", CLASS_DIR, fname );
@@ -1641,11 +1625,6 @@ void load_classes( )
     }
     return;
 }
-    if (!(fp = fopen(CLASS_FILE, "r"))) {
-        perror("Load_classes");
-        return;
-    }
-
 
 void write_class_file( int cl )
 {
@@ -2637,7 +2616,6 @@ void load_skill_table()
 	top_sn = 0;
 	for ( ;; )
 	{
-    for (;;) {
 	    char letter;
 	    char *word;
 
@@ -3036,17 +3014,16 @@ void fread_cnv(FILE * fp, LCNV_DATA **first_cnv, LCNV_DATA **last_cnv)
 	if (letter == '~' || letter == EOF)
 	    break;
 	ungetc(letter, fp);
-	CREATE(cnv, LCNV_DATA, 1);
+		CREATE(cnv, LCNV_DATA, 1);
 
-	cnv->old = str_dup(fread_word(fp));
-	cnv->olen = strlen(cnv->old);
-	cnv->new = str_dup(fread_word(fp));
-	cnv->nlen = strlen(cnv->new);
-        letter = fread_letter(fp);
-        if (letter == '*') {
-	fread_to_eol(fp);
-    }
-}
+		cnv->old = str_dup(fread_word(fp));
+		cnv->olen = strlen(cnv->old);
+		cnv->new = str_dup(fread_word(fp));
+		cnv->nlen = strlen(cnv->new);
+		fread_to_eol(fp);
+		LINK(cnv, *first_cnv, *last_cnv, next, prev);
+	    }
+	}
 
 void load_tongues()
 {
@@ -3115,4 +3092,3 @@ void fwrite_langs(void)
     fclose(fp);
     return;
 }
-

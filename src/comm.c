@@ -217,7 +217,7 @@ int 		    maxdesc;
 char *		    alarm_section = "(unknown)";
 #ifdef DNS_SLAVE
 pid_t slave_pid;
-static int slave_socket = -1;
+int slave_socket = -1;
 #endif
 
 /*
