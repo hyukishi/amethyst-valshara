@@ -1,0 +1,1145 @@
+#AREA   New Hope Sewers~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+1 115 1 1
+$
+
+#RESETMSG A drop of water drips from above, echoing a sound down the tunnels.~
+
+#FLAGS
+0
+
+#ECONOMY 0 162450000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#15301
+imp~
+the imp~
+A mischievous imp lurks in the shadows waiting to pounce upon an unsuspecting passerby.
+~
+Eager to test his prowess in battle, this young imp bares his fangs at you.
+He is trying to strike fear in your heart.
+~
+16842785 0 -50 C
+0 0 94 11d1+0 0d0+1
+0 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+39 8 0 0 16384 16384 0
+0 0 1031 0 0 0 0 0
+#15302
+imp evil large~
+a large imp~
+A large evil imp bares its claws as you pass.
+~
+He looks back at you with his beady little eyes and a snarl on his face.
+You are pretty sure you can best him in regards to combat.
+~
+35 0 -500 C
+3 0 25 35d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+39 8 0 0 16384 16384 0
+0 0 3 0 2048 0 0 0
+#15303
+man beast minotaur unusual~
+the minotaur~
+An unusual half man, half beast minotaur roams here.
+~
+A small half man, half beast, with a slight muscle build showing that it may be
+a bit of a challenge to beat, if nothing else then no piece of cake, so to
+speak.
+~
+16777281 0 0 C
+4 0 94 5d2+15 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 13
+0 0 0 0 0
+89 8 0 0 512 512 0
+0 0 65543 0 0 0 0 0
+#15304
+kobold~
+the kobold~
+A kobold with a sickly grin on its face is here.
+~
+He looks back at you with his beady little eyes. With a snarl he attacks.
+You are sure you can beat in combat.
+~
+16777281 0 -100 C
+0 0 94 1d5+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+44 8 0 0 16384 16384 0
+0 0 3 0 0 8192 0 0
+#15305
+bat~
+bat~
+A bat hovers nearby with bloody fangs.
+~
+As this bloodsucking creature flies past you, you notice the tiny black
+eyes that stare at your jugular vein.  This little black bat has the
+intentions of drinking your blood until there is none left in your body.
+~
+16777281 524288 0 C
+2 0 0 5d2+15 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 13
+0 0 0 0 0
+23 8 0 0 128 128 2
+0 0 0 0 0 0 3 0
+#15306
+centipede~
+a centipede~
+A gigantic centipede is running along the ground, its many legs moving in unison.
+~
+A surprisingly large specimen of bug, this is almost as tall as you, if you
+wanted to stand it up on end, though most likely you should wait 'til after
+it's dead to do that.  It looks to be pretty strong, a good testament to what
+else could be living down here.
+~
+16842817 4194816 0 C
+6 11 25 0d0+0 1d4+6
+0 2000
+112 112 1
+15 13 13 17 13 13 13
+0 0 0 0 0
+83 8 0 0 256 256 0
+0 0 132 0 0 0 0 0
+#15307
+large bat~
+large bat~
+You barely make out a set of large bat eyes in the darkness.
+~
+The larger variety of it's genre, it's a lot more intimidating then it's
+smaller cousin you'd be more familiar with from the upper areas of this
+academy.  It's a good 3 feet tall at least, and it's teeth are an even better
+couple inches long, and very sharp, and very much stained red.
+~
+16842817 524800 0 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 5 13 13
+0 0 0 0 0
+23 8 0 0 128 128 1
+0 0 32769 0 0 0 3 0
+#15308
+mist~
+mist~
+A thick mist plays with your senses.
+~
+Something unknown, something foreign, is here, and at the same time not here.
+This doesn't seem to have any physical form, yet seems to be very capable of
+inflicting great damage to you, and it looks to be created from some higher
+source.
+~
+16777281 2130432 -50 C
+7 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+56 8 0 0 8192 8192 2
+0 0 0 0 0 0 33554432 0
+> death_prog 100~
+mpgoto 11287
+~
+|
+#15309
+bone naga~
+the bone naga~
+A bone naga rears up on its tail, ready to strike at you.
+~
+Possessing the lower body of a snake and the upper body of a skeleton,
+this creature is something to be careful of.
+~
+16777281 0 -200 C
+5 0 88 55d0+1 0d0+0
+0 0
+112 112 2
+13 13 13 13 1 13 0
+0 0 0 0 0
+62 8 0 0 1024 1024 0
+0 0 66561 0 2048 0 4 0
+#15310
+rat~
+a large grey rat~
+A large rat scuttles across your path, eyes glowing in the dark.
+~
+This is one large rat.  You would not want to allow him to bite you.
+His grey fur is matted from blood and dirt, and his eyes seem to
+watch your every movement.
+~
+16842817 4194816 0 C
+5 11 25 1d10+75 1d4+3
+0 2000
+112 112 0
+15 13 13 14 13 13 13
+0 0 0 0 0
+77 8 0 0 128 128 0
+0 0 1775 0 0 0 1 0
+#15311
+black ant~
+a black ant~
+A giant black ant is moving about the corridor.
+~
+Much in the same freakish way the centipede's have grown to enormous sizes,
+these ants are the size of a middle-aged man easily.  They are also covered
+front to end with scales, giving them a toughness that can resist some weapons
+without much difficulty.
+~
+97 0 -1000 C
+8 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+18 13 13 13 3 13 13
+0 0 0 0 0
+20 8 0 0 256 256 0
+0 0 4 96 0 5120 1 0
+#15312
+red ant~
+a red ant~
+A giant red ant is moving about the corridor.
+~
+Another giant creature of the lower academy, this ant is the size of a shorter
+person like a pizie easily.  Like their cousin black ants, they too have
+scales covering their body, making many attacks difficult to accomplish.
+Of course, with great brute strength always comes a weakness...
+They are a cannibal sort of creatures that will devour their own to dominate,
+and this too may be of some use.
+~
+33 0 -1000 C
+9 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 2 13 13
+0 0 0 0 0
+20 8 0 0 256 256 0
+0 0 4 96 0 5120 0 0
+#15313
+big naga~
+big naga~
+A rather larger version of the bone naga is here.
+~
+~
+16777281 512 -200 C
+6 0 0 5d2+10 0d0+0
+0 0
+112 112 2
+13 13 13 13 1 13 13
+0 0 0 0 0
+62 8 0 0 1024 1024 0
+0 0 1 0 0 0 4 0
+#15314
+Firebrandt~
+Firebrandt~
+An injured adventurer is laying here, probably has been for some time now.
+~
+He looks to be not too old at all, but obviously someone who has done his share
+of adventuring and has probably slayed a monster or two in the process.
+He half lays, half sits up against a far wall, with visible wounds covering
+the better part of him, though one in particular looks bad: His leg looks to
+be gashed open just at the knee.  A crude splint fashioned from a slightly used
+torch and some torn cloth holds it together, but you can tell there is no
+way he's going to make it out of here with such damage.
+~
+1073741825 512 1000 C
+12 0 0 0d0+0 0d0+0
+0 0
+106 106 1
+13 13 13 13 3 13 13
+0 0 0 0 0
+2 8 0 0 1 1 0
+0 0 0 0 2048 0 64 0
+> greet_prog 100~
+if ispc($n)
+if position($i) == 6
+groan
+'Help me, whoever you are...  I've broken my leg and cannot stand on it to leave this place.  Please heal my wounds, for I shall be in your debt.
+endif
+endif
+~
+> fight_prog 75~
+mpecho Firebrandt clinches his teeth in pain as he steps onto his broken leg during the fight.
+mpat puff mpforce puff mpdamage firebrandt 10
+~
+> act_prog p A warm feeling fills your body.~
+if position($i) != 6
+'Thank you, but I think I'm fine now.  I believe I can even walk.
+else
+stand
+'Thank you, truly I owe you my life now.  I wish I had more to give you, but this is all I have on me that might be of any help to you, you can have it.
+mpoload 15304 1
+give crowbar $n
+'I was trying to find a way to open this door, when I was jumped by 10 red ants simultaneously.  I managed to take a couple of them down, but they backed me all the way up to this dead end.  Once they wounded me, they left me for dead.
+'All I can tell you is that I've heard that the key to this door is somewhere down in these sewers, though it must be hidden because I haven't been able to find it.  Hopefully you'll have better luck.
+endif
+~
+> act_prog p gives you antidote.~
+if position($i) != 6
+'Thank you, but I'm fine now and don't need anything more.
+else
+'hmm..antidote..this would work if I was poisoned, but I'm not.  I'll need something other then this.
+endif
+give antidote $n
+~
+> act_prog p gives you a red potion.~
+if position($i) != 6
+'Thank you, but I think I'm fine now.  I believe I can even walk.
+give 'red potion' $n
+else
+quaff 'red potion'
+mpecho Firebrandt quaffs a red potion.
+stand
+'Thank you, truly I owe you my life now.  I wish I had more to give you, but this is all I have on me that might be of any help to you, you can have it.
+mpoload 15304 1
+give crowbar $n
+'I was trying to find a way to open this door, when I was jumped by 10 red ants simultaneously.  I managed to take a couple of them down, but they backed me all the way up to this dead end.  Once they wounded me, they left me for dead.
+'All I can tell you is that I've heard that the key to this door is somewhere down in these sewers, though it must be hidden because I haven't been able to find it.  Hopefully you'll have better luck.
+endif
+~
+> act_prog p gives you~
+'Hmm, it doesn't look I can really use this item, thanks anyways...
+drop all
+~
+|
+#15400
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#15301
+skeletal remains~
+some skeletal remains~
+The skeletal remains of some person are scattered around the room, perhaps you should turn back...~
+~
+12 0 0
+0 0 0 0
+1 0 0 1
+#15302
+ant antennae~
+a giant ant's antennae~
+A fully removed ant's antannae was left here.~
+~
+5 536870912 8193
+0 1 1 0
+1 0 0 1
+E
+'antennae' 'ant' 'ants'~
+This antennae must have come from one large ant, it's over a foot long!
+It must have been chopped or somehow torn off from it's original owner.
+~
+#15303
+large iron key~
+large iron key~
+A large iron key has been left here.~
+~
+18 524288 1
+0 0 0 0
+5 0 0 1
+#15304
+crowbar~
+a large crowbar~
+A large, heavy crowbar is laying here, perhaps you can find a use for it.~
+~
+18 524288 8193
+0 0 0 0
+10 0 0 1
+E
+'crowbar' 'crow' 'bar'~
+Hmm...now what could you possibly find to do with this?
+~
+#15400
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#15301
+Underground Sewers~
+The light down here is very dim, or rather lack thereof.  Some light trails in
+from above, but otherwise it is totally pitch black down here, so artificial
+light is a must.  The floor is wet dirt, mud in most places, and the walls are
+made of large old bricks.  The roof curves in an arch and continues on to the
+north like a tunnel.
+~
+~
+0 0 13 100
+D0
+~
+~
+0 -1 15302
+S
+#15302
+Underground Sewers~
+To the south you can see a bit of light, denoting the way back up to the
+town.  Here the air is stale, not many seem to venture down here, not
+a lot of the time anyways.  It is damp and a cold wind blows from somewhere
+you can't figure, making a loud noise as it winds towards you, and is
+evidence that a way out is nearby.  Off to the northeast/southeast is the
+culd-de-sac, a good place to begin at.
+~
+~
+0 0 13 0
+D0
+~
+~
+0 -1 15310
+D2
+~
+~
+0 -1 15301
+D6
+~
+~
+0 -1 15303
+D8
+~
+~
+0 -1 15309
+S
+#15303
+Culdesac~
+This is the beginning of the northern side of the simple culdesac of the lower
+catacombs, where you can wind around in a constant manner to fight many things
+lurking about down here, and gain experience in the process.  It will continue
+east for 2 rooms before coming back in a full u-turn across the southern side.
+~
+~
+0 9 13 0
+D1
+~
+~
+0 -1 15304
+D9
+~
+~
+0 -1 15302
+S
+#15304
+Culdesac~
+You are walking along the northern side of the culdesac.  To the west leads on
+your way out, and further east will eventually end in a u-turn to come around
+on the southern side then back west as well.  In relation, you can hear heavy
+breathing and common sounds of life, the kind of mobs threatening to you.
+~
+~
+0 9 13 0
+D1
+~
+~
+0 -1 15305
+D3
+~
+~
+0 -1 15303
+S
+#15305
+Culdesac~
+This is the north horizontal side of the culdesac.  You can hear noises made by
+rather poor attempts of creatures lurking everywhere in the darkness around
+you.  Naturally it is best to be aware, when not being able to see the hand in
+front of your face all too well, there's easy chances likewise that just
+because you've passed by a spot that seemed desolate doesn't mean there isn't
+anything there now.
+~
+~
+0 9 13 0
+D3
+~
+~
+0 -1 15304
+D8
+~
+~
+0 -1 15306
+S
+#15306
+Culdesac~
+This is the opposite end of the entrance/exit room of the catacombs.  Thus
+going northwest or southwest doesn't really matter unless you're interest in
+going clockwise or counter-clockwise.  You notice the air here however is worse
+then far west, basically to the point where it reeks, it's almost unbeareable.
+The most obvious looking source seems to be a large grate on the lower east
+wall, large enough for a body to fit through without too much trouble.
+~
+~
+0 9 13 0
+D1
+~
+grate~
+16779303 15304 15321
+D7
+~
+~
+0 -1 15305
+D9
+~
+~
+0 -1 15307
+S
+#15307
+Culdesac~
+You are walking along the southern side of the culdesac, with a turn to the
+east here to start back west on the north side, or just go west here and
+do the same thing.  You stop to listen once more to the sounds around here, and
+ahead to the east you hear the following:something metal scraping, some heavy
+grunting, then the same scraping again, and all is quiet, for that part
+anyways.
+~
+~
+0 9 13 0
+D3
+~
+~
+0 -1 15308
+D6
+~
+~
+0 -1 15306
+S
+#15308
+Culdesac~
+You find yourself along the southern side of the culdesc, with another room
+to the east, or to the west towards the upper areas of the academy.  You
+squint your eyes and struggle to see about yourself, but can't see much,
+though you can hear plenty of movemtn all around you, giving that apprehensive
+feeling that no-telling-what can lunge at you any moment and end your short
+lived life far too early.
+~
+~
+0 9 13 0
+D1
+~
+~
+0 -1 15307
+D3
+~
+~
+0 -1 15309
+S
+#15309
+Culdesac~
+This is the beginning of the southern side of the simple culdesac of the lower
+catacombs.  You find as you travel away from the upper parts, the air thickens
+with a foul stench.  Here in the culdesac you have the chance to go around in
+a simple manner to gain experience fighting whatever may be creeping around
+in the dark.  You look to the east and estimate about another 2 rooms before
+coming back in a u-turn along the north side.
+~
+~
+0 9 13 0
+D1
+~
+~
+0 -1 15308
+D7
+~
+~
+0 -1 15302
+S
+#15310
+Underground Sewers~
+Despite the dampness of the surrounding walls and ground and the chilled from
+humid air, you find that you're getting used to this place without having
+realized it.  Far ahead south you can see a bit of light, which means an exit
+must be there.  That or the tunnel branches off to the northeast and northwest.
+~
+~
+0 9 13 0
+D2
+~
+~
+0 -1 15302
+D6
+~
+~
+0 -1 15311
+S
+#15311
+Underground Sewers~
+The light down here other then your own is still non existent.  You are
+standing in an almost narrow tunnel.  The walls are made of large, dirty bricks
+that look very old.  Some have even older looking spots of red from where some
+other poor person must have ended.  To the southwest would take you out of the
+tunnel and into the larger roomy area of the underground, and northeast the
+tunnel continues on in it's manner.
+~
+~
+0 9 13 0
+D6
+~
+~
+0 -1 15312
+D9
+~
+~
+0 -1 15310
+S
+#15312
+Underground Sewers~
+You are still walking down the tunnel.  You can't see far southwest but that is
+where the tunnel continues, back towards the entrance to these sewers
+probably.  Further northeast you can see a small speck of light flickering in
+the encompassing black.
+~
+~
+0 9 13 0
+D6
+~
+~
+0 -1 15313
+D9
+~
+~
+0 -1 15311
+S
+#15313
+Underground Sewers~
+The tunnel here takes a turn off it's course to the south, and continues on to
+the northeast, where you can see a small light just ahead.  Looking southwest
+you see nothing at all but black, and hear the usual noises echoing back and
+forth as things hidden search for prey.
+~
+~
+0 9 13 0
+D2
+~
+~
+0 -1 15314
+D6
+~
+~
+0 -1 15319
+D9
+~
+~
+0 -1 15312
+S
+#15314
+Underground Sewers~
+The brick walls of the tunnel come to an end here and the small space opens up
+into a large room, too large to see all of in the dark and from here.  To the
+north is a wall close by, but the tunnel turns northeast to southwest there,
+and you see flickers of a small light across the wall and shadows of things
+creeping around there.
+~
+~
+0 9 13 0
+D0
+~
+~
+0 -1 15313
+D1
+~
+~
+0 -1 15315
+S
+#15315
+Underground Sewers~
+You are in a small, single room section of the sewers, which
+consists of this and 3 other rooms to the east, south, and southeast.
+The ground here isn't made of the stone like the walls, the walls
+that line the rest of the sewers, but rather are made of tough dirt.
+~
+~
+0 9 13 0
+D1
+~
+~
+0 -1 15316
+D2
+~
+~
+0 -1 15318
+D3
+~
+~
+0 -1 15314
+D8
+~
+~
+0 -1 15317
+S
+#15316
+Underground Sewers~
+You are standing on the northeastern section of the room.  To the
+south of you the dirt gradually rises up a slope, producing something
+of a small hill.  Towards the west you see the way out back into the
+proper academy.
+~
+~
+0 9 13 0
+D2
+~
+~
+0 -1 15317
+D3
+~
+~
+0 -1 15315
+D9
+~
+~
+0 -1 15318
+S
+#15317
+Underground Sewers~
+Before you here is a large hill made of the packed, brown dirt that
+covers the floor in this section of the academy only.  Looking at the
+hill you notice a rather large hole in the center of it, something
+you cannot descend but looks rather conspicuous.
+~
+~
+0 9 13 0
+D0
+~
+~
+0 -1 15316
+D3
+~
+~
+0 -1 15318
+D7
+~
+~
+0 -1 15315
+> entry_prog 25~
+if ispc($n)
+if rand(50)
+mpechoat $n As you arrive into the room, and take notice of the small hill, something large and black crawls out of the hole.
+mpat 15317 mpmload 15311
+else
+mpechoat $n You come into the room, and see a huge red ant crawl out of the hole!
+mpat 15317 mpmload 15312
+endif
+endif
+~
+|
+S
+#15318
+Underground Sewers~
+You are at the southwestern corner of this room.  From here you can see the
+footsteps you've made while walking down in here trailing in the dirt.
+To the east the ground rises in a gradual increase, which forms a mound in
+to the southeastern corner of the room.  You know that to the north is the
+back to the main tunnel.
+~
+~
+0 9 13 0
+D0
+~
+~
+0 -1 15315
+D1
+~
+~
+0 -1 15317
+D6
+~
+~
+0 -1 15316
+S
+#15319
+Underground Sewers~
+You reach the end of the central tunnel of the sewers.  By now you must
+be right below one of the town buildings or something of significance,
+at the northeast end a large iron door is shut tightly and sealed.
+From the looks of the dead end this probably stopped being an actual part
+of some sewer system long ago, and must serve some other purpose for someone.
+~
+~
+0 1073741833 13 0
+D6
+~
+door~
+8389671 15303 15320
+D9
+~
+~
+0 -1 15313
+E
+door~
+The large iron door is covered mostly in rust from the many years it must
+have been down here so far, though the door's strength is still impossible
+to forceably break through.
+~
+> act_prog p Firebrandt rises from his rest.~
+mpat 15319 mpforce firebrandt sw
+mpat 15313 mpforce firebrandt sw
+mpat 15312 mpforce firebrandt sw
+mpat 15311 mpforce firebrandt sw
+mpat 15310 mpforce firebrandt s
+mpat 15302 mpforce firebrandt s
+mpat 15301 mpforce firebrandt u
+mpat 12413 mpforce firebrandt mpgoto 11288
+~
+|
+S
+#15320
+A small room~
+~
+~
+0 1073741832 1 0
+D9
+~
+door~
+8389671 15303 15319
+S
+#15321
+Small room~
+You are standing in a small room on the other side of the grating to the
+west of you.  From here a tunnel leads downwards into the further darkness,
+but a ladder is here leading all the way down from the looks of it.
+You can feel a slight breeze in here, but don't see where it could be
+coming from.
+~
+~
+0 1073741824 13 0
+D3
+~
+grate~
+16779303 15304 15306
+D5
+~
+~
+0 -1 15322
+S
+#15322
+Underground Sewers, B2~
+You're in the second basement of the sewers, though this doesn't appear
+to be sewers at all.  The space here is open, and it's difficult to find
+the walls from here in the darkness.  The ground is dry, and you can
+hear and somewhat make out a number of things moving about all around you.
+~
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 15324
+D1
+~
+~
+0 -1 15326
+D2
+~
+~
+0 -1 15328
+D3
+~
+~
+0 -1 15330
+D4
+~
+~
+0 -1 15321
+D6
+~
+~
+0 -1 15325
+D7
+~
+~
+0 -1 15323
+D8
+~
+~
+0 -1 15327
+D9
+~
+~
+0 -1 15329
+S
+#15323
+Underground Sewers, B2~
+Feeling your way in the darkness, past what little you can see from your
+own source of light, you can tell you're in the northwestern corner of the
+room.  The walls feel to be solid dirt with no reinforcement of any kind
+like the stone walls in the sewers above you.
+~
+~
+0 1073741833 13 0
+D1
+~
+~
+0 -1 15324
+D2
+~
+~
+0 -1 15330
+D8
+~
+~
+0 -1 15322
+S
+#15324
+Underground Sewers, B2~
+The walls of this room have been dug out unnaturally, meaning some amount
+of people with tools must have created this area below the sewers, but
+why anyone would build a tunnel system below them is a puzzle.  This
+does however explain to why the well has been dried up for years now,
+and the sewers connected to it.
+~
+~
+0 1073741833 13 0
+D1
+~
+~
+0 -1 15325
+D2
+~
+~
+0 -1 15322
+D3
+~
+~
+0 -1 15323
+D8
+~
+~
+0 -1 15326
+D9
+~
+~
+0 -1 15330
+S
+#15325
+Underground Sewers, B2~
+It's obvious since you stepped foot down here that you were not alone,
+with the amount of creatures lurking in the darkness obviously not
+trying too hard to keep from being known to you.  Still searching around,
+you find no sign of an entrance/exit anywhere here except for that
+ladder you initially came down from.
+~
+~
+0 1073741833 13 0
+D2
+~
+~
+0 -1 15326
+D3
+~
+~
+0 -1 15324
+D9
+~
+~
+0 -1 15322
+S
+#15326
+Underground Sewers, B2~
+As you walk around the openly-spaced area, you feel a slight breeze
+brush against your legs, but then it's gone...
+Peering about in the darkness, you see nothing but black spread to the
+west of you, north and south, but a nearby end of the room to the east
+of where you're standing, a dirt wall.
+~
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 15325
+D1
+~
+opening~
+258 -1 15331
+D2
+~
+~
+0 -1 15327
+D3
+~
+~
+0 -1 15322
+D7
+~
+~
+0 -1 15324
+D9
+~
+~
+0 -1 15328
+S
+#15327
+Underground Sewers, B2~
+~
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 15326
+D3
+~
+~
+0 -1 15328
+D7
+~
+~
+0 -1 15322
+S
+#15328
+Underground Sewers, B2~
+~
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 15322
+D1
+~
+~
+0 -1 15327
+D3
+~
+~
+0 -1 15329
+D6
+~
+~
+0 -1 15326
+D7
+~
+~
+0 -1 15330
+S
+#15329
+Underground Sewers, B2~
+~
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 15330
+D1
+~
+~
+0 -1 15328
+D6
+~
+~
+0 -1 15322
+S
+#15330
+Underground Sewers, B2~
+~
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 15323
+D1
+~
+~
+0 -1 15322
+D2
+~
+~
+0 -1 15329
+D6
+~
+~
+0 -1 15324
+D8
+~
+~
+0 -1 15328
+S
+#15331
+Underground Sewers~
+~
+~
+0 1073741833 13 0
+D3
+~
+opening~
+258 -1 15326
+S
+#15400
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+M 0 15302 1 15310
+M 0 15301 3 15303
+M 0 15303 2 15304
+M 0 15301 3 15303
+M 0 15301 3 15303
+M 0 15303 2 15304
+M 1 15305 4 15308
+M 1 15305 4 15308
+M 1 15305 4 15308
+M 1 15305 4 15308
+M 1 15309 1 15301
+O 0 15301 1 15315
+O 0 15302 1 15317
+M 1 15314 1 15319
+D 0 15319 6 2
+D 0 15320 9 2
+M 1 15304 4 15307
+M 1 15304 4 15307
+M 1 15304 4 15307
+M 0 15304 4 15307
+M 1 15310 2 15329
+M 1 15310 2 15329
+D 0 15306 1 2
+D 0 15321 3 2
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

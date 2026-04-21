@@ -1,0 +1,293 @@
+#AREA   Amethyst Mud School (Tutorial)~
+
+
+
+#VERSION 200
+#AUTHOR God~
+
+#RANGES
+1 1 1 115
+$
+
+#FLAGS
+4 60
+
+#ECONOMY 0 31249600
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#11701
+imp~
+the imp~
+A mischievous imp lurks in the shadows waiting to pounce upon an unsuspecting passerby.
+~
+Eager to test his prowess in battle, this young imp bares his fangs at you.
+He is trying to strike fear in your heart.
+~
+16777219 0 0 C
+0 0 94 11d1+0 0d0+1
+0 0
+112 112 0
+13 13 13 13 3 13 0
+0 0 0 0 0
+0 0 0 0 1 1 0
+0 0 1031 0 0 0 0 0
+> death_prog 100~
+mpgoto 11287
+mpat 11707 mpmload 11701
+mpat 11707 mpecho A new imp arises from the fallen place of the last one!
+~
+> act_prog p stops.~
+mppeace $n
+~
+|
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#11701
+Welcome to Amethyst Mud School, learning to walk~
+&WThis is a service I have decided to provide since I've had so many people
+come in here and not know how to talk or move or anything.  So we'll
+be going through it bit by bit, then hopefully you'll know enough commands
+to be able to move about the academy without dying a hundred times.
+The first thing to know is that a mud like Amethyst consists of lots
+of "rooms", which basically are seperated by "exits", the exits are
+usually seen after looking at the room description, and they are the
+basic north, northeast, east, southeast, south, southwest, west, northwest,
+down and up.  These can be done with simply n, ne, e, se, s, sw, w, nw,
+d, and u, respctively.  Sometimes you will come across exits that aren't
+so simple, being either hidden or using a keyword, such as in town at
+the gate you will type "gate" to leave through gate, and if you come
+across a crack in a wall by typing "crack".  See "&OHELP MOVEMENT&W"
+for more movement information.
+There is a single exit in this room, please move forward now.
+~
+0 2097160 0 100
+D0
+~
+~
+0 -1 11702
+D4
+~
+~
+2048 -1 13302
+S
+#11702
+The Mud School~
+&WNow, to leave the mud school at any time, just go up.
+When you see an &Oorange&W word in a room description while
+learning, that is a reference on something to type.  If a word is in
+<> such as "<item>" then you replace the <> and the inner word(s) with
+a substitute word, in this case the name of an item on you or on the
+ground, etc.  The orange word is usually capitalized, and commands do
+not need to be capitalized in order to work.
+To begin with you were given a weapon (now equipped on you) and a player's
+guide.  Typing "&OLOOK BOOK&W" will give you a list of help topics to
+refer to for information on a subject.
+~
+0 2097160 0 100
+D1
+~
+~
+0 -1 11703
+D2
+~
+~
+0 -1 11701
+D4
+~
+~
+2048 -1 13302
+S
+#11703
+Learning to speak/use channels~
+&WSee "&OHELP SAY&W" and "&OHELP CHANNELS&W" for information on speach
+and channels.
+Basically "say" is used to communicate with people only in the same
+room as you.  To talk to someone specific and privatly who is or isn't
+in the same room as you, use the command "tell" and 'reply".
+Channels are public, and spamming them, i.e. repeating a message several
+times or anything absurd such as bad language has penalties.  Again,
+looking at "&OHELP CHANNELS&W" will teach you to turn off and on certain
+channels, and how to use them and what each one is for.
+~
+0 2097160 0 100
+D3
+~
+~
+0 -1 11702
+D4
+~
+~
+2048 -1 13302
+D7
+~
+~
+0 -1 11704
+S
+#11704
+Learning to use/search for the help topics~
+&WJust about every single thing you would ever need to know is located
+in a help file, the hard part sometimes is finding the correct one.
+Using the command "&OCOMMANDS&W" gives a full list of available commands,
+also related is "&OSOCIALS&W" which gives expressive commands.
+For commands, simple type "&OHELP &W<full command name>"
+If you don't know specifically what you are looking for, try using the
+command "hlist", see "&OHELP HLIST&W".  This will allow you to search
+through several help files and you'll possibly be able to find it by
+yourself.  With all of these options unable to help you, try using a
+channel such as "ask" or "newbiechat".  When all else fails, then you
+can ask an immortal for assistance, and we appreciate players taking
+things into their own matters before asking us.
+~
+0 2097160 0 100
+D4
+~
+~
+2048 -1 13302
+D8
+~
+~
+0 -1 11703
+D9
+~
+~
+0 -1 11705
+S
+#11705
+Preparation for the Academy~
+&WThe purpose of the academy is to train your character through fighting
+the creatures that lurk inside.  The first thing you will want to do
+in the academy is to go to the practice room where you can learn to use
+skills and/or spells available to your class.  See "&OHELP PRACTICE&W" for
+more on that.  When you battle the mobiles in the academy, some will
+give you gold while others will give you certain miscellaneous pieces of
+equipment from armour to leggings.  Some things can be done with config
+like autoloot, meaning after you kill something you automatically take
+everything from it's corpse, and autosac which will sacrafice the creature
+for favor (see "&OHELP FAVOR&w") and a bit of extra gold.  See "&OHELP
+CONFIG&W" for more on configuration.  If you don't config autoloot, you
+will have to manually get items from it's corpse, see "&OHELP GET&W" to
+learn to do that.
+~
+0 2097160 0 100
+D3
+~
+~
+0 -1 11706
+D4
+~
+~
+2048 -1 13302
+D6
+~
+~
+0 -1 11704
+S
+#11706
+Preparation for the Academy pt. II~
+Having left off with getting equipment from the creature's corpse, you
+will now have to equip the item to make use of it.  See "HELP WEAR" for
+the syntax of the "wear" command and related commands.
+The academy is not an entirely easy place for many people, on your way
+down into the lower areas of it where you will encounter the beasts, you
+will notice a statue called the Adept of Kyorin.  The room where this
+stands is a safety room where no creature can move into, and the adept
+has healing powers which it will cast on you to help you recover.  Look
+at the adept when you encounter it to learn more on how to recover stats.
+Return there often between battles so you can safely heal and will take
+less risk of getting killed.  See "HELP DEATH" for some pointers on
+dying in Amethyst.  Also please note lastly that every time you go down a
+level the monsters will get tougher and tougher, so be sure that you're
+capable, and bring a light too, like a torch, for it is often too dark to
+see in the lower depths.
+~
+0 2097160 0 101
+D0
+~
+~
+0 -1 11707
+D1
+~
+~
+0 -1 11705
+D4
+~
+~
+2048 -1 13302
+S
+#11707
+An example in fighting~
+&WHere is an example of a creature you will come across in the academy.
+A simple Imp, it is stationary, waiting in specific spots to engage
+attack with someone wandering the academy first basement floor.  They can
+be tricky if you were to be attempting to make it outside having been injured
+seriously, and as such can be quite formidable.  Again, see "&OHELP COMBAT&W"
+for help on initiating and doing battle.  You may continually fight this
+mobile as many times as you can stand, but just don't overdo it and
+get killed...
+~
+0 2097160 0 100
+D0
+~
+~
+0 -1 11800
+D2
+~
+~
+0 -1 11706
+D4
+~
+~
+2048 -1 13302
+S
+#11800
+At the end of the mud school~
+&wNow you have learned about everything that you will need to learn
+to at least begin the real game, and hopefully pass through the academy.
+The very last things to mention are the commands &CTYPO&w, &CBUG&w, and 
+&CIDEA&w.  These three commands we put together so that people can give
+us feedback if we've missed something.  Please read the helpfiles on
+them and use them if necessary.  Under "idea" you may put in a request
+should there be something that has been overlooked in this tutorial.
+Also you may make use of the MMMB (Main Mortal Message Board) to post notes
+on to fellow mortals and immortals alike, which is located at the "Post
+Office" just southwest of Town Square in New Hope.
+~
+0 2097160 0 100
+D2
+~
+~
+0 -1 11707
+D4
+~
+~
+0 -1 13302
+S
+#0
+
+
+#RESETS
+M 0 11701 1 11707
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

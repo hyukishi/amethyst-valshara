@@ -1,0 +1,588 @@
+#AREA   Amethyst Academy~
+
+
+
+#VERSION 213
+#AUTHOR Kyorlin~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31251000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#13301
+Rufus trainer academy~
+Rufus~
+Rufus stands vigil here over the academy grounds.
+~
+An ancient knight wise in the ways of war, Rufus has volunteered his time to
+the training of new wouldbe adventures.  Though ravaged by time only the most
+foolhardy would challenge him to combat, as he performs his duties with the
+blessings of the gods, whom it would not be wise to anger.
+~
+3075 0 0 C
+10 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 3 0 0 3 2 0
+0 0 0 0 0 0 0 0
+#13302
+healer adept~
+The Adept of Kyorlin~
+An Adept of Kyorlin stands here helping those new to Amethyst
+~
+This is Toric, a Lord of Healing.  If you grovel before him, you might
+receive extra assistance.  Groveling before the Lords will not get you
+very far in the game, but honest play, helping others and strategy will.
+~
+3 4194472 1000 C
+25 0 94 30000d1+0 0d0+0
+100 0
+112 112 1
+13 13 13 13 13 13 0
+0 0 0 0 0
+0 9 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+#13303
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13304
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13305
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13306
+acadmey mob~
+a newly created acadmey mob~
+Some god abandoned a newly created acadmey mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13307
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13308
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13309
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#13310
+academy mob~
+a newly created academy mob~
+Some god abandoned a newly created academy mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#13301
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13302
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13303
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13304
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13305
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13306
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13307
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13308
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13309
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13310
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13311
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13312
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13313
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13314
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13315
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13316
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13317
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13318
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13319
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#13320
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#13301
+A Whole New World~
+Welcome to Amethyst.  You are standing in a room in which the gods of Amethyst
+have posted several signs to help those new to this realm.  If you feel 
+confident that you know the basics you may proceed downwards to recieve your
+equipment.  To look at the sign, type &OLOOK SIGN&z.  Remember the world of
+Amethyst is newly formed, so if you experience trouble please be patient, also
+if you need help, or have questions, or even wish to make a suggestion, don't
+hesitate to contact an immortal.
+~
+~
+0 0 13
+D5
+~
+~
+0 -1 13302
+E
+sign~
+Amethyst consists of several "rooms" that allow movement within the basic
+directions north, south, east, west, northwest, northeast, southwest, and
+southeast.  Standard abreviations of n, s, e, w, sw, se, nw, ne, d, and up may
+also be used.
+For other topics that may be of interest to a new adventurer, type &OLOOK GUIDE
+&z for a list of topics or see &OHELP COMBAT&z, and &OHELP RULES&z.
+~
+S
+#13302
+Amethyst Mud Academy~
+You have entered into the main part of the academy.  Below you lies the town
+square of New Hope.  You should only proceed this way if you are truely
+prepared as there is currently no way to return to the academy.  To the east,
+there is a room where you may practice skills.  It is recommended that you
+visit the trainer first thing.  To the west is a store that sells a few 
+essential supplies, while to the north you can proceed to practice the basics
+of combat and gain a set of equipment.
+~
+~
+0 0 13
+D0
+~
+~
+0 -1 13304
+D1
+~
+~
+0 -1 13303
+D5
+~
+~
+0 -1 12439
+S
+#13303
+Academy Training Room~
+You have entered into a large room to one side of the academy.  Judging from 
+the appearance of this room, it is used frequently, as all of the equipment
+within appears worn.  You should type &OPRACTICE&z to see what you can learn,
+and upon deciding what you would like to learn, &OPRACTICE <skill name>&z
+to learn it.
+~
+~
+0 0 13
+D3
+~
+~
+0 -1 13302
+S
+#13304
+Preparing for Combat~
+You are about to enter into an area with a few mobs in it.  If you have not
+done so already you may wish to type &OCONFIG +AUTOLOOT&z and &OCONFIG +AUTOSAC
+&zTo kill something simply type &OKILL&z and the name of what it is you wish
+to kill.  After you kill something you can wear the equipment it was carrying
+by typing &OWEAR&z and the name of the equipment.  To simplify things somewhat
+you can also type &OWEAR ALL&z which will attempt to wear anything you are
+carrying.
+~
+~
+0 4 13
+D0
+~
+~
+0 -1 13305
+D2
+~
+~
+0 -1 13302
+S
+#13305
+Choice of Directions~
+You are in the center of a large room that has passages leading off in every
+direction.  Distant howling sounds can be heard down the passages.  You get
+the feeling you should return here if you are injured or in need of food or
+drink.
+~
+~
+0 0 13
+D0
+~
+~
+0 -1 13309
+D1
+~
+~
+0 -1 13311
+D2
+~
+~
+0 -1 13304
+D3
+~
+~
+0 -1 13307
+D4
+~
+~
+0 -1 13313
+D5
+~
+~
+0 -1 13314
+D6
+~
+~
+0 -1 13310
+D7
+~
+~
+0 -1 13308
+D8
+~
+~
+0 -1 13312
+D9
+~
+~
+0 -1 13306
+S
+#13306
+Floating in a void~
+~
+~
+0 0 1
+D6
+~
+~
+0 -1 13305
+S
+#13307
+Floating in a void~
+~
+~
+0 0 1
+D1
+~
+~
+0 -1 13305
+S
+#13308
+Floating in a void~
+~
+~
+0 0 1
+D8
+~
+~
+0 -1 13305
+S
+#13309
+Floating in a void~
+~
+~
+0 0 1
+D2
+~
+~
+0 -1 13305
+S
+#13310
+Floating in a void~
+~
+~
+0 0 1
+D9
+~
+~
+0 -1 13305
+S
+#13311
+Floating in a void~
+~
+~
+0 0 1
+D3
+~
+~
+0 -1 13305
+S
+#13312
+Floating in a void~
+~
+~
+0 0 1
+D7
+~
+~
+0 -1 13305
+S
+#13313
+Floating in a void~
+~
+~
+0 0 1
+D5
+~
+~
+0 -1 13305
+S
+#13314
+Floating in a void~
+~
+~
+0 0 1
+D4
+~
+~
+0 -1 13305
+S
+#13315
+Floating in a void~
+~
+~
+0 4 1
+S
+#13316
+Floating in a void~
+~
+~
+0 4 1
+S
+#13317
+Floating in a void~
+~
+~
+0 4 1
+S
+#13318
+Floating in a void~
+~
+~
+0 4 1
+S
+#13319
+Floating in a void~
+~
+~
+0 4 1
+S
+#13320
+Floating in a void~
+~
+~
+0 4 1
+S
+#0
+
+
+#RESETS
+M 0 13301 1 13303
+M 0 13302 1 13305
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  13302 spec_cast_adept
+S
+
+
+#$

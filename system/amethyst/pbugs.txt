@@ -1,0 +1,105 @@
+[11174] Kyorlin: (06/03):  fix ed's on objs so they show the ed on partial strings
+[11173] Kyorlin: (06/04):  fix obj ed's so you can edit them
+[11208] Tristen: (06/06):  knight's mansion, not sure what room, or if this is tagged with room number, "look desk" gives a room description of some other room
+[11925] Hawkin: (06/17):  umm I may be wrong but it seems that the grok respawn is out of control..right now there is 25 in this spot... they dont roam
+[13304] Hawkin: (06/24):  ummm am I suppose to be able to use a shield and a TWO handed sword?
+[11003] Turgil: (09/10):  going south in this room puts you back in the room. was that intentional ?
+[12473] Valin: (11/11):  You see no door here.WHAAAAM!!!  You bash against the wall, but it doesn't budge.
+[13302] SoulReaper: (03/11):  A new character rolls an 18 for STR but starts the game with 16.  Is this suppose to happen?
+[11221] Gareth: (03/30):  (I am at the Altar in the Church and I cannot leave.
+[13336] Grock: (04/02):  Um when I killed firebrandit or who ever and he opend the door well um ... I AM STUCK AND THERE IS NO WHERE TO GO!!
+[13302] Grock: (04/02):  Yea it is me again.... Um your little say town thing isn't working it just says transfering....
+[12447] Gelroos: (04/09):  there is no bank :)
+[13336] Quasie: (04/14):  after you beat firebrandt the room has nothing in it!
+[11003] Ynnak: (04/18):  If you fill a container with blood, drinking it doesn't restore blood points.
+[    1] Remcon: (06/19):  when you die(if you have on autoloot and autosac) you see I see nothing like that in the corpse.I see nothing in the corpse.The corpse of (person) is not an acceptable sacrifice.(if a corpse is in the room)
+[ 3101] Turgil: (07/07):  able to scan even though I should be able to yet
+[11173] Kyorlin: (07/11):  exp in academy shows wrong amounts
+[  251] Kyorlin: (07/22):  ranks don't change with advance
+[11106] Stormwind: (07/28):  mobs wandering on the khelorn
+[ 1020] Szithal: (08/01):  spell exp
+[15218] Vansalon: (08/04):  Set my rooms to underground sector 13, yet i am still seeing the sun, etc
+[    8] Kyorlin: (08/08):  WHY IS THE LINK DEAD LIMBO ROOM CONNECTED????!?
+[13314] Deobolisk: (08/09):  FLEE never works
+[13303] Amethyst: (08/09):  My race is half-elf, but me languages gives me common at 100 and dwarven at 0
+[11005] Deobolisk: (08/09):  If I go south, i can endlessly go south and never leave the room to my south.
+[13302] Kyorlin: (08/10):  immune to magic doesn't work
+[12439] Vansalon: (08/11):  Ack crap, just typing cast gate crashes the mud
+[    7] XahXhaX: (08/16):  Immortalize works on level 90 not 100
+[12299] Stormwind: (08/17):  I have no clue where this room is...its connected to the swamp tho...no exits at all checked it with kyorlin...
+[11002] Deobolisk: (08/18):  my defensive style is frozen at 87%
+[ 2807] Stormwind: (08/19):  learning skills that are unlearnable with eq
+[12456] Deobolisk: (08/21):  my search % does not rise anymore.
+[13303] Myphos: (08/21):  reroll of stats does not give the result it says it will, i rerolled to 18/9/13/11/18/9/13 and in game it was 18/7/13/8/21/5/13 all of a sudden.
+[11112] Deobolisk: (08/22):  I am getting 0 XP for killing snapping turtles
+[11173] Kyorlin: (08/23):  off
+[    1] Porcelina: (08/23):  my body disappeared after i was killed
+[12439] Porcelina: (08/24):  that corpse thing has happened again
+[    1] Seawolf: (08/25):  I got killed by a Tempra guard and after I typed recall the guard got me back, finished me off and I recalled again.  At the moment I have -9hp and stil waiting to die .  The sThe sitaution has been like this for the past 45 mins
+[11112] Hacker: (08/26):  when in a fight, if you do a heal light right before the time you automatically heal(you get like 3 hp when you autoheal) you do not get the healing from Heal Light
+[11023] Hacker: (08/26):  my cure light spell won't raise above 90%
+[11140] Stormwind: (08/27):  hold doesn't let you hold lights anymore
+[29803] Dro'Xun: (08/31):  hp raised by eq stays when you remove it
+[11211] Hawkin: (08/31):  one of these exits I am sure is not suppose to be "somewhere"
+[12413] Alistora: (08/31):  well it's not a game bug, but I think it would help any lagged players if the text just popped in.
+[12428] Hawkin: (09/05):  tamp seems to no longer work...
+[12428] Hawkin: (09/05):  if there is a bag on the ground it sometimes is confused with the bag in ones inv
+[    1] SoulReaper: (09/05):  it seems that seawolf is negative hp and will not die  
+[32334] SoulReaper: (09/05):  I had him set nosummon to on .. maythat will help
+[ 1035] Elgluth: (09/08):  worth
+[11152] Elgluth: (09/08):  in khelorn
+[12220] Szithal: (09/08):  food and water and vampires
+[13442] SoulReaper: (09/09):  is the grub command working?  Or do I not have the trust level for it?  emailme@ soulsdomain@yahoo.com
+[12439] SoulReaper: (09/09):  Ok you want more details talk to me..  deleting a rooma nd then exiting to it crashes the mud
+[11018] Hawkin: (09/11):  The spell 'Midas Touch' is not working per its help file.  No gold is given for object
+[12480] Hawkin: (09/11):  my horse thinks I am still riding it.. I was killed riding it.. now I cant get back on
+[12480] Hawkin: (09/11):  the horse is not working at all
+[12460] Seawolf: (09/13):  All my damroll and hitroll turned negetive, armour deteriorated and luck pratically vanished.  This is the second time it happened to me.  Kyorlin fixed it the first time. Shoulder
+[11173] Kyorlin: (09/14):  GET_ADEPT
+[11173] Kyorlin: (09/14):  bsearch fix
+[11173] Kyorlin: (09/14):  polymorph code
+[11173] Kyorlin: (09/14):  sayspell
+[12463] Kyorlin: (09/15):  finish slist
+[11205] Kyorlin: (09/15):  min snoop value
+[  551] Seawolf: (09/16):  There is a problem with getting equipment.  Certain equipment such as an iron helmet and a longsword apparently can't be used unless you're a level 89 or 90 when these could be used previously.
+[11202] Necros: (09/16):  im a spazz im a spazz im a spazz im a spazz im a spazz im a spazz im a spazz im a spazz im a spazz im a spazz 
+[12460] Bacchylides: (09/17):  I was of the warrior class, now I am of the mage. My hitroll is now 1 and damroll is -2. Also, the amount of health I had has changed, I had over 200, now I only have 190. I'm missing a few practice sessions, as well. 
+[12460] Bacchylides: (09/17):  Oh yeah... Was multiclassed when I first logged in. Mage/blackbelt
+[    2] SoulReaper: (09/17):  OK I do not know what you did but it seems when ever any new player logs on it crashes
+[13308] Kyorlin: (09/19):  vampires and thief mages and drow
+[11100] Deobolisk: (09/19):  you have to be level 89 and 90 to use a minstrel's stuff
+[12465] Krist: (09/20):  when i log into the game my armor and weapon are never equiped even though i saved while i was wearing them
+[    1] Zhakar: (09/20):  all my spells, skills, weapons, and toungues are gone
+[11173] Kyorlin: (09/23):  spell_create_mob
+[11925] Seawolf: (09/25):  the command affects no longer works
+[12504] Krist: (09/25):  i cant play because about every second or so the game makes me go to sleep and i cant move
+[11173] Kyorlin: (09/25):  list
+[11208] Szithal: (09/30):  if a mob is blind it shouldn't be able to see to attack
+[12474] Magma: (10/01):  buy bag shouldn't give you an ammo bag, since there is a item just called bag
+[11001] Szithal: (10/01):  whois
+[13314] Hawkin: (10/11):  cragspider does not show his level in group display
+[13409] SoulReaper: (10/14):  While trying to set the level of a mob, the level shows up as diance., then there is a gap then '.  
+[    7] XahXhaX: (10/25):  the banker flag somehow makes the mobile afk...  if afk is disturbed then the banker flag is removed from the mobile
+[12442] Gandalf: (10/28):  maybe move regen should be slower...much slower (but not quite as bad as before)
+[12439] Supercow: (10/30):  when you move around, the little representation of you only works when you use the arrow picture buttons, 
+[12439] Supercow: (10/30):  otherwise it doesn't move if you just use regular mud commands
+[ 3102] Rainer: (11/01):  the cleric in the woods is not working...it shows spells are being casted but no affects occur
+[    7] XahXhaX: (12/07):  pccorpse need much longer timer...last like a minute now
+[11173] Kyorlin: (12/11):  prob with sz using one_argument
+[    7] XahXhaX: (12/12):  mobs can't yell for some reason...and I do actually need them to be able to
+[    7] XahXhaX: (12/12):  nevermind the yell part, guess it does work...stupid me
+[    7] XahXhaX: (12/13):  Dying doesn't seem to be adding to the number of times you've been killed by a mob...not sure about pkill
+[11216] Archat: (12/18):  There is major BUG in "get gold" command... (there was 124 gold, and i take ab 100 times 5 gold)
+[    7] XahXhaX: (12/18):  ARGH!!!  Why is a fountain a pill?  I hate this.
+[    9] Archat: (12/18):  I find a bug, but it bite me and run away.
+[    7] XahXhaX: (12/18):  AAAAAARRRGGGHHHHH!!  Now resets don't work right?  I hate smaug.
+[12465] XahXhaX: (12/21):  one of the antiflags, I think anticleric, makes an object (Sharp)
+[13409] SoulReaper: (12/22):  useing the command "oset <vnum> blah..." does not work.  Only "oset <name> blah..."  this could be dangerous...
+[13305] Elaseth: (12/30):  the flee command doesn't seem to work
+[    7] XahXhaX: (01/09):  so many mobs have tumble lately for no appropriate reason
+[11174] Kyorlin: (01/10):  what the heck is do_play??
+[12413] Kyorlin: (01/12):  meat from %s
+[    7] Kyorlin: (10/04):  immortalize
+[13345] Rowan: (10/10):  style doesnt work either
+[    1] Kyorlin: (11/04):  colorize
+[13301] Kyorlin: (11/04):  messages don't work

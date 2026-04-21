@@ -1,0 +1,299 @@
+#AREA   Cultist Temple~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+1 115 1 115
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31250000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#13100
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#13100
+final object~
+a newly created final object~
+Some god dropped a newly created final object here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#13001
+The Eastern Plains~
+You look down at the ground beneath your feet as you quickly move through the
+plains, not wanting to be here a minute longer than necessary.  Luckily you
+look up just as you come to a rather large tree.  Somehow in the middle of
+nowhere this tree seems to be surviving, despite what years of cold and harsh
+weather and the absence of any water for miles.  Many questions run through
+your mind on this peculiar occurrence, and what odd fate may have led you to
+it.  You study it over, and see many long, strong branches leading up to the
+top hidden in the green leafage.
+~
+~
+0 4 2 1
+D0
+~
+~
+0 -1 12258
+D1
+~
+~
+0 -1 12251
+D2
+~
+~
+0 -1 12250
+D6
+~
+~
+0 -1 12257
+D7
+~
+~
+0 -1 12259
+D8
+~
+~
+0 -1 12248
+D10
+~
+tree~
+592000 -1 13003
+S
+#13002
+An Underground stream~
+You fall through the middle of the tree, and hit the ground with much
+tumultuousness.  You straighten yourself, stand up, gather your bearings, and
+look at what is an underground stream flowing north.  Now you realize how the
+tree is living, but to why it was hollowed out you have yet to discover.  You
+also look upwards, this place is pretty dark, except for what light can enter
+in through the hole from which you entered.  It's pretty far up there, maybe if
+you had wings or something you could fly up there...
+~
+~
+0 4 13 0
+D0
+~
+~
+0 -1 13004
+D4
+~
+~
+64 -1 13001
+S
+#13003
+At the top of the large tree~
+You climb up into the tree only to find it is not what it appeared to be.
+It is hollow and...
+~
+~
+0 16777216 3 0
+D5
+~
+~
+0 -1 13004
+> act_prog p flies in from somewhere.~
+mpforce 0.$n d
+~
+|
+S
+#13004
+Following an underground stream~
+You look around the room, finding the only exit is following the stream to the
+north.  That or else the hole in the ceiling, which is too far above to jump
+even for a giant, and there is nothing to climb on to get up it.  The only way
+you can perceive of to get up through it would be to grow wings and fly or
+something, and that's not too likely to happen now is it?
+~
+~
+0 0 13 100
+D0
+~
+~
+0 -1 13005
+D4
+~
+~
+64 -1 13001
+> act_prog p falls from above.~
+mpechoat 0.$n You fall through the middle of the tree, and hit the ground with much tumultousness.  You straighten yourself, stand up, gather your bearings, and look at what is an underground stream flowing north.
+~
+> act_prog p flies in from above.~
+mpechoat 0.$n Luckily for you you were intelligent enough to be flying or you might have hurt yourself.
+~
+|
+S
+#13005
+Underground stream~
+The noise of the fast moving stream fills the otherwise empty, hollow corridors
+of the underground with the noise of the rustling water, this combined with the
+growing darkness as you venture away from the light from above would make it
+almost impossible to defend yourself if there's anything down here to attack
+you, even though there are only two directions.  You try to look ahead but
+cannot, perhaps you should sit and think of a better way out of here.
+~
+~
+0 265 13 0
+D0
+~
+~
+0 -1 13006
+D2
+~
+~
+0 -1 13004
+S
+#13006
+Following an underground stream~
+You can barely see anything, and the noise of the stream is starting to get
+on your nerves.  You look to the south and see light at the end of the tunnel,
+but to the north you literally can't see anything at all.  You also notice that
+the walls lining the tunnel to your sides aren't very far apart and not many
+people could fit in here probably.
+~
+~
+0 265 13 0
+D0
+~
+~
+0 -1 13007
+D2
+~
+~
+0 -1 13005
+S
+#13007
+Following an underground stream~
+You are too far from any light natural light source to see anything, thank
+goodness for your light, otherwise you'd be fumbling around in the darkness and
+probably you would get lost.  You look at the ground and walls to find that
+they are just simply dirt and mud.
+~
+~
+0 265 13 0
+D0
+~
+~
+0 -1 13009
+D2
+~
+~
+0 -1 13006
+S
+#13008
+A room hidden behind the dirt wall~
+You seem to have found some kind of hidden room behind the dirt wall.  Your
+hard work digging and having figured out the location of this room pays off in
+the treasures you find here.  There are many sorts, see what you can take.
+~
+~
+0 2060 2 0
+S
+#13009
+Following an underground stream~
+You speedily walk through the dark tunnels, a lingering sense of apprehenision
+weighs on you.  What could lurk in the darkness, under the cover of the sound
+of the stream?  You come to this region where the tunnel branches off, with
+the stream now continuing to northeast, and another path off to the west.
+~
+~
+0 265 13 0
+D2
+~
+~
+0 -1 13007
+D6
+~
+~
+0 -1 13010
+S
+#13010
+Following an underground stream~
+You walk along the stream, stubbing your toe on a rock in the darkness,
+almost falling over into the water.  You look at it in a bitter sort of way,
+tiring of the constant noise emitting from it.  It seems to be getting deeper
+to the northeast, compared to the shallower southwest.
+~
+~
+0 265 13 0
+D6
+~
+~
+0 -1 13011
+D9
+~
+~
+0 -1 13009
+S
+#13011
+Following an underground stream~
+You are walking along the side of the stream.  It is somewhat quieter currently
+than before.  Here the stream turns back onto it's original path heading due
+north.  You look down into the water and can't see the bottom, it must be very
+deep.
+~
+~
+0 265 13 0
+D9
+~
+~
+0 -1 13010
+S
+#13012
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#13100
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+O 0 11001 2 13001
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,55 @@
+#AREA   {PROTO} Baine's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Baine~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#41000
+Entrance to Ashton Village~
+Standing here at the ancient gates to Ashton Village. Crumbling stone can
+be seen strewn all about, implying old age. To the north can be seen a sign
+and a split in the paths
+~
+0 1073741824 1 0
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

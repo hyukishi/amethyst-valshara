@@ -1,0 +1,956 @@
+#AREA   Temple of the Gods~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+101 115 101 115
+$
+
+#RESETMSG ~
+
+#FLAGS
+4 60
+
+#ECONOMY 0 13420219
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#10201
+Larren~
+Larren~
+Larren the assitant sits on a chair in the corner, waiting for an assignment.
+~
+~
+2097155 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> speech_prog key~
+if name($n) == God
+or name($n) == Xero
+mpoload 10202
+give key $n
+else
+mptransfer $n 6
+endif
+~
+> all_greet_prog 100~
+if name($n) == Xero
+or name($n) == God
+else
+mptransfer $n 6
+mpoload 10202
+lock cab
+eat key
+endif
+~
+> act_prog p sits on an office chair.~
+if name($n) == Xero
+or name($n) == God
+else
+mpechoat $n You suddenly realize that might not be the greatest idea...
+mpforce $n stand
+endif
+~
+|
+#10202
+jz~
+J the bartender~
+J the bartender is standing behind the bar counter, waiting for you to decide.
+~
+Somehow he looks very out of place for these lands.  More of a simpler being
+than most, he's just human and that's about it.  He's dressed in a black shirt
+and pants, with a wet stain or two over spilled drinks.  He is cleaning a cup
+in a very usual manner, and watches you watching him, waiting for you to order
+something already.
+~
+67242051 0 0 C
+30 0 0 5000d1+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#10203
+vender vending machine~
+vender machine~
+A cigarette vending machine is set here next to the bar.
+~
+A laughable example of the latest in tests in biotechnology made by the gods,
+this poor soul has been converted into 99% machine for the purpose of producing
+and selling cigarettes to the immortals in their lounge!  To activate it's
+mechanisms, simply give it some gold by "GIVE [amount] COINS VENDER".
+The asking amount is 200 coins, for one pack of 20 cigarettes, since the money
+goes to a good cause, but anything above 1 coin will activate it (it's a very
+stupid machine, wasn't too bright as a player either).
+    /   / /// /// /   / /  /
+   // // /   / / /   / // /
+  / / / //  //  /   / // /
+ /   / /   / / /   / / //
+/   / /// / / /// / /  /
+~
+3 0 0 C
+54 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+25 25 25 25 25 13 25
+0 0 0 0 0
+88 3 0 0 0 0 0
+0 0 0 0 1056768 0 0 0
+> act_prog p coins.~
+mpgoto 11288
+mpoload 10216
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mptransfer puff
+mpforce puff 'abcdefg
+~
+> speech_prog p abcdefg~
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpforce puff 'hijklmn
+~
+> speech_prog p hijklmn~
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpforce puff 'opqrst
+~
+> speech_prog p opqrst~
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpoload 10217
+mpoload 10218
+empty cigarette
+fill cigarette tobacco
+drop cigarette
+mpforce puff 'uvwxyz
+~
+> speech_prog p uvwxyz~
+mptransfer puff 2
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+get cigarette
+put cigarette pack
+close pack
+mpgoto 10211
+drop pack
+~
+|
+#10204
+Pegasus~
+Pegasus~
+The legendary Pegaus is standing here before you.
+~
+~
+1090781441 524288 1000 C
+50 0 0 10000d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+86 3 0 0 0 512 0
+85 65 0 0 0 0 0 0
+#10205
+The lord of darkness, morgoth~
+the Lord of Darkness, Morgoth~
+Morgoth, the Darklord of Arda, sits here upon his throne.
+~
+Over Seven feet tall, the mightest of the Vala and Firstborn of Illuvatar sits
+upon his ebony black, skull embeded thrown staring out into the darkness.
+Close by his side sits the gigantic sword known as Grond.  Upon his head sits
+an iron crown, alight with the glow of three mystical Silmarils.
+~
+16777223 339739306 -1000 C
+0 0 0 1d1+200000000 100d100+100000
+10000000 0
+108 108 254
+18 18 18 18 18 18 18
+0 0 0 0 0
+90 0 0 0 0 0 20
+0 0 1574879 2105344 512 0 35131872 270371
+#0
+
+
+#OBJECTS
+#10201
+cabinet~
+a filing cabinet~
+A tall file cabinet is positioned along the western wall here.~
+~
+15 -2146959360 0
+101 1 10202 0
+1 0 0 0
+#10202
+key~
+cabinet key~
+A small key has been left here by someone.~
+~
+18 524288 1
+10201 0 10202 0
+1 0 0 0
+#10203
+file1~
+file1~
+File1 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10204
+file2~
+file2~
+File2 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10205
+file3~
+file3~
+File3 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10206
+file4~
+file4~
+File4 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10207
+file5~
+file5~
+File5 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10208
+file6~
+file6~
+File6 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10209
+file7~
+file7~
+File7 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10210
+file8~
+file8~
+File8 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10212
+file9~
+file10~
+File10 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10213
+marble barstool~
+one of the marble barstools~
+Several white marble barstools are set in front of the barcounter.~
+~
+12 0 0
+0 0 16 0
+1 0 0 0
+#10214
+immortals couch~
+the couch~
+A long white couch is positioned alongside the room for lounging purposes.~
+~
+12 0 0
+0 0 16 0
+1 0 0 0
+E
+'white' 'couch'~
+You see a great, long white couch, made for pure comfort, and of some of the
+finest materials available to the world.
+~
+#10215
+crystal chandelier~
+a crystal chandelier~
+A beautiful crystal chandelier hangs high overhead, lighting the entire temple.~
+~
+1 1 0
+0 0 0 0
+1 0 0 0
+#10216
+pack cigarettes~
+a pack of cigarettes~
+Oh Boy!  Somebody has left a pack of cigarettes sitting here for the taking.~
+~
+15 0 1
+21 1 0 0
+1 0 0 0
+#10217
+cigarette~
+a cigarette~
+A cigarette butt has been carelessly thrown away here.~
+~
+30 0 1
+10 10 0 0
+1 0 0 0
+#10218
+tobacco~
+some tobacco~
+A small amount of tobacco has been left here.~
+~
+32 0 1
+0 10 0 0
+1 0 0 0
+#10219
+ashtray~
+an ashtray~
+An ashtray is sitting on a coffee table next to the couch here.~
+~
+15 0 0
+100 0 0 0
+1 0 0 0
+#10250
+irequest board~
+the irequest board~
+XahXhaX's personal buglist board (A.K.A. the Immortal Request board) is here...~
+~
+13 1 0
+0 0 0 0
+1 0 0 0
+#10251
+discussion board~
+the discussion board~
+The discussion message board is here, post freely.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#10290
+time blade sword~
+the Sword of Time~
+A chrome-golden blade lies here.~
+~
+5 -2146950904 8193
+12 20 20 3
+18 2000000 200000 0
+#10292
+time leggings~
+the Leggings of Time~
+A pair of chrome-golden leggings lay here.~
+~
+9 -1073209088 33
+25 25 0 0
+25 500000 50000 0
+#10293
+time armlets~
+the Armlets of Time~
+A pair of chrome-golden armlets lay here.~
+~
+9 -1073209088 257
+25 25 0 0
+25 500000 50000 0
+#10294
+time ring~
+the Ring of Time~
+A chrome-golden ring lies here.~
+~
+34 -1073209088 3
+0 0 0 0
+1 900000 90000 0
+> wear_prog 100~
+mpechoat 0.$n Once you have slipped the ring unto your finger, an odd golden rift tears open in front of you, drawing you into it helplessly.
+mpechoaround 0.$n As $n puts on the Ring of Time, an anomalous rift opens up and swallows $m up completely, and $e is gone...
+mpechoat 0.$n _red Suddenly you are not here anymore... You are somewhere else.
+mpat hvak1 mpforce hvak1 ask What rift in time and space opens unto the world?
+mpat hvak2 mpforce hvak2 answer The Ring of Time has begun to resonate somewhere in the universe.
+mptransfer 0.$n 7
+~
+> remove_prog 100~
+mpechoat 0.$n You remove the ring from your finger, and see the golden rift of time and space open up again, pulling you away from here.
+mpechoat 0.$n _red Suddenly you are not here anymore...You are somewhere else.
+mptransfer 0.$n 13301
+~
+|
+#10295
+time helmet~
+the Helmet of Time~
+A chrome-golden helmet lies here.~
+~
+9 -1073209088 17
+60 60 0 0
+60 800000 80000 0
+#10296
+time cape~
+the Cape of Time~
+A golden cape lies here.~
+~
+9 -1073209088 1025
+10 10 0 0
+1 200000 20000 0
+#10297
+time shield~
+the Shield of Time~
+A chrome-golden shield lies here.~
+~
+9 -1073209088 513
+50 50 0 0
+10 800000 80000 0
+#10298
+time boots~
+the Sword of Time~
+A pair of chrome-golden boots lay here.~
+~
+9 -1073209088 65
+20 20 0 0
+20 400000 40000 0
+#10299
+time gauntlets~
+the Gauntlets of Time~
+A pair of chrome-golden gauntlets lay here.~
+~
+9 -1073209088 129
+20 20 0 0
+20 400000 40000 0
+#10300
+time armor~
+the Armor of Time~
+A chrome-golden suit of armor lies here.~
+~
+9 -1073209088 9
+100 100 0 0
+100 1000000 100000 0
+#0
+
+
+#ROOMS
+#10201
+Garren & Associates~
+You stand in the medium sized, one room office.  It's not incredibly large, but
+serves it's purpose.  There is a single desk in the middle of the room, towards
+the north wall, with a large black office chair standing out from behind it.
+Miscellaneous papers are scattered across it's top, as well as on top of
+several tall cabinets which line the western side of the room, each made of a
+simple metal and supporting three large drawers for the owner to log his
+many files into.  To the north as well, behind the desk and chair, is a window
+leading out somewhere into the world.
+~
+~
+0 8 0 100
+D0
+~
+~
+100665344 -1 13301
+D5
+~
+~
+0 -1 10207
+S
+#10202
+Messageboard Room of Immortals~
+You are in an empty room.
+~
+~
+0 1076895752 0 101
+D1
+~
+~
+0 -1 10208
+S
+#10203
+Coder's Sanctum~
+You are within the inner sanctum of the coders.  To the west you can return to
+the main council room.  Before you is a room filled with almost every 
+conceivable comfort you can imagine, probably a result of the endless creation
+taking place within.
+~
+~
+0 1076895752 0 100
+D8
+~
+~
+0 -1 10208
+S
+#10204
+High upon Mount Olympus~
+You stand upon a dark cloud, quite thin, yet terra firma nonetheless.
+Random spots of light flash through the ground, what must be lightning striking
+the world below, which you can see far off to the distance in the empty space,
+only filled by small spots far away, the stars occupying the sky.  Your own
+form is non existent, light seems to travel through you and everything else
+here, no mass seems to have physical matter to it.  A prismed gate stands
+here before you.  It too seems to be in a state without true form.  To pass
+into it would take strength unknown to most mortals, though undoubtly what lies
+beyond it may be heaven itself.
+~
+~
+0 1093935112 11 100
+D5
+~
+~
+2048 -1 6
+D10
+~
+gate~
+526337 -1 10205
+E
+gate~
+--                     --
+                  <-\()/->               <-\()/->
+                   \/  \/                 \/  \/
+                    /__\      .  '  .      /__\ 
+       --            /\    .     |     .    /\            --
+    <-\()/->       !_\/       '  |  '       \/_!       <-\()/->
+     \/  \/     !_/I_||  .  '   \'/   '  .  ||_I\_!     \/  \/
+      /__\     /I_/| ||      --- + ---      || |\_I\     /__\
+      /_ \   !//|  | ||  '  .   /.\   .  '  || |  |\\!   /_ \
+     (-   ) /I/ |  | ||       .  |  .       || |  | \I\ (-   )
+      \__/!//|  |  | ||    '     |     '    || |  |  |\\!\__/
+      /  \I/ |  |  | ||       '  .  '    *  || |  |  | \I/  \
+     {_ __}  |  |  | ||                     || |  |  |  {____}
+  _!__|- ||  |  |  | ||   *      +          || |  |  |  ||  |__!_
+  _I__|  ||__|__|__|_||          A          ||_|__|__|__||- |__I_
+  -|--|- ||--|--|--|-||       __/_\__  *    ||-|--|--|--||- |--|-
+   |  |  ||  |  |  | ||      /\-'o'-/\      || |  |  |  ||  |  |
+   |  |- ||  |  |  | ||     _||:<_>:||_     || |  |  |  ||- |  |
+   |  |- ||  |  |  | || *  /\_/-----\_/\  * || |  |  |  ||- |  |
+   |  |- ||  |  |  | ||  __|:_:_[I]_:_:|__  || |  |  |  ||- |  | 
+  _|__|  ||__|__|__|_||:::::::::::::::::::::||_|__|__|__||  |__|_
+  -|--|- ||--|--|--|-||:::::::::::::::::::::||-|--|--|--||- |--|-
+   jgs|- ||  |  |  | ||:::::::::::::::::::::|| |  |  |  ||- |  | 
+ ---------`````````````````````````````````````````````````---------
+~
+S
+#10205
+Temple of the Gods~
+You are standing in the entrance/exit room  of the 9 main rooms of the god's
+realm, the area where no mortal wanders unless they have proven themselves worthy and
+ and
+~
+~
+0 1076895752 0 100
+D0
+~
+~
+0 -1 10208
+D1
+~
+~
+0 -1 10206
+D3
+~
+~
+0 -1 10207
+D5
+~
+~
+0 -1 10204
+S
+#10206
+Temple of the Gods~
+Above here somewhere is the quarters of God, supreme entity of the immortals
+of Amethyst, though unless welcomed or invited you most likely do not want to
+disturb the room.  To the west is the entrance/exit room of the temple, and to
+the northwest is the center room, or rather main lounge room for immortals.
+~
+~
+0 1076895752 0 100
+D3
+~
+~
+0 -1 10205
+D4
+~
+~
+0 -1 8
+D7
+~
+~
+0 -1 10208
+S
+#10207
+Temple of the Gods~
+This is the immortal address room.  To go to a room type the immortal's name,
+or type &Olook addresses&w for a listing of people currently moved in.
+~
+~
+0 1076895752 0 100
+D1
+~
+~
+0 -1 10205
+D6
+~
+~
+0 -1 10208
+D10
+~
+puff~
+526336 -1 10212
+D10
+~
+xero~
+526336 -1 10201
+D10
+~
+Kortimbar~
+526336 -1 10213
+D10
+~
+Llanos~
+526336 -1 10214
+D10
+~
+Morgoth~
+526336 -1 10215
+D10
+~
+xahxhax~
+526336 -1 7
+E
+ad add addr addresses~
+&wXahXhaX  :The Consciousness of l0kI
+&wPuff     :Puff the Fractal Dragon, court jester esq.
+Xero     :Xero's office, headquarters of Player Relations
+Kortimbar:Kortimbar's room
+Llanos   :Llanos' Chilling room
+Morgoth  :The Lord of Darkness, Morgoth's Room
+~
+S
+#10208
+Immortal Lounge~
+This is the center room of the 9 main rooms, the lounge room.  To the east and
+northeast are two private rooms.  To the west and northwest are the two board
+rooms, and directly north the immortal bar.
+~
+~
+0 1076895752 0 101
+D0
+~
+~
+0 -1 10211
+D1
+~
+~
+0 -1 10209
+D2
+~
+~
+0 -1 10205
+D3
+~
+~
+0 -1 10202
+D6
+~
+~
+0 -1 10210
+D7
+~
+~
+0 -1 10203
+D8
+~
+~
+0 -1 10206
+D9
+~
+~
+0 -1 10207
+S
+#10209
+Discussion room~
+This is the message board to post personal messages on of conversation or
+discussion.  There are no rules of posting to this board, but things that
+actually concern something might be better posted on the west immortal
+board, northwestern coder board, or eastern request board.
+~
+~
+0 1076895752 0 103
+D3
+~
+door~
+8651809 -1 10208
+S
+#10210
+Immortal Request Board Room~
+You are in an empty room.
+~
+~
+0 1076895752 0 0
+D9
+~
+door~
+8651809 -1 10208
+S
+#10211
+Immortal Lounge, at the bar~
+Across the north side of the room is a fine marble barcounter, where the
+bartender of New Hope Inn, ever-friendly to the gods, wills his own time to
+serve them as they wish.  Feel free to sit at a barstool and order anything.
+~
+~
+0 1076895752 0 101
+D2
+~
+~
+0 -1 10208
+S
+#10212
+The court jester's room~
+This is the room of the jester, Puff.
+~
+~
+0 1073741824 0 102
+D5
+~
+~
+0 -1 10207
+S
+#10213
+Kortimbar's room~
+This room is FILTHY! All around the room lies abandoned prototype items,
+waiting for Kortimbar to pick them up again and get to work.
+There appears to be a tiny bit of furniture around here somewhere.
+ 
+You also see women's clothing strewn about. Odd...
+~
+~
+0 1073741824 1 0
+D5
+~
+~
+0 -1 10207
+S
+#10214
+Llanos' Chilling room~
+You are standing in Llanos' Chilling Room.... Even if Llanos isn't here
+you're welcome to take a nap, or just chill. But don't eat his cereal! 
+It's a very sacred thing to him... If he walks in on you, and you're
+eating his cereal...there's no telling what can happen. Watch your back!
+~
+~
+0 1073741836 1 0
+D5
+~
+~
+0 -1 10207
+S
+#10215
+The Lord of Darkness, Morgoth's Room~
+~
+~
+0 1073741824 1 0
+D5
+~
+~
+0 -1 10207
+S
+#10216
+Floating in a void~
+Daikini...come see me when you get on
+-XahXhaX
+~
+~
+0 1073741828 1 0
+S
+#10300
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+O 0 10201 1 10201
+P 0 10203 0 10201
+P 0 10204 0 10201
+P 0 10205 0 10201
+P 0 10206 0 10201
+P 0 10207 0 10201
+P 0 10208 0 10201
+P 0 10209 0 10201
+P 0 10210 0 10201
+P 0 10212 0 10201
+M 0 10201 1 10201
+O 0 11110 1 10203
+O 0 10219 1 10208
+M 0 10202 1 10211
+G 1 11211 1
+G 1 11210 1
+G 1 11209 1
+G 1 11207 1
+G 1 11206 1
+G 1 11205 1
+G 1 11204 1
+G 1 11203 1
+G 1 11202 1
+M 0 10203 1 10211
+O 0 10213 1 10211
+O 0 10214 1 10208
+O 0 10215 1 10208
+M 0 10205 1 10215
+M 0 1 1 10212
+O 0 10251 1 10209
+S
+
+
+#SHOPS
+ 10202    0  0  0  0  0   120  90         0 23    ; J the bartender
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

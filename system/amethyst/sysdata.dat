@@ -1,0 +1,50 @@
+#SYSTEM
+MudName	     Valshara~
+Highplayers    13
+Highplayertime Tue Sep  5 21:29:50 2000~
+CheckImmHost   0
+Nameresolving  1
+Waitforauth    0
+Readallmail    110
+Readmailfree   101
+Writemailfree  101
+Takeothersmail 110
+IMCMailVnum    0
+Muse           0
+Think          110
+Build          104
+Log            106
+Protoflag      106
+Overridepriv   114
+Msetplayer     110
+Stunplrvsplr   80
+Stunregular    15
+Gougepvp       40
+Gougenontank   80
+Bashpvp        40
+Bashnontank    80
+Dodgemod       2
+Parrymod       2
+Tumblemod      4
+Damplrvsplr    50
+Damplrvsmob    100
+Dammobvsplr    100
+Dammobvsmob    100
+Forcepc        110
+Guildoverseer  XahXhaX~
+Guildadvisor   XahXhaX~
+Saveflags      1957
+Savefreq       20
+Bestowdif      10
+BanSiteLevel   111
+BanRaceLevel   111
+BanClassLevel  111
+MorphOpt       1
+PetSave	     1
+IdentTries     1
+Newbie_purge	30
+Regular_purge	90
+Autopurge		1
+End
+
+#END

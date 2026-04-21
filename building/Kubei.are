@@ -1,0 +1,157 @@
+#AREA   {PROTO} Kubei's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Kubei~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#60000
+Sword of Power~
+Sword of Power~
+A Sword of Power stands here stuck in the ground~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#60001
+six-shooter pistol~
+six-shooter pistol~
+A six-shooter pistol lies here on the ground.~
+~
+56 1074274304 8193
+0 0 0 6
+1 60000 6000
+A
+56 225
+A
+56 95
+A
+56 88
+A
+56 221
+A
+56 89
+#60002
+bullet~
+a newly created bullet~
+Some god dropped a newly created bullet here.~
+~
+57 1073741824 1
+0 0 0 0
+1 0 0
+#60003
+Senzu Bean~
+Senzu Bean~
+A Senzu Bean lies here waiting to be eaten~
+~
+19 1073741824 16385
+0 0 0 0
+1 0 0
+A
+1 100000
+#60004
+Ryu's White Gi~
+Ryu's White Gi~
+Ryu's White Gi lies here crumbled on the ground before you~
+As you slip into Ryu's White Gi a huge flaming aura engulfs your body.~
+9 1073741825 9 255
+0 -3245 0 0
+14 0 0
+A
+1 18
+A
+3 18
+A
+31 18
+A
+2 18
+A
+5 18
+A
+25 18
+A
+4 18
+#0
+
+
+#ROOMS
+#60000
+Entrance to the Troll Shrine~
+You are standing at the entrance of the Troll Shrine, also known as
+Tishnuko.  Many troll live here, if you disturb their slumber then
+they will kill you.  Beware of these troll, they have sharp teeth
+and big pointy ears and big hair.  Leave them be or have bloodshed!
+~
+0 1073741824 0 0
+D1
+~
+~
+0 -1 60001
+S
+#60001
+Hallway to the sleeping chambers~
+Ahead of you, you hear snoring.  It shakes the walls horribly
+with great power making them tremble.  Get out of here before you
+are squashed like a very small insect!  To the north is the first 
+room in which the troll sleep.  Do not wake them!
+~
+0 1073741824 0 0
+D0
+~
+~
+0 -1 60002
+D3
+~
+~
+0 -1 60000
+S
+#60002
+Chamber 1~
+~
+0 1073741824 0 0
+D2
+~
+~
+0 -1 60001
+S
+#60009
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

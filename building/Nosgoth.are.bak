@@ -1,0 +1,86 @@
+#AREA   {PROTO} Nosgoth's area in progress~
+
+
+
+#VERSION 1
+#AUTHOR Nosgoth~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#HIGHECONOMY 0 0 0 0 0 -1
+
+#LOWECONOMY 0 0 0 0 0 -1
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#1200
+Wandering a path~
+The ground seems very untravelled in this area, you catch youself
+wondering if you should have come out here, You hear the howls of
+some beast, it sounds like there enraged, maybe you should turn back
+~
+0 1073741824 1
+D2
+~
+~
+0 -1 1201
+S
+#1201
+Continuing on a path~
+The stalagmites and stalagtites start to bend and twist here
+making you turn as you press on in you adventure. Dark shadows every
+where seem to leap out at you obsucring the areas true definitions
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 1200
+D8
+~
+~
+0 -1 1202
+S
+#1202
+Yet another bend~
+~
+0 1073741824 1
+D7
+~
+~
+0 -1 1201
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

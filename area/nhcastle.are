@@ -1,0 +1,2213 @@
+#AREA   New Hope Castle~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+1 115 1 115
+$
+
+#RESETMSG ~
+
+#FLAGS
+0
+
+#ECONOMY 0 31248220
+
+#CLIMATE 3 2 1
+
+#NEIGHBOR Graveyard~
+
+#NEIGHBOR The Western Plains~
+
+#NEIGHBOR The Eastern Plains~
+
+#NEIGHBOR City of New Hope~
+
+#NEIGHBOR City of New Hope Sector 2~
+
+#MOBILES
+#12501
+castle sentry~
+a castle sentry~
+A castle sentry stands posted here at the gate to New Hope Castle.
+~
+One of the guards to the gate of the castle of New Hope, this man shows no
+notice to your attention of him, but has probably been keeping a watch on
+you as far as you've been in sight of the castle, as so he does for all
+passerbys to the castle.  Clad head to toe in the royal armors and weaponry
+of the guards of New Hope, he looks both proud and grim, like he's ready
+to lay down his life for his homeland, though worn by boredom due to
+the ever-decreasing need for guards, as things here are peaceful and
+no threat has made it's way here in longer then his own lifespan so far.
+~
+1073741827 0 500 C
+50 0 0 0d0+0 0d0+0
+20 0
+112 112 1
+20 13 13 13 25 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+> act_prog p leaves down.~
+yell Get help!  Someone's fallen down into the moat!
+~
+|
+#12502
+castle guard~
+a castle guard~
+A castle guard stands aside of the door.
+~
+~
+1073741827 0 500 C
+70 0 0 0d0+0 0d0+0
+0 0
+110 110 1
+19 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+> act_prog p whispers to you 'alliance'~
+bow $n
+unlock door
+open door
+mpforce $n north
+close door
+lock door
+~
+|
+#12503
+castle guard~
+a castle guard~
+A castle guard walks the halls of the castle.
+~
+The Castle guard walks about the halls of the town, making sure things
+are secure and no troublemakers are about.
+~
+65 0 500 C
+40 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 3
+0 0 0 0 2048 0 128 524291
+> entry_prog 100~
+if inroom($i) == 12529
+open door
+endif
+~
+|
+#12504
+castle sentry~
+a castle sentry~
+A castle sentry is posted here to man the drawbridge lever.
+~
+One of the guards to the gate of the castle of New Hope, this man shows no
+notice to your attention of him, but has probably been keeping a watch on
+you as far as you've been in sight of the castle, as so he does for all
+passerbys to the castle.  Clad head to toe in the royal armors and weaponry
+of the guards of New Hope, he looks both proud and grim, like he's ready
+to lay down his life for his homeland, though worn by boredom due to
+the ever-decreasing need for guards, as things here are peaceful and
+no threat has made it's way here in longer then his own lifespan so far.
+~
+3 0 500 C
+50 0 0 0d0+0 0d0+0
+20 0
+112 112 1
+20 13 13 13 25 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+> time_prog 20~
+push lever
+~
+> time_prog 6~
+pull lever
+~
+|
+#12505
+castle guard~
+a castle guard~
+A castle guard of New Hope Castle stands here in his duty.
+~
+~
+3 0 500 C
+70 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+19 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+> act_prog p whispers to you 'alliance'~
+bow $n
+unlock door
+open door
+mpforce $n south
+close door
+lock door
+~
+|
+#12506
+cook~
+the cook~
+The cook rushes back and forth throughout his kitchen, preparing the meals for the castle.
+~
+~
+1 0 300 C
+10 0 0 500d1+0 0d0+0
+10 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 512 2
+> fight_prog 100~
+yell Help!  Guards!
+mpmload 12512
+~
+|
+#12507
+cook cooks cook's assistant~
+the cook's assistant~
+The cook's assistant follows the cook around around the kitchen.
+~
+~
+1 0 0 C
+10 0 0 500d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 2097160 0 0 1 1 0
+0 0 0 0 2048 0 512 2
+> fight_prog 100~
+yell Help!  Guards!
+mpmload 12512
+~
+|
+#12508
+bankteller teller banker~
+the Bankteller~
+The Bankteller sits on a chair behind his desk, sorting out paperwork.
+~
+An intelligent-looking man, he sits behind his desk constantly busy with
+paperwork and records, keeping organized files on his clients' financial
+keepings here in the New Hope Bank.
+~
+-1073741821 0 0 C
+25 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 1050624 0 0 0
+> speech_prog help? help. help~
+'If you need help, see HELP BANK.
+~
+|
+#12509
+secretary~
+the secretary~
+The banker's secretary is organizing the bank's files in the filing cabinet.
+~
+~
+1073741827 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#12510
+alchemist~
+A mysterious cloaked man~
+A short man cloaked and hooded stands here eerily.
+~
+~
+16777219 4194344 -1000 C
+1 0 0 3000d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+85 1 0 0 8192 8192 0
+85 65 0 0 1058816 0 0 0
+> time_prog 3~
+if inroom($i) == 12545
+then
+northwest
+northwest
+west
+north
+north
+west
+west
+whisper guard alliance
+mpat 12517 mpecho A castle guard bows to the mysterious person.
+mpforce guard unlock door
+mpforce guard open door
+north
+mpat 12517 mpforce guard close door
+mpat 12517 mpforce guard lock door
+north
+up
+up
+open door
+south
+south
+open east
+east
+'What are you doing in my room?  Leave immediatly.
+mpforce all stand
+mpforce all west
+close door
+sleep
+endif
+~
+> time_prog 0~
+if inroom($i) == 12546
+then
+wake
+open door
+west
+close east
+north
+open door
+north
+down
+down
+south
+whisper guard alliance
+mpat 12521 mpecho A castle guard bows to the mysterious person.
+mpforce guard unlock door
+mpforce guard open door
+south
+mpat 12521 mpforce guard close door
+mpat 12521 mpforce guard lock door
+east
+east
+south
+south
+east
+southeast
+southeast
+'what are you doing in my laboratory?  Please leave.
+endif
+~
+> act_prog p wakes you.~
+'What are you doing in my room?  Leave at once or I shall call the guards.
+mpforce all stand
+open door
+mpforce all west
+close door
+sleep
+~
+|
+#12511
+moat monster~
+the moat monster~
+A giant figure lurks under the water's surface.
+~
+~
+1073741857 -2147483616 0 C
+45 0 0 5d70+5000 5d5+10
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+62 8 0 0 1024 1024 3
+0 0 0 387 3072 4 5 8192
+#12512
+castle guard~
+a castle guard~
+A castle guard is patrolling the castle.
+~
+~
+1 0 500 C
+20 0 0 5d30+4000 5d15+3
+0 0
+112 112 1
+19 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 1
+0 0 0 0 10240 0 384 524291
+#12599
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#12501
+shirt cloth suit~
+a cloth suit~
+Someone has dropped a shirt here.~
+~
+9 0 9
+10 10 0 0
+1 40 4 1
+E
+'cloth' 'shirt' 'suit'~
+It is a simple shirt, composed of basic clothing fabric, and looks to
+provide none or only scant protection.
+~
+#12502
+cloth shield~
+a cloth shield~
+Someone has left a shield made from cloth here.~
+~
+9 0 513
+5 5 0 0
+1 30 3 1
+E
+'cloth' 'shield'~
+A plain backing made of hardened cloth attached to an arm piece makes up
+this simple, and otherwise very weak shield.  For all intent and purposes
+however, you assume it to be better then nothing.
+~
+#12503
+cloth hat~
+a cloth hat~
+Someone has dropped a simple hat here.~
+~
+9 0 17
+3 3 0 0
+1 20 2 1
+E
+'cloth' 'hat'~
+This hat is made only of simple cloth, sewn in a rather plain and boring
+pattern, and doesn't look like it could really help you much more then
+keep your head warm in colder weather.
+~
+#12504
+leather armour~
+some leather armour~
+You see some leather armour lying on the ground here.~
+~
+9 0 9 2
+0 0 0 0
+1 55 5 3
+E
+'leather' 'armour'~
+This is a somewhat costly amount of hide, or leather as it would be called,
+which has been put together to form a basic body shape of armour.  Providing
+better protection then perhaps a plain shirt, you're sure that there must
+be better forms of armour out there to find nonetheless.
+~
+#12506
+steel dagger~
+a steel dagger~
+Someone has dropped a dagger here.~
+~
+5 524288 8193
+12 0 0 2
+2 15 1 2
+E
+'steel' 'dagger'~
+This dagger, in it's creation, was made of fine steel, made very well in
+fact, and should last a good deal of time without breaking or even dulling.
+~
+A
+18 1
+#12507
+plain wooden staff~
+a wooden staff~
+Somoene has dropped what appears to be a piece of wood.~
+~
+5 0 8193
+12 0 0 7
+1 10 1 1
+E
+'plain' 'wooden' 'staff'~
+A long, slender piece of wood which was carved by nature, makes for a
+perfect wooden club/staff, and is ideal for the beginning magician or
+druid.
+~
+A
+3 1
+#12508
+leggings~
+a pair of leggings~
+Someone has dropped a pair of leggings here.~
+~
+9 0 33
+0 0 0 0
+1 18 1 1
+E
+'leggings'~
+These are a good pair of leggings, not yet worn down to much to the point
+of holes, but they are only made of slightly thick cloth and therefore
+probably don't help you too much.
+~
+#12509
+copper armour~
+copper armour~
+Someone dropped an orange-hued metal armour here.~
+~
+9 524288 9 124
+0 0 0 0
+14 300 82 10
+A
+17 -2
+#12510
+white mace~
+a white mace~
+Someone has dropped a mace here.~
+~
+5 8487936&2 8193
+12 0 0 7
+3 15 1 4
+A
+18 1
+A
+19 2
+#12511
+small handaxe axe~
+small handaxe~
+Somone has dropped a small handaxe here.~
+~
+5 64 8193
+12 0 0 0
+2 20 2 3
+E
+'handaxe' 'axe' 'small'~
+It is a sharp piece of stone, simply set onto the side of a polished
+piece of wood, shaped to comfortably fit in your hand, and lightweight
+enough to swing at most any foe with deadly potential.
+~
+A
+18 2
+#12512
+thorned club~
+thorned club~
+Someone has dropped a club on the ground.~
+~
+5 25346048&30 8193
+9 0 0 7
+16 75 3 8
+E
+'thorn' 'thorned' 'club'~
+This large, heavy club has a series of bones impaled in it, which
+have been sharpened into thorns which give it the power to inflict
+maximum damage.  It is however overly large and hard to wield, and may
+slow you down pretty badly should you try to use it.
+~
+A
+19 8
+A
+14 -75
+A
+2 -3
+A
+18 1
+#12513
+tin chestplate~
+a tin chestplate~
+Someone dropped their tin chestplate here.~
+~
+9 524288 9 28
+0 0 0 0
+6 115 11 6
+#12514
+wooden helmet~
+a wooden helmet~
+You see a helmet made of wood here.~
+~
+9 0 17
+0 0 0 0
+2 58 5 2
+#12515
+vampire's vampires claw~
+the vampire's claw~
+Someone left some kind of claw here.~
+~
+5 528 8193
+12 0 0 5
+1 45 4 5
+A
+53 25
+A
+19 1
+> wear_prog 100~
+if class($n) == vampire
+else
+mpechoat 0.$n You are zapped by the claw and therefor are forced to remove it.
+mpforce 0.$n remove claw
+endif
+~
+|
+#12516
+metal leggings~
+a pair of metal leggings~
+A pair of leggings made of metal are here.~
+~
+9 0 33
+0 0 0 0
+1 38 11 3
+#12517
+rope~
+a rope~
+A curled up rope is sitting here.~
+~
+13 0 16385
+0 0 0 0
+1 20 2 1
+E
+'rope'~
+This rope, when held, could probably give you a bit of ability to climb in
+various places, even if you can't climb otherwise.
+~
+A
+52 5
+#12518
+broadsword sword~
+a broadsword~
+A large sword has been left here.~
+~
+5 25739264 8193
+12 0 0 3
+17 900 90 15
+E
+'sword' 'broadsword' 'broad'~
+This is a really large, heavy sword.  Many people will probably find trouble
+in managing to lift it, and to wield it would require a good amount of
+strength.  It looks like a perfect weapon for a warrior, and many other classes
+might not find it a suitable weapon.
+~
+A
+2 -1
+A
+14 -20
+A
+19 5
+A
+18 4
+#12519
+copper helmet~
+a copper helmet~
+A helmet made of copper lays here.~
+~
+9 524288 17
+0 0 0 0
+1 120 12 7
+#12520
+blue iron halfplate~
+blue iron halfplate~
+A fine set of blue iron mithril halfplate armor has been dropped here.~
+~
+9 17317888 9
+0 0 0 0
+20 3900 390 22
+E
+'mithril' 'half' 'plate' 'halfplate' 'blue'~
+This is a suit of very heavy armor, crafted out of fine mithril links,
+with a blue hue to it allover.  This must be a strong piece of armor, and
+may just help you out in many ways.
+~
+A
+27 2
+A
+29 1
+#12521
+flawed blade~
+a flawed blade~
+Someone dropped a messed up blade here.~
+~
+5 524288 8193
+7 0 0 0
+10 250 14 11
+E
+'flawed' 'blade'~
+This blade looks like it could have been a nice weapon, but was obviously
+ruined in it's creation.  It's rather dull, and probably wouldn't work
+too well as a sword, but you could still probably hit things with it.
+~
+#12522
+scimitar~
+a scimitar~
+A thick, curved blade is laying on the ground here.~
+~
+5 524288 8193
+12 0 0 3
+12 100 10 5
+A
+19 1
+A
+18 1
+#12523
+new hope castle guard armor~
+castle guard armor~
+A fine set of castle guard's armor has been dropped here.~
+~
+9 0 9
+0 0 0 0
+20 0 0 40
+E
+'castle' 'guard' 'armor'~
+This armor is marked proudly by the mark of New Hope across the front
+of it, a white circle with a sword in the center of it.  It is wrought
+of sturdy steel, tempered by the royal smiths of the kingdom of New Hope,
+and given to the guards in the king's service.
+~
+#12524
+new hope castle guard pike~
+castle guard pike~
+A long castle guard's pike lays here horizontally on the ground.~
+~
+5 0 8193
+12 0 0 19
+10 0 0 30
+E
+'castle' 'guard' 'pike'~
+A long staff, as tall upright as an adult human, with a spear-type end
+to it, it's a standard for the guards and sentries of the kingdom of
+New Hope to wield while standing watch at the gates.  It is in rather
+perfect condition, without so much as a chip on the blade nor a splinter
+in the wood due to lack of use.
+~
+#12525
+new hope guard helm~
+castle guard helm~
+A castle guard's helm has been left here.~
+~
+9 524288 17
+0 0 0 0
+1 0 0 28
+E
+'castle' 'guard' 'helm'~
+A polished steel helmet, bearing the emblam of the kingdom of New Hope
+on the front, a small white circle with a sword in the center.  A
+group of horse hair dyed white is set onto the top, and falls down the
+back of the helmet in decoration.
+~
+#12526
+new hope guard broadsword~
+castle guard broadsword~
+A castle guard of New Hope must have dropped his broadsword here.~
+~
+5 0 8193
+12 0 0 3
+9 0 0 30
+E
+'castle' 'guard' 'broadsword' 'broad' 'sword'~
+A formidable blade, forged by the smiths of New Hope for the guards
+in service to wield, the handle bears the emblam, as does most of the
+New Hope Guard's equipment, of New Hope, which is something of a
+white circle with a sword in it.
+~
+#12527
+steel boots~
+a pair of steel boots~
+A pair of steel boots sit here upright.~
+~
+9 0 65
+0 0 0 0
+1 0 0 30
+#12528
+new hope guard shield~
+castle guard shield~
+A person-height tall shield is laying here.~
+~
+9 0 513
+1 1 0 0
+16 0 0 31
+E
+'castle' 'guard' 'shield'~
+This shield is as tall as an average-sized human, and therefor may
+be difficult for many of smaller stature to use effectively.
+On the front it proudly bares the emblam of the kingdom of New Hope,
+being the standard given to their castle guards.
+~
+A
+27 32
+A
+27 64
+> wear_prog 100~
+if race($n) == Pixie
+or race($n) == Gnome
+or race($n) == Dwarf
+mpechoat 0.$n _blu You are forbidden to use the castle guard shield.
+mpforce 0.$n remove shield
+endif
+~
+|
+#12530
+drawbridge lever~
+the drawbridge lever~
+The drawbridge lever is set upon the south wall here, to the side of the doorway.~
+~
+37 1073741824 0
+0 0 0 0
+1 0 0 0
+> push_prog 100~
+if isnpc($n)
+then
+mpclosepassage 12510 0
+mpclosepassage 12511 2
+mpopenpassage 12511 12599 5
+mpecho The castle sentry pushes the drawbridge lever.  *Click*  The drawbridge raises up...
+mpat 12511 mpecho The drawbridge raises up...
+mpat 12510 mpecho The drawbridge raises up...
+else
+if time($n) > 6
+or time($n) < 20
+then
+mpechoat $n The castle sentry tells you that the drawbridge is not to go down until daybreak, and to leave it alone.
+mpat 12512 mpforce sentry pull lever
+endif
+endif
+~
+> pull_prog 100~
+if isnpc($n)
+then
+mpopenpassage 12511 12510 2
+mpopenpassage 12510 12511 0
+mpclosepassage 12511 5
+mpecho The castle sentry pulls the drawbridge lever.  *Click*  The drawbridge lowers down...
+mpat 12511 mpecho The drawbridge lowers down...
+mpat 12510 mpecho The drawbridge lowers down...
+else
+if time($n) < 6
+or time($n) > 20
+then
+mpechoat $n The castle sentry tells you that the drawbridge is not to go down until daybreak, and to leave it alone.
+mpat 12512 mpforce sentry push lever
+endif
+endif
+~
+|
+#12531
+fireplace fire~
+the fireplace~
+A fireplace burns with an inferno inside of it.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#12532
+wooden cabinet~
+the wooden cabinet~
+A wooden cabinet is set against the wall next to the door.~
+~
+15 1073741824 0
+101 11 12591 12
+1 0 0 1
+#12533
+butchers butcher's knife~
+a butcher's knife~
+A long meat-carving knife has been dropped here.~
+~
+5 524288 8193
+12 0 0 2
+1 0 0 8
+#12534
+filing file cabinet~
+a filing cabinet~
+A tall file cabinet is positioned along the western wall here.~
+~
+15 -1073217536 0
+101 13 12535 0
+1 0 0 1
+E
+'filing' 'cabinet' 'file'~
+A large cabinet, both tall and wide, has been positioned behind the
+desks up against the east wall.  There are 5 columns of drawers, each
+with 9 drawers top to bottom.  Each and every one has a lock on it.
+~
+#12535
+filing cabinet small key~
+a small key~
+A small key's been left here.~
+~
+18 524288 1
+12534 0 0 0
+1 0 0 1
+#12536
+file~
+a file~
+A folder with some papers in it has been left here.~
+~
+13 0 1
+0 0 0 0
+1 0 0 1
+#12537
+cauldron~
+a black cauldron~
+A large black cauldron is set to the north side of the room upon a wooden platform.~
+~
+15 1073741824 0
+1 0 0 8
+100 0 0 1
+E
+'black' 'cauldron'~
+The cauldron is generating a heat, bringing the room temperature to an
+uncomfortable level.
+~
+#12538
+dark ominous robes~
+a cloak of dark, ominous robes~
+A cloak of dark, mysterious robes lay here.~
+~
+9 1073986064&4 1025
+1 1 0 0
+1 0 0 50
+A
+12 100
+A
+23 1
+A
+9 200
+A
+10 -30
+A
+14 -200
+A
+27 1048576
+> wear_prog 100~
+mpechoat $n As you don the cloak, you feel your insides twisting and your bones breaking.  Your body is morphing, and the cloak grasps you tightly and sinks itself into your flesh.  Pain resonates through your head as the world appears to turn itself inside out...or is it you?
+~
+|
+#12540
+large black bed~
+the large black bed~
+A large bed is here, covered in black sheets and cover.~
+~
+12 1073741824 0
+0 0 0 0
+38 0 0 1
+#12541
+fire~
+a fire~
+A fire burns brightly.~
+~
+34 64 0
+0 0 0 0
+10 10 1 1
+#12542
+vase~
+a vase~
+A table about waist high with a vase on it is next to wall.~
+~
+15 1073741824 0
+2 0 0 0
+1 0 0 1
+E
+vase~
+This is obviously a very expensive piece of art, a vase sitting upon the
+small table has a very pretty single long-stemmed flower sticking out of it.
+~
+E
+table~
+It's not exactly a dining table, but a small table about waist-high, it's only
+large enough to support holding a wonderful vase for display.
+~
+#12543
+black rose~
+a black rose~
+Someone dropped a beautiful long-stemmed black rose here.~
+~
+32 0 1
+0 1 0 0
+1 0 0 1
+E
+'black' 'rose'~
+Never having seen one of these before, you're looking at beautiful black rose.
+You're no master in herb lore, but it is evident that it doesn't originate
+from anywhere near these parts, and must be very rare and valuable as far as
+flowers can go.
+~
+#12591
+cook's cooks key~
+the cook's key~
+Someone dropped a funny white key here.~
+~
+18 0 1
+0 0 0 0
+1 0 0 1
+#12592
+new hope castle golden key~
+the key to New Hope Castle~
+Someone dropped a golden key here.~
+~
+18 524288 1
+0 0 0 0
+1 0 0 1
+E
+'castle' 'key' 'golden'~
+This golden key has the mark of the kingdom of New Hope inscribed on it,
+a white circle with a sword in the center of it.  Carried by only a
+few number of guards in the king's service, it permits the barer into
+almost any room of the castle.
+~
+#12593
+jailhouse key~
+the New Hope Jailhouse Key~
+Someone dropped a key here.~
+~
+18 0 1
+0 0 0 0
+1 0 0 101
+#12594
+Plaza marble fountain~
+marble fountain~
+A great marble fountain sits as a centerpiece to the garden plaza.~
+~
+25 1073741824 0
+0 0 0 0
+1 0 0 0
+#12595
+Llanos Pendant fake~
+the Llanos Pendant~
+Llanos' quest item is laying on the ground here.~
+~
+13 0 5
+0 0 0 0
+1 0 0 1
+E
+'pendant' 'Llanos' 'fake'~
+You examine over the pendant you found, and realize it to be a fake!  You've
+been duped, and the real one must be elsewhere!
+~
+#12596
+Llanos Pendant~
+the Llanos Pendant~
+Llanos' quest item is laying on the ground here.~
+~
+41 524289 5
+0 0 0 0
+1 0 0 1
+A
+28 1
+#12597
+titan wand~
+the titan wand~
+A wand lays on the ground here.~
+~
+3 8192 16385
+1 1 1 -1
+1 45 4 7
+'earthquake'
+E
+'titan' 'wand'~
+This magical wand has the ability to conjure earthquakes at the user's
+desire.  It should be used with caution as an earthquake is undirectional
+and therefor oblivious to whom it does and does not damage in a room.
+~
+#12598
+circle of protection medallion~
+a circle of protection medallion~
+A medal has been left lying here on the ground for some odd reason.~
+~
+41 524416 5
+0 0 0 0
+1 0 0 1
+E
+'medallion' 'medal' 'protection' 'circle'~
+Across the face of this medallion is a marking of some sort, symbolizing the
+added protection that this medallion will give to the person who wears it.
+~
+A
+14 100
+A
+13 30
+A
+1 1
+> exa_prog 100~
+mpecho _blu The circle of protection illuminates with a blue light, then fades back to normal.
+~
+> wear_prog 100~
+mpechoat 0.$n _blu As you string the medallion around your neck, the circle carving on it burns into your chest, without pain, and you feel a bit overall stronger then before...
+~
+> remove_prog 100~
+mpechoat 0.$n _blu As you remove the medallion from your neck, the circle indented into your chest fades away, and the added power goes with it...
+~
+|
+#12599
+black hat~
+a black pointed hat~
+You see a tall, black pointed hat dropped here.~
+~
+13 0 17
+0 0 0 0
+1 0 0 0
+#12600
+MMMB board message~
+A message board~
+A large bulletin board is hanging upon the north wall.~
+~
+12 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#12502
+North Garden, at the gate to New Hope, City~
+You are at the north gate to the city of New Hope.  A large, metal gate set
+in the space between the large stone walls that surround the border of the
+town, reaching at least 30 feet high.  You are also at the base of a large
+hill, which slopes upwards to the north, and the Castle of New Hope sits on
+the top.
+~
+~
+0 0 2 2
+D0
+~
+~
+0 -1 12503
+D2
+~
+gate~
+655361 -1 12403
+S
+#12503
+North Garden~
+The path winds back and forth in wide curves up the hill, with flowers and
+ornate statues and decorations set on either side on the well-kept green
+grass.  To the south is the stone wall of the north side of town, with the
+north gate entrance back into the city.
+~
+~
+0 0 2 1
+D2
+~
+~
+0 -1 12502
+D6
+~
+~
+0 -1 12504
+S
+#12504
+North Garden~
+The way the place is kept gives a certain idea of wealth to the kingdom of
+New Hope, with the great invincible castle to the north upon the hill, and
+it's surrounding area where you stand.  When a kingdom can put time and money
+into more trivial things and give off a good appearance, it shows something
+about the richness and prosperity of the land.
+~
+~
+0 0 2 1
+D6
+~
+~
+0 -1 12505
+D9
+~
+~
+0 -1 12503
+S
+#12505
+North Garden Plaza~
+The stone-layed path coming from the north and south directions here come into
+a plaze area, with a great fountain in the middle, flowing with water day and
+night.  Some have chosen this as an alternative to Town Square Central in the
+city, as the peaceful and beauty of the garden gives it a much better
+atmosphere and sets a nicer mood for all who come to visit the area.
+~
+~
+0 0 2 1
+D1
+~
+~
+0 -1 12506
+D7
+~
+~
+0 -1 12507
+D9
+~
+~
+0 -1 12504
+S
+#12506
+North Garden~
+You're at a small side area off to the east side of the Garden Plaza.
+It simply follows the path from the west and ends in a small circle,
+with bushes of flowers surrounding it in all directions.
+~
+~
+0 0 2 1
+D3
+~
+~
+0 -1 12505
+S
+#12507
+North Garden~
+To the southeast the hill levels out, where the Garden Plaza is.
+Just a bit ahead to the north, at the peak of the hill, is the great
+castle of New Hope.  The path continues to wind to the northeast here.
+~
+~
+0 0 2 1
+D6
+~
+~
+0 -1 12508
+D8
+~
+~
+0 -1 12505
+S
+#12508
+North Garden~
+You have come across a small area of construction, where an amount of
+people run around most times of the day working on something or another.
+Perhaps something is in the works and will be finished someday.  The path
+detours around their work to the southwest and northwest.
+~
+~
+0 0 2 1
+D7
+~
+~
+0 -1 12509
+D9
+~
+~
+0 -1 12507
+S
+#12509
+North Garden~
+You are close to the castle here, which is just a little further up
+the hill to the north.  Off to the south at the base of this hill
+is the towering stone wall of New Hope, with a few buildings barely
+peeking up over the wall, but a distance inside of the town
+nonetheless.
+~
+~
+0 1073741824 2 1
+D7
+~
+~
+0 -1 12510
+D8
+~
+~
+0 -1 12508
+S
+#12510
+North Garden~
+Here you find a moat cutting the ground into 2 parts, something you
+almost don't even notice otherwise.  It's been dug well, and drops
+straight vertically about 4 feet to the water's surface, the depth
+beyond that being undeterminable from here.  A bridge joins the
+area of land of which the castle sits upon to here.
+~
+Here you find a moat cutting the ground into 2 parts, something you
+almost don't even notice otherwise.  It's been dug well, and drops
+straight vertically about 4 feet to the water's surface, the depth
+beyond that being undeterminable from here.  The drawbridge has
+been taken in for the nighttime, as it usually is, so you'll have
+to wait until daybreak to enter into the castle.
+~
+0 1073741824 2 0
+D8
+~
+~
+0 -1 12509
+S
+#12511
+At New Hope Castle~
+You stand outside of New Hope Castle, a giant white-stone walled
+castle, more wide then tall, spanning a great distance abroad,
+and probably goes far back as well.  The door is left open in the
+daytime, and the drawbridge dropped down for people to cross the
+moat, and many do, coming back and forth in their business.
+Towers protrude from the wall on either side of you, with a minimal
+amount of guards posted high above on the walls in watch in these
+times of peace.
+~
+You stand outside of New Hope Castle, a giant white-stone walled
+castle, more wide then tall, spanning a great distance abroad,
+and probably goes far back as well.  The doors to the castle are
+open during night, but the drawbridge raised so the castle can
+be left quiet during night time.
+Towers protrude from the wall on either side of you, with no more
+guards posted in watch high above on the walls then during day
+time, since in these more peaceful days there is little need for
+such men.
+~
+0 1073741824 2 1
+D0
+~
+door~
+0 -1 12512
+D5
+~
+~
+4096 -1 12599
+> act_prog p A castle guard arrives from the north.~
+mpforce guard north
+~
+|
+S
+#12512
+New Hope Castle~
+The entry way to the castle is a large open hallway, almost a huge
+room, but more lengthened from north to south then west and east, and
+arched doorways lead off on either side in a row.  A fine red carpet
+with white trim runs down the length of the hallway, looking almost
+brand new.  In fact the entire castle is very well maintained by the
+servants whom run around doing their job at a regular basis.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12513
+D2
+~
+~
+4096 -1 12511
+S
+#12513
+New Hope Castle~
+The hallway continues north and south, with the entryway just about 10 or
+so feet south of here.  Above it hangs red curtains to match the carpet
+beneath your feet, though without a window behind it.  Decoration is
+a big deal to any castle, with this one being no exception.  You can
+see to either side a raised floor, about 5 feet off the ground, which
+encompasses the room in a 'U' fashion, and multiple doorways.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12514
+D2
+~
+~
+0 -1 12512
+S
+#12514
+New Hope Castle~
+The floor rises in a steady slope, from the entrance door south of here
+down the hall northwards, with two or three steps positioned evenly every
+now and then, the carpet running up them.  At the end of the hallway
+to the north is a final staircase of a 10 or so stairs, leading to the
+upper trim floor around the room and to the doorways to the east and west.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12515
+D2
+~
+~
+0 -1 12513
+S
+#12515
+New Hope Castle~
+A few steps are set here at your feet, as well as further north.  To the
+south is the entrance of the castle.  People hussle to and fro, servants
+and cleaners mostly, dusting this and that, making sure the castle keeps
+a fine, majestic image.  Small table about waist-high are place on either
+side of the room, off to the side from the carpet, some holding ornate
+vases with flowers, others with smaler stone-carved statues of various
+sorts, mostly animals like horses, some of unknown people.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12516
+D2
+~
+~
+0 -1 12514
+S
+#12516
+New Hope Castle~
+A small stairs is before you, leading northwards up to the raised floor.
+The red carpet continues up them ending just before a large entryway further
+into the castle, and to the south end of the castle at the opposite entrance
+of the castle itself.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12517
+D2
+~
+~
+0 -1 12515
+S
+#12517
+New Hope Castle~
+You are at the top of a stairs, not a large amount, only about 10,
+maybe 12 individual stairs, not very high at all, but working with the
+gradual raise in height of the floor here you're on an upper-floor of
+sort, about 6 or so feet maybe higher then the lower floor.  The way
+leads both east and west here, and then turns to the south on either side
+along the walls of the room.  To the north right here is a large door,
+carved of fine polished wood and framed with an arch similar to the one on
+the opposite side of the room to the south, only more intricate in
+it's carving.
+~
+~
+0 1073741832 0 100
+D0
+~
+door~
+8389671 12592 12521
+D1
+~
+~
+0 -1 12534
+D2
+~
+~
+0 -1 12516
+D3
+~
+~
+0 -1 12518
+S
+#12518
+New Hope Castle~
+A lantern is mounted on the north wall, just a bit above head-height,
+along with many others lining the wall around the room on the north,
+west, and east walls.  They illuminate the almost flawless large
+white stones which this castle is made of, with wood touchs added to
+certain areas, like around doorways, or the furniture such as the tables
+down on the main floor.  To the east is in front of the large doorway
+further into the castle, and to the west you'll come to the corner of the
+room which turns south down the elevated floor along the row of doors.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12517
+D3
+~
+~
+0 -1 12519
+S
+#12519
+New Hope Castle~
+You are at the northwestern corner of the room, on the higher edge of
+floor that circles the room in the 'U' shape.  While the ground below
+raises in a slight slope, the floor here is perfectly level, though it
+lacks the running red carpet.  Just to the south is the first of the
+line of doors across the west side of the room, matching the same on
+the far east wall.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12518
+D2
+~
+~
+0 -1 12520
+S
+#12520
+New Hope Castle~
+Next to you on the west wall is a doorway, one of several in a row
+leading south along the wall.  A wooden railing is placed trailing
+where the floor steps off a few feet to the rest of the room.
+To the north is the northwest corner of the room, and you can look
+around the room from here seeing where it leads off to the east along
+the north wall.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12519
+D3
+~
+door~
+1 -1 12524
+S
+#12521
+New Hope Castle~
+You stand in a room, smaller then the main hall.  To the south is
+the doorway back to the hall, to the north are two large stone
+columns reaching from the ground to the ceiling.  Between them a
+staircase is built, leading upwards to the next floor of the castle.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12522
+D2
+~
+door~
+8389671 12592 12517
+S
+#12522
+New Hope Castle~
+You are at the foot of the great staircase, a wide set of stairs for
+6 abroad at least.  It goes up some ways, before turning and wrapping
+around the two stone columns in a winding matter.  Light shines in
+through windows set in the all the walls on the way up.  To the south
+is a large door leading to the main hallway.
+~
+You are at the foot of the great staircase, a wide set of stairs for
+6 abroad at least.  It goes up some ways, before turning and wrapping
+around the two stone columns in a winding matter.  Lit torches in
+holsters burn on the walls, positioned all the way up the stairs,
+illuminating the way.
+~
+0 1073741832 0 100
+D2
+~
+~
+0 -1 12521
+D4
+~
+~
+0 -1 12523
+S
+#12523
+New Hope Castle~
+You stand about midway on the staircase, not a very long staircase
+as it only connects the first and second floors of the castle
+together.  Two large columns of stone parted a good distance apart
+rise from the floor below to the ceiling above, and you notice a
+small marking on the one closest to you.
+~
+~
+0 1073741832 0 100
+D4
+~
+~
+0 -1 12529
+D5
+~
+~
+0 -1 12522
+E
+'column' 'columns' 'col'~
+The name "Max" has been scratched into the stone, a little lower then
+waist-high.
+~
+S
+#12524
+New Hope Castle~
+You are in a thin hall, meant to lead out a ways from the main hall.
+To the west you pick up smells, from what is the castle kitchen.
+To the east is a doorway, leading out to the main hall.
+~
+~
+0 1073741832 0 100
+D1
+~
+door~
+1 -1 12520
+D3
+~
+~
+0 -1 12525
+> act_prog p The cook arrives from the west.~
+force cook west
+mpat 12524 mpforce cook west
+~
+> act_prog p The cook's assistant arrives from the west.~
+mpat 12524 mpforce assistant west
+~
+|
+S
+#12525
+New Hope Castle, Kitchen~
+You are at the entryway to the castle kitchen.  Here multiple cooks
+rush about the large room, constantly working in preparing meals
+for an entire castle of people.  On the opposite side of the room
+is a fireplace, which gives off both light and heats the room beyond
+and other in the castle.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12524
+D7
+~
+~
+0 -1 12526
+D9
+~
+~
+0 -1 12528
+> act_prog p A castle guard arrives from the east.~
+mpat 12525 mpforce guard east
+~
+|
+S
+#12526
+New Hope Castle, Kitchen~
+At the north side of the room is a door, at the base of which is
+a bit of spilled water and flour.  A nice wooden cabinet to the side
+of the door is fronted by a handle.
+~
+~
+0 1073741832 0 100
+D0
+~
+door~
+7 12591 12530
+D8
+~
+~
+0 -1 12525
+D9
+~
+~
+0 -1 12527
+S
+#12527
+New Hope Castle, Kitchen~
+On the wall to the west a fire burns in a fireplace.  A series of
+metal grates are able to be inserted and removed from it, so as
+to put several seperate things in to cook at the same time.
+The heat of the room is counteracted only by a large open window
+just above the mantle, and a cool air moves in through it at any
+time of day or night.
+~
+~
+0 1073741832 0 111
+D6
+~
+~
+0 -1 12526
+D8
+~
+~
+0 -1 12528
+S
+#12528
+New Hope Castle, Kitchen~
+~
+~
+0 1073741832 0 100
+D6
+~
+~
+0 -1 12525
+D7
+~
+~
+0 -1 12527
+S
+#12529
+New Hope Castle, Staircase room~
+A staircase opens up at the north side of the room, winding downwards around
+a pair of stone columns which end somewhere just below the floor at your
+feet.  You are on the second floor of the castle, in a small room.  There
+is a door to the south.
+~
+~
+0 1073741832 0 100
+D2
+~
+door~
+3 -1 12531
+D5
+~
+~
+0 -1 12523
+S
+#12530
+The Pantry~
+Wooden shelves upon beams line all three walls here, and upon them is
+ordered a large assortment of jars and pouches and bottles of different
+food ingredients, many herbs and sauces.  The shelf to the north side
+looks to hold mostly the actual food contents, some cured meats, dried
+fruits, etc.  Enough to feed the royals of the castle, the provisions
+for the rest of the castle must be elsewhere.
+~
+~
+0 1073741824 1 100
+D2
+~
+door~
+7 12591 12526
+S
+#12531
+New Hope Castle~
+You are at the north end of the second floor of the castle, in a room
+equally large as the main hallway directly under you, only this room
+is much more decorated and ornate then that, with many paintings
+hanging on the east and west walls, in between a series of doors
+all the way down the room to opposite side of the room.
+~
+~
+0 1073741832 0 100
+D0
+~
+door~
+3 -1 12529
+D2
+~
+~
+0 -1 12532
+S
+#12532
+New Hope Castle~
+On each side of this room is a door, similar to the way the hall
+below on the first floor is done, only this second floor is more
+for people in honorable service to the king, royalty, or guests
+of the castle.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12531
+D1
+~
+door~
+3 -1 12546
+D2
+~
+~
+0 -1 12533
+S
+#12533
+New Hope Castle~
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12532
+S
+#12534
+New Hope Castle~
+A line of torches illuminate the castle, even during the day.  With
+so many of them around the parameter of the room the lighting is
+flawless, lacking the flickering and fading common to torchlight.
+Figures roam the hallway, everyone seeming so small compared to the
+huge room, Several rooms-worth in length and width, and from floor
+to the ceiling high above at least what would be almost three stories
+to a normal building just for this first floor.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12535
+D3
+~
+~
+0 -1 12517
+S
+#12535
+New Hope Castle~
+The floor here is a step up from the level of the main hallway down
+the center of the room.  This heightened level runs like a path
+around the north and both sides of the room.  From here in the
+northeast corner of the room, there are a row of doors and entryways
+to the south, opposite to a similar row on the other side of the large
+room.  To the east is a larger and more decorated door, leading
+further into the castle's interior.
+~
+~
+0 1073741832 0 100
+D2
+~
+~
+0 -1 12536
+D3
+~
+~
+0 -1 12534
+S
+#12536
+New Hope Castle~
+Walking down the side of the room, you have come to the entrance to
+the castle's bank, which is the bank for all of New Hope.  Held in
+the castle for purposes of security and to better conduct business,
+it closes along with the rest of the castle at night.
+A door leading to the bank is in the east wall.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12535
+D1
+~
+door~
+8520737 12592 12537
+D2
+~
+~
+0 -1 12542
+S
+#12537
+New Hope Bank~
+You are at the entryway of the New Hope Bank.  From the rest of the castle
+you wouldn't know it was the same building.  This place looks much more modern
+and comfortable then the stone halls of the rest of the castle, and has a
+feeling of professionalism.  This is where you can come for all your financing
+needs, being the only bank in the country.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12538
+D3
+~
+door~
+8651809 12592 12536
+S
+#12538
+New Hope Bank~
+You're at the east side of the rectangular-long room, at the base of a
+small staircase leading up to the main area of the bank.  To the west
+is the entrance/exit to the rest of the castle.
+~
+~
+0 1073741832 0 100
+D3
+~
+~
+0 -1 12537
+D4
+~
+~
+0 -1 12539
+S
+#12539
+New Hope Bank~
+You stand at the center of a larger room then the one below, with a stairwell
+surrounded by handrails leading down to the first floor of the bank office.
+To the east is the main banking financial area, and to the west is the bank
+message center.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12540
+D3
+~
+~
+0 -1 12541
+D5
+~
+~
+0 -1 12538
+S
+#12540
+New Hope Bank~
+You are standing in an area to the eastern side of the room, set aside
+as a sort of office.  A row of three desks are set across the room from
+north to south, with the north and south-more desks vacant.  At the center
+desk sits the bankteller, behind him a filing cabinet set against the
+eastern wall, and a half-open window above it, the sun shining in.
+~
+You are standing in an area to the eastern side of the room, set aside
+as a sort of office.  A row of three desks are set across the room from
+north to south, with the north and south-more desks vacant.  At the center
+desk sits the bankteller, behind him a filing cabinet set against the
+eastern wall, and a half-open window above it, the cool night air blowing
+in.
+~
+0 1073741832 0 100
+D3
+~
+~
+0 -1 12539
+S
+#12541
+New Hope Bank, Messaging Center~
+Closed for an unknown amount of time.
+~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12539
+S
+#12542
+New Hope Castle~
+To the east is a passageway leading down a distant corridor, lit by a light
+from behind.  An archway posed around the entryway is lined with gold, or
+perhaps it's solid gold?  A sign is posted above it with a symbol unrecognized
+to yourself.
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12536
+D1
+~
+~
+0 -1 12543
+D2
+~
+~
+0 -1 12547
+E
+sign~
+~
+S
+#12543
+New Hope Castle~
+The corridor reaches way back from the main hall, illuminated by a sort
+of glow from the other end.  The stones appear to have a certain sparkle
+uncommon to any other part of the castle, a yellow hue that is visible
+from the corner of one's eye, but when looked at directly seems to hide
+itself from view.
+~
+~
+0 1073741832 0 100
+D3
+~
+~
+0 -1 12542
+D8
+~
+~
+0 -1 12544
+S
+#12544
+New Hope Castle~
+Near the eastern end of the corridor, a flat hum can be heard under the
+slience between footsteps, along with some inaudible noise from the east.
+To the west the corridor bends back to the northwest, and further ahead
+to the main hall of the castle.
+~
+~
+0 1073741832 0 100
+D7
+~
+~
+0 -1 12543
+D8
+~
+~
+0 -1 12545
+S
+#12545
+New Hope Castle, Laboratory~
+You are in a cluttered laboratory.  Many poorly crafted shelves line the walls,
+holding all kinds of glass jars, pots, and wooden boxes, most of which probably
+contain unheard of trinkets and elixers.  A thin layer of dust coats many of
+the obviously least-used items, and from the jumble of the unorganized mess
+it's obvious this place doesn't get cleaned.  Towards the north side of the
+room is a black cauldron upon a wooden platform, and a series of wooden beams
+set around it at diagnols and holding a metal plate about 2 feet above the
+cauldron.
+~
+~
+0 1073741832 0 100
+D7
+~
+~
+262144 -1 12544
+S
+#12546
+New Hope Castle, Bedroom~
+The first thing you notice about this room is that there is no item
+for light in it anywhere, no torch or lamp or fireplace whatsoever.
+The other weird thing is there are no windows either, and thus it is
+pitch black here.  Looking around the room you see only a single bed
+against the eastern wall, the foot of which facing you.
+~
+~
+0 1073741832 0 1
+D3
+~
+door~
+3 -1 12532
+S
+#12547
+New Hope Castle~
+There is no door or entryway here, just a stone wall to the east.
+To the north is a door to the castle bank, and to the south
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12542
+D2
+~
+~
+0 -1 12548
+S
+#12548
+New Hope Castle~
+~
+~
+0 1073741824 0 100
+D0
+~
+~
+0 -1 12547
+S
+#12594
+The Moat~
+There's nothing of importance that you can see anywhere in the water,
+even though you can't see much deeper then a foot or two if at anything
+at all.
+~
+~
+0 1073741824 6 0
+D4
+~
+~
+2112 -1 12510
+D9
+~
+~
+0 -1 12595
+S
+#12595
+The Moat~
+The south end of the moat meets the east side here at this corner, where
+it rounds around to the north from here, and continues to the west for
+a bit of distance before turning to the north around a corner as well.
+~
+~
+0 1073741824 6 0
+D3
+~
+~
+0 -1 12596
+D4
+~
+~
+2112 -1 12510
+D6
+~
+~
+0 -1 12594
+S
+#12596
+The Moat~
+Lack of current makes it easy to move one way or another in the moat,
+a waterway surrounding the castle above from intruders at night.  To
+the east you can see just ahead where it will curve around north.
+To the west it is much further until the end of this side of the moat,
+it curves around the castle north there too.
+~
+~
+0 1073741824 6 0
+D1
+~
+~
+0 -1 12595
+D3
+~
+~
+0 -1 12597
+D4
+~
+~
+2112 -1 12510
+S
+#12597
+The Moat~
+The water is murky, and impossible to see underneath if you were to try
+to go under to get a glimpse of how deep it goes...or if anything else
+is also in the water besides yourself.  The walls are too steep to
+attempt to climb up.  The only thing you could do is follow it either
+way to the east or west.
+~
+~
+0 1073741824 6 0
+D1
+~
+~
+0 -1 12596
+D3
+~
+~
+0 -1 12598
+D4
+~
+~
+2112 -1 12510
+S
+#12598
+The Moat~
+It's difficult to see much, you're caught in the shadow of the
+edges of land high above you, and the rather dirty water the
+moat is filled with.  The splashing noises you make echo off
+the walls a bit, but you doubt that anyone up above would take
+any notice.
+~
+~
+0 1073741824 6 0
+D1
+~
+~
+0 -1 12597
+D3
+~
+~
+0 -1 12599
+D4
+~
+~
+2112 -1 12510
+S
+#12599
+The Moat~
+You are in a moat underneath the castle of New Hope.  You struggle in the
+water as it is rather deep...  how deep is beyond your guess.  The edges
+of land are about 15 feet apart, maybe a bit more.
+The waterway continues both to the east and west of here.
+~
+~
+0 1073741824 6 0
+D1
+~
+~
+0 -1 12598
+D4
+~
+~
+2112 -1 12510
+S
+#12600
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#0
+
+
+#RESETS
+O 0 12594 1 12505
+M 0 12503 1 12519
+E 1 12528 1 11
+E 1 12527 1 8
+E 1 12526 1 16
+E 1 12525 1 6
+E 1 12523 1 5
+M 0 12504 1 12512
+E 1 12527 1 8
+E 1 12525 1 6
+E 1 12524 1 16
+E 1 12523 1 5
+O 0 12530 1 12512
+M 0 12501 2 12511
+E 1 12527 1 8
+E 1 12525 1 6
+E 1 12524 1 16
+E 1 12523 1 5
+M 0 12501 2 12511
+E 1 12527 1 8
+E 1 12525 1 6
+E 1 12524 1 16
+E 1 12523 1 5
+O 0 12531 1 12527
+M 0 12506 1 12527
+E 1 12497 1 12
+E 1 3135 1 16
+G 1 12591 1
+D 0 12530 2 2
+M 0 12507 1 12528
+E 1 12533 1 16
+E 1 12497 1 12
+D 0 12531 0 1
+D 0 12529 2 1
+O 1 12532 1 12526
+D 0 12526 0 2
+M 1 12508 1 12540
+M 1 12509 1 12540
+G 1 12535 1
+O 1 12534 1 12540
+D 0 12536 1 0
+D 0 12537 3 0
+O 1 12540 1 12546
+D 0 12546 3 1
+M 0 12510 1 12546
+E 1 12538 1 12
+O 1 12537 1 12545
+M 0 12505 1 12521
+E 1 12526 1 16
+E 1 12523 1 5
+E 1 12525 1 6
+G 1 12592 1
+E 1 12527 1 8
+E 1 12528 1 11
+M 1 12503 2 12533
+E 1 12526 1 16
+E 1 12523 1 5
+E 1 12528 1 11
+E 1 12527 1 8
+E 1 12525 1 6
+O 1 12542 1 12532
+P 0 12543 1 0
+D 0 12532 1 1
+M 1 12502 1 12517
+E 1 12528 1 11
+E 1 12527 1 8
+G 1 12592 1
+E 1 12526 1 16
+E 1 12525 1 6
+E 1 12523 1 5
+D 0 12517 0 2
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  12501 spec_guard
+M  12502 spec_guard
+M  12503 spec_guard
+M  12504 spec_guard
+M  12505 spec_guard
+M  12512 spec_guard
+S
+
+
+#$

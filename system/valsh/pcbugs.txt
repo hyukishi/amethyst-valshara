@@ -1,0 +1,5 @@
+0988604884000001 [  100] Kyorlin: [Baeltrin] gossip's 'hmm said i  got 707 exp only gave me 300'
+0989383385000001 [ 3000] Kyorlin: stun
+0989383440000002 [ 3000] Kyorlin: gouge
+0989441168000001 [ 3005] Kyorlin: specs
+0994804180000001 [  106] Sojen: There seems to be something wrong with the gold-on-hand thing... I only seem to have in my inventory 20 gold... the rest is gone or something.  Moo.

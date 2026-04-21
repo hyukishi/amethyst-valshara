@@ -1,0 +1,408 @@
+#AREA   Crystal courtyard~
+
+
+
+#VERSION 214
+#AUTHOR Seth~
+
+#RANGES
+35 65 25 65
+$
+
+#RESETMSG ~
+
+#FLAGS
+4 15
+
+#ECONOMY 0 51110000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#10301
+spider monster monstrous creature~
+A monstrous spider~
+A monstrous spider creature starts to form out of thin air.
+~
+Composed from refracted light this spider shaped monstrosity 
+does not appear to be pleased with your intrusion.~
+1073741859 6291584 -600 C
+40 0 -200 30d30+10 30d30+15
+0 30000
+112 112 0
+18 0 0 18 18 0 15
+0 0 0 0 -10
+63 0 0 0 1 1 6
+40 40 13 0 256 2 524289 2049
+#10302
+Daranth priest ancient~
+An ancient priest~
+An ancient priest stands here holding back the flow of chaos.
+~
+An ancient priest cover in holy vestments works him blessings here to 
+keep the evil of this place at bay.~
+1090519043 34078856 1000 C
+55 0 -300 8d10+10 5d6+0
+2500 60000
+112 112 1
+18 18 18 18 18 18 18
+0 0 0 0 0
+90 1 0 0 1 1 0
+50 50 8 0 0 0 201326592 2116
+#10303
+Imp creature~
+A imp like creature~
+A fanged imp like creature bobbing through the air.
+~
+Black as night with raven wings, and dripping fangs the imp bobs up 
+and down through the air. This foul creature looks out of place in 
+this crystalline paradise of colors and light.~
+65 2097152 -1000 C
+20 0 -50 5d10+0 4d10+0
+1500 15000
+112 112 0
+0 0 0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#10304
+guardian guard~
+A guardian~
+A guardian stands here at his post.
+~
+Dressed in a dark almost transparent armor the guardian stands ready 
+at his post.~
+3 4202496 -450 C
+40 0 -100 100d0+0 100d8+0
+5000 30000
+112 112 1
+20 12 12 20 20 12 15
+-10 -5 0 -5 -15
+0 3 0 0 1 1 4
+35 35 14 256 0 0 536875008 3
+#0
+
+
+#OBJECTS
+#10301
+Mallet Daranth~
+The Mallet of Daranth~
+A humming mallet is floating here giving off a holy light.~
+~
+5 -1073150653 8193
+300 6 12 7
+6 100000 10000 56
+A
+18 15
+A
+13 15
+A
+17 -20
+A
+1 -1
+A
+4 1
+A
+12 100
+A
+19 25
+A
+2 -1
+#10302
+ruby breast plate~
+&wA &RR&Wu&Rb&Wy &wbreastplate~
+This plate armor appears to have been waven for ruby hued fibers.~
+~
+9 1073758544 9
+15 25 0 0
+5 25000 2500 0
+A
+1 1
+A
+12 -20
+A
+17 0
+A
+17 -100
+#10303
+ruby shield~
+&wA &RR&Wu&Rb&Wy &wshield~
+This shield like crystal appears to have been waven for ruby hued fibers.~
+~
+9 1073758544 513
+8 16 0 0
+4 15000 1500 0
+A
+2 3
+A
+17 -15
+#10304
+ruby rapier~
+&wA &RR&Wu&Rb&Wy &wrapier~
+This rapier appears to have been forged out of solid ruby.~
+~
+5 1073742099 8193
+100 5 5 3
+4 450000 45000 0
+A
+2 3
+A
+1 1
+A
+18 10
+A
+19 10
+#10305
+mantle daranth~
+The Mantle of Daranth~
+Covered in ancient holy runes this mantle glows with a life all its 
+own.~
+~
+9 -1073642239 1025
+15 25 0 0
+3 430000 43000 45
+A
+12 150
+A
+31 5
+A
+17 -50
+A
+56 36
+A
+56 67
+#0
+
+
+#ROOMS
+#10301
+Inside the crystalline gateway.~
+As you step through the Crystalline Gateway you are almost overcome
+by the beauty of this strange place.  The walls are all composed of
+a strange glowing crystal.
+~
+~
+0 4 2 0
+S
+#10302
+The north-east corner.~
+The North-West corner pulses with light as you enter the area, and
+its warm glow casts eerie shadows on the ground.  From here you think
+you hear a faint insane laugh, or maybe its just the wind.
+~
+~
+0 4 2 0
+S
+#10303
+The north-west corner.~
+The North-West corner pulses with light as you enter the area, and
+its warm glow casts eerie shadows on the ground.  Furthermore, as
+you watch the light flicker you notice a faint outline on the ground.
+~
+~
+0 4 2 0
+S
+#10304
+The middle of the west wall.~
+The West wall pulses with light as you enter the area, and its warm
+glow casts eerie shadows on the ground.
+~
+~
+0 4 2 0
+S
+#10305
+The middle of the east wall.~
+The East pulses with light as you enter the area, and its warm
+glow casts eerie shadows on the ground.
+~
+~
+0 4 2 0
+S
+#10306
+The south-east corner.~
+The South-East corner pulses with light as you enter the area, and
+its warm glow casts eerie shadows on the ground.  As you look around
+you notice a section of the east wall that is grey, and unlite.
+~
+~
+0 4 2 4
+E
+grey~
+As you look at this section of wall you see a faint outline.
+~
+E
+section~
+As you look at this section of wall you see a faint outline.
+~
+S
+#10307
+The center of the courtyard.~
+Here in the center of the courtyard you can see in all directions.
+You get an uneasy feeling here, and must suppress the urge to run
+from this beautiful, and eerie place.  An odd Idol to some forgotten god
+stands watch over the area.
+~
+~
+0 4 2 1
+E
+idol~
+This Idol is carved out of marble and bares the likeness of the Elder
+god Darzanth.  Known for his practice of the Black Arts, among other
+thins not nearly as humane.  You start to wonder why such an evil being
+would be honored in a beautiful place like this.
+~
+E
+idol ~
+This Idol is carved out of marble and bares the likeness of the Elder
+god Darzanth.  Known for his practice of the black arts, among other
+things not nearly as humane.  You start to wonder why such an evil being
+would be honored in a beautiful place like this.
+~
+S
+#10308
+The south-west corner.~
+The South-West corner pulses with light as you enter the area, and
+its warm glow casts eerie shadows on the ground.  A monolith bearing 
+a silver plaque stands near by.
+~
+~
+0 4 2 0
+E
+plaque~
+The plaque read:
+"My the light never fade or dim."
+        Kardis, Lord of Fate~
+E
+monolith~
+This obsidian monolith is shaped into the sybmol of some ancient and
+ almost forgotten god of long ago.
+~
+S
+#10309
+Outside a crystalline portcullis.~
+As you step upto the Crystalline Porcullis you feel a dire urge to 
+leave this beautiful, but eerie place.  The portcullis unlike the walls
+constantly glows, and is as cold as ice.
+~
+~
+0 4 2 0
+S
+#10310
+Along the east wall.~
+The East wall pulses with light as you enter the area, and its warm 
+glow casts eerie shadows on the ground.
+~
+~
+0 4 2 0
+S
+#10311
+Along the west wall.~
+The West wall pulses with light as you enter the area, and its warm
+glow casts eerie shadows on the ground.
+~
+~
+0 4 2 0
+S
+#10312
+Along the east wall.~
+The East wall pulses with light as you enter the area, and its warm
+glow casts eerie shadows on the ground.
+~
+~
+0 4 2 0
+S
+#10313
+Along the west wall.~
+The West wall pulses with light as you enter the area, and its warm
+glow casts eerie shadows on the ground.
+~
+~
+0 4 2 0
+S
+#10314
+North of the center.~
+Here near the center of the courtyard you get an uneasy feeling as
+if you where being watched by an unseen presents.
+~
+~
+0 4 2 0
+S
+#10315
+South of the center.~
+Here near the center of the courtyard you get an uneasy feeling as
+if you where being watched by an unseen presents.
+~
+~
+0 4 2 1
+S
+#10316
+&wThe &RR&Wu&Rb&Wy &wchamber.~
+This chamber glows with a brilliant ruby hue that gives you the
+feeling of being surrounded by fire.  However, that feeling
+is quickly pushed to the back of your mind as you see the
+inhabitant of this chamber.
+~
+~
+0 76 13 0
+S
+#10317
+&wThe &GE&Wm&Ge&Wr&Ga&Wl&Gd &wchamber.~
+Here you feel at peace basking in the green glow of this chamber.
+If you didn't know any better you would swear that you were deep
+in some forgotten forest glen.
+~
+~
+0 28 0 2
+S
+#0
+
+
+#RESETS
+M 0 10304 2 10317
+E 0 10305 0 16
+E 0 10305 0 5
+E 0 10305 0 11
+M 0 10304 2 10317
+E 0 10305 0 16
+E 0 10305 0 5
+E 0 10305 0 11
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 2 10317
+E 0 10305 0 16
+E 0 10305 0 5
+E 0 10305 0 11
+M 0 10304 2 10317
+E 0 10305 0 16
+E 0 10305 0 5
+E 0 10305 0 11
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 1 10317
+M 0 10304 1 10317
+E 0 10305 0 16
+E 0 10305 0 12
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  10301 spec_breath_any
+M  10302 spec_cast_cleric
+M  10303 spec_janitor
+M  10304 spec_guard
+S
+
+
+#$

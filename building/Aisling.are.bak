@@ -1,0 +1,202 @@
+#AREA   {PROTO} Nosgoth's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Nosgoth~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#1201
+Continuing on a path~
+The stalagmites and stalagtites start to bend and twist here
+making you turn as you press on in you adventure. Dark shadows every
+where seem to leap out at you obsucring the areas true definitions
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1200
+D8
+~
+~
+0 -1 1202
+S
+#1202
+New Score Kyorlin LOOK AT ME~
+&YShilgarn&B<Head of Builders Council>.
+&R\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+&W[&BMudd Info&W] 
+&BLevel&W:&R125  &BRace &W:&R Elf 
+&BYears&W:&R1022 &BClass&W:&R Warrior 
+&BLog In&W:&R Tue Feb, 5 19&W:&R47&W:&R37 2002
+&BTime&W:&R Tue Feb  5 21&W:&R25&W:&R25 2002 
+&BPlayed&W:&R 2010 hours  
+&BSaved&W:&R no save this session 
+&BDeity&W:  &RLloth  &BFavor&W:  &Rrespected
+PKILL DATA:  Pkills (0)     Illegal Pkills (0)     Pdeaths (0)
+&GPager&W: &W(&R &W) &R24 &GAutoExit&W(&RX&W) 
+&GAutoLoot&W(&R &W) &GAutoSac &W(&R &W)
+&R\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+&w[&CCharacter Sheet&W]
+Shilgarn the <age> year old <class>
+Level:  125         Race : Elf 
+&RSTR &W : 14 (14)    HitRoll: 2                 
+&BINT &W : 16 (16)    DamRoll: 1                   
+&CWIS &W : 18(18)      Armor: 100; improper for adventure
+&PDEX &W : 14(14)      Align: -1000; fiendish         Items:  3 (max 25000)
+&WCON  &W: 15(15)      Pose: standing               Weight: 3 (max 1000000)
+&GCHA  &W: 13(13)      Wimpy: 0          
+&YLCK  &W: 08(08)      Style: standard  
+Glory: 0/0
+PRACT: 1597         Hitpoints: 35583 of 35583   
+EXP  : 88                               MKills:      9    
+GOLD : 2000008004       Move: 2742  of  2742   Mdeaths:     0    
+&R\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+[Status]
+You feel great.
+add affected by
+&R\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+chat
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 1203
+D7
+~
+~
+0 -1 1201
+S
+#1203
+Floating in a void~
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 1202
+D8
+~
+~
+0 -1 1204
+S
+#1204
+Floating in a void~
+~
+0 1073741824 1 0
+D7
+~
+~
+0 -1 1203
+D9
+~
+~
+0 -1 1205
+S
+#1205
+Floating in a void~
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 1206
+D6
+~
+~
+0 -1 1204
+S
+#1206
+Floating in a void~
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 1205
+D7
+~
+~
+0 -1 1207
+S
+#1207
+Floating in a void~
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 1208
+D8
+~
+~
+0 -1 1206
+S
+#1208
+Floating in a void~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1207
+D2
+~
+~
+0 -1 1209
+S
+#1209
+Floating in a void~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1208
+S
+#1300
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

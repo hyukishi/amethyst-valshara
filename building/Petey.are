@@ -1,0 +1,49 @@
+#AREA   {PROTO} Petey's area in progress~
+
+
+
+#VERSION 1
+#AUTHOR Petey~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#HIGHECONOMY 0 0 0 0 0 -1
+
+#LOWECONOMY 0 0 0 0 0 -1
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,4496 @@
+#AREA   City of New Hope~
+
+
+
+#VERSION 200
+#AUTHOR XahXhaX~
+
+#RANGES
+1 115 1 115
+$
+
+#RESETMSG You hear the sound of townsfolk conversing all around you.~
+
+#FLAGS
+0 15
+
+#ECONOMY 0 162210806
+
+#CLIMATE 3 1 1
+
+#NEIGHBOR The Eastern Plains~
+
+#NEIGHBOR The Western Plains~
+
+#NEIGHBOR Graveyard~
+
+#NEIGHBOR New Hope Castle~
+
+#NEIGHBOR City of New Hope Sector 2~
+
+#MOBILES
+#12401
+an alchemist Garlac~
+An alchemist Garlac~
+An alchemist Garlac
+~
+He is a very old and wrinkled man, who stoops behind a counter here mixing a
+concoction of things into something or another.  You can hear him mumbling
+through his garbs, head to toe, as dusty and old as the shop is, and coughs
+out prices to you in a low raspy voice.
+~
+1140850691 552 0 C
+20 0 0 0d0+0 0d0+0
+1000 0
+112 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+0 0 2047 0 0 0 0 0
+> time_prog 16~
+cough
+'I'm sorry, it's time for me to go home for today, I'll be back at 6.
+mpecho _gre An alchemist Garlac leaves into a back room.
+mptrans garlac 11288
+~
+> time_prog 6~
+mptrans garlac 12454
+mpat 12454 mpecho _gre An alchemist Garlac arrives from a back room.
+mpat 12454 'I'm opening up shop today, but only for awhile.
+mpat 12454 'I'm not feeling too well today.
+cough
+~
+> rand_prog 5~
+cough
+~
+> rand_prog 1~
+'I'm not feeling too well today I'm afraid, I'll be closing at 4.
+~
+|
+#12402
+Melody~
+Melody the Herbalist~
+Melody the herbalist stands here, filling out reciepts.
+~
+She is an overly cheerful sort of woman.  Very young still but in ownership
+of this very shop.  She has long red hair tied back behind her shoulders,
+dark green eyes, amd a small hint of greenness to match across her skin,
+showing here to have very strong elven blood somewhat.  She looks up at
+you while humming her songs, waiting for you to ask about buying something.
+~
+1140852739 552 0 C
+15 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 6 0 0 3 3 0
+0 0 2047 0 0 0 0 0
+> rand_prog 1~
+serenade
+~
+> rand_prog 1~
+mpecho Melody whistles out a complicated but familiar tune.
+~
+> time_prog 20~
+'Excuse me, but I'm closing now, it's time for me to go home I'm afraid.
+'Please come back at 10 tomorrow, I'll be back then.
+smile
+mpecho Melody leaves west.
+mptransfer melody 11288
+~
+> time_prog 10~
+mptransfer melody 12428
+mpecho Melody arrives from the west.
+smile
+'Hi there, I'm opening my store back up, just tell me what you want.
+~
+> act_prog p gives you a brand new name tag.~
+'Okay, I will be happy to fill it out for you, let me just write it on the line
+here...  what was your name again?  Oh yeah...$n...  Gotcha.
+emote jots something down on your name tag.
+'That was easy, here you go.
+mposet tag short Hi, my name is $n
+mposet tag long A name tag with the name "$n" on it.
+give tag $n
+~
+> act_prog p gives you Hi, my name is~
+'This tag has already been written in, sorry.
+give 2.tag $n
+~
+|
+#12403
+Thorne~
+Thorne the weapon dealer~
+Thorne stands here, lazily sharpening a sword.
+~
+Thorne towers above you, his muscles bulging through his clothes.
+His ogrish face twists into a sneer and he glares at you.
+Continuing to sharpen the sword, he waits while you make your selection.
+~
+16779283 552 0 C
+10 0 0 5d50+7000 0d0+0
+100 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+6 8 0 0 17 17 0
+85 65 2047 0 1058816 0 0 0
+> fight_prog 100~
+mpechoat 0.$n Oh, come on now!  The man is carrying an inventory of weapons, and you think you can march right in here and take him out?
+mpechoat 0.$n Let's just say that he grabs a few of those weapons, inserts them into various spots of your body, most particularly unpleasent, which continues for a few agonizing minutes.  Finally mercy sets in as everything goes black and you leave this place of torture...
+mpechoaround 0.$n $n is obviously not the brightest crayon in the box, as $e attempts to kill Thorne, the __weapons dealer__  Well, hopefully $n has learned their lesson, as Thorne proceeds to insert various weapons different parts of $s body.  Looks painful.  Finally after a minute or two, $n is dead.
+mpslay 0.$n
+~
+|
+#12404
+E'rant~
+E'rant the Armorer~
+E'rant the Armorer is standing at a table assembling some armour.
+~
+He is hunched over a table, attempting to put together a few miscellaneous
+pieces of metal and animal hides into a body shaped armament.  He looks up
+at you with a quick glance, but fails to say anything whatsoever.
+~
+2067 4194344 0 C
+10 0 0 7000d1+50 100d100+1000
+50 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+5 5 2047 0 1058816 0 0 0
+> all_greet_prog 100~
+if ispc($n)
+mpechoat $n _gre E'rant glances at you.
+mpechoaround $n _gre E'rant glances at $n.
+endif
+~
+> fight_prog 100~
+mpecho Tiring of the ungoing battle, E'rant calls in Thorne the weapons dealer from the shop next door...
+mpat 12464 mpforce thorne west
+mpechoat 0.$n Thorne, obviously unhappy at you for attacking his friend, simply pulls out his sword and removes your head with it.
+mpechoaround 0.$n Thorne, obviosuly unhappy at $n for attacking his friend, simply pulls out his sword and removes $s head with it.
+mpforce thorne mpslay 0.$n
+mpforce thorne yell A finely honed sword, slightly used, half off!
+mpforce thorne hshake e'rant
+mpforce thorne east
+~
+> act_prog p gets E'rant's trophy.~
+mpechoat 0.$n Now that you have taken E'rant's trophy right in front of him, what are you going to do?
+mpechoat 0.$n It's too late...  E'rant moves up towards you, grabs you by the neck, and drags you outside...
+mpechoaround 0.$n Uh-oh, $n took E'rant's trophy, now it looks like $e is going to pay as E'rant drags $m outside...
+mpforce 0.$n n
+north
+'Okay $n, now you're gonna die...
+mpforce 0.$n cringe
+mpechoat 0.$n E'rant proceeds to beat you into a bloody pulp.  The last thing you see is him standing above you, taking the trophy from your lifeless hands.
+mpslay 0.$n
+mppurge trophy
+mpecho E'rant the Armorer gets E'rant's trophy from the corpse of $n
+mpat 12465 mpecho E'rant the Armorer arrives from the north.
+mpgoto 12465
+mpat 12461 mpecho E'rant the Armorer leaves south.
+mpoload 12496 1
+drop trophy
+~
+|
+#12405
+nameless clockmaker~
+the clockmaker~
+The nameless clockmaker sits in the shadows here.
+~
+He looks to be older than even the very tower he occupies here.  His garment is
+made up of old white cloth wrapped about himself, his long gray beard barely
+poking through along with the rest of his face.  He seems to be a very
+intelligent person, probably very knowledgeable, it could serve you well to ask
+him about many things in the world, if you know how to ask him correctly.
+~
+1073741827 0 0 C
+55 0 0 32700d1+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+88 5 0 0 0 1 0
+0 0 0 0 10240 0 0 0
+> speech_prog graveyard? graveyard. graveyard~
+mpecho _lbl The clockmaker says 'So, you want to know about the graveyard do you?  I can tell you much of it.  You see, I was walking these lands back before it was even built, and the now ruined cathedral stood taller and mightier than the greatest building around here now days, believe you me.  One particularly dark day, a dragon concieved from the purest of evils appeared and simply grinded it into the very pile of rubble it lays as today.  As for the dragon, it flew off, to a floating island I tell you.  And for the graveyard now?  Well, that cathedral was marked with evil, there is a hole there, and should you truely be courageous and of good spirirt, or wish to find great treasures, then go down there to bare witness to it's many unspeakable horrors, and conquer them to cleanse it of evil once and for all.'
+~
+> speech_prog cathedral? cathedral. cathedral~
+mpecho _lbl The clockmaker says 'Well now, that cathedral is very old.  It was once a shining tribute to the gods, but was destroyed by an evil dragon who I swaer came down from a floating island.  After it was destroyed, it was turned into a cemetary, kind of fitting to match the gloom of the whole occassion, don't you think?  But that graveyard still stands there, off to the northwest part of town.  And you know what else?  That is the source of another perverse evil now days, but that relates more to the tombstones...'
+~
+> speech_prog tombstones? tombstone? tombstones. tombstone. tombstones tombstone~
+mpecho _lbl The clockmaker says 'Yes, those tombstones, at the graveyard.  Well, that cemetary happens to be sitting right next to the western plains.  As a result of this and the evil that now hangs over the old cathedral, skeletons and such forms of undead can be seen roaming those plains, even in the middle of the day!  I feel sorry for them, very much.  I knew many of them possibly and they were good men and women, not deserving of this fate in the least.  Perhaps if one was to travel down into the earth and find the source of this, then they could be set free.  That person would be a true hero indeed.'
+~
+> speech_prog skeletons? skeleton? skeletons. skeleton. skeletons skeleton~
+'Well, those are undead peoples, just like you and me.  Once they were anyways.
+'I suppose it would be better to ask about the tombstones then of them.
+~
+> speech_prog dragons? dragons. dragons. dragon. dragons dragon~
+'Ah yes, that miserable beast.  Swept down one day from the skies and destroyed
+'out precious cathedral, which is now the graveyard site.  People wonder about
+'that thing, but I know better.  He came from a floating island in the sky.
+~
+> speech_prog island? island. island~
+'Ah yes, the floating island.  The one thing even I don't know much about.
+'I do know this though.  It's the home of a flying dragon.  I'm not talking
+'about your ordinary dragon race or creature here, I mean a REAL dragon.  One
+'of about the evilest you can get.  The other is that if you wanted a glimpse
+'of it, the best place I can think of would be to climb up the mountains to the
+'west, there's a peak there that I bet you could get a view across the world
+'from, not to mention an island in the sky.
+~
+> speech_prog town? town. town~
+'So you're wondering about this here town are you?  Well, not a lot to say
+'about it, not by me anyways.  I keep to myself here really.  If you want to
+'learn about the town, best thing would be to ask someone younger, like my
+'associate here, she comes at noon to keep things here in order while I go
+'home.
+~
+> speech_prog church? church. church~
+'Are you interested in that church?  Well, I'm not truthfully.  It's nothing
+'like the old cathedral which used to be where the graveyard is now.  But I'll
+'say this, since that church was built it was made into the paladins guild.
+'I wonder why no one has wondered about that second floor even though there's
+'no apparent way up to it?
+if class($n) == Paladin
+'You're a paladin, aren't ya?  I'll tell you what to do, go behind the alter.
+'If the gods find you worthy then you will pass through a holy light to the
+'very back.  There you'll be able to get up to the second floor.  Good luck.
+else
+'Doesn't matter anyways, to get there you are under the judgement of the gods
+'and they wouldn't find anyone "worthy" of getting over there unless they were
+'a paladin themself.
+endif
+~
+> speech_prog towers? tower? towers. tower. towers tower~
+mpecho _lbl The clockmaker says 'So, these here towers huh?  Well, I'm not allowed to tell you about this here tower.  Why?  I can't tell you that either.  Ha!'
+chuckle
+mpecho _lbl The clockmaker says 'I can tell you, I suppose, that they both have higher purposes then what they really appear to have.  Straight to the north is Tower Steel, this here is Tower CLockworks.  I tell you to be careful poking you nose around like this though, otherwise you might end up, well, like me.  You really think I'm allowed to leave this place?'
+cackle
+~
+> speech_prog warriors? warrior? warriors. warrior. warriors warrior~
+mpecho _lbl The clockmaker says 'Warriors eh?  Only thing that really comes to mind mentioning that is those blasted warriors down at the town inn.  I've had my own encounter with them, gave the mean one the scar across his face myself actually.'
+smile
+mpecho _lbl The clockmaker says 'He's half-orc you know?  If you speak the language then that helps, but the one thing is that they don't take kindly to anyone who isn't a warrior, they are big on guild stuff.  That door they're guarding is the warrior guild.  To get in you gotta make friendly with them, especially the mean one.  I'd go ask the bartender about them if you're that interested, that and about the door too.  I bet he knows something about that door that he's just waiting to tell somebody.'
+~
+> speech_prog garlac? garlac. garlac~
+'Why, you know Garlac over at the alchemy shop?  I'll be damned.  He's a good
+'old friend of mine, but I'm much, much older.  He's very sick now days, and I
+'haven't seen him in ages.  I can only hope he gets better soon.  If you tell
+'him you know me, he might be inclined to give you a little something every
+'now and then, but don't count on that.
+~
+> speech_prog ogres? ogre? ogres. ogre. ogres ogre~
+mpecho _lbl The clockmaker says 'Can't find your way to the land of ogres?  There is a key ogre area, and it is closer then you might think.  Head out far into the eastern plains, there is a rather large forest that runs along the north.  The entrance you'll be looking for is upon a hill actually.'
+~
+> greet_prog 100~
+mpecho _lbl The clockmaker says 'Welcome to my humble place.  It's not big I'm afraid, so not many people can fit in here at a time.  I am very old, and know a lot from my travels and age.  You can ask me about many things at anytime, though I don't know much about this here town, since it's pretty new, though you can ask my apprentice about such things when she comes at morning.'
+~
+> rand_prog 1~
+mpecho The clockmaker picks a gear off of a shelf, examines it for a second, then puts it back on the shelf with a sigh.
+~
+> time_prog 0~
+mpat 12491 mpecho The clockmaker arrives from the north.
+mptransfer clockmaker 12491
+'Hello my dear, I trust you've had an uneventful day.
+~
+> act_prog p Erin nods in agreement with you.~
+'Ah, good, good.  You may leave now, I'll take over here.
+mptransfer erin 11288
+mpat 11288 mpforce erin mpat 12491 mpecho Erin leaves north.
+'Now, what can I do for you?
+~
+> time_prog 12~
+yawn
+'well it is time for me to leave, my associate will arrive soon I'm sure.
+mptransfer clockmaker 11288
+mpat 12491 mpecho The clockmaker leaves north.
+~
+|
+#12406
+bum~
+the town bum~
+The town bum is standing around, looking peculiarly at a stick he's holding.
+~
+He is dressed in simple smelly rags and runs and zig zags along the side of the
+road like an insane man.  He has no home, no identity, and no friends.  Perhaps
+if you're feeling especially sympathetic or generous you'd give him a couple
+coins.
+~
+65733 0 100 C
+1 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 6 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> rand_prog 1~
+mumble
+~
+> rand_prog 1~
+rant
+~
+> act_prog coin, coins.~
+'The gods thank ya, $n.
+~
+> act_prog gold.~
+get coins
+get coin
+'The gods thank ya, $n.
+~
+> act_prog p looks at you.~
+'What are ya looking at?!?
+~
+> act_prog p slaps you cruelly~
+mpechoat $n The town bum whacks you lopside the head with his stick.
+mpechoaround $n WHACK!  The bum has hit $n with a stick, now $e knows better.
+~
+> greet_prog 60~
+if ispc($n)
+'Heyyy, I know you $n.  Think you could spare me some change, a coin or two?
+endif
+~
+> act_prog p hocks a big glob of spit at you!~
+spit $n
+spit $n
+spit $n
+spit $n
+spit $n
+spit $n
+spit $n
+spit $n
+spit $n
+spit $n
+cough
+~
+> death_prog 100~
+remove stick
+drop stick
+mpat $n mpecho The town bum manages to escape...
+mpgoto 11287
+mpmload 12406
+mpforce 2.bum mpoload 12411
+mpforce 2.bum wield stick
+mptransfer 2.bum 12467
+~
+> greet_prog 10~
+if ispc($n)
+follow $n
+'heyyyy, b-buY a gUyy a dDrInnkkkkk?
+endif
+~
+> rand_prog 40~
+if isfollow($n)
+mpechoat $n WHACK! WHACK!  The crazy bum is hitting you with his stick!
+mpechoaround $n WHACK!  The crazy bum is hitting $n with a stick!
+endif
+~
+|
+#12407
+apprentice~
+Erin~
+The apprentice of the clockmakers is sifting through old boxes of clock pieces.
+~
+Many would say that she's the most beautiful in Amethyst.  In her youth she
+radiates a youthful exuberance.  "If I've gone overboard"
+                                 "Then I'm begging you"
+                                 "  To forgive me"
+                                 "In my haste"
+                                 "When I'm holding you so girl..."
+                                 "  close to me"
+                                 "Oh and you come crash"
+                                 "  into me, baby"
+~
+1073741827 0 0 C
+8 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+4 5 0 0 9 9 0
+0 0 0 0 1050624 0 0 0
+> speech_prog town? town. town~
+'I am very young, but have grown up here in the town of what years I have, and
+'know much about it.  Feel free to ask me about any structure or significant
+'part of New Hope, or of people who reside here.
+~
+> speech_prog peoples? people? peoples. people. peoples people~
+'Would you like to know something about someone in particular, or just about
+'people in general?  I know a lot of the people here, but if they're older then
+'you might want to ask the clockmake about them.
+~
+> speech_prog bums? bum? bums. bum. bums bum~
+'Oh, the homeless man?  To tell you the truth I don't know anything about him.
+'I don't think anyone does.
+~
+> speech_prog melody? melody. melody~
+mpecho _lbl Erin says 'Melody is the owner and manager of the herbalist shop, by the gardens.  It's impressive for someone so young to run such a business, but she does.  She'll sell you many things relating to plants, many of which she finds in those very gardens!  So you could just search around there if you're short on money.  She's a nice lady though, if you wanted to talk to her, I'd come around there late at night, that's when I see her there if ever.'
+~
+> rand_prog 1~
+smile
+~
+> speech_prog p Hello my dear, I trust you've had an uneventful day.~
+nod clockmaker
+'pretty much, I've just been telling stories...
+~
+> time_prog 13~
+mpat 12491 mpecho Erin arrives from the north.
+mptransfer erin 12491
+'Hello, is there something I can help you with?
+~
+> greet_prog 100~
+mpecho _lbl Erin says 'Hi there $n.  I figured you'd be by sometime today.  I do work with clocks, as my apprenticeship goes, but I also know a lot about this town, like you may have heard from the clockmaker.  So you can ask me about anything here anytime I'm around.'
+~
+|
+#12408
+man1~
+a man~
+A person is walking the streets on some personal business.
+~
+He's a simple town peasent, walking through the streets in a hurry on some
+matters, maybe shopping, maybe meeting someone somewhere, maybe just out for a
+stroll, who knows.  From the looks of him he presents no threat to anyone, and
+it's be best to probably leave him alone.
+~
+83886145 0 0 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+2 12 0 0 5 4 0
+0 0 0 0 0 0 0 0
+#12409
+woman1~
+a woman~
+A lady is wandering through the streets with that confused newbie look.
+~
+She is averagely pretty, but short, being a pixie and all.  She looks around
+the town at the buildings and scenary with an unknowing look, kinda like that
+of a person new to the area who doesn't know where they are, yet she doesn't
+seem lost.  She doesn't look important, and even more that she wouldn't hurt
+a fly, so you'd might as well leave her to her walking.
+~
+83886145 0 0 C
+5 0 0 0d0+0 0d0+0
+300 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+4 1 0 0 9 8 0
+0 0 0 0 0 0 0 0
+#12410
+cook chef~
+the cook~
+The cook is standing here, ready to serve you.
+~
+~
+1140852739 0 0 C
+20 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+4 3 0 0 9 1 0
+0 0 0 0 1058816 0 0 0
+#12412
+Illissa bag merchant~
+Illissa~
+Illissa the bag merchant sits on a chair at the back of the room.
+~
+~
+67108867 0 0 C
+25 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+#12413
+town guard~
+the town guard~
+A town guard of New Hope patrols the streets.
+~
+~
+65 0 0 C
+20 0 0 100d2+3000 2d8+18
+50 0
+112 112 1
+13 13 13 13 20 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+#12414
+town guard~
+the town guard~
+A town guard of New Hope stands here dutifully.
+~
+~
+1090519043 0 0 C
+50 0 0 0d0+0 0d0+0
+50 0
+112 112 1
+13 13 13 13 20 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+#12415
+Dalfreid~
+Dalfreid~
+Dalfreid, the pawn clerk for weapons and armours is sitting behind a table.
+~
+~
+1090521095 0 0 C
+30 0 0 2000d1+0 0d0+0
+450 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+85 65 0 0 1058816 0 0 0
+> death_prog 100~
+mpechoat 0.$n Just when you thought you had the best of Dalfreid, he manages to pull out a concealed dagger from his belt, and proceeds to embed that weapon into your chest area.  You stumble backwards, everything fading black, realizing he has gotten the best of you.
+mpechoaround 0.$n You look over to see the battle of $n with Dalfreid come to a sudden conclusion, when Dalfreid manages to slip a concealed dagger from his belt and impale $n with it.  $n is definetely dead.
+mpgoto 11288
+mpmload 12415
+drop all
+mpforce 2.Dalfreid get all
+mptransfer 2.Dalfried 12487
+mpat 12487 mpslay 0.$n
+mpat 12487 mpforce 2.Dalfreid get all 0.corpse
+~
+|
+#12416
+mugger~
+a mugger~
+You see a figure lurking in the shadows.
+~
+As you're walking through this dark alleyway, you barely notice a
+shaodwy figure hiding in the back, but it is too late and he is already
+upon you, with an intent to kill you and take your possesions.
+~
+1073758211 0 -1000 C
+7 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 25 2 13 13
+0 0 0 0 0
+0 2 0 0 1 1 2
+7 4 0 0 0 0 64 0
+> time_prog 5~
+mpecho The mugger disappears into the shadows...
+mpgoto 11288
+~
+> time_prog 21~
+mpgoto 12446
+~
+|
+#12417
+Merlin~
+Merlin~
+Merlin the magic shopkeeper stands to sell you magical goods.
+~
+He has a black mystic robe drapped over his body, with a long white beard,
+and a long, pointed hat to match his robe upon his head.  You get the
+funny feeling you've seen him from somewhere before...
+~
+1073743875 0 0 C
+30 0 0 5000d1+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#12418
+Cinse repairman~
+Cinse~
+Cinse the repairman is here to assist you.
+~
+Cinse is the single, most qualified person in New Hope in the repair department
+for weapons and armours.
+~
+16777219 552 0 C
+10 0 0 10d10+6500 100d100+1000
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+> fight_prog 100~
+'Now, $n, you will meet your doom!
+mpechoat 0.$n  With that, Cinse reaches over and grabs hold of the cauldron, tips it over towards you...  You feel an incredible burning from having molten steel poured on you, then a numbing feeling...
+mpechoaround 0.$n Cinse grabs ahold of the cauldron, and pours an amount of the molten steel upon $n, you watch as $n melts to $s untimely death.
+mpslay 0.$n
+~
+|
+#12419
+stray cat~
+a stray cat~
+A stray cat wanders the town streets here.
+~
+~
+16777281 0 300 C
+1 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+29 3 0 0 0 512 0
+0 0 0 0 0 0 0 0
+> rand_prog 5~
+mpecho A stray cat meows.
+~
+|
+#12421
+cleric healer~
+the cleric~
+The cleric stands here to sell his magical items.
+~
+He owns the healing shop in New Hope, a shop set up specifically for
+clerics and even paladins to stock up on their necessary potion and items.
+He won't sell to anyone other then those two classes however, making sure that
+the healing classes will always have a special use in the order of things.
+~
+67110915 4194344 0 C
+40 0 0 0d0+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+#12422
+Terl stables~
+Terl~
+The keeper of the stables, Terl, is standing here.
+~
+~
+1090519043 0 0 C
+20 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#12423
+black horse~
+a black horse~
+A noble, black horse stands here, it must belong to someone.
+~
+~
+17039617 0 0 C
+17 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+86 8 0 0 512 512 0
+0 0 0 0 0 0 0 0
+#12424
+pet rat~
+a large grey rat~
+A large rat scuttles across your path, eyes glowing in the dark.
+~
+This is one large rat.  You would not want to allow him to bite you.
+His grey fur is matted from blood and dirt, and his eyes seem to
+watch your every movement.
+~
+321 0 0 C
+6 11 25 1d10+75 1d4+3
+0 2000
+112 112 1
+15 13 13 14 13 13 13
+0 0 0 0 0
+77 3 0 0 0 0 0
+0 0 1775 0 0 0 1 0
+#12425
+old man2~
+an old man~
+An old man walks the streets here, absorbed in his own thoughts.
+~
+This is an eldery gentleman, human in race so probably around 70-80 years old
+at least, but in good health nonetheless.  He wears some basic garments to keep
+him warm enough during cold weather and cool enough in hot weather, very
+accustomed to New Hope no doubt.
+He seems to be thinking about something very strongly, taking no notice of your
+examining of him.
+~
+83886145 0 0 C
+30 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 6 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#12426
+runaway dog~
+a dog~
+A runaway dog is snooping around here, trying to keep away from being caught.
+~
+From the presence of the collar but obvious lack of owner, this dog is
+obviously a runaway, a sneaky mutt wandering town to stay lost from his
+owner in some sort of cruel game.
+~
+65601 0 300 C
+2 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+30 3 0 0 512 512 0
+0 0 0 0 0 0 0 0
+> fight_prog 40~
+bite
+~
+> greet_prog 60~
+if mortcount(0) > 0
+growl $r
+endif
+~
+> entry_prog 1~
+bark
+~
+|
+#12427
+Black Cat~
+black cat~
+A black cat has crossed your path with deadly intent.
+~
+With a furry black coat, and big yellow eyes, this cat gracefully walks
+across your path, bringing you several years of bad luck.  Its tail moves
+slowly to tell you that it is laughing at your misfortune.
+~
+16777473 8 0 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+29 8 0 0 512 512 2
+0 0 0 0 0 0 3 0
+> rand_prog 1~
+meow
+~
+> act_prog p pets you.~
+purr
+~
+|
+#12428
+Iptarius Jeweller~
+Iptarius~
+Iptarius the Jeweller would like to show you some of his fine merchandise.
+~
+~
+1090521091 552 0 C
+51 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 64 0 0 1 1 0
+0 0 0 0 1058816 0 0 3
+> time_prog 6~
+mpoload 12491 1
+unlock inventory
+open inventory
+get all inventory
+close inventory
+lock inventory
+mppurge key
+~
+> time_prog 0~
+mpoload 12491 1
+unlock inventory
+open inventory
+mppurge key
+put all inventory
+close inventory
+mpoload 12491 1
+lock inventory
+mppurge key
+~
+> act_prog p gives you a wedding band.~
+'Very well, I shall engrave this for you now.
+if goldamt($n) > 4999
+'I will require the payment of 5000 gold for this service, of course.
+mpforce $n give 5000 coins iptarius
+'thank you
+mpecho Iptarius gets engraving tools from his inventory chest, and immediatly begins to skillfully engrave the wedding band.
+mposet wedding short a wedding band from $n
+mposet weddin long A wedding band is here, please return it to $n if it's lost.
+'Ah...one of my finest pieces of work yet.  I hope you find it to your satisfaction, $n.
+give wedding $n
+mpecho Iptarius returns his engraving tools to his inventory chest.
+else
+'My fee for engravement of wedding bands is 5000, please come back when you have enough gold.
+give wedding $n
+endif
+~
+> act_prog p gives you a wedding band from~
+'Sorry, but this has already been engraved.
+give wedding $n
+~
+> bribe_prog 1~
+'Thank you for your contribution, though I hardly know what to do with it.
+~
+> speech_prog wedding? wedding. wedding~
+'Yes, we sell special-order wedding bands, which are a great way to display your love for your spouse.  The price for one wedding band comes to 10000 gold coins total.  We also do
+engraving with your name attached to it for an additional 5000 gold coins.  You and your partner can each get one and exchange, that way everyone can know who you're married to.
+'As a warning, remember that wedding bands are for people who are married, and therefor can only be used by level 50 and above in accordance with state law.
+'If you're interested, just say "I would like to buy one"
+~
+> speech_prog p I would like to buy one~
+if goldamt($n) > 9999
+'Allright, that will be 10000 gold coins.
+mpforce $n give 10000 coins iptarius
+'Thank you, and here is your wedding band, gift wrapped for no extra charge.
+smile
+mpoload 12472 50
+mpoload 12473 1
+put wedding package
+close package
+give package $n
+else
+'I'm sorry, but our wedding bands go for 10000 gold coins.  Please come back when you have enough money.
+endif
+~
+> speech_prog engraving? engraved? engrave? engraving. engraved. engrave. engraving engraved engrave~
+'The way engraving works is you give me your already bought wedding band, and I will put your name on it permanently.  You then would give this band to your spouse, and they give one they themself had engraved to you...an exchange of wedding bands.
+'The process will cost 5000 gold coins to payed before I do the work..but don't worry, I'll have you hand that over after you've given me the band.
+~
+|
+#12438
+sleeping child~
+the sleeping child~
+A child is sleeping on a grassy hill to the side of the pond.
+~
+~
+1090519043 40 1000 C
+0 0 0 0d0+0 0d0+0
+0 0
+104 104 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> act_prog p wakes you.~
+'what'd you go and do that for?
+sleep
+~
+> death_prog 100~
+mpat $n mpechoat $n  As the child dies, $j screams in agony every person turns toward you.  You're covered in blood on your hands and clothing.  Immediatly two guards rush up the road towards you, seizing you before you can even attempt escape..
+mpat $n mpechoat $n One guard obviously sickened by this, lifts up his guantlet-clad hand in the air and brings it down upon your head.  Everything goes dark...
+mpat $n mpechoaround $n The child gives a frightening scream as the life drains from $l body, killed by $n!  As soon as this happens, you see two guards run up the road to here, tackling $n to the ground.  One of them in an outburst of disgust towards this murder lifts up his gauntlet-clad fist, and brings it down upon $n's face.
+mpat $n mpechoaround $n Thank goodness that $n won't be doing anything like this for a long time, $e is going to prison.
+mpat $n mpmload 12413
+mpat $n mpmload 12413
+if ispc($n)
+then
+mptrans 0.$n 12458
+else
+mpforce $n mpgoto 12458
+endif
+mpat 12443 mpecho You see $n being dragged in by a guard, and thrown into the jail cell at the north of the room.  The Constable locks the door.
+mpat 12443 mpmload 12413
+mpat 12443 mpforce constable chat Attention citizens of New Hope: $n is a child murderer.  As of now $e has been locked up in prison, sentencing to be determined at a later time by the gods.
+~
+|
+#12439
+tall boy~
+the tall boy~
+A taller boy is playing ball with the other children.
+~
+The taller child of the group, he's too busy in his game of ball with the
+others to notice anyone else around the pond.
+~
+1090519043 40 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> death_prog 100~
+mpat $n mpechoat $n  As the child dies, $j screams in agony every person turns toward you.  You're covered in blood on your hands and clothing.  Immediatly two guards rush up the road towards you, seizing you before you can even attempt escape..
+mpat $n mpechoat $n One guard obviously sickened by this, lifts up his guantlet-clad hand in the air and brings it down upon your head.  Everything goes dark...
+mpat $n mpechoaround $n The child gives a frightening scream as the life drains from $l body, killed by $n!  As soon as this happens, you see two guards run up the road to here, tackling $n to the ground.  One of them in an outburst of disgust towards this murder lifts up his gauntlet-clad fist, and brings it down upon $n's face.
+mpat $n mpechoaround $n Thank goodness that $n won't be doing anything like this for a long time, $e is going to prison.
+mpat $n mpmload 12413
+mpat $n mpmload 12413
+if ispc($n)
+then
+mptrans 0.$n 12458
+else
+mpforce $n mpgoto 12458
+endif
+mpat 12443 mpecho You see $n being dragged in by a guard, and thrown into the jail cell at the north of the room.  The Constable locks the door.
+mpat 12443 mpmload 12413
+mpat 12443 mpforce constable chat Attention citizens of New Hope: $n is a child murderer.  As of now $e has been locked up in prison, sentencing to be determined at a later time by the gods.
+~
+|
+#12440
+kid~
+a kid~
+A kid is here playing ball with his friends.
+~
+~
+1090519043 40 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> death_prog 100~
+mpat $n mpechoat $n  As the child dies, $j screams in agony every person turns toward you.  You're covered in blood on your hands and clothing.  Immediatly two guards rush up the road towards you, seizing you before you can even attempt escape..
+mpat $n mpechoat $n One guard obviously sickened by this, lifts up his guantlet-clad hand in the air and brings it down upon your head.  Everything goes dark...
+mpat $n mpechoaround $n The child gives a frightening scream as the life drains from $l body, killed by $n!  As soon as this happens, you see two guards run up the road to here, tackling $n to the ground.  One of them in an outburst of disgust towards this murder lifts up his gauntlet-clad fist, and brings it down upon $n's face.
+mpat $n mpechoaround $n Thank goodness that $n won't be doing anything like this for a long time, $e is going to prison.
+mpat $n mpmload 12413
+mpat $n mpmload 12413
+if ispc($n)
+then
+mptrans 0.$n 12458
+else
+mpforce $n mpgoto 12458
+endif
+mpat 12443 mpecho You see $n being dragged in by a guard, and thrown into the jail cell at the north of the room.  The Constable locks the door.
+mpat 12443 mpmload 12413
+mpat 12443 mpforce constable chat Attention citizens of New Hope: $n is a child murderer.  As of now $e has been locked up in prison, sentencing to be determined at a later time by the gods.
+~
+|
+#12443
+Constable New Hope town~
+the Constable of New Hope~
+The town Constable sits on a chair behind a desk, filling out paperwork.
+~
+~
+1073741827 0 500 C
+90 0 0 30000d1+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 384 3
+> fight_prog 100~
+mptrans 0.$n 12458
+mpat 12458 'There, this'll teach ya to go picking fights with law enforcement.  Maybe sitting a few days in here will help you think it out.
+~
+> bribe_prog 1~
+'Trying to bribe me huh?  Into jail for you.
+mptransfer $n 12458
+mpat 13301 mpforce academy mpat 12458 mpforce $n look
+~
+> act_prog p rears back and slaps you cruelly for your stupidity.  OUCH!~
+'Assaulting an officer of the city, into jail for you.
+mptransfer $n 12458
+mpat 13301 mpforce academy mpat 12458 mpforce $n look
+~
+|
+#12444
+bird~
+the blue bird~
+A mysterious blue bird hovers near you.
+~
+~
+1090519043 0 1000 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+91 8 0 0 8192 8192 0
+0 0 0 0 0 0 0 0
+> act_prog p follows you.~
+mpechoat $n The bird seems to signal that you're doing well, and begins to take off towards the west...You decide to follow it.
+west
+north
+north
+north
+north
+west
+west
+southwest
+west
+west
+south
+south
+east
+mpechoat $n As you walk after the mysterious bird, it takes a sudden change and flies off into the sky, leaving you where you are.
+mpgoto 11288
+'kill me
+~
+|
+#12445
+janitor town~
+the town's janitor~
+The town's janitor is here, upset over that piece of garbage you just dropped.
+~
+This man is hired by the city to keep it's streets clean of
+the trash people like you constantly leave laying around.
+As an act of deciency to the town and everyone living in it,
+you should not kill him (so don't do it).
+~
+16844993 0 600 C
+3 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+5 0 0 0 0 0 0 0
+> entry_prog 100~
+if mortcount(0) < 1
+get all
+endif
+~
+> fight_prog 100~
+yell Help!  $n is trying to kill me!
+mpmload 12413
+~
+> time_prog 12~
+mpgoto 11287
+drop all
+mpgoto 12459
+~
+> time_prog 0~
+mpgoto 11287
+drop all
+mpgoto 12459
+~
+|
+#12446
+new hope gate sentry~
+the New Hope gate sentry~
+The gate sentry to New Hope stands here guarding the entrance to the city.
+~
+~
+16777219 4194856 1000 C
+30 0 0 6d4+900 5d5+10
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 1008 526339
+> fight_prog 100~
+mpdamage $n 10
+~
+> greet_prog 100~
+if isnpc($n)
+if isevil($n)
+'You shall not pass into these city walls!
+kill $n
+endif
+endif
+~
+|
+#12447
+new hope cityguard guard~
+the New Hope Cityguard~
+A New Hope cityguard patrols the streets.
+~
+~
+65 40 500 C
+20 0 0 4d10+600 2d4+12
+3 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 3
+0 0 0 0 2048 0 128 524291
+> bribe_prog 1~
+'Thank you, but the city pays my salary for me.
+~
+> entry_prog 100~
+if rand(40)
+peer
+endif
+if mobinroom(12450) > 0
+yell To arms!  A spy is sneaking around the city streets!
+kill spy
+endif
+~
+|
+#12450
+drow spy~
+a drow spy~
+You spot a suspicious-looking elf sneaking around nearby.
+~
+You see a figure of an elf here.  You hardly had noticed him
+except by chance, but something tells you that he isn't supposed
+to be here.
+~
+16842817 98816 -1000 C
+15 0 0 5d6+300 3d2+5
+10 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 4 0 0 2 2 0
+0 0 1 256 0 0 96 3
+> hitprcnt_prog 30~
+if ispc($n)
+mpechoat $n The drow spy's cloak is regenerating itself and it's wearer,
+mprestore self 40
+endif
+~
+> death_prog 99~
+mpecho As the drow spy draws it's last breath, the worn cloak of living flesh consumes it's body, then sinks into the ground...
+mpgoto 11287
+~
+|
+#12498
+General Leo~
+General Leo~
+General Leo "The Puff Slayer" stands here dutifully.
+~
+Clad in many of the finest armours available in the known world,
+General Leo is the primary defender of New Hope, loyal retainer
+to King Richard VII, Lord to Sir Max, and friend of the demi-gods.
+It is said in fact that he is the closest thing of a mortal who's
+strength can match a god's, and for this he is respected by them
+and regarded to be the mightiest warrior of Amethyst.
+Obviously he is someone you would _NOT_ want to pick a fight with.
+~
+16779329 20972200 1000 C
+100 0 0 32000d1+0 4d10+200
+0 0
+112 112 1
+25 25 25 25 25 25 25
+0 0 0 0 0
+90 8 0 0 1 1 0
+0 0 0 0 10240 0 24908016 530943
+> entry_prog 100~
+if mobinroom(12499) > 0
+yell Ah, ha!  We meet again my nemesis, this time you shall perish for good!
+kill puff
+endif
+~
+> hitprcnt_prog 10~
+if ovnumcarry(12487) < 1
+c iceshield
+c fireshield
+c shockshield
+c shadowform
+c unravel
+mpoload 12487 50
+endif
+~
+|
+#12499
+Puff~
+Puff~
+Puff the Fractal Dragon is here, contemplating a higher reality.
+~
+Puff the Fractal Dragon is the bane of the city of New Hope.
+For centuries she has appeared at times of weakness in the country
+to strike terror upon the residents of the city, and in attempts
+to ultimately destroy the castle.
+General Leo is known to be the only one to ever defeat her, as
+the gods won't even bother in such affairs.
+~
+16777281 4194856 -1000 C
+60 20 -30 5d10+30550 4d10+200
+0 1000
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+31 8 0 0 1 1 0
+0 0 0 0 2106368 0 2 3
+> rand_prog 1~
+'I sleep on a bed of meat.
+~
+> rand_prog 1~
+'My shoes are made of butter.
+~
+> rand_prog 1~
+Meat has calcium.
+~
+> rand_prog 1~
+'Dogs are the superior race.
+~
+> rand_prog 1~
+yell Ack! Someone purge me quick!
+~
+> rand_prog 1~
+'Eddies in the space time continuum.
+~
+> rand_prog 1~
+'Quick!  Reverse the polarity of the neutron flow!
+~
+> rand_prog 1~
+'Shh...  I'm beta testing.  I need complete silence!
+~
+> rand_prog 1~
+yell SAVE!  I'm running out of cute things to say!
+~
+> rand_prog 1~
+'If you can hear this, thank a tree.
+~
+> rand_prog 1~
+'I'll be back.
+~
+> rand_prog 1~
+yell This mud is too silly!
+~
+> rand_prog 1~
+'If the mayor is in a room alone,
+'Does he say 'Good morning citizens.'?
+~
+> rand_prog 1~
+'Aren't wombats cute?
+~
+> rand_prog 1~
+yell How'd all these fish get up here?
+~
+> rand_prog 1~
+'Haven't I seen you on Temple?
+~
+> rand_prog 1~
+'So, wanna neck?
+~
+> rand_prog 1~
+'Bad news.  Termites.
+~
+> rand_prog 1~
+'I'm the real implementor, you know.
+~
+> rand_prog 1~
+yell RESOLVED:  The future's so bright, I gotta wear shades!
+~
+> rand_prog 1~
+'Rule the universe from beyond the grave.
+~
+> rand_prog 1~
+'May the Force be with you... Always.
+~
+> entry_prog 100~
+get all
+mpforce all flee
+~
+|
+#12500
+Godd shadow~
+God~
+The shadow of God stands ready to transport people to the academy.
+~
+It doesn't consist of matter in the least bit, the odd shadow of God himself
+left behind to introduce players into the world.  It swirls with ominous, dark
+colors, not seeming to quite be there in entirety, and physical objects that
+pass through it become distorted, and unable to focus in shape and light.
+~
+1159725059 4194856 0 C
+102 0 0 32767d1+0 0d0+0
+1051 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+56 2 0 0 1 1 0
+85 65 0 0 1058816 0 1241520112 8447
+> all_greet_prog 100~
+if multi($n) > 1
+mpechoat 0.$n _red Sorry $n, but you're not allowed on here right now.
+mpforce 0.$n quit
+endif
+~
+> speech_prog p academy~
+if level($n) < 5
+or isimmort($n)
+'Transferring $n...
+mpinvis 101
+mpinvis
+mptransfer 0.$n 13302
+mpat 13302 mpechoaround $n $n materializes before your very eyes.
+mpat 0.$n mpforce 0.$n look
+mpinvis
+else
+'You can't return to the academy, $n.
+endif
+~
+|
+#0
+
+
+#OBJECTS
+#12401
+a red potion~
+a red potion~
+A red potion labeled "healing" has been carelessly left here by someone.~
+~
+10 0 1
+1 -1 -1 -1
+1 100 20
+'heal' 'NONE' 'NONE'
+E
+'a' 'red' 'potion'~
+Held in a clear flask, this potion burns with the color of fire
+and swirls and fizzes of its own accord. You don't think you
+want to "quaff" it, but if it'll heal you, it might be worth it.
+~
+#12402
+an idiosyncratic potion~
+an idiosyncratic potion~
+An odd black potion is foaming in it's jar on the ground.~
+~
+10 8192 1
+3 -1 21 -1
+1 12 10
+'sanctuary' 'bless' 'NONE'
+E
+'odd' 'black' 'potion'~
+You look at the peculiar black potion: It is in a simple glass flask, and has
+a number of white bubbles floating within the black liquid.  It also foams
+white at the top over the edge of it's container.  But for all intent it looks
+safe enough to quaff.
+~
+#12403
+An alchemist's special medicine~
+An alchemist's special medicine~
+An alchemist's medicine is on the ground here.~
+~
+10 0 1
+5 -1 -1 104
+1 10 25
+'cure light' 'NONE' 'inner warmth'
+E
+'medicine'~
+You look at the medicine, which is as odd as all the others that come from the
+alchemist.  This is a higher version of the red potion, and should do you some
+good to quaff it when in need of healing, even at a slightly higher level.
+~
+#12404
+pipeweed~
+some pipeweed~
+A small amount of pipeweed has been left here.~
+~
+32 8192 1
+0 5 0 0
+1 3 13
+#12405
+black gwyvel~
+some black gwyvel~
+A small amount of black gwyvel has been left here.~
+~
+32 8192 1
+0 5 1 0
+1 3 5
+#12406
+vermeir~
+some vermeir~
+A small amount of vermeir has been left here.~
+~
+32 8192 1
+0 5 2 0
+1 3 5
+#12407
+nooracht~
+some nooracht~
+A small amount of nooracht has been left here.~
+~
+32 8192 1
+0 5 3 0
+1 3 5
+#12408
+occadaal~
+some occadaal~
+A small amount of occadaal has been left here.~
+~
+32 8192 1
+0 5 4 0
+1 3 5
+#12409
+breadl~
+some breadl~
+A small amount of breadl has been left here.~
+~
+32 8192 1
+0 5 5 0
+1 3 5
+#12410
+a pipe~
+a pipe~
+Someone has left a brown wooden pipe here.~
+~
+30 8192 16385
+5 0 0 0
+1 15 37
+E
+pipe~
+You see a simple, brown wooden pipe.  It has a single red stripe down it, and
+plenty of room to fill it with some kind of herb.  Afterwards it's simply a
+matter of lighting it, then smoking it to your discretion.
+~
+#12411
+stick~
+a stick~
+A wooden stick is lying here, nothing out of the unusual.~
+~
+48 1073750016 8193
+0 0 0 0
+1 0 0
+#12413
+sign2~
+a sign~
+A sign is posted here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+E
+sign~
+-+
+ /| This way to New Hope Inn.
+/
+~
+#12414
+sign3~
+a sign~
+A sign is posted here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+E
+'sign'~
+/----\
+|STOP|  -->You are now standing at the New Hope Inn.
+\----/
+~
+#12416
+flask empty~
+an empty flask~
+An empty flask lays here gathering dust.~
+~
+10 0 16385
+1 -1 -1 -1
+1 50 5
+'NONE' 'NONE' 'NONE'
+#12417
+cloudy blue orb~
+a cloudy blue orb~
+A pale blue orb seems to swirl with an inner white mist.~
+~
+41 0 16385
+0 40 40 1
+1 20 2
+> wear_prog 100~
+mpechoat $n _lbl As you grasp the cloudy blue orb in your hands, you feel your mind reaching out far across the world, even into some other people's minds as their voices fill your head.
+~
+> remove_prog 100~
+mpechoat $n _lbl No longer holding the cloudy blue orb, your mind suddenly becomes quiet as all other voices fade away and only your own thoughts remain.
+~
+|
+#12418
+eyedrops~
+some eyedrops~
+An eyedrops has been discarded.~
+~
+60 0 1
+10 1 1 0 -1 -1
+1 0 0
+'scry' 'NONE'
+E
+'eyedrops' 'eyedrop'~
+These must be applied to your eyes in order to work.
+~
+#12419
+bell~
+the bell~
+A small bell is on top the counter, push it for service.~
+~
+37 1073741824 0
+0 0 0 0
+1 0 0
+E
+bell~
+Written on the bell reads "please push to ring for service 24 hours a day"
+~
+> push_prog 100~
+mpforce $n pull bell
+mpecho DING!  The bell rings loudly.
+if mobinroom(12410) != 1
+then
+mptransfer cook
+mpecho The cook arrives from a back room.
+mpforce cook 'Yes, you rang for service?
+else
+mpforce cook 'You don't have to do that, I'm right here.
+endif
+~
+|
+#12420
+lamb leg~
+a leg of lamb~
+A leg is lying here rotting to repulsiveness.~
+%s gobble$q down $p.~
+19 8192 1
+30 0 0 0
+1 4 10
+#12421
+apple~
+an apple~
+Some god dropped a newly created apple here.~
+%s chomp$q down on $p.~
+19 8192 1
+5 0 0 0
+1 1 1
+#12422
+cookie chocolate chip~
+a chocolate chip cookie~
+Someone has left a cookie with chocolate chips here.~
+~
+19 8192 1
+1 0 0 0
+1 1 0
+#12423
+cookie peanut butter~
+a peanut butter cookie~
+Someone has left a peanut butter cookie here.~
+~
+19 8192 1
+1 0 0 0
+1 1 0
+#12424
+entire chicken~
+an entire chicken~
+A whole serving of chicken has been dropped here to spoil.~
+CHOMP, CHOMP.  %s devour$q $p.~
+19 8192 1
+60 0 0 0
+1 12 18
+#12425
+moldy bread~
+a loaf of week old bread~
+A loaf of bread has been dropped here, it's beginning to mold on one end.~
+~
+19 8192 1
+100 0 0 1
+1 1 3
+#12426
+notice~
+a newly created notice~
+Some god dropped a newly created notice here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#12427
+bench benches~
+a bench~
+You spot a bench near the pond, and it has an open spot for you to sit!~
+~
+19 0 0
+0 0 16 0
+1 0 0
+#12428
+fireball wand~
+a fireball wand~
+You see a short, slim red wand lying on the ground here.~
+~
+3 106496 16385
+1 5 5 -1
+1 10 50
+'fireball'
+E
+'fireball' 'wand' 'red'~
+You hold in your hands a short wand, very slim and sleak in design, it
+fits very gently in your hand.  The red color of it is a sure giveaway that
+it's powers are that of fire, the spell fireball to be exact.
+~
+#12429
+identify wand~
+an identify wand~
+A wand of identification has been dropped here.~
+~
+3 106496 16385
+1 1 1 -1
+1 6 40
+'identify'
+E
+'identify' 'identification' 'wand'~
+This wand has the ability to identify an item you have in your inventory,
+which will tell you a good deal of information about that item.
+~
+#12430
+black cape~
+a black cape~
+A big piece of black cloth has been left here.~
+~
+9 0 1025 4
+0 0 0 0
+1 10 1
+#12431
+roc skin cloak~
+a roc skin cloak~
+An odd-looking cloak is sitting here.~
+~
+9 262144 1025 6
+0 0 0 0
+1 60 6
+E
+'roc' 'skin' 'cloak' 'odd'~
+This fascinating article of clothing consists of the
+bare skin of the mighty Roc bird, having been killed,
+skinned, and stripped of feathers, and usable as a
+cloak...though it does make you feel kind of funny
+when you try it on...
+~
+A
+25 -1
+#12432
+cloak pockets~
+a cloak with pockets~
+Somone has tossed away a cloak here.~
+~
+15 0 1025 1
+5 0 0 0
+1 20 2
+E
+'cloak' 'pockets'~
+This cloak is great to carry if you're looking for some
+extra space to hold things in.  Best of all it fits under
+a good amount of other cloaks/armors, so it won't get in
+the way of other things you'd prefer to wear.
+~
+#12433
+green magical staff~
+a green magical staff~
+You see a long, slender green staff here.~
+~
+4 8486913&20 16385
+1 1 1 -1
+1 200 20
+'faerie fog'
+A
+3 1
+A
+4 1
+#12434
+staff sight~
+a staff of sight~
+A bright yellow staff is here.~
+~
+4 1 16385
+1 1 1 -1
+1 0 0
+'cure blindness'
+#12435
+potion higher healing~
+a potion of higher healing~
+Someone has dropped a potion of higher healing here.~
+~
+10 0 1
+30 -1 -1 -1
+1 190 200
+'divinity' 'NONE' 'NONE'
+E
+'higher' 'healing' 'potion'~
+A very potent potion, and very expensive to match.  This little
+charm will heal even the nastiest of injuries.
+~
+#12436
+invisible sight potion~
+a potion of invisible sight~
+A completely transparent potion has been dropped here.~
+~
+10 0 1
+5 -1 -1 -1
+1 10 1
+'detect invis' 'NONE' 'NONE'
+E
+'potion' 'invisible' 'sight' 'transparent'~
+This clear potion in a bottle, when quaffed, will allows you the
+temporary ability to see invisible objects and people.
+~
+#12437
+potion flight sky blue~
+a potion of flight~
+A sky blue potion is hovering above the ground here.~
+~
+10 0 1
+1 -1 84 -1
+1 10 1
+'fly' 'float' 'NONE'
+E
+'sky' 'blue' 'skyblue' 'potion' 'flight'~
+This potion, when quaffed, will bestow the user a
+magical ability to fly.
+~
+#12438
+poisonous potion~
+a potion of poison~
+Someone has dropped a pure black potion here, it has a warning label on it.~
+~
+10 0 1
+1 -1 -1 -1
+1 5 0
+'poison' 'NONE' 'NONE'
+E
+'poison' 'poisonous' 'black' 'warning' 'label' 'potion'~
+The warning label on the bottle says:
+                     WARNING 
+                  Poison inside
+If comes into contact with eyes, rinse thouroghly with water and
+         contact your cleric immediatly.
+~
+#12439
+deadly poisonous potion~
+a potion of deadly poison~
+Someone has dropped a pure black potion here.~
+~
+10 0 1
+30 -1 124 -1
+1 100 10
+'poison' 'poison' 'NONE'
+E
+'poisonous' 'potion' 'deadly' 'black'~
+This mysterious potion is dense and black, completely opague to
+where not even the slightest bit of light shines through it...
+Most defenitely it must have deadly qualities to it.
+~
+#12440
+sleeping potion~
+a sleeping potion~
+Someone has dropped a sleeping potion here.~
+~
+10 0 1
+5 -1 -1 -1
+1 25 2
+'sleep' 'NONE' 'NONE'
+E
+'sleeping' 'potion'~
+Anyone who quaffs this potion will most likely fall into a
+very deep sleep instantaneously.  Surely this may have some
+use in some way...
+~
+#12441
+meditation mana restoration potion~
+a potion of mana restoration~
+Someone has dropped a potion of mana restoration here.~
+~
+10 8192 1
+10 -1 -1 -1
+1 15 1
+'meditate' 'NONE' 'NONE'
+E
+'meditation' 'meditate' 'potion' 'restoration' 'mana'~
+This wonderous little potion, when quaffed, allows one's mind to
+concentrate freely and efficiently for a short amount of time, giving
+the user the ability to mediate, bringing in mana from their surroundings.
+~
+#12442
+portable spring potion~
+a portable spring potion~
+Someone has left behind a portable spring potion.~
+~
+10 8192 1
+30 -1 -1 -1
+1 100 10
+'create spring' 'NONE' 'NONE'
+E
+'portable' 'spring' 'potion'~
+It doesn't get much easier, or convenient, as this.  Some genius has
+thought up the idea to put a portable spring in this bottle, so that
+when quaffed it appears in the room temporarily, perfect for those
+long trips away from most any other water source...
+~
+#12443
+bronze vest mail~
+a vest of bronze mail~
+A vest of bronze chain mail is here.~
+~
+9 524288 9 56
+0 0 0 0
+9 150 15
+#12444
+guide book~
+the tourist's guide to New Hope~
+A book with the words "Look at me" written on the cover lies here.~
+~
+34 524288 1
+0 0 0 0
+1 0 0
+E
+'guide' 'book' 'tourist'~
+Are you new to New Hope?  This is the guide for you!
+ 
+Need refreshments?  Tasty meals prepared hot?  Just follow
+the signs from town square (a.k.a. TSC) eastwards to the
+New Hope Inn.
+ 
+Or if you're planning on travelling out of town?  Then preservable
+foods would probably be more appropriate.  If this is the case, try
+coming to the New Hope Bakery, where we're more then just a bakery,
+we sell everything for your fast food needs.
+ 
+Supplies are a must for everyone, especially if you're going
+to leave town for any amount of time.  At the General Store we
+carry a wide range of items to supply you with everything you
+need.  We're located in the southwestern corner of town, in the
+gardens.
+ 
+As long as you're in town, you'll want to do some shopping, right?
+Come east of TSC to the three houses, where you'll find stores
+for weapons, armor, equipment repairments, and jewelry.
+ 
+Got some stuff you need to unload?  Need to make some quick
+cash?  The pawn shop will buy your used equipment, and even sell
+you anything that's come in from other people.  We're located
+just next door to the bag shop on the east side of town.
+ 
+Last of all, your time spent visiting New Hope couldn't be complete
+without a visit to the infamous New Hope Castle, where the ruler
+of this fine country resides in governing the city and lands.
+Come north from the north gate through the great gardens until
+you come to the drawbridge, and remember that the castle is open
+only during the daytime.
+ 
+  ---Payed for by the Kingdom of New Hope and the Amethyst Newbie Council.
+~
+#12445
+ammo bag~
+an ammo bag~
+An ammo bag has been left behind here.~
+~
+57 1073741824 1
+20 0 0 12
+30 10 1
+E
+'ammo' 'bag'~
+You can use this little bag to carry your various sorts of ammunition in.
+It's not big enough to hold anything else, however.
+~
+A
+27 1
+A
+1 1
+A
+19 5
+A
+18 5
+A
+2 -1
+#12446
+sex change wand~
+a sex change wand~
+Someone has dropped a wand here.~
+~
+3 0 16385
+1 1 1 -1
+1 5 0
+'change sex'
+#12447
+banshee potion~
+a banshee potion~
+Someone has dropped a potion here, you can hear sound eminating from it.~
+~
+10 0 1
+20 -1 -1 -1
+1 200 20
+'shriek' 'NONE' 'NONE'
+E
+'banshee' 'potion'~
+This potion has some kind of inhuman sound contained in it, and when quaffed
+is released in the form of damage upon all those in the user's room.
+You must be _very_ careful with this, as it will initiate you into a fight
+with those damaged, including mobs, pets, and players.
+~
+#12448
+cauldron~
+a cauldron~
+A cauldron sits on the floor here, full of molten hot steel.~
+~
+15 1073741824 0
+2 0 0 0
+1 0 0
+E
+'cauldron' 'hot' 'steel' 'molten'~
+The cauldron sitting here on the floor bubbles over with incredibly hot liquid
+steel, used for Cinse's repairing of equipment people bring in.  Be careful, it
+could easily kill someone if you were to knock it over by accident.
+~
+#12449
+Token Armor~
+Token Armor~
+You see a suit of armor with a medallion embedded on it's chest.~
+~
+9 8388609 9 32
+0 0 0 0
+12 240 24
+E
+'token' 'armor' 'medallion' 'medal'~
+This armor is your basic "run-of-the-mill" steel armor with
+the exception of a token medallion that has been sealed on the
+chest of it, a token which gives the armor certain special
+protective properties and even a slight magical power.
+~
+A
+27 2097152
+#12450
+brighter torch~
+a brighter torch~
+Someone dropped a torch here.~
+~
+1 0 16385
+0 0 200 0
+1 15 1
+#12451
+antidote potion~
+antidote~
+An antidote potion has been dropped here.~
+~
+10 0 1
+1 -1 -1 -1
+1 8 0
+'cure poison' 'NONE' 'NONE'
+E
+'antidote' 'potion'~
+This antidote cleanses the body of harmful toxins, but the damage to the
+mind is beyond the potency of it...
+~
+#12452
+xjeweller notice~
+a notice~
+A notice is posted on top of the glass case.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+E
+notice~
+Ask us about our special wedding bands, available
+on sale at a low, low price!
+We also do custom engravings on weddings bands for
+the fee of 5000 gold coins.  Just give your bought
+wedding band to the clerk.
+Sorry, no loans given or trades accepted.
+~
+#12453
+peashooter~
+a peashooter~
+A peashooter was dropped here.~
+~
+56 0 262145
+12 0 0 17
+2 40 4
+#12454
+pea~
+a pea~
+A single pea has fallen to the ground.~
+~
+57 0 1
+12 0 0 17
+1 0 0
+#12455
+spiked fullplate armor red~
+a red suit of spiked fullplate armor~
+An incredible suit of armor armed in spikes is here.~
+~
+9 17448960&24 9
+0 0 0 0
+45 10000 1000
+E
+'spike' 'spiked' 'red' 'fullplate' 'plate' 'full' 'armor'~
+This red armor is very heavy, meaning only peoples of the stronger
+classes would possibly be able to use if effectively.  The
+fullplate has been cast from some of the toughest iron, and the
+body cast with large metal spikes about 5 inches long protruding
+from the front and back.
+Undoubtedly this will not only provide you with very good protection,
+but also will allow you to cause some serious damage in addition to
+your wielded weapon... something uncommon in most other armors.
+~
+A
+1 1
+A
+2 -1
+A
+27 1
+A
+18 5
+A
+19 10
+A
+40 -10
+A
+37 -10
+A
+49 10
+#12456
+bronze cross~
+a bronze cross~
+A bronze cross on a chain has been left here.~
+~
+9 1024 5
+10 10 0 0
+1 30 3
+E
+'bronze' 'cross'~
+This cross will provide an amount of defense to those of the healing classes,
+such as cleric or paladin.
+~
+> wear_prog 100~
+if class($n) == cleric
+or class($n) == paladin
+else
+mpechoat 0.$n You are not worthy to wear this cross.
+mpechoaround 0.$n $n is zapped by the cross, and removes it immediatly.
+mpforce 0.$n remove bronze cross
+endif
+~
+|
+#12457
+blue cross~
+a blue cross~
+Some person left a blue cross here.~
+~
+9 1024 5
+20 20 0 0
+1 100 10
+E
+'cross' 'blue'~
+This cross will provide an amount of defense to those of the healing classes,
+such as cleric or paladin.
+~
+> wear_prog 100~
+if class($n) == cleric
+or class($n) == paladin
+else
+mpechoat 0.$n You are not worthy to wear this cross.
+mpechoaround 0.$n $n is zapped by the cross, and removes it immediatly.
+mpforce 0.$n remove blue cross
+endif
+~
+|
+#12458
+silver cross~
+a silver cross~
+Some person left a silver cross here.~
+~
+9 1280 5
+25 25 0 0
+1 150 15
+#12459
+black robes white trim~
+black robes with white trim~
+A set of black robes with white trim have been tossed away.~
+~
+9 0 1025
+0 0 0 0
+1 0 0
+#12460
+fingerless leather gloves~
+a pair of leather fingerless gloves~
+You see a pair of fingerless gloves.~
+~
+9 0 129 1
+0 0 0 0
+1 20 2
+#12470
+sparkling red small rubies necklace~
+a necklace of small sparkling red rubies~
+You see a very pretty red necklace.~
+~
+8 0 5
+0 0 0 0
+1 1200 120
+E
+'ruby' 'red' 'rubies' 'necklace' 'small' 'sparkling'~
+Small red rubies shaped in square with chisled edges
+set in a line on a gold chain make up this very fine
+and expensive necklace.
+~
+#12471
+diamond ring~
+a diamond ring~
+You spot a beautiful diamond ring.~
+~
+8 0 3
+0 0 0 0
+1 3500 350
+E
+'diamond' 'ring'~
+This very expensive diamond ring is comprised of a single
+medium-sized diamond, set on a gold ring.
+~
+#12472
+wedding band~
+a wedding band~
+A wedding band is here.~
+~
+8 524288 4097 1
+0 0 0 0
+1 0 0
+#12473
+red foil gift wrapped package~
+a red foil gift-wrapped package~
+A shiny red package is here.~
+~
+15 0 1
+2 1 0 12
+1 0 0
+#12474
+gold necklace~
+a gold necklace~
+A very nice gold necklace is laying here.~
+~
+8 524288 5 1
+0 0 0 0
+1 460 46
+E
+'gold' 'necklace'~
+This gold necklace consists of very tiny gold links,
+making it an almost thin string of pure gold.  It's
+shimmers under light, and would make a great addition
+to your look as it fits under most other neckware.
+~
+#12475
+silver earrings~
+a pair of silver earrings~
+A pair of silver earrings are here.~
+~
+8 524288 65537
+0 0 0 0
+1 100 10
+E
+'silver' 'earring' 'earrings'~
+These silver earrings are indeed made of pure silver.
+As two tiny spheres they are hardly noticeable, but provide
+a suttle accent to your appearance.
+~
+#12476
+gold earrings~
+a pair of gold earrings~
+A pair of gold earrings are here.~
+~
+8 524288 65537
+0 0 0 0
+1 220 22
+E
+'gold' 'earring' 'earrings'~
+A pair of two tiny gold beads, these small earrings fit
+well in your ear and won't stand out too much.
+~
+#12482
+pair dice~
+a pair of dice~
+Two dice sit here having been rolled to a total of "9"...~
+~
+64 0 16385
+12 0 0 0
+1 0 0
+A
+31 1
+#12483
+letter Vansalon~
+a letter to Vansalon~
+A letter to Vansalon is here.~
+~
+13 0 1
+0 0 0 0
+1 0 0
+E
+letter~
+Write me email at xahxhax@xahxhax.cjb.net so I can get ahold of you.
+-XahXhaX (God)
+~
+#12484
+white rose~
+a white rose~
+A fully bloomed white rose is laying here.~
+~
+32 33554432 16385
+0 1 0 0
+1 0 0
+#12485
+name tag~
+a brand new name tag~
+A new name tag is laying here, perhaps you'd like to make use of it.~
+~
+13 524288 1025 128
+0 0 0 0
+1 10 1
+#12486
+mail post office board~
+The General Message Board~
+A large wooden bulletin board stands on four short legs in the center of the square.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+E
+'mail 'board' 'post' 'office'~
+To use the mail system, please see "help mail"
+  -The Management
+~
+#12487
+holy amulet~
+a holy amulet~
+An amulet is laying here.~
+~
+9 524288 5
+1 1 0 0
+1 0 0
+#12488
+signwell sign~
+a sign~
+A sign has been posted next to the well.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign~
+The sign reads:
+Danger!  Abandoned well
+Be careful not to fall in.
+  -Kingdom of New Hope
+~
+#12489
+town well~
+the town well~
+The stone ring of the town well raises from the ground about 3 feet tall.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign~
+The sign reads:
+Danger!  Abandoned Well
+Be careful not to fall in.
+  -Kingdom of New Hope
+~
+#12490
+crime penalties board~
+the board of crime~
+A board of release penalties is poster on the wall here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#12491
+shopkeeper key~
+the shopkeeper's key~
+A shiny yellow key is sitting here.~
+~
+18 0 1
+12492 0 0 0
+1 0 0
+#12492
+inventory chest~
+the inventory chest~
+The shopkeeper's inventory chest sits here at the back of the room.~
+~
+15 0 0
+900 15 12491 12
+100 0 0
+#12493
+ball~
+a rubber ball~
+A rubber ball is on the ground here.~
+~
+13 0 1
+0 0 0 0
+1 0 0
+#12494
+simple sandals~
+a simple pair of sandals~
+A pair of sandals have been dropped here.~
+~
+13 0 64
+0 0 0 0
+1 0 0
+#12495
+faded robes~
+some faded robes~
+Someone dropped some robes here.~
+~
+13 0 1025
+0 0 0 0
+1 0 0
+#12496
+trophy~
+E'rant's trophy~
+A trophy sits on the ground here, glimmering.~
+~
+8 1 1
+0 0 0 0
+1 0 0
+#12497
+apron~
+a chef's apron~
+Somone has left their apron here.  It smells yummy.~
+~
+13 0 1025
+0 0 0 0
+1 0 0
+#12498
+workmans pants~
+a pair or workman's pants~
+Someone has left their pants here.~
+~
+13 0 33
+0 0 0 0
+1 0 0
+#12499
+workmans shirt~
+a workman's shirt~
+A plain shirt has been dropped here on the ground.~
+~
+13 0 9
+0 0 0 0
+1 0 0
+#12500
+simple womans dress~
+a simple woman's dress~
+A wrinkled dress has been dropped here.~
+~
+13 0 9
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#12401
+New Hope, at the Furrier's~
+Standing here on the north side of town you feel odd shivers down you back.  In
+this day and age there is sorts of danger most everywhere in most any form, and
+the otherwise protective stone wall is broken apart here to your north, a
+fallen wall.  To your south is the furrier's shop, marked by a rather small
+building with a door to enter through to sell your pelts, skins, and hides.
+~
+0 0 1 101
+D1
+~
+~
+0 -1 12402
+D2
+~
+door~
+16908289 -1 12404
+D3
+~
+~
+0 -1 10618
+S
+#12402
+New Hope, Southwest of the Northern Gate~
+Just to the southwest is the furrier's shop, which one can go west to
+enter in from through the front door.  Right to the north of you,
+extending to the east then west in crumbled remains is what once was
+the northern wall, which ends off at the north gate just to the northeast.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12403
+D2
+~
+~
+0 -1 12447
+D3
+~
+~
+0 -1 12401
+S
+#12403
+New Hope, at the North Gate~
+Many people can be seen here coming back and forth through the gate.  It is
+a large wooden gate, very sturdy at that, and is just barely standing now from
+the missing wall to the west.  What could have taken down this wall is anyone's
+guess, it's kept very secretive.
+~
+0 0 1 102
+D0
+~
+gate~
+524289 -1 12502
+D1
+~
+~
+0 -1 12449
+D3
+~
+~
+0 -1 12402
+S
+#12404
+The Furrier's~
+Much to your surprise, and perhaps dismay, the building is empty, except for
+a single large sign on the opposite wall.
+~
+0 4 1 100
+D0
+~
+door~
+262145 -1 12401
+E
+sign~
+The sign reads:
+Spot marked for future Furrier's.
+Soon to open hopefully, come again.
+~
+S
+#12405
+The Healer's Shop~
+This is a very neat and well-maintained shop indeed.  Very much
+unlike most other shops, this shop deals mostly in things to cure
+and heal the sick rather then to injure or destroy.  However, the
+goods sold here are available only to those of the cleric class.
+~
+0 1073741832 0 97
+D3
+~
+door~
+262145 -1 12406
+S
+#12406
+New Hope, at the Healer~
+The road takes a little cut off from the wall for once and you stand just a
+bit from it, along some bushes across the north side.  To the east is a single
+building, which is the town healing shop.  Unlike the healing you recieve else-
+where, this store mostly caters to the needs of clerics, and those who wish
+to purchase the kinds of things clerics do such as potions to cure wounds.
+Also to the south is the tavern, which you can enter just west from here.
+~
+0 1073741824 1 103
+D1
+~
+~
+16777216 -1 12405
+D3
+~
+~
+0 -1 12408
+D6
+~
+~
+0 -1 10618
+D8
+~
+~
+16777216 -1 12407
+S
+#12407
+Magic Shop~
+You are in a small, crammed 1 room store.  Most of the room is taken up
+with shelves of little bottles and odd items from daggers to medallions
+to scrap metals.  Along the back of the room is a poorly made counter
+where the shopkeeper stands during business hours.
+~
+0 1073741832 0 101
+D7
+~
+~
+0 -1 12406
+E
+sign~
+Merlin's Magic Shop
+opens at 6 a.m.
+closes at 8 p.m.
+~
+S
+#12408
+New Hope, at the Tavern~
+Besides many bushes between you and the falling wall to the north, the only
+thing right here is a tall, old building with a path arround it.  A large, 
+faded sign on it reads "Tavern to the south", but it looks worn right now. 
+There are faint voices playing on the wind.
+~
+0 1073741824 1 101
+D1
+~
+~
+0 -1 12406
+D2
+~
+~
+0 -1 11225
+D3
+~
+~
+0 -1 12409
+S
+#12409
+New Hope~
+You stand in the northwestern corner of town.  To the north is a bunch
+of trees and bushes, with the graveyard on the other side...  To
+the southeast you see the town Brewery, though you can't get to it from
+here, and far to the direct south is the western gate.
+~
+0 1073741824 1 100
+D1
+~
+~
+0 -1 12408
+D2
+~
+~
+0 -1 12410
+S
+#12410
+New Hope, at the Brewery~
+You stand in front of the New Hope Brewery, which is just a small
+factory-looking place to the east of you.  A bit to the southeast you
+can see the town well, and further south you see the western gate,
+which leads out into the wilderness that are the western plains.
+~
+0 1073741824 1 101
+D0
+~
+~
+0 -1 12409
+D2
+~
+~
+0 -1 12412
+S
+#12412
+New Hope, North of the West Gate~
+You stand just to the north from the western gate.  From here you can see it
+standing impenetrably, reinforced by the stone wall that comes from each of
+its sides and surrounds the town, though you cannot see over this tall stone
+wall.  To the east is the town well, source of water and such for the town, at
+least that's what it used to do before it dried up...
+~
+0 0 1 107
+D0
+~
+~
+0 -1 12410
+D1
+~
+~
+0 -1 12413
+D2
+~
+~
+0 -1 12419
+S
+#12413
+New Hope, at the town Well~
+The road here ends from the west, and the ground is simply a dirt trail here
+which circulates around a center well.  It is made of similar stone as that of
+the town wall.  Once providing good water to the town's inhabitants, it has
+since dried up in a very mysterious sort of way.  It is more of a landmark now
+of some kind, just a reminder of the simpler days long ago, though not of any
+real importance otherwise.
+~
+0 0 1 112
+D3
+~
+~
+0 -1 12412
+D5
+You attempt to peer down the well, but it's too dark to see anything.
+~
+well~
+17303680 -1 13314
+S
+#12419
+New Hope, at the Western Gate~
+You stand upon the western of the four gates of New Hope.  Like the others it
+is completely and perfectly the same in design and architecture, just as in
+its strength.  To the east is the ever-popular piece of town culture, the
+Theatre, and to the northeast is the town well.
+~
+0 0 1 111
+D0
+~
+~
+0 -1 12412
+D1
+~
+~
+0 -1 12420
+D2
+~
+~
+0 -1 12421
+D3
+~
+gate~
+786433 -1 11024
+S
+#12420
+New Hope, in front of the Theatre~
+Here is the popular culture area of town, the Theatre.  From every now and
+then it runs a play or musical or anything else to keep up it's cost.  It is
+a mark of class, those who are truely of higher culture spend frequent time
+here and can be found here often.  Those who aren't as high class can be found
+laying around the sides of the theater.
+~
+0 0 1 100
+D3
+~
+~
+0 -1 12419
+S
+#12421
+New Hope, South of the West Gate~
+To the north you can see the gate of town along the western wall.  To the
+northeast you see the large architectural wonder of the town theatre, and to
+the east to southeast is the garden area of New Hope, though you can't get to
+it from here because of a fence, which leads to the south,
+~
+0 0 1 106
+D0
+~
+~
+0 -1 12419
+D2
+~
+~
+0 -1 12422
+S
+#12422
+New Hope~
+You walk bewtween a large stone wall to the west, the western wall, which is a
+tall wall composed of large gray stones, stacked in such a way as no one could
+ever scale it, with ease anyways.  On the other is a picket type fence,
+surrounding the garden of town from being trampled over, the entrance is to the
+south.
+~
+0 0 1 103
+D0
+~
+~
+0 -1 12421
+D2
+~
+~
+0 -1 12423
+S
+#12423
+New Hope, at the Garden~
+You are positioned in the very southwestern corner of town.  The large wall
+splits off to both the north and east here with the road following it.
+There is a northeastern entrance here to the town garden, where one can search
+about for flowers, herbs, and miscellaneous plant life.  Further along on the
+opposite side of the garden is the herbal store.
+~
+0 0 1 103
+D0
+~
+~
+0 -1 12422
+D1
+~
+~
+0 -1 12429
+D6
+~
+~
+0 -1 12424
+S
+#12424
+New Hope Gardens~
+This is the entrance to New Hopes Gardens.  Across here to the north, west, and
+northwest is a 2 by 2 part garden.  Many sorts of flowers and such can be
+found here, some with actual value and some without.  To the northwest you can
+see the herbalist shop, which also gains it's inventory from here, though that
+doesn't mean it's easy to.
+~
+0 0 1 101
+D0
+~
+~
+0 -1 12425
+D1
+~
+~
+0 -1 12427
+D6
+~
+~
+0 -1 12426
+D9
+~
+~
+0 -1 12423
+S
+#12425
+New Hope Gardens~
+Here is where one may find many various species of plantation growing about in
+the mess of others, some with greater uses and some with none.  Put together
+with the small part to the west as well, one could spend some time here, and
+end up going home with a few nice things.  The herbalist shop is to the east
+beyond this garden, and the exit is to the direct south.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12426
+D2
+~
+~
+0 -1 12424
+D8
+~
+~
+0 -1 12427
+S
+#12426
+New Hope Gardens~
+This part of the garden combined with the part to the west is the most known
+for finding actual herbs of use, hence the strategic position of the herbalist
+shop in this part of town for easy and quick access to picking the plants.
+To the south are the rose bushes, and to the southwest is the entrance/exit.
+~
+0 0 1 100
+D1
+~
+door~
+16908289 -1 12428
+D2
+~
+~
+0 -1 12427
+D3
+~
+~
+0 -1 12425
+D9
+~
+~
+0 -1 12424
+S
+#12427
+New Hope Gardens~
+Here are planted the rose bushes of the town, the only place to find them in a
+very far distance in fact.  Known for being the greatest of flowers for
+presents and other uses, they are also dangerous to the weaker for the many
+thorns along the stems which can easily cut a serious wound.
+~
+0 4 1 100
+D0
+~
+~
+0 -1 12426
+D3
+~
+~
+0 -1 12424
+D7
+~
+~
+0 -1 12425
+S
+#12428
+Melody's Herbal and all-around General Store~
+Yuo are in the herbalist store.  It is almost a cheery flower store, being next
+to the gardens and all.  Here you can buy many more sorts of vegetations than
+just flowers though.  Herbs have many special attributes when used properly,
+which usually consists of smoking them through a pipe, also available here.
+~
+0 12 0 100
+D3
+~
+door~
+262145 -1 12426
+E
+sign~
+Melody's herbal Boutique
+Open at 10 a.m.
+Close at 8 p.m.
+~
+S
+#12429
+New Hope~
+Walking along the southern streets, you notice the picket-like fence to the
+north, which is put up to secure people from trampling what looks to be a many
+various sorts of flowers and such.  Otherwise, just ahead to the west is the
+southwestern corner of town, and to the east is too far to see anything from
+here.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12430
+D3
+~
+~
+0 -1 12423
+S
+#12430
+New Hope~
+To the north is the town garden, source of many native and foreign (just
+recently introduced to the area) types of plant life, many very valuable
+and powerful.  More importantly to the northeast is the town jail, which needs
+no explanation at all, there is a path here leading to it.  Further up the
+road east is the clothing store, and to the west you can see the town wall
+veering northward, indicating the west side of town.
+~
+0 0 1 102
+D1
+~
+~
+0 -1 12432
+D3
+~
+~
+0 -1 12429
+D6
+~
+~
+0 -1 12434
+S
+#12432
+New Hope~
+Directly to the north is the jail.  It is looks like a cross between a library
+and a courthouse.  Whichever it most closely resembles, it has great white
+steps leading up to the door, and is ornamented with matching statues across
+the front.  The way up would be to go either west or east then ascend them from
+there towards the north.  Otherwise you see the gardens to the northwest and
+the clothing store northeast, neither of which you can get to from here either.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12433
+D3
+~
+~
+0 -1 12430
+S
+#12433
+New Hope, at the Public Library~
+You are currently along the southern road, just next to the south wall of town.
+To the north is a simple wooden door leading into a simple house, which is
+where someone has decided to run a clothing store out of.  That or going north-
+west you can go up the many white steps to the town jail, supposing you have
+some sort of business there, since you wouldn't want to create any by
+soliciting around there.
+~
+0 0 1 100
+D0
+~
+door~
+1 -1 11280
+D1
+~
+~
+0 -1 12435
+D3
+~
+~
+0 -1 12432
+D7
+~
+~
+0 -1 12434
+S
+#12434
+New Hope, at the Jail~
+You stand in front of a large jailhouse.  It's been built out of
+solid white stone, raised up from ground-level with a staircase in
+front.  You can see that all windows, even if indirectly connected
+to the actual jail cells are barred with heavy and durable iron bars,
+this place is very obviously not a place anyone could break in or out of.
+~
+0 1073741824 1 0
+D0
+~
+door~
+131073 -1 12443
+D8
+~
+~
+0 -1 12433
+D9
+~
+~
+0 -1 12430
+S
+#12435
+New Hope, West of the South Gate~
+To the northwest you see the clothing store, or further beyond that the town's
+own jail for anyone deserving to be in there, and not a place you want to be
+around unless necessarily unless you'd like to wind up on the other side of the
+walls.  Continuing down the road to the east the road breaks off to the north
+towards town square.
+~
+0 0 1 102
+D1
+~
+~
+0 -1 12436
+D3
+~
+~
+0 -1 12433
+S
+#12436
+New Hope, at the Southern Gate~
+You are walking along the southern end of town.  No, this doesn't make you
+a confederate, but being a yankee around here just might get you killed though.
+But anyways, there is a long gray stone wall stretching across just to the
+south, reaching out further then you can see to the east and west.  It
+is made of very large stones, carefully laid so there is nowhere to slip a
+foot into if anyone wanted to climb it.
+To your luck however, you need not resort to such things, as an even taller
+wooden gate stands right here for you to go through.
+~
+0 0 1 101
+D0
+~
+~
+0 -1 12437
+D1
+~
+~
+0 -1 12498
+D2
+~
+gate~
+1 -1 12601
+D3
+~
+~
+0 -1 12435
+S
+#12437
+New Hope~
+Just off to the northeast of your postion here is a building.  A bit further
+along are two other buildings alongside it going to the east.  To the northwest
+however stands a taller building.  You look to the south next and see the giant
+stone wall which surrounds the town, and more specifically the southern gate
+to the direct south.
+~
+0 0 1 104
+D0
+~
+~
+0 -1 12438
+D2
+~
+~
+0 -1 12436
+S
+#12438
+New Hope, s of Town Square~
+You are south of Town Square Central, and the noise of all the
+people has faded somewhat. To your east is The Shining Shield armoury,
+and to your west is The New Hope Recruiter.
+This road runs north and south through the Town Square area.
+Eventually, it ends up on south street and straight out the south gate.
+~
+0 0 1 102
+D0
+~
+~
+0 -1 12439
+D2
+~
+~
+0 -1 12437
+S
+#12439
+The Central Town Square~
+A large square filled with grass and dotted with trees stands in the center
+of the city of New Hope. Roads head off in several directions, and several
+benches sit around the edges of the square.  To the east, there is a row
+of shops, while to the west lies an interestion with another road. The
+southern road heads towards the edge of the city.
+~
+0 4 1 134
+D1
+~
+~
+0 -1 12461
+D2
+~
+~
+0 -1 12438
+D3
+~
+~
+0 -1 12440
+D6
+~
+~
+0 -1 12459
+S
+#12440
+New Hope, w of Town Square~
+Just to the east you can see people gathered around the town square of New
+Hope.  To the south you can see where the old recruiter's office used to be,
+now replaced by the town's post office.  Far off to the northeast you can see
+a taller sort of building, which looks like it's kind of important.
+~
+0 1073741824 1 105
+D0
+~
+~
+0 -1 12442
+D1
+~
+~
+0 -1 12439
+S
+#12441
+New Hope, at the Post Office~
+To the northeast is the townsquare, though it is blocked off by some
+trees and such, so you have to go around north or east to get there.
+To the west is a large building which was once the war recruition office,
+now converted into the world's central mail center, the New Hope Post
+Office.  Also located here is the MMMB, or Main Mortal Message Board,
+and the shop to buy your pen and paper at.
+~
+0 1073741824 1 101
+D0
+~
+~
+0 -1 12440
+D1
+~
+~
+0 -1 12438
+D3
+~
+door~
+16908289 -1 12500
+S
+#12442
+New Hope~
+Here to the northeast is a large, fancy mansion, given to a well-known knight
+here in town for his services to the king.  Despite his fame however, he is
+disliked strongly by many here, and at night people have seen the likes of
+rogues who come here and vandalize the building.  Anyways, from here you can
+also see the town square to the southeast, a very important section of town,
+much more then a simple house.
+~
+0 1073741824 1 105
+D0
+~
+~
+0 -1 12444
+D2
+~
+~
+0 -1 12440
+D6
+~
+door~
+16908289 -1 11201
+S
+#12443
+Inside the Jailhouse~
+You find the jailhouse to be quite smaller on the inside then it looks
+on the outside, being little more then a single front room, in which
+you now stand, but much room in multiple jail cells in the back, with
+three sturdy iron doors to the north.  There are barred vents on the
+doors, through which you could probably manage to see into.
+~
+0 1073741824 1 0
+D0
+~
+door~
+8389671 12593 12458
+D2
+~
+door~
+262145 -1 12434
+S
+#12444
+New Hope~
+To the northwest is the town furrier shop, where one can take the hefty amounts
+of skins, furs, and pelts to exchange for goods or money.  Along the backside
+here is an alleyway, going west, and though it is a narrow path and a rather
+tight squeeze, about 2 to 3 people could fit, though it is rather dark down it.
+To the east is a large mansion, with the path leading to the door south of
+here.
+~
+0 1073741824 1 100
+D0
+~
+~
+0 -1 12447
+D2
+~
+~
+0 -1 12442
+D3
+~
+~
+131072 -1 12445
+S
+#12445
+New Hope, in a dark alley~
+This is one of the few alleyways that have been created from buildings here in
+town.  There isn't a lot to see from what you can tell, and the road further
+ahead just seems to end off in a dead end.  The only other option would be to
+leave and return to the traditional streets east.
+~
+0 1073741824 1 101
+D1
+~
+~
+262144 -1 12444
+D9
+~
+~
+0 -1 12446
+> entry_prog 50~
+if isnpc($n)
+and time($n) > 20
+and time($n) < 5
+mpechoat $n You sense motion in the shadows out of the corner of your eye.
+endif
+~
+|
+S
+#12446
+New Hope~
+As you would have guessed, there doesn't seem to be anything down here at all.
+You can hear distant noises from the other sides of the building of people
+chatting as they pass and other common sounds.  One thing that does catch your
+attention is a small scent of something that reeks horribly, something that
+smells as if it died a hundred years ago but no one bothered to find or bury,
+though on any inspection there's still nothing around here.
+~
+0 1073741824 1 100
+D6
+~
+~
+0 -1 12445
+S
+#12447
+New Hope~
+To the west is a small building, known as the taxidermist's or the furrier's,
+the place to go to sell and trade furs, skins, and pelts.  To the southeast
+is a much large building then any other in town, and quite nicer too from
+the looks of it.
+~
+0 1073741824 1 101
+D0
+~
+~
+0 -1 12402
+D2
+~
+~
+0 -1 12444
+S
+#12449
+New Hope, at the Stables~
+Traveling along the northern wall, you notice a foul smell. Glancing to the 
+south you see the stables and realize the source of this terrible odor. You 
+can hear lots of neighing and winneying coming from the horses there.
+~
+0 0 1 105
+D1
+~
+~
+0 -1 12451
+D2
+~
+~
+0 -1 12475
+D3
+~
+~
+0 -1 12403
+S
+#12451
+New Hope~
+A foul smell is blown in from the southwest.  It smells like an odd
+mixture of horse dung and hay.  A tall tower, the tallest thing in town
+from here, stands tall a short ways to the southeast.  There is
+something strange about this tower which sparks your curiosity.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12452
+D3
+~
+~
+0 -1 12449
+S
+#12452
+New Hope~
+Glancing to the east you see an occasional person slipping in or out of
+what appears to be the town wall.  How can anything walk through solid
+rock, you might think.  Further investigation could prove helpful.  But
+your eyes are once again drawn to a tall black tower to the south.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12453
+D3
+~
+~
+0 -1 12451
+S
+#12453
+New Hope, near a tunnel~
+Now you can see how people were travelling in and out of the wall, there is
+a small tunnel here.  Peeking through the tunnel, it appears there is a small
+shop on the other side.  Why would anyone put a shop in a place like that, you
+wonder, and curiosity compells you to find out.
+~
+0 0 1 101
+D1
+~
+~
+0 -1 12478
+D3
+~
+~
+0 -1 12452
+D9
+~
+~
+0 -1 12499
+D10
+~
+tunnel~
+17303552 -1 12454
+S
+#12454
+Garlac's Alchemy Shop~
+You stand in a very small, stuffy single room.  The light from the other side
+of the tunnel is nonexistent, only a lantern on a large rotting counter makes
+the room clear.  Cobwebs have overcome this place, with great ease from the
+looks of it.  There are many simple shelves across the walls, with various
+bottles and things placed on them, all covered in a fine layer of dust.
+~
+0 8 0 104
+D10
+~
+tunnel~
+526336 -1 12453
+E
+sign~
+Garlac's Alchemy Shop
+opens at 6 a.m.
+closes at 4 p.m.
+~
+S
+#12455
+New Hope, near a dark tower~
+A tower lies to the east.  It is pretty well known that all of these who are
+naturally adapt to magic go there to train.  A large pond lies directly to the
+south.  Across the pond you can see three similar buildings standing next to
+each other, side by side.
+~
+0 0 1 100
+D2
+~
+~
+0 -1 12460
+D6
+~
+~
+0 -1 12499
+S
+#12456
+New Hope, at the Jeweler's~
+The town is anything but quiet around here.  You stand at three of the main
+shops of town, the weaponry, armoury, and jewel shops all lined side to
+side in a row.  To the south right here is the door to that jewel shop, and
+to the west lies the other two.  Further west is more importantly the town
+square, where people meet for many purposes.
+~
+0 0 1 101
+D1
+~
+~
+0 -1 12467
+D2
+~
+door~
+16908289 -1 12466
+D3
+~
+~
+0 -1 12462
+D7
+~
+~
+0 -1 12460
+S
+#12458
+Prison~
+You are in a prison cell, in the town of New Hope.  To have gotten
+here you must have done something wrong, and are now stuck here.
+There are two ways to get out, you may either recieve a penalty or
+may wait here to make your case to the next available immortal who
+may find you here.
+ 
+Realize that spamming channels or becoming an annoyance will only
+get you into real trouble, resulting first in silencing, second
+character deletion, and if necessary site ban.
+ 
+Lastly your first time here is treated as a warning, if it was a
+minor crime, and you will not have to take the penalty if you can
+wait for an immortal to release you under your one && only warning.
+~
+0 1077322892 0 100
+D2
+~
+door~
+8651815 12593 12443
+E
+'board' 'crime' 'penalties'~
+List of penalties:
++-----------------------------------------+--------------------------+
+|                                         | 'I accept the penalty of |
+| ----Stat Reductions----------------     |                          |
+| Strength -1 point.                      | strength'                |
+| Wisdom -1 point.                        | wisdom'                  |
+| Constitution -1 point.                  | constitution'            |
+| Dexterity -1 point.                     | dexterity'               |
+| Intelligence -1 point.                  | intelligence'            |
+|    (Only if you have 4+ and 18- of      |                          |
+|    chosen stat.)                        |                          |
+|                                         |                          |
+| ----Experience---------------------     | ---------------------    |
+| One player death, corpse is left alone. | death'                   |
+|    (level 15+ only)                     |                          |
+| Lose one level                          | level'                   |
+|    (must be level 2+)                   |                          |
+|                                         |                          |
+| ----Money--------------------------     | ---------------------    |
+| Lose all gold (Post Bail)               | gold'                    |
+|    (300,000+ gold only)                 |                          |
+|                                         |                          |
++-----------------------------------------+--------------------------+
+Incurring a penalty _is_ an admission to guilt,
+and therefor are under no circumstances
+refundable or reversable.
+For an example, should you choose to lose 1 strength, say
+"I accept the penalty of strength".
+~
+> speech_prog p I accept the penalty of gold~
+if goldamt($n) > 299999
+mpat 12458 mptransfer $n 12481
+mpat 12481 mpforce $n drop 300000 coins
+mpat 12481 mptransfer $n 12458
+mpat 12443 mpforce constable unlock door
+mpat 12443 mpforce constable open door
+mpat 12458 mpforce $n stand
+mpat 12458 mpforce $n south
+mpat 12443 mpforce constable close door
+mpat 12443 mpforce constable lock door
+mpat 12443 mpforce constable 'You're free $n...
+mpat 12443 mpforce constable 'Be sure to keep out of trouble this time.
+else
+mpat 12458 mpecho You do not have enough money for that, $n.
+endif
+~
+> speech_prog p I accept the penalty of death~
+mpat 12458 mpecho Your execution will proceed at once, $n
+mpat 12458 mpecho May the gods have mercy on your soul.
+mpat 12458 mptransfer $n 25
+mpat 12443 mpforce constable mpat 25 'The prisoner is ready to be executed.
+mpat 25 mpforce executioner 'Are you ready to die, $n?
+~
+|
+S
+#12459
+New Hope, ne of Town Square~
+You stand just to the northwest of the Town Square for New Hope.  It is the
+gathering place for people to come to gather and receive emergency healing of
+sorts.  From here you can see a mass of people, all together in a fashion not
+created since the days of the Roman Empire and their banquets.
+~
+0 4 1 101
+D1
+~
+~
+0 -1 12460
+D9
+~
+~
+0 -1 12439
+S
+#12460
+New Hope, at a pond~
+You stand at the edge of the town pond.  Basically it occupies the center of
+the immediate area.  There are roads leading off to the w, n, sw, s, and se,
+and which roads meet here by revolving around the pond.  There is a small area
+of grass off to the otherwise empty east of the pond, where a couple of benches
+are at.  In the very middle of the pond is a small bit of land for variations
+of wildlife such as misc. birds to do whatever it is that they do away from
+intervention by the people passing through.
+~
+0 0 2 116
+D0
+~
+~
+0 -1 12455
+D2
+~
+~
+0 -1 12462
+D3
+~
+~
+0 -1 12459
+D8
+~
+~
+0 -1 12456
+D9
+~
+~
+0 -1 12461
+S
+#12461
+New Hope, e of Town Square and at the Armoury~
+You stand in the middle of the streets, trying your best to make your way
+through without getting in anybody's way, especially if that anyone is bigger
+than you.  To the south is a door on a short building, connected to another to
+the southeast.  On the building here however is a sign over the doorway, and
+perhaps it will make interesting reading.
+~
+0 0 1 107
+D1
+~
+~
+0 -1 12462
+D2
+~
+door~
+131073 -1 12465
+D3
+~
+~
+0 -1 12439
+D6
+~
+~
+0 -1 12460
+E
+sign~
+You read the sign over the doorway:
+"The New Hope Shining Shield Armoury"
+~
+S
+#12462
+New Hope, at the Weaponry~
+To your south you see a long building with a large sign 
+posted out front. It reads "The Thorny Club Weaponry and
+The Shining Shield Armoury". Sounds of metal clanging and the smell
+of leather, steel, and polish waft from that direction. Westward,
+you can hear the babble of all the people in Town Square.
+~
+0 0 1 149
+D0
+~
+~
+0 -1 12460
+D1
+~
+~
+0 -1 12456
+D2
+~
+door~
+131073 -1 12464
+D3
+~
+~
+0 -1 12461
+S
+#12463
+Armour and Weapon Repair~
+You stand in a room much the same as the shops, but here there are such
+blacksmithing things such as a cauldron of something that must be incredibly
+hot, racks of forging tools, etc.  This is the single place in New Hope
+where one can hope to have their battle-worn equipment fixed to good as
+new quality, all for a low, low price.
+~
+0 1073741832 0 104
+D6
+~
+~
+0 -1 12464
+D7
+~
+~
+0 -1 12465
+E
+sign~
+Armour and Waepon Repair Shop
+opens at 6 a.m.
+closes at midnight
+~
+S
+#12464
+The Thorny Club Weaponry~
+You stand in the weaponry store.  Large slabs of oak fitted together form this
+buildling.  It is somewhat larger than it looked from the outside, and has many
+manequins positioned in forms of fighting displaying their mace or sword or
+whatever, with a large series of shelves sporting the actual weapons to be
+sold.  There is a large grinding stone in the back corner, behind the counter,
+for the purpose of sharpening these instruments of death to the greatest
+potential.
+The west wall has been evidentally torn down, making a simple entrance back and
+forth between here and the neighbor armoury.
+~
+0 8 0 114
+D0
+~
+door~
+262145 -1 12462
+D3
+~
+~
+0 -1 12465
+D9
+~
+~
+0 -1 12463
+E
+sign~
+The Thorny Club Weaponry
+opens at 6 a.m.
+closes at midnight
+~
+> act_prog p The town bum arrives~
+mpat 12464 mpforce thorne 'I've told you for the last time to keep out of my @#!%@ shop you lousy bum!
+mpat 12464 mpforce thorne kill bum
+mpat 12464 mpforce thorne sac stick
+~
+> act_prog p The town bum drops a stick.~
+mpat 12464 mpforce thorne sac stick
+~
+|
+S
+#12465
+The Shining Shield Armoury~
+Suits of assorted armors and shields of all types and sizes are hung with
+really little apparent care across the walls here, the rest laying in a large
+jumble of metal and hide off to the side of the room.  Amongst this entire
+mess stand E'rant the Armorer, the best, and most likely only armory man of
+New Hope.  He barely cares to glance up at you as you enter, and simply goes
+on about his business.
+This room has been joined to the weaponry to the east, and thus there is no
+wall there having obviously been knocked out.
+~
+0 8 0 104
+D0
+~
+door~
+262145 -1 12461
+D1
+~
+~
+0 -1 12464
+D8
+~
+~
+0 -1 12463
+E
+sign~
+The Shining Shield Armoury
+opens at 6 a.m.
+closes at midnight
+~
+S
+#12466
+Sparkling Jewels and Accessories Jewelry Store~
+This room has three glass cases arranged in a portion of
+a square coming from the southern wall.  During the day time
+they are used to display a variety of different rings,
+necklaces, broaches, amulets, and pendants.  Most are just
+plain pieces of jewelry as accessories, though some may
+have magical properties.
+~
+0 12 0 101
+D0
+~
+door~
+262145 -1 12456
+D10
+~
+glass~
+100665344 -1 12477
+E
+sign~
+Sparkling Jewels and Accessories Jewelry Store
+opens at 6 a.m.
+closes at midnight
+~
+S
+#12467
+New Hope~
+You see the Jewler's shop just to the southwest of here, and two other shops
+continue from it further to the west.  You are on a road right now that leads
+from the more stirring western side of town to the more peaceful eastern
+side.  There you will find the town Inn, the Barracks, and the gate to the
+outter Eastern Plains.
+~
+0 0 1 100
+D3
+~
+~
+0 -1 12456
+D6
+~
+~
+0 -1 12468
+S
+#12468
+New Hope~
+You seem to be in the middle of nowhere for the most part.  With the exception
+of a warrior passing through here from the Barracks to the Inn or vice-versa,
+this quiet edge of town doesn't recive much excitement at all.  Perhaps finding
+the eastern gate far to the northeast of here would be your best bet for some-
+thing to do.
+~
+0 0 1 101
+D1
+~
+~
+0 -1 12469
+D9
+~
+~
+0 -1 12467
+S
+#12469
+New Hope, at the Inn~
+Besides many bushes between you and the falling wall to the north, the only
+thing right here is a tall, old building.  A large, faded sign on it reads
+"Tavern", but it looks too worn and abandoned to be anything right now.
+There is a door to the southeast leading into it, but that is completely
+boarded up, so best not to go in there obviously.  Otherwise there is the
+town brewery to the south, and the healing shop further down the road to
+~
+0 0 1 100
+D1
+~
+door~
+16908289 -1 11292
+D2
+~
+~
+0 -1 12483
+D3
+~
+~
+0 -1 12468
+D7
+~
+~
+0 -1 12470
+S
+#12470
+New Hope~
+You look about your surroundings, and find this to be a pretty quiet corner
+of town.  Perhaps that is why they decided to stick the nearby Barracks here,
+to the northeast, and a nearby inn a bit longer aways to the southeast.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12473
+D1
+~
+~
+0 -1 12471
+D8
+~
+~
+0 -1 12469
+S
+#12471
+New Hope~
+Just to the north of where you stand lays the menacing Barracks, the new
+warrior's guild erected here in New Hope for the royal security of the town.
+Also just southeast, about the same distance, you can see the inn, probably
+located strategically for good business from the many warriors that pass by
+here.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12472
+D3
+~
+~
+0 -1 12470
+S
+#12472
+New Hope~
+Just to the south you see one side of the four-story New Hope Inn.  High above
+it's smokestack chimney puffs out constant smoke into the air, and the area
+here and around you smells easily of fine cooked meals and beverage.  Also you
+can't help but notice the threatening Barracks, a sign that times just aren't
+right in the world and a town such as this one needs twenty foot high stone
+walls and a functional barracks.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12482
+D3
+~
+~
+0 -1 12471
+S
+#12473
+New Hope, at the Barracks~
+You make your way off of the slightly, but not very much, more paved road and
+onto a more of a dirt pathway, which ends right here both north and south, but 
+goes on to the east right up to the door of the warrior's guild.
+Otherwise there is nothing more of interest here.
+~
+0 0 1 102
+D0
+~
+~
+0 -1 12478
+D2
+~
+~
+0 -1 12470
+S
+#12474
+Inside the bag shop~
+You try to close the door behind you, but it snags on the rack of oddly-
+shaped bags. The rack extends all the way around the room, ending on
+the other side of the doorway.  Bags and boxes of all shapes and sizes 
+hang on the racks and take up the shelves. Behind the counter, in fact,
+is an old bag herself. She stoops behind the counter and grumbles to
+herself about the youngins of today. She looks up at you and grumbles
+a bit more loudly, something about new-fangled backpacks.
+~
+0 8 0 102
+D1
+~
+door~
+262145 -1 12485
+S
+#12475
+New Hope Stables~
+~
+0 1073745928 0 100
+D0
+~
+~
+0 -1 12449
+S
+#12476
+STABLES RESERVE~
+~
+0 1073741828 1 0
+S
+#12477
+Some of the things you see in the glass case-~
+~
+0 1610612740 1 0
+S
+#12478
+New Hope~
+Off in the distance, just a bit aways to the east you can make out the eastern
+gate of New Hope, which leads outside of the boundaries of the walls and into
+the heavily talked about open fields that the warriors at the bars sit around
+converse about to no end.
+Speaking of the warriors, just to the southeast of where you now stand is the
+town Barracks, which is home to the elitist warriors of New Hope.
+~
+0 0 1 101
+D1
+~
+~
+0 -1 12479
+D2
+~
+~
+0 -1 12473
+D3
+~
+~
+0 -1 12453
+S
+#12479
+New Hope~
+You walk through the simple streets of New Hope, barely noticing the other
+peoples as they pass you by, scurrying along to some business elsewhere.
+Just up the road to the east you can see where the continuation of the
+stone wall pauses for a large wooden gate, heavily fortified against whatever
+may lurk out in the wilderness.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12480
+D3
+~
+~
+0 -1 12478
+S
+#12480
+New Hope, at the East Gate~
+You stand upon a giant wooden gate to the east, which has a high stone wall
+coming out from both sides of it, leading to the south and north.  It is
+composed of a mass of rather large, gray stones stacked up carefully so there
+is no place for one to climb up and scale over the wall...
+~
+0 0 1 104
+D1
+~
+gate~
+786433 -1 12201
+D2
+~
+~
+0 -1 12482
+D3
+~
+~
+0 -1 12479
+> time_prog 0~
+if rand(1)
+mpat 12480 mpecho The sky crackles with thunder and lightning, and the gates blast open.  Puff the Fractal Dragon has returned to New Hope.
+mpat 12201 mpforce gate mpat 12480 yell To arms!  Puff has returned to the city!  Call the guards!  Everyone hide in your houses!
+mpat 12480 mpmload 12499
+endif
+~
+|
+S
+#12481
+New Hope Collection~
+This is the room where items concerning jail are left.  Stay out of here
+unless you have reason to be here.
+~
+0 1076887564 0 0
+S
+#12482
+New Hope, South of the Eastern Gate~
+You stand in the uneventful northeastern corner of the town.  Right beside you
+to the west is the backside of the Barracks, the new warrior's guild of New
+Hope.  Further up the road to the north you see one of the towers along the
+eastern side of town, in it's ever-present watch for intruders into the town.
+Also to the south, probably about the same distance, you can see the New Hope
+Inn.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12480
+D2
+~
+~
+0 -1 12472
+S
+#12483
+New Hope~
+The peacefulness of this place is overwhelming, making you almost drift off to
+sleep many times standing where you are.  Except for a bit of unintelligible
+sounds of voices coming from the nearby inn to the northeast, nothing is here
+for the most part but lots of road and the occassional passerby.
+~
+0 0 1 101
+D0
+~
+~
+0 -1 12469
+D1
+~
+~
+0 -1 12484
+D2
+~
+~
+0 -1 12485
+S
+#12484
+New Hope~
+Just to the north of you stands a tall but skinny building, the town Inn.
+Smoke is coming from the rooftop, and you can smell some type of food which you
+can't quite figure out though.  You attempt to look around otherwise but all
+you can see is road, path, and more road.
+~
+0 0 1 100
+D2
+~
+~
+0 -1 12488
+D3
+~
+~
+0 -1 12483
+S
+#12485
+New Hope, at the Bag Shop~
+You walk from along the north and south road, which lines across the side
+of a long pile of wood, taking up the middle of the road and splitting it into
+this and another side.  Right here to the west is the Ol' Bag Shoppe, where
+one may go to purchase a variety of bags, for what you will have to figure
+yourself.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12483
+D2
+~
+~
+0 -1 12486
+D3
+~
+door~
+131073 -1 12474
+S
+#12486
+New Hope, at the Pawn Shop~
+You are walking along the eastern side of town.  You can see the large stone
+wall peeking out from above the long piles of wood going north to south
+across here.  Here beside you is a door along the west leading into the
+New Hope Pawn Shop, where one may purchase used, worn, or just sold equipment
+of various types.  The road here ends, so you'll have to go back north to get
+to anywhere else in town.
+~
+0 0 1 101
+D0
+~
+~
+0 -1 12485
+D2
+~
+~
+0 -1 12492
+D3
+~
+door~
+16908289 -1 12487
+S
+#12487
+Your neighborhood pawn shop~
+You enter into the dusty shop.  This looks old, even for this era.
+Mainly this building has a variety of rooms for different types of things
+to be sold and bought second-hand.  This first room is for weapons and
+armours, with the shopkeeper Dalfreid sitting at his table of goods in the
+middle of the room.
+~
+0 8 0 103
+D1
+~
+door~
+262145 -1 12486
+E
+sign~
+Pawn Shop
+Doors open at noon
+close at 6 a.m.
+~
+S
+#12488
+New Hope~
+You stand upon the very eastern side of town.  You can tell by the large stone
+wall just to the east of you.  To the west is a large stack of wood which has
+been left there for some odd reason, and it extends to the south very far
+making you unable to cross over to the other side here.  A little bit to the
+north you can see a tall building, which must be the Inn.
+If you didn't know better, you could swear you just saw a figure jump down
+from the top of the wall just to the east and run off to the south.  But
+how could anyone climb something like a twenty-foot stone wall?
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12484
+D2
+~
+~
+0 -1 12489
+> hour_prog 0~
+if rand(1)
+if mobinarea(12450)
+mpat 12488 mpmload 12450
+mpat 12488 mpforce spy mpoload 13299 13
+mpat 12488 mpforce spy mpoload 13298 13
+mpat 12488 mpforce spy mpat 11288 wear all
+endif
+endif
+~
+|
+S
+#12489
+New Hope~
+You stand upon the very eastern side of town.  You can tell by the large stone
+wall just to the east of you.  To the west is a large stack of wood which has
+been left there for some odd reason, and it extends just to the north
+and far to the south, making you unable to cross over to the other side here.
+Pretty far to the north you can make out a tall building, which must be the
+town Inn.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12488
+D2
+~
+~
+0 -1 12490
+S
+#12490
+New Hope~
+You are at the southeastern corner of town.  Here the brick wall takes a turn
+from coming from the north and goes west, but first takes a break right to the
+south where a large tower stands high.  The entrance is right here, that or
+else the road leads to the north and to the west where you can't see much from
+here.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12489
+D2
+~
+~
+16910336 -1 12491
+D3
+~
+~
+0 -1 12492
+S
+#12491
+Watch Tower, clockworks~
+You stand in the southern watch tower out into the wall.  This is the tower
+of clockworks, where time is kept throughout the lands.  Looking high up you
+see many gears, bars, and tracks laying in testament to this.  Most of the
+parts are moving in their slow rotations and turns, however old they are.
+~
+0 264 0 102
+D0
+~
+~
+264192 -1 12490
+S
+#12492
+New Hope~
+You walk here along the southern road lining the wall.  To the southeast is
+the tall southern tower, and to the northwest is evidentally the town pawn
+shop, though you can't get to it from here, you'll have to find a way around
+to it.  Further up the road to the west your nose can catch the smell of food
+which appeals to your stomach easily.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12486
+D1
+~
+~
+0 -1 12490
+D3
+~
+~
+0 -1 12493
+S
+#12493
+New Hope~
+Still along the southern road, you find the pawn shop directly north, though
+it seems to be only a side of the building, there's no way in from here.  You
+will have to find a way around obviously.  To the northwest is the bakery,
+where one can go for most food needs.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12492
+D3
+~
+~
+0 -1 12494
+S
+#12494
+New Hope, at the Bakery~
+The smell of foods fill the air right in front of the small bakery here.
+Being the only food place in town, with maybe the exception of the inn
+somewhat, this building attracts many peoples through the southern road.
+To the northeast you can see the backside of the pawn shop, and to the north is
+the door leading inside the bakery.
+~
+0 0 1 101
+D0
+~
+door~
+131073 -1 12495
+D1
+~
+~
+0 -1 12493
+D3
+~
+~
+0 -1 12496
+S
+#12495
+The Bakery~
+A glass counter stands along the northern side of a wooden shop, beneath
+which lies a collection of confectionary delicacies. Shelves line the wooden
+walls, broken only by a single window through which light filters and the door
+that lies to the south.
+~
+0 12 0 103
+D2
+~
+door~
+262145 -1 12494
+> act_prog p buys~
+mpforce cook 'If that's all you want I'll go to my back room to do inventory.
+mptransfer cook 11288
+mpecho The cook leaves into a backroom...
+~
+|
+S
+#12496
+New Hope~
+A large building is placed to the northwest, it is the town's one and only
+church.  It is freshly painted and everything, looks to be brand new.  For the
+most part it is too, ever since something happened to the old cathedral far off
+to the northwest part of town, where the cemetary is now located.  Also to
+the northeast you see the side of the bakery, and can smell the foods being
+prepared from here.
+~
+0 0 1 101
+D1
+~
+~
+0 -1 12494
+D3
+~
+~
+0 -1 12497
+S
+#12497
+New Hope, at the Church~
+A great church towers above you with a massive steeple and gargantuan
+bells. It is completely white with beautiful stained glass windows that
+portray the god Paladin and all the immortals of Amethyst.
+As you stare in awe at this church, you notice several men and
+women entering through the heavy oak doors. They look
+like mages, but they wear robes of white and carry strange holy symbols
+with them. Further down the southern road you can faintly smell something like
+bread baking...
+~
+0 0 1 100
+D0
+~
+door~
+16908289 -1 11213
+D1
+~
+~
+0 -1 12496
+D3
+~
+~
+0 -1 12498
+S
+#12498
+New Hope, East of the South Gate~
+This is the southern road, which spans the length of New Hope.
+Off to to your west is the southern gate, towering above you in all its glory.
+Along southern road on the east side you'll find the bakery and the church,
+and to the western side is the jail and Stitch the Tailor's clothing shop.
+Also on the southern road is the town's garden, established only a short time
+ago, and you can already imagine the blossoms and flowers which may be found
+there.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12497
+D3
+~
+~
+0 -1 12436
+S
+#12499
+New Hope, near a dark tower~
+Directly to the south lies a huge tower, the tallest building in town.
+Sometimes late at night people have said that they can see strange colors
+and explosions throught the upper windows of the tower.  They say that mages
+are up there, practicing their mystical art.
+~
+0 0 1 101
+D6
+~
+~
+0 -1 12453
+D9
+~
+~
+0 -1 12455
+S
+#12500
+Post Office~
+This here is a simple two roomed building.  One here for the purpose of
+selling paper, writing and delivering mail, and most things covered by
+the postal service of New Hope.  To the west the office has put up room
+for the mortal message board.
+~
+0 1073741832 0 100
+D1
+~
+door~
+262145 -1 11173
+D3
+~
+~
+0 -1 12501
+S
+#12501
+Fixit Room~
+This seems to be a room sololy designed to contain a large message board
+upon which are notes of problems with existing areas not fitting like they
+should.
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12500
+S
+#0
+
+
+#RESETS
+M 0 12401 1 12454
+G 1 12418 1
+G 1 12437 1
+G 1 12447 1
+G 1 12440 1
+G 1 12439 1
+G 1 12438 1
+M 0 12402 1 12428
+G 1 12485 1
+G 1 13305 1
+G 1 12517 1
+G 1 12450 1
+G 1 12404 1
+G 1 12405 12402
+G 1 12406 12402
+G 1 12407 12402
+G 1 12408 12402
+G 1 12409 12402
+G 1 12410 12402
+M 0 12406 1 12467
+E 1 12411 1 16
+M 0 12403 1 12464
+G 1 12454 1
+G 1 12453 1
+G 1 12522 1
+G 1 12521 1
+G 1 12518 1
+G 1 12515 1
+G 1 12512 1
+G 1 12511 1
+G 1 12510 1
+E 1 11298 1 7
+E 1 3115 1 5
+G 1 12507 1
+G 1 12506 1
+O 0 12413 1 12467
+O 0 12412 1 12468
+M 0 12408 1 12401
+E 1 12498 1 7
+E 1 12499 1 5
+M 0 12409 1 12486
+E 1 12500 1 5
+O 0 13301 1 12460
+O 0 12419 1 12495
+M 0 12412 1 12474
+G 1 12445 1
+G 1 29807 1
+G 1 37 1
+G 1 36 1
+M 0 12415 1 12487
+G 1 12509 1
+E 1 11298 1 7
+E 1 11300 1 16
+E 1 11299 1 5
+E 1 11297 1 8
+E 1 11296 1 10
+O 0 12427 1 12460
+M 0 12416 1 12446
+M 0 12418 1 12463
+E 1 11298 1 7
+E 1 3126 1 10
+E 1 32061 1 8
+E 1 3115 1 5
+M 0 12421 1 12405
+G 1 12451 1
+G 1 12458 1
+G 1 12457 1
+G 1 12456 1
+G 1 12442 1
+G 1 12441 1
+G 1 12436 1
+G 1 12403 1
+G 1 12402 1
+G 1 12401 1
+G 1 12435 1
+O 0 12448 1 12463
+M 0 12404 1 12465
+G 1 12443 1
+G 1 12449 1
+G 1 12460 1
+G 1 12455 1
+G 1 12431 1
+G 1 12430 1
+G 1 12432 1
+G 1 12520 1
+G 1 12519 1
+G 1 12516 1
+G 1 12514 1
+G 1 12513 1
+G 1 12508 1
+G 1 12504 1
+G 1 12503 1
+G 1 12502 1
+G 1 12501 1
+E 1 32061 1 8
+E 1 11298 1 7
+E 1 3115 1 5
+M 0 12422 1 12475
+M 0 12423 1 12476
+M 0 12424 1 12476
+M 0 12425 1 12425
+E 1 12494 1 8
+E 1 12495 1 12
+M 0 12426 1 12462
+M 0 12443 1 12443
+G 1 12593 1
+M 0 12427 1 12476
+M 1 12503 1 12536
+E 1 12527 1 8
+E 1 12526 1 16
+E 1 12525 1 6
+E 1 12523 1 5
+D 0 12536 1 0
+M 1 97 1 25
+E 1 97 1 16
+E 1 96 1 6
+O 1 12489 1 12413
+O 1 12488 1 12413
+M 0 12445 1 12490
+M 1 12428 1 12466
+O 1 12492 1 12466
+O 1 12452 1 12466
+D 0 12466 0 0
+O 1 12470 1 12477
+O 1 12471 1 12477
+O 1 12474 1 12477
+O 1 12475 1 12477
+O 1 12476 1 12477
+M 1 12446 1 12201
+D 0 12201 3 0
+M 1 12447 1 12436
+E 1 12606 1 16
+E 1 12608 1 5
+E 1 12607 1 5
+D 0 12436 2 0
+M 0 12419 1 12436
+M 1 12447 2 12470
+E 1 12606 1 16
+E 1 12607 1 5
+E 1 12608 1 5
+M 1 12447 3 12480
+E 1 12608 1 5
+E 1 12607 1 5
+E 1 12606 1 16
+D 0 12480 1 0
+M 1 12447 4 12439
+E 1 12608 1 5
+E 1 12607 1 5
+E 1 12606 1 16
+M 1 12498 1 12439
+E 1 2854 1 5
+E 1 29841 1 8
+E 1 10290 1 16
+O 0 12486 1 12500
+M 0 91 1 12439
+E 1 98 1 17
+E 1 12459 1 12
+M 0 12500 1 12439
+M 1 12417 1 12407
+G 1 12416 1
+G 1 12417 1
+E 1 12433 1 17
+G 1 12433 1
+G 1 12597 1
+G 1 34 1
+G 1 12428 1
+G 1 12446 1
+G 1 12434 1
+G 1 12429 1
+G 1 33 1
+E 1 12459 1 12
+E 1 12599 1 6
+O 0 12484 10 12427
+O 1 92 1 12501
+S
+
+
+#SHOPS
+ 12401   10  0  0  0  0   100  85         6 16    ; An alchemist Garlac
+ 12402   32 31 26  0  0   100  90        10 20    ; Melody the Herbalist
+ 12403    0  0  0  0  0   100  90         6  0    ; Thorne the weapon dealer
+ 12404    0  0  0  0  0   100  90         6  0    ; E'rant the Armorer
+ 12410    0  0  0  0  0   100  90         0 23    ; the cook
+ 12412   15  0  0  0  0   100  90         0 23    ; Illissa
+ 12415    5  9 58 57 56   140  40        12  6    ; Dalfreid
+ 12417    0  0  0  0  0   100  90         6 20    ; Merlin
+ 12421    0  0  0  0  0   120  85         0 23    ; the cleric
+ 12428    0  0  0  0  0   110  60         6  0    ; Iptarius
+0
+
+
+#REPAIRS
+ 12418    5  9  0         100   1         6  0    ; Cinse
+0
+
+
+#SPECIALS
+M  12413 spec_guard
+M  12414 spec_guard
+M  12446 spec_guard
+M  12447 spec_guard
+M  12450 spec_thief
+S
+
+
+#$

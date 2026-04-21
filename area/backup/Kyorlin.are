@@ -1,0 +1,925 @@
+#AREA   {PROTO} Kyorlin's area in progress~
+
+
+
+#VERSION 1
+#AUTHOR Kyorlin~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#HIGHECONOMY 0 0 0 0 0 -1
+
+#LOWECONOMY 0 0 0 0 0 -1
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#4000
+fire mob~
+a newly created fire mob~
+Some god abandoned a newly created fire mob here.
+~
+~
+1 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+8 8 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 0 0 0
+0 0 32 0 0 0 0 0
+T 0 0 0 0 0 -1
+#4099
+last mob~
+a newly created last mob~
+Some god abandoned a newly created last mob here.
+~
+~
+1 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+8 8 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 0 0 0
+0 0 32 0 0 0 0 0
+T 0 0 0 0 0 -1
+#0
+
+
+#OBJECTS
+#4000
+first item~
+a newly created first item~
+Some god dropped a newly created first item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#4099
+last item~
+a newly created last item~
+Some god dropped a newly created last item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#4000
+At the Edge of the Cavern of Valshara~
+A wide cavern stretches out to the south of you, framed between two guard 
+towers, you can see the spires of the noble compounds behind the gate glowing
+in faint purple faerie fire. To the north of you, the endless tunnels of the
+wilds await. If you travel in that direction you are sure to find danger at 
+least as great as any you would ever face upon the streets of valshara if 
+not greater.
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4001
+D2
+~
+~
+0 -1 3021
+S
+#4001
+Within the Tunnels of the Wilds~
+The walls around you are covered with phosphorencent fungus, just bright
+enough to prevent easy use of infravision. You almost jump at shadows 
+which seem to waver and move in the strange light. The wilds has a reputation
+for being deadly, even drow have much to fear here.
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4002
+D2
+~
+~
+0 -1 4000
+S
+#4002
+Wandering Through the Tunnels of the Underdark~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4003
+D2
+~
+~
+0 -1 4001
+S
+#4003
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4004
+D1
+~
+~
+0 -1 4005
+D2
+~
+~
+0 -1 4002
+D3
+~
+~
+0 -1 4006
+S
+#4004
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4003
+S
+#4005
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4003
+S
+#4006
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4003
+D9
+~
+~
+0 -1 4007
+S
+#4007
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D6
+~
+~
+0 -1 4006
+D7
+~
+~
+0 -1 4008
+S
+#4008
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D8
+~
+~
+0 -1 4007
+D9
+~
+~
+0 -1 4009
+S
+#4009
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4010
+D6
+~
+~
+0 -1 4008
+S
+#4010
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4009
+D7
+~
+~
+0 -1 4011
+S
+#4011
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4012
+D8
+~
+~
+0 -1 4010
+S
+#4012
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4011
+D6
+~
+~
+0 -1 4013
+S
+#4013
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D7
+~
+~
+0 -1 4014
+D9
+~
+~
+0 -1 4012
+S
+#4014
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D6
+~
+~
+0 -1 4015
+D8
+~
+~
+0 -1 4013
+S
+#4015
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4016
+D9
+~
+~
+0 -1 4014
+S
+#4016
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4015
+D6
+~
+~
+0 -1 4017
+S
+#4017
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D7
+~
+~
+0 -1 4018
+D9
+~
+~
+0 -1 4016
+S
+#4018
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4019
+D8
+~
+~
+0 -1 4017
+S
+#4019
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4018
+D6
+~
+~
+0 -1 4020
+S
+#4020
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4021
+D9
+~
+~
+0 -1 4019
+S
+#4021
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4020
+D6
+~
+~
+0 -1 4022
+S
+#4022
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D8
+~
+~
+0 -1 4023
+D9
+~
+~
+0 -1 4021
+S
+#4023
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4024
+D7
+~
+~
+0 -1 4022
+S
+#4024
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4025
+D3
+~
+~
+0 -1 4023
+S
+#4025
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4024
+D7
+~
+~
+0 -1 4026
+S
+#4026
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4027
+D8
+~
+~
+0 -1 4025
+S
+#4027
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4026
+D6
+~
+~
+0 -1 4028
+S
+#4028
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D7
+~
+~
+0 -1 4029
+D9
+~
+~
+0 -1 4027
+S
+#4029
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D7
+~
+~
+0 -1 4030
+D8
+~
+~
+0 -1 4028
+S
+#4030
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4031
+D8
+~
+~
+0 -1 4029
+S
+#4031
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4030
+D6
+~
+~
+0 -1 4032
+S
+#4032
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4033
+D9
+~
+~
+0 -1 4031
+S
+#4033
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4032
+D3
+~
+~
+0 -1 4034
+S
+#4034
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4033
+D3
+~
+~
+0 -1 4035
+S
+#4035
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4034
+D7
+~
+~
+0 -1 4036
+S
+#4036
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4037
+D8
+~
+~
+0 -1 4035
+S
+#4037
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4036
+D6
+~
+~
+0 -1 4038
+S
+#4038
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4039
+D9
+~
+~
+0 -1 4037
+S
+#4039
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4038
+D8
+~
+~
+0 -1 4040
+S
+#4040
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D6
+~
+~
+0 -1 4041
+D7
+~
+~
+0 -1 4039
+S
+#4041
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4042
+D9
+~
+~
+0 -1 4040
+S
+#4042
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4041
+D7
+~
+~
+0 -1 4043
+S
+#4043
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4044
+D8
+~
+~
+0 -1 4042
+S
+#4044
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4043
+D7
+~
+~
+0 -1 4045
+S
+#4045
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4046
+D8
+~
+~
+0 -1 4044
+S
+#4046
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4045
+D6
+~
+~
+0 -1 4047
+S
+#4047
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4048
+D9
+~
+~
+0 -1 4046
+S
+#4048
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4047
+D6
+~
+~
+0 -1 4049
+S
+#4049
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4050
+D9
+~
+~
+0 -1 4048
+S
+#4050
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4049
+D7
+~
+~
+0 -1 4051
+S
+#4051
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 4052
+D8
+~
+~
+0 -1 4050
+S
+#4052
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4051
+D3
+~
+~
+0 -1 4053
+S
+#4053
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4052
+D9
+~
+~
+0 -1 4054
+S
+#4054
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4055
+D6
+~
+~
+0 -1 4053
+S
+#4055
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4054
+D8
+~
+~
+0 -1 4056
+S
+#4056
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D6
+~
+~
+0 -1 4057
+D7
+~
+~
+0 -1 4055
+S
+#4057
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4058
+D9
+~
+~
+0 -1 4056
+S
+#4058
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4057
+D3
+~
+~
+0 -1 4059
+S
+#4059
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 4058
+D2
+~
+~
+0 -1 4060
+S
+#4060
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4059
+D4
+~
+~
+0 -1 4061
+S
+#4061
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 4062
+D5
+~
+~
+0 -1 4060
+S
+#4062
+Floating in a void~
+~
+0 0 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 4061
+S
+#4099
+last room~
+~
+0 0 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,2573 @@
+#AREA   The Northern Wastelands~
+
+
+
+#VERSION 214
+#AUTHOR Kyorlin~
+
+#RANGES
+35 65 1 100
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#401
+thief-bandit-wastelands~
+A bandit of the Wastelands~
+A bandit lies here in hiding, waiting for the chance to steal someones gold
+~
+A tall bandit stands before you, his face concealed in a mask, and wearing
+many heavy cloaks. He eyes your gold pouch with an evil grin.
+~
+3 98344 -1000 C
+40 0 0 100d2+2500 0d0+0
+45 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 2 0 0 3 2 4
+0 0 1759 0 0 0 1152 3
+> greet_prog 100~
+evilgrin $n
+backstab $n
+~
+|
+#402
+orc-mountain-grunt~
+an orcish grunt~
+An orc, clad in the armor of angband, scowls furiously.
+~
+A tall orc, hailing from the mountains of the Orocarni, is clad in the
+platemail of angband. With a swift glance across the room, he proceeds
+upon his mission to find the enemies of his master and bring them swift
+death.
+~
+65637 32 0 C
+38 0 0 3d200+3000 2d5+10
+38 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+53 3 0 0 0 0 5
+0 0 1791 0 0 0 160 524290
+#403
+Valaraukar-balrog-demon~
+a Valaraukar of Morgoth~
+A demon of shadow and fire, a balrog stands before you!
+~
+The Valaraukar is a large 10 foot tall creature covered in black fur, with
+the face of a lion, the body of a man and the tattered wings of a bat.
+Smoke and flame oozes from its poors, and as it sees you, it produces
+a large, flaming red sword, and inhales deeply, preparing to breath.
+~
+35 369098888 -1000 C
+60 0 0 5d100+10000 5d5+5
+200 0
+108 108 0
+13 13 13 13 13 13 13
+-30 -15 -20 -10 -20
+90 1 0 0 0 0 8
+0 0 263933 1056768 1 0 1207964416 262147
+#404
+dragon-hatchling-baby~
+a hatchling~
+A young dragon hatchling is waiting here for its next meal.
+~
+A small fire breathing dragon, freshly out of its egg, is exploring its
+world. Although very young, this dragon already breaths fire and is 
+therefore dangerous.
+~
+99 0 -50 C
+4 0 35 33d1+1 0d0+0
+2 0
+112 112 0
+13 13 13 13 25 13 13
+0 0 0 0 0
+31 3 0 0 0 0 0
+0 0 328856 0 2048 0 3 3
+#405
+dragon-young-black~
+a young black dragon~
+A young black dragon wanders around searching for food and treasure
+~
+A large black dragon, although realitivly young and inexpierienced as
+dragons go, looks strong enough to be a threat.
+~
+37 8 -250 C
+35 0 0 5d10+3500 4d5+5
+35 0
+108 108 0
+18 18 15 10 20 13 20
+-5 -5 -5 -5 -5
+31 3 0 0 0 0 4
+0 0 33817 7 128 0 259 524290
+#406
+dragon-young-white~
+a young white dragon~
+A young white dragon hisses at you and attacks
+~
+A large young dragon sits here, scanning the area for food or valuables.
+It is covered in small white scales, and is cold enough to cause the
+air around it to fill with fog.
+~
+37 8 -250 C
+38 0 0 5d10+3800 4d5+5
+35 0
+108 108 0
+18 18 15 10 20 13 20
+0 0 0 0 0
+31 3 0 0 0 0 4
+0 0 33817 260 2 0 259 524290
+#407
+dragon-young-red~
+a young red dragon~
+A young red dragon wanders by, breathing at anything that moves.
+~
+A fearsome red dragon rears back, and you flinch thinking it has spotted
+you. It is covered in ruby red scales, and smoke oozes from its nostrels.
+~
+37 8 -250 C
+40 0 0 5d10+4000 4d5+5
+35 0
+108 108 0
+18 18 15 10 20 13 20
+0 0 0 0 0
+31 3 0 0 0 0 8
+0 0 33817 260 1 2 259 524290
+#408
+green-dragon-adult~
+a full grown green dragon~
+A large, full grown green dragon sees you and rears back its head, preparing to breath...
+~
+A large dragon, covered in small green scales, glances in your direction
+in disgust. It has a deep green mane, and green smoke streams from its
+nose, filling the air with noxious fumes.
+~
+39 0 0 C
+50 0 0 5d4+5000 3d5+10
+90 0
+108 108 0
+13 13 13 13 13 13 13
+-5 -10 -10 -10 -10
+31 3 0 0 0 0 6
+0 0 5506269 0 0 0 994 259
+#409
+yellow-dragon-adult~
+a full grown yellow dragon~
+A large, adult yellow dragon is throwing off sparks as it wanders by.
+~
+A yellow dragon perches here, seeming to almost explode with internal energy
+as sparks jump to and fro amidst its small golden scales.
+~
+39 67108864 0 C
+52 0 0 5d4+5200 3d5+10
+90 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+31 3 0 0 0 0 6
+0 0 5506269 8 4 128 994 259
+#410
+ancient-red-dragon~
+an ancient red dragon~
+A very large firebreathing dragon wraps herself around her eggs and hisses madly.
+~
+As you look at the red dragon, it rears back and prepares to breath. This
+dragon is guarding her eggs and will most likely not give chase if you should
+flee.
+~
+53 67108864 0 C
+60 0 0 5d4+10000 3d5+25
+90 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+31 3 0 0 0 0 8
+0 0 5506269 16396 14345 2 994 259
+#411
+highwayman-figure-shadowy~
+highwayman~
+A figure cloaked in the shadows of the ravine lurks here.
+~
+A highwayman eyeballs your purse and draws his sword with an evil grin
+as you look at him. He is garbed in a long leather cloak, and light leather
+armor, and looks like he would sell his own mother for gold.
+~
+39 98344 -350 C
+43 0 0 100d2+3000 0d0+0
+45 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 2 0 0 1 1 6
+0 0 1759 0 0 0 384 524291
+#412
+troll-cave-large~
+a cave troll~
+A large well-fed troll gnaws on a bone as he sits in the center of his lair.
+~
+~
+37 8192 0 C
+45 0 0 4d50+4500 3d4+15
+50 0
+108 108 0
+25 5 5 10 25 13 15
+0 0 0 0 0
+19 3 0 0 1 0 6
+0 0 1143 110 0 129 896 524290
+#413
+orc-archer~
+an orcish archer~
+An orcish archer, clad in the armor of angband, scowls furiously.
+~
+A tall orc, hailing from the mountains of the Orocarni, is clad in the
+platemail of angband. With a swift glance across the room, he proceeds
+upon his mission to find the enemies of his master and bring them swift
+death.
+~
+39 16777248 0 C
+40 0 0 3d200+3000 2d5+10
+38 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+53 3 0 0 0 0 5
+0 0 1791 0 0 0 160 524290
+#420
+final-mob~
+a newly created final-mob~
+Some god abandoned a newly created final-mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#401
+dragon-claw-dagger~
+The Dragonclaw Dagger~
+Half of a dragons claw, fashioned into a dagger, lies abandoned here.~
+~
+5 16910339&2 8193
+12 10 4 11
+1 100 10 0
+E
+dragon dragonsclaw dagger~
+A long thin blade, carved out of the claw of a dragon with a sculpted 
+hilt, this weapon is prized greatly by the bandits of the wastelands,
+and carries with it a love for conflict. It does not favor a side 
+however, so it will serve both good and evil.
+~
+A
+18 8
+A
+19 5
+A
+30 33
+A
+2 2
+A
+5 2
+A
+13 40
+#402
+dark-thieves-cloak~
+a dark cloak~
+A dark, crumpled piece of shadowy cloth lies in a pile.~
+~
+9 0 524289
+13 13 0 0
+1 20 2 0
+E
+dark cloak thieves~
+A cloak made out of dark cloth, it seems that this item would work well
+to conceal the identity of the wearer.
+~
+A
+26 2
+A
+18 2
+A
+19 2
+#403
+longsword-angband-steel-black~
+A black longsword~
+A long blade, forged from dark iron and bearing the insignia of angband lies here.~
+~
+5 16925184&10 8193
+12 0 0 3
+1 40 4 0
+E
+longsword angband steel black~
+This is a long black longsword, which bears the insignia of angband's
+forges. Often this sword is used by the orcish legions of Morgoth, as
+this one most likely was.
+~
+A
+18 2
+A
+19 2
+#404
+angband-black-ankle-bands~
+ankle bands of Angband~
+A set of rusty iron bands is half buried in mud.~
+~
+9 0 2097153
+12 12 0 0
+1 20 2 0
+E
+angband-black-ankle-bands~
+A pair of rusted bands of metal, about the right size for orcish ankles,
+these were forged long ago in the pits of angband for the hoards of 
+Morgoth.
+~
+A
+18 3
+A
+19 3
+#405
+angband-black-steel-banded-mail~
+banded steel mail~
+A crumpled pile of steel bands and leather lies upon the ground.~
+~
+9 16794112&8 9
+0 0 0 0
+1 20 2 0
+E
+angband black steel banded mail~
+Several strong steel bands hold together pieces of leather, giving this
+armor far more strength than straight leather armor alone would have.
+This type of mail is a favorite amoungst the lightly armored orcs of 
+Angband.
+~
+A
+18 2
+A
+19 2
+#406
+angband-black-leather-loincloth~
+a leather loincloth~
+A black piece of leather lies upon the ground.~
+~
+9 16925184&14 33
+3 3 0 0
+1 5 0 0
+E
+angband-black-leather-loincloth~
+A black leather loincloth, smelling strongly of orc, and not very
+protective in combat.
+~
+A
+18 2
+A
+19 2
+#407
+angband-black-leather-boots~
+a pair of black leather boots~
+A pair of black leather boots bearing the insignia of angband are sitting on the ground.~
+~
+9 0 65
+0 0 0 0
+1 10 1 0
+E
+angband black leather boots~
+Made of black leather and wood, these boots protect the feet of the 
+orcs of angband so that they may do their masters bidding.
+~
+A
+18 2
+A
+19 2
+#408
+sword-flaming-long-balrog-angband~
+a flaming longsword~
+A long blade, made of solid fire burns a hole in the ground.~
+~
+5 0 8193
+0 0 0 0
+1 50 5 50
+A
+30 65
+A
+18 10
+A
+19 10
+#409
+shield-angband-glowing-azure~
+a glowing azure shield~
+A half buried shield, bearing the symble of Morgoth in glowing blue, lies upon the ground.~
+~
+9 16795651&8 513
+17 17 0 0
+1 15 1 50
+E
+shield angband glowing azure~
+A large round shield, constructed from mithril, and covered with runes
+and bearing the crest of Melkor, the Morgoth. This shield is almost surely
+good protection for the armies of angband.
+~
+A
+18 3
+A
+19 4
+A
+24 -5
+#410
+dragon-claw-red~
+a fiery claw~
+A scaly red claw, most likely from a dragon, lies upon the ground.~
+~
+5 3075 8193
+0 0 0 5
+1 50 5 0
+E
+dragon-claw-red~
+Apparently, someone sliced this off of the foot of a dragon and fashioned
+it into a weapon. It appears to be a half burnt piece of red dragon flesh,
+which is cool to the touch on the inside, but red hot on the outside.
+~
+A
+18 8
+A
+19 9
+A
+30 5
+A
+12 20
+A
+13 20
+A
+5 -1
+#411
+visor-mithril-dwarven~
+a mithril visor~
+You see an abandon mithril visor of dwarven make here.~
+~
+9 0 1179649
+2 2 0 0
+1 20 2 0
+E
+visor-mithril-dwarven~
+An ancient device made by dwarves in ages past with the help of elven
+craftsmen, this visor appears to grant its wearer the ability to see the
+unseen.
+~
+A
+56 235
+A
+18 2
+A
+19 1
+A
+5 -1
+#412
+leather-cloak-wastelands~
+a leather cloak~
+A large piece of leather sits in a pile upon the ground.~
+~
+9 262144 1025
+0 0 0 0
+1 20 2 0
+E
+leather-cloak-wastelands~
+A long tattered cloak, made from leather, this cloak provides some
+minimal amount of protection in combat, as well as protection from the
+elements for those that wander the wastelands.
+~
+A
+18 2
+A
+19 2
+#413
+large-club-spiked~
+a large spiked club~
+A large clublike piece of wood with a steel spike sticking out of it lies here.~
+~
+5 0 8193
+12 20 8 18
+19 50 5 40
+E
+large spiked club~
+This is a large club, so large in fact that the creature who owned it
+original must have had enormous strength. There is a large blood covered
+spike that sticks out of the upper end, making this an extremely effective
+weapon.
+~
+A
+18 2
+A
+19 10
+A
+2 -2
+#414
+orcish-longbow-angband~
+a longbow~
+A curved bow made of some unknown species of tree lies here~
+~
+56 0 8193
+0 0 0 14
+10 50 5 0
+A
+18 5
+A
+19 2
+A
+26 16777216
+#415
+arrow-flaming~
+an arrow~
+An arrow has fallin to the ground.~
+~
+57 0 1
+12 1 5 14
+1 5 0 0
+A
+30 301
+#420
+final-object~
+a newly created final-object~
+Some god dropped a newly created final-object here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#401
+At the Southern Edge of the Northern Wastes~
+You are at the edge of a ragged mountainous land north of Tempra.  Far
+to the east, you see the Orocarni Mountain range, home of the demons of
+Angband and their lord Morgoth. To the distant north, the land rises 
+sharply, and you see great glacer capped mountains. Closer by, the land
+is contorted as it dives into rivines and valleys and ascends steep cliffs.
+Passage thru this broken land looks difficult to even the strongest
+adventures.
+~
+~
+0 0 10 2
+D0
+~
+~
+0 -1 402
+S
+#402
+A Fork in the Path~
+You have reached a fork in the path.  You are not completly sure which
+way you need to go to reach your destination in this confusing morass.
+The maze like ravines spread out to the north and south, as well as to
+the northeast and southwest.
+~
+~
+0 0 10 0
+D0
+~
+~
+0 -1 456
+D2
+~
+~
+0 -1 401
+D6
+~
+~
+0 -1 457
+D9
+~
+~
+0 -1 403
+S
+#403
+In a Deep Ravine~
+You are upon a well used trail within a deep ravine which extends to the
+northwest and the northeast. At one time it looks like it may have extended
+to the southwest, but that path has been blocked by a large avalanch.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 402
+D7
+~
+~
+0 -1 404
+S
+#404
+In a Deep Ravine~
+You are within a deep ravine, following a broken trail through the harsh
+lands of the Northern Wastes. To the northeast and southeast, the trail
+continues, while in every other direction, the barren, desolate cliffs
+rise like demons from the abyss.  You get the strong feeling that you are
+in imminent danger.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 405
+D8
+~
+~
+0 -1 403
+S
+#405
+In a Deep Ravine~
+You are continuing upon your trek within the ravine. To the north and
+the southwest, the trail continues.  The lack of landmarks make this
+convoluted maze seem like you are going over and over the same ground.
+In all directions other than where the trail lies, the walls of the ravine
+rise like the barren guardians of this desolate land that they are.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 406
+D9
+~
+~
+0 -1 404
+S
+#406
+Twisting Through the Wastelands~
+The ravine takes a sharp bend at this point, as a sheer wall of rock rises
+dozens of feet above you.  You hear a great deal of noise and get the 
+feeling that where you stand isn't the safest place in the world.  To
+the south and the southwest, the trail continues.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 405
+D9
+~
+~
+0 -1 407
+S
+#407
+In a Ravine~
+You are within a large ravine.  To the northwest, there is a landslide
+that may be climbable while to the south, the ravine continues.  The 
+lack of vegatation here and the burnt look of the lands is faintly 
+disturbing.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 406
+D7
+~
+~
+2176 -1 408
+D9
+~
+~
+0 -1 485
+S
+#408
+At the Top of a Landslide~
+Before you, there is a large landslide leading downwards to the southeast, 
+over which, you can see far over this dark contorted land.  To the distant
+east, you can see the Orocarni Mountains rise into the sky. To the south,
+the trail continues along the ridge line.
+~
+~
+0 0 5 0
+D2
+~
+~
+0 -1 409
+D8
+~
+~
+128 -1 407
+S
+#409
+Upon the Ridge~
+You are upon a large ridge between several ravines. To the southwest,
+the ridge rises to a small plateau. In all other directions, it quickly ends.
+It looks like it may be possible to descend into one of the ravines from a
+rockslide to the north.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 408
+D9
+~
+~
+0 -1 410
+S
+#410
+Upon a Plateau~
+You stand upon a desolate plateau, from which a single, gnarled, half-dead
+tree of some unidentified species rises. This appears to be the site of
+a long abandoned encampment. You can travel to the northeast, northwest,
+southeast, and southwest upon the plateau, but in other directions, the
+ground quickly becomes cracked and broken.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 487
+D6
+~
+~
+0 -1 409
+D7
+~
+~
+0 -1 413
+D8
+~
+~
+0 -1 411
+D9
+~
+~
+0 -1 412
+S
+#411
+Edge of the Plateau~
+You are at the edge of a plateau that appears to be devoid of life. In
+every direction other than northwest, the plateau drops off sharply into
+the valley below.  The broken lands of the northern wastes seem to be
+trying to crush you in an unremitting silence.
+~
+~
+0 0 2 0
+D7
+~
+~
+0 -1 410
+S
+#412
+Edge of the Plateau~
+You are at the edge of a barren plateau. Although strongly tempted to
+look over and see what lies below, you resist the temptation, due to the
+unstable nature of the clifftop. To the north east, you can return to 
+the center of the plateau.  In all other directions the ground quickly
+falls away.
+~
+~
+0 0 2 0
+D6
+~
+~
+0 -1 410
+S
+#413
+In the Wastelands~
+You are upon a narrow path that leads from the top of a large plateau to
+a deep shadowy vale below. To the northeast, you see a pile of debris which
+impedes travel in that direction, and another trail leading around to the west.
+The broken land surrounding you echos with the cries of some giagantic
+creature, and you get the feeling you should move before you end up being
+somethings lunch.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 488
+D6
+~
+~
+2176 -1 414
+D8
+~
+~
+0 -1 410
+S
+#414
+Upon a Rocky Path~
+The path you are upon is covered with shattered boulders and rocks that long
+ago fell from the plateau above. Looking upwards, you think you see some
+large bird circling at a high altitude, and then head to the northeast.
+All around, the desolate land presents itself and introduces you to new
+dangers.
+~
+~
+0 0 4 0
+D7
+~
+~
+0 -1 415
+D9
+~
+~
+0 -1 413
+S
+#415
+In the Wastelands~
+You are upon a rocking path that is winding its way through the wastelands.
+As you look around, you think you see a hint of smoke upon the northern
+horizen. To the south there is a large mesa-like plateau, and all around
+are shattered and broken pieces of rock.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 416
+D8
+~
+~
+0 -1 414
+S
+#416
+The Desolate Wastelands~
+You are standing at the top of a high cliff.  To the north, over the
+edge of the cliff you see what could only be a very active volcano, as the
+smoke filled sky glows a dull red. To the south, the air seems clearer, and
+you see a small ledge. There is a trail running to the southeast and the
+southwest.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 418
+D8
+~
+~
+0 -1 417
+D9
+~
+~
+0 -1 415
+S
+#417
+Upon a Ridge~
+You are upon a ridge that rises sharply to the east.  The path winds around 
+the side of it to the southeast as it ascends. To the northwest, there is a
+a path that crosses the top of a cliff over looking volcanic plains. In every
+other direction the desolate landscape presents its self, almost totally
+devoid of life.
+~
+~
+0 0 5 0
+D7
+~
+~
+0 -1 416
+D8
+~
+~
+0 -1 419
+S
+#418
+Upon a Ledge~
+You are upon a small rocky ledge facing a giant mesa to the south. All
+around you, the wastelands stretch to the horizon, while to the north
+there is a large cloud of volcanic ash blotting out half of the sky and
+glowing a dull red.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 416
+S
+#419
+Top of the Ridge~
+You at the top of a long, sandstone ridge, which extends to the north.
+Countless aeons of erosion have sculpted its surface and blasted away
+all sharp edges. To the northwest, you see a large cloud of smoke glowing a 
+deep red colour. In all other directions, the broken lands stretch to the 
+horizons.
+~
+~
+0 0 5 0
+D0
+~
+~
+0 -1 420
+D7
+~
+~
+0 -1 417
+S
+#420
+Upon a Ledge~
+You are upon a large ledge, bordered on one side by a giagantic mesa and the
+other side which drops to the volcanic plains below. Though mostly devoid
+of life, there are a few blighted bushes that appear to be surviving here...
+but just barely. You get a strong feeling that someone or something is
+watching you from above and decide that it is time to move on.
+~
+~
+0 0 5 0
+D2
+~
+~
+0 -1 419
+D7
+~
+~
+0 -1 421
+S
+#421
+A Narrow Ledge~
+You are upon a very narrow ledge that crosses the easternmost corner of the
+ridge. directly below you, are great plains of volcanic ash, which lead up
+to a glowing mountain to the north.  The ridge heads to the southeast and
+the northeast from here, as it beats a retreat from the volcano's fury.
+~
+~
+0 0 5 0
+D6
+~
+~
+0 -1 422
+D8
+~
+~
+0 -1 420
+S
+#422
+An Obsidian Ledge~
+The ledge you are upon is about half obsidian and half lime stone. To the
+north of you, the volcano towers high, with streams of red hot lava pouring
+down its sides. There appears to be several obsidian mesa's leading to the 
+northeast. To the southeast, the obsidian ledge continues, while to the
+southwest, it slowly reverts to sandstone.
+~
+~
+0 0 2 0
+D8
+~
+~
+0 -1 423
+D9
+~
+~
+0 -1 421
+S
+#423
+A Choice of Directions~
+You are upon a large obsidian ledge.  To the northwest, the ledge appears to 
+follow a great mesa. To the northeast, the mesa is still present, but is 
+closer to the ledge. To the north, a very different scene presents itself, 
+as a well travelled path begins its climb along an obsidian spur of the
+volcano.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 493
+D6
+~
+~
+0 -1 424
+D7
+~
+~
+0 -1 422
+S
+#424
+A Fork in the Path~
+You are upon a wide obsidion ledge that faces a high mesa to the south 
+and lava fields to the north. To the west, it is possible to ascend 
+a great spur of the volcano, while to the northwest the ledge passes the
+northeastern face of the volcano. A safer looking route to the southwest
+follows the obsidian ledge in that direction.
+~
+~
+0 0 2 0
+D3
+~
+~
+0 -1 493
+D7
+~
+~
+0 -1 425
+D9
+~
+~
+0 -1 423
+S
+#425
+Upon a Narrow Ledge~
+You are upon a narrow ledge that overhangs the lava fields that lie to the
+west. A dark spire of volcanic rock rises sharply out of the plain with
+its top obscured in a red haze. The smell of sulphur hangs heavy in the air,
+and the whole area seems to be coated in ash. To the northeast, the ledge
+quickly returns to sandstone, while to the southeast, it descends to meet
+a great spur of the volcano.
+~
+~
+0 0 2 0
+D6
+~
+~
+0 -1 426
+D8
+~
+~
+0 -1 424
+S
+#426
+Before a Cave~
+You are upon a large sandstone cliff, which turns to obsidian to the southwest
+To the south, there is a large cave chiseled into the face of the cliff by
+some dark being, perhaps a servant of morgoth. The broken rock and debris
+indicaticate that its creation was somewhat recent. To the southeast, the 
+trail angles sharply around another ridge line.
+~
+~
+0 0 2 1
+D2
+~
+~
+0 -1 497
+D8
+~
+~
+0 -1 427
+D9
+~
+~
+0 -1 425
+S
+#427
+Upon a Narrow Pass~
+You are upon a narrow ledge between two great ridgelines. To the west,
+the smoke filled sky glows a hazy red, while to the north, you can see the
+beginnings of a great glacier.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 428
+D7
+~
+~
+0 -1 426
+S
+#428
+Near a Ridge~
+You are upon a gently sloping path that is nearing the top of a great ridge.
+To the east, there is a large sandstone mesa that obstructs view in that 
+direction, while the wastelands stretch out to the north where the land 
+rises sharply and is covered in ice.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 427
+D6
+~
+~
+0 -1 429
+S
+#429
+Before a Glacier~
+All travel north of here is blocked by a tremendous glacier, which aparently
+slid down the side of what appears to be mountains to the north. No further
+travel northwards is possible until the glacier recedes, but to the southwest
+and south, the trail through the desolate wastelands continues.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 430
+D9
+~
+~
+0 -1 428
+S
+#430
+In the Wastelands~
+You are traveling across a broken plain of towering mesas and deep canyons
+known collectivily as the northern wastes. The many features of this land
+have been sculpted by the wind over the aeons, and are amoung some of the
+greatest natural wonders of the known world. Travel in this land is 
+treacherouso however, due to its proximity to the fortress of Angband, 
+home of Morgoth. To the north and the east, you can travel along a broken
+trail.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 429
+D1
+~
+~
+0 -1 431
+S
+#431
+Across the Northern Wastes~
+You are travelling along the northern edge of this shattered land. To 
+the southeast, there is a pass into the glacerial country to the north, 
+while to the west, you can ascend a long line of ridges and deep canyons
+that make up the western half of the northern wastelands. To the distant
+east, you can see the Orocarni Mountains casting their sinister shadow
+upon the lands.
+~
+~
+0 0 10 0
+D3
+~
+~
+0 -1 430
+D8
+~
+~
+0 -1 432
+S
+#432
+Before the Pass~
+You are standing before a large pass into the glacier to the north. To
+the northwest and southeast, the path through the jagged wastelands trudges
+outwards, while to the northeast it is possible to climb the path into the
+glaciers.
+~
+~
+0 0 10 0
+D6
+~
+~
+0 -1 433
+D7
+~
+~
+0 -1 431
+D8
+~
+~
+0 -1 439
+S
+#433
+In the Rocky Pass~
+You are in a rocky pass through two towering cliffs that rise hundreds
+of feet into the air. The path slopes upwards steeply to the north, and
+the path zig-zags across it as it climbs. To the south, you can return to
+the wastelands.
+~
+~
+0 0 5 0
+D7
+~
+~
+0 -1 434
+D9
+~
+~
+0 -1 432
+S
+#434
+Creeping Across the Slope~
+You are traveling at an angle across a steep slope. To the north, the slope 
+rises to almost clifflike proportions, and drops away almost as rapidly to the 
+south. Upon both sides of the pass, large snowcapped ridges lie.
+~
+~
+0 0 5 0
+D7
+~
+~
+0 -1 435
+D8
+~
+~
+0 -1 433
+S
+#435
+At the Edge of the Slope~
+You are at the western edge of the sloping path. The path ascends at a
+sharp angle to the northeast and descends at a sharp angle to the south. 
+Above you to the west, there is a tall snowcapped mountain wall. To the
+south, you can see the northern wastelands in its broken, craggy entirity.
+~
+~
+0 0 5 1
+D6
+~
+~
+0 -1 436
+D8
+~
+~
+0 -1 434
+S
+#436
+At the Top of the Slope~
+You are just below the top of of the slope, which ends in a large
+plateau. To the south, you can see over the majority of the twisted 
+rocky and barren land known as the Northern Wastes.
+~
+~
+0 0 5 1
+D6
+~
+~
+0 -1 437
+D9
+~
+~
+0 -1 435
+S
+#437
+Upon the Plateau~
+You are upon an icy plateau, which opens to the glaciers to the north.
+It would appear that this glacier stands upon a mountain range which
+is buried in snow and ice. To the north of you, you see a large ledge over
+hanging a great portion of the glacier, while to the south there is a
+very steep slope down to the wastelands.
+~
+~
+0 0 5 0
+D0
+~
+~
+0 -1 438
+D9
+~
+~
+0 -1 436
+S
+#438
+Upon the Glacier~
+You are at the edge of a large glacier. You may proceed to the north or head
+south to the wastelands. The landscape is littered with boulders and dirt as
+well as the snow and ice of the glacier, giving hint to the immense forces 
+that lie within.
+~
+~
+0 0 2 0
+D2
+~
+~
+0 -1 437
+S
+#439
+A Fork in the Path~
+You are standing at fork in the path on the eastern half of the northern
+wastelands. There appears to be a path leading to the northwest through
+the brush that is piled there, but you remain unsure. Unlike the majority
+of the wastelands, the land to the west appears to be sparsely wooded 
+and somewhat alive. Perhaps some creature piled the brush here to hide the
+path to the northwest.
+~
+~
+0 0 4 0
+D1
+~
+~
+0 -1 440
+D3
+~
+~
+0 -1 458
+D7
+~
+~
+2099200 -1 432
+D9
+~
+~
+0 -1 460
+S
+#440
+In a Gorge~
+You are in a deep gorge, which heads through the torn lands of the 
+wastelands. To the east, the Orocarni Mountains can be seen towering over 
+the lip of the gorge. to the southwest, the gorge continues, while to the
+west, the land flattens out into a small plateau.
+~
+~
+0 0 4 0
+D3
+~
+~
+0 -1 439
+D9
+~
+~
+0 -1 441
+> rand_prog 5~
+mpecho _gre A small pebble drops on your head!
+mpdamage $r 1
+~
+|
+S
+#441
+Deep Within a Gorge~
+You are deep within a large gorge that has been carved into the land by the
+wind. To the northeast, you can leave the gorge towards the Orocarni
+Mountains, to the Southeast, you can also see the mountain range, as well
+as a widening trail.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 440
+D8
+~
+~
+0 -1 442
+> rand_prog 5~
+mpecho _gre A small pebble drops on your head!
+mpdamage $r 5
+~
+|
+S
+#442
+Before the Foothills~
+To the east, the Orocarni Mountain range rises, dominating the sky. The
+Rocky foothills seem to reach out and try to capture you within thier grasp.
+To the northeast, there is a faint trail up the mountain side, but like
+all ways into Morgoths realm, it is hidden from the eyes of those who 
+do not know what to look for. To the east, the barren, twisted, ruined
+land stretches to the horizen.
+~
+~
+0 0 4 0
+D1
+~
+~
+0 -1 481
+D6
+~
+~
+2099200 -1 482
+D7
+~
+~
+0 -1 441
+D9
+~
+~
+0 -1 443
+S
+#443
+In the Crevice~
+You are within a deep rocky crevice, almost enclosed by the cliffs above.
+To the northwest, the crevice opens up and widens as it rises. To the north
+the crevice appears to grow deeper as it passes between towering cliffs.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 444
+D6
+~
+~
+0 -1 442
+> rand_prog 5~
+mpecho _gre A pebble falls upon your head!
+mpdamage $r 5
+~
+|
+S
+#444
+In a Tight Crevice~
+You are within a very narrow crevice between two towering cliffs. The
+Towering mountains to the east hang over even the cliffs above, and you
+feel like the eye of Morgoth himself is staring down upon you from above.
+Strange winged beasts fly around the mountains, and smoke rises from beyond.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 443
+D3
+~
+~
+0 -1 445
+> rand_prog 10~
+mpecho _gre A pebble falls upon your head!
+mpdamage $r 10
+~
+|
+S
+#445
+Winding Around a Crevice~
+You are within a narrow crevice, which winds around a large hill to the 
+southeast. The ridge to the north hangs ominously overhead, filling you
+with dread as to what could be lurking there, ready to drop a rock upon
+your head.
+~
+~
+0 0 4 0
+D1
+~
+~
+0 -1 444
+D2
+~
+~
+0 -1 446
+> rand_prog 25~
+mpecho _gre A small rock falls from the cliff above!
+mpdamage $r 25
+~
+|
+S
+#446
+In a Deep Crevice~
+You stand at the bottom of a deep narrow crevice, as it wides through the
+foothills of the Orocarni. The mountains to the east seem to stare down at
+you with unspeakable malice, and you begin to wonder whatever it was that
+inspired you to come even this close to those mountains.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 445
+D7
+~
+~
+0 -1 447
+> rand_prog 15~
+mpecho _gre A pebble falls from the cliffs above!
+mpdamage $r 10
+~
+|
+S
+#447
+Deep in a Winding Ravine~
+The ravine you are in winds its way through the hilly wastelands near
+the Orocarni Mountains. To the southeast and southwest, the ravine 
+continues upon its way, and you think you see movement upon the cliffs 
+above. You begin to move more quickly at this point and hope that your
+journey has escaped the notice of the eyes of Angband.
+~
+~
+0 0 4 0
+D8
+~
+~
+0 -1 446
+D9
+~
+~
+0 -1 448
+> rand_prog 15~
+mpecho _gre A pebble falls from the cliffs above!
+mpdamage $r 10
+~
+|
+S
+#448
+In a Deep Ravine~
+The ground slopes sharply downwards to the northeast, and rises quickly
+to the southeast. The hillside is littered with boulders the size of 
+small villages, while what little vegatation there is struggles to hang 
+on. The walls of the ravine seem to hold a dark warning themselves, and
+are almost surely crawling with the spys of angband.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 447
+D8
+~
+~
+0 -1 449
+> rand_prog 10~
+mpecho _gre A small pebble drops on your head!
+mpdamage $r 5
+~
+|
+S
+#449
+Upon a Large Hill~
+You are upon a large hill which ends at a tall mesa to the east. It may
+be possible to enter the mesa by means of a series of extremely crumbled
+steps. This was probably a watch tower over Morgoths domain long ago, 
+before he grew to his current hieghts of power. To the distant east, the
+Orocarni Mountains seem to be watching you with a piercing, baleful gaze.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 474
+D2
+~
+~
+0 -1 450
+D7
+~
+~
+0 -1 448
+D9
+~
+~
+128 -1 451
+S
+#450
+In a Ravine~
+You stand at the northern end of a long ravine that wraps around a mesa
+to the southwest. To the north of you, the ravine ends and the path you
+are upon ascends to the highest of this twisted land once more.
+~
+~
+0 0 4 0
+D0
+~
+~
+0 -1 449
+D9
+~
+~
+0 -1 452
+S
+#451
+In the Watch Tower~
+This appears to be a watchtower constructed out of a mesa. It is doubtful
+that the servants of morgoth constructed it, as it bears half destroyed
+symbol of the house of Erandil of the elves. There are several holes
+in the walls through which archers can look down upon the trail below.
+~
+~
+0 0 13 0
+D6
+~
+~
+0 -1 449
+S
+#452
+South of the Mesa~
+As you continue to follow the ravine around the mesa, a solitary cry echos
+from the top. You get the feeling that you should turn back, or at least
+move very quickly, before some fell beast of Morgoths domain falls upon you.
+To the northeast and northwest a fairly well travelled path lies, probably
+the same path used by the minions of morgoth when they make war upon Tempra.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 450
+D7
+~
+~
+0 -1 453
+S
+#453
+A Path Around a Mesa~
+You are wandering in a broken and twisted land known as the northern
+wastelands. To the east of you, a tall mesa rises, blocking for a moment
+sight of Morgoths domain. Free from the baleful gaze of his emissaries, 
+you feel that this would be a halfway safe place to make camp if need be.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 454
+D8
+~
+~
+0 -1 452
+S
+#454
+In a Ravine~
+As you wander through the wastelands, you feel compelled to wonder what
+such a landscape would be without the servents of Morgoth prowling it.
+Perhaps it wouldn't be such a dangerous place to live, amid the many 
+wonders. But the shadowy mountains to the east don't allow you to 
+contimplate things for long, for the influence of Morgoth lies strong
+in this twisted land.
+~
+~
+0 0 10 0
+D7
+~
+~
+0 -1 455
+D9
+~
+~
+0 -1 453
+S
+#455
+Edge of a Ridge~
+You are at the northeastern edge of a large ridge that extends far to the 
+southwest, to the southeast, a canyon-like ravine yawns wide. To the 
+distant east, the ominous mountains of the Orocarni seem to drive a 
+madness into the very land, pushing its convoltions ever outwards, as
+the northern wastes seek to encampus the surrounding lands.
+~
+~
+0 0 10 0
+D8
+~
+~
+0 -1 454
+D9
+~
+~
+0 -1 456
+S
+#456
+Upon a Ridge~
+You are standing at the top of a large ridge over looking a ravine to the 
+north. To the northeast, there is a large cliff of sandstone hanging over
+a great canyon, while to the northeast, the trail continues through the
+broken terrain of the wastelands.
+~
+~
+0 0 10 0
+D2
+~
+~
+0 -1 402
+D6
+~
+~
+0 -1 455
+D9
+~
+~
+0 -1 496
+S
+#457
+An Abandoned Campsite~
+You have stumbled on a long abandoned campsite, although who or what it
+is that would wish to travel through this land and camp when they are
+less than a days march from tempra is beyond you. It appears that the
+campsite was attacked and looted by something, possibly some minion of
+Morgoth, whose influence is felt strongly within the wastelands.
+~
+~
+0 0 10 0
+D9
+~
+~
+0 -1 402
+S
+#458
+In the Wastelands~
+You are travelling deep within the northern wastes. To the north, you
+see a series of snowcapped mountains, while to the east the Orocarni
+rise high. The barren wastelands stretch out far to the south. To the west,
+the land is overshadowed by a high craggy flat mountain.
+~
+~
+0 0 2 0
+D1
+~
+~
+0 -1 439
+D9
+~
+~
+0 -1 459
+S
+#459
+A Choice of Directions~
+You are deep within the wastelands, near a large mesa which rises high to
+the west. The trail curves around the mesa to the north, or you can head 
+back towards the Orocarni mountains to the east.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 461
+D1
+~
+~
+0 -1 460
+D6
+~
+~
+0 -1 458
+S
+#460
+In the Wastelands~
+You are in an area with sparse ground cover. The existance of the brush
+makes you wonder if you have stumbled upon some sort of oasis. However,
+if it was once an oasis, it seems it is no longer, for the plants are 
+all dying. The absence of animal life in the area is mildly disturbing,
+as it probably means that something larger has driven it out.
+~
+~
+0 0 2 0
+D3
+~
+~
+0 -1 459
+D6
+~
+~
+0 -1 439
+S
+#461
+Upon a Wasteland Trail~
+You are upon a ragged trail through the rocky terrain surrounding the
+mesa to the southwest. The trail gradually rises to the west as it 
+begins its ascent, while to the south, the ground levels out as the 
+trail winds through rocks and boulders.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 459
+D7
+~
+~
+0 -1 462
+S
+#462
+Before the Mountain~
+You are at the base of a mountain that dominates the center of the
+wastelands. A path to the south begins a slow ascent up the side,
+while you can follow a path to the southeast back towards the Orocarni.
+You have the strong urge to leave the vicinity of the mountain, as it seems
+that something is watching you from the hieghts.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 463
+D8
+~
+~
+0 -1 461
+S
+#463
+Upon the Mountainside~
+The trail winds its way around the mountain, as it slowly climbs up the
+side to the southwest. To the north, you can return to the bottom of the
+mountain. You see the remains of armor and bones scattered along the edges
+of the path, giving hint of the horrors that lay at the top.
+~
+~
+0 0 5 0
+D0
+~
+~
+0 -1 462
+D9
+~
+~
+0 -1 464
+S
+#464
+Around the Mountain~
+You are rounding the side of a large mountain. To the north, the path climbs
+upwarsd, while to the northeast, it zig-zags back down the side. Above you,
+you think you see the shadow of some large creature watching your progress.
+To the distant north, your eyes are drawn to the gleam of sunlight reflected
+off of some surface, possibly snow or ice.
+~
+~
+0 0 5 0
+D0
+~
+~
+0 -1 465
+D6
+~
+~
+0 -1 463
+S
+#465
+Upon the Mountainside~
+You are upon a rocky mountainside, underneath a large over hang. The path
+up the mountainside winds and twists as it edges its way between cliffs
+and boulders. Along the path broken pieces of bones and armor litter the
+way, causing you to wonder what could have caused such carnage.
+~
+~
+0 0 5 0
+D2
+~
+~
+0 -1 464
+D9
+~
+~
+0 -1 466
+S
+#466
+Near the Top~
+You are near the top of a tall mountain that rises out of the center
+of the Northern Wastes like the spires of death itself. There is a great
+deal of smoke at the top, causing you to dread what creatures may dwell 
+there. All around pieces of bone and armor litter the landscape, telling
+of the many battles fought upon this mountain, and of whole armies that
+have been slaughtered.
+~
+~
+0 0 5 0
+D2
+~
+~
+0 -1 467
+D6
+~
+~
+0 -1 465
+S
+#467
+At the Top~
+You are at the top of the mountain that rises out of the rubble and twisted
+wreckage of the northern wastelands. This spire was probably forged during
+some titanic battle between morgoth and the valar long ago. It appears
+to have once served as an elven outpost too, but that was long ago 
+reduced to a burned and blackened wreckage by the current owners of this 
+land.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 466
+D1
+~
+~
+0 -1 468
+S
+#468
+In the Elven Ruins~
+You are upon the mountain top, in an area where more of the ruins are
+intact than at other points. It appears that the elves, allied with the
+dwarves held this point against the armies of morgoth until several
+dragons decided to make it thier home. Perhaps some hidden treasures
+remain buried, as dragons are inherently lazy creatures and often won't
+bother to follow prey or treasure far underground if it is not easy to
+get to.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 467
+D6
+~
+~
+0 -1 469
+D9
+~
+~
+0 -1 471
+S
+#469
+Before the Shattered Doors~
+To the south, the mountain rises high enough to support two giagantic
+rune covered stone doors. The doors themselves seem to have been beaten
+in by the dragons, and lie half on, half off the hinges in a shattered mess.
+Smoke streams out of the top of the doorway, giving hint to some beast lying
+within.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 470
+D9
+~
+~
+0 -1 468
+S
+#470
+Atop the Glittering Hoard~
+You are upon a glittering pile of gold, mithril and jewels looted by
+the dragons over time. Your first thought would be to take off with some
+of the wealth, but it appears that heat from the dragon has caused the 
+gold and mithril to melt, freezing the entire pile into one solid structure.
+The stench of dragon is strong here, and you get the feeling you should
+move on before you choke upon it.
+~
+~
+0 0 13 0
+D0
+~
+~
+0 -1 469
+S
+#471
+Wandering Through the Ruins~
+The blackened and broken ruins of an elven outpost lay all about you, 
+as reminders of the earliest victims of the dragons ire. To the northwest,
+you see the edge of a large nest, perhaps the reason the dragons have
+remained here, in this barren land where even they would have difficulty
+finding food. To the north east, you can continue through the ruins to
+a trail that leads down the mountain.
+~
+~
+0 0 1 0
+D6
+~
+~
+0 -1 468
+D7
+~
+~
+0 -1 472
+S
+#472
+At the Edge of the Nest~
+You are at the edge of a large, smoking nest, made out of debris the dragons
+have collected over the years. There are pieces of armor and bone 
+everywhere, as well as broken tree limbs and slabs from the ruins. It
+would appear that this nest has outgrown even the dragons ability to gather
+wealth. To the northwest, smoke from many dragons rises into the sky,
+and you know to go in that directions without proper preperation would
+be foolhardy.
+~
+~
+0 0 2 0
+D7
+~
+~
+0 -1 473
+D8
+~
+~
+0 -1 471
+S
+#473
+In the Middle of the Nest~
+You are in the middle of a large dragonnest. The earth itself seems to be
+on fire here as smoke curls and rises from between the rubble that makes
+up the nest. Although normally dragons construct their nests out of gold
+and jewels, this nest seems to have grown too large for what the dragons
+could find and they had to resort to other materials. There is gold here,
+you can see the dragons hoard glimmering beneath the nest, but it was
+long since buried.
+~
+~
+0 0 2 0
+D8
+~
+~
+0 -1 472
+S
+#474
+At the Base of a Hill~
+You are at the bottom of a large hill, which is topped by a mesalike 
+guard tower at its western end. To the southeast, the path twists and
+turns through the twisted wastelands. All around, the oppressive silence
+and seeming lack of life cause the hair on the back of your neck to raise,
+as you anticipate some creature jumping out from behind the next boulder.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 449
+D8
+~
+~
+0 -1 475
+S
+#475
+In a Ravine~
+You are within a wide, rubble filled ravine to the southeast of a large
+hill. To the south, the ravine continues upon its convoluted course through
+the wastelands. All around, the silence of the wastelands creeps upon you,
+and you have a strong feeling that you are being watched.
+~
+~
+0 0 10 0
+D2
+~
+~
+0 -1 476
+D7
+~
+~
+0 -1 474
+S
+#476
+A Sharp Bend~
+You are at a sharp bend in the path that leads from the hilltop to the
+Orocarni. It appears that at one time, it may have continued to the west,
+but the crevice in that direction has collapsed leaving the path which
+heads to the north and the northeast.
+~
+~
+0 0 10 0
+D0
+~
+~
+0 -1 475
+D6
+~
+~
+0 -1 477
+> rand_prog 5~
+mpecho _gre A small pebble drops on your head!
+mpdamage $r 5
+~
+|
+S
+#477
+In a Ravine~
+You are at the bottom of a deep ravine, which widens out to the southeast
+as it enters the foothills. To the southwest, it deepens and becomes 
+narrower as it proceeds into deep overhanging cliffs.
+~
+~
+0 0 10 0
+D6
+~
+~
+0 -1 478
+D9
+~
+~
+0 -1 476
+S
+#478
+In the Hilly Wastes~
+The rough and rugged land stretches around you, as the foothills encrouch
+upon you from the east, the broken lands to the west seem to be fighting
+a war with them and loosing, possibly the cause of their twisted nature.
+~
+~
+0 0 4 0
+D8
+~
+~
+0 -1 479
+D9
+~
+~
+0 -1 477
+S
+#479
+In the Foothills~
+You are deep within the foothills of the Orocarni. The rocky foothills
+grant you little time to relax as the minions of angband crawl throughout
+them. To the east, the mountains rise high, and perhaps conceal the entrance
+to the plains of Angband, to the west, the foot hills flatten out and the
+twisted lands of the northern wastes take over.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 480
+D7
+~
+~
+0 -1 478
+S
+#480
+Before the Orocarni~
+You have reached the forboding embrace of the Orocarni Mountains, however,
+the sheer cliffs to the east prevent any travel in that direction, so
+you feel consigned to retreat upon the paths to the northwest and 
+southwest. The barren land stretches onwards in those directions, and
+you do not know if you shall find your way out of this broken land.
+~
+~
+0 0 4 0
+D7
+~
+~
+0 -1 481
+D9
+~
+~
+0 -1 479
+S
+#481
+In the Foothills~
+The rolling foothills of the Orocarni Mountains surround you. The path
+your on attempts to wind through them, but more often than not crosses
+the tops as well as the bottoms of them, creating a rough mountainous
+trail. Although most of the wastelands is deviod of life, the foothills
+of the Orocarni have long been the homes of the minions of Morgoth.
+~
+~
+0 0 4 0
+D3
+~
+~
+0 -1 442
+D8
+~
+~
+0 -1 480
+S
+#482
+In the Foothills~
+You are deep within the foothills, which stretch off to the southwest.
+There is a large well travelled road, here, probably the one used by 
+the armies of Angband, and before that the elven armies that did battle
+with them for the silmarils. The Mountains rise high to the east, while 
+the wastelands extend in all other directions.
+~
+~
+0 0 4 0
+D1
+~
+~
+0 -1 483
+D9
+~
+~
+0 -1 442
+S
+#483
+A Road Through the Foothills~
+You are upon a wide road that travels through the Orocarni mountains to
+the plains of Angband to the east. All around the Orocarni mountains reach
+for the sky, and the sounds of many strange creatures can be heard. You
+are almost sure that the eyes of Morgoth are upon you, for coming so close
+to his realm.
+~
+~
+0 0 4 1
+D1
+~
+~
+0 -1 484
+D3
+~
+~
+0 -1 482
+S
+#484
+The Orocarni Mountains~
+Two guard towers rise upon both sides of the path, guarding the entrance
+to the flats of Angband, and ultimately Morgoths fortress itself. All
+around, the mountains rise high into the sky, while to the west, a narrow
+pass leads into the wastelands.
+~
+~
+0 0 5 3
+D3
+~
+~
+0 -1 483
+S
+#485
+Deep in the Ravine~
+You are deep within a ravine, which would better be named a gouge at this
+point. It slices deeply between two titanic cliffs on either side, and
+seems to contains shadows of perpetual twilight.  To the northeast and 
+the southeast, the ravine continues.
+~
+~
+0 0 4 0
+D6
+~
+~
+0 -1 407
+D8
+~
+~
+0 -1 486
+S
+#486
+End of the Ravine~
+You are at the end of a dimly lit ravine. Even in broad daylight, the
+shadows would be dark here, and at night, nearly impenatrable.  You 
+stumble across the remains of a small campfire as you search the area, 
+obviously you are not the first to stumble in here.
+~
+~
+0 0 4 0
+D7
+~
+~
+0 -1 485
+S
+#487
+Overlooking a Pass~
+You are upon the northern edge of the plateau, where the ground seems far 
+more stable than it looks to the south. Below you, in the distance, you
+can see a trail leading down the side of the plateau to the west and
+continuing to wind its way northwards.
+~
+~
+0 0 2 0
+D2
+~
+~
+0 -1 410
+S
+#488
+Broken Land~
+You are upon a cracked and pitted land with sparse vegatation. Travel 
+though this land is difficult and treacherous, with hidden trails and 
+passes obscured by fallen brush and other debris. It appears that once
+this was a lush forest, but something happened. Perhaps it is the influence
+of Morgoth's minions upon the land. Southwards, you see a small cave, although
+travel is partailly obstructed by large boulders, the size of small houses.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 413
+D9
+~
+~
+0 -1 489
+S
+#489
+Winding Through the Boulders~
+This pitted and desolate landscape is dotted by boulders the size of buildings,
+through which the trail you are upon winds. To the southeast, you see the
+entrance to a forboding cave, while to the northeast, the trail begins its
+ascent up a plateau.
+~
+~
+0 0 2 0
+D6
+~
+~
+0 -1 488
+D8
+~
+~
+0 -1 490
+S
+#490
+A Cave Entrance~
+You are standing before the entrance to a large cave.  Strange grunting
+noises can be heard within, and you have the strong feeling that the 
+inhabitants probably wouldn't welcome you.  Well unless they decided they
+needed a quick snack.  A strong smell seems to hang in the air, and several
+nearby boulders appear to have been pounded into dust.
+~
+~
+0 0 2 0
+D3
+~
+~
+0 -1 491
+D7
+~
+~
+0 -1 489
+S
+#491
+In a Cave~
+You are within a large cave which is littered with bones and armor. 
+Whatever it is that makes this cave its home is not the neatest of creatures,
+nor do you think, is it the friendliest.  The cave widens out into a large
+circluar area to the south.
+~
+~
+0 0 13 0
+D1
+~
+~
+0 -1 490
+D2
+~
+~
+0 -1 492
+S
+#492
+In a Cave~
+You are in a large yawning, circular shaped cavern. There is a large fire
+in the center of the cave, indicating that the owner is probably soon to
+return if he hasn't already seen you. The ground is littered with broken
+bones and remains of unfinished meals, as well as bat droppings from the bats
+at the top of the cave.
+~
+~
+0 0 13 1
+D0
+~
+~
+0 -1 491
+S
+#493
+Upon the Volcano's Flank~
+You are upon a great spur of volcanic rock that provides some protection
+from the lava flows upon either side. To the northwest, there is a well
+travelled worn path up the spire to a large slab of obsidian. To the south
+and east, paths lead back up to the safety of the obsidian ledge there.
+~
+~
+0 0 5 0
+D1
+~
+~
+0 -1 424
+D2
+~
+~
+0 -1 423
+D7
+~
+~
+0 -1 494
+S
+#494
+Climbing the Spire~
+You are now higher up the volcanic spire, and the sulphurous smell of lava
+fills the air. farther up and to the north you can make out a giagantic 
+slab of obsidian that seems to serve as a door. To the southeast, the trail 
+reaches the bottom of the spur, where it runs into a large obsidian ledge.
+~
+~
+0 0 5 0
+D7
+~
+~
+0 -1 495
+D8
+~
+~
+0 -1 493
+S
+#495
+Approaching the Slabs~
+You are travelling along the flank of the volcano. To the north, you see
+two large obsidian slabs that appear to serve as gates for something, while
+to the southeast, the trail descends to where it joins an obsidian ridge.
+From this location, you can get a fairly decent view of the surrounding lands.
+Near the volcano are great fields of lava, while farther away you see the
+broken and twisted wastelands extend in all directions.
+~
+~
+0 0 5 0
+D8
+~
+~
+0 -1 494
+S
+#496
+End of the Ridge~
+You stand at the top of a large cliff. There is a ridge that heads to 
+the northeast. Below you, you see a deep ravine cut by the action of
+rain and wind over the aeons. A well used trail winds its way across the
+bottom, while to the northeast, another well used path continues.
+~
+~
+0 0 5 0
+D6
+~
+~
+0 -1 456
+S
+#497
+In the Cave~
+You are in a cold dark cave, and have the strong urge to move on, before
+something else decides to make a meal out of you. This cave is apparently
+the layer of a large cave troll, and broken bones and armor lie everywhere.
+The strong scent of rotten flesh and troll almost cause you to loose the
+contents of your stomach.
+~
+~
+0 0 13 0
+D0
+~
+~
+0 -1 426
+S
+#499
+Floating in a void~
+~
+~
+0 0 1 0
+S
+#500
+Final Room~
+~
+~
+0 0 1 0
+S
+#0
+
+
+#RESETS
+M 1 402 1 410
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 401 1 418
+E 1 401 1 16
+E 1 402 1 22
+M 1 411 2 486
+E 1 403 1 16
+E 1 407 1 8
+E 1 412 1 12
+M 1 411 2 486
+E 1 407 1 8
+E 1 412 1 12
+E 1 403 1 16
+M 1 412 2 492
+E 1 406 1 13
+E 1 413 1 16
+M 1 412 2 497
+E 1 406 1 7
+E 1 413 1 16
+M 1 402 1 439
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 402 1 441
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 403 1 484
+E 1 409 1 11
+E 1 408 1 16
+M 1 402 1 442
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 402 1 480
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 402 1 477
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 402 1 451
+E 1 407 1 8
+E 1 406 1 7
+E 1 405 1 5
+E 1 403 1 18
+E 1 403 1 16
+E 1 404 1 25
+E 1 404 1 24
+M 1 413 1 451
+E 1 405 1 5
+E 1 406 1 7
+E 1 407 1 8
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+G 1 414 1
+E 1 414 1 16
+M 0 407 1 464
+M 0 406 1 465
+M 0 405 1 467
+M 0 404 1 467
+M 0 408 1 470
+M 0 409 1 470
+G 1 411 1
+M 0 404 1 468
+M 0 410 1 473
+G 1 410 1
+M 0 408 1 473
+M 0 409 1 473
+M 0 404 1 473
+M 0 404 10 473
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  401 spec_thief
+M  403 spec_breath_any
+M  404 spec_fido
+M  405 spec_breath_acid
+M  406 spec_breath_frost
+M  407 spec_breath_fire
+M  408 spec_breath_gas
+M  409 spec_breath_lightning
+M  410 spec_breath_fire
+M  411 spec_thief
+M  412 spec_fido
+S
+
+
+#$

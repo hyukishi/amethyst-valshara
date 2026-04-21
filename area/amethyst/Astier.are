@@ -1,0 +1,3843 @@
+#AREA   {PROTO} Astier's area in progress~
+
+
+
+#VERSION 214
+#AUTHOR Astier~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#13701
+a green reed snake~
+a green reed snake~
+You see a large green reed snake floating on by.
+~
+The green snake is almost twice as long as you're boat, and gracefully swims
+about in the water, dancing in and out of reeds, like a green train winding
+through mountains, only as it aproaches you, it opens wide, and attacks.
+~
+65569 0 500 C
+10 0 85 2d5+80 2d2+1
+0 0
+101 108 1
+16 5 3 16 18 4 14
+0 0 0 0 0
+62 8 0 0 0 0 1
+2 0 198681 0 0 0 1 0
+#13702
+a red reed snake~
+a red reed snake~
+You see a red reed snake.
+~
+The red snake is almost twice as long as you're boat, and gracefully swims
+about in the water, dancing in and out of reeds, like a red train winding
+through mountains, only as it aproaches you, it opens wide, and attacks.
+~
+65537 0 500 C
+10 0 60 2d5+120 3d5+5
+0 0
+101 108 1
+16 5 3 16 18 4 14
+0 0 0 0 0
+62 8 0 0 0 0 2
+0 0 198681 0 0 0 1 0
+#13703
+a brown reed snake~
+a brown reed snake~
+You see a brown reed snake.
+~
+The brown snake is almost twice as long as you're boat, and gracefully swims
+about in the water, dancing in and out of reeds, like a brown train winding
+through mountains, only as it aproaches you, it opens wide, and attacks.
+~
+65537 0 500 C
+12 0 10 2d5+250 3d5+15
+0 0
+101 108 1
+18 5 3 18 18 4 14
+0 0 0 0 0
+62 8 0 0 0 0 3
+0 0 198681 0 0 0 1 0
+#13704
+baby lake monster~
+a baby lake monster~
+A baby lake monster swims here.
+~
+The baby lake monster, swims abour skill fully, with stuby litle fins. it
+barly has a neck at all, and has short grey fury atop its smoth blue-green
+skin. It swims up to you, and fluters, it's soft grey eyes, and you can't
+help but think how cute it is, until its lips peal back, and it barres rows
+of deadly teeth, while letting off a ear piercing scretch.
+~
+1 0 0 C
+15 0 0 2d75+400 5d5+10
+0 0
+112 112 0
+16 13 13 13 13 18 13
+0 0 0 0 0
+89 1 0 0 1 1 2
+6 0 272974893 0 0 0 7 2
+#13705
+Learra-monster~
+Learra the lake-monster~
+The monster swims about the room before rearing up and attacking you.
+~
+Learra, is hudge she takes up almost the whole of the large cavern which
+she occupies. her long slender, blue-green figure bends into her every
+movement, and her long neck is toped by a gigantic mouth lined with long
+sharp teeth. The perfect match to her barbed tail.
+~
+35 0 0 C
+25 0 -200 5d10+2000 5d6+8
+0 0
+112 112 0
+20 15 13 22 18 3 17
+0 0 0 0 0
+89 8 0 0 0 0 6
+20 0 273108029 0 0 0 3 2
+> fight_prog 65~
+hiss
+~
+> fight_prog 75~
+growl
+~
+> fight_prog 5~
+if ispc($n)
+mpecho Learra's tail fly's up violently thrashing you.
+mpdamage $n 85
+endif
+~
+> death_prog 95~
+moon
+mpoload 13711 20
+drop all
+~
+> death_prog 5~
+cackle
+mpoload 13712 25
+drop all
+~
+|
+#13706
+island guardian~
+a island guardian~
+The island guardian stands guard here.
+~
+A massive create stands here towerring almost twenty feet, and made of pure
+stone. it stands motionless, holding a rusty old sword in both hands, square
+against old platemail. a rock hangs off its neck almost like an amulet,
+obviously just decorations. Though at first you were not sure if it was
+alive, as you examine it, its eyes carefully follow you're every movement.
+~
+3 0 0 C
+21 0 -150 10d25+1250 6d10+15
+0 0
+112 112 0
+16 13 13 6 16 13 13
+0 0 0 0 0
+40 8 0 0 1 1 4
+4 0 7 0 0 0 0 0
+> greet_prog 100~
+if ispc($n)
+say $n you have ten secounds to leave my sight, or I'll send you to the void
+endif
+~
+> rand_prog 75~
+if ispc($n)
+say i lied! Its time to die.
+mpforce $n kill island
+endif
+~
+|
+#13707
+killer guppy~
+a killer guppy is here~
+A killer guppy jumps in and out of the water.
+~
+The small guppy is about the size of you're fist. It's skin is blue-clear,
+allowing for you to see its internals at work. it had 2 gleeming red eyes,
+matched with long razor like teeth that jut out at all angles from its mouth.
+~
+35 0 -435 C
+5 0 0 2d5+5 3d5+5
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+81 1 0 0 1 1 3
+0 5 17440 0 0 0 1 0
+#13708
+Zoomer~
+a Zoomer zips here~
+The Zoomer zips back and forth across the top of the water.
+~
+The Zoomer, has been names Zoomer for abvious resons. As you watch it, it
+zooms this way and that, its features remind you of a wingless musquito,
+with hudge lilly like feet. and a long snout designed to suck blood from
+its victims.
+~
+65537 0 0 C
+5 0 0 5d5+5 3d10+5
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+83 1 0 0 0 0 0
+0 0 268436517 0 0 0 1 2
+#13709
+old hermit~
+a old hermit~
+The old hermit sits in an old chair smoking a pipe.
+~
+His old skin sags under his chin, making his face look like someone hastly
+glued it on. his eyes are deap in his face, and he has a look of enjoyment
+when he takes a long puff of his pipe, he looks comfortable. and at home.
+Then he sees you, and looks rather upset, but he still greates you, with
+a friendly "hello?".
+~
+85065731 0 0 C
+20 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> greet_prog 100~
+if ispc($n)
+say ohhhh, hello thare
+cough
+say $n
+cough
+say yes that would be your name i think.
+else
+cough
+endif
+~
+> speech_prog slide~
+if ispc($n)
+say only if you say so...
+cough
+say $n
+mea $n The old hermit pushes you down a slide.
+mptransfer $n 13738
+mpecho The old hermit gets up and pushes $n down a old slide.
+else
+cough
+say sure its a slide, down that ges that way
+endif
+~
+> speech_prog hello~
+if ispc($n)
+say oh hello, again?
+else
+say hey, thare.
+cough
+endif
+~
+> speech_prog p my name~
+if ispc($n)
+say oh yes, $n
+cough
+say doing well, no?
+else
+say ahh, that is intriging
+endif
+~
+> speech_prog p Im doing good~
+if ispc($n)
+say well thats good $n
+cough
+endif
+~
+> speech_prog p Im doing ok~
+if ispc($n)
+cough
+say ohhh, why are you not doing good $n?
+endif
+~
+> speech_prog p im not doing so well~
+if ispc($n)
+say oh good heavens, why not $n?
+sneez
+endif
+say oh bless me.
+~
+> speech_prog help~
+if ispc($n)
+say help?
+cough
+say help with what? what do you want $n?
+sneez
+cough
+else
+say i dont help, your kind.
+endif
+~
+> speech_prog p no not you~
+say fine!
+cough
+~
+> speech_prog p im lost~
+if ispc($n)
+say lost?
+cough
+say oh, its simple my friend...
+say your in my hut, on Clemancy isle, founded by his great lordship Clemancy.
+say see and now your no longer lost $n
+else
+say not my falt
+endif
+~
+> speech_prog p how are you~
+if ispc($n)
+say oh old age has goten the better of me im a fraid
+cough
+say im not sure how much longer, ill be here. Oh my good friend $n Il...
+cough
+sneez
+sneez
+say oh my, I'll miss you, when im on the other side.
+else
+say dont ask!
+endif
+say oh, and you?
+~
+> speech_prog p im doing fine~
+say oh good, good goo
+cough
+sigh
+~
+> act_prog p pokes~
+if ispc($n)
+say $n dont make me show you my young side!
+else
+say That is not funny
+cough
+say im a sick old man!
+endif
+~
+> speech_prog p who is Clemency?~
+if ispc($n)
+say you have never heard of Lord Clemancy %n?
+chuckle
+say $n, ill tell you a litle secret my friend.
+tell $n go look high atop a platu so high, that you could see the whole of
+cough
+tell $n the lake, go and thare you might find an answer.
+wink $n
+cough
+endif
+~
+> speech_prog orb~
+say oh yes those orbs, Clemancy made them, to allow him toget into the...
+cough
+say caves again. just say show me the way, when you are next to it.
+~
+> rand_prog 1~
+say hmm i rember when i was a boy, i used to slide down that slide in
+sneez
+say bless, me. The slide in the coner, that is, its quite interesting.
+sneez
+say oh goodness, i just got it today, ask me about the slide, and maybe
+cough
+say oh, maybe your learn something
+~
+> act_prog p gives you a green ring.~
+if ispc($n)
+say oh, ohmy...
+say i have seen this ring before, allong time ago on a the only m-
+cough
+say man, that i have ever respected, my good lord Clemancy.
+say it is a brave thing you have done, to return this to me.
+mpoload 13713
+give helm $n
+say i will give you this for it. use it to breath as the sea-elfs do.
+else
+say thank you
+sneez
+endif
+~
+> act_prog p gives you the decapitated head of Lord Clemancy.~
+if ispc($n)
+say oh my god...
+say what type of monster would do this?
+cry
+say He was such a braver man
+mpoload 13714
+give helm $n
+say now leave me to morning the loss of a good friend.
+else
+say you hellish beast!
+endif
+~
+|
+#13790
+lag~
+lag~
+Lag
+~
+~
+1 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#13701
+ladder~
+a long ladder~
+You see a long ladder reaching up to a hut.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+E
+broken ladder~
+the ladder is rapped lossly with brown and green vines, that cover the
+old wood, from a lost time. Many of the steps are missing from the ladder,
+but branches from trees all around ahve grown to replace most of the empty
+holes. Tho the climb will be hard you feel that you could make it with a
+bit of skill.
+~
+#13702
+Red Orb~
+a floating red orb~
+A Red Orb hovers above the water.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+E
+'red' ' orb' 'red orb'~
+The Orb is one of the most odd things you believe you have ever seen. 
+It is mostly silver, though bits a red metal twist in and out of it.
+like most of what you have seen on the lake, its rather strange.
+~
+> speech_prog p show me the way~
+if ispc($n)
+mea $n you get dizzy and pass out.
+mptransfer $n 13850
+mea $n you wake up, and feel lost. and wet.
+else
+mpecho You will not gain entrance.
+endif
+~
+|
+#13703
+Astier's Statue~
+a statue, resembling Astier~
+You see a statue of Astier resting on a pillar~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+E
+'statue' 'Astier' 'laughing' 'glowing statue' 'laughing statue' 'Astier's Statue'~
+Sit on a pillar which rises out form the lake, is a glowing green statue
+which has great resemblence to the god astier, dressed in his normal pictated
+grab, a tight pair of paint, with a checkard quiltited style to them,
+along with a matching shirt. A hat with 4 branches with bells on them,
+that is assosiated with most jesters. At his waist is an actual sheathed
+rapier, which his left hand rest on, making it imposible to take of of
+the statue, the blade is emiting an odd laughing sound, which can be heard
+from far away. Astiers face is smiling, tho a tear hangs from his right
+eye.
+~
+#13704
+crystal screan~
+a sparkelling crystal screan~
+You see a sparkelling cystal screan resting on the ground~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+E
+'crystal' 'screan' 'crystal screan'~
+<--------Clemancy prog. 1.00.0 running
+<--------welcome user, please use voice comands to operate me.
+<--------options are as follows...
+<---------------------------------------------------------------->
+<------History
+<------Lake Overview
+<------Lord Clemancy
+<---------------------------------------------------------------->
+<------please give me a command by simply saying the option.
+<------Thank You.
+~
+#13705
+road sign~
+a green road sign~
+You see a green road sign floating on a bowee.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+E
+'sign' 'road' 'road sign'~
+The sign has three parts to it, the top part says in white letters, on
+a green background, as the other two are, "south, Clemency Lake"
+the middle one says "southeast, tunnel"
+and the last part says, "southwest, reed road"
+The entire sign is connected to a large square, green block that loats on
+the water.
+~
+#13706
+a twisted throne~
+a twisted throne~
+You see a duranged looking throne, with bits of green stone twisting around it.~
+~
+13 0 0
+0 0 16 0
+1 0 0 0
+E
+'throne' 'twisted' 'twisted throne'~
+You see an odd golden throne, around each leg and arm, green jade like,
+stone twist around with simless edges. Green velvet soft fabrics, line
+the inside seat of the throne, making it pillow soft.
+~
+#13707
+toxins rickaty old chair~
+toxins chair~
+Toxins old chair sits here almost falling apart.~
+~
+13 0 0
+0 0 16 0
+1 0 0 0
+E
+'throne' 'twisted' 'twisted throne'~
+You see an odd golden throne, around each leg and arm, green jade like,
+stone twist around with simless edges. Green velvet soft fabrics, line
+the inside seat of the throne, making it pillow soft.
+~
+E
+'toxin' 'chair' 'toxin's chair'~
+A chair made fo old driftwood, and a street sign sits here, in white
+paint you see the name toxin writen' on the back of it.
+~
+#13708
+a guests chair~
+a guests chair~
+A guests chair waits for someone to sit on it.~
+~
+13 0 0
+0 0 16 0
+1 0 0 0
+E
+'throne' 'twisted' 'twisted throne'~
+You see an odd golden throne, around each leg and arm, green jade like,
+stone twist around with simless edges. Green velvet soft fabrics, line
+the inside seat of the throne, making it pillow soft.
+~
+E
+'toxin' 'chair' 'toxin's chair'~
+A chair made fo old driftwood, and a street sign sits here, in white
+paint you see the name toxin writen' on the back of it.
+~
+#13709
+Island Sword~
+long A rusty old sword sits, here as if it has been here forever.~
+Some god dropped a newly created Island Sword here.~
+~
+5 0 8193
+0 0 0 3
+10 0 0 0
+A
+30 218
+A
+19 5
+A
+18 5
+#13710
+rock amulet~
+a grey stone, amulet~
+A old grey stone, lays here, rapped in ancient lether.~
+~
+9 0 5
+200 0 0 0
+2 0 0 15
+A
+56 66
+#13711
+Clemancy's ring~
+a green ring~
+A thin green metal ring, with a C writen on the top.~
+~
+13 0 3
+0 0 0 0
+1 0 0 0
+E
+'Clemancy's' 'ring'~
+the thin ring is made of an odd green toned metal, that makes a large flat
+disk, untop of the end of a loop. On the disk, in red metal a large C
+is intertwined with the green metal disk.
+~
+#13712
+Clemancy's Head~
+the decapitated head of Lord Clemancy~
+The decapitated head of Lord Clemancy lays hear.~
+~
+13 0 1
+0 0 0 0
+1 0 0 0
+E
+'head' 'clemancy'~
+You can't stand to look at it, for it is to desturbing. The litle bits
+of hear that is left is clumbed with bets and pieces of brains, that is
+leaking from a large hole in the back. the face is almost unrecognizable.
+for it has mostly been ripped off.
+~
+#13713
+Helm of the Lake~
+a green and red helmit.~
+A shiny green and red metal helm rests on the ground hear.~
+~
+9 0 17
+0 -10 0 0
+1 0 0 20
+E
+'helm' 'lake'~
+The helmit is made from rapped metal twine, consiting of red and green
+tones, on the brow, you see a picture of a lake, inpictured on a silver
+plate.
+~
+A
+56 236
+#13714
+helm sea helmet~
+a green and red helmet~
+A shiny green and red metal helm rests on the ground hear.~
+~
+9 0 17
+0 -10 0 0
+1 0 0 0
+E
+'helm' 'sea'~
+The helm is made of red and green metalic twine, that reminds you off
+twisted fishing line, in the shape of a helmit. On the brow a silver nose
+guard stretches out from the base a shimerring wave.
+~
+A
+56 236
+A
+56 205
+#13715
+Old rocking chair~
+a old rocking chair~
+A old rocking chair rocks back and forth here.~
+~
+12 0 0
+0 0 16 0
+1 0 0 0
+E
+'old' 'rocking' 'chair'~
+The old chair consists of bits and pieces of drift wood, that could have
+been found anywhere. It looks rather unconfortable, as it has an ackward
+rock, and a very uneven back and seat.
+~
+#13750
+A Green Orb~
+a floating green orb~
+A Green Orb floats in the water~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+E
+'green' 'orb' 'green orb'~
+The orb is one of the most odd things you believe you have ever seen.
+it is mostly silver, though bits of green metalic twine twist in and out
+of it. Like most of what you have seen on the lake, its rather strange.
+~
+> speech_prog p take me home~
+if ispc($n)
+mea $n you get dizzy and pass out.
+mptransfer $n 13755
+mea $n you wake up, and feel lost, and very wet.
+else
+mpecho you will not gain entrance.
+endif
+~
+|
+#0
+
+
+#ROOMS
+#13701
+Swirling Pool Before Reed Road~
+The Reeds Gather to from a large circular like room, which causes
+the water to turn back on it's self, making an ever turn pool.
+All differnt colors of reeds flash before you're eyes as the small
+boat you reside in get cought in the twirling motion. Off to the
+left you can't help but notice how the reeds spreed apart froming
+a sort of road.
+~
+~
+0 4 6 1
+D0
+~
+~
+0 -1 12848
+D3
+~
+~
+0 -1 13702
+S
+#13702
+Entrance to Reed Road~
+Red, brown, and green colorred reeds gently brush up against youre
+small boat, making a drumming sound. the water tends to push you
+torwards the west away from a small twirling pool where the delta
+empties into the small reed forest inwhich you now occupie. A small
+break in the reeded walls heads to the south and the open well
+travelled Reed Road continues to the west.
+~
+~
+0 4 6 0
+D1
+~
+~
+0 -1 13701
+D2
+~
+~
+0 -1 13707
+D3
+~
+~
+0 -1 13703
+S
+#13703
+Reed Road~
+Reed Road Makes an unexpected turn here, twisting about to the south.
+Tho it apears that some one has continued the road to the west, you
+dont see any point in heading that way.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13702
+D2
+~
+~
+0 -1 13706
+D3
+~
+~
+0 -1 13704
+S
+#13704
+Knee Deep in Reeds~
+Obviously, this path was never intend to be travelld more then on once.
+Some one most have cutt back the reed at one point but they have
+grown back. Over flowing into the boat the reeds consist of many colors
+including the commonly seen reds and browns. even tho you believe you
+should turn back you find you're self wanting to explore this path
+more.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13703
+D2
+~
+~
+0 -1 13705
+S
+#13705
+Surrounded by Reeds~
+The growth of the reeds is unbelievable, they grow at such lengths
+that youre no longer beable to continue down this path as navigation
+is imposible, alitle heart broken you're gona have to turn back.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13704
+S
+#13706
+A Road Sign~
+Strangly enough in the center of the path a green sign floats attached
+to a faded yellow colored bowee with a metal pole, it gently bobs
+left and right rythmically with the druming of the reeds on you're
+boat. The main path splits here, going southwest and southeast. A
+sizable path continues down south, also a small path breaks off the east.
+Confused as to which path to actually take you find you're self thinking
+about reading the sign.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13703
+D1
+~
+~
+0 -1 13707
+D2
+~
+~
+0 -1 13709
+D8
+~
+~
+0 -1 13710
+D9
+~
+~
+0 -1 13708
+S
+#13707
+A Side Trail~
+The trail here has been hastilly cutt into the forest walls, perhaps
+by some bandits hoping to catch unsaspecting travlers, or perhaps by
+some sort of large creater, hoping to make its nest. Either way you're
+happier believing that it is just a short-cut as it turn up to the north.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13702
+D3
+~
+~
+0 -1 13706
+S
+#13708
+Reed Road~
+The reed walls channel you down a strange trail, which has clearly
+been named Reed Road, and for obvious resons. You find you're self
+injoying the ride, along the trail, which is more like a river then
+a trail.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13781
+D6
+~
+~
+0 -1 13706
+S
+#13709
+Leaving the Forest~
+The thick red and green reeds are spars here, to the north the massive
+forest lumes above you, with reeds towering over twenty feet above
+the lake surface. To the south a vast green lake opens up stretching
+from one end of the horizen to another, far off in the destance you
+think you can see another grouping of reeds.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13706
+D2
+~
+~
+0 -1 13711
+S
+#13710
+A Warning Sign~
+Unlike the other towering walls the reeds here have all the sudden
+began to change from beautifull reds, browns and greens to a ugly grey.
+South the walls begin to fold over forming a large tunel like struckture.
+A old wooden sign floats, nocked off its old colorless bowee you
+almost dont see it, in faded red paint some sort of warning is writen
+on it, you feel as if you should investigate further before continueing.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13788
+D7
+~
+~
+0 -1 13706
+S
+#13711
+On Clemancy Lake~
+With the Massive reed forest to the north and the vast green Clemancy
+Lake spreeding out to the south you feel very secure, and the slight
+ebb of the lake create a overwhelming feeling of tranquility. The lake
+widens to outwardly in almost all dirrections except for the north
+where it narrows into a lush reed forest.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 13709
+D2
+~
+~
+0 -1 13713
+D8
+~
+~
+0 -1 13714
+D9
+~
+~
+0 -1 13712
+S
+#13712
+On Clemancy Lake~
+The great Clemancy Lake would be considerably one of the most magnificant
+place you believe you have ever been. The green waters gently rock you're
+small boat, almost putting you to a sleep like trance, if not for a quick
+bump on the bottem of you're boat you might have falling asleep, you cant
+help but consider the idea that the bump was a reminder that the lake
+maybe peacefull atop but who knows what monstrasaties lay benieth.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13713
+D2
+~
+~
+0 -1 13715
+D6
+~
+~
+0 -1 13711
+D8
+~
+~
+0 -1 13716
+S
+#13713
+On Clemancy Lake~
+The lakes green waters are welcoming and comforting, but some unseen
+pressence haunts you're every move. fourcing you to move sillintly to what
+you believe is an island far of to the distant south.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13711
+D1
+~
+~
+0 -1 13714
+D2
+~
+~
+0 -1 13716
+D3
+~
+~
+0 -1 13712
+D9
+~
+~
+0 -1 13715
+S
+#13714
+On Clemancy Lake~
+You're are rate up against a giant read wall, with reads so thick that
+you know you're never beable to breakthrogh them, to see what is on
+the other side. To the south the illusive island awaits you presence,
+you think you're eyes my e deciving you but is that smoke you see?
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13717
+D3
+~
+~
+0 -1 13713
+D7
+~
+~
+0 -1 13711
+D9
+~
+~
+0 -1 13716
+S
+#13715
+On Clemancy Lake~
+The reed wall snakes out down south, from the forest up north.
+As you're ass follow its path it become obvious to you that a
+small beach most form somewhere that might lead to the platu
+that over looks the entire lake. Yet the island to the south also
+catches you're attention.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13712
+D1
+~
+~
+0 -1 13716
+D2
+~
+~
+0 -1 13718
+D6
+~
+~
+0 -1 13713
+D8
+~
+~
+0 -1 13719
+S
+#13716
+On Clemancy Lake~
+You feel so free on the waters, with every dirrection open to
+you. tho you believe you see some interresting destinations to
+head to. to youre south you see a lush island, and to the south west
+you a hudge platu juts out of the reeds which line the lake.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13713
+D1
+~
+~
+0 -1 13717
+D2
+~
+~
+0 -1 13719
+D3
+~
+~
+0 -1 13715
+D6
+~
+~
+0 -1 13714
+D7
+~
+~
+0 -1 13712
+D8
+~
+~
+0 -1 13720
+D9
+~
+~
+0 -1 13718
+S
+#13717
+On Clemancy Lake~
+Water water every where, so very sothing yet, every where. you cant
+find very much else here on the lake, except some basic things have
+caught you're eye, a bit of smoke to the south and a bit to the west,
+a glint of silver to the south, and a large bunch of reeds to the north.
+But then again the water, water to the east is not water at all,
+but insted a mass of reeds creating a wall stretching far to the south,
+as well as to the north.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13714
+D1
+~
+~
+0 -1 13720
+D2
+~
+~
+0 -1 13720
+D3
+~
+~
+0 -1 13716
+D8
+~
+~
+0 -1 13721
+D9
+~
+~
+0 -1 13719
+S
+#13718
+On Clemancy Lake~
+The wall twist around to the southwest a bit, leaving you with a more
+vunable feeling. a laughter fromt the southeast catches you're attention
+aswell as a hut, resting above the trees on the island to the southeast,
+that is smoking.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13715
+D1
+~
+~
+0 -1 13719
+D2
+~
+~
+0 -1 13723
+D6
+~
+~
+0 -1 13716
+D8
+~
+~
+0 -1 13724
+D9
+~
+~
+0 -1 13722
+S
+#13719
+On Clemancy Lake~
+The lake is so buetifull, you almost wish you could stay here for ever,
+but you know in you're heart that you have to keep moving. Thare is
+so much to see, aside from the reed forest to the north, southernly
+a overlooking platu, island and odd statue lay scatterd throught the lake
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13716
+D1
+~
+~
+0 -1 13720
+D2
+~
+~
+0 -1 13724
+D6
+~
+~
+0 -1 13717
+D7
+~
+~
+0 -1 13715
+D8
+~
+~
+0 -1 13725
+D9
+~
+~
+0 -1 13723
+S
+#13720
+On Clemancy Lake~
+The Sounds of laughter are coming from the south with a slight green
+glow. Most of the same old sights are still visibale, to the north
+the reed forest, and aside from the glow to the south you can see
+smoke comeing from some sort of island hut.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13717
+D1
+~
+~
+0 -1 13721
+D2
+~
+~
+0 -1 13725
+D3
+~
+~
+0 -1 13719
+D7
+~
+~
+0 -1 13716
+D8
+~
+~
+0 -1 13726
+D9
+~
+~
+0 -1 13724
+S
+#13721
+On Clemancy Lake~
+You have found you're neatly tucked away in a cornor of the read wall.
+giving you an excelent view of the the statue to the southwest, but
+not only can you see it but hear it as well. As you're gaze contues
+you notice the billowing smoke from a hut perched atop the islandforest,
+along with the platu to the far southwest, which looks almost unscaleable.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13726
+D3
+~
+~
+0 -1 13720
+D7
+~
+~
+0 -1 13717
+D8
+~
+~
+0 -1 13727
+D9
+~
+~
+0 -1 13725
+S
+#13722
+On Clemancy Lake~
+You're small boat gentally bounces off the wall of reeds, which lines
+the lake. The island by itself is very intriging but even more interresting
+is the black bubble that rests to its north, a shiny slide like strucker
+breaches out from the hut attop the trees that cover the island.
+Even father to the east a glowing green statues lumes, of a moking clown.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13723
+D2
+~
+~
+0 -1 13729
+D6
+~
+~
+0 -1 13718
+D8
+~
+~
+0 -1 13730
+D9
+~
+~
+0 -1 13728
+S
+#13723
+On Clemancy Lake~
+You, you're boat, and the lake what could be greater then this. floating along
+softly heading towards eather the statue, or the island, eather way
+the tall platu to the southwest is not in the same dirrection as
+anything else that you can see on the island.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13718
+D1
+~
+~
+0 -1 13724
+D2
+~
+~
+0 -1 13730
+D3
+~
+~
+0 -1 13722
+D6
+~
+~
+0 -1 13719
+D8
+~
+~
+0 -1 13731
+D9
+~
+~
+0 -1 13729
+S
+#13724
+On Clemancy Lake~
+The island to the south seems taller now then it did before, but
+that is not what is on you're mind a stranger lafter is eminating from
+a extrimly odd statue to the southeast, that is glowing green. You
+feel compeled to explore further before you do anything else.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13719
+D1
+~
+~
+0 -1 13725
+D2
+~
+~
+0 -1 13731
+D3
+~
+~
+0 -1 13723
+D6
+~
+~
+0 -1 13720
+D7
+~
+~
+0 -1 13718
+D8
+~
+~
+0 -1 13732
+D9
+~
+~
+0 -1 13730
+S
+#13725
+On Clemancy Lake~
+redi desc
+The green glow is intence and the statue to the south is quite 
+obvious a silver clown, the sounds of many people laughing, has become
+intoxicating and you find youre self longing to joing them in the joke.
+Aside from the statue, the hut to the southwest is pearched atop a
+lush island and the reed forest has become hard to see, to the west
+a distant hill has become visibal, and something shiny has caught
+you're eye.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13720
+D1
+~
+~
+0 -1 13726
+D2
+~
+~
+0 -1 13732
+D3
+~
+~
+0 -1 13724
+D6
+~
+~
+0 -1 13721
+D7
+~
+~
+0 -1 13719
+D8
+~
+~
+0 -1 13733
+D9
+~
+~
+0 -1 13731
+S
+#13726
+On Clemancy Lake~
+The statue to the southwest is resentating insane laughter, that covers
+up all other sounds. and a green glow is diffusing out of it as well.
+all the other sites of the lake have become irrlevent to you except for one
+to the far southeast a bright white glare shines into you're eyes, tho
+small it is as attractive as the statue is.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13721
+D1
+~
+~
+0 -1 13727
+D2
+~
+~
+0 -1 13733
+D3
+~
+~
+0 -1 13725
+D7
+~
+~
+0 -1 13720
+D8
+~
+~
+0 -1 13734
+D9
+~
+~
+0 -1 13732
+S
+#13727
+On Clemancy Lake~
+Smoke cutts into the horizan from a hut that rest ontop of the forest
+of the island in the center of the lake. From the outside wall that
+you're boat gently rests against you can see most of the lake, of in
+the distance a peak barly seen over the island overlooks the lake, a
+glowing statue is closest to you and a that it is giving out makes it
+seem very inviting. A slight glow comes from around the cornor of the
+wall but you cant make out what it is, something to the south most be
+letting of that light.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13734
+D3
+~
+~
+0 -1 13726
+D7
+~
+~
+0 -1 13721
+D9
+~
+~
+0 -1 13733
+S
+#13728
+On Clemancy Lake~
+You can see the peek, to the southwest, it towers over you, and you can
+see a sparkly object sitting ontop of it. To the east you can see a black
+sphere floating next to the island, i long metal slide stretches from
+a hut atop the trees and plungers into the black sphere. A small river
+drains the lake. to the south, southwest.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13729
+D2
+~
+~
+0 -1 13736
+D6
+~
+~
+0 -1 13722
+D8
+~
+~
+0 -1 13737
+D9
+~
+~
+0 -1 13735
+S
+#13729
+On Clemancy Lake~
+The lake is hudge and you now cordinate you're self somewhere near the
+middle. You drifting or moving closer and cloaser to a strange shiny object
+object, atop that hill to the southwest. you cant help but look at
+the strange black bubble to the southeast, odly enought it doesnt 
+apear to have any entrances to it. and to the east you can see a slight
+green glow.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13722
+D1
+~
+~
+0 -1 13730
+D2
+~
+~
+0 -1 13737
+D3
+~
+~
+0 -1 13728
+D6
+~
+~
+0 -1 13723
+D9
+~
+~
+0 -1 13736
+S
+#13730
+On Clemancy Lake~
+You find you attention drawn to the southwest where a rather large
+shiny opbject sits atop a steep hill. to the imidiat south is a very
+wierd black bubble which you find much more intriging then the object
+atop the hill. From what you can see from here thare is no way of
+actually entering in, what could it be?
+to the east you can her a soft laughter, and you cant help but think
+how crazy this place is.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13723
+D1
+~
+~
+0 -1 13731
+D3
+~
+~
+0 -1 13729
+D6
+~
+~
+0 -1 13724
+D7
+~
+~
+0 -1 13722
+D8
+~
+~
+0 -1 13739
+D9
+~
+~
+0 -1 13737
+S
+#13731
+On Clemancy Lake~
+Strange harmonic laughter is radiating into this room from a statue
+to the east. To the southwest thares a odd black bubble not allowing
+any passage, aside from the bubble thares also an island with a smoking
+hut on it. To the north you can barly make out the reed forest.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13724
+D1
+~
+~
+0 -1 13732
+D2
+~
+~
+0 -1 13739
+D3
+~
+~
+0 -1 13730
+D6
+~
+~
+0 -1 13725
+D7
+~
+~
+0 -1 13723
+D8
+~
+~
+0 -1 13740
+S
+#13732
+A Strange Statue~
+The bright green glow echos you're every movement and almost make it
+imposible to get a good look at the statue, which is it self, green.
+From what you can make out the statue is resting on a pillar that goes
+perhaps all the way down to the bottum of the lake. It kinda reminds you
+of a jester, with a court hat, and tight body fitting suit, the only thing
+odd about it is, a actualy rapier that hangs from a belt on it's side.
+no jester you have ever seen caries a blade.
+A blade that laughs.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13725
+D1
+~
+~
+0 -1 13733
+D2
+~
+~
+0 -1 13740
+D3
+~
+~
+0 -1 13731
+D6
+~
+~
+0 -1 13726
+D7
+~
+~
+0 -1 13724
+D8
+~
+~
+0 -1 13741
+D9
+~
+~
+0 -1 13739
+S
+#13733
+On Clemancy Lake~
+The bright green glow drives you closer and closer to the statue, that
+with the loud never ending laughter which keeps porring out from something
+around the statue, or pore haps the statue its self, either way all you can
+think is west.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13726
+D1
+~
+~
+0 -1 13734
+D2
+~
+~
+0 -1 13741
+D3
+~
+~
+0 -1 13732
+D6
+~
+~
+0 -1 13727
+D7
+~
+~
+0 -1 13725
+D8
+~
+~
+0 -1 13742
+D9
+~
+~
+0 -1 13740
+S
+#13734
+On Clemancy Lake~
+The island looks beautiful, from this angle, the trees are so green,
+and they seem to cover the intire island, from beach to cliff. A hut
+that raises high above the treeline waits while poring out smoke, could
+it be on fire... besides the southwest you can also see a glowing green
+statue to the west, is that laughter you hear...
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13727
+D2
+~
+~
+0 -1 13742
+D3
+~
+~
+0 -1 13733
+D7
+~
+~
+0 -1 13726
+D8
+~
+~
+0 -1 13743
+D9
+~
+~
+0 -1 13741
+S
+#13735
+On Clemancy Lake~
+You stand up in boat gently resting against the reed wall, looking widely
+about. What was that sound you heard? was it over thare? or over thare?
+is that a stick floating in the water, or something else? why are you so
+paranoid? what was that sound?
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13736
+D2
+~
+~
+0 -1 13757
+D6
+~
+~
+0 -1 13728
+D8
+~
+~
+0 -1 13756
+D9
+~
+~
+0 -1 13775
+S
+#13736
+On Clemancy Lake~
+twisting and turning in the waters as they have gotten a bit more active
+in this area of the southwestern lake. If you're eyes do not desive you
+the cause may be that small creek, in the southwest cornor of the lake.
+Alitle north of the creek a small path breaks of from a mudy beach, up
+to the overlook which can be seen from almost anywhere in the lake.
+but the islands only has sheer cliffs which you know you can not climb from
+here.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13728
+D1
+~
+~
+0 -1 13737
+D2
+~
+~
+0 -1 13756
+D3
+~
+~
+0 -1 13735
+D6
+~
+~
+0 -1 13729
+D8
+~
+~
+0 -1 13758
+D9
+~
+~
+0 -1 13757
+S
+#13737
+On Clemancy Lake~
+Youre rather close to the island now though you can see any way to land
+and explore from here. You also find a odd black bubble dirrectly
+southeast of you it doesnt have any visiball entrances but is very
+intrigging to the south west a large rocky platu like strucker juts
+out of the mudy shore line, with a shiny object atop.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13729
+D2
+~
+~
+0 -1 13758
+D3
+~
+~
+0 -1 13736
+D6
+~
+~
+0 -1 13730
+D7
+~
+~
+0 -1 13728
+D9
+~
+~
+0 -1 13756
+S
+#13738
+On black waters~
+After a quick ride down the slide youre met bye a splash of cool water.
+The water is refreshing from the stuff room of the old hut to the south.
+Relieved and refreshed you find youre self survaying the suroundings,
+looking for any famillure sights. The first thing you notice is that youre
+floating on a circle of pitch black water, which stops abruptly and
+is itself surounded bye the normall green waters which look much more
+friendly. you cant help but notice how things look more blurry from
+here, but to the north you see the reed forest and a small rock clief
+protrudes out from the lake to the south.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13730
+D1
+~
+~
+0 -1 13739
+D3
+~
+~
+0 -1 13737
+D6
+~
+~
+0 -1 13731
+D7
+~
+~
+0 -1 13729
+D9
+~
+~
+0 -1 13758
+S
+#13739
+On Clemancy Lake~
+The room is filled with laughter coming from what apears to be a
+statue to the northeast. To the south lies a small stubby cliff of
+a rather small island. To the west is some sort of Black buble that
+has only one entrance that you can see, a slide coming from a hut on
+this island. you think that you'll have to go around the buble in order.
+to continue to west.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13731
+D1
+~
+~
+0 -1 13740
+D6
+~
+~
+0 -1 13732
+D7
+~
+~
+0 -1 13730
+D8
+~
+~
+0 -1 13759
+S
+#13740
+On Clemancy Lake~
+The laughter from the statue has captivated you, and even tho the backside
+of the statue is not something you wish to see, you have this encredible
+urge to be next to the statue as soon as possible, an urge to go north
+and give it a hug.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13732
+D1
+~
+~
+0 -1 13741
+D2
+~
+~
+0 -1 13759
+D3
+~
+~
+0 -1 13739
+D6
+~
+~
+0 -1 13733
+D7
+~
+~
+0 -1 13731
+S
+#13741
+On Clemancy Lake~
+You find you're self torn between to differnt glowing destenations, to
+the northwest a green glow is pushed forth by the statue, and to the southeast
+a white glow is resentanting off from the very ground. Aside from going either
+southeast or northwest, the hut on the island still brings forth some
+questions, but how do you get on the island? you have a feeling that
+the answer to that question maybe to the south.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13733
+D1
+~
+~
+0 -1 13742
+D2
+~
+~
+0 -1 13760
+D3
+~
+~
+0 -1 13740
+D6
+~
+~
+0 -1 13734
+D7
+~
+~
+0 -1 13732
+D8
+~
+~
+0 -1 13761
+D9
+~
+~
+0 -1 13759
+S
+#13742
+On Clemancy Lake~
+You're getting closer and closer to the reed wall which surrounds the lake,
+and is the only real path that you can follow, you are getting closer
+to the white light and find you're self not caring about anything else,
+on the lake.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13734
+D1
+~
+~
+0 -1 13743
+D2
+~
+~
+0 -1 13760
+D3
+~
+~
+0 -1 13741
+D7
+~
+~
+0 -1 13733
+D8
+~
+~
+0 -1 13762
+D9
+~
+~
+0 -1 13760
+S
+#13743
+On Clemancy Lake~
+Ah, anganst awall, where no abby normal or suppernatual light can reach
+you, you can see from here both the green glow coming from the statue,
+and the white glow coming from god knows what to the south. More importantly
+you have finally cought sight of a way to get onto the island, to the
+southwest lies a small beach that the very walls of the cliffs bend down
+into the water, to alow entrance to the island.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13762
+D3
+~
+~
+0 -1 13742
+D7
+~
+~
+0 -1 13734
+S
+#13744
+Astier's Entertainment Hall~
+The sounds of laughter, and music come to youre ears. All about you
+someone is moving, someone is juggelling sticks, with the ends burning
+to clowns are running around the room on stilts. Kneelling on a red
+carrpet, facing a odd green and gold thrown, are a man and a woman
+who apear incredibly fit. A fit of laughter comes from nowhere, as
+one of the clowns trips, rolls and get back up on the stilts, most of
+the sound is coming from north end of the room where a piper plays a
+stedy beat, and the thrown is. sitting in the awkward thrown is a
+giant wind up clown doll, that has unbelievable resemblens to Astier.
+~
+~
+0 1036 0 0
+S
+#13745
+Under A Hut~
+Even though the tree do not grow around you, you feel very confined. Its
+very cramped as you stand between large wooden pillars, like trees that
+hold a hut way above your head. North you can see the underside of a
+metalic slide, that apears to come from the hut, what type of strange
+nut built it, you wonder.
+~
+~
+0 0 2 0
+D1
+~
+~
+0 -1 13746
+S
+#13746
+A Tide Poll~
+The forest clears a bit, and you find your self standing in billions of
+tidepools, of all differnt sizes, you feel a bump at your side, and relize
+it was a litle tiny fish. cute litle fish you think, as you notice that
+many more just like it jump from hole to hole.
+~
+~
+0 0 2 0
+D2
+~
+~
+0 -1 13748
+D3
+~
+~
+0 -1 13745
+S
+#13747
+A Broken Ladder~
+The Lush island forest is thick and heats the area around you, sweat drips from
+you're forhead, and down you're arms as you reach a odd hut pearched above the
+forest. Smoke bellows out from its door, but it does not apear to be on fire
+a broken ladder follows it up and out of the forest and allows access to its
+soul entrence. the ladder is missing many of its steps but the branches from
+trees and bits of vines seem to make it&r climbable
+~
+~
+0 0 2 0
+D1
+~
+~
+0 -1 13748
+D2
+~
+~
+0 -1 13749
+D8
+~
+~
+0 -1 13750
+D10
+ladder
+~
+ladder~
+591872 -1 13755
+S
+#13748
+In Front Of A Hut~
+you stand at the conor post of a tiny hut, perched above the tree line.
+when you look up you get a bit dizy, from all the branches which twist and
+intertwine amongst eachother. Westwardly you see a massive ladder, that
+looks as if its been thare sense the creation of time, and perhaps
+its the only entrence to the hut.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 13746
+D2
+~
+~
+0 -1 13750
+D3
+~
+~
+0 -1 13747
+D9
+~
+~
+0 -1 13749
+S
+#13749
+A Small Cliff~
+bit of long twirling grass pokes out from the normal overgrowth, that covers
+the ground of the island. the grass is just about every where, and even
+grows over the edge of a cliff, as you look town, relize how high above
+the water the island actually is.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 13747
+D1
+~
+~
+0 -1 13750
+D6
+~
+~
+0 -1 13748
+S
+#13750
+In Side The Forest~
+You are standing in the heart of the island, in the depth of its small
+forest. The trees above you canapee blocking out the sun. The forest is
+thick and lush, making it so you can't tell where you are, or where anything
+else is.
+~
+~
+0 4 2 0
+D0
+~
+~
+0 -1 13748
+D1
+~
+~
+0 -1 13752
+D3
+~
+~
+0 -1 13749
+D7
+~
+~
+0 -1 13747
+S
+#13751
+Along A Rocky Shore~
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 13753
+S
+#13752
+A Beach Side Trail~
+The trail leaves the beach behind, and leads into a small forest. large
+boldars block you paths both north and south making you're path strait
+ahead to the west or east only. The forest to the west looks very inviting
+and is the only way to get the hut which towers above it.
+~
+~
+0 0 2 0
+D1
+~
+~
+0 -1 13754
+D3
+~
+~
+0 -1 13750
+S
+#13753
+A Sandy Beach~
+the beach, is more like a desending sandy hill, srounded by bolders and
+thick trees, alowing for you to either go back to the lake, or head south
+aways and look for perhaps another way to explore the island.
+~
+~
+0 0 2 0
+D1
+~
+~
+0 -1 13763
+D2
+~
+~
+0 -1 13754
+S
+#13754
+A Sandy Beach~
+At last you think you have found the only way into the island. All the
+other paths seem to lead nowhere, but when you look west you can see a twisting
+trail lined with shrubers, and a thick over growth begins to grow
+atop the sandy hill of the beach, that lines the path way. Tall trees
+and bolders make the way deffinant, west.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 13753
+D1
+~
+~
+0 -1 13764
+D3
+~
+~
+0 -1 13752
+S
+#13755
+In A Small Hut~
+You have wonderred into a cozy small little hut, on the northern
+side thare is a strange hole of some kind, on the eastern wall an
+award of some kind hangs in a cheap wooden frame. smoke drits up
+from behind a large old sitting chair, and you can here the puffing
+sound of a pipe. Bits of papper and strange animal hides lay on the
+ground in all sorta of places. The only exits you see are the half
+broken ladder you just climbed up and that strange hole in the northern
+floor. the strong musky smell of rot mixed with the smell of a tobaco
+pipe, makes the small room hardly barable, hard to breath, and verry
+hard to see in.
+~
+~
+0 12 0 0
+D10
+~
+ladder~
+67712 -1 13747
+S
+#13756
+On Clemancy Lake~
+The water is a bit more chopier here, you are not having any proplems
+handelling you're boat but, but the waters currents are picking up
+as you get closer to the creak, which breaks off from the lake.
+Besides the creak to the southwest, thare is also a beach, which leads up
+to the peek that over looks the lakes, and the island is southest of you
+aswell.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13736
+D1
+~
+~
+0 -1 13758
+D2
+~
+~
+0 -1 13770
+D3
+~
+~
+0 -1 13757
+D6
+~
+~
+0 -1 13737
+D7
+~
+~
+0 -1 13735
+D8
+~
+~
+0 -1 13772
+D9
+~
+~
+0 -1 13768
+S
+#13757
+On Clemancy Lake~
+Not only is the water moving more, but it is also geting browner the more
+west you move, you can see deap brown waters dirrectly west of here, which
+can only mean mud, obviously from the beach allitle south west of here.
+the creak is a bit smaller then a river and it lays south southwest. and
+of corse the island is to the east and a bit south.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13735
+D1
+~
+~
+0 -1 13756
+D2
+~
+~
+0 -1 13768
+D3
+~
+~
+0 -1 13775
+D6
+~
+~
+0 -1 13736
+D8
+~
+~
+0 -1 13770
+D9
+~
+~
+0 -1 13773
+S
+#13758
+On Clemancy Lake~
+You sit in you're boat staring up at the towering cliffs of the island,
+you know that you're going to have to go around. Around that black sphere,
+floating next to the isle to the northeast, also, for it will not budge.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13737
+D2
+~
+~
+0 -1 13772
+D3
+~
+~
+0 -1 13756
+D7
+~
+~
+0 -1 13736
+D9
+~
+~
+0 -1 13770
+S
+#13759
+On Clemancy Lake~
+The walls of the island now tower over you to the south, aswell as the
+west, tho you can barly make out the black sphere you can still see the
+statue laughing to the north, most of the other sites you can not see
+do to the high walls blocking you're vision, tho very far off to the north
+in a bit of a haze you can see the reed forest on the far end of the lake.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13740
+D1
+~
+~
+0 -1 13760
+D6
+~
+~
+0 -1 13741
+D7
+~
+~
+0 -1 13739
+S
+#13760
+On Clemancy Lake~
+you find you're self parrell to the island cliffs tho they are not very
+tall, you could not possible scale them for once you got up the trees would
+block you're entrence to the island. the sphere is just allitle bit north
+as the was of the island move up from the south aways to the west.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13741
+D1
+~
+~
+0 -1 13761
+D3
+~
+~
+0 -1 13759
+D6
+~
+~
+0 -1 13742
+D7
+~
+~
+0 -1 13741
+D8
+~
+~
+0 -1 13763
+S
+#13761
+On Clemancy Lake~
+Litle fish jump in and out of the water, in frenzy. Feeding on an elipsoid
+carcas laying on the bottum of the lake, something rather large most have
+died here resently, and you find you're self hoping that you do not join
+it any time soon. Insted you force you're self to look around seeing the
+statue, and a tall platu to west, and the islnad with its acompaning
+floating blackshpere just north of it, to the southwest. When
+you look southeast you are almost blinded by the shining white sand.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13742
+D1
+~
+~
+0 -1 13762
+D2
+~
+~
+0 -1 13763
+D3
+~
+~
+0 -1 13760
+D6
+~
+~
+0 -1 13743
+D7
+~
+~
+0 -1 13741
+D8
+~
+~
+0 -1 13766
+S
+#13762
+On Clemancy Lake~
+You and you're boat are shaded by a shadow cast from the light, shining
+on the cornor of the reed wall which surounds the lake. from this vantage
+point you can see, the island, the islands only entrance, and the black 
+floating sphere whiche rests north, of the island to the southwest.
+As well you can see the glowing green statue, and a peek far of in the west.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13743
+D2
+~
+~
+0 -1 13766
+D3
+~
+~
+0 -1 13761
+D7
+~
+~
+0 -1 13742
+D9
+~
+~
+0 -1 13763
+S
+#13763
+On Clemancy Lake~
+You rest inbetween two differnt beaches to the east, is a bright blinding
+light set off from the pure white sands it has, to the west is the forest
+of the island, that has disipated into a half forest half beach type of thing
+north of here is the laughing statue. and the reed forest.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13761
+D1
+~
+~
+16777216 -1 13766
+D2
+~
+~
+0 -1 13764
+D3
+~
+~
+16777216 -1 13753
+D6
+~
+~
+0 -1 13762
+D7
+~
+~
+0 -1 13760
+D8
+~
+~
+0 -1 13765
+S
+#13764
+On Clemancy Lake~
+You have come appon a sort of valley in the lake, as a beach lays to either
+west or east of you, east is a pure white sand beach which blinds you
+at sight, west is a ruff foresty beach of the island. North is the laughing
+statue, and the reed forest.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13763
+D1
+~
+~
+16777216 -1 13765
+D2
+~
+~
+0 -1 13794
+D3
+~
+~
+16777216 -1 13754
+D6
+~
+~
+0 -1 13766
+S
+#13765
+A white Sand Beach~
+The meandorring white sands wander northernly tell they collide
+with the rebeging of the tall reed wall which surrounds the lake.
+You're eyes casually gaze torwards the east where a massive
+green-ocean of grass creaps across the lands until they reach the
+base of a truelly odd mountain range, consiting of two purple peeks
+that almost glow, off in the destance.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13766
+D3
+~
+~
+0 -1 13764
+D7
+~
+~
+0 -1 13763
+D9
+~
+~
+0 -1 13794
+S
+#13766
+A white Sand Beach~
+The reed wall to the north stops abruptly, as it meets the soft white snads of
+the beach. The beach is so white that it almsot blinds you, and aside from the
+acossianal piece of drift wood it is perfictly white. Small waves brush up to
+shore line making intrigging patterns. When you look to the west you meet with
+truely odd sight, a field filled with green grass as high as you're waist
+starts in a almost perfect strait line with the beach. Even farther off in the
+distance a large lumanious mountain glows with a purplish haze.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13762
+D2
+~
+~
+0 -1 13765
+D3
+~
+~
+0 -1 13763
+D7
+~
+~
+0 -1 13761
+D9
+~
+~
+0 -1 13764
+S
+#13767
+On Clemancy Lake~
+You can barrly control you're boat as you feel the creak sucking you in,
+the currents are unbelievably strong for a creak, even bits of the 
+reeds have been sucked in, making a sort of funnel shape. Northwest of
+here is a beach which has a small path leading up a hill, to a platu.
+The creak is sucking you westward to its opening, and the island awaits
+you to the northeast.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13768
+D1
+~
+~
+0 -1 13769
+D3
+~
+~
+0 -1 13774
+D6
+~
+~
+0 -1 13770
+D7
+~
+~
+0 -1 13773
+D8
+~
+~
+0 -1 13800
+S
+#13768
+On Clemancy Lake~
+The water here has a slightly pulling you southwest, torwards the creak
+which dives behind the reed walls. from here you can see what you think
+to be the end of the lake as the reed wall curves around to the east a
+way south of where you are. to the west is a small brown beach that which
+leads to a trail that appears togo to the top fo the platu, which is also
+west of you.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13757
+D1
+~
+~
+0 -1 13770
+D2
+~
+~
+0 -1 13767
+D3
+~
+~
+0 -1 13773
+D6
+~
+~
+0 -1 13756
+D7
+~
+~
+0 -1 13775
+D9
+~
+~
+0 -1 13774
+S
+#13769
+On Clemancy Lake~
+tho you do not feel that you're out of control, you can deffinatly feel the
+currents of the creak, which is more like a small river then a creak. As
+you begin to be pulled west towards the hole that the creak formed in the
+reed wall, you regain control, and spot a landing spot northwest a ways, 
+a beach is thare, and you think it might be good to get off the lake for
+a bit.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13770
+D1
+~
+~
+0 -1 13771
+D2
+~
+~
+0 -1 13800
+D3
+~
+~
+0 -1 13767
+D8
+~
+~
+0 -1 13799
+S
+#13770
+On Clemancy Lake~
+you are getting closer to the cliffs of the island to the east, which
+tower higher then the reed walls. A odd black sphere bobs up and down
+in the water with out any aparent entrences, it awaits examineation a
+bit northeast.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13756
+D1
+~
+~
+0 -1 13772
+D2
+~
+~
+0 -1 13769
+D3
+~
+~
+0 -1 13768
+D6
+~
+~
+0 -1 13758
+D7
+~
+~
+0 -1 13757
+D9
+~
+~
+0 -1 13767
+S
+#13771
+On Clemancy Lake~
+The cliffs stretch up out of the green water, and tower over you like a
+godly sentinal protecting the easternly island. Impermiabal, thare apears 
+no way to breach the cliffs of the island except maybe to the east where
+it most lower its self to the lake. southwest, a creak, has broken down
+the reed wall and rushes on southernly. A beach lay to the west, providing
+a path witch climbs up to a overlooking platu.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13772
+D2
+~
+~
+0 -1 13799
+D3
+~
+~
+0 -1 13769
+D9
+~
+~
+0 -1 13800
+S
+#13772
+On Clemancy Lake~
+The cliff walls tower over you making you feel insagnificant and small, they
+belittle you very existence just by exisiting them selves, you cant see
+anything to the east, but westly you can see a beach, that leads to a hudge.
+Way off in the north you can see part of the reed wall which surrounds
+the lake.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13758
+D2
+~
+~
+0 -1 13771
+D3
+~
+~
+0 -1 13770
+D7
+~
+~
+0 -1 13756
+S
+#13773
+A Muddy Beach~
+You're feet stick to the mud as you take a quick step out from you're boat
+after being on it for so long. The solid ground feels good, but its not
+quite solid, the deap brown mud is every where, and you wonder what type
+of dirt it is that makes it so adhesive. To the south the creak trickles
+away into somewhere or another, and dirrectly ahead of you to the west
+is the path that leads to the top of the platu which will give you a nice
+overlook of the entire lake.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 13775
+D1
+~
+~
+0 -1 13768
+D2
+~
+~
+0 -1 13774
+D3
+~
+~
+16777216 -1 13776
+D6
+~
+~
+0 -1 13757
+D8
+~
+~
+0 -1 13767
+S
+#13774
+an entrance to a large creak~
+The strong currents are ruffly pulling you in torwards the opening of the
+creak, you feel you have lost conrol of you're boat, as it gets sucked into
+the opening of the large creak, which now sucks you into it self.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13773
+D1
+~
+~
+0 -1 13767
+D6
+~
+~
+0 -1 13768
+S
+#13775
+Murky Brown Water~
+You are not really on water any more but rather lose mud, that makes moving
+very hard, for it sticks onto every thing making life difficult, the creak
+and the beach are both south of here, and the island to the east and a
+bit south, the platu which over looks the lake is looking much taller now.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13757
+D2
+~
+~
+0 -1 13773
+D6
+~
+~
+0 -1 13735
+D8
+~
+~
+0 -1 13768
+S
+#13776
+A Muddy Trail~
+The trail is one of the lessed kept things that you think you have ever
+been on. its not level, and the mud is horibal, and apears to be an all
+year round thing. You feet become caked with mud and you feel a good
+half a foot taller.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 13777
+D1
+~
+~
+0 -1 13773
+S
+#13777
+A Muddy Trail~
+The trail is one of the lessed kept things that you think you have ever
+been on. its not level, and the mud is horibal, and apears to be an all
+year round thing. You feet become caked with mud and you feel a good
+half a foot taller.
+~
+~
+0 0 2 0
+D0
+~
+~
+0 -1 13778
+D2
+~
+~
+0 -1 13776
+S
+#13778
+A Hillside Trail~
+You stand staring up at the plataeu and wonder, how hard could it realy be
+to climb. Though one part of you thinks that you should go for it. looking
+around at the rocks all over the place down here, you decide that it might
+be best if you walked down the hill and back to the lake.
+~
+~
+0 0 4 0
+D2
+~
+~
+0 -1 13777
+D4
+~
+~
+0 -1 13779
+S
+#13779
+A Muddy Cliff~
+You find your self in a interesting potision, hang on the side of the cliff
+you look down noticing how far down the ground is now. The relization that
+you are hangon on a mudy cliff and slowly falling down, makes you really
+wish that you hadnt gone this way. but you decide that you should move
+unless you what to join the rock on the ground.
+~
+~
+0 0 5 0
+D4
+~
+~
+65664 -1 13780
+D5
+~
+~
+0 -1 13778
+S
+#13780
+Clemancy's Look Out~
+Your on top of the world! well not really, but it feels like you are. You
+can see the whole of the lake, and much more a thick fogy forest stretches
+out in a southwestadly dirrection, and south you can see a inset marsh land.
+Dirrectly to the east is the hudge Clemancy lake, and even further east then
+that is a massive meanderring grasslands, the collide with a odd moutain
+range, far off in the horizan.
+~
+~
+0 0 5 0
+D5
+~
+~
+65664 -1 13779
+> speech_prog history~
+if ispc($n)
+say compiance
+mea $n A crackling voice comes fromt the screan saying, " If you are
+mea $n hearing this, then its obvious that i am not thare to tell you
+mea $n my self. So insted this will have to do. A long time ago my people
+mea $n the sea-elves, sent me out of our city, on an expedition to expand
+mea $n the length of our rule. It took many days of climb around, inside
+mea $n caves, day after day i travled, with out the sun, or any light
+mea $n except that of my torch, tell finally i stepped out of the caves
+mea $n and onto the beach below, what i saw is a sight that i shall never
+mea $n forget, the lake that you now stand above is the most beutifall thing
+mea $n i have ever seen. I stayed here for many years, building all that
+mea $n you can see on the lake, news of my stay attracked many a people
+mea $n including my good friend, zion, a human, who has help me to build
+mea $n much, including the device. After about ten years, the lake was
+mea $n hit with a devistating earthquake, that not only closed off the
+mea $n only way back to my people, but opened up a taribal place. On
+mea $n north east end of the lake a large den opened which is infested with
+mea $n a large monster, and her progen, which i have named Learra. soon
+mea $n enough, i shall go to fight her, and we shall see who comes up the
+mea $n victor."
+endif
+~
+> speech_prog p Lord Clemancy~
+if ispc($n)
+say Lord Clemancy's age is unknown, he was born in Mirline
+say He came to the lake, in a search for land.
+say he was killed 5 years ago, by Learra the lake monster.
+say His death shall be avenged.
+endif
+~
+> speech_prog p Lake Overview~
+mpecho the screan turns black and then flashs white, before a grey
+mpecho scanline begins to travel left to right, as it does so an image
+mpecho begins to apear. At first it hard to make out the you relize its a
+mpecho picture of the lake as if you were looking dirrectly above.
+mpecho  first thing that forms is the brown, reds, and greens of the
+mpecho  reed forest, with the side trails that wind around.
+mpecho then you take note of the monsters den on the top left of the
+mpecho screan. the lakes waters a smooth, and green, as the rap around
+mpecho every thing that would be on the water. Next you can see the
+mpecho greens statue, of the god Astier, forming before a back ball is
+mpecho diffined, and then the dark green trees, of the island with the
+mpecho cabin, and the pure wite sands of the eastern beach. The plataeu
+mpecho that you stand on, and even the path that heads south at the end of
+mpecho lake forms.
+~
+|
+S
+#13781
+Reed Road~
+The reeds very in colors, all sorts of light forestry coloring is about
+you, making for and intring ride, you can see the varies of reds and greens
+as the path meanders southernly, as well as northernly.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13708
+D9
+~
+~
+0 -1 13782
+S
+#13782
+Reed Road~
+The reeds very in colors, all sorts of light forestry coloring is about
+you, making for and intring ride, you can see the varies of reds and greens
+as the path meanders southernly, as well as northernly.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13783
+D6
+~
+~
+0 -1 13781
+S
+#13783
+Reed Road~
+The reeds very in colors, all sorts of light forestry coloring is about
+you, making for and intring ride, you can see the varies of reds and greens
+as the path meanders southernly, as well as northernly.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13782
+D2
+~
+~
+0 -1 13784
+S
+#13784
+Reed Road~
+The reeds very in colors, all sorts of light forestry coloring is about
+you, making for and intring ride, you can see the varies of reds and greens
+as the path meanders southernly, as well as northernly.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13783
+D9
+~
+~
+0 -1 13785
+S
+#13785
+Reed Road~
+The reeds very in colors, all sorts of light forestry coloring is about
+you, making for and intring ride, you can see the varies of reds and greens
+as the path meanders southernly, as well as northernly.
+~
+~
+0 0 6 0
+D6
+~
+~
+0 -1 13784
+D9
+~
+~
+0 -1 13786
+S
+#13786
+Reed Road~
+The reeds very in colors, all sorts of light forestry coloring is about
+you, making for and intring ride, you can see the varies of reds and greens
+as the path meanders southernly, as well as northernly.
+~
+~
+0 0 6 0
+D6
+~
+~
+0 -1 13785
+D9
+~
+~
+0 -1 13787
+S
+#13787
+A Dead End~
+Abruptly you path down color lane, ends in a almost perfect square room
+witht the only exit being the way you came, northeast. At first you wonder
+where the water goes, when it hits the room, untill you relize that though
+you can not move between the reeds, the water, it can.
+~
+~
+0 0 6 0
+D6
+~
+~
+0 -1 13786
+S
+#13788
+An Entrance To A Tunnel Of Reeds~
+The reeds most have been much taller at one point becuase now they bend
+ontop of eachother to make a small tunnel way. The reeds have all turned
+grey, and chills go up your back, as you hear a loud growl, and the water
+moves about villantly.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13710
+D8
+~
+~
+0 -1 13789
+S
+#13789
+A Reed Tunnel~
+The tunnel swivels about making it difficult for you to manuver. going left
+then right, and the water is ripling heavly. the dead grey reeds around
+you make for a crepy feeling, like the one you get when you enter a graveyard.
+~
+~
+0 0 6 0
+D2
+~
+~
+0 -1 13790
+D7
+~
+~
+0 -1 13788
+S
+#13790
+A Reed Tunnel~
+The tunnel swivels about making it difficult for you to manuver. going left
+then right, and the water is ripling heavly. the dead grey reeds around
+you make for a crepy feeling, like the one you get when you enter a graveyard.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13789
+D8
+~
+~
+0 -1 13791
+S
+#13791
+A Reed Tunnel~
+The tunnel swivels about making it difficult for you to manuver. going left
+then right, and the water is ripling heavly. the dead grey reeds around
+you make for a crepy feeling, like the one you get when you enter a graveyard.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13792
+D7
+~
+~
+0 -1 13790
+S
+#13792
+An Entrance To A Cave~
+The grey reeds circil around you, alowing litle light to enter into the
+area. To the north a huge entence to a cave opens up, half off it being
+under water, large stillagmights, bunch up through the ripping waters
+like sharp teeth, and you almost feel as if the cave would eat you. if
+it could.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13793
+D3
+~
+~
+0 -1 13791
+S
+#13793
+A Den~
+The cave, is not deap at all and after a litle ways in, you find you're
+self in a huge cavern, filled with water, you find you self twirling
+about in the carner, at first staring at the celling, untell you here
+a small splash, and the waters begin to move about, benieth you. You think
+you here a low growl sound and perhaps you can see some red eyes, coming
+from benieth the surface.
+~
+~
+0 0 7 0
+D2
+~
+~
+0 -1 13792
+S
+#13794
+On Clemancy Lake~
+You clunk stedily with the slight curents of the lakes waters, staring
+almost dumbly to the northest, where a blinding white light glares at you
+ invitingly even you wish you could be like the glowing white sands. But
+then again you wouldnt beable to look at thier beuty if you were one.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13764
+D3
+~
+~
+0 -1 13795
+D6
+~
+~
+0 -1 13765
+D9
+~
+~
+0 -1 13805
+S
+#13795
+On Clemancy Lake~
+You stand at the conor of the island to the north, and know that just
+around the cornor, will be the only way toget into the island. South west
+you can see a hole in the reed wall, that makes a sort of hallway heading
+in a southernly dirrection.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13794
+D2
+~
+~
+0 -1 13805
+D3
+~
+~
+0 -1 13796
+D9
+~
+~
+0 -1 13804
+S
+#13796
+On Clemancy Lake~
+You stand floating against the towering rock cliff walls, which you 
+know your never be able to scale..  To the south stretching both 
+eastward and westward along the shore is a wall of reeds.  To the 
+southwest you can see a gap in the wall, which you should be able to 
+pass through.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13795
+D2
+~
+~
+0 -1 13804
+D3
+~
+~
+0 -1 13797
+D8
+~
+~
+0 -1 13805
+D9
+~
+~
+0 -1 13803
+S
+#13797
+On Clemancy Lake~
+To all directions northward you see the tall rock walls of the island 
+cliffs. To the far east  a white sand beach shimmers in the distance..  
+To the south continuing east and west along the shore you can see a 
+wall of reeds.  Directly south is a break in the wall that reveals a path 
+to whatever lies southward.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13796
+D2
+~
+~
+0 -1 13803
+D3
+~
+~
+0 -1 13798
+D8
+~
+~
+0 -1 13804
+D9
+~
+~
+0 -1 13802
+S
+#13798
+On Clemancy Lake~
+To the northeasterly directions you can see the seemingly endless expanse 
+that is the lake.  It shimmers softly as you look at its serene surface.  To 
+the North you can see a small isle beyond the immediate waters.  As you 
+look south you can see a wall of reeds that goes for a ways to the east and 
+to the west.  To the southeast you can see a break in the wall.  To the east 
+and  west the shoreline continues somewhat parallel to the wall of reeds.
+~
+~
+0 0 6 0
+D1
+~
+~
+0 -1 13797
+D2
+~
+~
+0 -1 13802
+D3
+~
+~
+0 -1 13799
+D8
+~
+~
+0 -1 13803
+D9
+~
+~
+0 -1 13801
+S
+#13799
+On Clemancy Lake~
+As you stand in the corner of the lake you can see the vast green 
+water spreading as far as you can see to the northwest.  To the west 
+you can see a beautiful and majestic plateau over looking the lake.  
+To the south continuing eastward you can see a wall of reeds, tightly 
+bound together.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13771
+D1
+~
+~
+0 -1 13798
+D2
+~
+~
+0 -1 13801
+D3
+~
+~
+0 -1 13800
+D7
+~
+~
+0 -1 13769
+D8
+~
+~
+0 -1 13802
+S
+#13800
+On Clemancy Lake~
+You boat lightly bounces against the thick reeds, that make up the wall
+surrounding the lake, to the southeast you can see the lake island, a
+tall omnious thing, that looks rather scary to you. To the North you
+believe lays the way to a forest, and a ways west you can see a plataeu.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13769
+D1
+~
+~
+0 -1 13799
+D6
+~
+~
+0 -1 13771
+D7
+~
+~
+0 -1 13767
+D8
+~
+~
+0 -1 13801
+S
+#13801
+A Wall Of Reeds~
+The wall curvers around now to the east and continues to line the lake.
+the waters shallow a bit but you still feel you need you're boat. To the
+northeast you can see an island. and northwest a platue reaches up out
+of the ground.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13799
+D1
+~
+~
+0 -1 13802
+D6
+~
+~
+0 -1 13798
+D7
+~
+~
+0 -1 13800
+S
+#13802
+A Wall Of Reeds~
+The wall tower over you, in the shawlow waters that surround you now.
+To the east you think you see a break in the reeds before the wall coninues
+around the lake. west you can see a platue and north a small island sits,
+in the center of the lake.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13798
+D1
+~
+~
+0 -1 13803
+D3
+~
+~
+0 -1 13801
+D6
+~
+~
+0 -1 13797
+D7
+~
+~
+0 -1 13799
+S
+#13803
+Opening In The Wall~
+The reed wall opens up to the south, but continues east and eat. The break
+in the wall forms a hall wall heading down south, the ground is soft,
+and marshy, but after aways it dissapears in what can only be a cliff.
+and you cant see anything past that. To the north the island lumes and
+waits for something, or someone to breachs its high walls.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13797
+D1
+~
+~
+0 -1 13804
+D3
+~
+~
+0 -1 13802
+D6
+~
+~
+0 -1 13796
+D7
+~
+~
+0 -1 13798
+S
+#13804
+A Wall Of Reeds~
+You feel so miniscuel floating against the wall, all around you hudge
+cliffs or walls jut up out of the lake, to the north the island waits for
+you to attempt to breach its walls, westwardly you think you can see a
+break in the reed walls alowing for southernly passage. and far to the
+west a small platue raises above all else.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13796
+D1
+~
+~
+0 -1 13805
+D3
+~
+~
+0 -1 13803
+D6
+~
+~
+0 -1 13795
+D7
+~
+~
+0 -1 13797
+S
+#13805
+A Wall Of Reeds~
+You sit in a cornor of the wall which wonders west and northest, you can
+see the island, and believe tha a small beach may be on the east side
+of it. A bright blinding white light comes from the northeast.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 13795
+D3
+~
+~
+0 -1 13804
+D6
+~
+~
+0 -1 13794
+D7
+~
+~
+0 -1 13796
+S
+#13850
+A Submurged Cavern~
+Thick short sweaweed grows on the bootum of this gigantic cavern, filled
+with water. Small colorfull fish swim all about you, bumping against you
+every now and again. You can barly see the walls in the silt filled waters.
+You can see enough though to recgonize a silver ball floating in the middel
+of the cavern, and off to the east you can just make out a tunnel.
+~
+~
+0 5 8 0
+D1
+~
+~
+0 -1 13851
+S
+#13851
+A Underwater Tunnel~
+More fish swim here then any where you think you have ever seen. In and
+out of the short seaweed growing on the bottum of the cave, makine hypnotic
+paterns all around, silt and dust clouds form all over the place. They seem
+to almost be dancing for you. They consist of all the colors of the rambow
+and the bigger ones eat the smaller ones, its hard to tell but you think
+you can see the tunnel continue north east and east from where you float.
+~
+~
+0 1 8 0
+D1
+~
+~
+0 -1 13853
+D3
+~
+~
+0 -1 13850
+D6
+~
+~
+0 -1 13852
+S
+#13852
+A Underwater Tunnel~
+The slimey walls of the cave twist left and right, all around you, making it
+hard to move, effeciantly. The tunnel turns back on its self rather suddenly
+to the south. forcing you to use all of you're hands and feet to continue on.
+~
+~
+0 1 8 0
+D2
+~
+~
+0 -1 13853
+D9
+~
+~
+0 -1 13851
+S
+#13853
+A Underwater Cavern~
+Many tunnels conect up hear, making for a large cavern, with many exits
+going west, north, south, and east, tho many more tunnels conect into
+the slimey cavern, only thoughs four seem big enough for you to fit in.
+~
+~
+0 1 8 0
+D0
+~
+~
+0 -1 13852
+D1
+~
+~
+0 -1 13855
+D2
+~
+~
+0 -1 13854
+D3
+~
+~
+0 -1 13851
+S
+#13854
+A Air Hole~
+the tunnels swivels about to the northeast, but also a small opening has
+formed at the top of the cave, big enough for aound three people to fit
+thare heads through. as you look up you see mostly blackness, except for
+a tinny hole mucher higher then you could ever climb, that alows minimal
+light to breach the darkness of the cave.
+~
+~
+0 256 8 0
+D0
+~
+~
+0 -1 13853
+D6
+~
+~
+0 -1 13855
+S
+#13855
+Under a Beach~
+The tunnel opens up into a large cavern before twist around and continuing
+west, above you, you can see a large cavern that opens up, above the water
+line. and though you would love nothing more then to swim up and take a
+breather, nomater how much you try you find you can not. maybe its best
+to continue on for now.
+~
+~
+0 1 8 0
+D3
+~
+~
+0 -1 13853
+D9
+~
+~
+0 -1 13854
+S
+#0
+
+
+#RESETS
+M 1 13701 1 13701
+O 1 13705 1 13706
+M 1 13704 1 13723
+O 1 13701 1 13747
+O 1 13704 1 13780
+M 1 13704 2 13789
+M 1 13706 1 13752
+E 1 13709 1 16
+E 1 13710 1 3
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13707 9 13761
+M 1 13705 1 13793
+M 1 13702 1 13705
+M 1 13703 1 13787
+O 1 13708 1 13744
+O 1 13706 1 13744
+M 1 13708 2 13735
+M 1 13708 3 13732
+O 1 13703 1 13732
+M 1 13709 1 13755
+O 1 13715 1 13755
+O 1 13702 1 13738
+O 1 13750 1 13850
+M 1 13707 12 13746
+M 1 13707 12 13746
+M 1 13707 12 13746
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,89 @@
+#AREA   {PROTO} Temporary's area in progress~
+
+
+
+#VERSION 214
+#AUTHOR Temporary~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#12301
+mob~
+a newly created mob~
+Some god abandoned a newly created mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12400
+mob~
+a newly created mob~
+Some god abandoned a newly created mob here.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#12301
+obj~
+a newly created obj~
+Some god dropped a newly created obj here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12400
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#12301
+start~
+~
+~
+0 0 1 0
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

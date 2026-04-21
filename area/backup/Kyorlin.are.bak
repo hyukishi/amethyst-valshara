@@ -1,0 +1,848 @@
+#AREA   Valsharan Che'el~
+
+
+
+#VERSION 1
+#AUTHOR Kyorlin~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#HIGHECONOMY 0 0 0 0 0 -1
+
+#LOWECONOMY 0 0 0 0 0 -1
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#3000
+jade-spider-jilorbb~
+a jilorbb~
+A large jade spider stands guard over the entrance to the house.
+~
+~
+3 0 0 D
+20 0 0 100d2+200 3d5+3
+500 0
+8 8 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+103 3 0 0 1 1 0
+0 0 164 0 39307 0 0 0
+1 0
+T 0 500 0 0 0 -1
+#3001
+noble-drow-elite-cityguard-northern~
+An Elite Guard of the Northern Gate~
+A noble drow, dressed in Adamantite platemail, stands watch over the northern gate.
+~
+A tall drow holding one of the highest positions a male can hope to obtain
+within the city, stands guard in a largely cerimonial position. Although
+well trained in combat, if the city was ever attacked, he most likely would
+be called back to his house to aid in its defense should the defense of the
+city itself falter.
+~
+3 0 0 C
+100 0 0 1d10000+10000 5d5+15
+10000 0
+8 8 1
+18 13 13 13 13 13 13
+0 0 0 0 0
+36 3 0 0 1 1 15000
+0 0 253 0 0 0 160 524291
+T 0 10000 0 0 0 -1
+> greet_prog 100~
+vis
+~
+|
+#3002
+drow-commoner-young-male~
+a drow commoner~
+A common male drow wanders around in a haphazard fashion.
+~
+~
+1 0 -1000 C
+10 0 0 1d100+100 2d4+3
+1000 2500
+8 8 1
+15 13 13 13 13 13 13
+0 0 0 0 0
+36 3 0 0 3 2 4000
+0 0 255 0 0 0 128 0
+T 0 1000 0 0 0 -1
+#3003
+orc-cityguard-overseer~
+orc cityguard~
+an orc slave wanders by, looking for trouble.
+~
+Although little more than a glorified slave, this orc has proven his worth
+as a fighter within the gladiator pits and been allowed to patrol the 
+streets, as fodder should the city ever be invade. He is also responsible
+for keeping other slaves in line, and should he fail to do so, he may find
+himself on a one way trip to the abyss.
+~
+1 0 0 C
+15 0 0 150d1+150 3d4+4
+1000 15000
+8 8 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 3 0 0 0 0 4000
+0 0 255 0 0 0 160 0
+T 0 1000 0 0 0 -1
+#3004
+spider-small-red~
+a red spider~
+a small red spider scurries along the road.
+~
+Spiders, being the favored creatures of Lloth, roam freely in the city.
+It is said that causing harm to a spider can cause one to lose favor with
+Lloth, and this normally results in death, since your enemies will be 
+quick to take advantage of your weakness.
+~
+1 0 -1000 C
+8 0 0 2d25+100 2d3+3
+0 2500
+8 8 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+103 3 0 0 0 0 8000
+0 0 37 0 0 0 262145 0
+T 0 0 0 0 0 -1
+#3005
+spider-black-large~
+a large black spider~
+a large black spider passes you by as it scurries along its way.
+~
+A large black spider scurries by, unafraid of the inhabitants of the city.
+It knows well that any who would bring it harm would suffer an enternity 
+of pain should the priestess of the temple learn of it.
+~
+65537 0 -1000 C
+25 0 0 25d20+1000 3d5+4
+0 30000
+8 8 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+103 3 0 0 0 0 8000
+0 0 165 0 0 0 0 0
+T 0 0 0 0 0 -1
+#3006
+orc-slave-snaga~
+an orc slave~
+an orc slave sweeps the streets nearby.
+~
+~
+1 0 0 C
+7 0 0 3d40+80 3d4+5
+200 0
+8 8 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 3 0 0 0 0 2000
+0 0 255 0 0 0 0 0
+T 0 200 0 0 0 -1
+#3007
+commoner-mage-drow~
+a drow commoner~
+a common drow wanders carelessly down the street
+~
+~
+1 0 0 C
+12 0 0 1d2+150 2d3+2
+3000 0
+8 8 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+36 0 0 0 0 0 1000
+0 0 239 0 0 0 0 0
+T 0 3000 0 0 0 -1
+#3099
+final-mob~
+a newly created final-mob~
+Some god abandoned a newly created final-mob here.
+~
+~
+1 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+8 8 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 32 0 0 0 0 0
+T 0 0 0 0 0 -1
+#0
+
+
+#OBJECTS
+#3000
+platemail-adamantite-black~
+black adamantite platemail~
+A suit of fine adamantite platemail has been abandoned~
+~
+9 3 9
+40 40 0 0
+20 200000 50000
+A
+18 3
+A
+19 2
+#3001
+longsword-black-admantite~
+an adamantite longsword~
+A well crafted longsword of black adamantite is sticking out of the ground.~
+~
+5 3 8193
+12 5 6 1
+15 0 0
+A
+18 3
+A
+19 2
+#3002
+shield-black-adamantite-tower~
+an adamantite tower shield~
+A large black tower shield baring the emblem of a spider lies upon the ground~
+~
+9 3 513
+10 10 0 0
+5 20000 1000
+A
+18 3
+A
+19 2
+#3003
+helm-black-adamantite~
+an adamantite helm~
+A black admantite helm has been abandoned here~
+~
+9 3 17
+15 15 0 0
+5 25000 1000
+A
+18 1
+A
+19 1
+#3004
+piwafwi-cloak~
+a piwafwi~
+A large cloak lies in a pile before you.~
+~
+9 3 1029
+5 5 0 0
+3 30000 2500
+A
+26 2
+A
+18 2
+#3005
+leggings-adamantite-black~
+adamantite leggings~
+A pair of adamantite plate leggings has fallen to the ground~
+~
+9 3 33
+15 15 0 0
+15 25000 1500
+A
+18 2
+A
+19 1
+#3006
+boots-black-adamantite~
+black adamantite boots~
+A pair of boots made of adamantite has been abandoned~
+~
+9 3 65
+9 9 0 0
+4 20000 1000
+A
+18 2
+#3007
+commoner-longsword~
+a commoner's longsword~
+A well used mithril longsword has been left here~
+~
+5 0 8193
+5 4 3 3
+5 10000 500
+A
+18 2
+A
+19 1
+#3008
+tattered-piwafwi-cloak~
+a tattered piwafwi~
+An old and tattered piwafwi lies upon the ground~
+~
+9 0 1029
+3 2 0 0
+10 4000 490
+A
+18 2
+#3009
+shackle-slave-bracelet~
+a slave's shackle~
+a shackle bearing the symbol of the Melee Magthere lies upon the ground.~
+~
+9 0 4097
+5 5 0 0
+4 10000 2000
+E
+shackle slave bracelet~
+You see an iron bracelet that has a loop by which a chain can be attached.
+It is inscribed with the markings of the Melee Magthere, declaring the 
+bearer to belong to the Magthere and telling others that if he should die
+without cause the Melee may hold them responsible.
+~
+A
+18 1
+#3010
+short-sword-slave~
+a short sword~
+a short sword, bearing the markings of the Melee Magthere, lies in the dust.~
+~
+5 0 8192
+3 5 3 3
+1 2500 250
+A
+18 2
+A
+19 2
+#3011
+large-push-broom-pushbroom~
+a push-broom~
+a large pushbroom has been left here.~
+~
+5 0 24577
+2 5 2 8
+5 5000 500
+A
+18 1
+#3012
+commoner-shortsword~
+a commoner's shortsword~
+A well used short mithril blade has been left here.~
+~
+5 0 8193
+5 3 3 3
+3 8000 400
+A
+18 2
+#3099
+final object~
+a newly created final object~
+Some god dropped a newly created final object here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#3000
+Near the Melee Magthere~
+You are near the center of the cavern within which Valsharan Che'el exists.
+To the south, you see a large square dominated by a statue of the Spider
+Queen. To the north you can see the gates of the Melee Magthere. Although
+the gates almost always stand open, it is rumored that in dire emergencies
+the masters of the Magthere will order them closed.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3001
+D2
+~
+~
+0 -1 3022
+S
+#3001
+Before the Gates of the Melee Magthere~
+Encircled in wreathing faerie fire, the gates of the Melee Magthere stand
+open before you. Magthere itself seems to reach almost to the top of
+the cavern and is covered with carvings of battles long forgotten and
+weaponmasters long past. The gates themselves bare the image of a great
+spider, who, perhaps if the gates would close would come to life to stand
+guard over the Magthere.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3002
+D2
+~
+~
+0 -1 3000
+S
+#3002
+Near Melee Magthere~
+You are upon Colbauth Oloth near the Melee Magthere. The sounds of the 
+students of the Magthere dualing can be heard well. The dark grey pathway
+continues to the north and south, and is one of the central roads of
+Valsharan Che'el.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3003
+D2
+~
+~
+0 -1 3001
+S
+#3003
+Lil Colbauth Oloth~
+You are wandering the path of darkness within the glory that is Valsharan,
+first city of the underdark. Although the drow of other cities would claim
+otherwise, the elders claim that Valsharan was founded during the first
+years of the drow coming to the underdark. No drow now living remembers
+those events, and Lloth is, as always, silent about such matters, but it
+is, to the drow of Valsharan, a matter of honor that their city shall 
+always remain great in the eyes of outsiders.
+~
+0 4 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 3002
+D6
+~
+~
+0 -1 3004
+S
+#3004
+Lil Colbauth Oloth~
+You are wandering along the Colbauth Oloth near the spires of a large 
+house to the north. To the south, you can see Melee Magthere enshrouded
+in a faint glow of faerie fire. Along the roadside, sharp cliffs rise,
+angled in such a way to make climbing impossible. Even if it wasn't, being
+off the street so close to a noble house could cause your life to come
+to a very abrupt end.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3005
+D9
+~
+~
+0 -1 3003
+S
+#3005
+Near a Noble House~
+You find yourself near a noble house, which one you do not know, nor
+are you in any hurry to find out right now. High above you to the west, you
+see drow archers manning its parapets, and while they tolerate you wandering
+upon the street, you know that it would be best not to draw their attention.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3006
+D2
+~
+~
+0 -1 3004
+S
+#3006
+Before a Noble House~
+To the west, the spires of a noble compound rise high, one of the eight
+ruling families dwells within. To the north and south the path of darkness
+continues through the drow cavern, and you feel a strong urge to move along
+before someone in the nearby house decides to notice your presence and do
+something about it.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3007
+D2
+~
+~
+0 -1 3005
+D3
+~
+~
+0 -1 3023
+S
+#3007
+Near a Noble House~
+High above you to the west, several drow peer down at you suspiciously, 
+watching you traverse the path of darkness near their home. The quiet of
+the underdark seeps into your soul. To the north you see another noble house,
+probably a rival to the one to the west given the proximity.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3008
+D2
+~
+~
+0 -1 3006
+S
+#3008
+Wandering Upon Lil Colbauth Oloth~
+You are wandering along the Colbauth Oloth or pathway of darkness as it
+is more commonly called. To the southwest and to the northeast, you see two
+of the great stalagtite mounds that form the ruling houses of the city.
+Of the noble houses, only eight sit upon the ruling council, one for each
+eg of the goddess.
+~
+0 4 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 3007
+D7
+~
+~
+0 -1 3009
+S
+#3009
+Lil Colbauth Oloth~
+As you travel along the Colbauth Oloth, you notice several smaller structures
+off to the east, apparently the pieces of a long fallen house whose name
+has been long since forgotten. To the distant north you see a noble compound
+of one of the ruling houses. Slaves and common drow scurry by, attempting
+to escape the notice of the nobles.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3010
+D8
+~
+~
+0 -1 3008
+S
+#3010
+Lil Colbauth Oloth~
+As you stroll through the cavern of Valshara, you notice the glow of 
+faerie fire illuminating the path from above. The ceiling of the cavern
+is covered with stagamites, each belonging to a noble house. Most of them
+are outlined in the purple glow of faerie fire giving an almost otherwordly
+quality to the city.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3011
+D2
+~
+~
+0 -1 3009
+S
+#3011
+Near a Noble House~
+You are upon the Colbauth D'Oloth near a large noble compound. Several
+drow eye you suspiciously as you wander past, trying to discern if you are
+a threat to them. The upper portions of the structure are outlined in 
+faerie fire and illuminate the path before you in its soft purple glow.
+You notice several rocks nearby stained with blood, but little else. By
+order of house Haenoth, the city streets are kept clean, and many slaves
+constantly patrol, looking for rubish that has been cast aside.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3012
+D2
+~
+~
+0 -1 3010
+S
+#3012
+Before a Noble House~
+Directly to the east you see a large collection of stalagmites and stalagtites
+connected together by a series of bridges and illuminated with the dull
+purple glow of faerie fire. This entire compound is surrounded by a very high
+wall of polished obsidian. At its top, there are several posts between which
+are stretched spider webs, rumored to be of a nearly unbreakable strength.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3013
+D1
+~
+~
+0 -1 3024
+D2
+~
+~
+0 -1 3011
+S
+#3013
+Near a Noble House~
+You are near a noble compound within the city of Valshara. You notice several
+drow peering down at you suspiciously from atop an obsidian battlement.
+The compound is illumitated from above by the pale purple glow of faerie fire,
+causing strange shadows to be cast upon the ground all around you. To the
+southeast, you see the entrance to the compound. To the north lies the 
+northern city gates.
+~
+0 4 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 3012
+D6
+~
+~
+0 -1 3014
+S
+#3014
+Upon Lil Colbauth Oloth~
+As you travel along Colbauth Oloth, you see several strangely shaped stones 
+that give off a faint green glow in the light of the faerie fire along 
+the path. Apparently covered with some sort of fungus as is typical of
+many surfaces of the underdark, these stones serve as markers beyond which
+to the north, there are no more noble houses.  You can barely see the tops
+of the guard towers around the stalgmites between you and the gates. To
+the south you see a large noble compound.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3015
+D9
+~
+~
+0 -1 3013
+S
+#3015
+An Elven Crucifix~
+You have reached a point that marks the limit of a long ago failed invasion
+by the surface races. Several mumified elvish corpses are tied to spikes
+driven deep into a boulder. Called the elven crucifix by the drow, it is
+an example of the evil surface races and a symbol to the drow of what should
+happen to them should they ever desert Lloth.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3016
+D2
+~
+~
+0 -1 3014
+S
+#3016
+Upon Lil Colbauth Oloth~
+Although still some distance from the northern gate, the defenses of the
+city are becoming apparent, and the road is surrounded by low, hollowed
+out stagtites from which in times of war, the drow can sit in securely and
+fire their crossbows at the invaders without fear of direct attack.
+~
+0 4 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 3015
+D7
+~
+~
+0 -1 3017
+S
+#3017
+Traversing Lil Colbauth Oloth~
+As you wind your way along the Colbauth, you notice several strange cracks in
+the floor. Yet another defense for the city, in times of war, the floor
+underneath you can be removed dropping the invaders into vats of acid stored
+below. To the north, the northern gate is well illuminated with faerie fire
+and several defenders can be seen as small figures atop the towers.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3018
+D8
+~
+~
+0 -1 3016
+S
+#3018
+Near the Northern Gate~
+You are at the inner gate of Valshara. To the north of you, the path continues
+to the guard towers and the outer gate. If Valshara were to be invaded, both
+gates would be closed, as would the entrances to the towers, making the
+city almost inpregnable. To the south, the cavern glows brightly in the light
+of purple faerie fire and the distant spires of the northern noble houses
+can be seen clearly.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3019
+D2
+~
+~
+0 -1 3017
+S
+#3019
+Before the Northern Guard Towers~
+To the east and west of you, two great towers carved in the shape of giant
+fangs rise. Several walkways encircle the towers, giving the defending drow
+platforms from which to attack invaders. Most races of the underdark know
+better than to attact the attention of the entire city however, and would
+rather ambush patrols and lone drow than attack the city itself.  Only the
+svirfneblin could pose a significant threat, and even they would be hard
+pressed to fight the thousands of drow within Valshara, even in an open
+field, let alone when the drow have several fortresses to which they can 
+retreat.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3020
+D2
+~
+~
+0 -1 3018
+S
+#3020
+Under The Northern Gate~
+You are underneath the outer portion of the northern gate. Above you, a large
+porticullis is suspended upon a stone pathway between the two towers, ready
+to be dropped at a moments notice. To the north of you, the tunnels of the
+Northern Wilderness stretch before you. To the south, the city of Valshara
+awaits.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3021
+D2
+~
+~
+0 -1 3019
+S
+#3021
+Entering the Wilds~
+To the north of you, the wild untamed tunnels of the underdark stretch
+away. Currently progress is blocked by a large pile of boulders dropped
+upon the path, but several slaves are hard at work to clear the tunnel.
+To the south of you stands the northern gate of Valsharan Che'el.
+~
+0 4 1 0 0 0 0 1000 0 0
+D2
+~
+~
+0 -1 3020
+S
+#3022
+At a Road Block~
+You have reached the southernmost point that you can currently travel upon
+the path of darkness. Several drow guards of the first house stand behind
+a large barricade to the south. To the north, the road continues past 
+the Melee Magthere.
+~
+0 4 1 0 0 0 0 1000 0 0
+D0
+~
+~
+0 -1 3000
+S
+#3023
+At the Gates of a Noble House~
+You stand before the gates of a large noble compound. Above you guards 
+scurry to and fro, attempting to determine if you approach alone or are
+part of a larger force. Intrigue and subtrifuge are a way of life for the
+drow, and it is often said that you must be careful not to spend too much
+time watching your back, or you will find yourself attacked from the front.
+The doors of the house are bolted shut, due to the recent chaos within the
+city, and entry at this time is not possible.
+~
+0 4 1 0 0 0 0 1000 0 0
+D1
+~
+~
+0 -1 3006
+S
+#3024
+At the Gates of a Noble House~
+You are before the gates of a large, well defended noble house. There are
+two guard towers on either side of the gates, whose entrance must be inside
+the compound. The gates of the compound are sealed shut for the time 
+being.
+~
+0 4 1 0 0 0 0 1000 0 0
+D3
+~
+~
+0 -1 3012
+S
+#3099
+FINAL ROOM~
+~
+0 4 1 0 0 0 0 1000 0 0
+S
+#0
+
+
+#RESETS
+M 1 3000 1 3023
+M 1 3001 1 3020
+E 1 3000 1 5
+E 1 3001 1 16
+E 1 3002 1 11
+E 1 3003 1 6
+E 1 3004 1 12
+E 1 3005 1 7
+E 1 3006 1 8
+M 1 3002 1 3022
+E 1 3007 1 16
+E 1 3008 1 12
+M 1 3003 1 3001
+E 1 3009 1 14
+E 1 3009 1 15
+E 1 3010 1 16
+M 1 3004 1 3003
+M 1 3005 1 3005
+M 1 3006 1 3008
+E 1 3011 1 16
+M 1 3007 1 3011
+E 1 3012 1 16
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  3001 spec_guard
+M  3006 spec_janitor
+M  3007 spec_cast_mage
+S
+
+
+#$

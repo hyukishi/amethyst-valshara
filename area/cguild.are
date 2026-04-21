@@ -1,0 +1,1472 @@
+#AREA   The Clerics Guild~
+
+
+
+#VERSION 200
+#AUTHOR Dakini~
+
+#RANGES
+1 100 1 100
+$
+
+#RESETMSG The bell tolls for the clergy to gather.~
+
+#FLAGS
+0
+
+#ECONOMY 0 120041191
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#251
+healer cleric apprentice~
+The apprentice of Amadeus~
+The apprentice of Amadeus stands here helping his fellow guild members.
+~
+~
+83886083 33554472 0 C
+50 0 0 10d10+4500 0d0+0
+0 0
+112 112 1
+13 20 20 13 13 13 13
+0 0 0 0 0
+14 1 0 0 262144 1 0
+0 0 0 0 0 0 0 0
+> rand_prog 50~
+c 'restore mana' $r
+c 'restore mana' $r
+smile
+mpat 3 c heal
+~
+|
+#252
+hunchback warrior keeper~
+Quasi Moto~
+Quasi Moto is the keeper of the Bell Tower.
+~
+~
+131075 170 1000 C
+35 0 -110 5d5+3000 5d5+20
+35 0
+112 112 0
+18 10 9 17 16 2 10
+0 0 0 0 0
+51 3 0 0 1 1 2
+12 5 653 1048576 0 0 241 3
+#253
+bishop cleric~
+Bishop Nikolaus the First~
+Bishop Nikolaus reclines on his throne.
+~
+~
+3 40 0 C
+80 0 -250 100d10+10000 0d0+0
+100 0
+106 112 1
+18 22 20 16 16 16 13
+0 0 0 0 0
+14 1 0 0 1 1 0
+0 0 15 0 3584 0 276824112 82
+#254
+sister aurora~
+Sister Aurora~
+Sister Aurora patiently tends to her customers.
+~
+~
+3 40 1000 C
+80 0 0 0d0+0 0d0+0
+233 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 2
+50 50 2047 0 2048 0 170131456 10310
+> greet_prog 100~
+if ispc($n)
+mea $n _red Sister Aurora says, How are you $n?
+else
+say hello, $I.
+endif
+~
+|
+#255
+Gregor Mendel~
+Gregor Mendel~
+Gregor the magic shopkeeper, will sell you what you need.
+~
+~
+67108867 0 0 C
+33 0 0 0d0+0 100d100+1000
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> greet_prog 100~
+if ispc($n)
+mea $n _red Can't you see that I'm busy with my work, $n!
+else What do you want, $I?
+endif
+~
+|
+#256
+armorer weaponary Ardagh~
+Ardagh the Dealer~
+Ardagh stands here waiting to sell his weapons and armor.
+~
+~
+16777219 33320 0 C
+40 0 -201 8d4+3000 3d6+1000
+150 0
+112 112 1
+16 13 13 18 16 13 13
+0 0 0 0 0
+2 22 0 0 1 1 3
+32 9 2047 0 2082 0 64 9
+> greet_prog 100~
+if ispc($n)
+mea $n _red Ardagh says, Greetings $n!
+else say hello, $I
+endif
+~
+|
+#257
+guard cathedral~
+grand cathedral guard~
+A Grand Cathedral Guard protects against the unworthy.
+~
+~
+3 552 0 C
+50 0 -150 1d165+2000 2d8+18
+73 0
+112 112 1
+19 13 13 16 21 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 2047 0 1050624 0 96 1
+> greet_prog 100~
+if ispc($n)
+mea $n _red Halt, who goes there?  Only clerics may enter here!
+else
+say You must leave now, before the fury of the gods is invoked!
+endif
+~
+|
+#258
+Brother Ezekiel~
+Brother Ezekiel~
+Brother Ezekiel is to busy to talk with the likes of you.
+~
+~
+16842817 524288 0 C
+12 0 -20 0d0+0 0d0+0
+13 0
+112 112 1
+13 18 18 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+1 0 23 0 2048 0 33554448 8
+#259
+Deacon~
+Deacon Alden~
+Deacon Alden is here setting up for the holy service.
+~
+~
+3 40 0 C
+21 0 -75 0d0+0 0d0+0
+21 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+3 7 783 99 2048 0 100663312 3
+#0
+
+
+#OBJECTS
+#251
+pool~
+a pool of holy water~
+A small pool shimmers in the light.~
+~
+17 0 0
+50 50 0 0
+1 0 0
+#252
+bell~
+a bell~
+A large brass bell hangs within the Bell Tower.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+#253
+Altar Table~
+an altar table~
+A beautiful wooden table sits upon the altar.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+#254
+rocking chair~
+a rocking chair~
+A comfortable rocking chair is waiting to be sat in.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#255
+tabernacle~
+a tabernacle~
+A golden chest sits beneath the Ciborium.~
+~
+15 524288 0
+1000 15 256 12
+500 0 0
+#256
+golden key~
+a gold key~
+A gold key glistens in the light.~
+~
+18 -1610080224 1
+255 0 0 0
+1 10000 5000
+#257
+necklace beads~
+Prayer Beads~
+A long string of prayer beads are piled neatly here.~
+~
+41 25551168&14 5
+0 40 39 1
+3 350 100
+A
+12 75
+A
+25 3
+A
+26 8192
+A
+17 -20
+A
+13 35
+#258
+book prayer~
+a prayer book~
+A hard bound book quoting the scripture lies here.~
+~
+35 -2122201792&14 16385
+0 0 0 0
+3 367 100
+A
+3 3
+A
+4 3
+A
+18 2
+A
+19 2
+#259
+throne chair~
+a bishop's throne~
+A throne constructed of an odd beautiful wood sits here.~
+~
+12 1 0
+0 0 0 0
+1 0 0
+#260
+bracers sleeves mithril~
+The Keeper's Bracers~
+A pair of mithril bracers look extremely light, but strong.~
+~
+9 25806176&14 257
+0 0 12 0
+7 218 109
+A
+1 1
+A
+2 2
+A
+18 4
+A
+19 5
+A
+48 40
+A
+13 45
+A
+12 45
+A
+24 -5
+#261
+hat helmet biretta~
+A Biretta~
+A square cap with four upright projections lies here.~
+~
+9 25288960&14 17 8
+0 0 12 0
+4 250 130
+A
+18 5
+A
+19 3
+A
+26 8192
+A
+26 268435456
+A
+12 25
+#262
+hat mitre~
+A Mitre~
+A pristine white bishop's hat is crumpled here.~
+~
+9 25281792 17 8
+0 0 12 0
+4 150 1230
+A
+18 18
+A
+19 13
+A
+12 150
+A
+26 128
+A
+26 524288
+A
+13 85
+#263
+staff chalice~
+The Chalice of Tassilo~
+An egg shaped cup set in precious stones rests here.~
+~
+4 1073741824 16385
+95 0 0 -1
+1 150 15
+'hellfire'
+#264
+staff Ruler~
+a ruler~
+A ruler lies here waiting to smack some knuckles.~
+~
+5 532802 8193
+12 0 0 8
+1 80 8
+#265
+potion mystical~
+A mystical potion~
+A flask of mysterious liquid sits here.~
+~
+10 25280513 1
+95 -1 68 147
+1 230 23
+'eldritch sphere' 'ethereal funnel' 'shadowform'
+#266
+potion fiery~
+a fiery potion~
+A fiery hot potion gurgles and bubbles.~
+~
+10 25280512&14 1
+20 -1 -1 -1
+1 13 1
+'create fire' 'NONE' 'NONE'
+#267
+potion divine protection~
+potion divine~
+A potion with an eerie glow sits here.~
+~
+10 25280512&14 1
+50 -1 60 159
+1 112 11
+'demonskin' 'dragonskin' 'stone skin'
+#268
+potion empowerment~
+a potion of empowerment~
+A flask emits a very strong pungent smell.~
+~
+10 25280514&14 1
+25 -1 152 166
+1 103 10
+'kindred strength' 'slink' 'trollish vigor'
+#270
+mithril mace~
+a mithril mace~
+A mace made of mithril glistens in the light.~
+~
+5 25813321&14 8193
+12 0 0 7
+8 1545 2000
+A
+1 2
+A
+18 6
+A
+19 6
+A
+5 1
+#271
+platinum mace~
+A platinum mace~
+A mace made of a steel-grey metal awaits battle.~
+~
+5 25813322&14 8193
+12 0 0 7
+8 2340 2500
+A
+1 3
+A
+18 18
+A
+19 12
+A
+5 3
+A
+12 100
+A
+24 -4
+A
+13 50
+A
+23 -6
+#272
+staff shepard hook~
+a shepard's hook~
+A hooked staff glows with an angelic aura.~
+~
+5 25814337&14 8193
+12 0 0 8
+6 270 65
+A
+1 2
+A
+5 1
+A
+18 6
+A
+19 4
+#274
+hammer peace~
+Hammer of Peace~
+A hammer looks very peaceful lying on the ground.~
+~
+5 25814345&14 8193
+12 0 0 18
+4 350 55
+A
+1 2
+A
+5 2
+A
+13 75
+A
+18 8
+A
+19 8
+A
+24 -5
+#275
+medallion necklace~
+Medallion of Faith~
+A golden medallion set with precious gems lies before you.~
+~
+9 25814337&14 5
+0 0 12 0
+1 789 78
+A
+12 200
+A
+18 9
+A
+19 5
+A
+53 75
+A
+26 128
+A
+13 50
+A
+26 67108864
+A
+24 -8
+#276
+glasses safety~
+safety glasses~
+A pair of safety glasses have been left behind carelessly.~
+~
+9 25288960&14 131073
+0 0 0 0
+1 179 17
+A
+26 4194304
+A
+3 1
+A
+13 25
+A
+18 2
+A
+19 2
+A
+5 1
+#277
+armor scale mail~
+Scale Mail~
+A suit of scalely looking armor has beend left here.~
+~
+9 25813248&14 9 8
+0 0 0 0
+1 122 12
+A
+18 2
+A
+19 1
+A
+13 10
+A
+12 10
+A
+48 20
+#278
+shoes clergy~
+clergy shoes~
+A pair of black lambskin shoes rest here.~
+~
+9 25288960&14 65
+0 0 0 0
+1 97 9
+A
+40 40
+A
+2 2
+A
+22 -5
+A
+13 40
+#279
+gloves leather studded~
+leather studded gloves~
+Some god dropped a newly created gloves leather studded here.~
+~
+9 25288960&14 129 8
+1 0 0 0
+1 125 14
+A
+18 4
+A
+19 2
+A
+1 1
+A
+53 30
+#280
+brown robes vestments~
+Plain brown vestments~
+A neatly folded brown robe has been carefully placed here.~
+~
+9 256 9 1
+0 0 0 0
+1 21 2
+A
+4 1
+A
+17 -15
+#281
+spear guard~
+a guard's spear~
+Some god dropped a newly created spear guard here.~
+~
+5 525312 8193
+12 0 0 19
+1 50 5
+A
+1 1
+A
+18 4
+A
+19 2
+#282
+armor chainmail~
+a guard's chainmail~
+A suit of glowing chains lies here.~
+~
+9 525665 9 12
+0 0 0 0
+1 250 25
+A
+13 80
+A
+5 2
+A
+18 8
+A
+19 8
+A
+50 50
+A
+53 20
+A
+17 -25
+A
+12 80
+#283
+shovel~
+a shovel~
+A compact spading shovel rests on the ground.~
+~
+59 25288704&14 16385
+0 0 0 0
+2 88 8
+A
+62 50
+A
+44 50
+#284
+jug wine drink~
+A jug of Wine~
+A jug of table wine has been left here.~
+~
+17 0 1
+30 15 2 0
+1 20 2
+#285
+bread~
+Some wafer bread~
+Bread used during the holy service has been left here.~
+~
+19 0 1
+25 0 0 0
+1 2 0
+#286
+earring earbob~
+Silver Earbobs~
+A pair of silvery loops has been left here.~
+~
+9 17416448&14 65537
+0 0 0 0
+1 44 4
+A
+25 2
+A
+4 1
+A
+24 -2
+A
+12 20
+A
+17 -5
+#287
+gloves~
+Silk Gloves~
+A pair of silky gloves has been discarded here.~
+~
+9 25542656 129 1
+0 0 0 0
+1 32 3
+A
+18 1
+A
+19 1
+A
+53 20
+#288
+ring~
+Ring of Hope~
+A dulled metal band has been forgotten here.~
+~
+9 59360512 3
+0 0 0 0
+1 68 6
+A
+12 15
+A
+5 1
+A
+28 8
+A
+17 -10
+#289
+cap skull~
+A skull cap~
+A plain brown cap lies crumpled here.~
+~
+9 25542656 17 1
+1 0 0 0
+1 25 2
+A
+3 1
+A
+4 1
+A
+17 -5
+#290
+board-cleric-guild~
+Cleric Board~
+The Cleric Bulletin Board~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#291
+final object~
+a newly created final object~
+Some god dropped a newly created final object here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#251
+Entrance to the Cleric Guild~
+You are standing before the Grand Cathedral.  The largest of
+three doorways looms in front of you.  Just to the northwest you
+can see the Bell Tower that could easily exceed one hundred feet tall.
+While you continue to gaze upward you could swear you just saw a hunched
+over man nod at you and then he quickly disappears.
+~
+0 3145728 1 2
+D0
+~
+door~
+1 -1 252
+D2
+~
+~
+0 -1 573
+S
+#252
+Cathedral Foyer~
+As you enter the foyer you are amazed at the size of cathedral.  There
+is a Candelabrum on your left and right accenting the beautiful 
+architecture.  Hundreds of murals depicting the great holy struggle
+can be seen on the ceiling high above.
+~
+0 3146888 0 50
+D0
+~
+~
+0 -1 254
+D2
+~
+~
+33 -1 251
+D3
+~
+~
+2048 -1 266
+D6
+~
+~
+0 -1 255
+D7
+~
+~
+0 -1 253
+S
+#253
+Left Aisle~
+You are standing in the southwestern corner of the church.  High above 
+you are hundreds of ornately designed pipes for the pipe organ.  You 
+look around for the location of the organ, but fail to locate it. 
+~
+0 3146760 0 1
+D0
+~
+~
+0 -1 256
+D1
+~
+~
+0 -1 254
+D8
+~
+~
+0 -1 252
+S
+#254
+Main Aisle~
+As you leave the foyer you are over powered with the true beauty
+of the cathedral and fall to your knees to pay homage to your
+great diety.  As you return to your feet you notice that stain glass 
+windows line the east and west walls.  To the north you can see the altar
+and to the south is the enterance area to the cathedral.
+~
+0 3146888 0 1
+D0
+~
+~
+0 -1 257
+D1
+~
+~
+0 -1 255
+D2
+~
+~
+0 -1 252
+D3
+~
+~
+0 -1 253
+S
+#255
+Left Aisle~
+As you walk your footsteps echo throughout the cathedral.  It feels 
+like you are stompping along, maybe you should try to walk a little 
+softer.  To the north you catch a glimps of small temple with a medium
+chest positioned beneath it. To the southwest is the foyer, 
+to the north is the front of the church and to the west is the 
+main aisle.
+~
+0 3146888 0 0
+D0
+~
+~
+0 -1 258
+D3
+~
+~
+0 -1 254
+D9
+~
+~
+0 -1 252
+S
+#256
+Left Aisle - Approching Bishop~
+Just to the north of you is the Bishop's Throne.  The throne is covered
+with precious gems and even with just candle light, the throne sparkles 
+like a clear night's sky.  A wrought iron rail prevents to from traveling
+any further north.  You have heard that the Bishop is one of the wisest
+teachers this Guild has ever known.  If you are lucky you might have the
+opportunity to speak with him.
+~
+0 3146888 0 0
+D1
+~
+~
+0 -1 257
+D2
+~
+~
+0 -1 253
+S
+#257
+Approaching the Altar~
+You are now in front of the altar of the Grand Cathedral.  In front
+of you are the steps leading up to the altar.  You feel the need
+to genuflect before proceeding onward.
+~
+0 3146888 0 80
+D1
+~
+~
+0 -1 258
+D2
+~
+~
+0 -1 254
+D3
+~
+~
+0 -1 256
+D4
+~
+~
+0 -1 260
+D6
+~
+~
+0 -1 261
+D7
+~
+~
+0 -1 259
+S
+#258
+Approaching the Ciborium~
+Standing here you have a great view of the Ciborium.  There is a wrought
+iron rail that prevents anyone from walking right up it.  You notice 
+that there is a place to kneel and say a little prayer and reflect on 
+the days activities.
+~
+0 3145736 0 0
+D2
+~
+~
+0 -1 255
+D3
+~
+~
+0 -1 257
+S
+#259
+Bishop's Throne~
+The Bishop's Throne glows with a holy and magical aura.  It was
+rumored that the wood for the throne is the same wood Noah used
+for the Ark. The bishop sits on his throne throughout the day to
+teach all those willing to ask the right questions.  Do you know
+what you want to ask?
+~
+0 3145736 0 77
+D3
+~
+~
+0 -1 265
+D8
+~
+~
+0 -1 257
+S
+#260
+At the Altar~
+You are standing on the Altar.  This is where the Eucharist is 
+consecrated.  Currently there is no holy service underway, otherwise
+it frowned upon to interrupt the mass.  You might even lose your favor 
+status.  To the north is where the altar servers wait to serve the
+Bishop during mass.
+~
+0 3146760 0 107
+D0
+~
+~
+0 -1 262
+D5
+~
+~
+0 -1 257
+S
+#261
+The Ciborium~
+The Ciborium is a small temple with four pillars under which 
+the tabernacle is placed.  The tabernacle is the vessel that is used to 
+store holy items.  It is locked all the time with the exception that
+during the holy ceremony it is unlocked.  To the southwest you notice that
+there is a monastery attached to the cathedral.  To the west is the altar.
+~
+0 3146888 0 0
+D1
+~
+~
+0 -1 269
+D9
+~
+~
+0 -1 257
+S
+#262
+Behind the Alter~
+This is a small room.  All the items needed during mass are kept here.
+You can see stacks of pristine white pieces of cloth, highly polished
+goblets, and other items.  As you are standing here you notice a cold
+damp draft that sends a shiver down your spine.  Where could this draft
+be coming from?
+~
+0 3145736 0 2
+D2
+~
+~
+0 -1 260
+D5
+~
+~
+2048 -1 263
+S
+#263
+An Eerie Stairwell~
+As you step down from behind the altar you are surprised to find
+a stairwell.  You try to steady yourself as your eyes adjust to 
+the dimly lit stairwell.  Once your eyes are adjusted you notice that
+there is a faint flicker of light at the bottom of the steps.
+~
+0 19924232 13 0
+D4
+~
+~
+1 -1 262
+D5
+~
+~
+0 -1 264
+S
+#264
+The Bishop's Study~
+As you step down into the Bishop's Study you are amazed that this is 
+where the Bishop goes to do his studying.  You see hundreds of books
+lined up perfectly upon the shelves.  The gentle flicker of the candles
+dances upon the walls.  All your worries and concerns seem to just
+magically fade away.  Now you understand why the Bishop comes here.
+~
+0 3145736 13 21
+D4
+~
+~
+1 -1 263
+S
+#265
+The Baptistry~
+People come to the Baptistery as part of the first step in becoming a
+member of the holy sect.  You notice that the room has been built around 
+a small pool located in the center of the room.  
+~
+0 3146760 0 81
+D1
+~
+~
+1 -1 259
+S
+#266
+Entering the Bell Tower~
+Upon entering the base of the Bell Tower you see a thick layer of 
+dust and cobwebs covering everything.  As you scan the room you can 
+barely notice footprints on the stairs.  It looks like someone has 
+tried to erase the prints and because of this you can not determine
+the size of the owner.  You should probably be on guard.
+~
+0 3145737 0 0
+D1
+~
+~
+0 -1 252
+D4
+~
+~
+0 -1 267
+S
+#267
+Somewhere in the Bell Tower~
+As you continue to climb the spiral staircase you can begin to feel a
+waft of fresh air on your face.  As you look behind you, you realize
+you cannot see a thing.  You wonder what being could work in these 
+conditions.  Coming this far and the thought of fresh air makes you 
+push onward.
+~
+0 3145737 0 0
+D4
+~
+~
+0 -1 268
+D5
+~
+~
+0 -1 266
+S
+#268
+Atop the Bell Tower~
+As you get to the top of the Bell Tower you draw in a deep breath of 
+fresh air.  It feels great to be able to have your full senses back.
+You look around to see that the tower has been neglected from years
+of upkeep.  However, the bell looks like it is still used regularly.  
+~
+0 3145728 1 0
+D5
+~
+~
+0 -1 267
+S
+#269
+Corridor to the Monastery~
+The followers of the Grand Cathedral grew so large that a monastery
+was constructed for them.  This corridor connects the two buildings 
+together.  As you look down the corridor to the southeast you see
+a few of the monks in deep conversation.    
+~
+0 3146888 0 0
+D3
+~
+~
+0 -1 261
+D8
+~
+~
+0 -1 270
+S
+#270
+Entrance to the Augustinian Monastery~
+The entrance to the monastery is very plain, nothing like the Grand
+Cathedral.  The monestary is only one level with a covered walkway
+completely surrounding the main structure.  Your choice of 
+exits are east, south or northwest.
+~
+0 3145736 0 41
+D1
+~
+~
+0 -1 271
+D2
+~
+~
+0 -1 274
+D7
+~
+~
+0 -1 269
+S
+#271
+North Corridor~
+As you walk around the monastery you notice how quite and peaceful
+everything is.  Northward you can see the Grand Cathedrals cemetery.
+There are hundreds, maybe thousands of tombstones.  That must be
+the place they buried all the people who lost there lives fighting in 
+in the Great Holy Struggle. To the west and east continues the corridor
+and to the south is The Shrine.
+~
+0 3145736 0 40
+D1
+~
+~
+0 -1 272
+D2
+~
+~
+0 -1 273
+D3
+~
+~
+0 -1 270
+D8
+~
+~
+33554432 -1 276
+S
+#272
+Northeast Corner~
+This is the northeast corner of the monastery.  Even with the heavy
+iron fencing you can still see the tombstones to the north and
+northwest.  You were told that the magic shop was located somewhere
+in this area.  Where could it be?
+~
+0 3145736 0 40
+D2
+~
+~
+0 -1 277
+D3
+~
+~
+0 -1 271
+D9
+~
+~
+133120 -1 276
+S
+#273
+The Shrine~
+As you enter the Shrine you are engulfed with the strong smell of 
+burning incense.  The room is filled with hundreds of burning candles.
+At first you thought it was because of the burning candles that
+leant the golden hue to the room, but as you look closer you 
+notice the the walls and ceiling are made of gold.  Obviously the
+monastery has been very successful to be able to afford such niceties.
+~
+0 3146888 0 100
+D0
+~
+~
+0 -1 271
+S
+#274
+West Corridor~
+You continue along the outer corridor. To the west you can see the 
+the exterior of the cathedral.  Once again something catches your eye
+and you take another look at the Bell Tower.  You could swear you are 
+being watched.
+~
+0 3145736 0 41
+D0
+~
+~
+0 -1 270
+D1
+~
+~
+0 -1 275
+D2
+~
+~
+0 -1 280
+S
+#275
+Chant Room~
+Upon entering the Chant Room you notice 20 to 30 Augustinian Monks
+lined up in perfect rows with their hands clasped together.
+The monks don't acknowledge you and continue to repeat "Amadeus is our
+Guild Leader", in a rhythmical and insistent manner.  You can see a sign
+hung over the doorway.
+~
+0 3687432 0 15
+D3
+~
+~
+0 -1 274
+E
+sign~
+Welcome to the Chant Room.
+ 
+You are wondering why you would want to come and chant here?  Well it's to
+help gain favor so that extra equipment maybe left here.  With that said, 
+this is the Clerics donation room.  Please leave any extra equipment you
+don't want (preferbily usefull eq) and take what ever eq you want.
+Thanks,
+- The Guild Leader
+~
+> rand_prog 30~
+mpe _blu A feeling of fulfillment overcomes you.
+~
+|
+S
+#276
+Magik Shop~
+When you enter the shop you are amazed to see that it looks more like
+a greenhouse then anything else.  As you continue to look around you 
+notice potions and other items on shelves lining the walls.  You notice 
+a monk carefully working with pea plants.  Pea plants?  Why would a monk
+be interested in pea plants?  If you can get his attention maybe you can 
+find out.
+~
+0 3145736 0 50
+D6
+~
+~
+264192 -1 272
+E
+sign~
+Welcome to the Magik Shop
+ 
+Store hours are 8am to 5pm
+ 
+~
+> rand_prog 30~
+mpecho _lbl Gregor talks with his plants as he works.
+~
+|
+S
+#277
+East Corridor~
+You are walking along the southeast corridor.  The smell of a charcoal
+fire gives away that there is a blacksmith near by.  You have heard that
+the Augustinian Monastery makes some of the finest weapons and
+armor that a cleric can buy.  To the west you see a sign that says
+"Weapons and Armor sold here".
+~
+0 3145736 0 40
+D0
+~
+~
+0 -1 272
+D2
+~
+~
+0 -1 282
+D3
+~
+~
+0 -1 278
+D7
+~
+~
+33554432 -1 276
+S
+#278
+Armor and Weapons Dealer~
+You think to yourself, ah this is more like it.  All the armor and 
+weapons here are made with clerics in mind.  Items are a tad bit 
+pricey but what could you expect for custom made gear.
+~
+0 3145736 0 51
+D1
+~
+~
+0 -1 277
+E
+sign~
+Welcome to The Armor and Weapons Shop.
+ 
+Store hours are from 5 am until 11 pm.  Thank You for shopping at Ardagh's.
+~
+S
+#279
+General Store~
+As you enter the General Store you notice this used to be just an old
+storage room.  However, as the monastery grew a store was needed to 
+supply the monks and other holy figures with general provisions.  
+~
+0 3145736 0 76
+D1
+~
+~
+2051 -1 284
+D9
+~
+~
+0 -1 280
+E
+sign~
+Welcome to the General Store. You will find here some additional items
+to aid you on your journey.
+ 
+Store hours are from 8am until 2am.
+~
+S
+#280
+Southwest Corner~
+You are in the south-west corner of the monastery.  From  here you
+can see the front portion of the church and the Bell Tower looks 
+even larger than you remember.  To the northeast you see a sign
+over the doorway that says "General Store".
+~
+0 3145736 0 40
+D0
+~
+~
+0 -1 274
+D1
+~
+~
+0 -1 281
+D6
+~
+~
+0 -1 279
+S
+#281
+South Corridor~
+You are standing at the southern most point of the monastery.  You can
+hear many sounds around you.  To the east and north you can hear the
+clanging of metal.  To the west and northeast you hear a couple of monks
+talking about the holy mystery and how one can become more divine.
+~
+0 3145736 0 40
+D1
+~
+~
+0 -1 282
+D3
+~
+~
+0 -1 280
+S
+#282
+Southeast Corner~
+This part of the corridor is lined along the outside with trellises
+covered with grapevines lush with grapes.  These must be the grapes 
+the monks use to make their wine with.
+~
+0 3145736 0 40
+D0
+~
+~
+0 -1 277
+D3
+~
+~
+0 -1 281
+S
+#283
+Magik Store Room~
+~
+0 3145732 1 0
+S
+#284
+Store Room~
+To your surprise you able to get past the shopkeeper and into
+her store room.  It appears that the store and this room were
+originally all one room.  There are shelves that line walls 
+holding the surplus inventory that is sold up front.  It appears 
+that the store must be very busy because there is little dust on
+anything.  You wonder how long you could stay back here before 
+the shopkeeper would find you, you probably shouldn't wait
+to find out!
+~
+0 1048601 0 1
+D3
+~
+~
+35 -1 279
+S
+#0
+
+
+#RESETS
+D 0 252 2 0
+O 1 253 1 260
+D 0 263 4 0
+O 1 254 1 264
+O 1 256 1 264
+D 0 264 4 0
+O 1 251 1 265
+D 0 265 1 0
+M 1 252 1 268
+E 1 260 1 10
+O 1 252 1 268
+M 1 251 1 273
+O 1 255 1 261
+P 0 263 1 0
+M 1 255 1 276
+G 1 265 1
+G 1 275 1
+G 1 266 1
+G 1 267 1
+G 1 268 1
+M 1 256 1 278
+G 1 271 1
+G 1 278 1
+G 1 276 1
+G 1 274 1
+G 1 270 1
+G 1 272 1
+G 1 279 1
+G 1 261 1
+G 1 277 1
+M 1 257 2 251
+E 1 281 1 16
+E 1 282 1 5
+M 1 257 2 251
+E 1 281 1 16
+E 1 282 1 5
+D 0 251 0 0
+M 1 258 1 277
+E 1 280 1 5
+E 1 289 1 6
+E 1 287 1 9
+M 1 253 1 259
+E 1 262 1 6
+O 1 259 1 259
+M 1 254 1 279
+G 1 37 1
+G 1 36 1
+G 1 258 1
+G 1 257 1
+E 1 264 1 16
+G 1 283 1
+G 1 284 1
+G 1 285 1
+O 1 288 1 284
+M 1 259 1 262
+E 1 286 1 19
+O 0 290 1 270
+S
+
+
+#SHOPS
+ 254    0  0  0  0  0   120  90         6  2    ; Sister Aurora
+ 255    0  2 10  0  0   120  50         8 17    ; Gregor Mendel
+ 256    0  9  4  5  0   120  50         5 23    ; Ardagh the Dealer
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  251 spec_cast_adept
+S
+
+
+#$

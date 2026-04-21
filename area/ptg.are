@@ -1,0 +1,2826 @@
+#AREA   Cathedral Ruins (please fix me already!!!)~
+
+
+
+#VERSION 200
+#AUTHOR God~
+
+#RANGES
+10 20 10 115
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 1250040
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#10901
+Attendant~
+the attendant~
+An attendant stands here to assist newcomers to the training grounds.
+~
+You see the attendant of the Plains Training Grounds standing here.  His
+job is to inform newcomers to the grounds of what there is to do here in
+the labyrinth.
+If you say the word "instructions" to him he will explain to you how things
+work here.
+~
+1073741827 0 0 C
+30 0 0 4000d1+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 0 0
+#10902
+dog attendants attendant's~
+the attendant's dog~
+The Attendant's dog sits idly next to it's master, it watches you suspiciously.
+~
+Sitting next to the attendant is this rather large, mean looking dog.  It
+wears a spiked colar around it's neck, and though seems to be resting is
+obviously keeping a close watch on you.  Better not try to get too close.
+~
+1073741827 0 0 C
+18 0 0 2000d1+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+30 8 0 0 512 512 0
+10 0 0 0 2048 0 1 0
+> act_prog p rears back and slaps you cruelly for your stupidity.  OUCH!~
+kill $n
+~
+> act_prog p pets you.~
+growl $n
+~
+> act_prog p growls at you.~
+stand
+growl $n
+mpforce attendant 'The dog doesn't like strangers, leave it alone.
+~
+|
+#10903
+walking mysterious flame~
+a walking flame~
+A mysterious flame is buring here.
+~
+~
+16777217 0 0 C
+10 0 0 15d5+180 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+85 8 0 0 8192 8192 0
+9 9 0 0 0 0 0 512
+#10904
+trained fighter~
+a trained fighter~
+A trained fighter waits here to do battle.
+~
+~
+1 0 0 C
+13 0 0 0d0+0 0d0+0
+3 0
+107 107 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+9 12 0 0 0 0 0 1
+#10905
+young younger vampire~
+a vampire~
+A younger vampire is here.
+~
+~
+33 546 -1000 C
+11 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+5 16 0 0 1 1 0
+12 8 0 0 0 0 1 0
+#10906
+red slime~
+a red slime~
+A small, red slime lays on the ground here.
+~
+~
+16777219 0 -100 C
+15 0 0 25d5+400 0d0+0
+0 0
+110 110 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+61 8 0 0 8192 8192 0
+7 3 0 0 0 0 0 0
+#10907
+blue slime~
+a blue slime~
+A blue slime crawls it's way across the room here.
+~
+~
+1 0 -100 C
+11 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+61 8 0 0 8192 8192 0
+15 5 0 0 2 0 0 8
+#10908
+floating eye eyeball~
+a floating eyeball~
+A floating eyeball takes notice of you looking at it.
+~
+~
+1 6292008 -100 C
+13 0 0 1d5+200 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+89 1 0 0 8193 8192 0
+0 2 0 0 0 0 3145728 2
+#10909
+bee~
+a bee~
+You heed caution upon noticing a huge bee flying near you.
+~
+~
+1 524800 0 C
+9 0 0 10d2+50 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+25 8 0 0 256 256 0
+5 2 0 0 0 0 8 0
+#10910
+hornet~
+a hornet~
+A mean looking hornet buzzes here to attack.
+~
+~
+33 524800 0 C
+9 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 257 256 0
+9 5 0 0 0 256 8 0
+#10911
+queen bee~
+the Queen Bee~
+You see the Queen Bee flying around here.
+~
+The Queen Bee buzzes around the room here, laying more
+eggs to hatch more of the variations of bees.  You now
+realize where the swarms have been coming from, and grip
+your weapon as you realize that you must put a stop to it.
+~
+35 524840 0 C
+25 0 0 50d5+2000 1d10+10
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+25 512 0 0 65536 65536 0
+15 0 0 0 2048 256 8 2
+> rand_prog 5~
+if mobinarea(10909) < 11
+An egg from the Queen Bee hatches, producing a standard bee!
+mpmload 10909
+endif
+~
+> fight_prog 5~
+mpecho The Queen Bee summons a bee from one of the local combs to assist in the fight!
+mpmload 10910
+~
+> death_prog 10~
+mpechoat $n Upon death, you grab the queen's mighty stinger and tear it from her body.
+mpechoaround $n Upon killing the queen, $n grabs ahold of the stinger and with a swift pull tears it completely from her body.
+mpoload 10919 20
+~
+|
+#10912
+fallen spirit~
+the fallen spirit~
+A spirit of a fallen mage wanders here to avenge it's death.
+~
+Translucent and without any real form, a simple spirit of a fallen
+mage seeks lay itself to rest.
+~
+3 524840 0 C
+5 0 0 75d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+84 1 0 0 8192 8192 0
+5 5 0 0 0 0 33554432 128
+> death_prog 100~
+mpechoat $n _blu The fallen spirit says 'I will not cease...'
+mpgoto 11288
+~
+|
+#10913
+man eating plant~
+a man-eating plant~
+A giant plant is here, it looks different from other plants though...
+~
+~
+35 32 -100 C
+14 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+93 8 0 0 8192 8192 0
+16 16 0 0 0 0 0 0
+> fight_prog 20~
+mpechoat 0.$n A man-eating plant raises up one of it's tentacle-like vines and brings it down with a harsh blow to yourself.
+mpechoaround 0.$n A man-eating plant raises up one of it's tentacle-like vines, and brings it down on $n.  Ouch.
+mpdamage 0.$n 50
+~
+|
+#10914
+poisonous flower~
+a poisonous flower~
+A poisonous flower attached to the far wall is pulsating.
+~
+~
+4131 32 -100 C
+13 0 0 200d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+92 8 0 0 8192 8192 0
+0 4 0 0 0 0 262144 0
+> fight_prog 20~
+mpechoat 0.$n A poisonous flower begins to throb, then releases some kind of acidic/poison substance, which burns you as it comes into contact with you.
+mpechoaround 0.$n A poisonous flower begins to throb, then releases a toxin of some sort, hitting $n.  You begin to see the flesh on $n bubble where it hit...
+mpdamage 0.$n 25
+~
+|
+#10915
+thorny plant~
+a thorny plant~
+A thorny plant grows out of the wall here, snapping at you as you pass by.
+~
+This plant has risen out of the side of the wall here, and attempts to attack
+you from it's place.  It's surface is covered in sharp thorns and could be
+deadly if you're not careful.
+~
+35 32 -100 C
+10 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+92 8 0 0 8193 8192 2
+0 4 0 0 0 0 0 0
+#10916
+zombie dead~
+a zombie~
+The walking dead wanders through the halls here.
+~
+~
+33 0 -500 C
+10 0 0 10d2+180 6d4+0
+0 0
+105 105 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 8 0 0 8192 8192 0
+0 3 261 0 2104832 1 1241518080 0
+> fight_prog 20~
+mpecho _blu A zombie utters the words 'vjdfiuuutkl'
+mpecho A corpse ascends out of the wall, and begins to move!
+mpmload 10916
+~
+> rand_prog 1~
+groan
+~
+|
+#10917
+zombie dragon~
+the zombie dragon~
+A large undead dragon is here, chewing at one of it's appendages.
+~
+An actual dragon which was kept in a small, dirty holding pen during majority
+of it's mortal life, it, along with most everything else down here, has
+somehow managed to live beyond it's death.  It sits here picking at it's
+rotting skin and scales in a trance-like state of being.
+~
+35 552 -1000 C
+25 0 0 6d14+1100 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 16 0 0 2048 2048 2
+9 8 0 0 2048 0 268447750 0
+#10918
+zombie lion~
+the zombie lion~
+A walking corpse of a lion limps around here.
+~
+~
+35 0 -300 C
+8 0 0 5d10+95 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 8 0 0 8192 8192 0
+0 0 0 0 0 0 4098 0
+> death_prog 30~
+mpecho The zombie lion slumps over, dead, then manages to collect itself and stands back up!
+mpmload 10918
+mpgoto 11288
+~
+|
+#10919
+maggot maggots~
+a maggot~
+A small maggot is crawling around here.
+~
+~
+65569 0 0 C
+0 0 0 100d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+33 8 0 0 256 256 0
+0 0 0 0 0 0 0 0
+> fight_prog 100~
+if mobinroom(10920) < 9
+mpmload 10920
+endif
+~
+|
+#10920
+maggot maggots~
+a maggot~
+A small maggot is crawling around here.
+~
+~
+65569 0 0 C
+0 0 0 100d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+33 8 0 0 256 256 0
+0 0 0 0 0 0 0 0
+> fight_prog 10~
+if mobinroom(10920) < 9
+mpmload 10920
+endif
+~
+|
+#10921
+moleman man~
+the moleman~
+A moleman paces back and forth here, examining the dirt walls of the tunnel.
+~
+An elderly-looking mole moves about in the shadows of the tunnel,
+concentrating on the dynamics of what is apparently his work, these
+underground tunnels.  He's very stout, and has a tiny spear scaled
+down to his size on the ground next to him.  In his hand he holds a
+dim lantern, for extra sight even though he appears to be able to
+see in the dark, as you can tell by his glances at you here, which
+seem to be unkindly ones.
+~
+16777219 4194856 -100 C
+31 0 0 90d3+1200 5d5+10
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+76 4 0 0 512 1 3
+0 0 0 0 0 0 514 2
+> all_greet_prog 100~
+'Halt, whoever you are turn back around, you don't have my permission to make use of my tunnels.  I didn't dig these out just so people like you can be making your way back and forth through them, afterall.  Now off with you, go away.
+~
+> fight_prog 100~
+wield spear
+~
+> fight_prog 40~
+mpasound You hear a distant explosion from somewhere down the tunnel!
+mpechoat $n The moleman triggers an unforseen mine in the dirt beneath your fee
+, which causes severe damage...  The moleman takes advantage of the dust in you
+ eyes to make his move...
+mpechoaround $n You watch in horror as the moleman triggers some unforeseen min
+ in the dirt below $n's feet, as it explodes...
+mpecho _red **** KABOOOM *****
+mpdamage $n 100
+gouge $n
+disarm $n
+mpasound You hear a distant explosion from somewhere down the tunnel!
+mpechoat $n The moleman triggers an unforseen mine in the dirt beneath your feet, which causes severe damage...  The moleman takes advantage of the dust in your eyes to make his move...
+mpechoaround $n You watch in horror as the moleman triggers some unforeseen mine in the dirt below $n's feet, as it explodes...
+mpecho _red **** KABOOOM *****
+mpdamage $n 100
+gouge $n
+disarm $n
+~
+|
+#10922
+possessed tree~
+the possessed tree~
+The tree here comes to life, possessed by something evil.
+~
+~
+18874403 544 0 C
+20 0 0 2d100+800 5d5+7
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+92 8 0 0 8192 8192 0
+0 5 0 0 0 0 2097152 0
+> death_prog 100~
+mpgoto 11288
+~
+> fight_prog 10~
+mpechoat $n The possessed tree wraps a tentacle around your leg, and gives a hard tug..
+trip $n
+~
+|
+#10923
+zombie groundskeeper~
+the groundskeeper~
+The living corpse of the groundskeeper continues his duty even beyond death...
+~
+~
+83951681 0 -1000 C
+8 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 512 0 0 8192 8192 0
+0 8 0 0 0 0 0 0
+> entry_prog 100~
+c animate corpse
+~
+|
+#10924
+bat~
+bat~
+A bat risen from it's state of death wanders here.
+~
+~
+1 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 8 0 0 128 128 0
+0 0 0 0 0 0 0 0
+#10925
+young woman~
+a young woman~
+A young woman is standing here, staring off into space.
+~
+~
+3 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 8 0 0 8192 8192 0
+0 0 0 0 0 0 0 0
+> greet_prog 10~
+'help me...I need release...
+cry
+~
+|
+#10926
+caretaker bee~
+a caretaker bee~
+A bee is here tending to the young with food from storage.
+~
+This is a worker bee, somehow through nature these seemingly unthinking
+creatures build a society, and this among others does the job of
+raising the unhatched and newly born bees.  Should it catch you around
+the young it will most likely be furious.
+~
+1073741859 524800 0 C
+20 0 0 5d10+500 5d5+10
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+25 8 0 0 256 256 2
+0 0 32768 0 2048 0 8 2
+> fight_prog 20~
+mpecho The bee begins to become overly angry, flying and attacking in a berserk manner.
+mprestore self 50
+mpdamage $n 20
+if rand(50)
+mpechoat $n _red Ouch!  The bee sticks it's knife-long stinger into you leg, causing you to stumble in pain.
+else
+mpechoat $n _red Ouch!  The bee stabs your arm with it's knife-long stinger, causing your arm to bleed.
+endif
+if ovnumroom(17) < 1
+mpoload 17
+endif
+~
+> fight_prog 5~
+mpechoat $n _red OUCH!  The bee stabs you in the abdomin with it's large stinger...  You begin to bleed heavily...
+mpoload 17
+mpdamage $n 100
+~
+|
+#10927
+bee guard~
+a guard bee~
+A guard bee is posted here in the queen's room.
+~
+~
+35 524800 0 C
+13 0 0 0d0+0 1d5+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+25 8 0 0 256 256 0
+0 0 32768 0 0 256 8 2
+#10928
+swarm bees~
+a swarm of bees~
+A swarm of bees buzz angrily around.
+~
+~
+35 524840 0 C
+4 0 0 10d10+20 1d1+1
+0 0
+112 112 0
+14 13 13 16 11 13 15
+0 0 0 0 0
+25 8 0 0 256 256 0
+0 0 32781 0 0 0 8 0
+#11000
+gith~
+Puff~
+Puff the Fractal Dragon is here, contemplating a higher reality.
+~
+~
+3 4194856 1000 C
+0 20 -30 5d10+30550 4d10+200
+10000 1000
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+31 0 0 0 0 0 0
+0 0 0 0 3156992 0 2 3
+> speech_prog test~
+say triggered by (name):	$n
+say triggered by (name&title): 	$N
+say triggerer is (he,she,it):	$e
+say triggerer is (him,her,it):	$m
+say triggerer is (his,hers,its):$s
+say random char (name):		$r
+say random char (name&title or short): 	$R
+say random char  (he,she,it):	$J
+say random char (him,her,it):	$L
+say random char (his,hers,its):	$K
+~
+> speech_prog test2~
+say firstname of obj:	 	$i
+say short_desc/title of obj: 	$I
+say he/she/it of obj:	 	$j
+say him/her/it of obj:	 	$k
+say his/hers/its of obj:	$l
+say firstname of victim: 	$t
+say short_desc/title of victim:	$T
+say he/she/it of victim: 	$E
+say him/her/it of victim: 	$M
+say his/hers/its of victim:	$S
+~
+> rand_prog 1~
+chat Vvortex is my hero!
+~
+> rand_prog 1~
+chat I'm the real implementor, you know.
+~
+> rand_prog 1~
+ask How'd all these fish get up here?
+~
+> rand_prog 1~
+chat Haven't I seen you on Temple?
+~
+> rand_prog 1~
+war So, wanna neck?
+~
+> rand_prog 1~
+chat Bad news.  Termites.
+~
+> rand_prog 1~
+war I'll be back
+~
+> rand_prog 1~
+ask Aren't wombats so cute?
+~
+> rand_prog 1~
+chat This mud is too silly!
+~
+> rand_prog 1~
+yell If the mayor is in a room alone,
+yell Does he say 'Good morning citizens.'?
+~
+> rand_prog 1~
+war MTV... get off the air!
+~
+> rand_prog 1~
+chat RESOLVED:  The future's so bright, I gotta wear shades!
+~
+> rand_prog 1~
+chat SAVE!  I'm running out of cute things to say!
+~
+> rand_prog 1~
+chat If you can hear this, thank a tree
+~
+> rand_prog 1~
+war Now this really pisses me off to no end.
+~
+> rand_prog 1~
+chat Rule the universe from beyond the grave.
+~
+> rand_prog 1~
+chat Attention all planets of the Solar Federation!
+chat We have assumed control.
+~
+> rand_prog 1~
+newbiechat May the Force be with you... Always.
+~
+> rand_prog 1~
+chat Quick!  Reverse the polarity of the neutron flow!
+~
+> rand_prog 1~
+newbiechat Eddies in the space time continuum.
+~
+> rand_prog 1~
+avtalk Shh...  I'm beta testing.  I need complete silence!
+~
+> rand_prog 1~
+newbiechat Anyone want a Black Onyx ring??
+~
+> rand_prog 1~
+avtalk Ack! Someone purge me quick!
+~
+> rand_prog 1~
+chat What is the greatest joy?
+~
+> rand_prog 1~
+chat Where are we going?
+~
+> rand_prog 1~
+mpat 13301 yell If it wasn't for my horse, I wouldn't have spent that extra year in college.
+~
+> rand_prog 1~
+war I sleep on a bed of meat.
+~
+> rand_prog 1~
+newbiechat SPOON!
+~
+> rand_prog 1~
+chat Dogs are the superior race.
+~
+> rand_prog 1~
+shout We have three water turtles and one box turtle, nothing like your dirty minds could think up.
+~
+> rand_prog 1~
+chat I have cabbage patch kids disease.
+~
+> rand_prog 1~
+chat Meat has calcium.
+~
+> rand_prog 1~
+chat My shoes are made of butter.
+~
+> rand_prog 1~
+chat Free Kevin, just pay shipping and handling!
+~
+|
+#0
+
+
+#OBJECTS
+#10901
+moss~
+some moss~
+A patch of moss is growing in the corner of the room here.~
+~
+32 0 1
+0 1 0 0
+1 0 0
+#10902
+skull~
+a skull~
+Some unfortunate person's skull remains here.~
+~
+13 0 1
+0 0 0 0
+1 0 0
+E
+skull~
+It's pretty badly damaged, seems whoever this skull belonged to
+took a pretty good blow to the head.  You can't tell what kind
+of race the person may have been by it, but you do feel a
+little bad to be in possession of it.  Perhaps you could give
+it a proper burial.
+~
+> get_prog 100~
+mpechoat 0.$n _red As you pick up the skull, a series of unintelligable words flows through your mind...it must be some kind of curse!
+mpmload 10912
+mpforce spirit kill $n
+~
+|
+#10903
+spiked collar~
+a metal spiked collar~
+A collar with metal spikes on it.~
+~
+9 0 5
+0 0 0 0
+1 300 30
+E
+'spiked' 'collar'~
+This collar is something of a basic piece of armor equipment, but probably
+would hold a bit of damage inflicting abilities due to the large metal
+spikes that are attached to it.
+~
+A
+19 1
+#10904
+scimitar~
+a scimitar~
+A large scimitar has been left here.~
+~
+5 524288 8193
+12 0 0 3
+1 600 60
+#10905
+burnt burned chest~
+a burnt chest~
+A burnt chest is sitting here, now collecting dust.~
+~
+15 0 0
+13 5 0 5
+1 0 0
+#10907
+dirty lantern~
+a dirty lantern~
+A dirty lantern is here, flickering out.~
+~
+1 0 16385
+0 0 100 1000
+1 0 0
+#10908
+corpse bat~
+undead bat~
+The decaying corpse of a bat is laying here.~
+~
+23 0 0
+0 0 0 0
+1 -10924 -1092
+#10909
+miner's jacket~
+a miner's jacket~
+A dirty brown jacket has been left here.~
+~
+9 0 9
+2 2 0 0
+1 2 0
+#10910
+tiny spear~
+a tiny spear~
+Someone dropped a small spear here.~
+~
+5 0 8193
+10 0 0 19
+3 8 0
+E
+'tiny' 'spear'~
+This spear has been built for a person of shorter stature, making it only
+about 4 feet long.  It has a simple arrow-head tied to one end of it, and
+looks to be very hand-made.
+~
+> wear_prog 100~
+if race($n) == mammal
+or race($n) == Dwarf
+or race($n) == Halfling
+or race($n) == Pixie
+else
+mpechoat 0.$n _blu You are forbidden to use a tiny spear.
+mpforce 0.$n remove tiny spear
+endif
+~
+|
+#10911
+corpse young woman~
+young woman~
+The rotting corpse of a young woman is laying here.~
+~
+23 0 0
+0 0 0 0
+1 -10925 -1092
+#10912
+silver cape~
+a flowing silver cape~
+A glittering silver cape has been dropped here.~
+~
+9 1 1025 1
+3 3 0 0
+1 20 2
+A
+25 1
+#10913
+corpse bee~
+the corpse of a dead bee~
+A corpse of a bee is laying here.~
+~
+23 0 0
+0 0 0 0
+1 0 0
+#10914
+corpse bee~
+the corpse of a dead bee~
+A mangled corpse of a bee is here.~
+~
+23 0 0
+0 0 0 0
+1 0 0
+#10915
+bones~
+one of the bones~
+An only partially-complete pile of bones are on the ground here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+> get_prog 100~
+mpechoat $n Wait!  That's not a very honorable thing to do with someone's remains...
+mpforce $n drop bones
+~
+|
+#10916
+silver hilted shortsword~
+a silver-hilted shortsword~
+A nice silver-hilted shortsword was tossed away.~
+~
+5 540672 8193
+12 0 0 1
+9 10 1
+A
+19 3
+A
+18 2
+#10917
+iron studded leather tunic~
+an iron studded leather tunic~
+Someone has thrown away a perfectly good leather tunic.~
+~
+9 0 9 2
+0 0 0 0
+1 0 0
+A
+17 2
+#10918
+drain fangs~
+the drain fangs~
+A set of vampire's teeth have been left here.~
+~
+5 17023488&6 8193
+12 1 1 10
+1 0 0
+E
+'drain' 'fang' 'fangs'~
+These peculiar fangs are obviously made of evil...  they possess some
+unforseen power that they grant only to a vampire who uses them.
+~
+A
+30 114
+#10919
+stinger~
+a stinger~
+A large insect's stinger lays on the ground.~
+~
+5 0 8193
+0 7 4 2
+1 0 0
+E
+'stinger'~
+This stinger came from a living insect of some sort, a very large one
+since this weapon is the size of a medium-sized dagger.  Very thin and
+smooth but with an absoultly sharp point it would make a deadly weapon
+for anyone.
+~
+A
+19 4
+A
+18 6
+A
+2 1
+A
+32 5
+#10920
+backguard~
+a slightly burned backguard~
+A slightly burned piece of equipment lays here.~
+~
+9 524288 524289
+4 4 0 0
+10 30 3
+A
+27 1
+#11000
+stone rod~
+a stone rod~
+Someone dropped a heavy stone rod here.~
+~
+12 1073741824 16385
+0 0 0 0
+15 0 0
+> wear_prog 100~
+if inroom($n) == 6
+if ispassage($n) == 5
+mpat $n mpechoat $n time to close it!
+mpat $n mpforce $n remove stone rod
+endif
+else
+mpat $n mpechoat $n time to OPEN it!
+mpat $n mpforce $n remove stone rod
+endif
+~
+|
+#0
+
+
+#ROOMS
+#10901
+Welcome to the Plains Training Grounds~
+You are standing in the entrance hallway to the Plains Training Grounds.
+The exit leading out into the open wilderness is north, and a hall leading
+further into this place runs towards the southwest in a curve beyond what
+you can see from here.
+~
+0 8 0 100
+D9
+~
+~
+0 -1 10903
+S
+#10902
+...~
+~
+0 12 0 100
+S
+#10903
+Hallway~
+You are in the early section of the hallway connecting the main entry
+room to the rest of the training grounds.  It's lavish looks give away
+a different image then you'd expect, looking more like a fine house
+then a place to do battle.
+~
+0 8 0 100
+D3
+~
+~
+0 -1 10904
+D6
+~
+~
+0 -1 10901
+S
+#10904
+Hallway~
+At this point where you're standing the hallway curves from the northwest
+to the northeast.  To the west being the main, inner area of the training
+grounds, and to the east back towards the entrance.
+~
+0 8 0 100
+D1
+~
+~
+0 -1 10903
+D7
+~
+~
+0 -1 10905
+S
+#10905
+Hallway~
+You stand at the ending section of the hallway, with the acutal
+combat area just to the southwest, and you can hear the noises of
+fighting echoing down the walls.  To the southeast leads back
+towards the entrance area where the attendant is.
+~
+0 8 0 100
+D8
+~
+~
+0 -1 10904
+D9
+~
+~
+0 -1 10906
+S
+#10906
+Entering the combat area~
+You stand at the first portion of the combat area.  The walls
+here are stone and remind you of a confusing labyrinth in a way.
+A torch on the wall flickers with light to illuminate the area, 
+but fades just ahead of you in any possible direction preventing
+you from seeing much further.
+~
+0 8 0 100
+D2
+~
+~
+16777216 -1 10907
+D6
+~
+~
+0 -1 10905
+S
+#10907
+Inside the Labyrinth~
+The room is barely lit from a light radiating from the north, and
+doesn't continue any further to the west.  You notice a spot of
+dried blood on the stone wall close to you, and figure maybe some
+unfortunate person must not have been lucky enough to make it all
+the way out.
+~
+0 8 0 100
+D0
+~
+~
+16777216 -1 10906
+D3
+~
+~
+0 -1 10908
+S
+#10908
+Inside the Labyrinth~
+You are wandering the labyrinth, in the stone wall section.  To the
+east a dim light shines, but doesn't quite reach where you're at
+now.  To the southwest is more darkness with no-telling-what down
+it.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10907
+D9
+~
+~
+0 -1 10909
+S
+#10909
+Inside the Labyrinth~
+Where you stand there is no light except for your own, and you
+realize you must be somewhat far into the labyrinth.  It's somewhat
+chilly, and you can hear some kind of footsteps around you, but
+you can't tell from which direction.
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10910
+D3
+~
+~
+0 -1 10916
+D6
+~
+~
+0 -1 10908
+S
+#10910
+Inside the Labyrinth~
+Here the stone walls from the north merge into walls of wood.
+They're quite sturdy and probably no less escapable then the stone
+walls, but it leads you to wonder why the change.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10909
+D1
+~
+~
+0 -1 10917
+D7
+~
+~
+0 -1 10916
+D8
+~
+~
+0 -1 10911
+S
+#10911
+Inside the Labyrinth~
+The walls of wood of this part of the labyrinth are quite old, and
+have mold growing on them here and there which give off an overly
+unpleasent odor in the stuffy air.
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10912
+D7
+~
+~
+0 -1 10910
+> leave_prog 5~
+mpoload 10901 1
+mpat 10911 drop moss
+~
+|
+S
+#10912
+Inside the Labyrinth~
+To the north and southwest you see nothing but darkness, trailing
+down the wooden walls of the corridor.  However upon examining the
+west wall you find a small beam of light reaching out from whatever
+room is on the other side of the wall...
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10911
+D9
+~
+~
+0 -1 10913
+S
+#10913
+Inside the Labyrinth~
+Your shadow flickers on the wall from a light source just up to the
+north.  The corridor to the northeast is absorbed back in the darkness
+of this labyrinth, only illuminated by your own light source.
+~
+0 8 0 100
+D0
+~
+~
+0 -1 10914
+D6
+~
+~
+0 -1 10912
+S
+#10914
+Inside the Labyrinth~
+The light is brighter here then it is to the south, with the
+source of the light just up to the north.  To the south the light
+fades some in the distance, eventually ending just short of the
+corridor wall.
+~
+0 8 0 100
+D0
+~
+~
+0 -1 10915
+D2
+~
+~
+0 -1 10913
+S
+#10915
+Inside the Labyrinth~
+A torch mounted on the northern wall burns bright, giving off light
+and wamrth that cut through the otherwise dark and coldness of this
+labyrinth.  Although how it stays lit all this time without ever
+wearing down is something to wonder about...
+~
+0 8 0 100
+D2
+~
+~
+0 -1 10914
+> entry_prog 10~
+if ispc($n)
+mpecho The torch on the wall flickers, crackles, then a single spark falls to the ground...
+mpechoat 0.$n Before you know it, it takes on a more humanoid form, rises up, and attacks you!
+mpat 10915 mpmload 10903
+mpat 10915 mpforce walking kill 0.$n
+endif
+~
+|
+S
+#10916
+Inside the Labyrinth~
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10909
+D8
+~
+~
+0 -1 10910
+S
+#10917
+Inside the Labyrinth~
+Wandering down the corridor here, you find the walls come closer
+together along here, and further down to the east it would be
+difficult to fit more then a single person at a time.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10918
+D3
+~
+~
+0 -1 10910
+S
+#10918
+Inside the Labyrinth~
+You find the space between the walls here to leave no room at all
+for anyone else to fit at a time...  Probably is best, harder to
+get surprised in here...  To the west the walls run further apart,
+and to the east continue in their narrowness.
+~
+0 264 0 0
+D1
+~
+~
+0 -1 10919
+D3
+~
+~
+0 -1 10917
+S
+#10919
+Inside the Labyrinth~
+The walls here remain too close together for any more then one
+person to really walk down them at a time, you find yourself
+having to step sideways through parts as the walls are placed
+closer and further in some places.
+~
+0 264 0 0
+D3
+~
+~
+0 -1 10918
+D8
+~
+~
+0 -1 10920
+S
+#10920
+Inside the Labyrinth~
+Beginning with this area here, the walls look to part further
+towards the west, while they remain close together to the northwest.
+~
+0 264 0 0
+D3
+~
+~
+0 -1 10921
+D7
+~
+~
+0 -1 10919
+S
+#10921
+Inside the Labyrinth~
+You find a remarkable amount of dried blood lining the wooden
+walls here, from what must have been a gorey battle some amount
+of time ago.  To the east you see the walk-space between the walls
+getting thinner down the way, while to the west is too dark to
+tell anything.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10920
+D3
+~
+~
+0 -1 10922
+S
+#10922
+Inside the Labyrinth~
+Here you find that the wooden walls merge into something resembling
+wood, but more like a vegetation of some sort, like they're made of
+thick vines gathered together to form altogether impassible walls.
+To the east the walls become wood, and to the southeast the ivy
+continues.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10921
+D8
+~
+~
+0 -1 10923
+S
+#10923
+Inside the Labyrinth~
+As you walk through these passages of vegetation walls, you
+become alarmed out of small movement out of the corner of your eye.
+Of course, when you turn around, there is nothing, nothing but the
+sound of leaves and flowers rustling against each other.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10924
+D7
+~
+~
+0 -1 10922
+S
+#10924
+Inside the Labyrinth~
+A dense barrier of plants surround you here in this room, and as
+you turn to look back in the direction you came from, you find that
+it is no longer there.
+Seems the walls are managing to rearrange themselves, at least in some
+fashion or another.
+~
+0 8 0 0
+D10
+~
+plants~
+919552 -1 10925
+S
+#10925
+Inside the Labyrinth~
+You are in a room where the walls are made of all kinds of
+vegetation variants, most unlike you've seen before.  They don't
+seem overly dangerous, but knowing that plants can have different
+properties such as poisonous you decide to keep your distance from
+any of it.
+The only exit here appears to be south.
+~
+0 12 0 0
+D3
+~
+~
+0 -1 10926
+> act_prog p from somewhere.~
+mpechoat 0.$n You appear to have found a way to slip through the wall and into another room on the other side...  The opening closes behind you, however, as soon as you're on the other side...
+mpmload 10914
+mpat 10925 mpforce flower kill $n
+~
+|
+S
+#10926
+Inside the Labyrinth~
+High above your head here is a large opening in the ceiling, where
+a modest amount of sunlight beams down from above.  To the east you
+see nothing but a dead end, and to the west continues down the
+corridors of plant walls.
+~
+0 0 1 1
+D1
+~
+~
+0 -1 10925
+D3
+~
+~
+0 -1 10927
+D4
+~
+~
+2112 -1 10929
+S
+#10927
+Inside the Labyrinth~
+Just over to the east you can see a thin reflection of light on
+the ground from somewhere above.  The way west is blocked off here
+and instead curves off to the north around the obstruction.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10928
+D1
+~
+~
+0 -1 10926
+S
+#10928
+Inside the Labyrinth~
+You find yourself standing in a particularly deadly section of the plant
+area where many thorned things snap at you from the walls...  You decide
+it'd probably be in your best interest to keep away from any of the walls
+here...
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10927
+D9
+~
+~
+0 -1 10933
+> rand_prog 25~
+if mortcount(10928) > 0
+mpmload 10915
+endif
+~
+|
+S
+#10929
+Top of the Labyrinth, Catwalk~
+You stand upon the rooftop of the labyrinth, which is pretty much
+impossible to walk on with the exception of a small catwalk leading
+north here.  To the southern more area right here is a hole in the
+ceiling that you could probably get down without too much trouble
+to get into the labyrinth.
+~
+0 0 1 1
+D0
+~
+~
+0 -1 10930
+D5
+~
+~
+0 -1 10926
+S
+#10930
+Top of the Labyrinth, Catwalk~
+You are walking along a thin catwalk on the labyrinth rooftop.  There
+is any more room here for more then one person to not walk single
+file here.  To the south you would be approaching the hole in the
+ceiling to jump down into the labyrinth, and north towards the edge
+of the place.
+~
+0 0 1 0
+D0
+~
+~
+0 -1 10931
+D2
+~
+~
+0 -1 10929
+S
+#10931
+Top of the Labyrinth, Catwalk~
+You now stand at the edge of the rooftop of the labyrinth.  From
+here it doesn't look too far down, and you could probably manage
+to climb down without too much trouble.  Further to the south you
+see the catwalk extend to the hole in the roof.
+~
+0 0 1 0
+D2
+~
+~
+0 -1 10930
+D5
+~
+~
+128 -1 11026
+S
+#10932
+Inside the Labyrinth~
+Here the walls of plant from the north turn to something much more
+sinister, the walls appear to be organic, made of mangled flesh
+and bone twisted and mangled together, and erected as high as the
+ceiling.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10935
+S
+#10933
+Inside the Labyrinth~
+You walk through the labyrinth, not exactly sure where you've ended up.
+The walls around you consist of many types of strange plants, not quite
+native to any place in the world that you've heard of.  Some are even
+deadly, threatening to strike at you should you come too close to the
+side of the wall.
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10934
+D6
+~
+~
+0 -1 10928
+> all_greet_prog 10~
+mpechoat $n You must have come too close to one of the walls, and was hit from behind by something of a meat eating plant.
+ehind by something of a meat eating plant.
+mpdamage $n 50
+~
+|
+S
+#10934
+Inside the Labyrinth~
+You come to a fork in the road, leading out in an amount of directions.
+To the north you see the plant walls here continue, and to the southeast
+as well.  To the west it merges into walls of wood, and to the south it
+turns to something very weird looking that you can't distinguish from here.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10933
+D2
+~
+~
+0 -1 10935
+D3
+~
+~
+0 -1 10979
+D8
+~
+~
+0 -1 10968
+S
+#10935
+Inside the Labyrinth~
+You stand in a section of the labyrinth where the walls consist of joined
+plants.  To the north just a bit ahead of you is a fork in the path, but from
+the south you smell a very rancid smell, where you can see that the plant walls
+come to and end as they merge into yet something else...
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10934
+D2
+~
+~
+0 -1 10936
+S
+#10936
+Inside the Labyrinth~
+The rotten stench of dead corpse fills the air, making you almost gag
+at the thought of it.  Truly a horrible sight for anyone, this is
+definetely not one of the better places you've been to yet.  Far up
+to the north you can see where these walls merge into some sort of
+vegetation.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10935
+D8
+~
+~
+0 -1 10937
+S
+#10937
+Inside the Labyrinth~
+Miscellaneous limbs hang from the ceiling, arms and legs dangling like meat in
+a butcher's shop.  Mostly rotten and decayed, bones protruding from out of the
+walls in a random, unorganized fashion.  If you die here you will more then
+join the other bodies left as a permanent addition to this place.
+~
+0 8 0 0
+D7
+~
+~
+0 -1 10936
+D9
+~
+~
+0 -1 10938
+S
+#10938
+Inside the Labyrinth~
+You come to a dead end in the Labyrinth...no pun intended.  It's too dark to
+see below, but something of a pit is here leading far below to a basement of
+some sort.  A haunting moan echoes from below and down the halls of the
+Labyrinth beyond this room.
+~
+0 8 0 0
+D5
+~
+~
+0 -1 10939
+D6
+~
+~
+4096 -1 10937
+S
+#10939
+Entrance to the Undead Maze~
+You step down into a foul smelling room.  It reeks of death and decay.  The
+moans of agony, pain, torment and suffering surround you and make the hairs
+on the back of your neck stand on end.  The walls themselves are made of
+rotting flesh and bone, the decaying faces of those long dead protrude from
+the walls wailing at you as you walk close to them.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10940
+D4
+~
+~
+16777216 -1 10938
+S
+#10940
+Further into the maze...~
+As you step further into the maze you smell something strange.  Is that sulfur?
+You sniff the air and it stings your nostrils, that's sulfur alright, you begin
+to wonder what else could be in this maze.  You shake off the thought and
+try to block out the wails of the undead and you trek further
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10941
+D2
+~
+~
+0 -1 10939
+S
+#10941
+A Crossroads~
+You walk into a room that begins to smell even worse!  The smell of sulfur 
+drifts in from the east.  As you look north, you see what seems to be
+a fountain and some greenery, how welcoming.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10943
+D1
+~
+~
+0 -1 10944
+D2
+~
+~
+0 -1 10940
+D3
+~
+~
+0 -1 10942
+S
+#10942
+A Dead End~
+You stumble into a medium sized room.  As you look around, you notice that
+there are bodies strewn about the area.  Your eyes widen in horror as the 
+bodies lift themselves up off the floor and shuffle about the area.  They
+notice you, stretch out their arms and begin to walk towards you moaning.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10941
+S
+#10943
+Garden of Living Death~
+Surrounding you are dead trees, grey, brown, withering and without life.
+No bird sings it song here.  Dried, once beautiful flowers lay in the dirt
+that you walk on.  A skeleton or two lay on the ground, devoid of all flesh
+that it once possessed.  Animal skeltons walk, possessed by some power that
+lay in this Garden, The Garden of Living Death.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10960
+D1
+~
+~
+0 -1 10958
+D2
+~
+~
+0 -1 10941
+D3
+~
+~
+0 -1 10957
+D6
+~
+~
+0 -1 10961
+D7
+~
+~
+0 -1 10959
+S
+#10944
+A Narrowing Passageway~
+As you walk further down the walls slowly come together, making the passage
+tighter and more narrow to walk through.  The smell of sulfur drifts in from
+the east, you also begin to sweat as the temperature rises.
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10945
+D3
+~
+~
+0 -1 10941
+S
+#10945
+The Stairway Down~
+Gusts of hot air strike your face as you enter the stairway, as you
+look down the stairway, you notice an orange glow emitting beneath you.
+You take another breath and the scent of sulfur stings your nostrils
+making your nose twitch.
+~
+0 8 0 0
+D3
+~
+~
+0 -1 10944
+D5
+~
+~
+0 -1 10946
+S
+#10946
+A Spiral Staircase~
+The stairs continue to go down in a spiral, you can't help but notice the
+strange red crystals protruding from the ceiling a sides.  There are distant
+screams coming from below, maybe it's a wise idea that you turn back.
+~
+0 8 0 0
+D4
+~
+~
+0 -1 10945
+S
+#10947
+The Beasts Pen~
+As soon as you enter the room, all the cages rattle slightly at the sound of
+animal feed crunching beneath your feet.  Water bowls lay scattered about and
+dry.  Bones and rotting bits of old fruits and vegetables lay upon the soiled
+ground.  The cage on the north labels, "Dog Pen".  As you look to the cage on
+the south, it reads, "Hawk Pen".
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10950
+D1
+~
+~
+0 -1 10948
+D2
+~
+~
+0 -1 10951
+D3
+~
+~
+0 -1 10961
+S
+#10948
+The Beasts Pen~
+As soon as you enter the room, all the cages rattle slightly at the sound of
+animal feed crunching beneath your feet.  Water bowls lay scattered about and
+dry.  Bones and rotting bits of old fruits and vegetables lay upon the soiled
+ground.  The cage label for the cage to the north shows, "Bat Pen".  While the
+cage to the south reads, "Wolverine Pen".
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10952
+D1
+~
+~
+0 -1 10949
+D2
+~
+~
+0 -1 10953
+D3
+~
+~
+0 -1 10947
+S
+#10949
+The Beasts Pen~
+As soon as you enter the room, all the cages rattle slightly at the sound of
+animal feed crunching beneath your feet.  Water bowls lay scattered about and
+dry.  Bones and rotting bits of old fruits and vegetables lay upon the soiled
+ground.  To the east the texture of the wall seems strange, almost as if 
+there was some type of a portal there, maybe you should enter and find out.
+The "Lion Pen" is north and the "Babboon Pen" is south.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10954
+D1
+~
+~
+0 -1 10956
+D2
+~
+~
+0 -1 10955
+D3
+~
+~
+0 -1 10948
+S
+#10950
+Dogs Pen~
+The animals cage is dirtied and smells of death and decay.  Blood is splattered
+all over the walls of the pen.  You nearly lose your stomachs contents as you
+see piles of the animals feces.  It was obviously never cared for, perhaps the
+main reason of its death.
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10947
+S
+#10951
+Hawks Pen~
+The animals cage is dirtied and smells of death and decay.  Blood is splattered
+all over the walls of the pen.  You nearly lose your stomachs contents as you
+see piles of the animals feces.  It was obviously never cared for, perhaps the
+main reason of death.  There are numerous feathers strewn about the floor.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10947
+S
+#10952
+Bat Pen~
+The animals cage is dirtied and smells of death and decay.  Blood is splattered
+all over the walls of the pen.  You nearly lose your stomachs contents as you
+see piles of the animals feces.  It was obviously never cared for, perhaps the
+main reason of its death
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10948
+S
+#10953
+Wolverine Pen~
+The animals cage is dirtied and smells of death and decay.  Blood is splattered
+all over the walls of the pen.  You nearly lose your stomachs contents as you
+see piles of the animals feces.  It was obviously never cared for, perhaps the
+main reason for its death, about the floor are maggots and a metal claw.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10948
+S
+#10954
+Lion Pen~
+The animals cage is dirtied and smells of death and decay.  Blood is splattered
+all over the walls of the pen.  You nearly lose your stomachs contents as you
+see piles of the animals feces.  It was obviously never cared for, perhaps the
+main reason of its death.
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10949
+S
+#10955
+Babboon Pen~
+The animals cage is dirtied and smells of death and decay.  Blood is splattered
+all over the walls of the pen.  You nearly lose your stomachs contents as you
+see piles of the animals feces.  It was obviously never cared for, perhaps the
+main reason of its death.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10949
+S
+#10956
+Dragons Pen~
+The first thing that hits you when you enter this Pen is that it is entirely
+black and charred.  The floor is covered in a dark grey ash with grey bones 
+scattered about the floor.  There is a burnt chest off to your right, maybe
+you should open it and find out what is inside.
+~
+0 8 0 0
+D3
+~
+~
+0 -1 10949
+> act_prog p opens a burnt chest.~
+if mobinroom(10917) > 0
+mpat 10956 mpecho A magical force prevents a burnt chest from opening, and it snaps itself shut again...
+mpat 10956 close burnt
+endif
+~
+|
+S
+#10957
+Southwest Corner of the Garden~
+There is what seems to be the remnents of a once beautiful fountain.  Now
+there is only shattered and crumblin marble where it once lay.  There is a
+pool of stangant water in what is left of the marble.  Dead shrubbery and 
+plants surround the area.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10959
+D1
+~
+~
+0 -1 10943
+D6
+~
+~
+0 -1 10960
+S
+#10958
+Southeast Corner of the Garden~
+As you enter the corner of the garden, a fountain made of obsidian begins
+to flow.  A chill runs over you as you notice a carefully scuplted spider on
+top of the fountain, its mouth pouring forth a golden liquid.  The eyes
+of the spider glow a faint white, you should examine them for a closer look...
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10961
+D3
+~
+~
+0 -1 10943
+D7
+~
+~
+0 -1 10960
+S
+#10959
+Westen Wall of the Garden~
+Here are the western wall of the garden there are dying vines all about
+the area.  You notice a few decaying bodies with strange bite marks in them.
+Growing from the vines still are black roses, still very much alive to show
+their meaning of death.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10962
+D1
+~
+~
+0 -1 10960
+D2
+~
+~
+0 -1 10957
+D6
+~
+~
+0 -1 10963
+D8
+~
+~
+0 -1 10943
+S
+#10960
+Center of the Garden~
+You have entered what seems to be the center of the Garden of Living Death.  In
+the center is a fairly large decaying tree, at it's base are mummified bodies.
+The faces of the bodies seem to be frozen in a moment of absolute horror.
+Strewn about the base of the tree are bones, rusting weapons and armor, and
+bits of clothing...
+~
+0 8 0 3
+D0
+~
+~
+0 -1 10963
+D1
+~
+~
+0 -1 10961
+D2
+~
+~
+0 -1 10943
+D3
+~
+~
+0 -1 10959
+D4
+~
+tree~
+526464 -1 10965
+D6
+~
+~
+0 -1 10964
+D7
+~
+~
+0 -1 10962
+D8
+~
+~
+0 -1 10958
+D9
+~
+~
+0 -1 10957
+S
+#10961
+Eastern Wall of the Garden~
+The eastern wall of the garden is heavily covered in vines and the ground is
+blanketed with patches of moss.  Upon closer inspection of the wall, you see a
+door.  A sign on the door says, "Beware! Dangerous Beasts!!!".  The door
+handle is rusting a little, but it should open.
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10964
+D1
+~
+~
+0 -1 10947
+D2
+~
+~
+0 -1 10958
+D3
+~
+~
+0 -1 10960
+D7
+~
+~
+0 -1 10963
+D9
+~
+~
+0 -1 10943
+S
+#10962
+Northwest Corner of the Garden~
+This part of the garden is barren, nothing remains but dirt and fairly large
+holes in the ground.  Besides this, there is a quite a large pile of assorted
+bones in the corner.  The dirt seems to have been borrowed at by some type of
+animal with multiple claws, what type of beast could do this?
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10963
+D2
+~
+~
+0 -1 10959
+D8
+~
+~
+0 -1 10960
+S
+#10963
+Northern Wall of the Garden~
+This area of the garden seems just as the others, it's dead plantlife, the
+occassional corpse, bits of flesh, torn and shredded clothing and a small
+stream of blood flowing from the east and heading north.  What's that!? Blood!?
+You gaze at the stream with uncertainty as it flows through a crevice north.
+What could be east?
+~
+0 8 0 0
+D1
+~
+~
+0 -1 10964
+D2
+~
+~
+0 -1 10960
+D3
+~
+~
+0 -1 10962
+D8
+~
+~
+0 -1 10961
+D9
+~
+~
+0 -1 10959
+> death_prog 100~
+if mobinroom(10925) == 0
+mpat 10963 mpmload 10925
+endif
+~
+> time_prog 12~
+if ovnumroom(10911) == 0
+and mobinarea(10925) == 0
+mpat 10963 mpoload 10911 1
+mpat 10963 drop corpse
+endif
+~
+|
+S
+#10964
+Northeast Corner of the Garden~
+Your gaze meets yet another one of the gardens strange fountains.  This
+particular fountain is of a white marble vampire as it feeds the life out of
+what is one of it's victims.  The silent and small stream of blood flow from
+where the wound should be.  The eyes of the statue are red and seem to pulsate
+with life as you gaze into them
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10961
+D3
+~
+~
+0 -1 10963
+D9
+~
+~
+0 -1 10960
+> time_prog 12~
+if ovnumroom(10908) == 0
+and mobinarea(10924) == 0
+mpat 10964 mpoload 10908 1
+mpat 10964 drop corpse
+endif
+~
+|
+S
+#10965
+Climbing Up the Tree...~
+Surrounded about the tree and wrapping around it are cobwebs, everywhere
+and more bodies are entangled in them.  You hear a roar come from above, a
+sign posted here in blood says, "Beware The Zombie Spider!!!" hanging from
+and crawling about are little grey spiders.
+~
+0 8 0 0
+D4
+~
+~
+2048 -1 10966
+D5
+~
+~
+0 -1 10960
+S
+#10966
+Lair of the Zombie Spider~
+Strewn about the area are mummified bodies, each one frozen in the moment of
+death, their faces contorted in grimaces of pain and horror. Blood is 
+spattered across the walls and pieces of broken armor and weapons lie scattered
+about the floor.
+~
+0 8 0 0
+D4
+~
+~
+2048 -1 10967
+D5
+~
+~
+0 -1 10965
+S
+#10967
+Spiders Backroom~
+You've stumbled upon the jackpot!  It seems the Zombie Spider had quite a taste
+for what seems to be former worshippers.  This tiny room has golden statues 
+depicting the spiders feasts.  In the center of the room is a large treasure
+chest.
+~
+0 8 0 0
+D5
+~
+~
+0 -1 10966
+S
+#10968
+Inside the Labyrinth~
+Ahead to the northwest is a fork in the road, coming towards an end for
+the plant area of the labyrinth, but which continues to the south for an
+amount before a bend in the path heads elsewhere.  You still carry a
+feeling of caution, at least in this section of the labyrinth.  Anything
+could possibly ambush you at any moment, from above or from the walls.
+~
+0 8 0 0
+D2
+~
+~
+0 -1 10969
+D7
+~
+~
+0 -1 10934
+S
+#10969
+Inside the Labyrinth~
+You've entered this room from the north, but something about this place
+seems different, you're not sure how, but something has changed, or so
+it appears.  Perhaps it's just your imagination, this is an odd type of
+place to be in, who'd have thought a maze would be built from walls of
+living plants?
+~
+0 8 0 0
+D0
+~
+~
+0 -1 10970
+S
+#10970
+Inside the Labyrinth~
+At the base of the far northern wall is a large amount of dirt, forming
+something of a small hill almost, it looks like it comes from underneath
+the floor though, with edges distinctly showing all around the declining
+area of the slope.  This room, along with the last, appears to be somehow
+different then when you entered it.  How peculiar.
+~
+0 8 13 0
+D2
+~
+~
+0 -1 10924
+D5
+~
+~
+256 -1 10971
+S
+#10971
+Underground Tunnel~
+You are in dirty, underground passageway running in a curvy, northeastern
+direction.  It's simply been dug through by somebody or something, just
+a simple tunnel.  Above you the roots and such of the plants from the walls
+above poke and tangle around in and out of the dirt ceiling, which is only
+only a few inches from your head.
+~
+0 265 13 0
+D4
+~
+~
+256 -1 10970
+D7
+~
+~
+0 -1 10972
+S
+#10972
+Underground Tunnel~
+You're in a cramped, rather tiny tunnel.  You almost have to crawl, or at least
+angle your head to the side, to make your way through it.  It's mostly straight
+in the northwest/southeast direction, but wasn't exactly dug out by an
+architectual genius to say the least.
+~
+0 265 13 0
+D7
+~
+~
+0 -1 10973
+D8
+~
+~
+0 -1 10971
+S
+#10973
+Underground Tunnel~
+At least this tunnel isn't damp or anything, no water here, just dry dirt
+on all sides...it's a minor wonder that this thing manages to stay as it is
+without collapsing upon itself.  Here it takes a sharp bend to the west,
+while otherwise continuing towards the southeast.
+~
+0 265 13 0
+D3
+~
+~
+0 -1 10974
+D8
+~
+~
+0 -1 10972
+S
+#10974
+Underground Tunnel~
+You're somewhere in the middle area of the tunnel, it's been a bit of distance
+from the entrance you initially came in through to get here.  The tunnel makes
+a bend here to the east from the basic northwest/southeastern direction it runs
+in for the mostpart.  Some loose dirt particles fall on your head as you brush
+against the top of the tunnel.
+~
+0 265 13 0
+D1
+~
+~
+0 -1 10973
+D7
+~
+~
+0 -1 10975
+S
+#10975
+Underground Tunnel~
+Still making your way through this tunnel, bet you're glad you aren't
+claustrophobic, or afraid of the darkness that fills both ends of the tunnel
+ahead and behind you.  The ceiling of this tunnel is low, almost bringing you
+to a crawl through here, as walking crouched down is a bit tedious with the
+length of this tunnel and all.
+~
+0 265 13 0
+D7
+~
+~
+0 -1 10976
+D8
+~
+~
+0 -1 10974
+S
+#10976
+Underground Tunnel~
+Just a bit to the northwest you see a thin light through the darkness of the
+tunnel, it flickers to a small extent, so it must be an unnatural light,
+like a torch or something.  The tunnel probably extends pretty far, curving
+slightly back and forth as it runs to the southeast, just as cramped as where
+you now stand.
+~
+0 264 13 6
+D7
+~
+~
+0 -1 10977
+D8
+~
+~
+0 -1 10975
+S
+#10977
+Underground Tunnel~
+You are standing in a small tunnel, not very big around, but running far to
+the southeast.  Above you a dim light flickers, just barely reaching down here
+through some loose dirt above you.  It could probably be cleared away, and
+since the floor and ceiling aren't far apart, it'd be easy to climb up the
+passage.
+~
+0 265 13 0
+D4
+~
+~
+256 -1 10978
+D8
+~
+~
+0 -1 10976
+S
+#10978
+Inside the Labyrinth~
+~
+0 8 13 0
+D5
+~
+~
+256 -1 10977
+S
+#10979
+Inside the Labyrinth~
+You are in a cold room made entirely of wood...  The sides of the
+room are unrefined, very splintered and rotted, but with no trace of
+any two seperate pieces coming together... a marvel of a single
+hollow room made of wood, seemingly created by nature, or some powerful
+force...
+~
+0 1073741832 0 0
+D1
+~
+~
+0 -1 10934
+S
+#10980
+The entrance to the hive~
+Before you opens an abomination of nature, a great hive of unknown
+size and shape what must be under the ground several hundred meters.
+An overwhelmingly loud buzzing sound eminates from deep within, too
+noisy for you to concentrate to hear yourself think.
+~
+0 1073741833 0 0
+D0
+~
+~
+16777216 -1 10981
+S
+#10981
+Inside the hive~
+You are in inside the great hive.  Chills send up your back as
+they would even the bravest of warriors, at the sight of this
+horrible place.  Honeycombs larger then your own head line the
+walls and ceiling, but from the looks of the floor this place
+was no different from any stone hall, but converted into what
+you're seeing over some amount of time.
+Worst yet is a number of active bees swarming the place, very large
+bees flying only a few feet off the ground.
+~
+0 1073741833 16 0
+D0
+~
+~
+0 -1 10982
+D2
+~
+~
+16777216 -1 10980
+S
+#10982
+The Hive~
+Loud noises of bees working in the hive fills the halls, you are
+surrounded by them everywhere.  However, they don't seem to take any
+notice of you generally, so long as you keep your distance and try
+to make no sudden movements.  Most of them are as big as dogs at least,
+and you can spot multiple subgenres all living together here, with
+some being skinnier on avergae then other types, and all look to be
+very deadly.
+~
+0 1073741833 16 0
+D0
+~
+~
+0 -1 10983
+D2
+~
+~
+0 -1 10981
+S
+#10983
+The Hive~
+You have come to an intersection, where two halls cross paths, one
+leading north to south and the other east to west.  The east and west
+exits are small openings in the walls of the hive, you would have to
+crawl to move in and out of them.  Still you attempt to walk on your
+way without disturbing anything, otherwise you're likely to trigger
+every single creature here to come after you.
+~
+0 1073741833 16 0
+D0
+~
+~
+0 -1 10986
+D1
+~
+~
+2048 -1 10985
+D2
+~
+~
+0 -1 10982
+D3
+~
+~
+2048 -1 10984
+S
+#10984
+The Hive~
+Having crawled through the opening in the east wall, you find
+yourself in a small area off from the main section of the hive,
+this is an oddly-shaped room simply composed of the same honeycomb
+walls as the rest of the hive.  From the looks of it you've found
+a food storage room by the large hoards of some unknown substance
+organized about the room in piles.  And judging by the overall
+small quantity of whatever it is, it's obviously not the only
+storage room in the hive.
+~
+0 1073741833 16 0
+D1
+~
+~
+0 -1 10983
+S
+#10985
+The Hive~
+The walls made of the same honeycomb creation as any part of the hive
+make up this larger room, though this place is worse then any part
+yet.  You must have stumbled upon the nursery, noticing that almost
+every other slot in the walls has a pulsating bee larvae nested in
+it, growing to hatch eventually into the same monsters that inhabit
+the hive as you've seen so far...
+Aren't bees supposed to be overly protective of their nests?
+~
+0 1073741833 16 0
+D3
+~
+~
+0 -1 10983
+> entry_prog ~
+if ispc($n)
+and mobinarea(10909) < 11
+mpechoat $n Just as you enter the nursery through the crawlspace, an egg in one of the honeycomb slots bursts open producing a new bee!
+mpechoaround $n You watch in awe as an egg in one of the honeycomb slots rumbles then bursts open producing a new bee!
+mpat 10985 mpmload 10909
+endif
+~
+|
+S
+#10986
+The Hive~
+You are deep within the bee's hive, the dark sections are stuffy and
+unsettling.  The air is thin and promotes heavy breathing to avoid
+suffocating.  Under the darkness is only the loud buzzing sound of
+a great many bees further with in the area.
+~
+0 1073741833 16 0
+D0
+~
+~
+0 -1 10987
+D2
+~
+~
+0 -1 10983
+S
+#10987
+Center of the Hive~
+You must have come to the center of the hive, as you find yourself in a
+wide open area.  As you look around under your light you see many paths
+leading off in different directions from here, all leading off into
+darkness.  Roaming in the room are more of the bess, which come and then
+fly off in any direction.
+~
+0 1073741833 16 0
+D2
+~
+~
+0 -1 10986
+D2
+~
+opening~
+524416 -1 10988
+D6
+~
+~
+0 -1 10990
+D7
+~
+~
+0 -1 10989
+D8
+~
+~
+0 -1 10992
+D9
+~
+~
+0 -1 10991
+S
+#10988
+In the small opening~
+From the small opening you can look out upon the large area below from
+a safe distance.
+~
+0 1073741833 16 0
+D5
+~
+opening~
+524416 -1 10987
+S
+#10989
+The Hive~
+The remains of a something lie on the ground here, as of now it is only a small
+mess of bones, but the structure of those bones are different from the bee's
+anatomy, meaning something or someone was here before, though they met their
+demise here on this spot.  Looking at the room though you don't see anything
+out of the ordinary, no moreso then anything else you've found here so far.
+~
+0 1073741833 16 0
+D8
+~
+~
+0 -1 10987
+> act_prog p drops a skull.~
+mpforce $n jump
+~
+|
+S
+#10990
+The Hive~
+This way branching from the hive center leads into a longer hallway leading
+around a corner to the east going north.  The walls are close together
+making a very narrow passage, and only a single person could walk through
+at a time.
+~
+0 1073742089 16 0
+D0
+~
+~
+0 -1 10998
+D9
+~
+~
+0 -1 10987
+> act_prog p bee flies in from the north.~
+if rand(80)
+mpat 10990 mpforce bee southwest
+endif
+~
+|
+S
+#10991
+The Hive~
+You are in a small room, slightly different from the other sections of the
+hive.  Here the size of the hexagons are much smaller then anywhere else,
+more typical of a standard beehive.  This is obviously a nursery, set aside
+for the young to be born and fed until they become of adult size to work
+for the rest of the hive.
+~
+0 1073741833 16 0
+D6
+~
+~
+0 -1 10987
+S
+#10992
+The Hive~
+You have found a pantry, a food-storage room for the hive.  A
+large supply of an unknown substance lays in multiple heaps on
+the ground.  Apparently they eat more then that, as an amount of
+the deceased bees also lay here to be eaten.
+~
+0 1073741833 16 0
+D7
+~
+~
+0 -1 10987
+S
+#10993
+The Hive~
+~
+0 1073741837 16 0
+S
+#10998
+The Hive~
+~
+0 1073741833 16 0
+D0
+~
+~
+0 -1 10999
+D2
+~
+~
+0 -1 10990
+> act_prog p bee flies in from the north.~
+if rand(40)
+mpat 10998 mpforce bee south
+endif
+~
+|
+S
+#10999
+At the source of the Hive~
+Right around here is the source of the entire beehive, the nesting ground
+of the bees.  The walls here have especially large honeycombs  lining them
+across the entire surface, with small larvae sacks in many of them.
+On the far north wall is a small passageway beyond this room.
+~
+0 9 16 0
+D0
+~
+~
+0 -1 11000
+D2
+~
+~
+0 -1 10998
+S
+#11000
+The backroom of the Hive~
+You are in a small room, probably the actual chambers of the queen bee.
+This room doesn't look as important as the one prior to it, as other then
+an amount of stored food supply there really isn't anything here.
+~
+0 9 16 0
+D2
+~
+~
+0 -1 10999
+S
+#0
+
+
+#RESETS
+M 0 12417 1 12407
+E 1 12599 1 6
+G 1 12429 1
+G 1 12428 1
+O 0 10902 1 10921
+M 0 10913 1 10923
+M 0 10901 1 10901
+E 1 10912 1 12
+E 1 10904 1 16
+M 0 10902 1 10901
+E 1 10903 1 3
+M 0 10918 2 10954
+O 0 17 1 10954
+M 0 10919 1 10953
+M 0 10913 1 10968
+M 0 10921 1 10976
+G 1 10910 1
+E 1 10909 1 5
+E 1 10907 1 17
+M 0 10922 1 10960
+M 0 10923 1 10947
+M 0 10916 1 10938
+M 0 10926 1 10985
+M 0 10911 1 10999
+M 0 10910 2 10999
+M 0 10910 2 10999
+M 0 10927 2 10999
+M 0 10927 2 10999
+O 1 10913 1 10992
+O 1 10914 1 10992
+O 0 10915 1 10989
+M 1 10917 1 10956
+O 1 10905 1 10956
+P 0 10920 1 0
+O 1 3 1 10956
+M 1 10928 1 10991
+M 1 10926 2 10991
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  10916 spec_fido
+M  10917 spec_breath_fire
+S
+
+
+#$

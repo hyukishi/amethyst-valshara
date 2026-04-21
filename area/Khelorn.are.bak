@@ -1,0 +1,2494 @@
+#AREA   Khelorn River Valley~
+
+
+
+#VERSION 200
+#AUTHOR Kyorlin~
+
+#RANGES
+1 90 1 115
+$
+
+#RESETMSG Several crickets begin to chirp loudly.~
+
+#FLAGS
+0 7
+
+#ECONOMY 0 5984774
+
+#CLIMATE 2 2 2
+
+#NEIGHBOR The Western Plains~
+
+#NEIGHBOR The Western Jungle~
+
+#MOBILES
+#11100
+riverman man ancient boat boatseller~
+An ancient riverman~
+An ancient riverman is here working to perfect a new boat.
+~
+A very old man wise in the ways of the rivers stands before you with a toothless grin upon his face.  His hands are worn and caloused from many years of
+labor and work upon boats.  He has retired from adventuring now and sells
+boats for a living.
+~
+16777219 0 0 C
+20 0 0 10d1+100 1d1+10
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 6 0 0 1 1 1
+0 0 0 0 0 0 0 0
+> death_prog 100~
+say Ye seem to have gotten the best of me, but I'll not be havin' ye make off w
+t' me belongings.
+grin $n
+mpechoat $n With his dying breath, the riverman pulls a flask out of his jacket and hurls it at you. As the flask breaks, your head begins to spin and your armor disolves off of your body.  Then you look down only to see your flesh and skin oozing and melting off to make a puddle upon the floor.
+mpechoat $n Suddenly the pain hits you with unrimmiting force, causing you toblack out...Mercifully...
+mpslay $n
+mppurge
+mpecho The Riverman throws a flask at $n which breaks and causes his very flesh to dissolve and fall to the floor, leaving behind a puddle of sticky goo.
+~
+|
+#11101
+tribble satanic~
+a newly created tribble satanic~
+Some god abandoned a newly created tribble satanic here.
+~
+~
+1 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> rand_prog 100~
+mpmload 11101
+mpecho Squeak! Squeak!
+~
+|
+#11102
+Local Supermob~
+supermob~
+A small Local Supermob is here...Looking almost as busy as his bigger cousin.
+~
+~
+2099201 0 0 C
+99 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 4 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> rand_prog 50~
+mpinvis 51
+~
+|
+#11103
+ganon~
+Ganon~
+Ganon stands here in an aura of pure evil.
+~
+~
+1 373293184 0 C
+55 0 0 1d1+3270000 10d100+1000000
+0 0
+108 108 0
+13 13 13 13 13 13 13
+30 30 30 30 30
+0 3 0 0 1 1 20
+0 0 2047 511 0 0 1610612735 262147
+#11104
+harpy dirty~
+a dirty harpy~
+A harpy screeches at you angerily and bars its claws.
+~
+A creature that is completely covered in grime stands before you, its hind 
+quarters that of a bird and the front half a human female.
+ 
+~
+35 0 -1000 C
+10 0 0 0d0+0 5d5+3
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 2
+0 0 362175 2099216 256 0 262659 524288
+#11105
+bear grizzly~
+Grizzly Bear~
+A fearsome Grizzly Bear glares at you and prepares to charge
+~
+A fierce grizzly bear stars you down as you try to figure out what to do next.
+perhaps running would be a good idea, as it is most liking that it will soon
+charge you and attempt to make you into its supper.
+~
+33620003 0 0 C
+8 0 0 0d0+0 6d4+5
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+24 3 0 0 0 0 0
+0 0 302319293 0 0 0 451 0
+#11106
+snapper giant turtle snapping~
+A giant snapping turtle~
+A giant snapper is looking for something or someone to eat.
+~
+You see a large turtle aproaching you with a sharp beak-like mouth and a 
+leathery shell.
+~
+65 0 0 C
+9 0 0 4d6+200 4d3+5
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+79 8 0 0 1024 1024 0
+0 0 66749 96 0 0 1 0
+#11107
+traveller lone wanderer adventurer~
+a traveller~
+A wandering adventurer wanders along the trail.
+~
+This person is trying to see as much of the world as possible, therefore is
+wandering endlessly in search of new things, with only a cloak upon his back
+and a sword in hand.
+~
+5 0 0 C
+10 0 0 0d0+0 10d1+2
+6 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 8 0 0 1 1 1
+0 0 2047 0 0 0 96 1
+#11108
+minstrel wandering~
+a wandering minstrel~
+A wandering minstrel takes a seat upon a nearby boulder and begins to strum a song upon his lute.
+~
+You see an elvish minstrel strumming away upon a lute.
+~
+1 0 1000 C
+11 0 0 0d0+0 3d4+1
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 6 0 0 3 2 1
+0 0 2047 0 0 0 0 8
+#11109
+roc giant bird~
+a giant roc~
+A grey feathered bird the size of a small house stands before you and almost knocks you over as it flexes its wing muscles.
+~
+A house-sized roc, now free from the harpies control, is extremely distraught
+and dangerous.  Running might be a good idea for this is an extremely powerful
+creature.
+~
+35 0 0 C
+18 0 0 1d100+400 5d5+10
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+87 3 0 0 0 0 3
+0 0 361661 0 0 0 3 524290
+#11110
+rogue thief~
+a rogue~
+A shadowy figure is attempting to remain undetected in the background.
+~
+You stare at the shadows and discern a manlike form lurking amoungst them, He
+appears to be wielding a dagger and attempting to reach for your pockets.
+~
+1 98304 0 C
+5 0 0 2d5+40 4d1+4
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 2 0 0 1 1 0
+0 0 2047 0 0 0 1024 524290
+#11112
+Puff~
+Puff the Magic Dragon~
+Morgoth, the Darklord of Arda, sits here upon his throne.
+~
+Over Seven feet tall, the mightest of the Vala and Firstborn of Illuvatar sits
+upon his ebony black, skull embeded thrown staring out into the darkness.
+Close by his side sits the gigantic sword known as Grond.  Upon his head sits
+an iron crown, alight with the glow of three mystical Silmarils.
+~
+1073741831 339739306 -1000 C
+0 0 0 1d1+10000000 1d100+50
+10000000 0
+108 108 1
+18 18 18 18 18 18 18
+0 0 0 0 0
+90 0 7 300 88176 65536 10
+10 30 1574879 2105344 512 0 35131872 270371
+#11113
+blink dog~
+a newly created blink dog~
+Some god abandoned a newly created blink dog here.
+~
+~
+1073741825 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#11114
+guardian khelorn~
+a newly created guardian khelorn~
+Some god abandoned a newly created guardian khelorn here.
+~
+~
+1073741825 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#11115
+fire-giant-messenger~
+a fire giant messenger~
+A fire giant messenger runs quickly upon its errand.
+~
+~
+16777217 1073741824 0 C
+30 0 -150 1d1+3000 5d4+10
+30 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 4
+12 0 1757 0 0 0 384 3
+#0
+
+
+#OBJECTS
+#11100
+boat small~
+a small boat~
+A small boat lies here.~
+~
+22 0 16385
+0 0 0 0
+50 30 30
+#11101
+canoe~
+a small birchbark canoe~
+A small birchbark canoe is lying here upside down~
+~
+22 0 0
+0 0 0 0
+1 50 5
+#11102
+Crystal Shard~
+a newly created Crystal Shard~
+Some god dropped a newly created Crystal Shard here.~
+~
+13 0 8192
+12 50 50 1 255 255
+1 0 0
+#11103
+dagger steel~
+a short steel dagger~
+You see a short steel dagger lying here, forgotten.~
+~
+5 0 8193
+12 2 6 11
+2 0 0
+A
+18 2
+A
+19 1
+#11104
+cloak travellers~
+Travellers cloak~
+A ragged cloak lies in the mud waiting for someone to notice it.~
+~
+9 262144 1025
+20 20 0 0
+1 0 0
+A
+14 20
+#11105
+lute~
+a well-crafted lute~
+A well-crafted lute is laying upon the side of the road.~
+~
+8 8683776 16385
+0 0 0 0
+1 25 250
+A
+24 10
+#11106
+hat feathered~
+a feathered hat~
+A bright green hat with a feather sticking out of it has fallen from someones head.~
+~
+9 262144 17
+4 4 0 0
+2 0 0
+A
+3 1
+#11107
+roc feather~
+a roc feather~
+A grey feather dropped by a roc is lying on the ground~
+~
+5 321 24577
+12 5 5 11
+2 0 0
+A
+18 3
+A
+19 3
+#11108
+sword steel~
+A gleaming steel sword~
+A gleaming steel sword is slowly rusting upon the ground.~
+~
+5 64 8193
+12 0 0 3
+3 0 0
+A
+19 3
+A
+1 -1
+A
+18 2
+#11109
+Immortal Board~
+General Immortal Board~
+An immortal board floats about three feet off the ground before you.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+#11110
+Coding board~
+a newly created Coding board~
+A mystical message board floats in mid-air shrouded by a glowing aura~
+~
+13 3 0
+0 0 0 0
+1 0 0
+#11111
+chair reclining~
+a reclining chair~
+A very comfortable looking reclining chair sits here.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#11112
+Silmaril~
+A glowing Silmaril~
+A glowing gemstone from the time before the sun rode in the sky has fallen from the crown of Morgoth to your feet~
+~
+1 0 16385
+0 0 10000 0
+1 0 0
+A
+28 1048576
+#11114
+badge one first ~
+a newly created badge one first ~
+Some god dropped a newly created badge one first  here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11115
+badge two first~
+a newly created badge two first~
+Some god dropped a newly created badge two first here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11116
+badge three first~
+a newly created badge three first~
+Some god dropped a newly created badge three first here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11117
+badge four first~
+a newly created badge four first~
+Some god dropped a newly created badge four first here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11118
+badge five first~
+a newly created badge five first~
+Some god dropped a newly created badge five first here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11120
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11129
+pool-large-warm-bathing~
+a large pool~
+A large heated bathing pool occupies a large portion of the room.~
+~
+25 0 0
+50 50 84 0
+1 0 0
+#11130
+altar lloth bed~
+a large flat altar~
+A large altar, covered in runes and gold, has several pillows and cushions upon its top, as suryn delights in the appetites of her servents, this is obviously an attempt to satisfy them.~
+~
+12 0 0
+0 0 82 0
+1 0 0
+#0
+
+
+#ROOMS
+#11100
+Before the Dark Jungle~
+You are standing on a lightly-travelled, overgrown path with exits leading to
+the north and the southeast.  A dark jungle lies to the north and seems to
+beckon you onward.  To the south lies a large hill with its eastern half 
+dominated by a gigantic willow tree, making you wonder how a tree could ever
+reach such a great size and how long it must have taken.  Farther to the south
+you hear the rushing waters of the Khelorn as they tumble by.
+~
+0 0 2 2
+D0
+~
+~
+0 -1 1057
+D8
+~
+~
+0 -1 11101
+S
+#11101
+Atop a Small Ridge.~
+You have reached the top of a small ridge.  To the northwest and south there
+is a path. To the west the ridge descends sharply into an impassable thicket
+of brambles, and to the east you see a very large willow tree.
+~
+0 0 2 3
+D1
+~
+~
+0 -1 11103
+D2
+~
+~
+0 -1 11105
+D6
+~
+~
+0 -1 11102
+D7
+~
+~
+0 -1 11100
+D9
+~
+~
+0 -1 11104
+S
+#11102
+Upon a Side Path~
+You are upon a small lightly-travelled path to the north of the willow tree.
+To the southwest lies a trail up the ridge that the willow sits upon, and to
+the east the path around the ridge continues.
+~
+0 0 3 0
+D1
+~
+~
+0 -1 11147
+D9
+~
+~
+0 -1 11101
+S
+#11103
+Gigantic Willow~
+You have reached the base of a huge willow tree that seems to almost touch the 
+sky. The branches move more than seems could be accounted for by wind alone.  
+It may be possible to climb if you are careful, otherwise you may proceed back
+to the west where a path cuts across the top of the ridge.
+~
+0 0 2 0
+D3
+~
+~
+0 -1 11101
+D4
+~
+~
+128 -1 11110
+S
+#11104
+Approaching a Ridge~
+You are upon a trail leading up the south western side of a small ridge.  To
+the south you hear the rushing waters of the Khelorn.  The trees seem to close
+in on you in an opressive manner and both sides of the trail are lined with
+thickets of brambles.
+~
+0 0 2 0
+D2
+~
+~
+0 -1 11152
+D6
+~
+~
+0 -1 11101
+S
+#11105
+Following the Path~
+You are on a dirt path nearing the river Khelorn to the southeast and
+ascending a ridge to the north.  The ridge to the north is dominated by a 
+gigantic willow tree that seems to almost touch the sky.  To the east and west
+the forest hugs the path closely, and to the southeast lies the Khelorn Ford.
+~
+0 0 2 2
+D0
+~
+~
+0 -1 11101
+D8
+~
+~
+0 -1 11106
+S
+#11106
+Fording the Khelorn~
+You are standing in a shallow area of the icy waters of the Khelorn river. You
+notice several small animals in the murky waters, and wonder what you would
+find further downstream. The river flows in from the southwest and flows to
+the east.  You can also follow the path northwest towards the forest or south
+towards the western plains.
+~
+0 0 2 0
+D1
+~
+~
+0 -1 11107
+D2
+~
+~
+0 -1 11109
+D7
+~
+~
+0 -1 11105
+D9
+~
+~
+0 -1 11108
+S
+#11107
+West of the Ford~
+The Khelorn narrows here as a ridge to the north approaches, causing it to
+deepen and increase in speed.  To the west you see the Fords where it is 
+possible to walk across the river. The river flows on to the southeast where
+a small path approaches the northern bank.
+~
+0 0 6 0
+D1
+~
+~
+0 -1 11159
+D3
+~
+~
+0 -1 11106
+> rand_prog 50~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11159
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11108
+A Bend in the Khelorn~
+You are standing at a bend in the Khelorn river, which flows in from the west
+and widens out to the northeast.  There is a well-travelled crossing to the 
+northeast also.  To the east there is a lightly-travelled path that joins the
+main trail from New Hope to the forests of the north.  To the north and south
+lies a swampy wetland forest and to the west the river snakes its way too and
+fro back to its source.
+~
+0 0 6 0
+D1
+~
+~
+0 -1 11109
+D3
+~
+~
+0 -1 11115
+D6
+~
+~
+0 -1 11106
+> rand_prog 25~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the northeast by the current.
+mpechoat 0.$r You drift to the northeast.
+mptransfer 0.$r 11106
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11109
+South of the Ford~
+You are travelling upon a dusty winding path through the beginnings of a large
+forest. To the north, the Khelorn has widened enough to make foot traffic
+possible, and to the east there is a small trail leading to a bend in the
+river.  The main path continues on to the southeast. It would appear that the
+local wildlife has taken advantage of this path due to the many tracks along
+it.
+~
+0 0 2 0
+D0
+~
+~
+0 -1 11106
+D3
+~
+~
+0 -1 11108
+D8
+~
+~
+0 -1 11111
+S
+#11110
+In the Branches~
+You are in the branches upon the western side of the giant willow tree. Most of
+the branches are very thick...many thicker than you are tall. The trunk has
+some unusual markings upon it and several cracks.  You cannot clearly see
+beyond the ridge upon which the willow sits due to the amount of foliage upon
+the outer limbs.
+~
+0 4 3 1
+D0
+~
+~
+0 -1 11163
+D1
+~
+~
+0 -1 11167
+D3
+~
+~
+0 -1 11166
+D5
+~
+~
+0 -1 11103
+D6
+~
+~
+0 -1 11161
+D7
+~
+~
+0 -1 11165
+S
+#11111
+A Dusty Trail~
+You are on a wandering dusty path as it emerges from the forest and enters
+a prarie.  To the distant southeast you see a range of mountains rising up
+and beckoning you onwards.  The trail here bends around a large boulder the
+size of a house and continues to the forest to the northwest and to another
+bend to the southwest.
+~
+0 0 2 3
+D7
+~
+~
+0 -1 11109
+D9
+~
+~
+0 -1 11146
+S
+#11112
+Rocky Slope~
+You are standing about halfway down the ravine, on a narrow path weaving
+amongst scattered boulders and trees.  To the south you see the top of the
+ravine and the start of the grassy plains.
+~
+0 0 2 0
+D2
+~
+~
+0 -1 11113
+D6
+~
+~
+0 -1 11138
+S
+#11113
+On the Top of the Ravine~
+You are standing at the top of a long ravine that slopes gently downward to the
+north. To the south lies an almost endless sea of grass known as the great
+western plains. Looking around you notice many boulders haphazardly scattered
+along the landscape an small animals scurrying to an fro.
+~
+0 0 2 4
+D0
+~
+~
+0 -1 11112
+D9
+~
+~
+0 -1 11114
+S
+#11114
+Approaching a Ravine~
+As you stand looking northwards, the landscape is broken by a shadowy forest 
+to the north that descends gently into a small ravine.  To the south, the great
+plains roll on for many leagues.
+ 
+~
+0 0 2 2
+D6
+~
+~
+0 -1 11113
+D9
+~
+~
+0 -1 11018
+S
+#11115
+The Khelorn Widens~
+The Kyorlin flows much more gently here than it does to the west as the river
+continues to widen. To the east you see that it widens even more until it
+looks as it might even be possible to walk across.  A large ridge blocks all
+travel to the north and the southern shore is so thick with brush and brambles
+that it offers no hope of a landing.
+~
+0 4 6 0
+D1
+~
+~
+0 -1 11108
+D3
+~
+~
+0 -1 11151
+> rand_prog 25~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift to the east.
+mptransfer 0.$r 11108
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11116
+Cave Entrance~
+You are standing in front of a large cave that appears to be the home of some
+type of animal. To the southwest, you see a path leading around a ridge. There
+are brambles and bushes growing thickly around you making travel in any other
+direction impossible.
+~
+0 4 3 0
+D7
+~
+~
+0 -1 11150
+D9
+~
+~
+0 -1 11118
+S
+#11117
+The Khelorn Narrows~
+You are upon the turbulent Khelorn.  To the east the river narrows and gains
+even more speed.  There is a small beach to the north and a trail beyond it.
+To the northwest the river slows and widens as it turns.
+~
+0 4 7 3
+D0
+~
+~
+0 -1 11118
+D1
+~
+~
+0 -1 11119
+D7
+~
+~
+0 -1 11159
+> rand_prog 70~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11119
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11118
+The Shores of the Khelorn~
+You are standing upon a trail that follows the northern shore of the khelorn.
+To the south the trail descends gently to the river.  To the northeast you see
+a dark cave, and to the northwest the trail continues around a ridge.
+~
+0 4 3 0
+D2
+~
+~
+0 -1 11117
+D6
+~
+~
+0 -1 11116
+D7
+~
+~
+0 -1 11149
+S
+#11119
+Entering the Rapids~
+The Khelorn tosses you almost as if you weighed less than a feather here, and
+the steep sided banks almost fly by as you struggle to keep from getting
+thrown from into the rocks and drowned.  You could attempt to struggle upstream
+and out of the rapids but to do so would be a challenged even for the most 
+seasoned adventurer, or you could proceed onwards praying that somehow you 
+survive this trip throught the whitewaters of the Khelorn.
+~
+0 4 7 0
+D1
+~
+~
+0 -1 11120
+D3
+~
+~
+0 -1 11117
+> rand_prog 100~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11120
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11120
+Tumbling Upon the Whitewater~
+As you tumble about upon the Khelorn you wonder what foolishness ever provoked
+you to make this journey.  Everything you have carried with you is drenched,
+and the river's unrelenting will is bringing you close to the breaking point.
+The high banks to the north and south offer no hope of a reprieve your only hope
+is to proceed upstream to the west or further downstream to the east and hope
+that your luck holds out.
+~
+0 4 7 0
+D1
+~
+~
+0 -1 11121
+D3
+~
+~
+0 -1 11119
+> rand_prog 100~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11121
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11121
+The Khelorn Widens~
+You are on the Khelorn river just before it enters Lake Khelorn.  To the
+northeast the shimmering waters of the lake reflect the sky almost perfectly.
+If legends are true, the bottom is solid crystal said to be awakened someday
+by one who's heart burns true with the courage of the ancients.  To the west
+you see the end of a stretch of whitewater.
+~
+0 0 7 0
+D3
+~
+~
+0 -1 11120
+D6
+~
+~
+0 -1 11122
+> rand_prog 50~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the northeast by the current.
+mpechoat 0.$r You drift northeast.
+mptransfer 0.$r 11122
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11122
+Upon Lake Khelorn~
+The river Khelorn flows in from the east and widens into a small lake.  The
+lake is very deep, and, although you cannot see to the bottom, is very clean.
+The surface is like a mirror due to its solid quartz bottom, causing it to 
+reflect back whatever is in the sky above. The lake continues to expand in a
+westerly direction, and to the east the river narrows into rapids.
+~
+0 0 6 4
+D1
+~
+~
+0 -1 11124
+D6
+~
+~
+0 -1 11123
+D8
+~
+~
+0 -1 11125
+D9
+~
+~
+0 -1 11121
+S
+#11123
+Along the Northern Shore~
+You are upon the northeastern shore of the mirrorlike lake Khelorn.  There is
+an impenatrable forest to the north, and to the southwest you see the end of
+the Khelorn River.  To the distant west you see a large pile of boulders into
+which the lake appears to flow.
+~
+0 0 6 1
+D1
+~
+~
+0 -1 11127
+D2
+~
+~
+0 -1 11124
+D6
+~
+~
+0 -1 11126
+D8
+~
+~
+0 -1 11128
+D9
+~
+~
+0 -1 11122
+S
+#11124
+Crossing Lake Khelorn~
+You are near the center of the mirrorlike Lake Khelorn.  To the west the river
+Khelorn plows endlessly into the lake, ensuring that it will never run dry. 
+To the north there is a dark forest embracing the shoreline, and to the south
+the ground rises in a forested slope.
+~
+0 0 6 1
+D0
+~
+~
+0 -1 11123
+D1
+~
+~
+0 -1 11128
+D2
+~
+~
+0 -1 11125
+D3
+~
+~
+0 -1 11122
+D6
+~
+~
+0 -1 11127
+D8
+~
+~
+0 -1 11129
+S
+#11125
+Along the Southern Shore~
+The Mirror-like Khelorn is slowly pulled to the northeast by a gentle current.
+To the south a light forest descends a large hill to surround the lake, and to
+The north you see a dark, forboding forest closing in.  As you stare into the
+lake, you think you catch a momentary glimpse of something on the bottom, but
+it is gone so quick you are left wondering if you really saw anything at all.
+To the northwest lies the mouth of the river Khelorn, on its endless course of
+plodding into the lake.
+~
+0 0 6 1
+D0
+~
+~
+0 -1 11124
+D1
+~
+~
+0 -1 11129
+D6
+~
+~
+0 -1 11128
+D7
+~
+~
+0 -1 11122
+D8
+~
+~
+0 -1 11130
+S
+#11126
+Northernmost Shores~
+You are standing upon the northern most point of Lake Khelorn.  To the north
+the forest embraces the lake tightly, and to the south the mirror-like lake
+present you with a replica of the sky.  To the southeast you see a cave within
+a large pile of boulders, and to the distant southwest you see the lake narrow
+to a single inlet: the Khelorn River.
+~
+0 0 6 1
+D2
+~
+~
+0 -1 11127
+D8
+~
+~
+0 -1 11133
+D9
+~
+~
+0 -1 11123
+S
+#11127
+North of the Center~
+You are crossing lake Khelorn slightly to the north of its center.  To the east
+you can distinctly make out a cave into which the river appears to flow, and 
+to the west, the mouth of the Khelorn keeps the lake filled.  The northern 
+shore is covered with a thick forest and the southern shore is lightly forested
+and rises quickly into a mountain-like ridge.
+~
+0 0 6 0
+D0
+~
+~
+0 -1 11126
+D1
+~
+~
+0 -1 11133
+D2
+~
+~
+0 -1 11128
+D3
+~
+~
+0 -1 11123
+D8
+~
+~
+0 -1 11132
+D9
+~
+~
+0 -1 11124
+S
+#11128
+Center of the Lake~
+You have reached the center of lake Khelorn.  The surface appears like a mirror
+and reflects back the sky. To the north a great dark forest stretches its 
+arms around the lake, and to the south a lightly forested ridge butts up 
+against the lake. To the southeast, you think you can make out a trail leading
+away from the shore, and to the distant west you see the mouth of the river
+Khelorn as it flows constantly into the lake. To the northeast you see a cave
+that roars as the waters of the lake pour into it.
+~
+0 0 6 1
+D0
+~
+~
+0 -1 11127
+D1
+~
+~
+0 -1 11132
+D2
+~
+~
+0 -1 11129
+D3
+~
+~
+0 -1 11124
+D6
+~
+~
+0 -1 11133
+D7
+~
+~
+0 -1 11123
+D8
+~
+~
+0 -1 11131
+D9
+~
+~
+0 -1 11125
+S
+#11129
+Approaching the Southern Shore~
+You are south of the center of the Lake Khelorn, close to the southern shores.
+To the east there is a path upon the beach, leading into the eastern marsh.
+To the distant west you see the mouth of the Khelorn emptying in the lake.  
+To the south, there is a lightly-forested shore that rises quickly into a high
+ridge cutting off any attempts to view what lies in that direction.  To the 
+north a dark shadowy forest embraces the lake and holds it tightly in its
+grasp, only breaking when it encounters the river to the west and the stone
+walls of the cave in the east.
+~
+0 0 6 3
+D0
+~
+~
+0 -1 11128
+D1
+~
+~
+0 -1 11131
+D2
+~
+~
+0 -1 11130
+D3
+~
+~
+0 -1 11125
+D6
+~
+~
+0 -1 11132
+D7
+~
+~
+0 -1 11124
+S
+#11130
+Southernmost Shore~
+You are upon lake Khelorn where it touches its southernmost point.  Just off
+the shore a light forest begins and travels upwards to the top of a ridge. To
+the northeast, there is a trail leading into the wetlands that lie upon the
+southeastern edge of the lake. In the distance, the northern shore is covered
+in a thick haze that makes the individual trees of the thick forest surrounding
+that end of the lake blur together into one giant green strip.  To the east
+the river empties into a small cave, and to the west, the river Khelorn ensures
+that the lake will not run dry.
+~
+0 0 6 1
+D0
+~
+~
+0 -1 11129
+D6
+~
+~
+0 -1 11131
+D7
+~
+~
+0 -1 11125
+S
+#11131
+Upon Lake Khelorn~
+You are upon the mirrorlike waters of the Khelorn Lake.  Although called a lake
+it is more accurately a very wide section of the Khelorn River caused by the
+restricting of its flow as it enters a cave system far to the north.  To the
+south you see a lightly forested ridge that rises high, and to the southeast
+you see a marshy trail that leads to the lands beyond the ridge.  Along the
+northern shore is a great dark forest that is covered in a thick haze, and far
+to the west you see the mouth of the Khelorn river as it constanly fills the 
+lake on its endless journey from the west.
+~
+0 0 6 3
+D0
+~
+~
+0 -1 11132
+D3
+~
+~
+0 -1 11129
+D6
+~
+~
+0 -1 11134
+D7
+~
+~
+0 -1 11128
+D8
+~
+~
+0 -1 11135
+D9
+~
+~
+0 -1 11130
+S
+#11132
+Traversing the Lake~
+You are travelling upon the western side of Lake Khelorn.  The sudden splash
+of a nearby fish makes you jump as you were unable to see anything below the
+mirror like surface.  To the north there is a dark cave into which the waters 
+of the lake empty, and to the west the lake narrows to meet the mouth of the
+Khelorn river.
+~
+0 0 6 1
+D0
+~
+~
+0 -1 11133
+D1
+~
+~
+0 -1 11134
+D2
+~
+~
+0 -1 11131
+D3
+~
+~
+0 -1 11128
+D7
+~
+~
+0 -1 11127
+D9
+~
+~
+0 -1 11129
+S
+#11133
+Before the Cave~
+You are before the cave into which the lake Khelorn empties, into which only
+a very brave or foolish adventurer would dare to enter.  Rumors of the riches
+that may lie within are the source of many tales you remember from childhood,
+but there are certainly dangers untold within and you should only enter with
+the greatest of caution.  The lake continues to the west and south.
+~
+0 0 6 0
+D2
+~
+~
+0 -1 11132
+D3
+~
+~
+0 -1 11127
+D6
+~
+~
+0 -1 11168
+D7
+~
+~
+0 -1 11126
+D8
+~
+~
+0 -1 11134
+D9
+~
+~
+0 -1 11128
+S
+#11134
+Westernmost Shores~
+You are upon the western shores of Lake Khelorn where the clean waters of the
+lake give way to the surrounding marshlands and swamps.  To the distant east
+you think you can make out a few of the larger headstones and tombs of the
+New Hope graveyard through the mists.  To the southwest there is a small trail
+that leads around the ridge that dominates the southern shore, and to the 
+northwest, you see a cave into which the waters of the lake flow.
+~
+0 0 6 0
+D3
+~
+~
+0 -1 11132
+D7
+~
+~
+0 -1 11133
+D9
+~
+~
+0 -1 11131
+S
+#11135
+On the Shore~
+You have reached the shores of Lake Khelorn.  This lake marks the end of the
+Khelorns journey from the mountainous highlands to the west.  To the northwest
+you can proceed onto the surface of the lake, and to the west there is a small
+hut with several boats sitting in the yard.
+~
+0 0 2 3
+D2
+~
+~
+0 -1 11136
+D3
+~
+~
+0 -1 11158
+D7
+~
+~
+0 -1 11131
+S
+#11136
+The Khelorn Marsh~
+You are upon a seldom-travelled trail through the Khelorn Marsh.  To the 
+southwest the ground seems somewhat drier and looks like the beginning of a
+forest.  To the north the marsh continues to the shores of the Khelorn Lake.
+~
+0 0 3 1
+D0
+~
+~
+0 -1 11135
+D9
+~
+~
+0 -1 11137
+S
+#11137
+Into a Wetland Forest~
+You are upon a lightly-travelled trail leading into a forested marsh to the
+northeast.  To the west you see the intersection of three paths. The trees
+here are a different type than you would find on higher ground and the ground
+off of the trail looks like it may be somewhat unsafe to travel upon.
+~
+0 0 3 2
+D3
+~
+~
+0 -1 11138
+D6
+~
+~
+0 -1 11136
+S
+#11138
+Intersection of Paths~
+You are at an intersection of paths within the ravine.  To the southwest lies
+a trail leading out of the forest into the Western Plains.  To the east, the
+the trail continues deeper into the forest and to the northwest the trail goes
+deeper into the ravine.
+~
+0 0 2 3
+D1
+~
+~
+0 -1 11137
+D7
+~
+~
+0 -1 11139
+D9
+~
+~
+0 -1 11112
+S
+#11139
+Deep in the Ravine~
+You are on a dirt trail deep within a forested ravine.  To the west the trail
+rises somewhat as the ravine comes to an end, and to the southeast you see
+an intersection of paths. To the north lies a dark, impenetrable forest, and
+to the south the ravine rises quickly through a heavy thicket towards the plain
+
+~
+0 0 3 2
+D3
+~
+~
+0 -1 11140
+D8
+~
+~
+0 -1 11138
+S
+#11140
+Emerging from a Ravine~
+You are standing on a trail at the end of a fertile ravine.  To the southwest,
+the trail rises into the foothills, and to the east it delves deeply into the
+forested ravine.  The trees are sparse to the south and to the north a dark
+forest rises.
+~
+0 0 2 1
+D1
+~
+~
+0 -1 11139
+D9
+~
+~
+0 -1 11141
+S
+#11141
+Before the Mountains~
+You are standing upon a dusty path as it begins its ascent into the foothills.
+To the south you see the beginnings of a range of mountains that climbs higher
+to the southwest. Your view to the north is blocked by the lush forests 
+surrounding the Khelorn.  The trail you are upon rises to the northwest and
+enters a ravine to the northeast.
+~
+0 0 4 3
+D6
+~
+~
+0 -1 11140
+D7
+~
+~
+0 -1 11142
+S
+#11142
+A Mountian Path~
+The path you are on curves back south towards the mountains at this point,
+descending to the southeast and rising to the southwest. To the north is a 
+steep cliff and in the distance you see the Khelorn flowing along its trek.
+The craggy peaks to the south loom ominously and you think you see smoke rise
+from somewhere within their bounds...perhaps a forgotten settlement or maybe
+something darker from within the mountains themselves.
+~
+0 0 5 3
+D2
+~
+~
+0 -1 11183
+D8
+~
+~
+0 -1 11141
+D9
+~
+~
+0 -1 11143
+S
+#11143
+Small Field.~
+You have reached the top of a large foothill or small mountain.  There is
+a small field here upon its level top. To the northwest and northeast the path
+descends into a forested river valley. In the distance to the north You see
+the Khelorn twisting its way to a small lake and then disappearing.  To the
+south the mountains loom high above and you notice several eagles flying high
+hunting for prey.
+~
+0 0 2 3
+D6
+~
+~
+0 -1 11142
+D7
+~
+~
+0 -1 11144
+S
+#11144
+Winding Through the Foothills~
+The rocky path begins to wind up among the taller foothills and between 
+boulders the size of houses.  To the southwest it is possible to descend back
+down the trail into a forested valley. To the southeast the path becomes more
+treacherous as it continues its climb to a small plateau amidst the foothills.
+~
+0 0 4 2
+D8
+~
+~
+0 -1 11143
+D9
+~
+~
+0 -1 11145
+S
+#11145
+Alpine Trail~
+The trail you are standing on slowly climbs into the mountainous foothills to
+the northeast and continues on to the northwest to gentler terrain.  Dark
+forboding mountains lurk above you and you get the constant feeling that 
+someone or something is watching you.
+~
+0 0 5 3
+D6
+~
+~
+0 -1 11144
+D7
+~
+~
+0 -1 11146
+S
+#11146
+A Rocky Trail~
+You are upon a rocky trail as it enters the foothills.  To the southeast,
+the trail enters rougher terrain as it approaches the mountains and to the 
+northeast travel becomes easier as you draw close to the Khelorn river valley
+and the forests surrounding it.
+~
+0 0 4 0
+D6
+~
+~
+0 -1 11111
+D8
+~
+~
+0 -1 11145
+S
+#11147
+A Path Around the Ridge~
+The path you are upon bends around the side of the ridge to the west and the 
+southeast.  To the west you see another turn in the trail and to the southeast
+the trail passes the flank of the ridge and continues to the south.  Upon the
+ridge and extending over your head is a willow tree of enormous proportions. 
+~
+0 0 3 1
+D3
+~
+~
+0 -1 11102
+D8
+~
+~
+0 -1 11148
+S
+#11148
+Along the Western Side~
+You are wandering upon a lightly-travelled path that leads around the western
+side of a ridge. To the south, The path turns away from the ridge and starts
+to head towards the river, and to the northwest the path turns to go around
+the northern face of the ridge.
+~
+0 0 3 0
+D2
+~
+~
+0 -1 11149
+D7
+~
+~
+0 -1 11147
+S
+#11149
+The Path Continues~
+You are upon a lightly travelled path following the western edge of a steep
+hill.  To the southeast the path veers sharply away from the ridge and joins
+with a path made by some large animal before continuing on to the south.  To
+the north the path proceeds back along the western side of the hill, and your
+attention is immediately drawn to an extremely large willow that stretches
+over the hill.
+~
+0 0 3 0
+D0
+~
+~
+0 -1 11148
+D8
+~
+~
+0 -1 11118
+S
+#11150
+A Dark Cave~
+You are in a large cavern that looks to be the home of a large animal or
+perhaps a small group of large animals.  There is a large pile of bones along
+the back wall of the cave, and a nest of some type sits on the eastern side.
+The entrance to the cave lies to the southeast.
+~
+0 0 13 0
+D8
+~
+~
+0 -1 11116
+S
+#11151
+Upon the Khelorn~
+The Khelorn flows lazily by as you study the nearby landscape. To the north
+there is a faint trail leading into the forest, while to the south there is
+a sharp rise covered with brambles. Upstream of you to the northwest you see
+a bend in the river and to the east the river continues on.
+~
+0 0 6 0
+D0
+~
+~
+0 -1 11152
+D1
+~
+~
+0 -1 11115
+D7
+~
+~
+0 -1 11153
+> rand_prog 30~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift to the southeast.
+mptransfer 0.$r 11115
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11152
+A Path Seldom Travelled~
+You are on an overgrown, faint trail leading into the forest.  To the south 
+you see the banks of the river Khelorn.  To the north the path continues into
+the forest and the many trees obstruct your vision.
+~
+0 0 1 1
+D0
+~
+~
+0 -1 11104
+D2
+~
+~
+0 -1 11151
+S
+#11153
+A Bend in the Khelorn~
+As you round another bend in the Khelorn, you notice that the river has become
+much wider and calmer.  The forest to the north has thinned someone and you
+can now see some larger shadows moving in the background.  The river continues
+on to the southeast.  To the west, the river exits a small canyon.
+~
+0 0 6 0
+D3
+~
+~
+0 -1 11154
+D8
+~
+~
+0 -1 11151
+> rand_prog 50~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift to the southeast.
+mptransfer 0.$r 11152
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11154
+The Widening of the Khelorn~
+The gully which the Khelorn has carved for itself begins to widen here.
+Though the current is still much to swift to safely swim, it has become much
+easier to navigate.  You can now see more clearly the forest that lines both
+sides of the river and several animals moving to and fro amongst the branches.
+~
+0 0 7 0
+D1
+~
+~
+0 -1 11153
+D7
+~
+~
+0 -1 11155
+> rand_prog 80~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11153
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11155
+Through the Rapids~
+You are being tossed to and fro as you attempt to travel farther upon the 
+Khelorn.  To the west, the rapids continue, though they appear to let up
+a little to the southeast.  The Khelorn cuts its way through the surrounding
+forest here, leaving steep impenetrable bramble covered slopes on both sides.
+~
+0 0 7 2
+D3
+~
+~
+0 -1 11156
+D8
+~
+~
+0 -1 11154
+> rand_prog 100~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the southeast by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11154
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11156
+The Turbulent Khelorn~
+The Khelorn speeds on to the east, carrying with it anything caught within its
+grasp.  Cattails grow high along both shores all but obstructing the view of
+the forest that lies beyond.  To the northwest you see a split in the river
+but the current makes travel in that direction nearly impossible.
+~
+0 0 7 0
+D1
+~
+~
+0 -1 11155
+D7
+~
+~
+0 -1 11157
+> rand_prog 100~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the east by the current.
+mpechoat 0.$r You drift east.
+mptransfer 0.$r 11155
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11157
+Upon the Khelorn~
+You are upon the turbulent Khelorn river just beyond where it splits off from
+its nameless parent and proceeds to the southeast.  The current here is very
+swift, making these waters a challenge for even an experienced boatman.
+~
+0 4 7 0
+D8
+~
+~
+0 -1 11156
+S
+#11158
+The Boatman's Hut~
+You are standing in a rundown hut with more than a couple holes in the roof.
+in the far corner sits a bed, which is also one of the few places the roof 
+appears in good condition.  There is a fire going in the fire place and scraps
+of wood lie over the floor.  You get the impression that the owner is no longer
+as able to take care of the place as he once was, but it would appear that he
+still excells at his trade, at least from what you saw upon his lawn.
+~
+0 0 0 0
+D1
+~
+~
+0 -1 11135
+S
+#11159
+A Bend in the Khelorn~
+The Khelorn flows swiftly here as the northern bank pushes it to the south.
+Along the top of the bank you noticed a trail, but you do not see a way to 
+reach it from here.  To the west the river widens and to the southeast it 
+continues to narrow and gain speed.
+~
+0 0 7 0
+D3
+~
+~
+0 -1 11107
+D8
+~
+~
+0 -1 11117
+> rand_prog 60~
+if isaffected($r) != Flying
+else
+mpechoaround 0.$r $r is carried to the southeast by the current.
+mpechoat 0.$r You drift southeast.
+mptransfer 0.$r 11117
+mpat 0.$r mpforce 0.$r look
+endif
+~
+|
+S
+#11160
+Local SuperMob's office~
+~
+0 4 1 0
+S
+#11161
+Out on a Limb~
+You are on a limb that hangs over a small path.  The limb is far narrower than
+it was closer to the trunk and sways gently in the wind.  Perhaps you should
+return to the trunk before a strong gust of wind comes along and knocks you off
+~
+0 0 3 0
+D9
+~
+~
+0 -1 11110
+> rand_prog 50~
+mpechoat $r A strong gust of wind causes the branch to sway unpredictably, causeing you to plummet towards the ground.
+mptransfer 0.$r 11162
+mpat 0.$r mpforce 0.$r look
+~
+|
+S
+#11162
+Falling to the ground~
+As you fall towards the ground, you attempt to brace yourself for impact, now
+would be a good time to seek assistance if any is available to you, for you
+have only moments before impact.
+~
+0 2105476 9 0
+> rand_prog 100~
+if isaffected($r) == Flying
+mpechoat 0.$r You float gently to the ground.
+mptransfer 0.$r 11147
+else
+mpechoat 0.$r *red That really hurt!!!!
+mpdamage 0.$r 50
+mptransfer 0.$r 11147
+endif
+mpat 0.$r mpechoaround 0.$r $r falls onto the trail from above.
+~
+|
+S
+#11163
+A Weak Branch~
+You are on a thin, weak branch that comes off the side of the large western
+branch of the willow. To the southeast you see the trunk of the tree, and all
+around leaves and branches block your view in almost every direction.  Directly
+below you, you see a faint trail leading around the ridge that the willows 
+grows upon.
+~
+0 0 3 0
+D2
+~
+~
+0 -1 11110
+> rand_prog 100~
+mpecho The branch you are on breaks with a loud crack...
+if isaffected($r) == Flying
+mpechoat 0.$r As the branch falls away, you are left floating in mid air.
+mptransfer 0.$r 11164
+else
+mpechoat 0.$r You plunge to the ground, where your fall is somewhat broken by t
+e branch you were standing upon.
+mpdamage 0.$r 20
+mptransfer 0.$r 11102
+endif
+mpat 0.$r mpforce 0.$r look
+~
+|
+S
+#11164
+Floating in Mid-Air~
+AAs the branch falls away, you are left floating in mid air over the trail.
+You noticed that descending downwards is now possible or you may return to the
+willows trunk.
+~
+0 0 1 0
+D2
+~
+~
+0 -1 11110
+D5
+~
+~
+0 -1 11102
+S
+#11165
+A Filthy Nest~
+This limb of the willow seems to be occupied by a group of very dirty half-
+human half- bird creatures. It would appear that sanitation is a foriegn concept
+to them at least judging from the way they have fouled-up their home.  There
+are several piles of bones scattered about and you hear a vicious sqwaking 
+sound coming from above.
+~
+0 0 3 0
+D8
+~
+~
+0 -1 11110
+S
+#11166
+Over a Small Clearing~
+You are upon a large branch overhanging a clearing in the center of the ridge.
+To the north you think you see movement amoungst the branches that cannot be
+explained by the wind.  To the east, you can return to the trunk of the willow.
+~
+0 0 3 0
+D1
+~
+~
+0 -1 11110
+S
+#11167
+Inside the Willow's Trunk~
+You are inside the hollow trunk of the giant willow.  The immense trunk has
+been slowly hollowed out over the years and appears to have been the home of
+several creatures, but has recently fallen into the possession of the harpies.
+Unlike their nest in the branches of the tree, the inside of the trunk is 
+spotless and well-kept.  In a corner there is a pile of items that the harpies
+have deemed worth saving and hid within.
+~
+0 0 1 1
+D3
+~
+~
+0 -1 11110
+S
+#11168
+Inside the Cave~
+You are in a large cave into which the Lake Khelorn drains. At the eastern
+side of the room there is a giant waterfall, and the current is very strong.
+You get the feeling you should leave quickly if you are not prepared.
+~
+0 4 13 0
+D9
+~
+~
+0 -1 11133
+S
+#11169
+Floating in a void~
+~
+0 4 1 0
+S
+#11170
+Floating in a void~
+~
+0 4 1 0
+S
+#11171
+Floating in a void~
+~
+0 4 1 0
+S
+#11172
+Floating in a void~
+~
+0 4 1 0
+S
+#11173
+Before the flaming gates~
+Two giant doors stand before you, streaching to an archway upon which is 
+scribed:
+Through me you pass into the city of woe:
+Through me you pass into eternal pain:
+Through me amoung the people lost for aye.
+Justice the founder of my fabric moved:
+To rear me was the task of power divine,
+Supremest wisdom, and primeval love.
+Before me things create were none, save things
+Eternal, and eternal I endure.
+All hope abandon, ye who enter here.
+~
+0 12 0 100
+D1
+~
+~
+0 -1 11174
+D3
+~
+~
+0 -1 12500
+D5
+~
+~
+0 -1 1
+S
+#11174
+Coders Sanctum~
+You are within the inner sanctum of the coders.  To the west you can return to
+the main council room.  Before you is a room filled with almost every 
+concievable comfort you can immagine, probably a result of the endless creation
+taking place within.
+~
+0 1075838980 0 4
+D3
+~
+~
+0 -1 11173
+S
+#11175
+Down the Waterfall~
+You are clinging to the walls of the cave as the water from Lake
+Khelorn rushes past you on all sides.  You pray that you can reach
+safety before you loose your grip and into the depths below.  There is
+a small ledge upon the east side of the cave, which perhaps you could
+reach if you are careful.
+~
+0 16777220 13 0
+D1
+~
+~
+256 -1 11178
+D4
+~
+~
+0 -1 11168
+D5
+~
+~
+0 -1 11176
+S
+#11176
+Crushed upon the rocks~
+You find your self forced downward into the rocks as the cavern narrows.
+There is very little room left to escape the torrent of the water fall
+and you feel you better move quickly if you do not wish to die.
+~
+0 260 13 0
+D4
+~
+~
+0 -1 11175
+> rand_prog 99~
+if mortinroom($r)
+mpecho The crushing force of the water is too much for you!
+mpdamage 0.$r 50
+endif
+~
+|
+S
+#11177
+&wThe Guardian looks you over.~
+~
+0 1613758468 1 0
+> entry_prog 100~
+mptransfer $n 11185
+mpat 0.$n mpforce 0.$n look
+~
+|
+S
+#11178
+Behind the Waterfall~
+You stand within a circular chamber behind the waterfall.  There are
+tunnels leading to the southwest and northwest, and you notice that
+they seem to glow softly.  To the west, you can exit to the waterfall.
+~
+0 4 13 0
+D3
+~
+~
+0 -1 11175
+D7
+~
+~
+0 -1 11179
+D9
+~
+~
+0 -1 11181
+S
+#11179
+Into the Glowing Tunnel~
+You are within a tunnel that slopes slightly downward to the southwest.
+To the southeast you hear the sound of rushing water.  All around you,
+the walls of the tunnel eminate a soft glow.
+~
+0 4 13 0
+D8
+~
+~
+0 -1 11178
+D9
+~
+~
+0 -1 11180
+S
+#11180
+A Forboding Entrance~
+You are deep within the crystal floor of Lake Khelorn.  To the northeast
+and southeast, you can return to the outside world.  To the west the tunnel
+continues.  You sense something very evil in that direction, and feel that
+a true test of your courage and endurance lies within.
+~
+0 4 13 0
+D3
+~
+~
+0 -1 11182
+D6
+~
+~
+0 -1 11179
+D8
+~
+~
+0 -1 11181
+S
+#11181
+Into the Glowing Tunnel~
+You are within a tunnel that slopes slightly downward to the northwest.
+To the northeast you hear the sound of rushing water.  All around you,
+the walls of the tunnel eminate a soft glow.
+~
+0 4 13 0
+D6
+~
+~
+0 -1 11178
+D7
+~
+~
+0 -1 11180
+S
+#11182
+Challenge Entrance~
+You stand in a large room.  Beyond this point lies the quest area
+of the Khelorn.  These quests are intended to be solved individually,
+without aid or direction from others.  These challenges shall test your
+courage and character and you will recieve a reward based upon your
+class.
+~
+0 4 13 0
+D1
+~
+~
+0 -1 11180
+D3
+~
+~
+16384 -1 11177
+S
+#11183
+A Hidden Pass~
+You are on a hidden pass as it winds its way through the mountains. To
+the north, the path descends sharply to join the main trail around the
+Khelorn.  To the southeast it winds into the mountains farther.
+~
+0 0 5 0
+D0
+~
+~
+0 -1 11142
+D8
+~
+~
+0 -1 11184
+S
+#11184
+End of the Trail~
+A trail coming from the main road through the khelorn marsh ends at a
+mountain side to the east. It appears that the trail may have once entered
+the mountain but it is now buried under a landslide.
+~
+0 4 5 3
+D5
+~
+drow temple lloth~
+3 -1 650
+D7
+~
+~
+0 -1 11183
+S
+#11185
+Room One of the Khelorn Challenge~
+You stand within a large tunnel before the first guardian of the Khelorn
+Challenge. You know you must beat this mob and carry its badge to the 
+end to recieve your prize. Many adeventures have turned back from this room,
+since it is the last for which such escape is possible.
+~
+0 1076888068 0 0
+D1
+~
+~
+0 -1 11182
+D3
+~
+~
+16384 -1 11186
+S
+#11186
+Room Two of the Khelorn Challenge~
+You have made it to the second room of the expedition.  From this point
+on, you cannot turn back, and must continue forward fighting through
+what lies ahead. Off to the side of the path, you see the remains of many
+that have failed at this. Hopefully you will fair better.
+~
+0 1076895748 0 0
+D3
+~
+~
+16384 -1 11187
+S
+#11187
+Room Three of the Khelorn Challenge~
+You are in the third room of the Khelorn challenge. Getting even this
+far has been quite an acomplishment by itself, but greater challenges lie
+ahead, ones that will test your skills and ability as nothing has thus far.
+~
+0 1076895748 0 0
+D3
+~
+~
+16384 -1 11188
+S
+#11188
+Room Four of the Khelorn Challenge~
+You are in the fourth room of the Khelorn Challenge, and begining to 
+doubt the wisdom of entering this place. But as you can only go forwards,
+you feel compelled to try.
+~
+0 1076895748 0 0
+D3
+~
+~
+16384 -1 11189
+S
+#11189
+Room Five of the Khelorn Challenge~
+You are in the fifth and currently final room of the challenge. It looks
+as if future expansion is planned, judging from the pile of debris to the
+west, but currently there is not. Hopefully you have all of your badges
+intact still for the room of questions lies to the north.
+~
+0 1076895748 0 0
+D0
+~
+~
+16384 -1 11190
+S
+#11190
+A Final Test~
+As you look around the room and wonder what to do next, a booming voice
+calls out, "What is the name of the armorer in New Hope." Pondering this
+question you realize a series of signs over the exit. To the southwest,
+there is a sign that says Ksidorn, to the west there is a sign that says
+Garloc, to the northwest, there is a sign that says Kyorlin, to the north,
+there is a sign that says Zack, to the northeast, there is a sign that says
+Riverwind, to the east, there is a sign that says E'rant, to the southeast,
+there is a sign that says Sigil.
+~
+0 1076895748 0 0
+D0
+~
+~
+16384 -1 11194
+D1
+~
+~
+16384 -1 11196
+D3
+~
+~
+16384 -1 11191
+D6
+~
+~
+16384 -1 11195
+D7
+~
+~
+16384 -1 11193
+D8
+~
+~
+16384 -1 11197
+D9
+~
+~
+16384 -1 11192
+S
+#11191
+A Just Reward~
+No, that answer is incorrect, Garloc is the keeper of the alchemists shop.
+Your life shall be spared this time, but be more careful in the future.
+You find yourself flying up out of the lake and floating in a void.
+~
+0 1073741828 1 0
+> entry_prog 100~
+mptransfer $n 1
+mpat 0.$n mpforce 0.$n look
+~
+|
+S
+#11192
+A Just Reward~
+No, I'm sorry, for your incorrect answer, your life is spared this time, but
+you find yourself floating high above the world, before being zipped halfway
+across it to the void.
+~
+0 1073741828 1 0
+> entry_prog 100~
+mptransfer $n 1
+mpat 0.$n mpforce 0.$n look
+~
+|
+S
+#11193
+A Just Reward~
+No, Kyorlin is not a shop keeper of any form. The gods are less forgiving
+of this transgression than they were of many of the others. As you find
+yourself flying upwards, you notice your eq is melting away.
+~
+0 1073741830 1 0
+S
+#11194
+A Just Reward~
+You find yourself within a small chamber with a large sign nailed
+to the north wall. The sign says in large letters, WRONG ANSWER. Zack
+is the arms dealer of Tempra. You find yourself being forgivin for your
+ignorance this time and transported back to the void.
+~
+0 1073741828 1 0
+> entry_prog 100~
+mptransfer $n 1
+mpat 0.$n mpforce 0.$n look
+~
+|
+S
+#11195
+A Just Reward~
+You have choosen...Foolishly, there is not anyone by that name within the
+realm, and therefore you find yourself temporarlily sharing their oblivion.
+When you come to your weapons and armor are gone.
+~
+0 1073741830 1 0
+S
+#11196
+A Just Reward~
+A correct response! Congraliations.  For your prize, you must tell an 
+immortal or higher and they will award you a token, provided you have all
+5 of the badges.
+~
+0 1073741828 1 0
+S
+#11197
+A Just Reward~
+And just who the heck is this Sigil?  For he remains unknown to all. 
+Sometimes it doesn't pay to read signs tho. You find yourself hanging on
+the brink of a large pit of lava, until a sudden gust of wind comes along
+and knocks you in.
+~
+0 1073741830 1 0
+S
+#11198
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#11199
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+M 1 11100 1 11158
+G 1 11100 1
+M 1 11102 1 11160
+M 0 11106 10 11128
+M 0 11106 10 11122
+M 0 11105 4 11150
+M 0 11110 3 11148
+E 1 11103 1 16
+M 0 11107 5 11101
+E 1 11108 1 16
+E 1 11104 1 12
+M 0 11104 1 11165
+M 0 11109 1 11167
+E 1 11107 1 17
+M 0 11108 2 11144
+E 1 11105 1 17
+E 1 11106 1 6
+M 0 11106 20 11136
+O 0 11109 1 11173
+O 0 11110 1 11174
+M 0 11115 1 11142
+G 1 32215 1
+S
+
+
+#SHOPS
+ 11100   22  0  0  0  0   110  90         7 19    ; An ancient riverman
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  11100 spec_guard
+M  11103 spec_breath_gas
+M  11110 spec_thief
+M  11112 spec_puff
+S
+
+
+#$

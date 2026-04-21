@@ -1,0 +1,838 @@
+#AREA   The Encampment~
+
+
+
+#VERSION 214
+#AUTHOR Kyorlin~
+
+#RANGES
+1 50 1 115
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 28800478
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#301
+Gnoll Sentry~
+A gnollish Sentry~
+A large Gnollish sentry glares at you and scowls.
+~
+~
+33 0 0 C
+10 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 1
+0 0 0 0 0 0 0 0
+#302
+commander drow dark~
+The Commander~
+A dark-skinned drow commander glares at you in contempt.
+~
+~
+16777217 0 -1000 C
+20 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 3 0 0 3 2 2
+0 0 0 0 0 0 33554560 0
+#303
+half-giant stormtrooper~
+half-giant warrior~
+A half-giant warrior snarls at you and attacks!
+~
+~
+33 0 0 S
+5 0 0 0d0+0 0d0+0
+2 0
+108 108 0
+#304
+balor~
+a newly created balor~
+Some god abandoned a newly created balor here.
+~
+~
+1 369098880 0 C
+99 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 1056897 0 67109280 266339
+#305
+rabid squirrel~
+a rabid squirrel cackles madly and attacks~
+Some god abandoned a newly created rabid squirrel here.
+~
+~
+33 0 0 C
+1 0 0 1d1+100 1d1+1
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 1
+0 0 0 0 0 0 0 0
+#306
+ogre guard~
+an ogre sentry~
+An ogre stands guard here.
+~
+This burly goblinoid creature guards a key area of the tower's defense
+orcs may not be very intelligent but they are excellent tacticians and
+battle masters.
+
+~
+35 512 -800 C
+16 0 0 6d5+150 2d4+4
+9 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+53 0 0 0 0 0 0
+0 0 47 2097408 0 0 16 3
+#307
+goblin soldier~
+goblin soldier~
+A goblin soldier is preparing for war.
+~
+~
+33 0 0 C
+8 0 0 2d2+200 3d4+5
+1 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 1
+0 0 71 0 0 0 0 0
+#308
+mage drow~
+a drow mage~
+A tall drow mage stands ready to incinerate you!
+~
+~
+33 0 0 C
+30 0 0 0d0+0 0d0+0
+50 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 7424 0 268435456 8192
+#309
+goblin chieften~
+goblin chieftan~
+A battle-scarred goblin chieftan prepares to introduce you to new levels of pain!
+~
+~
+33 0 0 C
+20 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 15 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#301
+morning star~
+wooden morning star~
+A short wooden morning star lies in the dirt.~
+~
+5 0 8193
+12 2 4 7
+1 1 0 0
+#302
+leather boots~
+leather boots~
+A part of dark brown boots, covered in mud, are half buried in the ground.~
+~
+9 0 65
+0 0 0 0
+1 1 0 0
+#303
+token-quest~
+A quest token~
+The drow invasion quest token.~
+~
+13 128 16385
+0 0 0 0
+1 0 0 0
+E
+token~
+This token should be turned into a level 110+ immortal for 30 qp's.
+This is non transferable and may only be used by the character that finds it.
+~
+#304
+mithril chain~
+drow mithril chain~
+A large drow-made mithril chainmail sits upon the ground before you~
+~
+9 2627 9
+50 50 0 0
+1 50 5 0
+A
+18 2
+A
+19 2
+#305
+longsword drow long sword~
+a drow longsword~
+Some god dropped a newly created longsword drow here.~
+~
+5 6720 8193
+12 1 15 1
+1 5 0 0
+#306
+leggings mithril drow~
+mithril leggings~
+A pair of mithril leggings~
+~
+9 6723 33
+0 0 0 0
+1 5 0 0
+A
+18 1
+#307
+key cell commander drow rusty iron~
+rusty iron key~
+A rusty iron key lies here abandoned~
+~
+18 0 1
+0 0 0 0
+1 0 0 0
+#308
+ring mail~
+ring mail~
+A suit of stained ring mail armor is piled in a corner.~
+~
+9 524288 9
+5 0 0 0
+12 210 21 2
+A
+17 -5
+A
+13 10
+A
+19 1
+#309
+spiked shield~
+a spiked shield~
+A spiked shield lies on the ground.~
+~
+9 524288 513
+8 0 0 0
+10 120 12 1
+A
+19 2
+#310
+leather jerkin~
+leather jerkin~
+A leather jerkin has been abandoned here.~
+~
+13 0 9
+0 0 0 0
+1 1 0 0
+#311
+key drow barracks~
+heavy iron key~
+A heavy iron key catches your eye.~
+~
+18 0 1
+0 0 0 0
+1 0 0 0
+#312
+bonfire fire~
+Bonfire~
+A very large bonfire burns briskly, lighting up the surrounding area.~
+~
+34 0 0
+0 0 0 0
+1 0 0 0
+#313
+staff-gnarled~
+a gnarled staff~
+A gnarled staff has been cast aside.~
+~
+4 67 16385
+95 0 3 -1
+1 30 3 0
+'shadowfire'
+#314
+illithid cloak~
+an illithid cloak~
+A cloak made from the hide of a mindflayer has been discarded here.~
+~
+9 8192 1
+0 0 0 0
+1 300 30 0
+E
+'cloak' 'shadows'~
+This cloak was carved from the hide of an illithid by a drow mage, and
+then presented to a great matron who bestowed it upon her favorite son.
+~
+A
+37 10
+A
+36 10
+A
+12 50
+A
+9 5
+#315
+necklace teeth~
+a necklace of teeth~
+Teeth from many races are strung together forming a necklace.~
+~
+13 0 5
+0 0 0 0
+1 10 1 0
+A
+12 10
+A
+18 2
+#316
+barracks key green metal~
+a green key~
+A shiny green key lies upon the ground.~
+~
+18 1074266112 16385
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#301
+Entering the encampment~
+You have entered a large encampment which is bent on pillaging the wealth
+of New Hope, which lies to the north. To the south, you see a small 
+garrison guarding the officers of the invading army. To the east and west,
+the walls of New Hope extend to the horizen.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12436
+D2
+~
+~
+0 -1 302
+S
+#302
+At the Guard Post~
+You are standing at a checkpoint within the encampment.  To the east
+and west, you see large barracks, where guards make ready to aid their
+comrads if need be.  To the south, there is a large bondfire surrounded
+by tents, and to the north, you see the walls of New Hope.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 301
+D1
+~
+~
+0 -1 303
+D2
+~
+~
+0 -1 305
+D3
+~
+~
+0 -1 304
+S
+#303
+The Forward Guard Barracks~
+You are standing within a large barracks to the east of the checkpoint.
+This tent is coated with filth and there are several piles of unwashed
+laundry and other waste.  The only redeeming quality of this place is
+a large rack of well preserved weapons along the eastern wall.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 302
+S
+#304
+The Forward Guard Barracks~
+You are standing within a large barracks to the west of the checkpoint.
+This room is coated with filth, other than a few weapons which are kept
+in perfect condition. It would appear that the inhabitants of this place
+longed for a conflict to join.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 302
+S
+#305
+Travelling in the encampment~
+You are standing within a large war encampment, upon a path leading from
+a checkpoint at the entrance to several large tents to the south. You
+get the feeling you should move upon your way quickly before those in
+charge of the encampment discover your presence.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 302
+D2
+~
+~
+0 -1 306
+S
+#306
+At the Bonfire~
+You are before a large bonfire, around which many of the warriors of the
+encampment are lying here asleep. To the east and west, there are rows of
+tents which house the soldiers that threaten the safety of New Hope.
+To the south, you see a large structure of some sort.
+~
+~
+0 0 1 4
+D0
+~
+~
+0 -1 305
+D1
+~
+~
+0 -1 308
+D2
+~
+~
+0 -1 314
+D3
+~
+~
+0 -1 311
+D6
+~
+~
+0 -1 307
+D7
+~
+~
+0 -1 310
+D8
+~
+~
+0 -1 313
+D9
+~
+~
+0 -1 312
+S
+#307
+In a Large Tent~
+You are within a large tent that serves to house several members of the army
+is attacking New Hope.  The entrance faces to the southwest, facing a large
+bonfire.  All around you, clothing and armor is strewed.
+~
+~
+0 0 1 0
+D9
+~
+~
+0 -1 306
+S
+#308
+The Captains Tent~
+You are within a large richly furnished tent. To the north, there is a 
+small gathering around a table. All around you there are cushions and
+chairs for the guests of the captain to wait upon.  This tent seems a
+sharp contrast to the rest of the encampment in its neatness.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 309
+D3
+~
+~
+0 -1 306
+S
+#309
+The Back of the Tent~
+This section of the tent seems almost crowded, as the captain and his
+lieutenets have played many games of chance within after a long day of
+marching.  The neatness of this tent hint that the nature of the true
+leadership behind this attack is different from what you have yet seen.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 308
+S
+#310
+In a Large Tent~
+You are within a large tent that serves to house several members of the army
+is attacking New Hope.  The entrance faces to the southeast, facing a large
+bonfire.  All around you, clothing and armor is strewed.
+~
+~
+0 0 1 0
+D8
+~
+~
+0 -1 306
+S
+#311
+In a Large Tent~
+You are within a large tent that serves to house several members of the army
+is attacking New Hope.  The entrance faces to the east, facing a large bonfire
+bonfire.  All around you, clothing and armor is strewed.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 306
+S
+#312
+In a Large Tent~
+You are within a large tent that serves to house several members of the army
+is attacking New Hope. The entrance faces to the northeast, facing a large
+bonfire.  All around you, clothing and armor is strewed.
+~
+~
+0 0 1 0
+D6
+~
+~
+0 -1 306
+S
+#313
+In a Large Tent~
+You are within a large tent that serves to house several members of the army
+is attacking New Hope. The entrance faces to the northwest, facing a large
+bonfire.  All around you, clothing and armor is strewed.
+~
+~
+0 0 1 0
+D7
+~
+~
+0 -1 306
+S
+#314
+Approaching a Large Structure~
+To the south of you, a large ramshackle structure that appears to be
+constructed from the wagons this army used while it was on the move. 
+The sinister nature of this structure brings dread into your heart, and
+you feel that this place is the true source of the evil of the invasion.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 306
+D2
+~
+~
+8389671 316 315
+S
+#315
+Entering the Guard Barracks~
+You are just inside a large guard barracks.  To the east and west, you
+see rows upon rows of weapons and armor. Upon the south side of the
+barracks you see a small door leading to an elegant office.
+~
+~
+0 0 1 0
+D0
+~
+door~
+3 -1 314
+D1
+~
+~
+0 -1 316
+D2
+~
+~
+0 -1 318
+D3
+~
+~
+0 -1 319
+S
+#316
+In the Guard Barracks~
+You are in a large well organized barracks. Upon your entrance, several
+guards jump to their feet and reach for their weapons. All around you, the
+sounds of the army preparing for its march upon New Hope can be heard.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 317
+D3
+~
+~
+0 -1 315
+S
+#317
+In the Guard Barracks~
+You are in a large well organized barracks. Upon your entrance, several
+guards jump to their feet and reach for their weapons. All around you, the
+sounds of the army preparing for its march upon New Hope can be heard.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 316
+D3
+~
+~
+0 -1 318
+S
+#318
+In the Guard Barracks~
+You are in a large well organized barracks. Upon your entrance, several
+guards jump to their feet and reach for their weapons. All around you, the
+sounds of the army preparing for its march upon New Hope can be heard.
+To the south of you, there is a large door.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 315
+D1
+~
+~
+0 -1 317
+D2
+~
+~
+8389671 311 321
+D3
+~
+~
+0 -1 320
+S
+#319
+In the Guard Barracks~
+You are in a large well organized barracks. Upon your entrance, several
+guards jump to their feet and reach for their weapons. All around you, the
+sounds of the army preparing for its march upon New Hope can be heard.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 315
+D2
+~
+~
+0 -1 320
+S
+#320
+In the Guard Barracks~
+You are in a large well organized barracks. Upon your entrance, several
+guards jump to their feet and reach for their weapons. All around you, the
+sounds of the army preparing for its march upon New Hope can be heard.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 319
+D1
+~
+~
+0 -1 318
+S
+#321
+The Chamber of the Commander~
+As you enter the room, several well armed guards spring to their feet, and
+a grim faced drow commander screams at you in his native tongue. 
+Obviously the servants of Lloth are behind this attack and perhaps it
+is part of something far greater than just a simple raid.
+~
+~
+0 0 1 1
+D0
+~
+~
+3 -1 318
+D2
+~
+cell door south~
+25166887 307 322
+S
+#322
+A Small Cell~
+You stand within a large barren cell.  It would seem that the drow plot
+included the capture of several of the prominent citizens of New Hope.
+If you have reached this room, congratz.  Please inform someone in the
+quest council of your accomplisment, and keep what you find here.
+~
+~
+0 0 1 0
+D0
+~
+~
+6 -1 321
+S
+#0
+
+
+#RESETS
+M 1 2822 1 2888
+E 1 2854 1 5
+O 1 303 1 322
+M 1 302 1 321
+E 1 306 1 7
+E 1 305 1 16
+E 1 304 1 5
+G 1 307 1
+M 1 306 3 321
+E 1 308 1 5
+E 1 309 1 11
+E 1 305 1 16
+M 1 306 3 321
+G 1 308 1
+E 1 309 1 11
+E 1 305 1 16
+M 1 306 3 321
+E 1 308 1 5
+E 1 309 1 11
+E 1 305 1 16
+D 0 321 0 1
+D 0 321 2 2
+D 0 318 2 2
+M 0 301 12 316
+E 1 310 1 5
+E 1 301 1 16
+M 0 301 12 317
+E 1 310 1 5
+E 1 301 1 16
+M 0 301 12 318
+E 1 310 1 5
+E 1 301 1 16
+M 0 301 12 315
+E 1 310 1 5
+E 1 301 1 16
+M 0 301 12 319
+E 1 310 1 5
+E 1 301 1 16
+M 0 301 12 320
+G 1 311 1
+E 1 310 1 5
+E 1 301 1 16
+M 0 301 12 316
+M 0 301 12 317
+M 0 301 12 318
+M 0 301 12 315
+M 0 301 12 319
+M 0 301 12 320
+B 1 315 1073741824 2
+D 0 314 2 2
+O 1 312 1 306
+M 0 307 50 310
+M 0 307 50 310
+M 0 307 50 310
+M 0 307 50 310
+M 0 307 50 310
+M 0 307 50 311
+M 0 307 50 311
+M 0 307 50 311
+M 0 307 50 311
+M 0 307 50 311
+M 0 307 50 312
+M 0 307 50 312
+M 0 307 50 312
+M 0 307 50 312
+M 0 307 50 312
+M 0 307 50 313
+M 0 307 50 313
+M 0 307 50 313
+M 0 307 50 313
+M 0 307 50 313
+M 0 307 50 307
+M 0 307 50 307
+M 0 307 50 307
+M 0 307 50 307
+M 0 307 50 307
+M 1 308 1 309
+E 1 313 1 17
+M 1 309 1 309
+E 1 316 1 17
+E 1 315 1 3
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 10 304
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+M 1 303 20 303
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  304 spec_breath_any
+S
+
+
+#$

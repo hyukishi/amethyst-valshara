@@ -1,0 +1,1157 @@
+0988087691000001 [    1] Kyorlin: Shutdown by Kyorlin.
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+0988166600000001 [    1] Kyorlin: Shutdown by Kyorlin.
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 15
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 16
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 17
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 18
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 19
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 20
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 21
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 14
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1212
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 11
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 12
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 13
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Khelorn.are LINE: 476
+Room flag not DES
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Khelorn.are LINE: 476
+Room flag not DES
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: ../player/n/Necros LINE: 50
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Khelorn.are LINE: 476
+Room flag not DES
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: underdark.are LINE: 2560
+[*****] [*****] FILE: underdark.are LINE: 2561
+[*****] [*****] FILE: underdark.are LINE: 2566
+[*****] [*****] FILE: underdark.are LINE: 2573
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 54
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: ../player/n/Necros LINE: 151
+[*****] [*****] FILE: ../player/n/Necros LINE: 151
+[*****] [*****] FILE: ../player/n/Necros LINE: 152
+[*****] [*****] FILE: ../player/n/Necros LINE: 152
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 396
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1195
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: ../player/d/Drelvorn LINE: 155
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+0988816077000001 [  100] Kyorlin: Shutdown by Kyorlin.
+[*****] [*****] FILE: Limbo.are LINE: 1211
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: drow.are LINE: 1217
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 59
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 60
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 61
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: under2.are LINE: 1
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 18
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 18
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 18
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 18
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 18
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: under2.are LINE: 18
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: abyss2.are LINE: 3
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 25
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 25
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 25
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 25
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: abyss2.are LINE: 25
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: ../player/d/Daikini LINE: 50
+[*****] [*****] FILE: ../player/d/Daikini LINE: 51
+[*****] [*****] FILE: ../player/d/Daikini LINE: 52
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: drow.are LINE: 1253
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1257
+[*****] [*****] FILE: drow.are LINE: 1257
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 62
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 63
+[*****] [*****] FILE: ../player/k/Kyorlin LINE: 64
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/n/Nosgoth LINE: 66
+[*****] [*****] FILE: ../player/n/Nosgoth LINE: 67
+[*****] [*****] FILE: ../player/n/Nosgoth LINE: 68
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/a/Axel LINE: 287
+[*****] [*****] FILE: ../player/a/Axel LINE: 324
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/a/Axel LINE: 287
+[*****] [*****] FILE: ../player/a/Axel LINE: 324
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/a/Axel LINE: 287
+[*****] [*****] FILE: ../player/a/Axel LINE: 324
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/a/Axel LINE: 287
+[*****] [*****] FILE: ../player/a/Axel LINE: 324
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/a/Axel LINE: 287
+[*****] [*****] FILE: ../player/a/Axel LINE: 324
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: ../player/a/Axel LINE: 287
+[*****] [*****] FILE: ../player/a/Axel LINE: 324
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Limbo.are LINE: 1215
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 476
+Room flag not DES
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 476
+Room flag not DES
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 476
+Room flag not DES
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 645
+# not found
+[*****] [*****] FILE: limbo.are LINE: 702
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2458
+[*****] [*****] FILE: Khelorn.are LINE: 2475
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: jungle.are LINE: 390
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: jungle.are LINE: 390
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: jungle.are LINE: 390
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: jungle.are LINE: 390
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: jungle.are LINE: 390
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: cguild.are LINE: 349
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: cguild.are LINE: 349
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: cguild.are LINE: 349
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: rift.are LINE: 1573
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: rift.are LINE: 1573
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: rift.are LINE: 1573
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: Khelorn.are LINE: 2459
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: Tempra.are LINE: 513
+# not found
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: drow.are LINE: 1306
+[*****] [*****] FILE: wastelands.are LINE: 466
+[*****] [*****] FILE: wastelands.are LINE: 541
+[*****] [*****] FILE: wastelands.are LINE: 2483
+[*****] [*****] FILE: wastelands.are LINE: 2491

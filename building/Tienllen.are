@@ -1,0 +1,1296 @@
+#AREA   {PROTO} Tienllen's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Tienllen~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#1391
+sign rules combat~
+a small sign~
+A small sign is bolted to the walls here.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign rules combat~
+&z 
+&W ===========================================================================
+&R                  " T H E   R U L E S   O F   C O M B A T "                 
+&z 
+&z  To attack a monster, type: &WKILL monster
+&z  To flee from combat, type: &WFLEE
+&z 
+&z  You will gain experience for hitting a monster, using some of your combat 
+&z  skills or spells, and for defeating a monster.
+&z 
+&z  Fleeing will cause you to loose experience, and may not always work. Note 
+&z  that some monsters will pursue you if you flee...
+&z 
+&R  CAUTION: &WSome monsters will attack without provocation!
+&z 
+&R                       THOSE, ARE THE RULES OF COMBAT.                      
+&W ===========================================================================
+~
+#1392
+sign~
+a small sign~
+A small sign is bolted to the wall here.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign~
+&z 
+&W ===============================================
+&z 
+&W   " T H E   R I G H T   O F   P A S S A G E "
+&z 
+&z  To open a door, type: &WOPEN [DOOR NAME]
+&z  To close a door, type: &WCLOSE [DOOR NAME]
+&z  To unlock a door, type: &WUNLOCK [DOOR NAME]
+&z 
+&z  You must have the right key to unlock a door.
+&z 
+&W ===============================================
+~
+#1393
+sign~
+a large sign~
+A large sign adorns the wall.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign~
+&z 
+&B ===============================================
+&z 
+&c     T H E   T R A I N I N G   G R O U N D S
+&z 
+&z  To practice a skill, type:  &WPRAC [SKILL NAME]
+&z 
+&z  To see your available skills, type:  &WPRACTICE
+&z 
+&z  To see your practice sessions, type:    &WSCORE
+&z 
+&B ===============================================
+~
+#1394
+sign small arena~
+a small sign~
+A small sign hangs from a pole here.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign small arena~
+&z
+&O __________________________________________________________
+&O|                                                          \
+&O \     &z##### #####   ##### ##### ##### #   # ##### #####&O    \
+&O  \    &z  #   #   #   #   # #   # #     ##  # #   # #    &O     \
+&O   |   &z  #   #   #   ##### ##### ####  # # # ##### #####&O      |
+&O  /    &z  #   #   #   #   # #  #  #     #  ## #   #     #&O     /
+&O /     &z  #   #####   #   # #   # ##### #   # #   # #####&O    /
+&O|__________________________________________________________/
+~
+#1400
+pcolors~
+pcolors~
+Tienllens fab PCOLORS sheet has been dropped here~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+pcolors~
+&x  - Black                     
+&r  - Red blood
+&g  - Green                     
+&O  - Orange brown
+&b  - Dark Blue                 
+&p  - Purple
+&c  - Cyan                      
+&w  - Gray default color
+&z  - Dark Grey                 
+&R  - Light Red
+&G  - Light Green               
+&Y  - Yellow
+&B  - Blue                      
+&P  - Pink
+&C  - Light Blue                
+&W  - White
+~
+#0
+
+
+#ROOMS
+#1301
+A Strange New World~
+&z As  your  eyes  settle  from  the  blinding  light,  you notice you are in a
+&z strange  new world, much different from the lands you once came from. As you
+&z examine  the  corridor  you  find  yourself in, you notice a beautiful young
+&z woman who looks you over. Maybe you should turn to her for help...
+~
+0 1076887560 0 0
+D0
+~
+~
+0 -1 1302
+S
+#1302
+The trials of Wisdom~
+&w As  you  follow the corridor you've only just entered it is evident that the
+&w many  trials  that  lay ahead are unknown. This strange new world appears to
+&w be  full  of  surprises, not all of them pleasant perhaps. This room has two
+&w exits, one to your west, and one to your south.
+~
+0 1076887560 0 0
+D2
+~
+~
+0 -1 1301
+D3
+~
+~
+0 -1 1303
+S
+#1303
+The trials of Wisdom~
+&w You  find  yourself  in  a bend of the long dark corridor, which seems to be
+&w sealed  by  a  large  wooden  door.  The  moist stone walls are visible only
+&w around  the  dimly  lit candles that adorn this room. Perhaps the best thing
+&w you  can  do  is  opening  the  door to your north in order to get this over
+&w with...
+~
+0 1076887560 0 0
+D0
+~
+door wooden~
+1 -1 1304
+D1
+~
+~
+0 -1 1302
+S
+#1304
+The trials of Wisdom~
+&w You  are  in  another  bend in the long corridor that forms the path of your
+&w journey.  A  small  sign hangs upon the moist stone walls that surround you.
+&w The  only thing on the sign that is clearly visible is the phrase "The Rules
+&w of  Combat". The fact that it's written in read encourages to read the rest.
+&w The corridor leads on to the east.
+~
+0 1076887560 0 0
+D1
+~
+~
+0 -1 1305
+D2
+~
+door wooden~
+1 -1 1303
+S
+#1305
+The trials of Wisdom~
+&r You  find yourself in a cage-like room, only dimly lit by a single candle on
+&r the  wall.  Despite  of  the  lack  of light the many smears of blood on the
+&r walls  and even on the ceilings are clearly visible. Only the gods know what
+&r goes on in this place... Exits lead both to the east and to the west.
+~
+0 1076887560 0 0
+D1
+~
+~
+0 -1 1306
+D3
+~
+~
+0 -1 1304
+S
+#1306
+The trials of Wisdom~
+&w You  are at another bend in the corridor. A small gate leads north with sign
+&w hanging  next  to  it, barely visible. The letters on the sign are really to
+&w small  to  make out, especially in a place this dimly lit. Between the large
+&w stone  bricks  of  the  moist walls that surround you the only two exits are
+&w the one to your north and the one to your west.
+~
+0 1076887560 0 0
+D0
+~
+gate door~
+25166887 1307 1307
+D3
+~
+~
+0 -1 1305
+S
+#1307
+The trials of Wisdom~
+&w As  you walk through yet another bend of this long corridor you suddenly get
+&w an  eerie  feeling.  What  appear  to  be  breathing  sounds from a westward
+&w direction,  can be heard. The exit that lies to your west can hardly be seen
+&w due to the dim light...
+~
+0 1076887560 0 0
+D2
+~
+gate door~
+1 -1 1306
+D3
+~
+~
+0 -1 1308
+S
+#1308
+The trials of Wisdom~
+&R As  you  enter  the  room  the  first thing you notice is the horror of this
+&R place.  The  only thing here is blood, corpses and entrails of only the gods
+&R know  what.  Apart  from the bloody mess and the smears on the walls an exit
+&R to    the  north  can  be  seen,  which  hopefully  leads  to  a  less  grim
+&R environment...
+~
+0 1076887560 0 0
+D0
+~
+~
+0 -1 1309
+D1
+~
+~
+0 -1 1307
+S
+#1309
+The summit of Wisdom~
+&z You  find yourself in a strange room, void of light, which finally makes you
+&z feel  at  ease  again.  You appear to be floating in mid air, in the strange
+&z calmness  that  appears  to surround you. Though the room does not appear to
+&z have  a  distinct source of light, a large smiling man is clearly visible in
+&z the distance...
+~
+0 1076887564 0 0
+S
+#1310
+Campus Main Street - At the Southern Gate~
+&g You  find  yourself  at  the entrance to the Training Grounds. This is where
+&g all  the  new  adventurers to the lands of Valshara are trained. Although it
+&g does  not  seem  to be too big, it is highly regarded and many an adventurer
+&g has  paid  a  fair share of gold to be trained here. A massive gate leads to
+&g the south while what appears to be the main street leads off to the north.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1313
+D2
+~
+massive gate~
+25166887 -1 1310
+S
+#1311
+The Training Room~
+&c You  are  in  the  training  room  where  the  academy  trainers  train  new
+&c adventurers  in  their  skills  and arts. The wooden floor seems polished in
+&c some  manner and stretches from side to side, completely empty. Apart from a
+&c sign  on  the  wall  there  is  really not much to be seen in this room. The
+&c doors to the east lead back to the Central Square.
+~
+0 1076888584 0 0
+D1
+~
+~
+0 -1 1312
+S
+#1312
+Southwest Central Square~
+&g As  you walk around the southwest end of the Central Square, you notice this
+&g side  of  the  square  is  lined by a number of buildings. The view south is
+&g immediately  blocked  by  a  wall,  which  appears  to  surround most of the
+&g campus.  A  small  building  lies  to  your  west  while  the Central Square
+&g stretches further beyond you.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1317
+D1
+~
+~
+0 -1 1313
+D3
+~
+~
+0 -1 1311
+D6
+~
+~
+0 -1 1318
+S
+#1313
+South Central Square~
+&g You  find  yourself  on  the  south end of the Central Square, basically the
+&g main  street  from  north  to  south  of  the  training grounds. A number of
+&g buildings  can  be  seen  both to the east and to the west while the Central
+&g Square  stretches  on  in most directions. A beautiful fountain to the north
+&g adorns the Center Square.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1318
+D1
+~
+~
+0 -1 1314
+D2
+~
+~
+0 -1 1310
+D3
+~
+~
+0 -1 1312
+D6
+~
+~
+0 -1 1319
+D7
+~
+~
+0 -1 1317
+S
+#1314
+Southeast Central Square~
+&g You  are  at the southeast corner of the Central Square. As you look further
+&g east  you notice the sign of the campus magic store. More buildings line the
+&g square  in  a  more northern direction but it's hard to see what they are. A
+&g big  wall  blocks  your view to the south while the Central Square stretches
+&g on in all other directions.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1319
+D1
+~
+~
+0 -1 1315
+D3
+~
+~
+0 -1 1313
+D7
+~
+~
+0 -1 1318
+S
+#1315
+The Campus Magic Shop~
+&c You've  entered the Campus Magic Shop, which is where all the adventurers of
+&c the  Training  Grounds  come  for  their magic needs. As you look around you
+&c notice  a  large  number  of  shelves  with  different  types of potions and
+&c elixirs  on  them.  As  you  look  over the counter you spot a small man who
+&c stares right back at you.
+~
+0 1076888584 0 0
+D3
+~
+~
+0 -1 1314
+S
+#1316
+The Campus Weaponry~
+&c You're  at  the Campus Weapon Store. As you look around you notice this is a
+&c small  store  that doesn't have too many weapons as far as you can see. Most
+&c adventurers  probably  come here for basic equipment though, so it shouldnt
+&c be  too  much  of  a  problem. A door to your east leads back to the Central
+&c Square.
+~
+0 1076888584 0 0
+D1
+~
+~
+0 -1 1317
+S
+#1317
+West Central Square~
+&g You're  at the west end of the Central Square, just west of the fountain. As
+&g you  look  around you notice not only the fountain to your east but a number
+&g of  stores  to your west. The store to your immediate west appears to be the
+&g Campus  Weapon  Store.  The  Central  square  stretches  out  in every other
+&g direction.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1322
+D1
+~
+~
+0 -1 1318
+D2
+~
+~
+0 -1 1312
+D3
+~
+~
+0 -1 1316
+D6
+~
+~
+0 -1 1323
+D8
+~
+~
+0 -1 1313
+S
+#1318
+The Center Square~
+&C You  are  at the Center Square of the Training Grounds Campus. This is where
+&C all  the  tired  adventurers  come to rest after their training sessions. As
+&C you  gaze  over the plaza that surrounds you while listening to the soothing
+&C sounds  of  the fountain in the middle of the plaza you get a sudden feeling
+&C of peace.
+~
+0 1075840000 1 0
+D0
+~
+~
+0 -1 1323
+D1
+~
+~
+0 -1 1319
+D2
+~
+~
+0 -1 1313
+D3
+~
+~
+0 -1 1317
+D6
+~
+~
+0 -1 1324
+D7
+~
+~
+0 -1 1322
+D8
+~
+~
+0 -1 1314
+D9
+~
+~
+0 -1 1312
+S
+#1319
+East Central Square~
+&g You  find  yourself  on the East Central Square, between the fountain on the
+&g Center  Square  and  the stores to the east. Just east of here is the Campus
+&g Armory,  which  in  turn  lies  between  two more buildings to the north and
+&g south.  The  plaza  stretches on in most other directions while the entrance
+&g to the store is to your east.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1324
+D1
+~
+~
+0 -1 1320
+D2
+~
+~
+0 -1 1314
+D3
+~
+~
+0 -1 1318
+D7
+~
+~
+0 -1 1323
+D9
+~
+~
+0 -1 1313
+S
+#1320
+The Campus Armory~
+&c You  are  in  the Campus Armory where the trainees can get their supplies of
+&c different  types  of  armors.  As  you  examine the store you notice a small
+&c selection  of armor types ranging from shields to body armors. The exit that
+&c leads back to the Central Square lies to your west.
+~
+0 1076888584 0 0
+D3
+~
+~
+0 -1 1319
+S
+#1321
+The General Store~
+&c You  are  in  the General Store of the Valshara Training Grounds. You notice
+&c this  place  is  not  very  big  and judging by the lack of shelve space you
+&c figure  they don't carry too big an inventory either. As you further observe
+&c the emptiness you notice the exit to the Central Square to your east.
+~
+0 1076888584 0 0
+D1
+~
+~
+0 -1 1322
+S
+#1322
+Northwest Central Square~
+&g You  are  at  the  northwest corner of the Central Square, just south of the
+&g wall  that  surrounds  the  Training  Grounds  Campus.  The  Central  Square
+&g stretches  out  to  the south and eastern directions while the General Store
+&g lies  further  to  your  west.  The fountain of the Center Square is clearly
+&g visible  to  your southeast while you can catch a glimpse of the main street
+&g to the northeast.
+~
+0 1076887552 1 0
+D1
+~
+~
+0 -1 1323
+D2
+~
+~
+0 -1 1317
+D3
+~
+~
+0 -1 1321
+D8
+~
+~
+0 -1 1318
+S
+#1323
+North Central Square~
+&g You  are  on what is essentially the main street of the Campus, in the north
+&g part  of the Central Square. More of the Central Square surrounds you in the
+&g east  and  western  directions  while the main street goes off further north
+&g and leads to the Center Square fountain to your south.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1326
+D1
+~
+~
+0 -1 1324
+D2
+~
+~
+0 -1 1318
+D3
+~
+~
+0 -1 1322
+D8
+~
+~
+0 -1 1319
+D9
+~
+~
+0 -1 1317
+S
+#1324
+Northeast Central Square~
+&g You  find  yourself  in  the  northeast corner of the Campus Central Square.
+&g Judging  from  the  smell  you  figure  that  it  must be a bakery that lies
+&g further  to  your  east  while  Central  Square  surrounds you in most other
+&g directions.  The  fountain  of the Center Square is visible to the southwest
+&g while some more buildings appear further to the southeast.
+~
+0 1076887552 1 0
+D1
+~
+~
+0 -1 1325
+D2
+~
+~
+0 -1 1319
+D3
+~
+~
+0 -1 1323
+D9
+~
+~
+0 -1 1318
+S
+#1325
+The Campus Bakery~
+&c The  smell  of fresh bread greets you as you enter the Campus Bakery. It's a
+&c small  bakery,  a  bit  messy  too, but the smell of the fresh bread quickly
+&c takes  away  any  doubts  as  to  the  quality of the produce. As small man,
+&c covered in flower greets you with a smile as you approach the counter.
+~
+0 1076888584 0 0
+D3
+~
+~
+0 -1 1324
+S
+#1326
+Campus Main Street - North of the Central Square~
+&g You  are  travelling along the Campus Main Street, just north of the Central
+&g Square.  The  lush  gardens  to your east and west block your view somewhat,
+&g but  both the Central Square to your south and the Main Street to your north
+&g are clearly visible. As small sign pointing north reads "To Arenas".
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1330
+D2
+~
+~
+0 -1 1323
+S
+#1327
+The Minor Arena - Southwest Corner~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to your west and south block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1334
+D1
+~
+~
+0 -1 1328
+D6
+~
+~
+0 -1 1335
+S
+#1328
+The Minor Arena - South End~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to  your south block your view, but you can clearly
+&r oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1335
+D1
+~
+~
+0 -1 1329
+D3
+~
+~
+0 -1 1327
+D6
+~
+~
+0 -1 1336
+D7
+~
+~
+0 -1 1334
+S
+#1329
+The Minor Arena - Southeast Corner~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to your east and south block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1336
+D3
+~
+~
+0 -1 1328
+D7
+~
+~
+0 -1 1335
+S
+#1330
+Campus Main Street - South of the crossing~
+&g You  find  yourself  on  the Campus Main Street, just south of the crossing.
+&g You  can clearly see the main street that leads off further to the north and
+&g can  see  just a hint of the crossing that leads off from there. To you east
+&g and  west  you  can appreciate some nice gardens while the main street leads
+&g further south towards the Central Square.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1338
+D2
+~
+~
+0 -1 1326
+S
+#1331
+The Major Arena - Southwest Corner~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to your west and south block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1340
+D1
+~
+~
+0 -1 1332
+D6
+~
+~
+0 -1 1341
+S
+#1332
+The Major Arena - South End~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to  your south block your view, but you can clearly
+&r oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1341
+D1
+~
+~
+0 -1 1333
+D3
+~
+~
+0 -1 1331
+D6
+~
+~
+0 -1 1342
+D7
+~
+~
+0 -1 1340
+S
+#1333
+The Major Arena - Southeast Corner~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to your east and south block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1342
+D3
+~
+~
+0 -1 1332
+D7
+~
+~
+0 -1 1341
+S
+#1334
+The Minor Arena - West End~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to  your  west block your view, but you can clearly
+&r oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1343
+D1
+~
+~
+0 -1 1335
+D2
+~
+~
+0 -1 1327
+D6
+~
+~
+0 -1 1344
+D8
+~
+~
+0 -1 1328
+S
+#1335
+The Minor Arena - Center~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  You  are  in  the  center  of  the arena, and from here you can
+&r clearly oversee the entire arena in all directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1344
+D1
+~
+~
+0 -1 1336
+D2
+~
+~
+0 -1 1328
+D3
+~
+~
+0 -1 1334
+D6
+~
+~
+0 -1 1345
+D7
+~
+~
+0 -1 1343
+D8
+~
+~
+0 -1 1329
+D9
+~
+~
+0 -1 1327
+S
+#1336
+The Minor Arena - East End~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  You  are  along the east wall, right by the big gate that leads
+&r back  to the training grounds. You can clearly oversee the rest of the arena
+&r in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1345
+D1
+~
+gate~
+1 -1 1337
+D2
+~
+~
+0 -1 1329
+D3
+~
+~
+0 -1 1335
+D7
+~
+~
+0 -1 1344
+D9
+~
+~
+0 -1 1328
+S
+#1337
+Entrance to the Minor Arena~
+&g You're  at  the entrance to the minor arena, right between the arena and the
+&g crossing  on  Main  Street.  Apart  from a small sign that stands before the
+&g arena  you  notice how nice the gardens are that lie to you north and south.
+&g A  big  steel gate to your west allows access to the arena while the road to
+&g your east leads back to the crossings.
+~
+0 1076887556 1 0
+D1
+~
+~
+0 -1 1338
+D3
+~
+gate steel arena~
+1 -1 1336
+S
+#1338
+Campus Main Street - At the crossing~
+&g You're  on the crossing of the Campus Main Street. A small sign catches your
+&g attention,  as do the lush gardens that surround the crossing. From here you
+&g can  clearly see the towering arenas to your east and to your west while the
+&g main street leads on to your north and to your south.
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1346
+D1
+~
+~
+0 -1 1339
+D2
+~
+~
+0 -1 1330
+D3
+~
+~
+0 -1 1337
+S
+#1339
+Entrance to the Major Arena~
+&g You're  at  the entrance to the major arena, right between the arena and the
+&g crossing  on  Main  Street.  Apart  from a small sign that stands before the
+&g arena  you  notice how nice the gardens are that lie to you north and south.
+&g A  big  steel gate to your east allows access to the arena while the road to
+&g your west leads back to the crossings.
+~
+0 1076887556 1 0
+D1
+~
+gate steel arena~
+1 -1 1340
+D3
+~
+~
+0 -1 1338
+S
+#1340
+The Major Arena - West End~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  You  are  along the west wall, right by the big gate that leads
+&r back  to the training grounds. You can clearly oversee the rest of the arena
+&r in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1347
+D1
+~
+~
+0 -1 1341
+D2
+~
+~
+0 -1 1331
+D3
+~
+gate~
+1 -1 1339
+D6
+~
+~
+0 -1 1348
+D8
+~
+~
+0 -1 1332
+S
+#1341
+The Major Arena - Center~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  You  are  in  the  center  of  the arena, and from here you can
+&r clearly oversee the entire arena in all directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1348
+D1
+~
+~
+0 -1 1342
+D2
+~
+~
+0 -1 1332
+D3
+~
+~
+0 -1 1340
+D6
+~
+~
+0 -1 1349
+D7
+~
+~
+0 -1 1347
+D8
+~
+~
+0 -1 1333
+D9
+~
+~
+0 -1 1331
+S
+#1342
+The Major Arena - East End~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to  your  east block your view, but you can clearly
+&r oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D0
+~
+~
+0 -1 1349
+D2
+~
+~
+0 -1 1333
+D3
+~
+~
+0 -1 1341
+D7
+~
+~
+0 -1 1348
+D9
+~
+~
+0 -1 1332
+S
+#1343
+The Minor Arena - Northwest Corner~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to your west and north block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D1
+~
+~
+0 -1 1344
+D2
+~
+~
+0 -1 1334
+D8
+~
+~
+0 -1 1335
+S
+#1344
+The Minor Arena - North End~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to  your north block your view, but you can clearly
+&r oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D1
+~
+~
+0 -1 1345
+D2
+~
+~
+0 -1 1335
+D3
+~
+~
+0 -1 1343
+D8
+~
+~
+0 -1 1336
+D9
+~
+~
+0 -1 1334
+S
+#1345
+The Minor Arena - Northeast Corner~
+&r You  are  in  the  Minor  Arena, hunting for animals to practice your combat
+&r skills  on.  The  walls  to your east and north block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D2
+~
+~
+0 -1 1336
+D3
+~
+~
+0 -1 1344
+D9
+~
+~
+0 -1 1335
+S
+#1346
+Campus Main Street - North of the crossing~
+&g You  find yourself on the Campus Main Street, just north of the crossing. To
+&g your  north you can see the Main Street leads of to a big gate while to your
+&g east  and  west  you  can appreciate some nice gardens. The Main Street also
+&g goes further south, leading back to the crossing...
+~
+0 1076887552 1 0
+D0
+~
+~
+0 -1 1350
+D2
+~
+~
+0 -1 1338
+S
+#1347
+The Major Arena - Northwest Corner~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to your west and north block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D1
+~
+~
+0 -1 1348
+D2
+~
+~
+0 -1 1340
+D8
+~
+~
+0 -1 1341
+S
+#1348
+The Major Arena - North End~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to  your north block your view, but you can clearly
+&r oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D1
+~
+~
+0 -1 1349
+D2
+~
+~
+0 -1 1341
+D3
+~
+~
+0 -1 1347
+D8
+~
+~
+0 -1 1342
+D9
+~
+~
+0 -1 1340
+S
+#1349
+The Major Arena - Northeast Corner~
+&r You  are in the Major Arena, hunting for animals to further hone your combat
+&r skills  on.  The  walls  to your east and north block your view, but you can
+&r clearly oversee the rest of the arena in all other directions.
+~
+0 1076887552 2 0
+D2
+~
+~
+0 -1 1342
+D3
+~
+~
+0 -1 1348
+D9
+~
+~
+0 -1 1341
+S
+#1350
+Campus Main Street - At the Northern Gate~
+&g You  stand  before  the  immense  northern  gate  of  the  Valshara Training
+&g Grounds.  Beyond  these  gates lies a world of adventure, a dangerous world.
+&g Only  well  trained  adventurers  should  leave  the  protection  the Campus
+&g offers.  A  big  sign  stands  along  the gate, which is manned by two Elite
+&g Campus Guards.
+~
+0 1076887552 1 0
+D2
+~
+~
+0 -1 1346
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,4769 @@
+#AREA   The city of Gen-Shi~
+
+
+
+#VERSION 200
+#AUTHOR Shue~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#12001
+adept shue old man~
+The Adept of Shue~
+The Adept of Shue stands here, transferring people.
+~
+The Adept of Shue stands here, transferring people about. Although it seems
+that is all he does, it has been rumored that he also heals.
+~
+1073741827 0 1000 C
+100 0 0 0d0+21250 26d40+100
+2500 0
+112 112 1
+18 18 18 16 16 14 16
+0 0 0 0 0
+0 2 0 0 1 1 3
+85 65 0 15 2100224 0 1118044160 6405
+#12002
+doc old man smith~
+Doc~
+Doc stands here, ready to sell you his overpriced weapons.
+~
+Doc, the local smith, stands here. He's an old guy, who appears to do well
+judging from his clothes. His weapons are just a good as they are
+expensive... Which is too bad of course.
+~
+1073741827 0 1000 C
+100 0 0 0d0+21250 26d40+100
+25000 0
+112 112 1
+20 18 18 20 20 10 18
+0 0 0 0 0
+0 8 0 0 1 1 6
+0 0 0 8192 2100224 1048576 1008 524291
+#12003
+isaac man armorer~
+Isaac~
+Isaac stands here, selling quality armor.
+~
+Isaac is quite a strange man, you notice. He looks strong too, very strong.
+He has the same type of seasoned-warrior look Doc has, he's just younger.
+~
+1073741827 0 1000 C
+100 0 0 25000d1+0 26d40+100
+25000 0
+112 112 1
+18 18 18 18 18 10 18
+0 0 0 0 0
+0 8 0 0 1 1 6
+0 0 0 8192 2100224 1048576 1008 524291
+#12004
+homei girl woman~
+Homei~
+Homei stands here, selling her magical items.
+~
+You see a young woman standing here, selling magical items. As you look at
+her more closely you notice she is an exceptionally beautiful woman. She may
+be twenty-some years old and already she has quite some gold, at least that's
+what you gather from the fact that she owns her own store.
+~
+1073741827 0 1000 C
+75 0 0 17500d1+0 20d30+75
+15000 0
+112 112 2
+18 20 20 20 18 24 18
+0 0 0 0 0
+0 9 0 0 1 1 3
+0 0 0 1056768 2100224 0 8388608 6404
+#12005
+shawmei girl woman~
+Shawmei~
+Shawmei stands here, selling magical potions.
+~
+You see a young woman standing here, selling potions. Shawmei is Homei's
+younger sister, though she does not appear to be much younger. You notice
+she's eaqually beautiful as Homei is, equally wealthy too
+~
+1073741827 0 1000 C
+75 0 0 17500d1+0 20d30+75
+15000 0
+112 112 2
+18 20 20 20 18 24 18
+0 0 0 0 0
+0 9 0 0 1 1 3
+0 0 0 1056768 2100224 0 8388608 6404
+#12006
+rubio man scrapman~
+Rubio~
+Rubio stands here, willing to buy anything.
+~
+Rubio, the owner of the local junkyard stands here. This man will buy
+absolutely anything, no-one really knows why though.
+~
+1073741827 0 100 C
+0 0 0 1000d2+250 6d12+24
+100 0
+112 112 1
+18 16 14 18 18 12 12
+0 0 0 0 0
+0 0 0 0 1 1 4
+0 0 0 0 2100224 0 112 3
+#12007
+Mr. James man banker~
+Mr. James~
+Mr. James, the local banker, stands here.
+~
+Mr. James, the local banker, stands here, ready to steal your gold. Ofcourse
+he wouldn't say such a thing. It IS true ofcourse.
+~
+1073741827 0 1000 C
+100 0 0 25000d1+0 26d40+100
+10000 0
+112 112 1
+20 20 20 20 20 20 20
+0 0 0 0 0
+0 9 0 0 1 1 3
+0 0 0 15 2100224 0 1118044160 6405
+#12008
+kashu trainer man~
+Kashu~
+Kashu stands here, ready to teach you new skills.
+~
+Kashu, the owner of the local gym stands here. This man is truly an
+incredible warrior. Maybe you shouldn't pick a fight with this guy.
+~
+1073741827 0 100 C
+110 0 0 32500d1+0 32d64+128
+100 0
+112 112 1
+24 24 24 24 24 24 24
+0 0 0 0 0
+0 8 0 0 1 1 8
+0 0 0 8192 2100224 0 1008 524291
+#12009
+mika girl woman~
+Mika~
+Mika sits quietly behind her desk here.
+~
+You see a young and attractive woman sitting behind her desk. She must have a
+keen sense of style as she is very well dressed.
+~
+1073741827 0 1000 C
+75 0 0 17500d1+0 20d30+75
+250 0
+112 112 2
+18 20 20 20 18 24 18
+0 0 0 0 0
+0 1 0 0 1 1 3
+0 0 0 1056768 2100224 0 8388608 6404
+#12010
+flamenco bartender~
+Flamenco~
+Flamenco the bartender stands here.
+~
+Flamenco to bartender stands here, selling his over-spiked drinks. He's an
+odd looking bloke, but he seems nice enough.
+~
+1073741827 0 1000 C
+0 0 0 25000d1+0 26d40+100
+25000 0
+112 112 1
+18 18 18 18 18 10 18
+0 0 0 0 0
+0 8 0 0 1 1 4
+0 0 0 0 2100224 0 1008 524291
+> greet_prog 100~
+say hello
+mpdonothing 25
+say goodbye
+~
+|
+#12011
+aleste little girl~
+Aleste~
+Aleste stands around here, selling her cookies.
+~
+You see a little girl here, maybe ten years old. She's selling cookies, at
+least that's what the sign around her body says.
+~
+1073741827 0 1000 C
+75 0 0 5000d1+0 16d8+4
+250 0
+112 112 2
+18 20 20 20 18 24 18
+0 0 0 0 0
+0 4 0 0 1 1 3
+0 0 0 1056768 2100224 0 0 4
+#12012
+tax collector man~
+The Tax Collector~
+The Gen-Shi tax collector walks around here.
+~
+The Gen-Shi tax collector walks around here, collecting bribes instead of
+taxes. He must carry a coin or two
+~
+1073741827 0 100 C
+25 0 0 1500d2+0 7d10+25
+100 0
+112 112 1
+18 16 14 18 18 12 12
+0 0 0 0 0
+0 8 0 0 1 1 3
+0 0 0 1048576 2100224 0 112 3
+#12013
+mayor man~
+The Mayor~
+The Mayor walks around here, keeping an eye on his city.
+~
+The mayor walks around here, keeping an eye on his city, probably.
+~
+1073741827 0 100 C
+35 0 0 1000d3+250 10d15+25
+100 0
+112 112 1
+18 16 14 18 18 12 12
+0 0 0 0 0
+0 1 0 0 1 1 5
+0 0 0 1048576 2100224 0 112 7
+#12014
+old man~
+an old man~
+A very old man sits here, on his very old rocking-chair.
+~
+A very old man sits here, on his very old rocking chair. As you look at his
+hold body, battered by time, you wonder what it would be like to be that old
+~
+1140850691 0 1000 C
+25 0 0 30000d1+0 100d100+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 20
+0 0 0 0 3156992 0 44302384 6407
+#12015
+stray dog~
+a stray dog~
+A stray dog wanders around here, looking for food.
+~
+A stray dog is in really bad shape, it must not have a master.
+~
+193 0 100 C
+10 0 0 2d5+75 2d4+10
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+30 8 0 0 0 0 0
+0 0 0 0 0 2048 0 0
+#12016
+alley cat~
+an alley cat~
+An alley cat walks around here, looking for mice.
+~
+The alley cat is in very good shape, not too big though.
+~
+1073742017 0 -100 C
+11 0 0 4d5+80 2d4+11
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+29 8 0 0 0 0 0
+0 0 0 2048 0 0 0 0
+#12017
+bum~
+a bum~
+A bum walks around here, asking for money.
+~
+He looks quite bad, maybe ill even. Who knows what past this man might have
+had, maybe you should spare a coin.
+~
+1073742017 0 0 C
+12 0 0 2d10+100 2d4+12
+2 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 0 0
+#12018
+drunk~
+a drunk~
+A drunk walks the steet, he looks pretty drunk.
+~
+A drunk looks very afaid. Who knows what of.
+~
+1073742017 0 0 C
+13 0 0 4d10+100 2d5+13
+10 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 0 0
+#12019
+vagabond~
+the vagabond~
+A vagabond roams the streets, looking for victims.
+~
+He does look very mean!
+~
+1073741889 0 -1000 C
+14 0 0 3d5+150 2d5+14
+20 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 12 0 0 1 1 2
+0 0 0 0 3072 0 0 0
+#12020
+thief~
+the thief~
+A thief wanders around here, robbing good citizens.
+~
+A thief looks very mean. Bad thief!
+~
+1073741889 0 -1000 C
+15 0 0 5d10+150 2d6+15
+25 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 4 0 0 1 1 2
+0 0 0 0 3072 0 0 0
+#12021
+rogue~
+the rogue~
+A rogue walks around here, looking at people.
+~
+A rogue looks strong, dangerous even.
+~
+1073742017 0 -1000 C
+16 0 0 3d5+200 2d6+16
+25 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 2
+0 0 0 0 3072 0 0 0
+#12022
+punk~
+a punk~
+A punk stands around here, staring at you.
+~
+A punk stands here, staring you in the eyes. You'd better be careful, he may
+attack you at any moment.
+~
+1073872961 0 -1000 C
+17 0 0 3d5+350 3d6+17
+40 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 3072 0 48 0
+#12023
+big punk~
+a big punk~
+A big punk stands here, defending his truf.
+~
+A big punk stands here, ready to attack anyone that enters his territory. You
+probably are.
+~
+1073872961 0 -1000 C
+18 0 0 2d5+400 3d7+18
+45 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 3072 0 48 0
+#12024
+street tough~
+a street tough~
+A street tough hangs around here, armed and dangerous.
+~
+A street tough hangs around here, armed and dangerous.
+~
+1073872961 0 -1000 C
+19 0 0 2d5+450 3d7+19
+54 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 2
+0 0 0 0 3072 1048576 112 0
+#12025
+gang leader~
+a gang leader~
+A gang leader stands guard here, looking over his hood.
+~
+A gang leader stands guard here, looking over his hood. You are in it!
+~
+1073872993 0 -1000 C
+20 0 0 5d2+500 4d8+20
+100 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 3
+0 0 0 0 3072 0 112 3
+#12026
+mouse~
+a mouse~
+A mouse scuttles around here.
+~
+A mouse scuttles around here, looking for bread crums.
+~
+1073742017 0 0 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+77 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#12027
+rat~
+a rat~
+A rat scuttles around here.
+~
+A rat scuttles around here, spreading the plaque. Such a pest
+~
+1073742017 0 0 C
+8 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+77 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#12070
+potion sight~
+a potion of sight~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+50 -1 51 54
+1 100 10
+'detect hidden' 'detect invis' 'detect traps'
+#12071
+potion armor~
+a potion of armor~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+1 250 25
+'armor' 'NONE' 'NONE'
+#12072
+potion blessing~
+a potion of blessing~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+1 500 50
+'bless' 'NONE' 'NONE'
+#12073
+potion shielding~
+a potion of shielding~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+1 500 50
+'shield' 'NONE' 'NONE'
+#12074
+potion sanctuary~
+a potion of sanctuary~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+1 500 50
+'sanctuary' 'NONE' 'NONE'
+#12075
+potion stone skin~
+a potion of stone skin~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+1 500 50
+'stone skin' 'NONE' 'NONE'
+#12076
+potion strength~
+a potion of strength~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+1 500 50
+'kindred strength' 'NONE' 'NONE'
+#12077
+potion mana~
+a mana potion~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+2 750 75
+'restore mana' 'NONE' 'NONE'
+#12078
+potion heal~
+a healing potion~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+25 -1 -1 -1
+2 1000 100
+'heal' 'NONE' 'NONE'
+#12079
+potion life~
+a life potion~
+Some kind of potion has been left here.~
+~
+10 1073741824 0
+50 -1 94 140
+2 2500 250
+'cure critical' 'heal' 'restore mana'
+#12080
+iron small shield~
+an iron small shield~
+An iron small shield has been left here by someone.~
+~
+9 1074266112 513
+3 0 0 0
+4 500 50
+#12081
+iron shield~
+an iron shield~
+An iron shield has been left here by someone.~
+~
+9 1074266112 513
+5 0 0 0
+8 1000 100
+#12082
+iron great shield~
+an iron great shield~
+An iron great shield has been left here by someone.~
+~
+9 1074266112 513
+8 0 0 0
+12 1500 150
+#12083
+brass small shield~
+a brass small shield~
+A brass small shield has been forgotten here.~
+~
+9 1074266112 513
+10 0 0 0
+6 2000 200
+#12084
+brass shield~
+a brass shield~
+A brass shield has been forgotten here.~
+~
+9 1074266112 513
+12 0 0 0
+10 2500 250
+#12085
+brass great shield~
+a brass great shield~
+A brass great shield has been forgotten here.~
+~
+9 1074266112 513
+12 0 0 0
+14 3500 350
+#12086
+bronze great shield~
+a bronze great shield~
+A bronze great shield has so carelessly been left here.~
+~
+9 1074266432 513
+22 0 0 0
+16 4500 450
+A
+17 -20
+A
+25 1
+A
+2 -1
+A
+18 2
+A
+19 2
+#12087
+silver great shield~
+a silver great shield~
+A silver great shield has so carelessly been left here.~
+~
+9 1074266432 513
+27 0 0 0
+18 5500 550
+A
+17 -25
+A
+25 2
+A
+2 -1
+A
+18 3
+A
+19 3
+#12088
+golden great shield~
+a golden great shield~
+A golden great shield has so carelessly been left here.~
+~
+9 1074266432 513
+35 0 0 0
+20 7500 750
+A
+17 -35
+A
+25 3
+A
+2 -2
+A
+18 4
+A
+19 4
+#12089
+platinum shield~
+a platinum shield~
+You are stunned to see a platinum shield has been left here.~
+~
+9 1074266432 513
+40 0 0 0
+15 15000 1500
+A
+17 -40
+A
+25 2
+A
+18 4
+A
+19 4
+A
+26 67108864
+#12090
+leather gloves~
+a pair of leather gloves~
+A pair of leather gloves have been dropped here.~
+~
+9 1073741824 129
+1 0 0 0
+2 75 7
+#12091
+hard leather gloves~
+a pair of hard leather gloves~
+A pair of hard leather gloves have been dropped here.~
+~
+9 1073741824 129
+1 0 0 0
+2 150 15
+#12092
+hard leather sleeves~
+a pair of hard leather sleeves~
+Some hard leather sleeves lay about here.~
+~
+9 1073741824 257
+1 0 0 0
+3 200 20
+#12093
+hard leather jerkin~
+a hard leather jerkin~
+A hard leather jerkin has been discarded.~
+~
+9 1073741824 1025
+1 0 0 0
+4 200 20
+#12094
+iron ringed gloves~
+a pair of iron ringed gloves~
+A pair of iron ringed gloves wait to be found here.~
+~
+9 1074266112 129
+2 0 0 0
+2 225 22
+#12095
+iron ringed sleeves~
+some iron ringed sleeves~
+Some iron ringed sleeves lay here.~
+~
+9 1074266112 257
+2 0 0 0
+3 300 30
+#12096
+reinforced boots~
+a pair of iron reinforced boots~
+Someone took off some iron reinforced boots.~
+~
+9 1074266112 65
+2 0 0 0
+3 225 22
+#12097
+iron ringed cloak~
+an iron ringed cloak~
+A cloak made of iron rings drapes the floor.~
+~
+9 1074266112 1025
+2 0 0 0
+5 300 30
+#12098
+iron ringed vest~
+an iron ringed vest~
+An iron ringed vest has been left here.~
+~
+9 1074266112 9
+6 0 0 0
+15 1500 150
+#12099
+iron cast body armor~
+an iron-cast body armor~
+An iron-cast body armor has been forgotten here by someone.~
+~
+9 1074266368 9
+8 0 0 0
+18 2000 200
+#12100
+lunatide ring~
+a lunatide ring~
+A small lunatide ring~
+~
+9 1074298944 3
+1 0 0 0
+2 250 25
+A
+13 10
+A
+14 20
+A
+5 1
+#12101
+lunatide gloves~
+a pair of lunatide gloves~
+An expensive pair of lunatide gloves was left here.~
+~
+9 1074298944 129
+2 0 0 0
+2 300 30
+#12102
+lunatide sleeves~
+some lunatide sleeves~
+Some lunatide sleeves have been left here.~
+~
+9 1074298944 257
+2 0 0 0
+4 400 40
+#12103
+lunatide boots~
+a pair of lunatide boots~
+A pair of lunatide boots float about here.~
+~
+9 1074298944 65
+2 0 0 0
+4 400 40
+A
+26 32768
+#12104
+lunatide cloak~
+a lunatide cloak~
+A lunatide cloak calmly floats about here.~
+~
+9 1074298944 1025
+3 0 0 0
+6 500 50
+A
+56 292
+#12105
+lunatide vest~
+a lunatide vest~
+A sturdy lunatide vest hovers here, unattended.~
+~
+9 1074298944 9
+10 0 0 0
+1 2500 250
+A
+56 205
+A
+26 2097152
+#12106
+lunatide suit~
+a lunatide suit~
+An expensive lunatide suit hovers about here.~
+~
+9 1074298944 0
+12 0 0 0
+1 3000 300
+A
+56 205
+A
+26 524288
+#12107
+lunatide armor~
+a lunatide armor~
+A lunatide armor floats about here.~
+~
+9 1074298944 9
+16 0 0 0
+1 4000 400
+A
+26 524288
+A
+2 1
+#12108
+lunatide body armor~
+a lunatide body armor~
+An expensive lunatide body armor hovers here.~
+~
+9 1074298944 9
+20 0 0 0
+1 5000 500
+A
+26 524288
+A
+2 2
+#12109
+lunatide shield~
+a lunatide shield~
+An expensive lunatide shield rests on the ground here.~
+~
+9 1074298944 513
+24 0 0 0
+10 5000 500
+A
+2 1
+A
+5 2
+A
+13 20
+#12200
+fountain~
+the center plaza fountain~
+A fountain adorned with a statue of a man gushes forth here.~
+~
+25 1073741824 1
+0 0 0 0
+1 25000 2500
+E
+fountain statue~
+As you look at the center plaza fountain you notice it has a statue of a man
+on it. It appears to be the founder of this city: Tobias Keizer. As you think
+about how strange that name really is you also notice hes not much to look at
+either. Poor guy, well, at least hes got himself a nice city.
+~
+#0
+
+
+#ROOMS
+#12001
+The Northwest Lookout Tower~
+|You're  on  the  northwest  lookout  tower of Gen-Shi City. Not until you look
+|down  do  you realize how high this structure really is. To the east and south
+|you  can  see  the massive walls which show signs of aging and battle. To your
+|south east you see a small ladder leading down.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12002
+D2
+~
+~
+0 -1 12012
+D8
+~
+~
+0 -1 12013
+S
+#12002
+On the Northern Wall, east of the Northwest Tower~
+|You  find  yourself  on  the  northern city wall, east of northwest tower. Not
+|only  can  you  look over the city from here but also with a single glance you
+|can  see  over  the entire fields surrounding the city. Any attackers would be
+|easily  spotted  from here. To you east the wall stretches out further while a
+|huge tower lies to your west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12003
+D3
+~
+~
+0 -1 12001
+S
+#12003
+On the Northern Wall~
+|You  walk  along  the  northern  wall  somewhere  in  the  middle  between the
+|northwest   tower  and  the  northern  lookout  point.  As  you  examine  this
+|particular  part  of  the  wall  closer  you  notice is has been damage badly,
+|probably  by  a  ballista of some kind. Only the gods know how many times this
+|great  city  must  have  been under siege. The wall stretches out to your east
+|and to your west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12004
+D3
+~
+~
+0 -1 12002
+S
+#12004
+On the Northern Wall~
+|You  find your self on the northern wall, slightly to the west of the northern
+|lookout  point.  Although  the  lookout point to your east does not seem to be
+|too  much  of a thing you can still see that along with the guards at the gate
+|it  should  provide enough protection. The wall stretches out to your east and
+|west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12005
+D3
+~
+~
+0 -1 12003
+S
+#12005
+The Northern Lookout Point~
+|This  part  of  the  northern  wall seems to be made into some kind of lookout
+|point.  To  your  east you can see the massive northern gate but there doesn't
+|seem  to  be  a  way  down. There is a tiny structure here which is probably a
+|small  watch-house  for  the  guards but the door seems to be bolted shut. The
+|northern wall stretches out far to your west.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 12004
+S
+#12006
+The Northern Gate~
+|Massive  is the only word that can apply to this structure. As you look at the
+|massive  iron  gate  you  wonder how many men it would take to roll it back up
+|after  a siege. Guards continually relieve each other making sure this gate is
+|never unmanned. To your south you can see the paved main street.
+~
+0 1073741824 1 0
+D0
+~
+gate~
+1 -1 12137
+D2
+~
+~
+0 -1 12017
+S
+#12007
+The Northern Lookout Point~
+|As  you  walk  along this part of the northern wall you notice a lookout point
+|has  been  made  here.  To your west you can see the massive northern gate but
+|you  can't  seem  to  reach it from here. The small structure, which serves as
+|the  lookout  point,  seems to be bolted shut. The northern wall stretches out
+|far to your east all the way to the northeast tower.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12008
+S
+#12008
+On the Northern Wall~
+|You  find your self on the northern wall, slightly to the east of the northern
+|lookout  point.  Even  though the lookout point to your west is nothing grand,
+|it  should work fine for spotting oncoming enemies. Apart from that, the gate,
+|which  is always manned, should give additional protection. The wall stretches
+|out to your east and west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12009
+D3
+~
+~
+0 -1 12007
+S
+#12009
+On the Northern Wall~
+|You  walk  along  the  northern  wall  somewhere  in  the  middle  between the
+|northeast  tower  and  the northern lookout point. This part of the wall seems
+|to  be  more damaged than the rest of the wall. As you look north you see that
+|probably  because  the  only  opening in the dense forest is to the north. The
+|wall stretches out to your east and to your west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12010
+D3
+~
+~
+0 -1 12008
+S
+#12010
+On the Northern Wall, west of the Northeast Tower~
+|You  find  yourself  on  the  northern city wall, west of northeast tower. Not
+|only  can  you  look over the city from here but also with a single glance you
+|can  see  over  the  entire  fields surrounding the city. The city seems to be
+|enclosed  by  a  dense  forest  while there's some fields to the north. To you
+|west the wall stretches out further while a huge tower lies to your east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12011
+D3
+~
+~
+0 -1 12009
+S
+#12011
+The Northeast Lookout Tower~
+|You're  on  the  northeast  lookout  tower of Gen-Shi City. Not until you look
+|down  do  you realize how high this structure really is. To the west and south
+|you  can  see  the massive walls which show signs of aging and battle. To your
+|south west you see a small ladder leading down to the ring path.
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 12022
+D3
+~
+~
+0 -1 12010
+D9
+~
+~
+0 -1 12021
+S
+#12012
+Western Wall, South of the Northwest Tower~
+|You  walk along the western wall, a little short of the huge northwest lookout
+|tower.  To  your  south, the huge city wall stretches out until the gate while
+|the  tower  lies  a bit to your north. Down below you see the steps leading up
+|to the tower north but they are still too far to reach.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12001
+D2
+~
+~
+0 -1 12023
+S
+#12013
+On the Ring Path, at the Northwest Tower~
+|You  walk  along the ring path surrounding the city, near the Northwest tower.
+|It's  a  small dust path, with the huge city wall to your north and west while
+|small  houses lie to you south and east. As you look at the huge tower to your
+|northwest  you  notice  there's  a  small  stairway  leading up. The ring path
+|continues to the south and to the east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12014
+D2
+~
+~
+0 -1 12024
+D7
+~
+~
+0 -1 12001
+S
+#12014
+On the Ring Path, along the Northern Wall~
+|You're  on  the  ring  path, walking along the northern wall. To you south you
+|can  see  some  small  houses while the huge city wall stretches along to your
+|north.  A  small wooden house to your south catches your attention. It doesn't
+|look  great,  but  it's  still  inhabitable. As you wonder who lives there you
+|glance over the ring path that continues to your east and to your west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12015
+D2
+~
+door~
+7 -1 12025
+D3
+~
+~
+0 -1 12013
+S
+#12015
+On the Ring Path, along the Northern Wall~
+|You  walk  along the ring path between the northern wall and a block of houses
+|to  the  south.  The house to the south looks a little better than most houses
+|here.  It  must  be of someone important, maybe a merchant or a city official.
+|The ring path continues to the east and to the west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12016
+D2
+~
+door~
+0 -1 12026
+D3
+~
+~
+0 -1 12014
+S
+#12016
+On the Ring Path, west of the Main Street~
+|You're  on  the ring path, a little west of the main street. From here you can
+|already  see  the  main  street  to your east which looks huge compared to the
+|small  ring  path  that  continues to the west. To your south, you see a small
+|house.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12017
+D2
+~
+door~
+1 -1 12027
+D3
+~
+~
+0 -1 12015
+S
+#12017
+On the Main Street, south of the Northern Gate~
+|You're  on the main street, south of the huge northern gate. From here you can
+|see  how  the main street goes on to the south all the way to the center plaza
+|while  the ring path surrounding the city lies to the east and to the west. To
+|the north you see the impressive gate of Gen-Shi City.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12006
+D1
+~
+~
+0 -1 12018
+D2
+~
+~
+0 -1 12028
+D3
+~
+~
+0 -1 12016
+S
+#12018
+On the Ring Path, east of the Main Street~
+|You  find  yourself  on  the ring path, east of the main street. To your south
+|you  notice  a particularly nice house. It is well built and solid looking. As
+|you  look  closer you notice a small sign next to the door. "Home of Homei and
+|Shawmei"  it  reads.  The ring path continues to your east and the main street
+|lies to your west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12019
+D2
+~
+door~
+7 -1 12019
+D3
+~
+~
+0 -1 12017
+S
+#12019
+On the Ring Path, along the Northern Wall~
+|You're  walking along the ring path, which seems to get a little narrow around
+|here.  To your south lies a small building that looks abandoned. The ring path
+|continues to your east and to your west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12020
+D2
+~
+door~
+1 -1 12030
+D3
+~
+~
+0 -1 12018
+S
+#12020
+On the Ring Path, along the Northern Wall~
+|You  walk  over  the ring path that leads along the northern wall. As you look
+|around  you suddenly feel bit uncomfortable. Clearly this is not the best area
+|in  the  city  to wonder around. To your south you see a structure that is not
+|even  fit  to  live  in  anymore.  Strangely  enough you think you hear sounds
+|coming  from  the  building though. The ring path continues to the east and to
+|the west while a small dust path lead to the building south.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12021
+D2
+~
+door~
+1 -1 12031
+D3
+~
+~
+0 -1 12019
+S
+#12021
+On the Ring Path, at the Northeast Tower~
+|A  bad  place  to  be in. As you walk along you notice this must be one of the
+|worst  places in the city. Even the stairs that lead up to the northeast tower
+|are  rotting  away and crawling with rats. You start to pick up the pace a bit
+|to see if it gets somewhat better further along.
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 12032
+D3
+~
+~
+0 -1 12020
+D6
+~
+~
+0 -1 12011
+S
+#12022
+Eastern Wall, South of the Northeast Tower~
+|You  walk  along  the  eastern wall, south of the big northeast tower. To your
+|south,  the huge city wall stretches out until the gate while the tower lies a
+|bit  to  your north. You can see the stairs on the tower that lead down to the
+|ring path, but they are still out of reach.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12011
+D2
+~
+~
+0 -1 12033
+S
+#12023
+On the Western Wall~
+|You  are  walking  on  the western wall, somewhere between the northwest tower
+|and  the  western  lookout  point. Apart from the ring path down below and the
+|small  houses  next to it there's really not much to see around here. The wall
+|goes on to the north and to the south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12012
+D2
+~
+~
+0 -1 12034
+S
+#12024
+On the Ring Path, along the Western Wall~
+|As  you  walk  the ring path, next to the huge western wall you notice a small
+|wooden  house to the east. It's not in great shape, but someone may still live
+|there.  The  house  doesn't  seem to have an entrance from here, but you see a
+|small  path  north  of  it.  The  ring  path continues to the north and to the
+|south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12013
+D2
+~
+~
+0 -1 12035
+S
+#12025
+Someone's Home~
+|You  find  yourself in a small wooden house. Although it's not too well built,
+|it's  a  place  where someone could live in peace and quiet. What more could a
+|guy  want? A sign over the door reads "Someone's Home - A gift from the Gods".
+|The exit lies to the north.
+~
+0 1073741824 0 0
+D0
+~
+door~
+7 -1 12014
+S
+#12026
+A nice little House~
+|You  stand  in  a  nice  little  house.  Although  this  place is not too big,
+|everything  is  very neat and the place looks quite clean. Some nice furniture
+|adorns  the  living  room  while  a  small kitchen stands against the southern
+|wall. The exit lies to the north.
+~
+0 1073741824 0 0
+D0
+~
+door~
+7 -1 12015
+S
+#12027
+A small House~
+|As  you  walk  around  in  this small house you notice that the owners of this
+|place  are probably somewhat poor. Although the house on itself is not so bad,
+|the  lack  of furniture indicates they're not too wealthy either. A small door
+|to the north leads you back to the ring path.
+~
+0 1073741824 0 0
+D0
+~
+door~
+1 -1 12016
+S
+#12028
+On the Main Street, between the North Gate and the Plaza~
+|You're  on  the main street somewhere between the north gate and the plaza. As
+|you  look  around  you  see  house to both your east and your west. They don't
+|seem  to  have  an entrance from here but you can probably get there using the
+|ring path. The main street continues to the north and to the south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12017
+D2
+~
+~
+0 -1 12039
+S
+#12029
+Homei and Shamei's Place~
+|You're  in  a  little  house,  well built actually. You look around and notice
+|that  the  people  who  live here must do well. The place is not big, but it's
+|nicely  made.  It  has  some  furniture,  a small kitchen and there's a screen
+|between the part where the beds are and the rest of the house.
+~
+0 1073741824 0 0
+D0
+~
+door~
+7 -1 12018
+S
+#12030
+An Abandoned House~
+|As  you walk through this house you notice it is obviously abandoned. Rats run
+|around  everywhere  while  the  place  stinks incredibly. You notice something
+|that  used  to be furniture although otherwise this place is completely empty.
+|The door that seems to have been forced open at some point lies to the north.
+~
+0 1073741824 0 0
+D0
+~
+door~
+1 -1 12019
+S
+#12031
+An Abandoned Building~
+|This  abandoned  building seems to have been taken over by a group of homeless
+|punks.  It's  obvious this place is still in use, but god, what a place it is.
+|As  you  look around you wonder if maybe it would be better to leave. Who know
+|what  these  people  would do to you if they think you may have gold? The door
+|leading outside lies to your north.
+~
+0 1073741824 0 0
+D0
+~
+~
+0 -1 12020
+S
+#12032
+On the Ring Path, along the Eastern Wall~
+|This  part  of the ring path really doesn't look too good. Who knows what kind
+|of  folk  roams  around here? There's some abandoned building to your west but
+|there  doesn't  seem  to be a way in. Not that you would want to go in a place
+|like that... The ring path continues to the north and to the south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12021
+D2
+~
+~
+0 -1 12043
+S
+#12033
+On the Eastern Wall~
+|You're  on  the  eastern  wall,  between the northeast tower and the east gate
+|which  lies  to  the  south.  You  notice  how this wall is still in excellent
+|condition.  This  side  of  the  city has probably never been under siege. The
+|eastern  wall  goes on to the north up to the tower and to the south up to the
+|eastern lookout point.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12022
+D2
+~
+~
+0 -1 12044
+S
+#12034
+On the Western Wall~
+|You're  on  the  western wall, a bit north from the western lookout point. Not
+|only  can  you  overlook most of the city from here, you can also see big part
+|of  the fields surrounding the city. The wall goes on north, while the western
+|lookout point lies to the south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12023
+D2
+~
+~
+0 -1 12045
+S
+#12035
+On the Ring Path, along the Western Wall~
+|You're  walking  on  the  ring  path,  along the western wall. You immediately
+|notice  a  big  sign  to the east that reads "Isaac's - Local Armory". There's
+|some  small  letters  indicating a location, something about the center plaza,
+|it's  too  small  to read well. As you look at the house notice it's very well
+|built.  But  then  again,  how can't it be considering the amount of gold that
+|armor  costs these days. A small paved path leads to Isaac's place on the east
+|while the ring path goes on to the north and south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12024
+D1
+~
+door~
+7 -1 12036
+D2
+~
+~
+0 -1 12046
+S
+#12036
+Inside Isaac's Place~
+|You're  inside  the  house  of  Isaac, the local armor dealer. You immediately
+|notice  the  luxury  in this place. Isaac seems to fare well. The place is not
+|very  big,  but  then  again,  no  place seems to be in this city. As you look
+|around  you  see  junk everywhere, probably parts of armor, but nothing really
+|useful. The only exit here seems to be the door to the west.
+~
+0 1073741824 0 0
+D3
+~
+door~
+7 -1 12035
+S
+#12037
+The Entrance to Doc's Armor and Weapon Store~
+|This  place  is  known in all the lands due to its fine armor and weaponry, or
+|so  the  sign  says.  To the south you can find the weapon department which is
+|managed  by Doc while to the east Isaac handles the Armor department. The exit
+|to the center plaza is on the southeast.
+~
+0 1073741824 0 0
+D1
+~
+~
+0 -1 12038
+D2
+~
+~
+0 -1 12048
+D8
+~
+~
+0 -1 12049
+S
+#12038
+Doc's Armor and Weapon Store - The Armor Department~
+|This  is  the armor department of Doc's store. Immediately you notice the huge
+|amounts  of armor in stock. Maybe this place really is known in all the lands.
+|As  you  look  around  for  the store manager you notice that the only exit is
+|back to the entrance which lies to the west.
+~
+0 1073741824 0 0
+D3
+~
+~
+0 -1 12037
+S
+#12039
+On the Main Street, north of the Center Plaza~
+|You're  on the main street, north of the center plaza. To the west you can see
+|Doc's  armor store while Homei's magic shop lies to the east. Neither seems to
+|have  an  entrance  from  here though. To the far north lies the northern city
+|gate while the grand plaza lies to the south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12028
+D2
+~
+~
+0 -1 12050
+S
+#12040
+Homei's Magic and Potion Shop - Magic Shop Department~
+|You're  inside Homei's magic shop, the place to be in Gen-Shi City if you need
+|magical  goodies.  Homei  runs  the  shop  together with Shawmei, who runs the
+|potion  department, and they are very well known in this area. The exit of the
+|store  lies  to the east where you can either head for the center plaza or the
+|potion department.
+~
+0 1073741824 0 0
+D1
+~
+~
+0 -1 12041
+S
+#12041
+The Entrance to Homei's Magic and Potion Shop~
+|You're  at  the  entrance of Homei's Magic and Potion Shop. As you examine the
+|inside  of this building you quickly come to the conclusion that the magic and
+|potion  business  must  be  a  good  one. The sign here tells you that Homei's
+|magic  shop  lies to the east and Shawmei's potion shop to the south. The exit
+|to the center plaza lies to the southwest.
+~
+0 1073741824 0 0
+D2
+~
+~
+0 -1 12052
+D3
+~
+~
+0 -1 12040
+D9
+~
+~
+0 -1 12051
+S
+#12042
+An Old Man's Home~
+|You're  in  the  home of an old man, you notice because you see him sit on his
+|old  chair.  Everything  here  is dusty, he probably doesn't clear very often.
+|The  place looks like that of a hermit. Windows shut, doors closed, and barely
+|any  light  at  all. You wonder what it would be like to be that old. The exit
+|lies to the ring path lies to the east.
+~
+0 1073741824 0 0
+D1
+~
+door~
+1 -1 12043
+S
+#12043
+On the Ring Path, along the Eastern Wall~
+|You're  on the ring path surrounding the city, walking along the eastern wall.
+|You  notice a small house on your west. All it's windows are shut, the door is
+|closed  and  there doesn't seem to be any light coming from the inside. As you
+|examine  the state of the house you realize it's probably empty. The ring path
+|continues  to  your  north to a somewhat darker area and towards the east gate
+|to your south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12032
+D2
+~
+~
+0 -1 12054
+D3
+~
+door~
+1 -1 12042
+S
+#12044
+On the Eastern Wall~
+|You  find  yourself on the eastern wall, somewhere between the northeast tower
+|and  the  eastern  lookout  point. As you look around you notice the excellent
+|state  of  this  structure  and  find that the wall leads on far to your north
+|while the small lookout point lies to your south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12033
+D2
+~
+~
+0 -1 12055
+S
+#12045
+At the Western Lookout Point~
+|You  find  yourself on the western wall, a little north of the gate. You see a
+|small  house,  which  seems to serve as some kind of lookout point. As it is a
+|little  higher  than  the  rest of the wall the view must be excellent when it
+|comes  to  spotting  enemies. There is no way to reach the west gate from here
+|which means the only exit is north heading for the northwest tower.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12034
+S
+#12046
+On the Ring Path, north of the Main Street~
+|While  you  walk  along  the ring path, a little north of the main street, you
+|immediately  notice  one  of the most beautiful houses in the area. A big sign
+|reads  "Doc's,  visit  us at the Center Plaza". The house seems well built and
+|has  a paved path leading east to the doorstep. The ring path continues to the
+|north while the main street lies to your south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12035
+D1
+~
+door~
+0 -1 12047
+D2
+~
+~
+0 -1 12057
+S
+#12047
+Inside Doc's Home~
+|You  find  yourself  inside Doc's home. The house seems to be a tad bit bigger
+|than  most  houses  around  here, but it's nothing grand either. You do notice
+|the  amount  of stuff Doc seems to have. Nice furniture, a kitchen with stove,
+|a  huge bed and many other luxuries. There are some drawings on the table with
+|designs  for  new  armor  and weapons which has something about "lunatide" and
+|"meteor" on it, whatever that might be. The exit lies to the west.
+~
+0 1073741824 0 0
+D3
+~
+door~
+7 -1 12046
+S
+#12048
+Doc's Armor and Weapon Store - The Weapon Department~
+|As  you  walk  in  the  weapon  department of Doc's armor and weapon store you
+|can't  help  but notice the enormous amount of weapons here. Lists hang on the
+|wall  indicating  the different types of weapons and their characteristics. As
+|you look around you notice the only exit is north, back to the entrance.
+~
+0 1073741824 0 0
+D0
+~
+~
+0 -1 12037
+S
+#12049
+The Center Plaza, Northwest of the Fountain~
+|You  are  in  the  northwest  corner  of the center plaza. The first thing you
+|notice  here  is  Doc's  weapon  and  armor  store.  The  entrance lies to the
+|northwest while the plaza stretches out to the south, east and southeast.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12050
+D2
+~
+~
+0 -1 12060
+D7
+~
+door~
+1 -1 12037
+D8
+~
+~
+0 -1 12061
+S
+#12050
+The Center Plaza, North of the Fountain~
+|You're  at  the  center  plaza,  north of the fountain. The main street to the
+|north  leads  to the northern gate while the plaza continues to the west, east
+|and  southwards.  To  your  far  east  and west you can already see the stores
+|while the fountain lies to your immediate south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12039
+D1
+~
+~
+0 -1 12051
+D2
+~
+~
+0 -1 12061
+D3
+~
+~
+0 -1 12049
+D8
+~
+~
+0 -1 12062
+D9
+~
+~
+0 -1 12060
+S
+#12051
+The Center Plaza, Northeast of the Fountain~
+|You  find  yourself on the grand center plaza of Gen-Shi City, a little to the
+|northeast  of the fountain. Some signs to your northeast catch your attention.
+|"Homei's  Magic  and  Potion Shop", it reads. You notice the small entrance to
+|the  northeast  while  the  plaza  stretches  along  to  the  west,  south and
+|southwest.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 12062
+D3
+~
+~
+0 -1 12050
+D6
+~
+door~
+1 -1 12041
+D9
+~
+~
+0 -1 12061
+S
+#12052
+Homei's Magic and Potion Shop - Potion Shop Department~
+|You're  in  Shawmei's potion shop. The marble floor here stretches out all the
+|way  to  the  entrance  which lies north while the silver torches hanging from
+|the  wall  light  the  place  up to give it it's warm atmosphere. The scent of
+|flowers,  which  comes  from  the  magic  candles,  makes you feel calm and at
+|peace. The only exit is north to the store entrance.
+~
+0 1073741828 0 0
+D0
+~
+~
+0 -1 12041
+S
+#12053
+A Small House~
+|You  are in a small house, probably home to one of the many families this city
+|has.  Apart  from a few beds there's not much to be found here. Maybe the head
+|of  this family is a guard. That would explain the sword-cabinet in the corner
+|of the room. The only exit is to you east, leading to the ring path.
+~
+0 1073741828 0 0
+D1
+~
+~
+0 -1 12054
+S
+#12054
+On the Ring Path, north of the Main Street~
+|You  walk  on  the ring path, north of the main street and west of the eastern
+|wall.  To  your  east  you  see a small house, built from stone and wood. What
+|strikes  you as remarkable, is that the roof is made out of some kind of tile.
+|It  looks  nice  though.  The  ring path goes on to the north, the main street
+|starts to your south.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12043
+D2
+~
+~
+0 -1 12065
+D3
+~
+door~
+1 -1 12053
+S
+#12055
+At the Eastern Lookout Point~
+|You  find  yourself  on  the  eastern wall, a little north of the east gate. A
+|small  house  has  been  built here to serve as some kind of lookout point. It
+|gives  you a good view over the forest that lies along the east and south side
+|of  the  city.  The  eastern wall goes on to the north while the lookout point
+|doesn't seem to have an entrance.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12044
+S
+#12056
+The Western Gate~
+|You're  at  the  west  gate  of  Gen-Shi  City. Even from here you can see the
+|forest  to  the  west of the city. Immensely dense, though it seems a path has
+|been  cleared  to the north. The main street leads to the heart of the city on
+|the east while you can see the ring path to the northeast and southeast.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12057
+D3
+~
+gate~
+1 -1 12151
+S
+#12057
+On the Main Street, east of the Western Gate~
+|You  find  yourself  on  the main street, east of the western gate. You notice
+|some  houses to the northwest and southwest. They seem to be reachable through
+|the  ring  path that starts north and south of here. The main street continues
+|to  the  east  leading to the center plaza and to the west leading to the west
+|gate.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12046
+D1
+~
+~
+0 -1 12058
+D2
+~
+~
+0 -1 12068
+D3
+~
+~
+0 -1 12056
+S
+#12058
+On the Main Street, between the West Gate and the Plaza~
+|You  walk along the paved main street, somewhere between the west gate and the
+|center  plaza.  To your north and south you can see houses but they don't seem
+|to have an entrance here. The main street continues to the east and west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12059
+D3
+~
+~
+0 -1 12057
+S
+#12059
+On the Main Street, west of the Center Plaza~
+|You  are  on  the  main  street,  a  little  west of the center plaza. You can
+|clearly  see  the  fountain  and  the  center plaza from here, and as you look
+|closer  you  can  even  see  the stores around the plaza. The main street goes
+|east to the plaza and west to the western gate.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12060
+D3
+~
+~
+0 -1 12058
+S
+#12060
+The Center Plaza, West of the Fountain~
+|You're  at  the grand center plaza, a little west of the fountain. As you look
+|down  and  examine  the mosaic of tiny tiles of which this plaza has been made
+|you  realize  it must have taken ages to create this small paradise. While you
+|glance  over  the  plaza  a  feeling  of  calmness  comes  over you. The plaza
+|continues  far  to  your  east  and goes on north and south until reaching the
+|stores.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12049
+D1
+~
+~
+0 -1 12061
+D2
+~
+~
+0 -1 12071
+D3
+~
+~
+0 -1 12059
+D6
+~
+~
+0 -1 12050
+D8
+~
+~
+0 -1 12072
+S
+#12061
+The Center Plaza, at the Fountain~
+|You're  at  the  Center  Plaza of Gen-Shi City. As you look around you see the
+|plaza  stretches  out  all  around  you  while  the  fountain in the middle is
+|adorned  with  a statue of a man, the founder of the city probably. You notice
+|people  here  are  quite  calm,  mostly just hanging around. The plaza must be
+|some kind of safe or meeting place.
+~
+0 1073742848 1 11
+D0
+~
+~
+0 -1 12050
+D1
+~
+~
+0 -1 12062
+D2
+~
+~
+0 -1 12072
+D3
+~
+~
+0 -1 12060
+D6
+~
+~
+0 -1 12051
+D7
+~
+~
+0 -1 12049
+D8
+~
+~
+0 -1 12073
+D9
+~
+~
+0 -1 12071
+S
+#12062
+The Center Plaza, East of the Fountain~
+|You're  at  the  grand center plaza of Gen-Shi City. As you glance over to the
+|west  you  can  see  the  fountain  in the middle of the plaza. While the main
+|street  leads  stretches  out  to  the east all the way to the gate, the plaza
+|goes  on  to the north, south and west. Even from here you can already see the
+|signs  of  the  shops  north  and  south of here while far to the west you can
+|catch a glimpse of the main road leading on to the west gate.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12051
+D1
+~
+~
+0 -1 12063
+D2
+~
+~
+0 -1 12073
+D3
+~
+~
+0 -1 12061
+D7
+~
+~
+0 -1 12050
+D9
+~
+~
+0 -1 12072
+S
+#12063
+On the Main Street, east of the Center Plaza~
+|As  you  look  around you see the stores to your north and south. To the south
+|lies  the junk shop while Homei's potion shop lies north. As you look over the
+|main  street you notice you're not too far from the east gate while the center
+|plaza lies to your immediate west.
+~
+0 1073741828 1 0
+D1
+~
+~
+0 -1 12064
+D3
+~
+~
+0 -1 12062
+S
+#12064
+On the Main Street, between the East Gate and the Plaza~
+|You  walk  on  the main street, right in between the center plaza and the east
+|gate.  To  your  north  and  south  you notice some houses while the ring path
+|seems  to  lie  a  little further to the east. The main street leads on in the
+|east and west direction, heading from the east gate to the plaza.
+~
+0 1073741828 1 0
+D1
+~
+~
+0 -1 12065
+D3
+~
+~
+0 -1 12063
+S
+#12065
+On the Main Street, west of the Eastern Gate~
+|You  find  yourself on the main street, a little west of the eastern gate. You
+|notice  the  ring  path  that  surrounds  the  city leads off to the north and
+|south.  From  here  you can already see the eastern gate to the east while the
+|main street continues to the west heading for the center plaza.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12054
+D1
+~
+~
+0 -1 12066
+D2
+~
+~
+0 -1 12076
+D3
+~
+~
+0 -1 12064
+S
+#12066
+The Eastern Gate~
+|You're  at  the east gate of Gen-Shi City. As you examine this huge metal gate
+|you  notice  how  the  path outside the city leads to the north only. The city
+|looks  surrounded  by  a  dense  forest.  The main street looks well paved, it
+|leads on to the very heart of the city, which lies to your west.
+~
+0 1073741828 1 0
+D1
+~
+gate~
+1 -1 12152
+D3
+~
+~
+0 -1 12065
+S
+#12067
+At the Western Lookout Point~
+|You're  at  the  second of the western lookout points. You notice this because
+|the  first  lookout  point  is clearly visible from here, just a little to the
+|north.  You realize how safe this city must be. A quick calculation brings you
+|to  the  assumption  that  there  must  be  four  gates, four towers and eight
+|lookout points. The wall continues south from here.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 12078
+S
+#12068
+On the Ring Path, south of the Main Street~
+|You  find  yourself on the ring path that surrounds the city. To your east you
+|notice  a  small  house, you're not sure whether it has an entrance or not. To
+|your  north  you can see the paved main street that crosses the city. The ring
+|path continues far to your south.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12057
+D1
+~
+door~
+7 -1 12069
+D2
+~
+~
+0 -1 12079
+S
+#12069
+Inside a Strange House~
+|You  stand in a very strange house. As you look around you can't help but feel
+|strange.  This  place  is  mostly empty, but you still get the feeling there's
+|something in this place. The well-hidden exit lies to your west.
+~
+0 1073741828 0 0
+D3
+~
+door~
+7 -1 12068
+S
+#12070
+The Local Inn - The Sleeping Quarters~
+|As  you  look  around this place is actually a lot smaller than you would have
+|expected.  There's  just some beds, divided by some screens, which is actually
+|all  you  can  find  here. This would explain that not many people sleep here.
+|But  then  again,  a  city like this, almost in the middle of nowhere, doesn't
+|get too many visitors. The only exit lies to the south.
+~
+0 1073741828 0 0
+D2
+~
+door~
+1 -1 12081
+S
+#12071
+The Center Plaza, Southwest of the Fountain~
+|You're  at  the center plaza, southwest of the fountain. From here you can see
+|the  huge  Gen-Shi Inn that lies to the southwest. As you look at the sign you
+|see  it  has a bar too... "Flamenco's Bar", it reads. The plaza goes on to the
+|north, east and northeast. The entrance to the inn is to the southwest.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12060
+D1
+~
+~
+0 -1 12072
+D6
+~
+~
+0 -1 12061
+D9
+~
+door~
+1 -1 12081
+S
+#12072
+The Center Plaza, South of the Fountain~
+|You  walk  on  the  center  plaza, south of the fountain. You can see the main
+|street  leading south all the way to the south gate. To you southwest lies the
+|Inn  while  you  can see the gym to the southeast. To the north you notice the
+|oasis of peace also known as 'fountain' around here.
+~
+0 1073741828 1 1
+D0
+~
+~
+0 -1 12061
+D1
+~
+~
+0 -1 12073
+D2
+~
+~
+0 -1 12083
+D3
+~
+~
+0 -1 12071
+D6
+~
+~
+0 -1 12062
+D7
+~
+~
+0 -1 12060
+S
+#12073
+The Center Plaza, Southeast of the Fountain~
+|From  the southeast corner of the center plaza you have a good view of most of
+|the  city's  center. You can see the entire plaza, most of the stores and even
+|the  main  street  that crosses the city in all four cardinal directions. From
+|here  you can also see Kashu's Gym to the south, the junk shop to the east and
+|the  bank that lies to the southeast. The plaza goes on to the north, west and
+|northwest.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12062
+D1
+~
+door~
+1 -1 12074
+D2
+~
+door~
+1 -1 12084
+D3
+~
+~
+0 -1 12072
+D7
+~
+~
+0 -1 12061
+D8
+~
+door~
+1 -1 12085
+S
+#12074
+The Junk Shop~
+|You're  inside the junk shop, and you sure notice... It's incredible what lies
+|around  here...  Everything  from  scrap  to weapons, armor, you name it. It's
+|obvious  this  guy  will  buy anything from anyone. As you look over this mess
+|you notice the only exit lies to the west.
+~
+0 1073741828 0 0
+D3
+~
+door~
+1 -1 12073
+S
+#12075
+Inside Kashu's Place~
+|You  find yourself in the house of the local Gym Owner. As you look around you
+|notice  nothing but weights, training equipment and books. This Kashu guy must
+|be  a  war-god  by  now.  There's tons of books about styles, weapons, martial
+|arts  and  who knows what else. As you look at a painting of Kashu on the wall
+|you  wonder  if  this  is  the  right place to wander around in without asking
+|first.  God  knows what he would do to you if he finds you here. The only exit
+|is east.
+~
+0 1073741828 0 0
+D1
+~
+door~
+7 -1 12076
+S
+#12076
+On the Ring Path, south of the Main Street~
+|You  find  yourself on the ring path, east of a funny looking house. The house
+|has  a  sign  on  it  with  strange  writings on it, it doesn't even look like
+|they're  letters.  As  you look close you notice it also has normal writing on
+|it.  It  reads "Kashu's Place". The ring path continues to the south while the
+|main street lies to your north.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12065
+D2
+~
+~
+0 -1 12087
+D3
+~
+door~
+7 -1 12075
+S
+#12077
+At the Eastern Lookout Point~
+|You  are at the eastern lookout point. This is where the eastern wall ends and
+|the  guards  look over the surrounding fields to spot enemies. You see a small
+|guardhouse  with no apparent entrance. Could it be that these lookouts are not
+|in use anymore? The eastern wall continues to the south.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 12088
+S
+#12078
+On the Western Wall~
+|You  are  on  the  western  wall, a little to the south of the western lookout
+|point.  You  notice  the  dense  forest  on  the  west and realize it would be
+|impossible  to leave the city in that direction. The western wall continues to
+|the south while the lookout point lies to the north.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12067
+D2
+~
+~
+0 -1 12089
+S
+#12079
+On the Ring Path, along the Western Wall~
+|You  are  on  the  ring path west of the house of Mika and Aleste Slayton. You
+|know  this  because  there  is a big sign hanging on the wall. It says Mika is
+|the  owner  of  the  local  inn.  The house looks nice, but it's nothing great
+|either. The ring path continues to your north and to your south.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 12068
+D1
+~
+door~
+7 -1 12080
+D2
+~
+~
+0 -1 12090
+S
+#12080
+The House of Mika and Aleste Slayton~
+|You're  inside  the  house  of  the owner of the inn. There's two beds here, a
+|kitchen  and  that's about it. Funny how all the houses in this city are quite
+|small.  The  house  is  not very clean, which makes you come to the conclusion
+|that  either  Mika  is  not  too neat or she works a lot. The exit lies to the
+|west.
+~
+0 1073741824 0 0
+D3
+~
+door~
+7 -1 12079
+S
+#12081
+The Entrance to the Inn~
+|You  are  at  the entrance to the inn. There's nothing here really, apart from
+|some  garments hanging from some hangers, the front desk and two doors leading
+|to  the  rest  of  the  inn.  As  you  read  the signs you notice the sleeping
+|quarters are to the north and the bar is to the east.
+~
+0 1073741824 0 0
+D0
+~
+~
+0 -1 12070
+D1
+~
+~
+0 -1 12082
+D6
+~
+~
+0 -1 12071
+S
+#12082
+The Local Inn - Bar and Diner~
+|You're  in  the bar and diner of the local inn. Here you can get a decent meal
+|for  a  small price or you could just enjoy a glass of ale on the bar. Looking
+|at  the  size  of this place you come to the conclusion that this bar probably
+|also  serves as a bar for the local townsfolk. The exit of the bar lies to the
+|west.
+~
+0 1073741824 0 0
+D3
+~
+~
+0 -1 12081
+S
+#12083
+On the Main Street, south of the Center Plaza~
+|You  walk  the  main  street,  a little south of the center plaza. As you walk
+|between  the  local  inn  and  the  gym you notice how well made these streets
+|really  are. This city must do well in order to arrange for such nice streets.
+|Or  it  has  high  taxes...  The nicely paved main street goes on to the south
+|while the big center plaza lies to the north.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12072
+D2
+~
+~
+0 -1 12094
+S
+#12084
+The Gymnasium~
+|As  you  look around the gymnasium you see tons of neat things. Everywhere you
+|look  you  see  weights,  there's  benches  and  a  huge  quantity of training
+|weapons.  As you examine the shelves on the wall you notice how the have a lot
+|of  books on them. As far as you can see most of them are about styles. Kashu,
+|the owner, walks around giving instructions.
+~
+0 1073741824 0 0
+D0
+~
+door~
+1 -1 12073
+S
+#12085
+The Gen-Shi City Bank~
+|You  are  in  the  Gen-Shi City Bank. This is where you could stash you excess
+|amount  of  gold,  if you would trust the banker of course. A sign on the wall
+|reads  they  also  buy  and sell precious stones, for those who do not want to
+|carry  around  great, and heavy, amounts of gold. The exit to the center plaza
+|lies to the northwest
+~
+0 1073741824 0 0
+D7
+~
+door~
+33 -1 12073
+S
+#12086
+Inside a Small House~
+|You  are inside one of the many small houses this city has. The house has some
+|furniture,  but  not  too  much. As you look around you notice a small kitchen
+|and  some  beds.  A  cupboard  stands against the wall but it does not seem to
+|have anything interesting inside. The exit to the ring path lies to the east.
+~
+0 1073741824 0 0
+D1
+~
+door~
+1 -1 12087
+S
+#12087
+On the Ring Path, along the Eastern Wall~
+|You  are  on  the  ring path, walking along the eastern wall. To you immediate
+|west  you see a small, humble, house. It doesn't look too great, but you guess
+|it's  as  good a place as any. The ring path, which surrounds the entire city,
+|continues to your north and to your south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12076
+D2
+~
+~
+0 -1 12098
+D3
+~
+door~
+1 -1 12086
+S
+#12088
+On the Eastern Wall~
+|As  you  walk  along  the  eastern wall, somewhere between the eastern lookout
+|point  and the southwestern tower, you notice how dense the forest surrounding
+|the  city  really is. It really would be impossible to enter or leave the city
+|through  that forest. The wall seems to lead you either north, heading for the
+|lookout point, or south, heading for the tower.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12077
+D2
+~
+~
+0 -1 12099
+S
+#12089
+On the Western Wall~
+|You  are  on  the  western  wall, about half way from the lookout point to the
+|southwest  tower. Apart from the forest to the west there's really not much to
+|be  seen  around  here.  The  houses  lie  down below, to your east, while the
+|western wall continues to your north and to your south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12078
+D2
+~
+~
+0 -1 12100
+S
+#12090
+On the Ring Path, along the Western Wall~
+|You  walk  along  the ring path that leads you around the city. You're not too
+|far  off from the southeast tower, walking along some small houses that lie to
+|your  east.  The  ring  path continues to the south towards the tower while it
+|continues north towards the main street.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12079
+D2
+~
+~
+0 -1 12101
+S
+#12091
+Inside a small House~
+|You're  in  a  small  house  near  the southwest tower. As you look around you
+|figure  this is probably a house for the local guards. There's a bunk bed here
+|and  a  smaller  single bed, which stands next to a weapon chest. Although the
+|place  is clean, there's nothing in it apart from the furniture. The only exit
+|to the ring path lies to the southwest.
+~
+0 1073741824 0 0
+D9
+~
+door~
+3 -1 12101
+S
+#12092
+Inside a House~
+|You  find  yourself  inside  of  one  of the many houses around here. This one
+|looks  like  a  typical family-home. There's big double-bed standing along the
+|western  wall  shielded  from the living-room by a small screen. In the corner
+|you  see a small bed and a crib. A small table with some chairs stands between
+|you and the exit to the south.
+~
+0 1073741824 0 0
+D2
+~
+door~
+1 -1 12102
+S
+#12093
+Flamenco's~
+|You  are  in  the house of Flamenco, the bartender in the inn. You look around
+|and  notice there's quite some alcohol around here. Even some things you don't
+|know.  Flamenco  must  be  famous  for strange types of drinks considering the
+|recipes  that  lie  on  the  table.  The only exit is through the door to your
+|south.
+~
+0 1073741824 0 0
+D2
+~
+door~
+1 -1 12104
+S
+#12094
+On the Main Street, between the South Gate and the Plaza~
+|As  you  walk  the main street you notice two nice houses, one to you east and
+|one  to your west. They're probably owned by middle class people, as they seem
+|to  look  a  bit nicer than most houses around here. The main street continues
+|to the north, heading for the center plaza while it leads south to the gate.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12083
+D2
+~
+~
+0 -1 12105
+S
+#12095
+Inside Rubio's Place~
+|Although  this  house didn't look too bad from the outside, it's a dump on the
+|inside.  This  guy has like no furniture, no kitchen, nothing. Not even a bed!
+|This  must  be  one  of  those  people  that lives for the outside world. Very
+|strange indeed. The only exit is the door that lies to your south.
+~
+0 1073741824 0 0
+D2
+~
+door~
+1 -1 12106
+S
+#12096
+A Family Home~
+|You  find  yourself  in a small family home. Or at least you think so, judging
+|by  the fact that a small crib stands next to a double bed. There's a cupboard
+|standing  along  the  wall, close to a small table with some chairs. There's a
+|stove  a  little  to  the  north  while  the  door south leads you back to the
+|street.
+~
+0 1073741824 0 0
+D2
+~
+door~
+1 -1 12107
+S
+#12097
+Inside a small Mansion~
+|You're  inside what appears to be the house of Mr. James, the bank Owner. This
+|place  is  like beautiful. Even though it's not too big, it is very luxurious.
+|There's  gold  everywhere,  beautiful  furniture,  a grand kitchen and lots of
+|other  luxuries.  Obviously,  banking  is a very lucrative business. There are
+|two exits here, one to the south and one to the east.
+~
+0 1073741824 0 0
+D1
+~
+~
+7 -1 12098
+D2
+~
+door~
+7 -1 12108
+S
+#12098
+On the Ring Path, along the Eastern Wall~
+|You  find  yourself  walking  on  the  ring path, a little west of the eastern
+|wall.  You immediately notice a beautiful house to your west. There appears to
+|be  an entrance from here. A small sign tells you it's the house of Mr. James,
+|the  local  banker.  It  must  be  an  invitation  to  burglars. The ring path
+|continues to your north and to your south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12087
+D2
+~
+~
+0 -1 12109
+S
+#12099
+On the Eastern Wall~
+|You  are on the eastern wall, not too far off from the southeast tower. As you
+|look  around you notice a nice house, a little down and to your west. Although
+|the  other  houses  are  visible  as  well this one stands out particularly. A
+|little  to  your  south  you  can  already see the tower while you can catch a
+|glimpse of the lookout point and the gate to your north.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12088
+D2
+~
+~
+0 -1 12110
+S
+#12100
+Western Wall, North of the Southwest Tower~
+|You  are  on the western wall, north of the southwest tower. As you look south
+|you  see  the huge southwest tower. From the looks of it this part of the wall
+|hasn't  seen  any  action at all, it looks like it's still untouched. The wall
+|leads south towards the tower while it leads north all up to the west gate.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12089
+D2
+~
+~
+0 -1 12111
+S
+#12101
+On the Ring Path, at the Southwest Tower~
+|You  find  yourself  on  the  ring path, right before the southwest tower. The
+|immense  tower  is  clearly visible from here. A small staircase seems to lead
+|up  on the southwest. To your northeast you see the entrance to a small house.
+|The ring path continues to the north and to the east.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12090
+D1
+~
+~
+0 -1 12102
+D6
+~
+door~
+3 -1 12091
+D9
+~
+~
+0 -1 12111
+S
+#12102
+On the Ring Path, along the Southern Wall~
+|As  you walk the ring path that leads you along the southern wall you notice a
+|number  of  small  houses to the north. The houses are all somewhat small, but
+|mostly  nice  looking.  You  can  see the ring path continues far to your east
+|while it seems to bend shortly to the west turning north at the tower.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12103
+D3
+~
+~
+0 -1 12101
+S
+#12103
+On the Ring Path, along the Southern Wall~
+|You  walk  along  the  ring  path  that  goes  from the southwest tower to the
+|southern  gate.  To  your south the southern wall stretches out all the way to
+|the  southern  gate, while to your north you can see some houses. A small path
+|seems  to  lead  to a house a little north of here. The ring path continues to
+|the west and to the east.
+~
+0 1073741824 1 0
+D0
+~
+door~
+3 -1 12092
+D1
+~
+~
+0 -1 12104
+D3
+~
+~
+0 -1 12102
+S
+#12104
+On the Ring Path, west of the Main Street~
+|You  find  your  self on the ring path, a little west from the main street. As
+|you  look  around  you  notice a nice house to your north. It has a small sign
+|that  reads  "Home  to  Flamenco".  The house seems to have an entrance to the
+|north. The main street lies to you east while the ring path continues west.
+~
+0 1073741824 1 0
+D0
+~
+door~
+1 -1 12093
+D1
+~
+~
+0 -1 12105
+D3
+~
+~
+0 -1 12103
+S
+#12105
+On the Main Street, north of the Southern Gate~
+|You  are  on  the  paved  main street, north of the south gate. The huge south
+|gate  is  clearly  visible  from  here. It looks very strong, like it can take
+|quite  a beating. You can see that the main street leads all the way into town
+|until  the  center  plaza.  To your south you can see the gate, while the ring
+|path surrounding the city starts to your east and to your west.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12094
+D1
+~
+~
+0 -1 12106
+D2
+~
+~
+0 -1 12116
+D3
+~
+~
+0 -1 12104
+S
+#12106
+On the Ring Path, east of the Main Street~
+|As  you  walk  the  ring  path leading along the southern wall you immediately
+|notice  a small house to your north. Although it looks nice on first sight you
+|quickly  notice it does require some maintenance. A sign says "Rubio's Place".
+|There  seems  to  be  an  entrance to the north. The ring path leads on to the
+|east while the main street lies to the west.
+~
+0 1073741824 1 0
+D0
+~
+~
+1 0 12095
+D1
+~
+~
+0 -1 12107
+D3
+~
+~
+0 -1 12105
+S
+#12107
+On the Ring Path, along the Southern Wall~
+|You  find  yourself  on the ring path walking along the southern wall. To your
+|north  you can see what could be called a typical family home. Nicely painted,
+|little  curtains  hanging along the windows, quite nice. The ring path goes on
+|to  the  west  leading  to  the  south  gate  and  to  the east leading to the
+|southwest tower.
+~
+0 1073741824 1 0
+D0
+~
+door~
+1 -1 12096
+D1
+~
+~
+0 -1 12108
+D3
+~
+~
+0 -1 12106
+S
+#12108
+On the Ring Path, along the Southern Wall~
+|You  are  on  the ring path, not too far off from the southwest tower. To your
+|immediate  north  you  spot a beautiful mansion. It seems to be owned by a Mr.
+|James,  the owner of the local bank. That would explain why the place looks so
+|nice.  You can see the entrance to your north. The ring path continues to both
+|your east and your west.
+~
+0 1073741824 1 0
+D0
+~
+door~
+7 -1 12097
+D1
+~
+~
+0 -1 12109
+D3
+~
+~
+0 -1 12107
+S
+#12109
+On the Ring Path, at the Southeast Tower~
+|You  walk  on  the  ring  path  at  the  southeast  tower.  You notice a small
+|staircase  that leads up the tower to your southeast. It's quite high, but the
+|view  must  be  beautiful. Apart from the tower the only place you can seem to
+|go  is  either north over the ring path heading for the east gate or west over
+|the ring path heading for the south gate.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12098
+D3
+~
+~
+0 -1 12108
+D8
+~
+~
+0 -1 12121
+S
+#12110
+Eastern Wall, North of the Southeast Tower~
+|As  you  look  around you notice the huge tower to your south. Clearly a great
+|point  to  scan  the  area  for enemies. In the faint distance you can see the
+|lookout  point  to  the  north.  Apart from that, all you can see is the great
+|forest to your east. The wall leads on to the north and to the south.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12099
+D2
+~
+~
+0 -1 12121
+S
+#12111
+The Southwest Lookout Tower~
+|On  find yourself on the southwest lookout tower. The view from here is simply
+|amazing.  Since  the  tower  lies  a bit higher than the wall you can see even
+|further  from  here than from the walls. As you look around you notice you can
+|walk  along  the wall to either the north or the east. The stairs leading down
+|to the ring path lie to your northeast.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12100
+D1
+~
+~
+0 -1 12112
+D6
+~
+~
+0 -1 12101
+S
+#12112
+On the Southern Wall, east of the Southwest Tower~
+|As  you walk over the southern wall you immediately notice the southwest tower
+|that  lies  to  your west. Outside the city, directly next to the wall you can
+|see  a  small  path coming from the south gate leading around the west side of
+|the  city. The wall continues to your west, going to the tower and to the east
+|going to the southern lookout point.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12113
+D3
+~
+~
+0 -1 12111
+S
+#12113
+On the Southern Wall~
+|You  find yourself on the southern wall, somewhere between the southwest tower
+|and  the  southern  lookout  point. As you look around you notice you can look
+|over  most  of  the  city from here. It looks kind of small, from up here. The
+|wall leads to the tower on the west and to the lookout point on the east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12114
+D3
+~
+~
+0 -1 12112
+S
+#12114
+On the Southern Wall~
+|You  are  on  the  southern wall, somewhat west of the southern lookout point.
+|From  here  you  can  already  catch  a glimpse of the lookout point that lies
+|further  to  the  east while the southern gate is also visible. Down below you
+|can  see  the  path  that  leads from the south gate around the city. The wall
+|continues to your west and to your east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12115
+D3
+~
+~
+0 -1 12113
+S
+#12115
+The Southern Lookout Point~
+|You  find  yourself  at  the southern lookout point. The little structure that
+|stands  here  does  not seem to be in use anymore. The door is bolted shut and
+|it  looks  like there's no way into the structure. It may have something to do
+|with  the  fact that a siege from this side would be nearly impossible because
+|of the dense forest. The wall continues to your west.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 12114
+S
+#12116
+The Southern Gate~
+|You  stand  before the massive southern gate that is the bridge between safety
+|and  adventure.  As you examine the massive iron structure you realize it must
+|actually  be  impossible to ram this thing. Unless you were to climb it, there
+|would  really be no way through. As you look around you notice the main street
+|lies  to  the north and leads to the heart of the city. You can leave the city
+|to your south, heading for adventure.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12105
+D2
+~
+gate~
+1 -1 12162
+S
+#12117
+The Southern Lookout Point~
+|You  are  on  the  part  of  the  southern wall that lies next to the southern
+|gates.  These  parts  of  the  wall  have  been made into lookout points. They
+|probably  serve to scan for enemies in order to warn the guards at the gate on
+|time,  but  they  do  no longer seem to be in use. The southern wall stretches
+|out to your east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12118
+S
+#12118
+On the Southern Wall~
+|As  you  walk  along the southern wall you notice you are a bit to the east of
+|the  southern  lookout  point.  As you look down on the forest surrounding the
+|city  you  notice  that  the trail that leads east from the southern gate ends
+|about here. The wall continues to your west and to your east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12119
+D3
+~
+~
+0 -1 12117
+S
+#12119
+On the Southern Wall~
+|You  find yourself on the southern wall, somewhere between the southeast tower
+|and  the  southern  lookout  point.  As  you  look around you, you notice some
+|houses  that  lie  to  your north and a dense forest up until the wall to your
+|south. You can head west towards the lookout point or east towards the tower.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12120
+D3
+~
+~
+0 -1 12118
+S
+#12120
+On the Southern Wall, west of the Southeast Tower~
+|You  are  on  the  southern  wall,  a  little bit west of the southeast tower.
+|Already  you can spot the small stairway that leads down from the tower to the
+|ring  path.  The  ring  path itself is clearly visible from here. The south is
+|not  too  interesting  as  there is only forest in that direction, a nice view
+|though. The tower lies to your east while the wall continues to the west.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 12121
+D3
+~
+~
+0 -1 12119
+S
+#12121
+The Southeast Lookout Tower~
+|You  are at the huge southeast lookout tower. As you look southwards from here
+|for  a  second  you  think you see a building in the dense forest. You quickly
+|figure  it  must  be  an  imagination and concentrate on the tower itself. You
+|notice  the small stairway that leads back to the ring path and the wall which
+|continues to your north and to your west.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 12110
+D3
+~
+~
+0 -1 12120
+D7
+~
+~
+0 -1 12109
+S
+#12122
+The Northern Gen-Shi Fields~
+|You  stroll along the fields north of Gen-Shi City. This appears to be a small
+|man  made  opening in the dense forest, probably to allow passage to the city.
+|You  can  already see the city rising up to your south, while the dense forest
+|blocks your view to the north.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12123
+D2
+~
+~
+0 -1 12127
+D8
+~
+~
+0 -1 12128
+D9
+~
+~
+0 -1 12126
+S
+#12123
+The Northern Gen-Shi Fields~
+|As  you  walk  along  through  a  clearing in the dense forests of Gen-Shi you
+|immediately  notice  the  huge  city that lies to the south. To your north you
+|see  what  appears to be a small passage leading further north. The opening in
+|the forest is small, but stretches out to most all directions.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12124
+D2
+~
+~
+0 -1 12128
+D3
+~
+~
+0 -1 12122
+D8
+~
+~
+0 -1 12129
+D9
+~
+~
+0 -1 12127
+S
+#12124
+The Northern Gen-Shi Fields~
+|You  find  yourself  in  the clearing of the northern Gen-Shi forest. There is
+|not  much to see here really. The forest would probably be a lot more exciting
+|but  it  is  way do dense to enter. The small clearing leads off in almost all
+|directions, only to your east and north the forest stretches out.
+~
+0 1073741824 2 0
+D2
+~
+~
+0 -1 12129
+D3
+~
+~
+0 -1 12123
+D8
+~
+~
+0 -1 12130
+D9
+~
+~
+0 -1 12128
+S
+#12125
+The Northern Gen-Shi Fields - North of the City~
+|You  walk  the fields of Gen-Shi, not too far off from the City, which lies to
+|your  south. You find yourself at an edge of the fields, the dark dense forest
+|surrounds  you  to  all the northern directions. The opening stretches out far
+|to the east while it leads towards the city wall in the southern directions.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12126
+D2
+~
+~
+0 -1 12134
+D8
+~
+~
+0 -1 12135
+D9
+~
+~
+0 -1 12133
+S
+#12126
+The Northern Gen-Shi Fields - North of the City~
+|You  are  on  the  northern Gen-Shi fields, a little north from the city wall.
+|Already  you  can  see  the  city  wall that lies to your south while the view
+|north  reveals  nothing but forest. A bigger clearing lies to your east, while
+|you the northeast you can leave the fields of Gen-Shi.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12127
+D2
+~
+~
+0 -1 12135
+D3
+~
+~
+0 -1 12125
+D6
+~
+~
+0 -1 12122
+D8
+~
+~
+0 -1 12136
+D9
+~
+~
+0 -1 12134
+S
+#12127
+The Northern Gen-Shi Fields - North of the City~
+|You  find  yourself on the Gen-Shi fields, a little north of the city. You are
+|in  the  west  part of a small opening, which goes south to the city and leads
+|away  from  the fields to the north. Apart from the city to the south and some
+|forest to the northwest there's really not much to see here.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12122
+D1
+~
+~
+0 -1 12128
+D2
+~
+~
+0 -1 12136
+D3
+~
+~
+0 -1 12126
+D6
+~
+~
+0 -1 12123
+D8
+~
+~
+0 -1 12137
+D9
+~
+~
+0 -1 12135
+S
+#12128
+The Northern Gen-Shi Fields - North of the City~
+|You  wander around the northern Gen-Shi fields, somewhat north of the northern
+|city  gate. The gate is clearly visible from the south, while you stand in the
+|middle  of  what  seems  to  be  a  small clearing. From here on, the clearing
+|stretches out in every direction.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12123
+D1
+~
+~
+0 -1 12129
+D2
+~
+~
+0 -1 12137
+D3
+~
+~
+0 -1 12127
+D6
+~
+~
+0 -1 12124
+D7
+~
+~
+0 -1 12122
+D8
+~
+~
+0 -1 12138
+D9
+~
+~
+0 -1 12136
+S
+#12129
+The Northern Gen-Shi Fields - North of the City~
+|You  find  yourself on the northern fields, close to the northern city wall of
+|Gen-Shi  City.  Apart  from your northeast, all you see here in your immediate
+|surroundings  is  fields.  This  appears to be a small clearing that leads the
+|way to town. You can continue through the fields in all other directions.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12124
+D1
+~
+~
+0 -1 12130
+D2
+~
+~
+0 -1 12138
+D3
+~
+~
+0 -1 12128
+D7
+~
+~
+0 -1 12123
+D8
+~
+~
+0 -1 12139
+D9
+~
+~
+0 -1 12137
+S
+#12130
+The Northern Gen-Shi Fields - North of the City~
+|As  you  walk  the  northern fields of Gen-Shi City you immediately notice the
+|dense  forest  that lies to the north and northeast. Its too dense to pass, so
+|the  only  way  to continue your journey is through the fields that lie in all
+|other directions.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12131
+D2
+~
+~
+0 -1 12139
+D3
+~
+~
+0 -1 12129
+D7
+~
+~
+0 -1 12124
+D8
+~
+~
+0 -1 12140
+D9
+~
+~
+0 -1 12138
+S
+#12131
+The Northern Gen-Shi Fields - North of the City~
+|You  find  yourself  on a far edge of the clearing in the Gen-Shi fields, some
+|what  north  of  the  city.  There's  forest  to  your  northern  and  eastern
+|directions  while  you  can  continue your stroll over the fields to all other
+|directions. The city of Gen-Shi lies more to the south.
+~
+0 1073741824 2 0
+D2
+~
+~
+0 -1 12140
+D3
+~
+~
+0 -1 12130
+D8
+~
+~
+0 -1 12141
+D9
+~
+~
+0 -1 12139
+S
+#12132
+The Northern Gen-Shi Fields - At the northwest Tower~
+|You  find  yourself  on  the  fields  around Gen-Shi right where the northwest
+|tower  is.  It's  so  high you can't even begin to look up. You can barely see
+|the  top,  no telling if there's a guard on watch. A small passage leads south
+|from here while you can also continue eastwards.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12133
+D2
+~
+~
+0 -1 12143
+S
+#12133
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  walk  the  fields  of  Gen-Shi  right  along  the  northern wall. You are
+|directly  east of the northwest tower which is clearly visible from here. From
+|this  point you can either head east towards the city gate or west towards the
+|path that leads south along the western wall.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12134
+D3
+~
+~
+0 -1 12132
+D6
+~
+~
+0 -1 12125
+S
+#12134
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|While  you walk along the northern wall on the fields of Gen-Shi you notice an
+|open  clearing to your north and northeast. They seem to be heading further to
+|the  north  although  you can't really get a look at it. The wall continues to
+|both the east and the west as does the path leading along.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12125
+D1
+~
+~
+0 -1 12135
+D3
+~
+~
+0 -1 12133
+D6
+~
+~
+0 -1 12126
+S
+#12135
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  are  on the northern fields or Gen-Shi right along the northern wall. You
+|are  somewhere  between  the  northwest  tower and the northern gate which are
+|both  clearly  visible  from  here.  To the north you can see a small clearing
+|which seems to lead away from the city.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12126
+D1
+~
+~
+0 -1 12136
+D3
+~
+~
+0 -1 12134
+D6
+~
+~
+0 -1 12127
+D7
+~
+~
+0 -1 12125
+S
+#12136
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  walk  along  the  northern  wall just west of the northern city gate. The
+|gate  is clearly visible from here and only a step away. To your north you can
+|see  the  clearing  that  leads away from the city while to your east the path
+|that leads along the city stretches out as far as you can see.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12127
+D1
+~
+~
+0 -1 12137
+D3
+~
+~
+0 -1 12135
+D6
+~
+~
+0 -1 12128
+D7
+~
+~
+0 -1 12126
+S
+#12137
+The Northern Gen-Shi Fields - North of the City Gate~
+|You  are directly north of the Gen-Shi City gate. As you look around you see a
+|small  open  field that lies in all the northern directions while the entrance
+|to  the  city lies directly to the south. A small path that surrounds the city
+|lies to both your west and to your east.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12128
+D1
+~
+~
+0 -1 12138
+D2
+~
+gate~
+1 -1 12006
+D3
+~
+~
+0 -1 12136
+D6
+~
+~
+0 -1 12129
+D7
+~
+~
+0 -1 12127
+S
+#12138
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  are  on the path along the northern wall, a little west from the northern
+|city  gate.  As  you  look  closer you notice it's not really a path, but it's
+|actually  a field that's been trampled on too often. You can head west towards
+|the  northern  gate  or  east  along  the path. The field lies in the northern
+|directions leading all ways.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12129
+D1
+~
+~
+0 -1 12139
+D3
+~
+~
+0 -1 12137
+D6
+~
+~
+0 -1 12130
+D7
+~
+~
+0 -1 12128
+S
+#12139
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  walk  the  northern  Gen-Shi  fields, right along the northern city wall.
+|From  here  you  can already see the northeast tower to your east. To the west
+|the  city  gate  is  clearly visible. To your north you can head for the small
+|clearing while you can go on along the wall to your east and west.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12130
+D1
+~
+~
+0 -1 12140
+D3
+~
+~
+0 -1 12138
+D6
+~
+~
+0 -1 12131
+D7
+~
+~
+0 -1 12129
+S
+#12140
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  find  yourself  on  the northern fields of Gen-Shi, somewhere between the
+|northern  city  gate  and  the northeast tower. To your northeast you notice a
+|very  dense  forest while the northeast tower rises up to your east. While you
+|can  head  north to the clearing you can also follow the wall to your east and
+|to your west...
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12131
+D1
+~
+~
+0 -1 12141
+D3
+~
+~
+0 -1 12139
+D7
+~
+~
+0 -1 12130
+S
+#12141
+The Northern Gen-Shi Fields - Along the Northern Wall~
+|You  walk  along  the  northern city wall of Gen-Shi. You notice you're just a
+|bit  short  of  the  northeastern tower which is clearly visible to your east.
+|The  dense  forest to your north makes the only alternative to leave the path,
+|which leads east or west.
+~
+0 1073741824 2 0
+D1
+~
+~
+0 -1 12142
+D3
+~
+~
+0 -1 12140
+D7
+~
+~
+0 -1 12131
+S
+#12142
+The Northern Gen-Shi Fields - At the northeast Tower~
+|You  find  yourself in the small clearing that surrounds the northeast lookout
+|tower  of  Gen-Shi city. The tower is extremely high which makes it impossible
+|to  really get a look at the top. As you look around you notice the only exits
+|from here are west and south, both following a small path...
+~
+0 1073741824 2 0
+D2
+~
+~
+0 -1 12144
+D3
+~
+~
+0 -1 12141
+S
+#12143
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  walk a small path that leads along the western wall of Gen-Shi City. This
+|does  appear  to  be  a  path,  but  it  has never been paved. It's more of an
+|opening  made in the woods to allow passage. The northwest tower lies directly
+|to your north while you can follow the path further south.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12132
+D2
+~
+~
+0 -1 12145
+S
+#12144
+The Northern Gen-Shi Fields - Along the Eastern Wall~
+|You  are  walking  along  a  small path that leads you right along the eastern
+|city  wall of Gen-Shi. Apart from the wall that towers above you to your east,
+|the  tower  to  the  north  is  one  of the most striking things here. You can
+|follow the path either to the north or to the south.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12142
+D2
+~
+~
+0 -1 12146
+S
+#12145
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  find  yourself  on  the path along the western city wall, a little to the
+|south  of  the  northwest  tower of Gen-Shi. Apart from the huge wall there is
+|really  not too much to be seen here. The dense forest blocks your view to the
+|west while the path leads on to the south and to the north.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12143
+D2
+~
+~
+0 -1 12147
+S
+#12146
+The Northern Gen-Shi Fields - Along the Eastern Wall~
+|You  are  on  the  path leading around the city of Gen-Shi. You walk along the
+|big  eastern wall, somewhere between the northeast tower and the eastern gate.
+|As  you look around you notice there's not too much to see here. The path goes
+|on to you north and to your south.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12144
+D2
+~
+~
+0 -1 12148
+S
+#12147
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  walk  the  path along the western wall of Gen-Shi city, somewhere between
+|the  northeast  tower  and the western gate. Although both look of about equal
+|size,  the west city gate must be a bit closer that the tower. The only way to
+|continue here is over the path, either north or south.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12145
+D2
+~
+~
+0 -1 12149
+S
+#12148
+The Northern Gen-Shi Fields - Along the Eastern Wall~
+|You  find  yourself  on the path which leads along the eastern wall of Gen-Shi
+|city  from  the  northeast  tower all the way to the eastern gate. You must be
+|somewhere  in the middle of the path, though the gate seems to be a bit closer
+|than then tower does. You can follow the path either north or south
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12146
+D2
+~
+~
+0 -1 12150
+S
+#12149
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  are  just  a step north of the entrance to the city gate of Gen-Shi city.
+|From  here  you can clearly see the city gate which lies to your southeast. To
+|your  east  you can see nothing but forests, impossible to pass. The path from
+|here continues to the north and to the south.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12147
+D2
+~
+~
+0 -1 12151
+S
+#12150
+The Northern Gen-Shi Fields - Along the Eastern Wall~
+|You  are  on  the  path  that  surrounds  the  city of Gen-Shi. From here, the
+|eastern  city  gate  is  clearly  visible. Forest surrounds you, even the path
+|around  the city seems to come to a halt a little to the south. You can either
+|head north for the northeast tower or south towards the gate.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12148
+D2
+~
+~
+0 -1 12152
+S
+#12151
+The Northern Gen-Shi Fields - West of the City Gate~
+|You  find  yourself  at  the  entrance  to  the west gate of Gen-Shi city. You
+|notice  that  the huge gate to your east is manned by two elite soldiers. From
+|this  point, you can either head for the city by going east, or you can follow
+|the path around the city to the south or to the north.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12149
+D1
+~
+~
+0 -1 12056
+D2
+~
+~
+0 -1 12153
+S
+#12152
+The Northern Gen-Shi Fields - East of the City Gate~
+|You're  at  the  entry  point to the east gate of Gen-Shi. The path around the
+|city  come  to a dead stop to the south, where the dense forest takes over. To
+|your  north  the  path leads on as far as you can see. From here, you can head
+|for safety to your west or head for adventure to your north.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 12150
+D3
+~
+~
+0 -1 12066
+S
+#12153
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  find yourself on an unpaved path, a little south of the west gate of Gen-
+|Shi  city.  To  your  west all you can see is forest, to your east you see the
+|towering  wall  which protects the city from harm. You can follow this path to
+|both  your  north  and your south, heading for either the western city gate or
+|the southwest lookout tower.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12151
+D2
+~
+~
+0 -1 12154
+S
+#12154
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  walk the trail around Gen-Shi city, right along the western city wall. To
+|your  south  you  can  already  see the southwest tower while the city gate is
+|still  clearly  visible  to  the  north.  You must be somewhere in the middle,
+|right  between  them.  You  can follow this path either to the north or to the
+|south.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12153
+D2
+~
+~
+0 -1 12155
+S
+#12155
+The Northern Gen-Shi Fields - Along the Western Wall~
+|As  you  walk  the  path along the western wall, you suddenly notice how dense
+|this  forest really is. Too dense actually, could it be that these people made
+|the  forest  this  dense  by  planting your trees? A natural barrier like this
+|does give great protection. The path leads on to the north and to the south.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12154
+D2
+~
+~
+0 -1 12156
+S
+#12156
+The Northern Gen-Shi Fields - Along the Western Wall~
+|You  find yourself on the path around Gen-Shi, just a little short of the huge
+|southwest  city  tower.  Already  from  here  you  can appreciate this awesome
+|sight.  It  must  look  even more impressive standing right below it. The path
+|leads  on  to  the north and to the south, where you can see it bend around at
+|the tower.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12155
+D2
+~
+~
+0 -1 12157
+S
+#12157
+The Northern Gen-Shi Fields - At the southwest Tower~
+|You're  at  the  southwest tower of the city of Gen-Shi. This tower is truly a
+|masterpiece.  A  fine example of great architecture. You can't seem to see the
+|top  of  the tower, but it's probably out there somewhere. The path here turns
+|around leading north to the west city gate or east to the south city gate.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12156
+D1
+~
+~
+0 -1 12158
+S
+#12158
+The Northern Gen-Shi Fields - Along the Southern Wall~
+|You  walk the trail around Gen-Shi, along the southern city wall. You are just
+|a  little to the east of the southwest tower, but it's still more than visible
+|from  here.  The  wall leads on to the east as far as you can see, aswell does
+|the path you're on.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12159
+D3
+~
+~
+0 -1 12157
+S
+#12159
+The Northern Gen-Shi Fields - Along the Southern Wall~
+|You're  walking  along the southern wall, over the trail that leads you around
+|Gen-Shi  city. As you examine the wall you notice it has some writing in blood
+|on  it.  Something about "meteor" and a phrase, "the end is near!". From here,
+|you can head west towards the tower or east heading for the southern gate.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12160
+D3
+~
+~
+0 -1 12158
+S
+#12160
+The Northern Gen-Shi Fields - Along the Southern Wall~
+|You  walk  along the southern city wall, over the path that surrounds the city
+|of  Gen-Shi.  Judging  from  the  size  of the southern gate and the southwest
+|tower  which are both visible from here, you conclude you must be somewhere in
+|the middle of the path. The path goes on to the east and to the west.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12161
+D3
+~
+~
+0 -1 12159
+S
+#12161
+The Northern Gen-Shi Fields - Along the Southern Wall~
+|You  find yourself on the trail that surround the city of Gen-Shi, a little to
+|the  south  of  the  southern  city wall. The southern gate is clearly visible
+|from  here and not more then a step away, to your west you can catch a glimpse
+|of the southwest lookout tower. The path continues east and west.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12162
+D3
+~
+~
+0 -1 12160
+S
+#12162
+The Northern Gen-Shi Fields - South of the City Gate~
+|You  are  at the entrance point to the southern gate of Gen-Shi. To your north
+|the  massive gate is clearly visible, while paths lead off to your west and to
+|your  south.  To your east you notice the dense forest that surrounds the city
+|and blocks the path you'd expect to lead around.
+~
+0 1073741828 2 1
+D0
+~
+~
+0 -1 12116
+D2
+~
+~
+0 -1 12163
+D3
+~
+~
+0 -1 12161
+S
+#12163
+The Southern Gen-Shi Fields - A path leading South~
+|You  enter  a  part of the Gen-Shi outskirts known as the soutern fields. Even
+|though  there's  really no fields here, the path you're on is wide and made of
+|grass.  The  forest that surrounds you is not too dense and allow you to catch
+|a glimpse of some structures to your southeast and southwest.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12162
+D2
+~
+~
+0 -1 12166
+S
+#12164
+The City Guard Barracks - Third Sleeping Quarters~
+|You're  in the third sleeping quarters of the Gen-Shi City Guard Barracks. The
+|rooms  here  are  rather  dull,  nothing  fancy at all. The room is completely
+|empty  and  all it holds is a weapons-chest and some beds. A door to your east
+|leads  to  another  room  while  the  door  south leads you back to the second
+|quarters.
+~
+0 1073741836 0 0
+D1
+~
+door~
+1 -1 12165
+D2
+~
+door~
+1 -1 12169
+S
+#12165
+The City Guard Barracks - Fourth Sleeping Quarters~
+|You  seem  to  be  in  the  last  of  the  sleeping quarters of the City Guard
+|Barracks  since the only exit here is the one you just came through. This room
+|is  no  different  from  the  other ones, simple, empty and a bit chilly even.
+|Their wage must be quite good because who would want to live like this...
+~
+0 1073741836 0 0
+D3
+~
+door~
+1 -1 12164
+S
+#12166
+The Southern Gen-Shi Fields - A path leading South~
+|You  walk  a  small path in the southern fields of Gen-Shi that leads from the
+|southern  city  gate  to an area in the south. To your south you notice a what
+|seems  to  be  a  large building although it's too far away to really see. The
+|grassy path leads north and south
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12163
+D2
+~
+~
+0 -1 12172
+S
+#12167
+The Mayor's House - The Study Room~
+|You've  entered what appears to be the study room in the mayor's home. A large
+|wooden  desk adorns the room, while a big bookself holds hundreds of books who
+|knows  what  about. Being mayor certainly has it's advantages, since this room
+|is about a big a most houses in the city.
+~
+0 1073742860 0 0
+D2
+~
+door~
+7 -1 12174
+S
+#12168
+The Mayor's House - The Bed Room~
+|You  stand  in  the  bed room of the mayor and feel something that can only be
+|described  as  utter  jealousy.  This guy's bedroom is bigger than the average
+|house!  A huge, undoubtedly very comfortable, double bed stands along the wall
+|while a closet holds no doubt a whole wardrobe of expensive clothes.
+~
+0 1073742860 0 0
+D2
+~
+door~
+1 -1 12175
+D9
+~
+door~
+7 -1 12174
+S
+#12169
+The City Guard Barracks - Second Sleeping Quarters~
+|You've  entered  the second of the sleeping quarters of the Gen-Shi City Guard
+|Barracks.  These  guards must sleep here in shifts since there doesn't seem to
+|be  any  personal  belongings  lying  around. The life of a city guard must be
+|quite the life. It's probably never boring though...
+~
+0 1073741836 0 0
+D0
+~
+door~
+1 -1 12164
+D1
+~
+door~
+1 -1 12170
+S
+#12170
+The City Guard Barracks - First Sleeping Quarters~
+|As  you enter the Barracks you find something you didn't expect to find. Utter
+|emptyness.  Apart  from  the  beds  they  obviously  need  these barracks hold
+|nothing  at  all.  The  walls  seem  to  be  made  of wood, though the outside
+|structure  does  consist of stone, very poor, this place. You can enter a door
+|to the east.
+~
+0 1073741836 0 0
+D1
+~
+door~
+1 -1 12171
+D3
+~
+door~
+1 -1 12169
+S
+#12171
+The Southern Gen-Shi Fields - Entrance to the Barracks~
+|You  find  yourself  at  the entrance of the Elite City Guard Barracks. It's a
+|small  stone building, well made and nice looking. Apart from al tiny clearing
+|that  has  been made around it, it's completely surrounded by forest. There is
+|a  door  to  the  west to enter the barracks while the path leads south to the
+|main path again...
+~
+0 1073741828 2 0
+D2
+~
+~
+0 -1 12176
+D3
+~
+door~
+1 -1 12170
+S
+#12172
+The Southern Gen-Shi Fields - A path leading South~
+|You  find  yourself  at a path which leads from the southern fields of Gen-Shi
+|to  the south gate of the city. To your south you seem to see a small crossing
+|and  even  further  to  the  south what appears to be a large temple. The path
+|you're on continues to the crossing to the south or to the gate to the north.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12166
+D2
+~
+~
+0 -1 12180
+S
+#12173
+The Southern Gen-Shi Fields - Entrance to the Mayor's House~
+|You're  at  the  entrance  to  the  Mayor's  House.  This  house  truly  looks
+|beautiful.  The  walls  are  made of white stone, while the roof is covered by
+|some  type  of  red  tiles. You can enter through the door to your east, while
+|you can go back to the main trail to the south.
+~
+0 1073741828 2 0
+D1
+~
+door~
+5 -1 12174
+D2
+~
+~
+0 -1 12184
+S
+#12174
+The Mayor's House - The Living Room~
+|You  stand  in the middle of the huge living room of the Mayor's house. Really
+|expensive  furniture  adorns  the  room  while along the southwest wall a huge
+|kitchen  area  lies,  waiting  for  it's next use. A small sign on the door to
+|your  east  reads  "bathroom" while there's two more doors to the north and to
+|the northeast. The exit lies to your west.
+~
+0 1073742856 0 0
+D0
+~
+door~
+7 -1 12167
+D1
+~
+door~
+1 -1 12175
+D3
+~
+door~
+1 -1 12173
+D6
+~
+door~
+7 -1 12168
+S
+#12175
+The Mayor's House - The Bath Room~
+|You've  just  entered the bathroom. This is just amazing, this man has a whole
+|room  to  bathe himself in the size of a normal house. He lives like a king...
+|Makes  one  wonder  where  all  the  money for this type of luxury comes from,
+|probably the high taxes
+~
+0 1073742860 0 0
+D0
+~
+door~
+1 -1 12168
+D3
+~
+door~
+1 -1 12174
+S
+#12176
+The Southern Gen-Shi Fields - The Western Crossing~
+|You  find  yourself at the western crossing of the road in the Gen-Shi Fields.
+|From  here,  you  can  see  what  appear  to  be  some  barracks in a northern
+|direction  or  some other building to your south. Apart from leading north and
+|south the path also leads far to the east.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12171
+D1
+~
+~
+0 -1 12177
+D2
+~
+~
+0 -1 12187
+S
+#12177
+The Southern Gen-Shi Fields - On the Southern Path~
+|You  find  yourself  on  the  southern  path  in  the  Gen-Shi Fields. A small
+|crossing  can  be seen just west of here, it appears to be a T junction. Other
+|than  that all that can be seen from here is how the path stretches further to
+|the east. Well, that and some trees.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12178
+D3
+~
+~
+0 -1 12176
+S
+#12178
+The Southern Gen-Shi Fields - On the Southern Path~
+|You  are on the southern path of the Gen-Shi Fields which connects the western
+|and  eastern  junctions  to  the  central  crossing of the path leading to the
+|Gen-Shi  City  gates.  You're  somewhere  between the western crossing and the
+|central crossing. The path continues to both your east and your west.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12179
+D3
+~
+~
+0 -1 12177
+S
+#12179
+The Southern Gen-Shi Fields - On the Southern Path~
+|You  find  yourself  on  the southern path of the Gen-Shi Fields, just west of
+|the  central  junction.  Even  from  here  the  temple  to your south is still
+|visible,  looks like a massive structure. To your west all that can be seen is
+|the southern path while the central junction is still visible to the east.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12180
+D3
+~
+~
+0 -1 12178
+S
+#12180
+The Southern Gen-Shi Fields - A Crossing in the Path~
+|You're  at the central junction which connects the southern path of Gen-Shi to
+|the  temple  road and the path leading back to the southern Gen-Shi city gate.
+|From  here  the  huge  temple  is clearly visible to your south. You can go on
+|south  to  the  temple, north to the city and the southern path continues both
+|to your east as to your west.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12172
+D1
+~
+~
+0 -1 12181
+D2
+~
+~
+0 -1 12188
+D3
+~
+~
+0 -1 12179
+S
+#12181
+The Southern Gen-Shi Fields - On the Southern Path~
+|You  find  yourself  on  the southern path of the Gen-Shi Fields, just east of
+|the  central  junction. From here the temple to your south is clearly visible,
+|looking  like a massive structure. While the central junction is still visible
+|to the west the southern path stretches on further to your east.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12182
+D3
+~
+~
+0 -1 12180
+S
+#12182
+The Southern Gen-Shi Fields - On the Southern Path~
+|You  are  on  the  southern  path of the Gen-Shi Fields, somewhere between the
+|eastern  crossing  and  the  central  junction.  The forrest to your north and
+|south  is  far  to  dense  to  allow  for  travel  and the path you are on now
+|continues to both your east and your west.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12183
+D3
+~
+~
+0 -1 12181
+S
+#12183
+The Southern Gen-Shi Fields - On the Southern Path~
+|Your  are  on  the  southern  path  of  the  Gen-Shi  fields, near the eastern
+|junction  point.  From here the eastern junction point is visible to your east
+|while  the  only  thing visible to your west is the path which leads on as far
+|as you can see. You may travel on in both eastern and western direction.
+~
+0 1073741828 2 0
+D1
+~
+~
+0 -1 12184
+D3
+~
+~
+0 -1 12182
+S
+#12184
+The Southern Gen-Shi Fields - The Eastern Crossing~
+|You  find yourself at the eastern crossing, which leads either north or south.
+|Both  the  buildings  to north and your south appear to be houses, though they
+|are  still  too  far away to positively identify them. The southern path leads
+|on west while it ends abrubtly to your north and to your south.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12173
+D2
+~
+~
+0 -1 12189
+D3
+~
+~
+0 -1 12183
+S
+#12185
+The House of Sins - Cristina's Room~
+|You  are  in the house of sins, to be more precise, you're in Cristina's room.
+|You  had better focus on what's important though. The only exit is the door to
+|your east.
+~
+0 1073741836 0 0
+D1
+~
+door~
+1 -1 12186
+S
+#12186
+The House of Sins - At the Reception~
+|You  find yourself at the entrance of the house of since. The area seems to be
+|the  reception  as  well.  A  sign adorns the wall while hile the exit of this
+|building  lies  to  your  east.  There  are three doors, one to your west, one
+|southwest and one to your south.
+~
+0 1073741836 0 0
+D1
+~
+~
+0 -1 12187
+D2
+~
+~
+0 -1 12193
+D3
+~
+~
+0 -1 12185
+D9
+~
+~
+0 -1 12192
+S
+#12187
+The Southern Gen-Shi Fields - Entrance to the House of Sins~
+|You  find  yourself  a  little  south  of the western crossing in the southern
+|fields  of  Gen-Shi. To the west you can see a building with a small sign that
+|reads  'House  of Sins'. This ofcourse explains why the ground under your feet
+|is  almost  'worn out'. You can continue west to the House of Sins or north to
+|the southern Path.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12176
+D3
+~
+~
+0 -1 12186
+S
+#12188
+The Southern Gen-Shi Fields - Before the Gen-Shi Temple~
+|You  find  yourself  in the southern Gen-Shi Fields, just north of the Gen-Shi
+|Temple.  While  the  massive  gate of the Gen-Shi Temple is clearly visible to
+|the  south the path connecting the temple to the City stretches out far beyond
+|you  on  the  north.  A small crossing is visible to your north, but from here
+|you may only travel north or south.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12180
+D2
+~
+~
+0 -1 12195
+S
+#12189
+The Southern Gen-Shi Fields - Entrance to a grand House~
+|You  find  yourself just south of the eastern junction in the Southern Gen-Shi
+|road.  It  appears  to  be  the  entrance  to  the  house of someone important
+|although  just  from  looking you can't see who. The path you are on continues
+|only to the north while you can enter the house by going east.
+~
+0 1073741828 2 0
+D0
+~
+~
+0 -1 12184
+D1
+~
+door~
+1 -1 12190
+S
+#12190
+The Tax Collector's House - The Living Room~
+|You  notice  this  house belongs to the tax collector of Gen-Shi city. This is
+|clearly  visible  by  looking  at the large plaque which adorns the wall. This
+|man  seems  to  take  pride  somehow  in  what he does. He must earn well too,
+|because  this  house  seems  large  enough.  There are two doors in this room,
+|leading south and east while the exit to the road lies to your west.
+~
+0 1073741836 0 0
+D1
+~
+door~
+1 -1 12191
+D2
+~
+door~
+1 -1 12197
+D3
+~
+door~
+1 -1 12189
+S
+#12191
+The Tax Collector's House - The Bedroom~
+|You  find  yourself  in the bedroom of the tax collector's house. This room is
+|quite  large,  nearly as large as the living room. Apart from a nice bed and a
+|dresser  which  adorn  this room nothing special can be seen here. The door to
+|your west leads back to the living room.
+~
+0 1073741836 0 0
+D3
+~
+door~
+1 -1 12190
+S
+#12192
+The House of Sins - Pink's Room~
+|You  are  in the house of sins, to be more precise, you're in Pink's room. You
+|had  better  focus  on  what's  important though. The only exit is the door to
+|your northeast.
+~
+0 1073741836 0 0
+D6
+~
+door~
+1 -1 12186
+S
+#12193
+The House of Sins - Lil Kim's Room~
+|You  are  in  the house of sins, to be more precise, you're in Lil Kim's room.
+|You  had better focus on what's important though. The only exit is the door to
+|your north.
+~
+0 1073741836 0 0
+D0
+~
+door~
+1 -1 12186
+S
+#12194
+Entrance to the Temple of Gen-Shi - The West Wing~
+|You're  in the northwestern part of the entrace to the West Wing of the Temple
+|of  Gen-Shi.  The huge staircase which leads up to the West Wing of the Temple
+|lies  further  to  your  south  while the immense gate which leads back to the
+|southern fields of Gen-Shi lies to your east.
+~
+0 1073741836 0 0
+D1
+~
+~
+0 -1 12195
+D2
+~
+~
+0 -1 12198
+S
+#12195
+Entrance to the Temple of Gen-Shi - At the Gate~
+|You  find yourself at the gate of the entrance to the Temple of Gen-Shi. While
+|the  huge  altar  of  sacrifice lies further to your south you could also take
+|the  staircases  leading  to  the  eastern  and western wings of the Temple by
+|going  east or west. The gate which leads you back to the southern fields lies
+|to the north.
+~
+0 1073741836 0 0
+D0
+~
+~
+0 -1 12188
+D1
+~
+~
+0 -1 12196
+D2
+~
+~
+0 -1 12199
+D3
+~
+~
+0 -1 12194
+S
+#12196
+Entrance to the Temple of Gen-Shi - The East Wing~
+|You're  in the northeastern part of the entrace to the East Wing of the Temple
+|of  Gen-Shi.  The huge staircase which leads up to the East Wing of the Temple
+|lies  further  to  your  south  while the immense gate which leads back to the
+|southern fields of Gen-Shi lies to your west.
+~
+0 1073741836 0 0
+D2
+~
+~
+0 -1 12200
+D3
+~
+~
+0 -1 12195
+S
+#12197
+The Tax Collector's House - The Kitchen~
+|You're  in  the  kitchen  area  of  the  home of the tax collector of Gen-Shi.
+|Although  there  is  really  not  much  to be seen here you wonder if this man
+|truly  appreciates  how  much  wealthier  he  is than most people around here.
+|Probably not. The door leads back to the livingroom to the north.
+~
+0 1073741836 0 0
+D0
+~
+door~
+1 -1 12190
+S
+#12198
+Entrance to the Temple of Gen-Shi - The Staircase leading West~
+|You're  at  the  last  part of the staircase leading west. If you were to walk
+|further  up  this  staircase you would end up at the next floor of the temple.
+|Something  tells  you  though  that  going there would probably be easier than
+|going  back.  You  get a strange sensation from this place. You could still go
+|back by going north.
+~
+0 1073741836 0 0
+D0
+~
+~
+0 -1 12194
+D4
+~
+~
+0 -1 1
+S
+#12199
+Entrance to the Temple of Gen-Shi - The Altar of Sacrifice~
+|You  find  yourself  at  the altar of sacrifice in the Temple of Gen-Shi. This
+|place  really sends out the stangest sensations. The wind flows here, brushing
+|like  the  beat of a heart, while the energies that go about here seem neither
+|evil  nor  good.  As you examine the altar you get the strangest feeling, some
+|force of great power roams about here.
+~
+0 1076896908 0 0
+D0
+~
+~
+0 -1 12195
+S
+#12200
+Entrance to the Temple of Gen-Shi - The Staircase leading East~
+|You're  at  the  last  part of the staircase leading east. If you were to walk
+|further  up  this  staircase you would end up at the next floor of the temple.
+|Something  tells  you  though  that  going there would probably be easier than
+|going  back.  You  get a strange sensation from this place. You could still go
+|back by going north.
+~
+0 1073741836 0 0
+D0
+~
+~
+0 -1 12196
+D4
+~
+~
+0 -1 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

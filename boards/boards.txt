@@ -1,0 +1,48 @@
+Filename          immboard.brd~
+Vnum              11109
+Min_read_level    110
+Min_post_level    110
+Min_remove_level  125
+Max_posts         100
+Type 	           0
+Read_group        ~
+Post_group        ~
+Extra_readers     ~
+Extra_removers    ~
+End
+Filename          general.brd~
+Vnum              12486
+Min_read_level    0
+Min_post_level    0
+Min_remove_level  111
+Max_posts         50
+Type 	           0
+Read_group        ~
+Post_group        ~
+Extra_readers     ~
+Extra_removers    ~
+End
+Filename          fixit.brd~
+Vnum              92
+Min_read_level    0
+Min_post_level    0
+Min_remove_level  0
+Max_posts         50
+Type 	           0
+Read_group        ~
+Post_group        ~
+Extra_readers     ~
+Extra_removers    ~
+End
+Filename          fixit.brd~
+Vnum              0
+Min_read_level    0
+Min_post_level    0
+Min_remove_level  0
+Max_posts         0
+Type 	           0
+Read_group        ~
+Post_group        ~
+Extra_readers     ~
+Extra_removers    ~
+End

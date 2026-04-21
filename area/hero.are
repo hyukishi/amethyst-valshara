@@ -1,0 +1,271 @@
+#AREA   Hero Clan Temple~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+90 115 90 115
+$
+
+#FLAGS
+4
+
+#ECONOMY 0 7200000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#101
+temple guard~
+A temple guard~
+A warrior temple guard blocks your progress unless you're allowed.
+~
+The temple guards stand at the entrance of the area to halt
+any unwanted peoples or intruders into the hall.
+~
+1073741827 0 1000 C
+100 0 0 32767d1+0 0d0+0
+500 0
+112 112 0
+25 13 13 13 25 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+85 65 0 0 0 0 1008 524291
+#150
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#101
+studded silver armor~
+fullplate studded silver armor~
+A full-body suit of studded pure silver armor has been dropped here.~
+~
+9 0 9
+0 0 0 0
+60 0 0 90
+#102
+red temple key~
+a red temple key~
+A red shiny key is laying here.~
+~
+18 524288 1
+0 0 0 0
+1 0 0 90
+#103
+Mage Statue~
+the mage statue~
+A statue of a figure shrouded in cloak and hood is to the west of you.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#104
+Cleric Statue~
+the cleric statue~
+The statue of a man in clerical robes holding a large scepter and book stands here.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#105
+Warrior Statue~
+the warrior statue~
+A golden statue of a mighty soldier clad in full armor is to the west of you.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#106
+Paladin Statue~
+a newly created Paladin Statue~
+The statue of a holy warrior wearing a crown is here to the east of you.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#107
+Druid Statue~
+the druid statue~
+The statue of a magician of the earth stands here to the west of you.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#108
+Vampire Statue~
+the vampire statue~
+A demon-like statue with almost glowing eyes is to the east of you.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#109
+Thief Statue~
+a newly created Thief Statue~
+Some god dropped a newly created Thief Statue here.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#110
+Ranger Statue~
+a newly created Ranger Statue~
+Some god dropped a newly created Ranger Statue here.~
+~
+34 1073741824 0
+0 0 0 0
+1 0 0 1
+#150
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#101
+&REntrance to the Hero Clan Temple~
+&rThe entrance to the temple has a red carpet leading up to the
+north end of the room where a large reinforced iron door blocks
+all from entering into the temple proper.
+Posted in front of the door are two guards set to control the
+passing in and out of the temple.
+~
+~
+0 8 0 100
+D0
+~
+irondoor~
+7 102 102
+> entry_prog 100~
+if ispc($n)
+if wasinroom($n) != 102
+if clan($n) == Hero Clan
+'Welcome $n back to the temple, please proceed as you would like.
+else
+'You may not pass into these halls, stranger.
+endif
+endif
+endif
+~
+|
+S
+#102
+&RHero Clan Hallway~
+&rA red carpet layed on a polished wooden floor runs up the hallway
+to the opposite north end of the hallway.  In between this south
+end and there are a series of statues set on either side of the
+long carpet.  There are no windows to the building, only lantern
+lights posted somewhere in the ceiling above you.
+~
+~
+0 8 0 100
+D0
+~
+~
+0 -1 103
+D2
+~
+irondoor~
+7 -1 101
+S
+#103
+&RHero Clan Hallway~
+~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 104
+D2
+~
+~
+0 -1 102
+S
+#104
+&RHero Clan Hallway~
+~
+~
+0 1073741832 0 102
+D0
+~
+~
+0 -1 105
+D2
+~
+~
+0 -1 103
+S
+#105
+&RHero Clan Hallway~
+~
+~
+0 1073741832 0 0
+D2
+~
+~
+0 -1 104
+S
+#150
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#0
+
+
+#RESETS
+M 1 101 2 101
+E 1 101 1 5
+G 1 102 1
+M 1 101 2 101
+E 1 101 1 5
+D 0 101 0 2
+O 1 104 1 103
+O 1 103 1 103
+O 1 105 1 102
+O 1 106 1 102
+D 0 102 2 2
+O 1 107 1 104
+O 1 108 1 104
+O 1 109 1 105
+O 1 110 1 105
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  101 spec_guard
+S
+
+
+#$

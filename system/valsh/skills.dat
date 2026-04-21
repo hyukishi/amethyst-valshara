@@ -1,0 +1,5669 @@
+#SKILL
+Name         reserved~
+Type         Spell
+Flags        0
+Minpos       8
+Dammsg       ~
+Wearoff      ???~
+Minlevel     111
+End
+
+#SKILL
+Name         'float'~
+Type         unknown
+Flags        0
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         float~
+Type         unknown
+Flags        0
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         unknown~
+Type         unknown
+Flags        0
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         acid blast~
+Type         Spell
+Flags        262149
+Target       1
+Minpos       7
+Slot         67
+Mana         15
+Rounds       16
+Code         spell_acid_blast
+Dammsg       acid blast~
+Hitchar      $c0010$N screams in pain as your acid blast burns $M.~
+Hitvict      $c0010$n blasts you with acid... OUCH!~
+Hitroom      $c0010$n blasts $N with acid, you cringe.~
+Misschar     $c0010$N dodges your blast of acid.~
+Missvict     $c0010$n tries to blast you with acid, but you wisely avoid that fate.~
+Missroom     $c0010$N moves out of the way of $n's acid blast.~
+Diechar      $c0010$N is dissolved into a sticky ooze.~
+Dievict      $c0010You are hit by a blast of acid from $n, goodbye cruel world~
+Dieroom      $c0010$n turns $N into a sticky puddle.~
+Dice         l*d6~
+Minlevel     6
+End
+
+#SKILL
+Name         acid rain~
+Type         Spell
+Flags        32773
+Target       1
+Minpos       7
+Slot         306
+Mana         150
+Rounds       24
+Code         spell_smaug
+Dammsg       acid rain~
+Dice         (l/4)*d2~
+Minlevel     56
+End
+
+#SKILL
+Name         aid~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         118
+Mana         5
+Rounds       24
+Code         spell_smaug
+Dammsg       aid~
+Wearoff      You don't feel so assisted anymore.~
+Wearoffroom  $n seems less aided.~
+Hitchar      $N looks aided.~
+Hitvict      You feel better!~
+Hitroom      $N is more aided now!~
+Affect       '' 13 '3' 0
+Affect       '10*20' 18 '1' 0
+Minlevel     1
+End
+
+#SKILL
+Name         animal friendship~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         143
+Mana         2
+Rounds       12
+Code         spell_null
+Dammsg       animal friendship~
+Wearoff      You feel less intouch with animals.~
+Minlevel     111
+End
+
+#SKILL
+Name         animal growth~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         125
+Mana         20
+Rounds       24
+Code         spell_smaug
+Dammsg       animal growth~
+Affect       'l*30' 71 '16' 0
+Minlevel     111
+End
+
+#SKILL
+Name         animal summon one~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         129
+Mana         15
+Rounds       24
+Code         spell_smaug
+Dammsg       animal summon one~
+Value        9007
+Minlevel     111
+End
+
+#SKILL
+Name         animal summon three~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         131
+Mana         25
+Rounds       24
+Code         spell_smaug
+Dammsg       animal summon three~
+Value        9021
+Minlevel     111
+End
+
+#SKILL
+Name         animal summon two~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         130
+Mana         20
+Rounds       24
+Code         spell_smaug
+Dammsg       animal summon two~
+Value        9014
+Minlevel     111
+End
+
+#SKILL
+Name         animate dead~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         63
+Mana         5
+Rounds       12
+Code         spell_animate_dead
+Dammsg       ~
+Wearoff      !animate dead!~
+Wearoffroom  !animate dead!~
+Wearoffsoon  !animate dead!~
+WearoffsoonR !animate dead!~
+Minlevel     16
+End
+
+#SKILL
+Name         animate rock~
+Type         Spell
+Flags        33554432
+Target       4
+Minpos       8
+Slot         140
+Mana         15
+Rounds       24
+Code         spell_animate_rock
+Dammsg       animate rock~
+Minlevel     111
+End
+
+#SKILL
+Name         anti magic shell~
+Type         Spell
+Flags        0
+Target       3
+Minpos       8
+Slot         220
+Mana         100
+Rounds       24
+Code         spell_smaug
+Dammsg       ~
+Wearoff      The antimagic shell about you flickers and is gone~
+Wearoffroom  The shimmering shield around $n sparks brightly and fades away~
+Wearoffsoon  The antimagic shell around you sparks~
+WearoffsoonR The protective globe about $n sparks suddenly~
+Hitchar      $N forms an antimagic shell about $m.~
+Hitvict      You form a protective globe of antimagic about you.~
+Hitroom      An antimagic shell forms around $N.~
+Affect       '48' 70 '100' 0
+Minlevel     48
+End
+
+#SKILL
+Name         armor~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         1
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       armor~
+Wearoff      You feel less protected.~
+Wearoffroom  $n's mystic armor fades slowly away.~
+Hitchar      $N is enveloped with a mystical armor~
+Hitvict      You feel someone protecting you.~
+Affect       'l*10' 17 '-20' 0
+Minlevel     1
+End
+
+#SKILL
+Name         astral walk~
+Type         Spell
+Flags        83902728
+Target       2
+Minpos       8
+Slot         101
+Mana         30
+Rounds       12
+Code         spell_astral_walk
+Dammsg       astral walk~
+Wearoffsoon  spell 101 please report.~
+WearoffsoonR spell 101 please report.~
+Hitchar      $N shimmers... then disappears!~
+Hitvict      Your body shimmers..and you feel a strange sensation..~
+Hitroom      $N fades in and out.. then disappears!~
+Minlevel     111
+End
+
+#SKILL
+Name         ballistic attack~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         297
+Mana         40
+Rounds       24
+Code         spell_null
+Dammsg       ballistic attack~
+Minlevel     41
+End
+
+#SKILL
+Name         barkskin~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         149
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       barkskin~
+Wearoff      Your barkskin fades away.~
+Wearoffroom  $n's skin stops resembling bark~
+Wearoffsoon  Your barkskin is starting to fade~
+WearoffsoonR $n's barklike skin starts to go away~
+Hitchar      $N's skin seems to have turned into a bark-like texture.~
+Hitvict      You skin changes to a texture resembling bark.~
+Affect       '24*20' 24 '+1' 0
+Affect       '24*20' 17 '-10' 0
+Minlevel     111
+End
+
+#SKILL
+Name         bless~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         3
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      You feel less righteous.~
+Wearoffroom  $n looks less blessed.~
+Hitchar      You lay the blessing of your god upon $N.~
+Hitvict      A powerful blessing is laid upon you.~
+Hitroom      $N beams as a powerful blessing is laid upon $M.~
+Affect       '6*20' 18 '1' 0
+Affect       '6*20' 24 '-1' 0
+Minlevel     1
+End
+
+#SKILL
+Name         blindness~
+Type         Spell
+Flags        456
+Target       1
+Minpos       7
+Slot         4
+Mana         15
+Rounds       24
+Code         spell_blindness
+Dammsg       ~
+Wearoff      You feel a cloak of blindness dissolve.~
+Wearoffroom  $n blinks $s eyes.~
+Minlevel     5
+End
+
+#SKILL
+Name         breath~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         105
+Mana         200
+Rounds       -6
+Code         spell_null
+Dammsg       breath~
+Wearoff      spell 105 please report.~
+Wearoffroom  spell 105 please report.~
+Wearoffsoon  spell 105 please report.~
+WearoffsoonR spell 105 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         burning hands~
+Type         Spell
+Flags        32769
+Target       1
+Minpos       7
+Slot         5
+Mana         15
+Rounds       24
+Code         spell_burning_hands
+Dammsg       burning hands~
+Wearoff      !Burning Hands!~
+Wearoffroom  !Burning Hands!~
+Hitchar      $c0011You burned $N~
+Hitvict      $c0011You cry out in pain as $n burns you~
+Hitroom      $c0011$N cries out as $n burns $M~
+Misschar     $c0011You miss $N with your burning hands~
+Missvict     $c0011$n reaches for you with burning hands, but misses luckily~
+Missroom     $c0011$n tries to burn $N, but $E escapes~
+Diechar      $c0011You burned $N to death~
+Dievict      $c0011You have been burned to death by $n~
+Dieroom      $c0011$n has burned $N to death~
+Minlevel     6
+End
+
+#SKILL
+Name         cacaodemon~
+Type         Spell
+Flags        33554760
+Minpos       8
+Slot         98
+Mana         50
+Rounds       24
+Code         spell_cacaodemon
+Dammsg       cacaodemon~
+Minlevel     30
+End
+
+#SKILL
+Name         call lightning~
+Type         Spell
+Flags        3
+Target       1
+Minpos       7
+Slot         6
+Mana         20
+Rounds       36
+Code         spell_call_lightning
+Dammsg       call lightning~
+Wearoff      !Call Lightning~
+Wearoffroom  !Call Lightning~
+Hitchar      $c0012You hit $N with your lightning, bullseye~
+Hitvict      $c0012You are hit by lightning by $n,ouch~
+Hitroom      $c0012$N screams in pain as lightning from $n penetrates $M~
+Misschar     $c0012Your lightning bolt scores the ground in front of $N, a misser ~
+Missvict     $c0012The ground before you is scored as $n misses you with lightning~
+Missroom     $c0012$N jumps backwards in time to avoid lightning sent by $n~
+Diechar      $c0012Your lightning bolt kills $N~
+Dievict      $c0012You are electrocuted to death by a lightning bolt sent by $n~
+Dieroom      $c0012The dead body of $N sizzles in the heat from a lightning bolt sent by $n~
+Minlevel     12
+End
+
+#SKILL
+Name         calm~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         91
+Mana         15
+Rounds       24
+Code         spell_null
+Dammsg       calm~
+Wearoff      spell91, please report.~
+Wearoffroom  spell91, please report.~
+Wearoffsoon  spell91, please report.~
+WearoffsoonR spell91, please report.~
+Minlevel     2
+End
+
+#SKILL
+Name         cause critical~
+Type         Spell
+Flags        67109204
+Target       1
+Minpos       7
+Slot         56
+Mana         11
+Rounds       24
+Code         spell_smaug
+Dammsg       cause critical~
+Wearoff      !cause crit!~
+Wearoffroom  !cause crit!~
+Wearoffsoon  !cause crit!~
+WearoffsoonR !cause crit!~
+Hitchar      Your touch sends wracking pains through $N's body~
+Hitvict      You are almost dissolved in pain as $n touches you~
+Hitroom      $N screams as $n critically injures $M~
+Misschar     You missed $N with your touch..~
+Missvict     $n's spell is wasted as you dodge the blow~
+Missroom     $n's spell is wasted as $N dodges the blow~
+Diechar      You critically kill $N~
+Dievict      You are wracked with searing pain from $n. Then, no more.~
+Dieroom      $n's touch critically wounds $N, who dies from the pain~
+Dice         3d8+3~
+Minlevel     9
+End
+
+#SKILL
+Name         cause light~
+Type         Spell
+Flags        67109204
+Target       1
+Minpos       7
+Slot         55
+Mana         8
+Rounds       12
+Code         spell_smaug
+Dammsg       cause light~
+Wearoff      !cause light!~
+Wearoffroom  !cause light!~
+Wearoffsoon  !cause light!~
+WearoffsoonR !cause light!~
+Hitchar      Your touch sends shivers of pain through $N's body~
+Hitvict      You are filled with pain as $n touches you~
+Hitroom      $n touches $N, who shivers in pain~
+Misschar     You missed $N with your touch..~
+Missvict     $n's spell is wasted as you dodge the blow~
+Missroom     $n's spell is wasted as $N dodges the blow~
+Diechar      Your light wounds are enough to send $N over the brink....~
+Dievict      For a moment, $n wracks you with pain.   Then, there is nothing.~
+Dieroom      The wounds inflicted by $n are enough to end the life of $N~
+Dice         1d8+l/3~
+Minlevel     1
+End
+
+#SKILL
+Name         cause serious~
+Type         Spell
+Flags        67109204
+Target       1
+Minpos       7
+Slot         84
+Mana         9
+Rounds       12
+Code         spell_smaug
+Dammsg       cause serious~
+Wearoff      spell84, please report.~
+Wearoffroom  spell84, please report.~
+Wearoffsoon  spell84, please report.~
+WearoffsoonR spell84, please report.~
+Hitchar      Your touch causes $N to writhe in pain.~
+Hitvict      $n's touch causes you to writhe in pain.~
+Hitroom      $n's touch causes $N to writhe in pain.~
+Misschar     Your spell is wasted as $N dodges the blow.~
+Missvict     $n's spell is wasted as you dodge the blow.~
+Missroom     $n's spell is wasted as $N dodges the blow.~
+Diechar      $N falls in a lifeless heap at your touch.~
+Dievict      You scream in pain at $n's touch, then there is nothing.~
+Dieroom      $N falls in a lifeless heap after $n touches $M.~
+Dice         2d8+3~
+Minlevel     5
+End
+
+#SKILL
+Name         chain lightning~
+Type         Spell
+Flags        67108867
+Target       1
+Minpos       7
+Slot         116
+Mana         30
+Rounds       24
+Code         spell_chain_lightning
+Dammsg       chain lightning~
+Wearoff      !Chain Lightning!~
+Wearoffroom  !Chain Lightning!~
+Wearoffsoon  spell 116 please report.~
+WearoffsoonR spell 116 please report.~
+Hitchar      $c0012The lightning bolt hits $N with full impact.~
+Hitvict      $c0012YOU;RE HIT. One of a series of lightning bolts from $n has hit you!~
+Hitroom      $c0012$N wavers under the impact of the lightning bolt sent by $n.~
+Misschar     $c0012Your aim is going from bad to worse and the lightning bolts miss your targets~
+Missvict     $c0012Fortunately, one of the series of lightning bolts from $n has missed you!~
+Missroom     $c0012$n fails in hitting $N with a lightning bolt.~
+Diechar      $c0012One of your lightning bolts shatters $N to pieces.~
+Dievict      $c0012You feel a burst of energy by the bolt of $n and then you feel no more....~
+Dieroom      $c0012$N recieves the full blast of a lightning bolt from $n.... and is no more.~
+Minlevel     25
+End
+
+#SKILL
+Name         change form~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         120
+Mana         20
+Rounds       12
+Code         spell_polymorph
+Dammsg       change form~
+Minlevel     111
+End
+
+#SKILL
+Name         changestaff~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         111
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       changestaff~
+Wearoff      spell 111 please report.~
+Wearoffroom  spell 111 please report.~
+Wearoffsoon  spell 111 please report.~
+WearoffsoonR spell 111 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         charm monster~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         82
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       charm monster~
+Affect       'l*30' 0 '' 262144
+Minlevel     111
+End
+
+#SKILL
+Name         charm person~
+Type         Spell
+Flags        0
+Target       1
+Minpos       8
+Slot         7
+Mana         10
+Rounds       12
+Code         spell_charm_person
+Dammsg       charm person~
+Wearoff      You feel you are in control of your destiny~
+Wearoffroom  $n shivers and shakes.~
+Wearoffsoon  You are starting to gain back your will~
+WearoffsoonR $n seems more in control of $mself~
+Minlevel     4
+End
+
+#SKILL
+Name         charm vegetable~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         137
+Mana         5
+Rounds       12
+Code         spell_null
+Dammsg       charm vegetable~
+Wearoff      spell 137 please report.~
+Wearoffroom  spell 137 please report.~
+Wearoffsoon  spell 137 please report.~
+WearoffsoonR spell 137 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         chill touch~
+Type         Spell
+Flags        2
+Target       1
+Minpos       7
+Slot         8
+Mana         15
+Rounds       12
+Code         spell_chill_touch
+Dammsg       chill touch~
+Wearoff      You feel stronger!~
+Wearoffroom  $n seems a bit stronger.~
+Wearoffsoon  You feel somewhat stronger~
+Hitchar      $c0014You chill $N~
+Hitvict      $c0014You feel your life flowing away as $n chills you~
+Hitroom      $c0014$n chills $N who suddenly seem less lively~
+Misschar     $c0014The atmosphere turns chilly as you miss $N~
+Missvict     $c0014You dodge $n and $s chill touch~
+Missroom     $c0014$n tries unsuccesfully to chill $N~
+Diechar      $c0014You chill $N, remember to put flowers on $S grave~
+Dievict      $c0014You feel chilled by $n and then you feel no more - RIP~
+Dieroom      $c0014$n touches $N who slumps to the ground as a dead lump, rather chilly isn't it ?~
+Minlevel     3
+End
+
+#SKILL
+Name         clone~
+Type         Spell
+Flags        100664840
+Target       4
+Minpos       8
+Slot         9
+Mana         40
+Rounds       12
+Code         spell_smaug
+Dammsg       clone~
+Wearoff      !Clone!~
+Wearoffroom  !Clone!~
+Wearoffsoon  !Clone!~
+WearoffsoonR !Clone!~
+Hitchar      You wave your hands wildly!~
+Hitvict      $n makes some wierd gestures with $s hands.~
+Hitroom      $n is doing something wierd with $s hands.~
+Minlevel     111
+End
+
+#SKILL
+Name         cloud of poison~
+Type         Spell
+Flags        33110
+Target       1
+Minpos       8
+Slot         290
+Mana         25
+Rounds       24
+Code         spell_smaug
+Dammsg       poison cloud~
+Hitchar      $N is surrounded by a mysterious green cloud.~
+Hitvict      A greenish cloud forms around you.~
+Hitroom      $N is engulfed in a greenish mist.~
+Minlevel     111
+End
+
+#SKILL
+Name         colour spray~
+Type         Spell
+Flags        4
+Target       1
+Minpos       7
+Slot         10
+Mana         20
+Rounds       24
+Code         spell_colour_spray
+Dammsg       colour spray~
+Wearoff      !Color Spray!~
+Wearoffroom  !Color Spray!~
+Wearoffsoon  !Color Spray!~
+WearoffsoonR !Color Spray!~
+Hitchar      Your own private rainbow hits $N in the face - WOWIE~
+Hitvict      A sudden burst of colours sends you reeling~
+Hitroom      $n throws colours at $N who in vain tries to escape~
+Misschar     Your spray of colour misses $N - what a dull world~
+Missvict     $n unsuccesfully tries to add colour to your life~
+Missroom     $n splashes colour everywhere except $N~
+Diechar      $c0009YOU KILLED $N $c0004!$c0005!$c0006!$c0007 - don't you feel ashamed~
+Dievict      Your head is filled with all the colours of the rainbow before it bursts~
+Dieroom      $n makes $N into a colourful corpse~
+Minlevel     14
+End
+
+#SKILL
+Name         command~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         119
+Mana         3
+Rounds       24
+Code         spell_null
+Dammsg       command~
+Wearoff      spell 119 please report.~
+Wearoffroom  spell 119 please report.~
+Wearoffsoon  spell 119 please report.~
+WearoffsoonR spell 119 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         commune~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         128
+Mana         10
+Rounds       24
+Code         spell_null
+Dammsg       commune~
+Wearoff      spell 128 please report.~
+Wearoffroom  spell 128 please report.~
+Wearoffsoon  spell 128 please report.~
+WearoffsoonR spell 128 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         comprehend languages~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         255
+Mana         10
+Rounds       12
+Code         spell_null
+Dammsg       comprehend languages~
+Wearoff      You feel your ability to understand other languages fade~
+Wearoffsoon  You sense your ability to understand languages waver breifly~
+Minlevel     111
+End
+
+#SKILL
+Name         cone of cold~
+Type         Spell
+Flags        295306
+Minpos       7
+Slot         70
+Mana         15
+Rounds       16
+Code         spell_smaug
+Dammsg       cone of cold~
+Wearoff      spell1, please report.~
+Wearoffroom  spell1, please report.~
+Wearoffsoon  spell1, please report.~
+WearoffsoonR spell1, please report.~
+Hitchar      $c0014You hit $N with your cone of cold.~
+Hitvict      $c0014$n hits you with a cone of cold.. brrrrrrrrr.~
+Hitroom      $c0014$n hits $N with a cone of cold.~
+Misschar     $c0014$N laughs at your cone of cold, and moves out of the way.~
+Missvict     $c0014You move out of the way of $n's cone of cold.~
+Missroom     $c0014$N avoids $n's ice cone.~
+Diechar      $c0014$N is frozen to death by your cone of cold.~
+Dievict      $c0014You are chilled to the bone by $n's cone of cold.~
+Dieroom      $c0014$n kills $N with a cone of ice.~
+Dice         LD5~
+Minlevel     17
+End
+
+#SKILL
+Name         conjure elemental~
+Type         Spell
+Flags        1536
+Minpos       8
+Slot         93
+Mana         30
+Rounds       24
+Code         spell_conjure_elemental
+Dammsg       conjure elemental~
+Value        10
+Minlevel     13
+End
+
+#SKILL
+Name         continual light~
+Type         Spell
+Flags        33554952
+Minpos       8
+Slot         90
+Mana         10
+Rounds       24
+Code         spell_smaug
+Dammsg       continual light~
+Wearoff      spell90, please report.~
+Wearoffroom  spell90, please report.~
+Wearoffsoon  spell90, please report.~
+WearoffsoonR spell90, please report.~
+Hitchar      you twiddle your thumbs and a bright ball of light suddenly appears!~
+Hitvict      $N waves $s hands and a bright ball of light appears!~
+Dice         0~
+Value        87
+Minlevel     2
+End
+
+#SKILL
+Name         control weather~
+Type         Spell
+Flags        32768
+Minpos       8
+Slot         11
+Mana         25
+Rounds       36
+Code         spell_control_weather
+Dammsg       ~
+Wearoff      !Control Weather!~
+Wearoffroom  !Control Weather!~
+Wearoffsoon  !Control Weather!~
+WearoffsoonR !Control Weather!~
+Minlevel     13
+End
+
+#SKILL
+Name         create food~
+Type         Spell
+Flags        33554952
+Minpos       8
+Slot         12
+Mana         5
+Rounds       12
+Code         spell_create_food
+Dammsg       ~
+Wearoff      !Create Food!~
+Wearoffroom  !Create Food!~
+Wearoffsoon  !Create Food!~
+WearoffsoonR !Create Food!~
+Dice         0~
+Value        20
+Minlevel     2
+End
+
+#SKILL
+Name         create light~
+Type         Spell
+Flags        33554440
+Minpos       8
+Slot         89
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       create light~
+Wearoff      spell89, please report.~
+Wearoffroom  spell89, please report.~
+Wearoffsoon  spell89, please report.~
+WearoffsoonR spell89, please report.~
+Hitchar      You twiddle your thumbs and a bright ball of light suddenly appears!~
+Hitroom      $n waves $s hands and a bright ball of light appears!~
+Dice         (20*24)*l~
+Value        20
+Minlevel     1
+End
+
+#SKILL
+Name         create water~
+Type         Spell
+Flags        0
+Target       4
+Minpos       8
+Slot         13
+Mana         5
+Rounds       12
+Code         spell_create_water
+Dammsg       ~
+Wearoff      !Create Water!~
+Wearoffroom  !Create Water!~
+Wearoffsoon  !Create Water!~
+WearoffsoonR !Create Water!~
+Minlevel     2
+End
+
+#SKILL
+Name         creeping death~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         127
+Mana         50
+Rounds       36
+Code         spell_null
+Dammsg       creeping death~
+Wearoff      spell 127 please report.~
+Wearoffroom  spell 127 please report.~
+Wearoffsoon  spell 127 please report.~
+WearoffsoonR spell 127 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         cure blindness~
+Type         Spell
+Flags        464
+Target       2
+Minpos       8
+Slot         14
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      !Cure Blind!~
+Wearoffroom  !Cure Blind!~
+Wearoffsoon  !Cure Blind!~
+WearoffsoonR !Cure Blind!~
+Hitchar      $N can see again!~
+Hitvict      You are able to see again!~
+Hitroom      $N can see everyone in the room again.~
+Minlevel     5
+End
+
+#SKILL
+Name         cure critical~
+Type         Spell
+Flags        0
+Target       2
+Minpos       5
+Slot         15
+Mana         11
+Rounds       24
+Code         spell_smaug
+Dammsg       ~
+Wearoff      !Cure Critic!~
+Wearoffroom  !Cure Critic!~
+Wearoffsoon  !Cure Critic!~
+WearoffsoonR !Cure Critic!~
+Hitchar      $N looks better.~
+Hitvict      You feel better!~
+Hitroom      $N looks better.~
+Affect       '' 13 '3d8+(l-6)' 0
+Minlevel     12
+End
+
+#SKILL
+Name         cure light~
+Type         Spell
+Flags        0
+Target       2
+Minpos       5
+Slot         16
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      !Cure Light!~
+Wearoffroom  !Cure Light!~
+Wearoffsoon  !Cure Light!~
+WearoffsoonR !Cure Light!~
+Hitchar      $N looks better.~
+Hitvict      You feel better!~
+Hitroom      $N looks better.~
+Affect       '' 13 '1d8+(l/3)' 0
+Minlevel     1
+End
+
+#SKILL
+Name         cure poison~
+Type         Spell
+Flags        67109232
+Minpos       8
+Slot         43
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       remove poison~
+Wearoff      !Remove Poison!~
+Wearoffroom  !Remove Poison!~
+Wearoffsoon  !Remove Poison!~
+WearoffsoonR !Remove Poison!~
+Hitchar      $N doesn't seem to be sick anymore.~
+Hitvict      You don't feel sick anymore.~
+Hitroom      $N has been cured from poison.~
+Affect       '' 1026 '' 4096
+Minlevel     8
+End
+
+#SKILL
+Name         cure serious~
+Type         Spell
+Flags        0
+Target       2
+Minpos       5
+Slot         83
+Mana         9
+Rounds       12
+Code         spell_smaug
+Dammsg       cure serious~
+Wearoff      spell83, please report.~
+Wearoffroom  spell83, please report.~
+Wearoffsoon  spell83, please report.~
+Hitchar      $N looks better.~
+Hitvict      You feel better!~
+Hitroom      $N looks better.~
+Affect       '' 13 '2d8+(l/2)' 0
+Minlevel     7
+End
+
+#SKILL
+Name         curse~
+Type         Spell
+Flags        100663728
+Minpos       8
+Slot         17
+Mana         20
+Rounds       24
+Code         spell_smaug
+Dammsg       curse~
+Wearoff      You feel better.~
+Wearoffroom  $n looks better~
+Hitchar      $N is briefly surrounded by a red aura!~
+Hitvict      You feel quite uncomfortable!~
+Hitroom      A red aura briefly surrounds $N!~
+Affect       'l*20' 0 '' 1024
+Minlevel     12
+End
+
+#SKILL
+Name         darkness~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         215
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       darkness~
+Wearoff      The dark globe about you fades away.~
+Wearoffroom  The dark globe around $n fades away~
+Wearoffsoon  You sense your globe of darkness fading~
+Hitchar      You summon a black globe about $N.~
+Hitvict      $n summons a black globe around you.~
+Hitroom      $n summons a black globe around $N.~
+Affect       'l*20' 37 '5' 0
+Minlevel     3
+End
+
+#SKILL
+Name         death field~
+Type         Spell
+Flags        67108864
+Minpos       8
+Slot         298
+Mana         40
+Rounds       30
+Code         spell_null
+Dammsg       death field~
+Minlevel     50
+End
+
+#SKILL
+Name         detect evil~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         18
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      You sense the red in your vision disappear.~
+Wearoffroom  $n blinks $s eyes, the reddish hue vanishes~
+Hitchar      $N's eyes briefly glow white.~
+Hitvict      Your eyes tingle.~
+Hitroom      $N's eyes briefly glow white.~
+Affect       'l*24' 26 'detect evil' 4
+Minlevel     1
+End
+
+#SKILL
+Name         detect invisibility~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         19
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      Your ability to see things invisible wears off.~
+Wearoffroom  $n blinks $s eyes, the yellowish hue vanishes~
+Hitchar      $N's eyes briefly glow yellow.~
+Hitvict      Your eyes briefly glow yellow.~
+Hitroom      $N's eyes briefly glow yellow.~
+Affect       'l*24' 26 'detect invisibility' 8
+Minlevel     2
+End
+
+#SKILL
+Name         detect magic~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         20
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       detect magic~
+Wearoff      Your ability to see magic wears off.~
+Wearoffroom  $n blinks $s eyes, the blueish hue vanishes~
+Hitchar      $N's eyes briefly glow blue.~
+Hitvict      Your eyes tingle.~
+Hitroom      $N's eyes briefly glow blue.~
+Affect       'l*24' 26 'detect magic' 16
+Minlevel     1
+End
+
+#SKILL
+Name         detect poison~
+Type         Spell
+Flags        33554478
+Target       4
+Minpos       8
+Slot         21
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      Your ability to see poison wears off.~
+Wearoffroom  $n blinks $s eyes, the whiteish hue vanishes~
+Hitchar      $N can detect poison now.~
+Hitvict      ok. You can detect poison now.~
+Hitroom      $N can detect poison now.~
+Minlevel     7
+End
+
+#SKILL
+Name         detonate~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         293
+Mana         40
+Rounds       12
+Code         spell_null
+Dammsg       detonate~
+Minlevel     111
+End
+
+#SKILL
+Name         disintergrate~
+Type         Spell
+Flags        67108868
+Target       1
+Minpos       7
+Slot         245
+Mana         45
+Rounds       12
+Code         spell_null
+Dammsg       disintergrate~
+Wearoff      spell 245 report~
+Wearoffroom  spell 245~
+Wearoffsoon  spell 245~
+WearoffsoonR spell 245~
+Hitchar      $c0010You smile happly as your disintergration ray hits $N!~
+Hitvict      $c0010Your body quivers and shakes as $n hits you with a disintergration ray, but you manage to stay together~
+Hitroom      $c0010$n cackles as $s disintergration ray strikes $N hard!~
+Misschar     $c0010You miss disintergrating $N by just a few inches!~
+Missvict     $c0010$n misses you with a mis-fired disintergrate ray!~
+Missroom     $c0010A disintergration ray from $n misses $N, CLOSE!!~
+Diechar      $c0010You disintergrate $N into small bits!~
+Dievict      $c0010You scream as you fly into a million pieces, $n grins evilly~
+Dieroom      $c0010$n disintergrates $N into a pile of dust!~
+Minlevel     111
+End
+
+#SKILL
+Name         dispel evil~
+Type         Spell
+Flags        0
+Target       1
+Minpos       7
+Slot         22
+Mana         15
+Rounds       24
+Code         spell_dispel_evil
+Dammsg       dispel evil~
+Hitchar      $N shivers, and suffers from $M evilness!~
+Hitvict      $n makes your soul hurt and suffer!~
+Hitroom      $n makes $N's evil spirit shiver and suffer!~
+Misschar     $N is unaffected by your goodness!~
+Missvict     $n feels self-righteous and tries to dispell you~
+Missroom     $N laughs at $n as $e tries to dispell $M!~
+Diechar      $N is dissolved by your goodness.~
+Dievict      $n dissolves you, you regret having been so evil, and die...~
+Dieroom      $n completely dissolves $N~
+Minlevel     12
+End
+
+#SKILL
+Name         dispel good~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         58
+Mana         15
+Rounds       36
+Code         spell_dispel_good
+Dammsg       dispel good~
+Hitchar      $N shivers, and suffers from $S goodness!~
+Hitvict      $n makes your soul hurt and suffer!~
+Hitroom      $n makes $N's good spirit shiver and suffer!~
+Misschar     $N is unaffected by your evilness!~
+Missvict     $n feels self-righteous and tries to dispel you~
+Missroom     $N laughs at $n as $e tries to dispel $M!~
+Diechar      $N is dissolved by your evilness.~
+Dievict      $n dissolves you, you regret having been so good, and die...~
+Dieroom      $n completely dissolves $N~
+Minlevel     20
+End
+
+#SKILL
+Name         dispel magic~
+Type         Spell
+Flags        0
+Minpos       7
+Slot         60
+Mana         15
+Rounds       12
+Code         spell_dispel_magic
+Dammsg       ~
+Wearoff      !dispel magic!~
+Wearoffroom  !dispel magic!~
+Wearoffsoon  !dispel magic!~
+WearoffsoonR !dispel magic!~
+Minlevel     9
+End
+
+#SKILL
+Name         dome of protection~
+Type         Spell
+Flags        67108872
+Target       2
+Minpos       7
+Slot         310
+Mana         50
+Rounds       24
+Code         spell_smaug
+Dammsg       Dome of Protection~
+Wearoff      Your dome of protection fades away.~
+Wearoffroom  $n's dome of protection fades away.~
+Wearoffsoon  Your dome of protection wavers a little.~
+WearoffsoonR $n's dome of protection wavers.~
+Hitchar      $N is surrounded by a glowing dome shield.~
+Hitvict      You are surrounded by a glowing dome shield.~
+Affect       'l*8' 17 '-50' 0
+Minlevel     111
+End
+
+#SKILL
+Name         domination~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         280
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       domination~
+Minlevel     50
+End
+
+#SKILL
+Name         dragon ride~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         165
+Mana         20
+Rounds       12
+Code         spell_smaug
+Dammsg       dragon ride~
+Wearoff      You feel less in control of dragons~
+Affect       'l*30' 0 'none' 0
+Minlevel     111
+End
+
+#SKILL
+Name         dust devil~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         157
+Mana         10
+Rounds       120
+Code         spell_smaug
+Dammsg       dust devil~
+Value        60
+Minlevel     3
+End
+
+#SKILL
+Name         earth servant~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         133
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       earth servant~
+Wearoff      You feel less in control.~
+Wearoffroom  $n seems less in contro.~
+Wearoffsoon  Your ability to control servents wavers.~
+WearoffsoonR $n's abilities to control servents wavers.~
+Value        12
+Minlevel     111
+End
+
+#SKILL
+Name         earthquake~
+Type         Spell
+Flags        37200
+Minpos       7
+Slot         23
+Mana         15
+Rounds       24
+Code         spell_smaug
+Dammsg       earthquake~
+Wearoff      !Earthquake!~
+Wearoffroom  !Earthquake!~
+Wearoffsoon  !Earthquake!~
+WearoffsoonR !Earthquake!~
+Hitchar      the earth rumbles..shaking violently...~
+Hitvict      $N shakes from the rumbling, but quickly regains balance~
+Diechar      $N tumbles into a large crack in the earth and dies!~
+Dievict      $N falls flat on their face, dead!~
+Dice         l+1+1d4~
+Minlevel     8
+End
+
+#SKILL
+Name         ego whip~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         296
+Mana         40
+Rounds       24
+Code         spell_null
+Dammsg       ego whip~
+Minlevel     36
+End
+
+#SKILL
+Name         enchant armor~
+Type         Spell
+Flags        33554432
+Target       4
+Minpos       8
+Slot         260
+Mana         100
+Rounds       48
+Code         spell_enchant_armor
+Dammsg       enchant armor~
+Minlevel     16
+End
+
+#SKILL
+Name         enchant weapon~
+Type         Spell
+Flags        33554432
+Target       4
+Minpos       8
+Slot         24
+Mana         100
+Rounds       48
+Code         spell_enchant_weapon
+Dammsg       enchant weapon~
+Minlevel     14
+End
+
+#SKILL
+Name         energy drain~
+Type         Spell
+Flags        67109207
+Target       1
+Minpos       7
+Slot         25
+Mana         35
+Rounds       36
+Code         spell_smaug
+Dammsg       energy drain~
+Wearoff      !Energy Drain!~
+Wearoffroom  !Energy Drain!~
+Wearoffsoon  !Energy Drain!~
+WearoffsoonR !Energy Drain!~
+Hitchar      You drain $N of some of $S energy~
+Hitvict      You feel less energic as $n drains you~
+Hitroom      $n drains $N - what a waste of energy !~
+Misschar     You need more draining lessons~
+Missvict     Luckily for you $n slept during draining-lessons~
+Missroom     $n fails to drain $N - what a waste of energy~
+Diechar      $N crumples as you kill $M by draining $S energy~
+Dievict      As $n drains your last energy you look foreward to the peace of the graveyard~
+Dieroom      $n drains the enegy of $N who crumples as a lifeless cocoon~
+Dice         l-1~
+Minlevel     14
+End
+
+#SKILL
+Name         enlarge~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         309
+Mana         50
+Rounds       24
+Code         spell_smaug
+Dammsg       enlarge~
+Affect       'l*30' 26 '1' 0
+Minlevel     44
+End
+
+#SKILL
+Name         entangle~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         146
+Mana         20
+Rounds       12
+Code         spell_null
+Dammsg       entangle~
+Wearoff      You are free of your entanglements~
+Wearoffroom  $n wrenches free of $s entanglements~
+WearoffsoonR $n is entangled by leaves and bushes~
+Minlevel     111
+End
+
+#SKILL
+Name         faerie fire~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         96
+Mana         10
+Rounds       12
+Code         spell_faerie_fire
+Dammsg       faerie fire~
+Wearoff      The faerie's control over you fades.~
+Wearoffroom  The pink glow around $n's body fades.~
+Wearoffsoon  The pink glow around your body flickers~
+WearoffsoonR The pink glow around $n's body flickers~
+Hitchar      $N's body starts to glow pink~
+Hitvict      You see a pinkish glow form around $n's body~
+Hitroom      A pinkish glow forms around $N's body~
+Minlevel     4
+End
+
+#SKILL
+Name         faerie fog~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         97
+Mana         20
+Rounds       24
+Code         spell_faerie_fog
+Dammsg       faerie fog~
+Wearoff      spell 97, please report.~
+Wearoffroom  spell 97, please report.~
+Wearoffsoon  spell 97, please report.~
+WearoffsoonR spell 97, please report.~
+Minlevel     11
+End
+
+#SKILL
+Name         fear~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         66
+Mana         15
+Rounds       12
+Code         spell_null
+Dammsg       fear~
+Wearoff      !fear!~
+Wearoffroom  !fear!~
+Wearoffsoon  !fear!~
+WearoffsoonR !fear!~
+Minlevel     8
+End
+
+#SKILL
+Name         feeblemind~
+Type         Spell
+Flags        67633152
+Target       1
+Minpos       7
+Saves        5
+Slot         121
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       feeblemind~
+Wearoff      Your less in control of your mind.~
+Wearoffroom  $n seems more in control.~
+Wearoffsoon  You start to regasin controll.~
+WearoffsoonR $n starts to look smarter!~
+Affect       '560' 3 '-5' 0
+Minlevel     34
+End
+
+#SKILL
+Name         find familiar~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         110
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       find familiar~
+Affect       '' 44 'familiar' 0
+Minlevel     2
+End
+
+#SKILL
+Name         find traps~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         153
+Mana         10
+Rounds       12
+Code         spell_smaug
+Dammsg       find traps~
+Wearoff      You feel less aware of possible traps.~
+Wearoffroom  $n eyes loose a shimmering glimmer.~
+Wearoffsoon  You feel your sense of traps starting to fade~
+Hitchar      $n feels more aware of finding traps.~
+Hitvict      You feel that you can discover traps with ease.~
+Hitroom      $n feels more aware of finding traps.~
+Affect       'l+50' 0 'none' 8388608
+Minlevel     111
+End
+
+#SKILL
+Name         fire servant~
+Type         Spell
+Flags        329
+Minpos       8
+Slot         132
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       fire servant~
+Value        10
+Affect       'l*20' 0 '1' 0
+Minlevel     111
+End
+
+#SKILL
+Name         fireball~
+Type         Spell
+Flags        262481
+Minpos       7
+Slot         26
+Mana         50
+Rounds       45
+Code         spell_fireball
+Dammsg       fireball~
+Wearoff      !Fireball!~
+Wearoffroom  !Fireball!~
+Wearoffsoon  !Fireball!~
+WearoffsoonR !Fireball!~
+Hitchar      $c002 You throw a fireball at $N and have the satisfaction of seeing $N enveloped in flames~
+Hitvict      $c0009You are enveloped in flames from a fireball sent by $n - OUCH~
+Hitroom      $c0009$n smirks as $s fireball explodes into the face of $N~
+Misschar     $c0009Your fireball blooms few feet before $N who claps $S hands in wonder~
+Missvict     $c0009$n aims a fireball at you but it blooms few feet before you, you clap your hands at the show~
+Missroom     $c0009A fireball from $n misses $N - what great fireworks around here !!~
+Diechar      $c0009Your fireball hits $N with full force, causing an immediate death~
+Dievict      $c0009As you burst into flames of death $n grins evilly~
+Dieroom      $c0009The heat from a fireball from $n turns $N into a charred corpse~
+Dice         l*1d6~
+Minlevel     13
+End
+
+#SKILL
+Name         fireshield~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Slot         81
+Mana         40
+Rounds       24
+Code         spell_smaug
+Dammsg       fireshield~
+Wearoff      You no longer feel so fiery.~
+Wearoffroom  The red glow around $n's body fades~
+Wearoffsoon  The red glow around your body flickers~
+WearoffsoonR The red glow around $n's body flickers~
+Hitchar      $n erects a shield of fire around $s body.~
+Hitvict      You erect a shield of fire around your body.~
+Hitroom      $n errects a shield of fire around $s body.~
+Affect       '3*20' 26 'fireshield' 33554432
+Minlevel     35
+End
+
+#SKILL
+Name         firestorm~
+Type         Spell
+Flags        295305
+Minpos       7
+Saves        5
+Slot         154
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       firestorm~
+Wearoff      spell 154 please report.~
+Wearoffroom  spell 154 please report.~
+Wearoffsoon  spell 154 please report.~
+WearoffsoonR spell 154 please report.~
+Hitchar      $c0009Searing flames surround $N!~
+Hitvict      $c0009You are seared by the burning flames!~
+Hitroom      $c0009 $n sends a firestorm whirling across the room!~
+Misschar     $N is able to avoid the flames!~
+Missvict     You are able to avoid the flames!~
+Missroom     $N is able to avoid the flames!~
+Dice         l+2d8+1~
+Minlevel     111
+End
+
+#SKILL
+Name         flame blade~
+Type         Spell
+Flags        1
+Minpos       8
+Slot         124
+Mana         10
+Rounds       12
+Code         spell_null
+Dammsg       flame blade~
+Wearoff      spell 124 please report.~
+Wearoffroom  spell 124 please report.~
+Wearoffsoon  spell 124 please report.~
+WearoffsoonR spell 124 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         flamestrike~
+Type         Spell
+Flags        67108865
+Target       1
+Minpos       7
+Slot         57
+Mana         15
+Rounds       36
+Code         spell_flamestrike
+Dammsg       flamestrike~
+Wearoff      !flamestrike!~
+Wearoffroom  !flamestrike!~
+Wearoffsoon  !flamestrike!~
+WearoffsoonR !flamestrike!~
+Hitchar      You smile as $N takes the full force of your blast.~
+Hitvict      You take the full force of $n's flamestrike~
+Hitroom      $N takes the full force of $n's flamestrike~
+Misschar     Your strike missed $N, have you been missing your prayers?~
+Missvict     $n sends a column of flame at you, but you move out of the way~
+Missroom     $N dodges the column of flame created by $n~
+Diechar      Your flaming power chars $N to death!~
+Dievict      You are enveloped in $n's flames.  They are enough to kill you.~
+Dieroom      $n sends a column of flame at $N, who is now dead~
+Minlevel     15
+End
+
+#SKILL
+Name         fly~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         69
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       fly~
+Wearoff      You feel heavier now, your flying ability is gone.~
+Wearoffroom  The magical forces holding $n aloft vanish~
+Wearoffsoon  You feel heavier now, your flying ability is leaving you.~
+WearoffsoonR The magic force keeping $n aloft flickers slightly, it will vanish soon.~
+Hitchar      $N's feet rise off the ground.~
+Hitvict      Your feet rise off the ground.~
+Hitroom      $N's feet rise off the ground.~
+Affect       '(l+3)*20' 0 '' 524288
+Minlevel     9
+End
+
+#SKILL
+Name         full heal~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         295
+Mana         100
+Rounds       24
+Code         spell_smaug
+Dammsg       full heal~
+Hitchar      $N looks to be in perfect health!~
+Hitvict      A wave of warmth flows through your body.~
+Hitroom      $N looks to be in perfect health!~
+Affect       '' 13 '1000' 0
+Minlevel     111
+End
+
+#SKILL
+Name         gate~
+Type         Spell
+Flags        67174400
+Minpos       8
+Slot         307
+Mana         80
+Rounds       24
+Code         spell_gate
+Dammsg       gate~
+Minlevel     55
+End
+
+#SKILL
+Name         geyser~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         200
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       geyser~
+Wearoff      !geyser!~
+Minlevel     42
+End
+
+#SKILL
+Name         golem~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         109
+Mana         30
+Rounds       24
+Code         spell_golem
+Dammsg       golem~
+Minlevel     15
+End
+
+#SKILL
+Name         goodberry~
+Type         Spell
+Flags        33554440
+Minpos       8
+Slot         123
+Mana         10
+Rounds       12
+Code         spell_smaug
+Dammsg       goodberry~
+Wearoff      spell 123 please report.~
+Wearoffroom  spell 123 please report.~
+Wearoffsoon  spell 123 please report.~
+WearoffsoonR spell 123 please report.~
+Value        22
+Minlevel     111
+End
+
+#SKILL
+Name         green slime~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         206
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       green slime~
+Wearoff      !green slime!~
+Minlevel     5
+End
+
+#SKILL
+Name         group fly~
+Type         Spell
+Flags        83886080
+Minpos       8
+Slot         104
+Mana         30
+Rounds       12
+Code         spell_smaug
+Dammsg       group fly~
+Wearoff      You feel gravity taking over, your flying spell is leaving you.~
+Wearoffroom  The magical shield protecting $n fades away sadly.~
+Wearoffsoon  The magical shield around your body flickers~
+WearoffsoonR $n's shield starts to fade away~
+Hitchar      $N's feet rise off the ground.~
+Hitvict      Your feet rise off the ground.~
+Affect       '(l+3)*20' 0 '' 524288
+Minlevel     24
+End
+
+#SKILL
+Name         group invisibility~
+Type         Spell
+Flags        83886128
+Minpos       8
+Slot         300
+Mana         30
+Rounds       12
+Code         spell_smaug
+Dammsg       group invisibility~
+Wearoff      You feel exposed.~
+Wearoffroom  $N slowly fades into existance.~
+Hitchar      $N slowly fades out of existance.~
+Hitvict      You slowly fade out of existance.~
+Hitroom      $N shimmers... then disappears...~
+Affect       '24*20' 0 '' 2
+Minlevel     111
+End
+
+#SKILL
+Name         gust of wind~
+Type         Spell
+Flags        0
+Minpos       6
+Slot         148
+Mana         2
+Rounds       12
+Code         spell_null
+Dammsg       gust of wind~
+Wearoff      spell 148 please report.~
+Wearoffroom  spell 148 please report.~
+Wearoffsoon  spell 148 please report.~
+WearoffsoonR spell 148 please report.~
+Minlevel     10
+End
+
+#SKILL
+Name         harm~
+Type         Spell
+Flags        67633492
+Target       1
+Minpos       7
+Saves        5
+Slot         27
+Mana         35
+Rounds       36
+Code         spell_smaug
+Dammsg       harm~
+Wearoff      !Harm!~
+Wearoffroom  !Harm!~
+Wearoffsoon  !Harm!~
+WearoffsoonR !Harm!~
+Hitchar      You touch $N and send $M reeling.~
+Hitvict      $n touches you, you are enlightened by pain.~
+Hitroom      $n touches $N, who is sent reeling.~
+Misschar     You miss $N with your touch, the spell is wasted.~
+Missvict     $n misses you with $stouch.~
+Missroom     $n misses $N with $s touch.~
+Diechar      $N reels from the sheer power of your spell, and is destroyed.~
+Dievict      You are sent reeling by the power of $n's spell, and you die.~
+Dieroom      $n touches $N, who is destroyed by its power.~
+Dice         100~
+Minlevel     13
+End
+
+#SKILL
+Name         haste~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         155
+Mana         20
+Rounds       12
+Code         spell_null
+Dammsg       haste~
+Wearoff      You feel slower!~
+Wearoffroom  $n seems slower~
+Wearoffsoon  You feel the world slowing down some.~
+Dice         none~
+Minlevel     23
+End
+
+#SKILL
+Name         heal~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         28
+Mana         50
+Rounds       12
+Code         spell_smaug
+Dammsg       heal~
+Wearoff      !Heal~
+Wearoffroom  !Heal~
+Wearoffsoon  !Heal~
+WearoffsoonR !Heal~
+Hitchar      $N looks better!~
+Hitvict      A warm feeling fills your body.~
+Hitroom      $N looks better!~
+Affect       '' 13 '100' 0
+Minlevel     19
+End
+
+#SKILL
+Name         heat stuff~
+Type         Spell
+Flags        67108865
+Target       1
+Minpos       7
+Slot         152
+Mana         30
+Rounds       12
+Code         spell_null
+Dammsg       heat stuff~
+Wearoff      Your equipment finally cools down!~
+Wearoffroom  $n's equipment stops burning $m~
+Wearoffsoon  Your armor cools down a bit~
+Hitchar      Your possessions burn against your skin. The pain is exquisite.~
+Hitvict      suffer victim never see.~
+Hitroom      You hear a sizzling sound, as $N's equipment burns $s skin.~
+Misschar     suffer miss char.~
+Missvict     suffer miss victim.~
+Missroom     suffer miss room.~
+Diechar      Your equipment burns against your skin, causing you extreme agony.  You die.~
+Dievict      victim die suffer never see.~
+Dieroom      $N's armor sizzles against $s body.  $e screams and dies in agony~
+Minlevel     111
+End
+
+#SKILL
+Name         heroes feast~
+Type         Spell
+Flags        16777216
+Target       2
+Minpos       8
+Slot         103
+Mana         40
+Rounds       12
+Code         spell_smaug
+Dammsg       heroes feast~
+Wearoff      spell 103 please report.~
+Wearoffroom  spell 103 please report.~
+Wearoffsoon  spell 103 please report.~
+WearoffsoonR spell 103 please report.~
+Hitchar      You create a great feast for your group.~
+Hitvict      $n creates a great feast for you to dine on.~
+Affect       '' 63 '100' 0
+Affect       '' 64 '100' 0
+Minlevel     111
+End
+
+#SKILL
+Name         holy armor~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         323
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       holy armor~
+Minlevel     111
+End
+
+#SKILL
+Name         holy word~
+Type         Spell
+Flags        0
+Minpos       7
+Slot         112
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       holy word~
+Wearoff      spell 112 please report.~
+Wearoffroom  spell 112 please report.~
+Wearoffsoon  spell 112 please report.~
+WearoffsoonR spell 112 please report.~
+Hitchar      You send $N reeling with your word of power.~
+Hitvict      You are sent reeling by $n's holy word.~
+Hitroom      $n sends $N reeling with a holy word.~
+Misschar     $N withstands the blast of your holy word with a smirk.~
+Missvict     You smirk as $n tries to kill you with a word.~
+Missroom     $N smirks, and ignores $n's holy word.~
+Diechar      $N dies instantly from the power of your holy word.~
+Dievict      You hear a word of power, and die instantly.~
+Dieroom      $N hears $n's word of power, and nothing more.~
+Minlevel     111
+End
+
+#SKILL
+Name         ice storm~
+Type         Spell
+Flags        297354
+Minpos       7
+Saves        5
+Slot         72
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       ice storm~
+Wearoff      spell72, please report~
+Wearoffroom  spell72, please report.~
+Wearoffsoon  spell3, please report.~
+WearoffsoonR spell3, please report.~
+Hitchar      $c0012You crush $N with your storm of ice.~
+Hitvict      $c0012$n bashes you with a storm of ice.~
+Hitroom      $c0012$n crushes $N with a storm of ice.~
+Misschar     $c0012$N finds shelter from your ice storm.~
+Missvict     $c0012You manage to avoid $n's ice storm.~
+Missroom     $c0012$N avoids $n's ice storm.~
+Diechar      $c0012$N is ripped apart by your storm of ice.~
+Dievict      $c0012You are ripped to shreds by $n's ice storm.~
+Dieroom      $c0012$N is ripped to shreds by $n's ice storm.~
+Dice         LD4~
+Minlevel     11
+End
+
+#SKILL
+Name         identify~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         53
+Mana         100
+Rounds       24
+Code         spell_identify
+Dammsg       ~
+Wearoff      !Identify!~
+Wearoffroom  !Identify!~
+Wearoffsoon  !Identify!~
+WearoffsoonR !Identify!~
+Minlevel     13
+End
+
+#SKILL
+Name         illusionary heal~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         167
+Mana         40
+Rounds       12
+Code         spell_null
+Dammsg       illusionary heal~
+Wearoff      spell 167 please report.~
+Wearoffroom  spell 167 please report.~
+Wearoffsoon  spell 167 please report.~
+WearoffsoonR spell 167 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         incendiary cloud~
+Type         Spell
+Flags        295305
+Minpos       7
+Saves        5
+Slot         244
+Mana         60
+Rounds       36
+Code         spell_smaug
+Dammsg       incendiary cloud~
+Wearoff      spell 244 report~
+Wearoffroom  spell 244~
+Wearoffsoon  spell 244~
+WearoffsoonR spell 244~
+Hitchar      $c0010You wave the gases towards $N and have the satisfaction of seeing $M enveloped in flames~
+Hitvict      $c0010You are enveloped in a cloud of incendiary gases sent by $n - OUCH~
+Hitroom      $c0010$n cackles as $s incendiary cloud torches $N~
+Misschar     $c0010Your wall of gases billow around $N who simply grins~
+Missvict     $c0010$n's incendiary cloud billows around you impotently~
+Missroom     $c0010A cloud of buring gases from $n misses $N!~
+Diechar      $c0010Your wall of incendiary gases torches $N with instantly, causing an immediate death!$c0007~
+Dievict      $c0010As the gases surround you, $n grins evilly then you burst into flames.~
+Dieroom      $c0010The incendiary cloud from $n turns $N into a charred corpse~
+Dice         LD10~
+Minlevel     45
+End
+
+#SKILL
+Name         infravision~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         54
+Mana         7
+Rounds       12
+Code         spell_smaug
+Dammsg       infravision~
+Wearoff      You feel disoriented as you lose your infravision.~
+Wearoffroom  $n stumbles, and blinks $s eyes, the reddish hue fades~
+Wearoffsoon  Your infravision begins to fade.~
+Hitchar      $N's eyes briefly glow red.~
+Hitvict      Your vision takes on a reddish hue.~
+Hitroom      $N's eyes briefly glow red.~
+Affect       'l*4*16' 0 '' 512
+Minlevel     1
+End
+
+#SKILL
+Name         insect growth~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         126
+Mana         20
+Rounds       24
+Code         spell_null
+Dammsg       insect growth~
+Wearoff      spell 126 please report.~
+Wearoffroom  spell 126 please report.~
+Wearoffsoon  spell 126 please report.~
+WearoffsoonR spell 126 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         invis to animals~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         144
+Mana         10
+Rounds       12
+Code         spell_smaug
+Dammsg       invis to animals~
+Affect       '480' 71 '1' 0
+Minlevel     111
+End
+
+#SKILL
+Name         invisibility~
+Type         Spell
+Flags        100663792
+Minpos       8
+Slot         29
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       invisibility~
+Wearoff      You feel exposed.~
+Wearoffroom  $n slowly fades into existence~
+Hitchar      $N slowly fades out of existance.~
+Hitvict      You slowly fade out of existance.~
+Hitroom      $N shimmers.. then disappears.~
+Affect       '24*20' 0 '' 2
+Minlevel     4
+End
+
+#SKILL
+Name         juggernaut~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         308
+Mana         80
+Rounds       24
+Code         spell_null
+Dammsg       juggernaut~
+Minlevel     53
+End
+
+#SKILL
+Name         knock~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         61
+Mana         10
+Rounds       12
+Code         spell_null
+Dammsg       knock~
+Wearoff      !knock!~
+Wearoffroom  !knock!~
+Wearoffsoon  !knock!~
+WearoffsoonR !knock!~
+Minlevel     3
+End
+
+#SKILL
+Name         know alignment~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         62
+Mana         10
+Rounds       12
+Code         spell_know_alignment
+Dammsg       know alignment~
+Wearoff      !know alignment!~
+Wearoffroom  !know alignment!~
+Wearoffsoon  !know alignment!~
+WearoffsoonR !know alignment!~
+Minlevel     4
+End
+
+#SKILL
+Name         know monster~
+Type         Spell
+Flags        0
+Minpos       7
+Slot         158
+Mana         20
+Rounds       12
+Code         spell_know_monster
+Dammsg       know monster~
+Wearoff      spell 158 please report.~
+Wearoffroom  spell 158 please report.~
+Wearoffsoon  spell 158 please report.~
+WearoffsoonR spell 158 please report.~
+Minlevel     9
+End
+
+#SKILL
+Name         lightning bolt~
+Type         Spell
+Flags        67371403
+Target       1
+Minpos       7
+Saves        5
+Slot         30
+Mana         15
+Rounds       24
+Code         spell_smaug
+Dammsg       lightning bolt~
+Wearoff      !Lightning Bolt!~
+Wearoffroom  !Lightning Bolt!~
+Wearoffsoon  !Lightning Bolt!~
+WearoffsoonR !Lightning Bolt!~
+Hitchar      $c0012The lightning bolt hits $N with full impact~
+Hitvict      $c0012YOU'RE HIT. A lightning bolt from $n has reached its goal~
+Hitroom      $c0012$N wavers under the impact of the lightning bolt sent by $n~
+Misschar     $c0012Your aim is going from bad to worse and the lightning bolt misses $N~
+Missvict     $c0012$n has got a bad aim and the lightning bolt misses you~
+Missroom     $c0012$n fails in hitting $N with a lightning bolt~
+Diechar      $c0012Your lightning bolt shatters $N to pieces~
+Dievict      $c0012You feel envigorated by the bolt of $n and then you feel no more~
+Dieroom      $c0012$N recieves the full blast of a lightning bolt from $n ... and is no more~
+Dice         LD6~
+Minlevel     10
+End
+
+#SKILL
+Name         locate object~
+Type         Spell
+Flags        33619968
+Minpos       8
+Slot         31
+Mana         20
+Rounds       12
+Code         spell_locate_object
+Dammsg       locate object~
+Wearoff      !Locate object!~
+Wearoffroom  !Locate object!~
+Wearoffsoon  !Locate object!~
+WearoffsoonR !Locate object!~
+Minlevel     11
+End
+
+#SKILL
+Name         magic missile~
+Type         Spell
+Flags        67109200
+Target       1
+Minpos       7
+Slot         32
+Mana         15
+Rounds       16
+Code         spell_magic_missile
+Dammsg       magic missile~
+Wearoff      !Magic Missile!~
+Wearoffroom  !Magic Missile!~
+Wearoffsoon  !Magic Missile!~
+WearoffsoonR !Magic Missile!~
+Hitchar      You watch with selfpride as the magic missile hits $N~
+Hitvict      You stagger as a magic missile from $n hits you~
+Hitroom      $n throws a magic missile at $N who staggers under the blow~
+Misschar     The magic missile penetrates the air miles above $N~
+Missvict     You don't even have to duck as $n sends a magic missile way over your head~
+Missroom     $n tries in vain to correct the course of the magic missile meant to hit $N~
+Diechar      The magic missile tears away the remaining life of $N~
+Dievict      You only have time to notice $n uttering strange sounds before everything is dark~
+Dieroom      The magic missile sent by $n causes $N to stagger and collaps in a lifeless heap~
+Minlevel     1
+End
+
+#SKILL
+Name         major creation~
+Type         Spell
+Flags        33555976
+Minpos       8
+Slot         291
+Mana         45
+Rounds       24
+Code         spell_smaug
+Dammsg       major creation~
+Hitchar      You stomp your feet a few times!~
+Hitvict      $n stomps $s feet a few times!~
+Minlevel     28
+End
+
+#SKILL
+Name         major invulnerability~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         217
+Mana         50
+Rounds       24
+Code         spell_smaug
+Dammsg       major invulnerability~
+Wearoff      The protective globe about your body flares and is suddenly gone~
+Wearoffroom  The protective globe about $n flares and is gone~
+Wearoffsoon  The major globe about you flickers briefly~
+WearoffsoonR The protective globe around $n flickers slightly~
+Hitchar      $N summons a protective globe about $s body.~
+Hitvict      You summon a protective globe about your body.~
+Hitroom      $N summons a protective globe about $s body.~
+Affect       '12*36' 17 '-50' 0
+Minlevel     27
+End
+
+#SKILL
+Name         major track~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         108
+Mana         20
+Rounds       12
+Code         spell_smaug
+Dammsg       major track~
+Wearoff      Your tracking ability fades away.~
+Wearoffroom  $n looks really confused.~
+Wearoffsoon  $n looks temporarily confused.~
+WearoffsoonR $n looks temporarily confused.~
+Hitchar      $n appears to sense $s surroundings.~
+Hitvict      You feel that you can track anything right now.~
+Hitroom      $n appears to sense $s surroundings.~
+Affect       'l*20' 26 'none' 0
+Minlevel     20
+End
+
+#SKILL
+Name         mana~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       7
+Slot         100
+Mana         200
+Rounds       12
+Code         spell_smaug
+Dammsg       mana~
+Wearoffsoon  spell 100 please report.~
+WearoffsoonR spell 100 please report.~
+Affect       '' 12 '120' 0
+Minlevel     111
+End
+
+#SKILL
+Name         meteor swarm~
+Type         Spell
+Flags        67371348
+Target       1
+Minpos       7
+Slot         71
+Mana         35
+Rounds       24
+Code         spell_smaug
+Dammsg       meteor swarm~
+Wearoffsoon  spell2, please report.~
+WearoffsoonR spell2, please report.~
+Hitchar      $c0009You smash $N with your controlled meteors~
+Hitvict      $c0009$n smashes you with $s swarm of meteors, stunning you~
+Hitroom      $c0009$n massacres $N to little pieces with $s meteor swarm~
+Misschar     $c0009$N seems to be immune to your meteor swarm~
+Missvict     $c0009You take the full force of $n's meteor swarm and feel.. nothing!~
+Missroom     $c0009$N takes the full force of $n's meteor swarm, but seems to ignore it~
+Diechar      $c0009$N is whacked by your swarm of meteors~
+Dievict      $c0009You are whacked by a swarm of $n's meteors~
+Dieroom      $c0009$n obliterates $N with a swarm of meteors~
+Dice         LD12~
+Minlevel     36
+End
+
+#SKILL
+Name         mind meld~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         321
+Mana         40
+Rounds       24
+Code         spell_null
+Dammsg       mind meld~
+Minlevel     111
+End
+
+#SKILL
+Name         mindblank~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       7
+Slot         284
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       mindblank~
+Wearoff      You can no longer blank your mind~
+Minlevel     17
+End
+
+#SKILL
+Name         minor creation~
+Type         Spell
+Flags        33554952
+Minpos       8
+Slot         95
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       minor creation~
+Hitchar      You clap your hands together!~
+Hitvict      $n claps $s hands together!~
+Minlevel     8
+End
+
+#SKILL
+Name         minor invulnerability~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         216
+Mana         25
+Rounds       12
+Code         spell_smaug
+Dammsg       minor invulnerability~
+Wearoff      The protective globe about your body fizzles out~
+Wearoffroom  The protective globe about $n fizzles out~
+Wearoffsoon  The minor globe about you shimmers briefly~
+WearoffsoonR The protective globe around $n shimmers briefly~
+Hitchar      $N forms a minor protection globe about $s~
+Hitvict      You form a small protecting globe about you.~
+Hitroom      $N forms a minor protection globe about $s.~
+Affect       '6*36' 17 '-30' 0
+Minlevel     20
+End
+
+#SKILL
+Name         minor track~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         107
+Mana         10
+Rounds       12
+Code         spell_smaug
+Dammsg       minor track~
+Wearoff      You lose your tracking ability.~
+Wearoffroom  $n looks confused.~
+Wearoffsoon  $n looks a little confused.~
+WearoffsoonR $n is looking a little confused right now.~
+Hitchar      $n suddenly appears more sensitive and aware of $s surroundings.~
+Hitvict      You feel more aware of your surroundings.~
+Hitroom      $n suddenly appears more sensitive and aware of $s surroundings.~
+Affect       'l*20' 26 'none' 0
+Minlevel     12
+End
+
+#SKILL
+Name         monsum five~
+Type         Spell
+Flags        384
+Minpos       8
+Slot         78
+Mana         20
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum five~
+Minlevel     15
+End
+
+#SKILL
+Name         monsum four~
+Type         Spell
+Flags        1536
+Minpos       8
+Slot         77
+Mana         17
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum four~
+Minlevel     12
+End
+
+#SKILL
+Name         monsum one~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         74
+Mana         10
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum one~
+Minlevel     4
+End
+
+#SKILL
+Name         monsum seven~
+Type         Spell
+Flags        1408
+Minpos       8
+Slot         80
+Mana         25
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum seven~
+Minlevel     22
+End
+
+#SKILL
+Name         monsum six~
+Type         Spell
+Flags        896
+Minpos       8
+Slot         79
+Mana         22
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum six~
+Minlevel     18
+End
+
+#SKILL
+Name         monsum three~
+Type         Spell
+Flags        1024
+Minpos       8
+Slot         76
+Mana         15
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum three~
+Minlevel     9
+End
+
+#SKILL
+Name         monsum two~
+Type         Spell
+Flags        512
+Minpos       8
+Slot         75
+Mana         12
+Rounds       24
+Code         spell_monsum
+Dammsg       monsum two~
+Minlevel     7
+End
+
+#SKILL
+Name         nasty rash~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         294
+Mana         100
+Rounds       12
+Code         spell_null
+Dammsg       nasty rash~
+Minlevel     111
+End
+
+#SKILL
+Name         paralyze~
+Type         Spell
+Flags        524288
+Target       1
+Minpos       7
+Saves        3
+Slot         64
+Mana         15
+Rounds       36
+Code         spell_smaug
+Dammsg       paralyze~
+Wearoff      You feel free!~
+Wearoffroom  $n jerks out of $s paralyzed state~
+Hitchar      $N is paralyzed!~
+Hitvict      Your limbs freeze in place.~
+Hitroom      $N is paralyzed!~
+Affect       'l*23+80' 26 'paralysis' 0
+Minlevel     21
+End
+
+#SKILL
+Name         poison~
+Type         Spell
+Flags        67108878
+Target       1
+Minpos       7
+Slot         33
+Mana         10
+Rounds       24
+Code         spell_poison
+Dammsg       poison~
+Wearoff      You feel less sick.~
+Wearoffroom  $n looks healthier~
+Hitchar      You feel burning poison in your blood, and suffer.~
+Hitvict      suffer victim never see.~
+Hitroom      $N looks really sick, and shiver uncomfortably.~
+Misschar     suffer miss char.~
+Missvict     suffer miss victim.~
+Missroom     suffer miss room.~
+Diechar      Poison burns intensely in your veins, you shiver, you die.~
+Dievict      victim die suffer never see.~
+Dieroom      $N has a few cramps and dies suffering.~
+Minlevel     6
+End
+
+#SKILL
+Name         polymorph self~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         99
+Mana         10
+Rounds       12
+Code         spell_polymorph
+Dammsg       polymorph self~
+Wearoff      spell 99 please report.~
+Wearoffroom  spell 99 please report.~
+Wearoffsoon  spell 99 please report.~
+WearoffsoonR spell 99 please report.~
+Minlevel     9
+End
+
+#SKILL
+Name         portal~
+Type         Spell
+Flags        0
+Minpos       8
+Slot         164
+Mana         50
+Rounds       12
+Code         spell_portal
+Dammsg       portal~
+Minlevel     43
+End
+
+#SKILL
+Name         possess~
+Type         Spell
+Flags        67108864
+Guild        0
+Code         spell_possess
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         power word blind~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         115
+Mana         10
+Rounds       24
+Code         spell_pword_blind
+Dammsg       power word blind~
+Wearoff      spell 115 please report.~
+Wearoffroom  spell 115 please report.~
+Wearoffsoon  spell 115 please report.~
+WearoffsoonR spell 115 please report.~
+Hitchar      You blind $N with your word of power.~
+Hitvict      You have been blinded!~
+Hitroom      $N is blinded by the power of $n's word.~
+Minlevel     15
+End
+
+#SKILL
+Name         power word kill~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         114
+Mana         10
+Rounds       30
+Code         spell_pword_kill
+Dammsg       power word kill~
+Wearoff      spell 114 please report.~
+Wearoffroom  spell 114 please report.~
+Wearoffsoon  spell 114 please report.~
+WearoffsoonR spell 114 please report.~
+Hitchar      You send $N reeling with your word of power.~
+Hitvict      You are sent reeling by $n's word of power.~
+Hitroom      $n sends $N reeling with a word of power.~
+Misschar     $N withstands the blast of your word of power with a smirk.~
+Missvict     You smirk as $n tries to kill you with a word.~
+Missroom     $N smirks, and ignores $n's word of power.~
+Diechar      $N dies instantly from the power of your word.~
+Dievict      You hear a word of power, and die instantly.~
+Dieroom      $N hears $n's word of power, and nothing more.~
+Minlevel     23
+End
+
+#SKILL
+Name         prismatic spray~
+Type         Spell
+Flags        4
+Minpos       7
+Slot         243
+Mana         40
+Rounds       36
+Code         spell_null
+Dammsg       prismatic spray~
+Wearoff      spell 243 report~
+Wearoffroom  spell 243~
+Wearoffsoon  spell 243~
+WearoffsoonR spell 243~
+Minlevel     17
+End
+
+#SKILL
+Name         protection acid breath~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         265
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       protection acid breath~
+Wearoff      You think it would be best to avoid acid breathing dragons now~
+Wearoffroom  $n's acid breath protection fades away~
+Wearoffsoon  Your globe of acid breath protection shimmers for a moment before pulsing strongly~
+WearoffsoonR $n's electricity breath globe of protection shimmers for a moment~
+Minlevel     111
+End
+
+#SKILL
+Name         protection electric breath~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         264
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       protection electric breath~
+Wearoff      You think it would be best to avoid electric breathing dragons now~
+Wearoffroom  $n's electric breath protection fades away~
+Wearoffsoon  Your globe of electricity breath protection shimmers for a moment before pulsing strongly~
+WearoffsoonR $n's frost breath globe of protection shimmers for a moment~
+Minlevel     111
+End
+
+#SKILL
+Name         protection fire breath~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         262
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       protection fire breath~
+Wearoff      You think it would be best to avoid fire breathing dragons now~
+Wearoffroom  $n's fire breath protection fades away~
+Wearoffsoon  Your globe of fire breath protection shimmers for a moment before pulsing strongly~
+Minlevel     111
+End
+
+#SKILL
+Name         protection from breath~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         219
+Mana         200
+Rounds       12
+Code         spell_null
+Dammsg       protection from breath~
+Wearoff      You feel less protected from dragons~
+Wearoffroom  $n looks more fearful of dragons~
+Minlevel     111
+End
+
+#SKILL
+Name         protection from cold~
+Type         Spell
+Flags        67109272
+Target       3
+Minpos       8
+Slot         257
+Mana         40
+Rounds       12
+Code         spell_smaug
+Dammsg       protection from cold~
+Wearoff      You feel more fearful of cold again~
+Wearoffroom  $n looks less protected from cold~
+Wearoffsoon  Your protection from cold wavers for a moment~
+WearoffsoonR $n's fire protection wavers briefly~
+Hitchar      You summon a cold protective globe around yourself.~
+Hitvict      You summon a cold protective globe around yourself.~
+Hitroom      $N summons a cold protective globe around $mself.~
+Affect       '(l/10)*23' 27 '2' 0
+Minlevel     19
+End
+
+#SKILL
+Name         protection from drain~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         218
+Mana         40
+Rounds       12
+Code         spell_null
+Dammsg       protection from drain~
+Wearoff      You feel less protected from draining~
+Wearoffroom  $n looks more fearful of vampires~
+Affect       '(l/10)*23' 27 '512' 0
+Minlevel     111
+End
+
+#SKILL
+Name         protection from electricity~
+Type         Spell
+Flags        67109272
+Target       3
+Minpos       8
+Slot         259
+Mana         40
+Rounds       12
+Code         spell_smaug
+Dammsg       protection from electricity~
+Wearoff      You feel more fearful of electricity again~
+Wearoffroom  $n looks less protected from electricity now~
+Wearoffsoon  Your protection from electricity wavers for a moment~
+WearoffsoonR $n's energy protection wavers briefly~
+Hitvict      You summon a globe of electrical protection around yourself.~
+Hitroom      $N summons a globe of electrical protection around $Mself.~
+Affect       '(l/10)*23' 27 '4' 0
+Minlevel     18
+End
+
+#SKILL
+Name         protection from energy~
+Type         Spell
+Flags        67109272
+Target       3
+Minpos       8
+Slot         258
+Mana         40
+Rounds       12
+Code         spell_smaug
+Dammsg       protection from energy~
+Wearoff      You feel more fearful of energy again~
+Wearoffroom  $n looks less protected from energy~
+Wearoffsoon  Your protection from energy wavers for a moment~
+WearoffsoonR $n's cold protection wavers briefly~
+Hitvict      You summon a energy protective globe about yourself.~
+Hitroom      $N summons a energy protective globe about $Mself.~
+Affect       '(l/10)*23' 27 '8' 0
+Minlevel     111
+End
+
+#SKILL
+Name         protection from evil~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         34
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       protection from evil~
+Wearoff      You now feel more afraid of evil denizens.~
+Wearoffroom  $n seems less holier than thou~
+Affect       '480' 27 '8388608' 0
+Minlevel     111
+End
+
+#SKILL
+Name         protection from evil group~
+Type         Spell
+Flags        32768
+Target       2
+Minpos       8
+Slot         242
+Mana         45
+Rounds       12
+Code         spell_smaug
+Dammsg       protection from evil group~
+Wearoff      You feel less protected from evil.~
+Wearoffroom  $n looks fearful of evil creatures again.~
+Wearoffsoon  Your protection from evil wavers briefly~
+Affect       '480' 27 '8388608' 0
+Minlevel     7
+End
+
+#SKILL
+Name         protection from fire~
+Type         Spell
+Flags        67109272
+Target       3
+Minpos       8
+Slot         256
+Mana         40
+Rounds       12
+Code         spell_smaug
+Dammsg       protection from fire~
+Wearoff      You feel fearful of fire again~
+Wearoffroom  $n looks less protected from fire~
+Wearoffsoon  Your protection from fire wavers for a moment~
+Hitvict      You summon a fire protective globe about yourself.~
+Hitroom      $N summons a fire protective globe about $Mself.~
+Affect       '(l/10)*23' 27 '1' 0
+Minlevel     111
+End
+
+#SKILL
+Name         protection from good~
+Type         Spell
+Flags        0
+Target       2
+Minpos       8
+Mana         5
+Rounds       12
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Wearoff      You feel less protected from good.~
+Wearoffroom  $n looks fearful of good creatures again.~
+Wearoffsoon  Your protection from good wavers briefly.~
+Affect       '480' 27 '4194304' 0
+Minlevel     7
+End
+
+#SKILL
+Name         protection from good group~
+Type         Spell
+Flags        32768
+Target       2
+Minpos       8
+Mana         45
+Rounds       12
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Wearoff      You feel less protected from good.~
+Wearoffroom  $n looks fearful of good creatures again.~
+Wearoffsoon  Your protection from good wavers briefly.~
+Minlevel     111
+End
+
+#SKILL
+Name         protection frost breath~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         263
+Mana         50
+Rounds       24
+Code         spell_smaug
+Dammsg       protection frost breath~
+Wearoff      You think it would be best to avoid frost breathing dragons now~
+Wearoffroom  $n's frost breath protection fades away~
+Wearoffsoon  Your globe of frost breath protection shimmers for a moment before pulsing strongly~
+WearoffsoonR $n's fire breath globe of protection shimmers for a moment~
+Hitvict      You summon a frost protective globe about yourself.~
+Hitroom      $N summons a frost protective globe about $Mself.~
+Affect       '(l/10)*23' 27 'frost' 0
+Minlevel     11
+End
+
+#SKILL
+Name         protection gas breath~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         266
+Mana         50
+Rounds       24
+Code         spell_smaug
+Dammsg       protection gas breath~
+Wearoff      You think it would be best to avoid gas breathing dragons now~
+Wearoffroom  $n's gas breath protection fades away~
+Wearoffsoon  Your globe of gas breath protection shimmers for a moment before pulsing strongly~
+WearoffsoonR $n's gas breath globe of protection shimmers for a moment~
+Hitvict      You summon a gas protective globe about yourself.~
+Hitroom      $N summons a gas protective globe about &Mself.~
+Affect       '(l/10)*23' 27 'gas' 0
+Minlevel     111
+End
+
+#SKILL
+Name         psionic danger sense~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       7
+Slot         270
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       psionic danger sense~
+Wearoff      You can no longer sense dangers nearby.~
+Minlevel     23
+End
+
+#SKILL
+Name         psionic disintergrate~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         271
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       psionic disintergrate~
+Minlevel     111
+End
+
+#SKILL
+Name         psionic ghost~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         289
+Mana         100
+Rounds       24
+Code         spell_null
+Dammsg       psionic ghost~
+Minlevel     50
+End
+
+#SKILL
+Name         psychic crush~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         282
+Mana         45
+Rounds       34
+Code         spell_null
+Dammsg       psychic crush~
+Hitchar      $c0011Your mental crush hits $N, you see blood drip from $S ears!~
+Hitvict      $c0011You mind screams out as $n hits you with a massive psychic crush!~
+Hitroom      $c0011$n mentally crushes $N, blood drips from $S ears!~
+Misschar     $c0011Your mental crush missed $N completely!~
+Missvict     $c0011$n misses you with $s psionic crush!~
+Missroom     $c0011$n seems to gasp as $s psionic crush misses $N completely!~
+Diechar      $c0011You crush the puny mind of $N!~
+Dievict      $c0011Your mind turns in on itself and you feel $n destroy it!~
+Dieroom      $c0011$n crushes $N's mind with a mental attack!~
+Minlevel     37
+End
+
+#SKILL
+Name         psychic impersonation~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       7
+Slot         285
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       psychic impersonation~
+Minlevel     3
+End
+
+#SKILL
+Name         purify~
+Type         Spell
+Flags        33554760
+Target       4
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         refresh~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         85
+Mana         5
+Rounds       12
+Code         spell_refresh
+Dammsg       $n feels more refreshed~
+Wearoff      spell85, please report.~
+Wearoffroom  spell85, please report.~
+Wearoffsoon  spell85, please report.~
+WearoffsoonR spell85, please report.~
+Hitchar      $n has refreshed &R$N~
+Hitvict      &R$n refreshes you~
+Hitroom      default~
+Minlevel     3
+End
+
+#SKILL
+Name         reincarnate~
+Type         Spell
+Flags        33555456
+Target       5
+Minpos       8
+Slot         136
+Mana         50
+Rounds       36
+Code         spell_resurection
+Dammsg       reincarnate~
+Wearoff      You feel less in control.~
+Wearoffroom  $n seems less in contro.~
+Wearoffsoon  Your ability to control servents wavers.~
+WearoffsoonR $n's abilities to control servents wavers.~
+Minlevel     111
+End
+
+#SKILL
+Name         remove curse~
+Type         Spell
+Flags        100663664
+Minpos       8
+Slot         35
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       remove curse~
+Wearoff      !Remove Curse!~
+Wearoffroom  !Remove Curse!~
+Wearoffsoon  !Remove Curse!~
+WearoffsoonR !Remove Curse!~
+Hitchar      $N appears to have returned to normal.~
+Hitvict      You feel better!~
+Hitroom      $N looks normal again.~
+Affect       '' 1026 '' 1024
+Minlevel     8
+End
+
+#SKILL
+Name         remove paralysis~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         65
+Mana         10
+Rounds       12
+Code         spell_smaug
+Dammsg       remove paralysis~
+Wearoff      !remove paralysis!~
+Wearoffroom  !remove paralysis!~
+Wearoffsoon  !remove paralysis!~
+WearoffsoonR !remove paralysis!~
+Minlevel     6
+End
+
+#SKILL
+Name         resurrection~
+Type         Spell
+Flags        33554432
+Target       5
+Minpos       8
+Slot         102
+Mana         33
+Rounds       36
+Code         spell_resurection
+Dammsg       resurrection~
+Wearoff      spell 102 please report.~
+Wearoffroom  spell 102 please report.~
+Wearoffsoon  spell 102 please report.~
+WearoffsoonR spell 102 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         sanctuary~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         36
+Mana         50
+Rounds       36
+Code         spell_smaug
+Dammsg       sanctuary~
+Wearoff      The soft white glow about your body fades.~
+Wearoffroom  The white aura around $n's body fades.~
+Wearoffsoon  The white aura around your body flickers slightly.~
+WearoffsoonR The white aura around $n's body flickers slightly.~
+Hitchar      A soft white glow forms around $N's body~
+Hitvict      you are surrounded by a white glow~
+Affect       '180' 0 '' 128
+Minlevel     30
+End
+
+#SKILL
+Name         scare~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         117
+Mana         3
+Rounds       24
+Code         spell_null
+Dammsg       scare~
+Wearoff      spell 117 please report.~
+Wearoffroom  spell 117 please report.~
+Wearoffsoon  spell 117 please report.~
+WearoffsoonR spell 117 please report.~
+Minlevel     4
+End
+
+#SKILL
+Name         second wind~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         86
+Mana         5
+Rounds       12
+Code         spell_second_wind
+Dammsg       second wind~
+Wearoff      spell86, please report.~
+Wearoffroom  spell86, please report.~
+Wearoffsoon  spell86, please report.~
+WearoffsoonR spell86, please report.~
+Minlevel     9
+End
+
+#SKILL
+Name         sense life~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         44
+Mana         5
+Rounds       12
+Code         spell_smaug
+Dammsg       sense life~
+Wearoff      You feel less aware of your suroundings.~
+Wearoffroom  $N stops looking around so much.~
+Hitchar      $N looks more aware of $S surroundings.~
+Hitvict      You feel your senses suddenly improve.~
+Affect       'l*5*20' 0 '' 32
+Minlevel     4
+End
+
+#SKILL
+Name         shield~
+Type         Spell
+Flags        67108872
+Target       2
+Minpos       7
+Slot         73
+Mana         5
+Rounds       24
+Code         spell_smaug
+Dammsg       shield~
+Wearoff      Your magic shield fades into oblivion.~
+Wearoffroom  $n's magic shield fades away~
+Wearoffsoon  Your shield spell starts to flicker~
+WearoffsoonR $n's shield of force flickers slightly~
+Hitchar      $N is surrounded by a strong force shield.~
+Hitvict      You suddenly feel some mystical force surrounding you.~
+Affect       'l*16' 17 '-10' 0
+Minlevel     1
+End
+
+#SKILL
+Name         shillelagh~
+Type         Spell
+Flags        33554432
+Target       4
+Minpos       8
+Slot         122
+Mana         10
+Rounds       12
+Code         spell_null
+Dammsg       shillelagh~
+Wearoff      spell 122 please report.~
+Wearoffroom  spell 122 please report.~
+Wearoffsoon  spell 122 please report.~
+WearoffsoonR spell 122 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         shocking grasp~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         37
+Mana         15
+Rounds       12
+Code         spell_null
+Dammsg       shocking grasp~
+Wearoff      !Shocking Grasp!~
+Wearoffroom  !Shocking Grasp!~
+Wearoffsoon  !Shocking Grasp!~
+WearoffsoonR !Shocking Grasp!~
+Hitchar      You get a good hold, and shock $N~
+Hitvict      You get a shock as $n gets too close to you~
+Hitroom      $N looks shocked as $n graspes at $M~
+Misschar     $N rather shockingly evades your grasp~
+Missvict     You nimbly dodge a shocking grasp from $n~
+Missroom     $N shockingly evades the grasp of $n~
+Diechar      $N dies dies while looking rather shocked~
+Dievict      $n shocks you. Unfortunately your heart can't stand it...~
+Dieroom      $n reveals with a shock that $N has left $S body~
+Minlevel     2
+End
+
+#SKILL
+Name         silence~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         161
+Mana         30
+Rounds       12
+Code         spell_null
+Dammsg       silence~
+Wearoff      You feel louder.~
+Wearoffroom  spell 161 please report.~
+Wearoffsoon  spell 161 please report.~
+WearoffsoonR spell 161 please report.~
+Minlevel     21
+End
+
+#SKILL
+Name         sleep~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         38
+Mana         15
+Rounds       24
+Code         spell_sleep
+Dammsg       sleep~
+Wearoff      You feel less tired.~
+Wearoffroom  $n murmurs and shakes in $s sleep.~
+Wearoffsoon  You feel more awake.~
+WearoffsoonR $n seems a bit more awake~
+Minlevel     3
+End
+
+#SKILL
+Name         slow poison~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         145
+Mana         20
+Rounds       12
+Code         spell_null
+Dammsg       slow poison~
+Wearoff      spell 145 please report.~
+Wearoffroom  spell 145 please report.~
+Wearoffsoon  spell 145 please report.~
+WearoffsoonR spell 145 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         slowness~
+Type         Spell
+Flags        67633152
+Target       2
+Minpos       8
+Saves        5
+Slot         156
+Mana         20
+Rounds       12
+Code         spell_null
+Dammsg       slowness~
+Wearoff      You feel faster!~
+Wearoffroom  $n seems faster~
+Wearoffsoon  You feel the world slowing down a bit~
+Hitchar      $N seems slower.~
+Hitvict      You feel very slow!~
+Hitroom      $N seems slower.~
+Misschar     $N ignores your spell!~
+Missvict     $n just tried to slow you, but you ignored it.~
+Dice         v-((d*6)/l)~
+Affect       'l*30' 14 'v' 0
+Minlevel     19
+End
+
+#SKILL
+Name         snare~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         147
+Mana         10
+Rounds       12
+Code         spell_null
+Dammsg       snare~
+Wearoff      You are free of the snare!~
+Wearoffroom  $n manages to get out of a magical snare~
+WearoffsoonR $n is ensnared~
+Minlevel     111
+End
+
+#SKILL
+Name         speak with plants~
+Type         Spell
+Flags        33554432
+Target       4
+Minpos       8
+Slot         160
+Mana         5
+Rounds       12
+Code         spell_null
+Dammsg       speak with plants~
+Wearoff      spell 160 please report.~
+Wearoffroom  spell 160 please report.~
+Wearoffsoon  spell 160 please report.~
+WearoffsoonR spell 160 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         stone skin~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         92
+Mana         20
+Rounds       24
+Code         spell_smaug
+Dammsg       stone skin~
+Wearoff      Your skin takes on a soft squishy texture.~
+Wearoffroom  $n's skin loses its stoney appearance.~
+Hitchar      $N's skin hardens to a stone-like substance.~
+Hitvict      Your skin turns to a stone-like substance.~
+Affect       'l*20' 27 '32' 0
+Affect       'l*20' 17 '-20' 0
+Minlevel     26
+End
+
+#SKILL
+Name         strength~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         39
+Mana         10
+Rounds       12
+Code         spell_strength
+Dammsg       strength~
+Wearoff      You feel weaker.~
+Wearoffroom  $n looks weaker.~
+Wearoffsoon  You feel a bit weaker~
+WearoffsoonR $n seems a bit weaker~
+Hitchar      $N seems stronger.~
+Hitvict      You feel stronger.~
+Hitroom      $N seems stronger.~
+Minlevel     6
+End
+
+#SKILL
+Name         succor~
+Type         Spell
+Flags        33554440
+Minpos       8
+Slot         88
+Mana         15
+Rounds       24
+Code         spell_smaug
+Dammsg       succor~
+Wearoff      spell88, please report.~
+Wearoffroom  spell88, please report.~
+Wearoffsoon  spell88, please report.~
+WearoffsoonR spell88, please report.~
+Hitchar      You wave your hand and create a scroll of recall.~
+Hitroom      $n waves $s hand and create a scroll.~
+Value        803
+Minlevel     24
+End
+
+#SKILL
+Name         summon~
+Type         Spell
+Flags        67175736
+Minpos       8
+Saves        5
+Slot         40
+Mana         20
+Rounds       36
+Code         spell_summon
+Dammsg       summon~
+Wearoff      !Summon!~
+Wearoffroom  !Summon!~
+Wearoffsoon  !Summon!~
+WearoffsoonR !Summon!~
+Dice         0~
+Minlevel     19
+End
+
+#SKILL
+Name         sunray~
+Type         Spell
+Flags        67108872
+Target       1
+Minpos       7
+Slot         150
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       sunray~
+Wearoff      spell 150 please report.~
+Wearoffroom  spell 150 please report.~
+Wearoffsoon  spell 150 please report.~
+WearoffsoonR spell 150 please report.~
+Hitchar      $N holds up $S arms in terror, as your sunray strikes $M~
+Hitvict      You feel an intense pain, as strong rays of sunlight sweep over you~
+Hitroom      $N  holds up $S arms in pain, as $n's sunray strikes $M~
+Misschar     $N chuckles as you give $M a nice tan~
+Missvict     You get a good tan from $n's sunray~
+Missroom     $N gets a good tan from $n's sunray~
+Diechar      $N is struck by your ray of sunlight, and destroyed instantly~
+Dievict      You see a blinding light~
+Dieroom      $N is struck by a blinding light from $n, and is utterly destroyed~
+Affect       'l*30' 0 '' 1
+Minlevel     111
+End
+
+#SKILL
+Name         telekinesis~
+Type         Spell
+Flags        67108868
+Target       1
+Minpos       7
+Slot         272
+Mana         35
+Rounds       24
+Code         spell_null
+Dammsg       telekinesis~
+Minlevel     35
+End
+
+#SKILL
+Name         teleport~
+Type         Spell
+Flags        67109056
+Target       1
+Minpos       8
+Slot         2
+Mana         33
+Rounds       12
+Code         spell_smaug
+Dammsg       teleport~
+Wearoff      !Teleport!~
+Wearoffroom  !Teleport!~
+Minlevel     111
+End
+
+#SKILL
+Name         teleport without error~
+Type         Spell
+Flags        83902728
+Target       2
+Minpos       8
+Slot         163
+Mana         20
+Rounds       12
+Code         spell_astral_walk
+Dammsg       teleport without error~
+Wearoffsoon  spell 163 please report.~
+WearoffsoonR spell 163 please report.~
+Value        2701
+Minlevel     11
+End
+
+#SKILL
+Name         tower of iron will~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       7
+Slot         283
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       tower of iron will~
+Wearoff      You feel your tower of protection fall apart.~
+Minlevel     34
+End
+
+#SKILL
+Name         transport via plant~
+Type         Spell
+Flags        33619968
+Target       4
+Minpos       8
+Slot         159
+Mana         20
+Rounds       12
+Code         spell_null
+Dammsg       transport via plant~
+Wearoff      spell 159 please report.~
+Wearoffroom  spell 159 please report.~
+Wearoffsoon  spell 159 please report.~
+WearoffsoonR spell 159 please report.~
+Minlevel     45
+End
+
+#SKILL
+Name         travelling~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         142
+Mana         2
+Rounds       12
+Code         spell_null
+Dammsg       travelling~
+Wearoff      You do not feel so fleet of foot anymore.~
+Wearoffroom  $n seems to be a bit less fleet of foot.~
+Wearoffsoon  You feel less fleet of foot for a moment.~
+Minlevel     111
+End
+
+#SKILL
+Name         tree~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         139
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       tree~
+Wearoff      spell 139 please report.~
+Wearoffroom  spell 139 please report.~
+Wearoffsoon  spell 139 please report.~
+WearoffsoonR spell 139 please report.~
+Minlevel     111
+End
+
+#SKILL
+Name         tree travel~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         141
+Mana         2
+Rounds       12
+Code         spell_null
+Dammsg       tree travel~
+Wearoff      You don't feel so in touch with the trees anymore~
+Wearoffsoon  You feel less in common with trees.~
+Minlevel     111
+End
+
+#SKILL
+Name         true sight~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         94
+Mana         20
+Rounds       24
+Code         spell_smaug
+Dammsg       true sight~
+Wearoff      You stop noticing things in your surroundings~
+Wearoffroom  $n blinks rapidly, as the silvery hue fades from $s eyes~
+Wearoffsoon  $n eyes blink momentarily~
+WearoffsoonR $n's eyes blink momentarily.~
+Hitchar      $N's eyes glow with a silvery hue~
+Hitvict      your eyes begin to glow with a silvery hue~
+Hitroom      $N's eyes glow with a silvery hue~
+Affect       'l*30' 0 '' 4194304
+Minlevel     20
+End
+
+#SKILL
+Name         turn~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       8
+Slot         87
+Mana         5
+Rounds       12
+Code         spell_null
+Dammsg       turn~
+Wearoff      spell87, please report.~
+Wearoffroom  spell87, please report.~
+Wearoffsoon  spell87, please report.~
+WearoffsoonR spell87, please report.~
+Minlevel     1
+End
+
+#SKILL
+Name         unholy word~
+Type         Spell
+Flags        0
+Minpos       7
+Slot         113
+Mana         30
+Rounds       24
+Code         spell_null
+Dammsg       unholy word~
+Wearoff      spell 113 please report.~
+Wearoffroom  spell 113 please report.~
+Wearoffsoon  spell 113 please report.~
+WearoffsoonR spell 113 please report.~
+Hitchar      You send $N reeling with your word of power.~
+Hitvict      You are sent reeling by $n's unholy word.~
+Hitroom      $n sends $N reeling with a unholy word.~
+Misschar     $N withstands the blast of your unholy word with a smirk.~
+Missvict     You smirk as $n tries to kill you with a word.~
+Missroom     $N smirks, and ignores $n's unholy word.~
+Diechar      $N dies instantly from the power of your unholy word.~
+Dievict      You hear a word of power, and die instantly.~
+Dieroom      $N hears $n's word of power, and nothing more.~
+Minlevel     111
+End
+
+#SKILL
+Name         vegetable growth~
+Type         Spell
+Flags        67108864
+Target       2
+Minpos       7
+Slot         138
+Mana         20
+Rounds       24
+Code         spell_smaug
+Dammsg       vegetable growth~
+Affect       'l*30' 71 '16' 0
+Minlevel     111
+End
+
+#SKILL
+Name         ventriloquate~
+Type         Spell
+Flags        100663296
+Target       4
+Minpos       8
+Slot         41
+Mana         5
+Rounds       12
+Code         spell_null
+Dammsg       ventriloquate~
+Wearoff      !Ventriloquate!~
+Wearoffroom  !Ventriloquate!~
+Wearoffsoon  !Ventriloquate!~
+WearoffsoonR !Ventriloquate!~
+Minlevel     1
+End
+
+#SKILL
+Name         warp weapon~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         151
+Mana         20
+Rounds       12
+Code         spell_warp_weapon
+Dammsg       warp weapon~
+Minlevel     111
+End
+
+#SKILL
+Name         water breath~
+Type         Spell
+Flags        2097152
+Target       2
+Minpos       8
+Slot         68
+Mana         15
+Rounds       12
+Code         spell_smaug
+Dammsg       ~
+Wearoff      You gasp for air. ~
+Wearoffroom  $n frantically sucks for air.~
+Wearoffsoon  Your throat feels tight, your water breathing spell is leaving you ~
+WearoffsoonR $n gasps for air for a moment or two~
+Hitchar      $N makes a face like a fish.~
+Hitvict      You feel fishy.~
+Hitroom      $N makes a face like a fish.~
+Affect       'l*23' 26 'water breath' -2147483648
+Minlevel     8
+End
+
+#SKILL
+Name         water servant~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         134
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       water servant~
+Value        11
+Affect       'l*10' 0 '1' 0
+Minlevel     111
+End
+
+#SKILL
+Name         weakness~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Saves        5
+Slot         59
+Mana         10
+Rounds       12
+Code         spell_smaug
+Dammsg       weakness~
+Wearoff      You feel a little stronger now...~
+Wearoffroom  $n looks stronger!~
+Wearoffsoon  You feel a bit stronger.~
+WearoffsoonR $n's eyes stop looking so red.  Must have used Visine.~
+Hitchar      $N looks weaker.~
+Hitvict      You feel weaker.~
+Hitroom      $N looks weaker.~
+Affect       '(l/2)*23' 1 '-(1d4+l/10)' 0
+Minlevel     6
+End
+
+#SKILL
+Name         web~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       8
+Slot         106
+Mana         3
+Rounds       12
+Code         spell_web
+Dammsg       web~
+Minlevel     11
+End
+
+#SKILL
+Name         wind servant~
+Type         Spell
+Flags        328
+Minpos       8
+Slot         135
+Mana         30
+Rounds       24
+Code         spell_smaug
+Dammsg       wind servant~
+Value        13
+Minlevel     111
+End
+
+#SKILL
+Name         wish~
+Type         Spell
+Flags        67108864
+Target       1
+Minpos       7
+Slot         292
+Mana         50
+Rounds       24
+Code         spell_null
+Dammsg       wish~
+Minlevel     111
+End
+
+#SKILL
+Name         wizardeye~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         267
+Mana         40
+Rounds       24
+Code         spell_smaug
+Dammsg       wizardeye~
+Wearoff      Your wizardeye fades away with a *pop*~
+Wearoffroom  $n's wizardeye fades away with a *pop*~
+Wearoffsoon  You lose control of your wizardeye for a moment~
+WearoffsoonR $n's gas breath globe of protection shimmers for a moment~
+Hitvict      You summon a disembodied eye.~
+Hitroom      $n summons a disembodied spectral eye.~
+Affect       '60' 0 '' 16777216
+Minlevel     35
+End
+
+#SKILL
+Name         word of recall~
+Type         Spell
+Flags        67108864
+Target       3
+Minpos       8
+Slot         42
+Mana         5
+Rounds       12
+Code         spell_word_of_recall
+Dammsg       word of recall~
+Wearoff      !Word of Recall!~
+Wearoffroom  !Word of Recall!~
+Wearoffsoon  !Word of Recall!~
+WearoffsoonR !Word of Recall!~
+Minlevel     15
+End
+
+#SKILL
+Name         xaura~
+Type         Spell
+Flags        68157440
+Target       2
+Guild        0
+Code         spell_smaug
+Dammsg       ~
+Affect       '240' 0 '' 33554432
+Affect       '240' 0 '' 268435456
+Affect       '240' 0 '' 67108864
+Affect       '240' 0 '' 128
+Minlevel     111
+End
+
+#SKILL
+Name         adrenalize~
+Type         Skill
+Flags        2097152
+Target       2
+Minpos       7
+Mana         20
+Code         do_smaug_skill
+Dammsg       adrenalize~
+Affect       '100' 18 '-(l/10{4)' 0
+Affect       '100' 19 'l/10{4' 0
+Affect       '100' 17 '20' 0
+Minlevel     20
+End
+
+#SKILL
+Name         aurasight~
+Type         Skill
+Flags        69206016
+Target       3
+Minpos       8
+Slot         336
+Mana         20
+Code         do_smaug_skill
+Dammsg       aura sight~
+Wearoff      You can no longer see auras.~
+Wearoffroom  $n's eyes loose some of their color.~
+Wearoffsoon  Auras around you seem dimmer.~
+Hitvict      Your eyes tingle.~
+Hitroom      $N's eyes briefly flash white then blue.~
+Missvict     You concentrate on detecting auras.~
+Affect       'l*100' 0 '' 4
+Affect       'l*100' 0 '' 16
+Minlevel     5
+End
+
+#SKILL
+Name         avoid back attack~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       avoid back attack~
+Wearoff      !avoid backattack!~
+Minlevel     111
+End
+
+#SKILL
+Name         backstab~
+Type         Skill
+Flags        0
+Minpos       8
+Rounds       24
+Code         do_backstab
+Dammsg       backstab~
+Wearoff      !Backstab!~
+Wearoffroom  !Backstab!~
+Wearoffsoon  !Backstab!~
+WearoffsoonR !Backstab!~
+Hitchar      $c0005$N makes a strange sound, as you place $p in $S back~
+Hitvict      $c0005Suddenly $n stabs you in the back~
+Hitroom      $c0005$n place $p in the back of $N, resulting in some strange noises and some blood~
+Misschar     $c0005$N quickly avoids your backstab, and you nearly cut your finger off!~
+Missvict     $c0005$n tried to backstab you, but you avoid $s~
+Missroom     $c0005$n tried to backstab $N, but nearly cut $s own finger~
+Diechar      $c0005$N makes a strange sound but is suddenly very silent, as you place $p in $S back~
+Dievict      $c0005Suddenly $n stabs you in the back, RIP...~
+Dieroom      $c0005$n place $p in the back of $N, resulting in some strange noises, a lot of blood and a corpse~
+Minlevel     1
+End
+
+#SKILL
+Name         bash~
+Type         Skill
+Flags        0
+Minpos       7
+Rounds       24
+Code         do_bash
+Dammsg       bash~
+Wearoff      !Bash!~
+Wearoffroom  !Bash!~
+Wearoffsoon  !Bash!~
+WearoffsoonR !Bash!~
+Hitchar      $c0001Your bash at $N sends $M sprawling~
+Hitvict      $c0001$n sends you sprawling~
+Hitroom      $c0001$n sends $N sprawling with a powerful bash~
+Misschar     $c0001As $N avoids your bash, you topple over and fall to the ground~
+Missvict     $c0001You dodge a bash from $n who loses $s balance and falls~
+Missroom     $c0001$N avoids being bashed by $n who loses $s balance and falls~
+Diechar      $c0001$N doesn't recover from your bash ! - $E is dead~
+Dievict      $c0001As $n bashes at you, you give up living and die...~
+Dieroom      $c0001$N dies after $n has bashed $M~
+Minlevel     1
+End
+
+#SKILL
+Name         bellow~
+Type         Skill
+Flags        32768
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       bellow~
+Wearoff      !bellow!~
+Minlevel     111
+End
+
+#SKILL
+Name         berserk~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Code         do_berserk
+Dammsg       berserk~
+Wearoff      !berserk!~
+Minlevel     18
+End
+
+#SKILL
+Name         bite~
+Type         Skill
+Flags        0
+Guild        0
+Code         do_bite
+Dammsg       ~
+Hitchar      You visciously bite $N.~
+Hitvict      $n tears into you with a viscious bite.~
+Hitroom      $n tears into $N with a viscious bite.~
+Minlevel     11
+End
+
+#SKILL
+Name         blast~
+Type         Skill
+Flags        0
+Minpos       7
+Mana         25
+Code         do_blast
+Dammsg       psionic blast~
+Wearoffsoon  You start recovering from Psionic Blast~
+Minlevel     111
+End
+
+#SKILL
+Name         blessing~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       blessing~
+Minlevel     111
+End
+
+#SKILL
+Name         brew~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       brew~
+Minlevel     111
+End
+
+#SKILL
+Name         canibalize~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Code         do_canibalize
+Dammsg       canibalize~
+Wearoff      spell 225 please report.~
+Wearoffroom  spell 225 please report.~
+Minlevel     2
+End
+
+#SKILL
+Name         carve~
+Type         Skill
+Flags        0
+Rounds       18
+Guild        0
+Code         do_slice
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         celladjustment~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       7
+Slot         274
+Mana         100
+Rounds       120
+Code         do_smaug_skill
+Dammsg       cell adjustment~
+Hitchar      You collapse into a deep trance!~
+Hitvict      Your body starts to heal itself!~
+Hitroom      $N collapses into a deep trance!~
+Affect       '' 13 '100' 0
+Minlevel     14
+End
+
+#SKILL
+Name         chameleon~
+Type         Skill
+Flags        0
+Target       3
+Minpos       6
+Slot         275
+Mana         40
+Rounds       24
+Code         do_smaug_skill
+Dammsg       chameleon~
+Hitchar      You blend perfectly into your surroundings.~
+Misschar     You fail to blend into the surroundings.~
+Affect       'l*100' 0 '' 65536
+Minlevel     8
+End
+
+#SKILL
+Name         chemsimulation~
+Type         Skill
+Flags        67371349
+Target       1
+Minpos       8
+Saves        3
+Slot         299
+Mana         40
+Rounds       24
+Code         spell_smaug
+Dammsg       chemical simulation~
+Dice         ld6~
+Minlevel     111
+End
+
+#SKILL
+Name         clairvoyance~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       8
+Slot         269
+Mana         45
+Rounds       24
+Code         do_smaug_skill
+Dammsg       clairvoyance~
+Wearoff      You no longer can concentrate on distant sights.~
+Hitvict      You see distant images.~
+Affect       '60' 0 '' 16777216
+Minlevel     8
+End
+
+#SKILL
+Name         claw~
+Type         Skill
+Flags        0
+Guild        0
+Code         do_claw
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         climb~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       climb~
+Minlevel     3
+End
+
+#SKILL
+Name         conceal~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       conceal~
+Minlevel     111
+End
+
+#SKILL
+Name         convince~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       convince~
+Minlevel     111
+End
+
+#SKILL
+Name         cook~
+Type         Skill
+Flags        0
+Minpos       8
+Rounds       12
+Guild        0
+Code         do_cook
+Dammsg       cook~
+Minlevel     1
+End
+
+#SKILL
+Name         detrap~
+Type         Skill
+Flags        0
+Target       2
+Code         do_detrap
+Dammsg       detrap~
+Minlevel     41
+End
+
+#SKILL
+Name         dirt~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       dirt~
+Minlevel     111
+End
+
+#SKILL
+Name         disarm~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       disarm~
+Minlevel     15
+End
+
+#SKILL
+Name         disguise~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       disguise~
+Minlevel     111
+End
+
+#SKILL
+Name         dodge~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_smaug
+Dammsg       dodge~
+Affect       '' 40 '2' 0
+Minlevel     12
+End
+
+#SKILL
+Name         doorbash~
+Type         Skill
+Flags        0
+Target       2
+Code         do_bashdoor
+Dammsg       doorbash~
+Minlevel     1
+End
+
+#SKILL
+Name         doorway~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         20
+Code         do_doorway
+Dammsg       doorway~
+Minlevel     3
+End
+
+#SKILL
+Name         dual wield~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       dual wield~
+Wearoffsoon  spell 240 report~
+Minlevel     8
+End
+
+#SKILL
+Name         eavesdrop~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       eavesdrop~
+Minlevel     111
+End
+
+#SKILL
+Name         esp~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       8
+Mana         10
+Rounds       24
+Code         spell_null
+Dammsg       esp~
+Wearoff      You finally have to stop listening to others thoughts~
+Wearoffsoon  You feel your mind sensing ability waver briefly~
+Minlevel     1
+End
+
+#SKILL
+Name         evauluate~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       evauluate~
+Minlevel     111
+End
+
+#SKILL
+Name         feed~
+Type         Skill
+Flags        0
+Minpos       7
+Rounds       36
+Code         do_feed
+Dammsg       bite~
+Wearoff      !Feed!~
+Minlevel     3
+End
+
+#SKILL
+Name         feign death~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       feign death~
+Minlevel     111
+End
+
+#SKILL
+Name         find food~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       find food~
+Minlevel     111
+End
+
+#SKILL
+Name         find trap~
+Type         Skill
+Flags        67108864
+Target       3
+Code         spell_smaug
+Dammsg       find trap~
+Affect       'l*20' 26 'none' 0
+Minlevel     111
+End
+
+#SKILL
+Name         find water~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       find water~
+Wearoff      !Find Water!~
+Minlevel     111
+End
+
+#SKILL
+Name         first aid~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       first aid~
+Hitchar      quiv damage (bug)~
+Hitvict      quiv damage (bug)~
+Hitroom      quiv damage (bug)~
+Misschar     $N seems unaffected by the vibrations~
+Missvict     $n touches you, but you ignore the puny vibrations~
+Missroom     $n touches $N, but $E ignores it~
+Diechar      $N is killed instantly by the dreaded quivering palm~
+Dievict      As $n touches you, you feel your bones and organs shatter inside.~
+Dieroom      $N dies as $n touches $M~
+Minlevel     111
+End
+
+#SKILL
+Name         flameshroud~
+Type         Skill
+Flags        0
+Target       3
+Minpos       8
+Mana         20
+Code         do_smaug_skill
+Dammsg       flame shroud~
+Wearoff      You no longer feel so fiery.~
+Wearoffroom  The red glow around $n's body fades.~
+Wearoffsoon  The red glow around your body flickers~
+WearoffsoonR The red glow around $n's body flickers.~
+Hitvict      You errect a shield of fire around your body.~
+Hitroom      $n errects a shield of fire around $s body.~
+Affect       'l*30' 0 '' 33554432
+Minlevel     111
+End
+
+#SKILL
+Name         greatsight~
+Type         Skill
+Flags        69206016
+Target       3
+Minpos       8
+Slot         337
+Mana         40
+Code         do_smaug_skill
+Dammsg       great sight~
+Wearoff      Everything seems so much more drab...~
+Wearoffroom  $n's eyes loose their silver tint.~
+Hitvict      Everything seems so clear now...~
+Hitroom      $n's eyes begin to glow silver and yellow.~
+Affect       'l*100' 0 '' 32
+Affect       'l*100' 0 '' 8
+Affect       'l*40' 0 '' 4194304
+Minlevel     111
+End
+
+#SKILL
+Name         heroic rescue~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       heroic rescue~
+Wearoffsoon  spell 241 report~
+Minlevel     111
+End
+
+#SKILL
+Name         hide~
+Type         Skill
+Flags        0
+Target       3
+Minpos       8
+Code         do_hide
+Dammsg       hide~
+Wearoff      !Hide!~
+Wearoffroom  !Hide!~
+Wearoffsoon  !Hide!~
+WearoffsoonR !Hide!~
+Minlevel     3
+End
+
+#SKILL
+Name         hunt~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Code         spell_smaug
+Dammsg       hunt~
+Wearoff      Your hunting ability disappears.~
+Wearoffroom  $n looks a little confused.~
+Hitchar      $N senses become very keen~
+Hitvict      You feel your senses become sharper for hunting~
+Teachers     hunter~
+Affect       'l*20' 26 'none' 0
+Minlevel     111
+End
+
+#SKILL
+Name         hypnosis~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         20
+Code         spell_null
+Dammsg       hypnosis~
+Minlevel     2
+End
+
+#SKILL
+Name         imitate~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       imitate~
+Minlevel     111
+End
+
+#SKILL
+Name         intensify~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       7
+Slot         287
+Mana         100
+Rounds       24
+Code         do_smaug_skill
+Dammsg       intensify~
+Wearoff      Your attributes revert to normal as you loose your intensifying powers.~
+Hitchar      ok.~
+Hitvict      You feel much stronger, like you could take on the world!~
+Affect       '200' 18 '(l/10)' 0
+Affect       '200' 19 '(l/10)' 0
+Minlevel     111
+End
+
+#SKILL
+Name         kamehame-ha~
+Type         Skill
+Flags        1074004308
+Target       1
+Minpos       7
+Saves        3
+Rounds       48
+Code         do_smaug_skill
+Dammsg       ~
+Hitchar      $c0010You summon your ki and direct it in a wave towards $N.~
+Hitvict      $c0010$n blasts you with a wave of ki energy.~
+Hitroom      $c0010$n sends a wave of energy racing into $N.~
+Misschar     $c0010$N dodges your ki wave with great ease.~
+Missvict     $c0010You dodge $n's ki wave with great ease.~
+Missroom     $c0010$n misses $N with a wave of ki energy.~
+Diechar      $c0010Your ki wave sends $N's soul flying to the next dimension.~
+Dievict      $c0010$n's ki wave sends you whirling into the next dimension.~
+Dieroom      $c0010$n's ki wave sends $N whirling into the next dimension.~
+Dice         ((L/2)D4)+X~
+Minlevel     111
+End
+
+#SKILL
+Name         karate~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       karate~
+Hitchar      $N is badly burned by your firebreath..~
+Hitvict      $n burns you.~
+Hitroom      $N is badly burned, as $n breaths fire.~
+Misschar     $N ducks and avoids your firebreath.~
+Missvict     $n breathes fire at you, but you avoids it.~
+Missroom     SN avoids $n firebreath.~
+Diechar      $N is killed by your fiery breath.~
+Dievict      You are burned to ash, as $n breathes on you.~
+Dieroom      $n turns $N into a small pile ashes.~
+Minlevel     111
+End
+
+#SKILL
+Name         kick~
+Type         Skill
+Flags        0
+Target       1
+Minpos       7
+Rounds       36
+Code         do_kick
+Dammsg       kick~
+Wearoff      !kick!~
+Minlevel     2
+End
+
+#SKILL
+Name         lay on hands~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       lay on hands~
+Minlevel     111
+End
+
+#SKILL
+Name         levitation~
+Type         Skill
+Flags        68157440
+Target       3
+Minpos       6
+Slot         273
+Mana         20
+Rounds       24
+Code         do_smaug_skill
+Dammsg       levitation~
+Wearoff      You feel yourself gently floating to the ground as the levitation wears off.~
+Wearoffroom  $n floats slowly to the ground.~
+Wearoffsoon  You feel a falling sensation briefly.~
+Hitvict      You slowly rise into the air.~
+Affect       '(l+3)*20' 0 '' 524288
+Minlevel     10
+End
+
+#SKILL
+Name         meditate~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Rounds       6
+Code         do_meditate
+Dammsg       meditate~
+Wearoff      You feel you have meditated all that you can now.~
+Wearoffroom  $n stops humming and looks a bit more relaxed now.~
+Minlevel     1
+End
+
+#SKILL
+Name         memorizing~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       memorizing~
+Wearoff      You stop memorizing and meditating.~
+Wearoffroom  $n stops meditating and closes $s spell book.~
+Wearoffsoon  You flip through the final pages of the spell.~
+WearoffsoonR $n flips through the pages in $s spell book intently reading.~
+Minlevel     111
+End
+
+#SKILL
+Name         messenger~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         5
+Rounds       12
+Code         spell_null
+Dammsg       messenger~
+Minlevel     1
+End
+
+#SKILL
+Name         mindburn~
+Type         Skill
+Flags        557449
+Minpos       7
+Saves        5
+Slot         268
+Mana         15
+Rounds       24
+Code         do_smaug_skill
+Dammsg       mind burn~
+Hitchar      $c0009Your flame hits $N with burning results!~
+Hitvict      $c0009Your body howls as $n hits you with a gout of flame from $s mind!~
+Hitroom      $c0009$n cackles as $s gout of flame burns $N!~
+Misschar     $c0009Your flame misses $N by just a few inches!~
+Missvict     $c0009$n misses you with gout of flame!~
+Missroom     $c0009A gout of flame from $n's mind misses $N!~
+Diechar      $c0009You torch $N with a small thought!~
+Dievict      $c0009You scream as $n torches you with $s mind!~
+Dieroom      $c0009$n uses $s mind to torch $N like dry wood!~
+Dice         (L/2)+1d4+1~
+Minlevel     111
+End
+
+#SKILL
+Name         mindoverbody~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       7
+Slot         277
+Mana         60
+Rounds       24
+Code         do_smaug_skill
+Dammsg       mind over body~
+Wearoff      You get a grumbling in your stomach.~
+Hitvict      You make your body ignore its needs for awhile.~
+Affect       '' 65 '-100' 0
+Affect       '' 63 '100' 0
+Affect       '' 64 '100' 0
+Affect       '' 58 '15' 0
+Minlevel     111
+End
+
+#SKILL
+Name         mindwipe~
+Type         Skill
+Flags        67633152
+Target       1
+Minpos       7
+Saves        5
+Slot         281
+Mana         20
+Rounds       24
+Code         do_smaug_skill
+Dammsg       mind wipe~
+Wearoff      You don't feel as dumb anymore.~
+Wearoffsoon  You start to regain controll.~
+Hitchar      You feeble $N's mind!~
+Hitvict      You feel dumb.~
+Hitroom      $N looks even dumber than before!~
+Affect       '640' 3 '-5' 0
+Minlevel     111
+End
+
+#SKILL
+Name         mount~
+Type         Skill
+Flags        0
+Minpos       8
+Slot         166
+Mana         20
+Rounds       12
+Code         do_mount
+Dammsg       mount~
+Wearoff      spell 166 please report.~
+Wearoffroom  spell 166 please report.~
+Wearoffsoon  spell 166 please report.~
+WearoffsoonR spell 166 please report.~
+Minlevel     2
+End
+
+#SKILL
+Name         nodisarm~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       nodisarm~
+Minlevel     111
+End
+
+#SKILL
+Name         parry~
+Type         Skill
+Flags        0
+Guild        0
+Code         spell_null
+Dammsg       ~
+Minlevel     1
+End
+
+#SKILL
+Name         pelt~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       pelt~
+Minlevel     111
+End
+
+#SKILL
+Name         pick~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         do_pick
+Dammsg       pick~
+Wearoff      !Pick Lock!~
+Wearoffroom  !Pick Lock!~
+Wearoffsoon  !Pick Lock!~
+WearoffsoonR !Pick Lock!~
+Minlevel     111
+End
+
+#SKILL
+Name         pray~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       pray~
+Wearoff      You feel guilty knowing you have not prayed in a day~
+Minlevel     111
+End
+
+#SKILL
+Name         probabilitytravel~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       7
+Slot         278
+Mana         40
+Rounds       24
+Code         do_probability_travel
+Dammsg       probability travel~
+Wearoffroom  $n begins to look hungry.~
+Minlevel     2
+End
+
+#SKILL
+Name         psiinvis~
+Type         Skill
+Flags        68157440
+Target       3
+Minpos       8
+Slot         333
+Mana         20
+Rounds       24
+Code         do_smaug_skill
+Dammsg       psi invisibility~
+Wearoff      You fade back into existance.~
+Wearoffroom  $n slowly fades back into existance.~
+Wearoffsoon  Your invisibility is faltering.~
+WearoffsoonR $n breifly appears and then fades back out.~
+Hitvict      You slowly fade out of existance.~
+Hitroom      $n fades from vision.~
+Affect       '480' 0 '' 2
+Minlevel     111
+End
+
+#SKILL
+Name         psiportal~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         20
+Code         do_portal
+Dammsg       psi portal~
+Minlevel     111
+End
+
+#SKILL
+Name         psishield~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       8
+Mana         20
+Rounds       24
+Code         do_smaug_skill
+Dammsg       psi shield~
+Wearoff      Your psionic shield flickers and then vanishes.~
+Wearoffroom  $n's psionic shield flickers then fades away.~
+Wearoffsoon  Your psionic shield flickers briefly~
+WearoffsoonR $n's protective shield flickers briefly~
+Hitchar      $N erects a shield of mental energy.~
+Hitvict      You erect a shield of mental energy to protect you.~
+Hitroom      $n erects a shield of mental energy.~
+Affect       '(l/5)*20' 17 '(-10)*(l/10)' 0
+Minlevel     111
+End
+
+#SKILL
+Name         psistrength~
+Type         Skill
+Flags        67108864
+Target       3
+Minpos       7
+Slot         276
+Mana         15
+Rounds       24
+Code         do_smaug_skill
+Dammsg       psionic strength~
+Wearoff      You feel your mental given strength fade away.~
+Wearoffroom  $n looks a bit weaker.~
+Hitvict      You feel much stronger.~
+Hitroom      $N looks much stronger.~
+Affect       'l*40' 1 '1d6' 0
+Minlevel     111
+End
+
+#SKILL
+Name         psisummon~
+Type         Skill
+Flags        67174712
+Minpos       8
+Slot         335
+Mana         20
+Code         do_smaug_skill
+Dammsg       psi summon~
+Minlevel     111
+End
+
+#SKILL
+Name         psiteleport~
+Type         Skill
+Flags        67109056
+Target       1
+Minpos       7
+Slot         279
+Mana         15
+Rounds       24
+Code         do_smaug_skill
+Dammsg       psionic teleport~
+Minlevel     111
+End
+
+#SKILL
+Name         punch~
+Type         Skill
+Flags        0
+Target       1
+Minpos       7
+Rounds       12
+Code         do_punch
+Dammsg       punch~
+Hitchar      You punch $N right in the face! Yuck the BLOOD!~
+Hitvict      $n punches you right in the face. Look at all the blood!~
+Hitroom      $n punches $N right in the face! Yuck the BLOOD!~
+Misschar     You miss $N with your wild punch.~
+Missvict     $n misses you with a wild punch.~
+Missroom     $n almost falls over trying to hit $N.~
+Diechar      You kill $N with your well placed punch.~
+Dievict      Ouch, that had to hurt!~
+Dieroom      $n punches $n so hard that $N doesn't even get back up.~
+Minlevel     25
+End
+
+#SKILL
+Name         quivering palm~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       quivering palm~
+Minlevel     111
+End
+
+#SKILL
+Name         ration~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       ration~
+Minlevel     111
+End
+
+#SKILL
+Name         read magic~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_smaug
+Dammsg       read magic~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         rescue~
+Type         Skill
+Flags        0
+Minpos       8
+Code         do_rescue
+Dammsg       rescue~
+Wearoff      !Rescue!~
+Wearoffroom  !Rescue!~
+Wearoffsoon  !Rescue!~
+WearoffsoonR !Rescue!~
+Minlevel     4
+End
+
+#SKILL
+Name         retreat~
+Type         Skill
+Flags        0
+Target       2
+Minpos       7
+Code         spell_null
+Dammsg       retreat~
+Minlevel     111
+End
+
+#SKILL
+Name         riding~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_smaug
+Dammsg       riding~
+Affect       'l*25' 0 'none' 0
+Minlevel     111
+End
+
+#SKILL
+Name         safe fall~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       safe fall~
+Minlevel     111
+End
+
+#SKILL
+Name         scry~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         20
+Code         do_psiscry
+Dammsg       scry~
+Minlevel     7
+End
+
+#SKILL
+Name         sending~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         5
+Rounds       12
+Code         spell_null
+Dammsg       sending~
+Wearoff      spell 162 please report.~
+Wearoffroom  spell 162 please report.~
+Wearoffsoon  spell 162 please report.~
+WearoffsoonR spell 162 please report.~
+Minlevel     1
+End
+
+#SKILL
+Name         sneak~
+Type         Skill
+Flags        0
+Target       3
+Minpos       8
+Code         do_sneak
+Dammsg       sneak~
+Minlevel     3
+End
+
+#SKILL
+Name         spot~
+Type         Skill
+Flags        0
+Target       2
+Minpos       7
+Rounds       24
+Code         do_scan
+Dammsg       spot~
+Minlevel     65
+End
+
+#SKILL
+Name         spring leap~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       spring leap~
+Minlevel     111
+End
+
+#SKILL
+Name         spy~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_smaug
+Dammsg       spy~
+Hitchar      $N can see very keenly now.~
+Hitvict      You can concentrate on your surroundings.~
+Affect       'l*30' 0 'none' 0
+Minlevel     111
+End
+
+#SKILL
+Name         stance~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       stance~
+Minlevel     111
+End
+
+#SKILL
+Name         steal~
+Type         Skill
+Flags        0
+Minpos       8
+Code         do_steal
+Dammsg       steal~
+Wearoff      !Steal!~
+Wearoffroom  !Steal!~
+Wearoffsoon  !Steal!~
+WearoffsoonR !Steal!~
+Minlevel     6
+End
+
+#SKILL
+Name         swim~
+Type         Skill
+Flags        0
+Target       2
+Code         spell_smaug
+Dammsg       swim~
+Wearoff      You feel like you might be able to swim again.~
+Hitchar      $N can swim like a fish now.~
+Hitvict      You feel like you can tread water!~
+Teachers     3225~
+Affect       'l*30' 0 'none' 0
+Minlevel     111
+End
+
+#SKILL
+Name         switch opponents~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       switch opponents~
+Minlevel     35
+End
+
+#SKILL
+Name         tan~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         do_tan
+Dammsg       tan~
+Wearoff      !tan!~
+Minlevel     111
+End
+
+#SKILL
+Name         trail~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       trail~
+Minlevel     111
+End
+
+#SKILL
+Name         trip~
+Type         Skill
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       trip~
+Minlevel     111
+End
+
+#SKILL
+Name         ultrablast~
+Type         Skill
+Flags        67403776
+Minpos       7
+Saves        5
+Slot         286
+Mana         60
+Rounds       35
+Code         do_smaug_skill
+Dammsg       ultra blast~
+Hitchar      $c0012You blast $N trying to send $S mind to oblivion!~
+Hitvict      $c0012You stager as $n hits you with a massive wave of psionic energy!~
+Hitroom      $c0012The air about $n's body seems to waver as $e sends out a massive wave of psionic enery at $N!~
+Misschar     $c0012Your blast missed $N completely!~
+Missvict     $c0012$n misses you with $s blast!~
+Missroom     $c0012$n seems to gasp as $s blast misses $N completely!~
+Diechar      $c0012You blast $N to oblivion!~
+Dievict      $c0012Your if blasted to oblivion by $n's attack!~
+Dieroom      $c0012$n blasts $N to oblivion, $S head a lump of jelly!~
+Dice         (ld4)+l~
+Minlevel     111
+End
+
+#SKILL
+Name         warcry~
+Type         Skill
+Flags        0
+Target       2
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       warcry~
+Minlevel     111
+End
+
+#SKILL
+Name         talonous arms~
+Type         Weapon
+Flags        0
+Minpos       7
+Code         spell_null
+Dammsg       ~
+Wearoff      !Talonous Arms!~
+Minlevel     1
+End
+
+#SKILL
+Name         aarakocra~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         common~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         dwarven~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         elvish~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         giantish~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Minlevel     111
+End
+
+#SKILL
+Name         gith~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Wearoff      !Gith!~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         gnomish~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         goblin~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         halfling~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         mindflayer~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         ogre~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         orcish~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         pixie~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Wearoff      !Pixie!~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         trollese~
+Type         Tongue
+Flags        0
+Code         spell_null
+Dammsg       ~
+Teachers     18000~
+Minlevel     1
+End
+
+#SKILL
+Name         animal lore~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       animal lore~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         art of earth~
+Type         Lore
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       art of earth~
+Minlevel     111
+End
+
+#SKILL
+Name         art of ether~
+Type         Lore
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       art of ether~
+Minlevel     111
+End
+
+#SKILL
+Name         art of fire~
+Type         Lore
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       art of fire~
+Minlevel     111
+End
+
+#SKILL
+Name         art of water~
+Type         Lore
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       art of water~
+Minlevel     111
+End
+
+#SKILL
+Name         art of wind~
+Type         Lore
+Flags        0
+Minpos       8
+Mana         200
+Code         spell_null
+Dammsg       art of wind~
+Minlevel     111
+End
+
+#SKILL
+Name         demonology~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       demonology~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         giant lore~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       giant lore~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         necromancy~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       necromancy~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         other lore~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       other lore~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         people lore~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       people lore~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         reptile lore~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       reptile lore~
+Teachers     18000~
+Minlevel     111
+End
+
+#SKILL
+Name         sign language~
+Type         Lore
+Flags        0
+Target       2
+Code         spell_null
+Dammsg       sign language~
+Minlevel     111
+End
+
+#SKILL
+Name         vegetable lore~
+Type         Lore
+Flags        0
+Target       2
+Minpos       8
+Code         spell_null
+Dammsg       vegetable lore~
+Teachers     18000~
+Minlevel     111
+End
+
+#END

@@ -1,0 +1,2178 @@
+#AREA   Amethyst Academy~
+
+
+
+#VERSION 200
+#AUTHOR XahXhaX~
+
+#RANGES
+1 8 1 115
+$
+
+#RESETMSG You hear...chanting...May.the.gods.be.with.you...from the adept of Kyorlin...~
+
+#FLAGS
+0 10
+
+#ECONOMY 0 10920345
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#13301
+Ksidorn~
+Ksidorn~
+Ksidorn stands vigil here over the academy grounds.
+~
+An ancient knight wise in the ways of war, he has volunteered his time to
+the training of new wouldbe adventures.  Though ravaged by time only the most
+foolhardy would challenge him to combat, as he performs his duties with the
+blessings of the gods, whom it would not be wise to anger.
+~
+1140853763 0 0 C
+50 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 2 0 0 3 3 0
+0 0 0 0 1058816 0 0 0
+#13302
+healer adept~
+The Adept of Kyorlin~
+An Adept of Kyorlin stands here helping those new to Amethyst
+~
+The adept of Kyorlin is a living statue, which is imbued with magical
+properties allowing it to cast healing spells.  When in this room, it will
+heal you with it's spells.  To speed the healing process, see HELP REST
+for information on recovering.
+~
+1157627907 4194472 1000 C
+7 0 94 30000d1+0 50d50+50
+100 0
+112 112 1
+13 13 13 13 13 13 0
+0 0 0 1 0
+0 2 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+> all_greet_prog 100~
+if isimmort($n)
+else
+if level($n) > 5
+look $n
+'I'm sorry $n, but you're too high of a level for me to permit you to enter.
+'After all, there are real newbies that need to practice and advance.
+mpforce $n s
+endif
+endif
+~
+> all_greet_prog 100~
+if multi($n) > 1
+mpechoat 0.$n _red Sorry $n, but you're not allowed on here right now.
+mpforce 0.$n quit
+endif
+~
+> act_prog p grovels in the dirt.~
+tell $n In case you hadn't noticed, this isn't Realms...
+~
+> act_prog p grovels in the dirt before you.~
+tell $n In case you hadn't noticed, this isn't Realms...
+~
+|
+#13303
+imp~
+the imp~
+A mischievous imp lurks in the shadows waiting to pounce upon an unsuspecting passerby.
+~
+Eager to test his prowess in battle, this young imp bares his fangs at you.
+He is trying to strike fear in your heart.
+~
+16777251 0 -50 C
+1 0 94 11d1+0 0d0+1
+0 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+0 2 0 0 1 1 0
+0 0 1031 0 0 0 0 0
+#13304
+imp evil~
+a large imp~
+A large evil imp bares its claws as you pass.
+~
+He looks back at you with his beady little eyes and a snarl on his face.
+You are pretty sure you can best him in regards to combat.
+~
+35 0 -100 C
+4 0 25 35d1+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+85 2 0 0 16384 16384 0
+0 0 3 0 2048 0 0 0
+#13305
+academy teleporter~
+The academy teleporter.~
+An academy teleporter stands here, ready to help you upon your way
+~
+~
+1084229633 4194856 0 C
+42 0 0 1d1+20000 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 4 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> act_prog p has entered the game.~
+if multi($n) > 1
+mpechoat 0.$n _red Sorry, but you're not allowed on here right now...
+mpat 0.$n mpforce 0.$n quit
+else
+if level($n)==1
+mpat hvak1 mpforce hvak1 ask What new soul has entered the troubled world of Amethyst?
+if class($n)==paladin
+mpat hvak2 mpfor hvak2 answer A noble paladin, $n.
+mpoload 13312 1
+endif
+if class($n)==caller
+mpat hvak2 mpfor hvak2 answer A knowledgeable caller, $n.
+mpoload 13320 1
+endif
+if class($n)==blackbelt
+mpat hvak2 mpfor hvak2 answer A blackbelt in the arts, $n.
+endif
+if class($n)==ranger
+mpat hvak2 mpfor hvak2 answer A courageous ranger, $n.
+mpoload 13311 1
+endif
+if class($n)==warrior
+mpat hvak2 mpfor hvak2 answer A robust warrior, $n.
+mpoload 13312 1
+endif
+if class($n)==druid
+mpat hvak2 mpfor hvak2 answer A mystic druid, $n.
+mpoload 13313 1
+endif
+if class($n)==cleric
+mpat hvak2 mpfor hvak2 answer A pious cleric, $n.
+mpoload 13313 1
+endif
+if class($n)==mage
+mpat hvak2 mpfor hvak2 answer A sorcerous mage, $n.
+mpoload 13311 1
+endif
+if class($n)==thief
+mpat hvak2 mpfor hvak2 answer A cunning thief, $n.
+mpoload 13311 1
+endif
+if class($n)==vampire
+mpat hvak2 mpfor hvak2 answer A shadowy vampire, $n.
+mpoload 13311 1
+endif
+if class($n)==augurer
+mpat hvak2 mpfor hvak2 answer A visionary augurer, $n.
+mpoload 13312 1
+endif
+give academy $n
+mpforce $n wield academy
+endif
+tell 0.$n May the Gods be with you.
+mppkset $n yes
+endif
+~
+> speech_prog p school~
+mptransfer 0.$n 11701
+mpat 11701 mpforce 0.$n look
+mpecho $n has left to the Amethyst Mud School.
+~
+> act_prog p has entered the game.~
+if race($n) == wyvern
+mpechoat $n _red Sorry, but Wyvern's are not allowed yet.
+mpechoat $n _red We're sorry for the inconvenience but ban is not working currently...  Please log in again.
+mpforce $n quit
+endif
+~
+|
+#13306
+hvak2 advancer~
+A rasping voice~
+Hvak2 Advancer is here (should always be in 10499)
+~
+~
+1073741825 4194344 0 C
+102 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#13307
+hvak1 advancer~
+Hungrily, a hollow voice~
+Hvak1 Advancer is here (should always be in 10499)
+~
+~
+1073741825 4194344 0 C
+102 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#13308
+hatchling dragon baby~
+the hatchling~
+A young dragon hatchling is waiting here for its next meal.
+~
+~
+67 0 -50 C
+4 0 35 33d1+1 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 13
+0 0 0 0 0
+31 2 0 0 0 0 0
+0 0 66688 0 2048 0 0 0
+> death_prog 10~
+mpoload 13318 1
+mpecho To your surprise, the entire leg of the hatchling is torn from it's body during it's bloody death.
+~
+|
+#13309
+man beast minotaur unusual~
+the minotaur~
+An unusual half man, half beast minotaur roams here.
+~
+A small half man, half beast, with a slight muscle build showing that it may be
+a bit of a challenge to beat, if nothing else then no piece of cake, so to
+speak.
+~
+16777281 0 0 C
+4 0 94 5d2+15 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 13
+0 0 0 0 0
+0 2 0 0 513 512 0
+0 0 65543 0 0 0 0 0
+#13310
+kobold~
+the kobold~
+A kobold with a sickly grin on its face is here.
+~
+He looks back at you with his beady little eyes. With a snarl he attacks.
+You are sure you can beat in combat.
+~
+16777281 0 0 C
+1 0 94 1d5+0 0d0+0
+1 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+3 2 0 0 131073 131072 0
+0 0 3 0 0 8192 0 0
+#13311
+Eisen~
+Eisen~
+The academy shop owner Eisen is here to sell you whatever you need.
+~
+She is a simple shopowner who has found a rather good market to sell her
+items by, tending to the needs of academy trainees and making a hefty profit
+in the process.
+~
+1073743875 40 0 C
+11 0 0 0d0+0 0d0+0
+300 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+2 2 0 0 5 1 0
+0 0 0 0 1058816 0 0 0
+> greet_prog 100~
+look $n
+hmm
+'Welcome, $n, to the academy store.
+~
+> speech_prog p i need a book~
+mpoload 13310 1
+give guide $n
+mpecho _lbl Eisen says 'Typing "look book" or "look guide" will give you a list of help topics to consult.
+~
+> fight_prog 100~
+'Now you must die, $n...
+mpslay 0.$n
+~
+> rand_prog 1~
+blink
+~
+|
+#13312
+bat~
+bat~
+A bat hovers nearby with bloody fangs.
+~
+As this bloodsucking creature flies past you, you notice the tiny black
+eyes that stare at your jugular vein.  This little black bat has the
+intentions of drinking your blood until there is none left in your body.
+~
+16777281 524288 0 C
+1 0 0 5d2+15 0d0+0
+0 0
+112 112 0
+13 13 13 13 1 13 13
+0 0 0 0 0
+23 2 0 0 128 128 2
+0 0 0 0 0 0 3 0
+#13313
+centipede~
+a centipede~
+A gigantic centipede is running along the ground, its many legs moving in unison.
+~
+A surprisingly large specimen of bug, this is almost as tall as you, if you
+wanted to stand it up on end, though most likely you should wait 'til after
+it's dead to do that.  It looks to be pretty strong, a good testament to what
+else could be living down here.
+~
+16842753 4194816 0 C
+6 11 25 0d0+0 1d4+6
+0 2000
+112 112 1
+15 13 13 17 13 13 13
+0 0 0 0 0
+83 8 0 0 256 256 0
+0 0 132 0 0 0 0 0
+#13314
+large bat~
+large bat~
+You barely make out a set of large bat eyes in the darkness.
+~
+The larger variety of it's genre, it's a lot more intimidating then it's
+smaller cousin you'd be more familiar with from the upper areas of this
+academy.  It's a good 3 feet tall at least, and it's teeth are an even better
+couple inches long, and very sharp, and very much stained red.
+~
+16842817 524288 0 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+23 8 0 0 128 128 1
+0 0 32769 0 0 0 3 0
+#13315
+a mist~
+mist~
+A thick mist plays with your senses.
+~
+Something unknown, something foreign, is here, and at the same time not here.
+This doesn't seem to have any physical form, yet seems to be very capable of
+inflicting great damage to you, and it looks to be created from some higher
+source.
+~
+16777281 2130432 0 C
+6 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+56 8 0 0 8192 8192 2
+0 0 0 0 0 0 33554432 0
+#13316
+bone naga~
+the bone naga~
+A bone naga rears up on its tail, ready to strike at you.
+~
+Possessing the lower body of a snake and the upper body of a skeleton,
+this creature is something to be careful of.
+~
+16777281 0 -200 C
+5 0 88 55d0+1 0d0+0
+1 0
+112 112 0
+13 13 13 13 1 13 0
+0 0 0 0 0
+62 2 0 0 513 512 0
+0 0 66561 0 2048 0 0 0
+#13317
+rat~
+a large grey rat~
+A large rat scuttles across your path, eyes glowing in the dark.
+~
+This is one large rat.  You would not want to allow him to bite you.
+His grey fur is matted from blood and dirt, and his eyes seem to
+watch your every movement.
+~
+16842817 4194816 0 C
+5 11 25 1d10+75 1d4+3
+0 2000
+112 112 1
+15 13 13 14 13 13 13
+0 0 0 0 0
+77 2 0 0 0 0 0
+0 0 1775 0 0 0 1 0
+#13318
+Firebrandt guard~
+Firebrandt~
+Firebrandt the guard of the lower academy stands here.
+~
+~
+1073741827 0 100 C
+11 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+18 13 13 13 13 13 13
+0 0 0 0 0
+8 2 0 0 65 1 0
+5 10 0 0 1050624 0 64 8
+> greet_prog 100~
+if ispc($n)
+if wasinroom($n) == 13329
+'I am the guardian of the lower academy.  I guard this door night and day leading to the outside world.  You will have to contest me to win my treasure and enter through the door.
+endif
+endif
+~
+> death_prog 100~
+'You fought well and won.  The reward is now yours, take it and go.  I shall open the door for you.
+mpoload 9 1
+give ring 0.$n
+mpecho Firebrandt unlocks the iron door.
+mpopenpassage 13330 13336 0
+bow $n
+mpforce $n n
+mpclosepassage 13330 0
+mpgoto 11287
+mpmload 13318
+remove all
+drop all
+mpforce 2.firebrandt get all
+mpforce 2.firebrandt wear all
+mpforce 2.firebrandt mpgoto 13330
+~
+> act_prog p north.~
+mpclosepassage 13330 0
+~
+|
+#13319
+shadow-divine~
+a shadow of the divine~
+A shadow that seems to somehow be bathed in light is before you.
+~
+It doesn't consist of matter in the least bit, the odd shadow of God himself
+left behind to introduce players into the world.  It swirls with ominous, dark
+colors, not seeming to quite be there in entirety, and physical objects that
+pass through it become distorted, and unable to focus in shape and light.
+~
+1159725059 4194856 0 C
+102 0 0 32767d1+0 0d0+0
+10000000 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+56 2 0 0 1 1 0
+0 0 0 0 1058816 0 1241520112 8447
+> speech_prog town~
+'Transferring $n...
+mpinvis 101
+mpinvis
+mptransfer 0.$n 12439
+mpat 12439 mpechoaround $n $n materilaizes before your very eyes.
+if isimmort($n)
+else
+if level($n) >= 5
+mpat 12439 mpechoat $n _lbl Here is a bit of gold to get you started...
+mpat 12439 mpechoat $n _lbl Use it wisely :)
+mpat 12439 give 100 coins $n
+endif
+endif
+mpat 0.$n mpforce 0.$n look
+mpinvis
+~
+> act_prog ~
+if multi($n) > 1
+mpechoat 0.$n _red Sorry $n, but you're not allowed on here right now.
+mpforce 0.$n quit
+endif
+~
+> speech_prog p vampguildnow~
+'Transferring...
+mptransfer $n 151
+~
+|
+#13321
+black ant~
+a black ant~
+A giant black ant is moving about the corridor.
+~
+Much in the same freakish way the centipede's have grown to enormous sizes,
+these ants are the size of a middle-aged man easily.  They are also covered
+front to end with scales, giving them a toughness that can resist some weapons
+without much difficulty.
+~
+33 0 0 C
+8 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+18 13 13 13 13 13 13
+0 0 0 0 0
+20 2 0 0 256 256 0
+4 8 4 96 0 5120 1 0
+#13322
+red ant~
+a red ant~
+A giant red ant is moving about the corridor.
+~
+Another giant creature of the lower academy, this ant is the size of a shorter
+person like a pizie easily.  Like their cousin black ants, they too have
+scales covering their body, making many attacks difficult to accomplish.
+Of course, with great brute strength always comes a weakness...
+They are a cannibal sort of creatures that will devour their own to dominate,
+and this too may be of some use.
+~
+65569 0 0 C
+10 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 2 13 13
+0 0 0 0 0
+20 2 0 0 1 0 0
+10 12 4 96 0 5120 0 0
+> entry_prog 70~
+~
+|
+#13323
+big naga~
+big naga~
+A rather larger version of the bone naga is here.
+~
+~
+16777217 0 -200 C
+6 0 0 5d2+10 0d0+0
+2 0
+112 112 0
+13 13 13 13 1 13 13
+0 0 0 0 0
+0 2 0 0 513 512 0
+3 2 0 0 0 0 0 0
+#13324
+sewer orc~
+a sewer orc~
+An Orc stranded in the sewers is standing here before you.
+~
+This is a very weak orc, famished and worn by being stranded down in
+this well.  No telling how it got back up here, and why it can't climb
+back out.  It wears a nice pair of gauntlets on it's hands though
+from the far off academy.
+~
+1 0 -100 C
+6 0 0 0d0+0 2d4+4
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+53 2 0 0 32 32 0
+0 0 0 0 0 0 16 0
+#13325
+Bill Gates~
+Bill Gates~
+Bill Gates is here before you.
+~
+~
+1 0 -1000 C
+5 0 0 8d3+50 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+36 2 0 0 16384 16384 0
+0 0 1 0 1050624 0 0 0
+#13326
+ooze~
+an ooze~
+Ooze flows out along the ground creeping it's way towards you.
+~
+~
+1 0 -100 C
+8 0 0 1d10+100 3d2+2
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+52 8 0 0 128 128 1
+0 0 0 0 0 0 1073747968 0
+> death_prog 50~
+mpoload 12437 1
+'looks like the ooze was carrying something in it's center core...
+~
+|
+#13327
+green lizard~
+a green lizard~
+A green lizard about 4 feet long stares back at you with dark, empty eyes.
+~
+~
+16777217 0 0 C
+4 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 3 13 13
+0 0 0 0 0
+96 8 0 0 1024 1024 0
+0 0 65536 0 0 0 0 0
+#13328
+evil pixie~
+an evil pixie~
+An evil pixie hovers here... she looks kind of experienced.
+~
+You can tell she is a pixie because of her height, and
+even more notably the wings on her back that carry her as
+she floats around the corridors.  Undoubtedly she's a
+more evil breed of pixie, hence the slight glow of red
+about her body.
+~
+16777217 2097152 -200 C
+6 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+4 8 0 0 8192 8192 0
+3 3 32768 0 0 0 0 10
+#13400
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#13301
+fountain~
+a fountain~
+A large marble fountain gushes forth here.~
+~
+25 0 0
+50 50 0 0
+500 3000 300
+E
+fountain~
+It is very nice.  Made from fine white marble.
+~
+#13302
+academy boots~
+a pair of academy boots~
+Someone has dropped a pair of academy boots here.~
+~
+9 0 65
+0 0 0 0
+1 10 1
+#13303
+academy helmet~
+an academy helmet~
+A helmet from the academy has been dropped here.~
+~
+9 0 17
+2 2 0 0
+1 1 0
+#13305
+water flask~
+a flask of water~
+You see a flask with some water in it.~
+~
+17 0 1
+15 15 0 0
+1 5 3
+E
+'flask' 'water'~
+You can "drink" from this flask when you're thirsty and/or dehydrating.
+It's a very handy to thing to carry around, and you shouldn't be wandering
+far away from town without one.
+~
+#13306
+academy item~
+a newly created academy item~
+Some god dropped a newly created academy item here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#13307
+Dried rabbit meat~
+dried rabbit meat~
+Some sort of dried meat is on the ground here.~
+~
+19 0 1
+24 0 0 0
+1 3 4
+#13308
+torch~
+a torch~
+A piece of wood, partly wrapped in cloth is here.~
+~
+1 0 16385
+0 0 90 0
+1 3 2
+#13309
+academy ankleband anklet~
+an academy ankleband~
+Someone dropped an academy anklet here.~
+~
+13 524288 2097153 1
+0 0 0 0
+1 17 1
+#13310
+The adventurer's guide~
+the Adventurer's Guide~
+A book with "DON'T PANIC, LOOK AT ME!" written on the cover lies here.~
+~
+35 524288 16385
+0 0 0 0
+1 0 123
+E
+sets guide book~
+Some helpful files for those new to mudding:
+ 
+SPAM -        Will explain what spam is, and why you should not do it.
+CONFIG -      Will teach you about our configuration menu.
+SCORE -       Will tell you about your characters personal score sheet.
+MOVEMENT -    Will teach you various commands for moving about the game.
+OBJECTS -     Will teach you various commands to use your equipment.
+CONTAINER -   Will teach you about using containers to holdblongings.
+CHANNELS -    Will teach you about communication with other players.
+GROUP -       Will help you with grouping with other adventurers.
+COMBAT -      Will teach you how to choose, start and stop a fight.
+DEATH -       Will tell you about the death experience in the game.
+PRACTICE -    Will teach you about training spells, skills, and weapons.
+INFORMATION - Will cover ways to find certain types of information.
+MULTIPLAY - Will cover the current policy on multiplay.
+ 
+To use these help files, type HELP <topic> from the topics listed in
+capital letters above.
+~
+#13311
+academy dagger~
+a finely honed dagger~
+You see a finely honed dagger here.~
+~
+5 64 8193
+12 0 0 11
+2 2 0
+#13312
+academy finely honed sword~
+a finely honed sword~
+You see a finely honed sword here.~
+~
+5 0 8193
+12 0 0 3
+4 2 100
+#13313
+academy mace~
+a finely wrought mace~
+You see a finely wrought mace here.~
+~
+5 64 8193
+12 0 0 7
+3 2 0
+#13314
+academy armour~
+some academy armour~
+Some armour from the Amethyst academy is laying here.~
+~
+9 524288 9
+0 0 0 0
+4 1 0
+#13315
+shield crest academy~
+a shield with the Amethyst Academy crest~
+A shield with the Amethyst Academy crest lies here~
+~
+9 524288 513
+0 0 0 0
+5 0 0
+E
+shield crest~
+This is your first shield, it will help keep you safe until you can
+find something better.
+~
+#13316
+orb eye enlightenment academy.~
+an eye of enlightenment~
+A glistening orbs shines as a guiding light to new adventurers.~
+~
+1 65 1
+0 0 -1 0
+1 0 0
+A
+24 -1
+#13317
+large iron key~
+large iron key~
+A large iron key has been left here.~
+~
+13 1073741824 1
+0 0 0 0
+1 0 0
+#13318
+hatchling leg~
+the leg of the hatchling~
+The sliced-off leg of the hatchling is lying here.~
+~
+5 262144 8193
+12 4 2 0
+1 0 0
+E
+'leg' 'hatchling'~
+It's a leg from some kind of dragon hatchling, probably the one in the
+academy.  Just looking at it gives you the evil thought of bashing creatures
+with it, for no apparent reason.
+~
+#13319
+orcish-grunt-gauntlets~
+A pair of orcish gauntlets~
+A pair of nasty smelling gauntlets lay here~
+~
+9 1074266112 129
+0 0 0 0
+1 0 0
+A
+18 1
+#13320
+small blue dress~
+a small blue dress~
+A small blue dress has been dropped here.~
+~
+9 0 9 1
+0 0 0 0
+1 0 0
+#13321
+chain~
+a chain~
+A chain composed of smaller thin links is laying here.~
+~
+9 524288 5
+0 0 0 0
+1 0 0
+#13400
+final object~
+a newly created final object~
+Some god dropped a newly created final object here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#13301
+A Forming Planet~
+You float high above the world, and are presented with two choices. To 
+those most eager to journey onwards, there is an exit below which seems 
+to lead down many miles into the heart of a great city. For those less
+foolhardy, or that may simply wish a better grasp of the world itself before
+truly entering a note is scribed, "&OSay School and you shall enter
+it.&w" You are left to do what you feel is best, but if this is your first
+time setting foot within the world it is recommended to visit the school 
+at least once.
+~
+0 2105356 0 101
+D5
+~
+~
+0 -1 13302
+> act_prog p has entered the game.~
+mpat 13301 mpforce academy mpinvis 50
+~
+|
+S
+#13302
+Amethyst Mud Academy~
+&WHere you may "&OSAY TOWN&W" and be transported to town square at
+any time you're in this room.
+You are now in the academy, where you will be able to fight in combat
+to gain both experience and earn a supply of equipment.
+To the east is a room where you may practice skills.  It is recommended
+to learn what skills and spells you have available for optimal combat
+ability.
+To the west is a store that sells a few essential and basic supplies.
+To get money for these, either beg or earn money fighting creatures here.
+Go north you can proceed to enter the fighting area to hone your
+skills and level.
+~
+0 3145736 0 137
+D0
+~
+~
+0 -1 13304
+D1
+~
+~
+0 -1 13303
+D3
+~
+~
+0 -1 13321
+S
+#13303
+Academy Training Room~
+&WYou have entered into a large room to one side of the academy.  Judging from
+the appearance of this room, it is used frequently, as all of the equipment
+within appears worn.  You should see "&OHELP PRACTICE&W" to learn to use the
+practice command to learn your skills and spells.
+&CNote that you cannot learn language or styles from Ksidorn.  Talented he is,
+you will have to look elsewhere in the world to learn those.
+~
+0 3145736 0 102
+D3
+~
+~
+0 -1 13302
+S
+#13304
+Preparing for Combat~
+&WTo go down below will put you into the actual area of fighting, where
+you will be walking in a square area to fight creatures roaming and
+waiting in a single spot to attack you.
+If you have not done so already, see "&OHELP CONFIG&W" for help on
+configuring yourself.  Also see "&OHELP COMBAT&W" for fighting info
+like how to initiate battle.  Again, be forewarned that some creatures
+WILL ATTACK YOU on sight.  For help on what to do once you have gotten
+equipment off a dead enemy, see "&OHELP WEAR&W"
+See "&OHELP WIMPY&W" for help on setting a safety zone for you to
+automatically flee should you come near death.
+~
+0 3145740 13 128
+D2
+~
+~
+0 -1 13302
+D5
+~
+~
+0 -1 13305
+S
+#13305
+Choice of Directions~
+You are in the center of a large room that has passageways leading off in
+every direction.  In the middle of the room is a permanent ladder set to
+climb back up to the first level of the academy, the safe level.
+~
+0 3145736 13 107
+D0
+~
+~
+0 -1 13309
+D1
+~
+~
+0 -1 13311
+D2
+~
+~
+0 -1 13340
+D3
+~
+~
+0 -1 13307
+D4
+~
+~
+16777216 -1 13304
+D6
+~
+~
+0 -1 13310
+D7
+~
+~
+0 -1 13308
+D8
+~
+~
+0 -1 13312
+D9
+~
+~
+0 -1 13306
+S
+#13306
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145736 13 100
+D2
+~
+~
+0 -1 13356
+D3
+~
+~
+0 -1 13354
+D6
+~
+~
+0 -1 13305
+D7
+~
+~
+0 -1 13353
+D8
+~
+~
+0 -1 13341
+D9
+~
+~
+0 -1 13355
+S
+#13307
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145736 13 101
+D1
+~
+~
+0 -1 13305
+D3
+~
+~
+0 -1 13353
+D7
+~
+~
+0 -1 13352
+D9
+~
+~
+0 -1 13354
+S
+#13308
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145736 13 103
+D0
+~
+~
+0 -1 13350
+D3
+~
+~
+0 -1 13352
+D6
+~
+~
+0 -1 13349
+D7
+~
+~
+0 -1 13351
+D8
+~
+~
+0 -1 13305
+D9
+~
+~
+0 -1 13353
+S
+#13309
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145740 13 100
+D0
+~
+~
+0 -1 13349
+D2
+~
+~
+0 -1 13305
+D6
+~
+~
+0 -1 13348
+D7
+~
+~
+0 -1 13350
+S
+#13310
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145736 13 100
+D0
+~
+~
+0 -1 13348
+D1
+~
+~
+0 -1 13346
+D6
+~
+~
+0 -1 13347
+D7
+~
+~
+0 -1 13349
+D8
+~
+~
+0 -1 13345
+D9
+~
+~
+0 -1 13305
+S
+#13311
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145736 13 101
+D1
+~
+~
+0 -1 13345
+D3
+~
+~
+0 -1 13305
+D6
+~
+~
+0 -1 13346
+D8
+~
+~
+0 -1 13344
+S
+#13312
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst Academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 3145736 13 101
+D1
+~
+~
+0 -1 13344
+D2
+~
+~
+0 -1 13342
+D6
+~
+~
+0 -1 13345
+D7
+~
+~
+0 -1 13305
+D8
+~
+~
+0 -1 13343
+D9
+~
+~
+0 -1 13341
+S
+#13313
+A Forming Planet~
+&wWe are currently under heavy construction and formation.  For anything,
+email God at &RXahXhaX@aol.com&w
+You are given a newbie guide to help you out to begin with.  Type
+"&OLOOK BOOK&w" to get a list of help files to look at.  then type "&OHELP&w
+<keyword>" to look at the file.  Also use the command "&OHLIST&w" to list
+out help topics begninning with a certain letter/letters.
+~
+0 2097160 0 100
+D4
+~
+~
+0 -1 13302
+S
+#13314
+Underground Sewers~
+The light down here is very dim, or rather lack thereof.  Some light trails in
+from above, but otherwise it is totally pitch black down here, so artificial
+light is a must.  The floor is wet dirt, mud in most places, and the walls are
+made of large old bricks.  The roof curves in an arch and continues on to the
+north like a tunnel.
+~
+0 0 13 119
+D0
+~
+~
+0 -1 13315
+D4
+~
+~
+16777344 -1 12413
+S
+#13315
+Underground Sewers~
+To the south you can see a bit of light, denoting the way back up to the
+town.  Here the air is stale, not many seem to venture down here, not
+a lot of the time anyways.  It is damp and a cold wind blows from somewhere
+you can't figure, making a loud noise as it winds towards you, and is
+evidence that a way out is nearby.  Off to the northeast/southeast is the
+culd-de-sac, a good place to begin at.
+~
+0 9 13 1
+D0
+~
+~
+16777216 -1 13326
+D2
+~
+~
+0 -1 13314
+D6
+~
+~
+0 -1 13316
+D8
+~
+~
+0 -1 13322
+S
+#13316
+Culdesac~
+This is the beginning of the northern side of the simple culdesac of the lower
+catacombs, where you can wind around in a constant manner to fight many things
+lurking about down here, and gain experience in the process.  It will continue
+east for 2 rooms before coming back in a full u-turn across the southern side.
+~
+0 9 13 0
+D1
+~
+~
+0 -1 13317
+D9
+~
+~
+0 -1 13315
+S
+#13317
+Culdesac~
+You are walking along the northern side of the culdesac.  To the west leads on
+your way out, and further east will eventually end in a u-turn to come around
+on the southern side then back west as well.  In relation, you can hear heavy
+breathing and common sounds of life, the kind of mobs threatening to you.
+~
+0 9 13 0
+D1
+~
+~
+0 -1 13318
+D3
+~
+~
+0 -1 13316
+S
+#13318
+Culdesac~
+This is the north horizontal side of the culdesac.  You can hear noises made by
+rather poor attempts of creatures lurking everywhere in the darkness around
+you.  Naturally it is best to be aware, when not being able to see the hand in
+front of your face all too well, there's easy chances likewise that just
+because you've passed by a spot that seemed desolate doesn't mean there isn't
+anything there now.
+~
+0 9 13 0
+D3
+~
+~
+0 -1 13317
+D8
+~
+~
+0 -1 13319
+S
+#13319
+Culdesac, u-turn~
+This is the opposite end of the entrance/exit room of the catacombs.  Thus
+going northwest or southwest doesn't really matter unless you're interest in
+going clockwise or counter-clockwise.  You notice the air here however is worse
+then far west, basically to the point where it reeks, it's almost unbeareable.
+The most obvious looking source seems to be a large grate on the lower east
+wall, large enough for a body to fit through without too much trouble.
+~
+0 9 13 0
+D1
+~
+grate~
+17303552 -1 13325
+D7
+~
+~
+0 -1 13318
+D9
+~
+~
+0 -1 13324
+E
+grate~
+It's fairly open and closeable, but looks to be extremely heavy, so you
+wouldn't want to try to move it anyways.  There are a lot of deep scratches on
+the wall surrounding it, seems someone or something has taken up moving it
+around as some kind of hobby, but either way lucky for you it's cracked open
+enough to squeeze through without too much trouble, thought no telling why
+anyone would want to, it's dark in there.
+~
+S
+#13320
+Chamber of the Watch~
+Here reside the watchers of the gateway between the Realms and the
+outside world, and from here all new adventurers are observed and
+noted by the inhabitants herein.
+ 
+** This room should *not* be used for any activities of any kind
+other than those of the two mobs residing here.  Do not ever move
+or purge either of these mobiles if the pre-auth system is used. **
+~
+0 2097164 0 0
+S
+#13321
+Academy store~
+&WThis is the academy store.  The owner is here to sell you some minor goods
+which are essential to you, such as food and drink so you don't starve
+or dehydrate inside the academy.  To learn to use shops, type "&OHELP BUY&W"
+If you need a player's guide for whatever reason, simply type "&OSAY I
+NEED A BOOK&W" and Eisen will be more then happy to give you one, free
+of charge.
+~
+0 1076887560 0 106
+D1
+~
+~
+0 -1 13302
+S
+#13322
+Culdesac~
+This is the beginning of the southern side of the simple culdesac of the lower
+catacombs.  You find as you travel away from the upper parts, the air thickens
+with a foul stench.  Here in the culdesac you have the chance to go around in
+a simple manner to gain experience fighting whatever may be creeping around
+in the dark.  You look to the east and estimate about another 2 rooms before
+coming back in a u-turn along the north side.
+~
+0 1073741833 13 2
+D1
+~
+~
+0 -1 13323
+D7
+~
+~
+0 -1 13315
+S
+#13323
+Culdesac~
+You find yourself along the southern side of the culdesc, with another room
+to the east, or to the west towards the upper areas of the academy.  You
+squint your eyes and struggle to see about yourself, but can't see much,
+though you can hear plenty of movemtn all around you, giving that apprehensive
+feeling that no-telling-what can lunge at you any moment and end your short
+lived life far too early.
+~
+0 1073741833 13 1
+D1
+~
+~
+0 -1 13324
+D3
+~
+~
+0 -1 13322
+S
+#13324
+Culdesac~
+You are walking along the southern side of the culdesac, with a turn to the
+east here to start back west on the north side, or just go west here and
+do the same thing.  You stop to listen once more to the sounds around here, and
+ahead to the east you hear the following:something metal scraping, some heavy
+grunting, then the same scraping again, and all is quiet, for that part
+anyways.
+~
+0 1073741833 13 0
+D3
+~
+~
+0 -1 13323
+D6
+~
+~
+0 -1 13319
+S
+#13325
+Small room~
+You are standing in a very small room on the other side of the
+grating.  Only a couple people could possibly fit in here at once,
+there isn't much free space at all.
+To the southeast is something of a boarded up mineshaft, but
+you probably can't go in there now.
+~
+0 1073742089 13 0
+D3
+~
+grate~
+526336 -1 13319
+E
+grate~
+Acutally, the grating is on the other side of the wall really, you're looking
+at a big hole in the wall.  Pretty neat, huh?  Bet you could fit back through
+there too.
+~
+S
+#13326
+Underground Sewers~
+Despite the dampness of the surrounding walls and ground and the chilled from
+humid air, you find that you're getting used to this place without having
+realized it.  Far ahead south you can see a bit of light, which means an exit
+must be there.  That or room branches off to a tunnel northest.
+~
+0 1073741833 13 0
+D2
+~
+~
+16777216 -1 13315
+D6
+~
+~
+0 -1 13327
+S
+#13327
+Underground Sewers~
+The light down here other then your own is still non existent.  You are
+standing in an almost narrow tunnel.  The walls are made of large, dirty bricks
+that look very old.  Some have even older looking spots of red from where some
+other poor person must have ended.  To the southwest would take you out of the
+tunnel and into the larger roomy area or the underground, and northeast the
+tunnel continues on in it's manner.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 13328
+D9
+~
+~
+0 -1 13326
+S
+#13328
+Underground Sewers~
+You are still walking down the tunnel.  You can't see far southwest but that is
+where the tunnel continues, back towards the entrance to these sewers
+probably.  Further northeast you can see a small speck of light flickering in
+the encompassing black.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 13329
+D9
+~
+~
+0 -1 13327
+S
+#13329
+Underground Sewers~
+The tunnel here takes a turn off it's course to the south, and continues on to
+the northeast, where you can see a small light just ahead.  Looking southwest
+you see nothing at all but black, and hear the usual noises echoing back and
+forth as things hidden search for prey.
+~
+0 1073741833 13 0
+D2
+~
+~
+0 -1 13331
+D9
+~
+~
+0 -1 13328
+S
+#13330
+Underground Sewers~
+You come to a large iron door, rusted from the many years it must have been
+down here so far.  Standing in front of it is a guard, though he doesn't look
+to be from the academy, not like the healer adept at all.  He eyes you closely
+through his own torch light, and doesn't look all too bent on letting you pass
+through that door without a fight.
+~
+0 1075838984 0 20
+D9
+~
+~
+0 -1 13329
+S
+#13331
+Underground Sewers~
+The brick walls of the tunnel come to an end here and the small space opens up
+into a large room, too large to see all of in the dark and from here.  To the
+north is a wall close by, but the tunnel turns northeast to southwest there,
+and you see flickers of a small light across the wall and shadows of things
+creeping around there.
+~
+0 1073741833 13 0
+D0
+~
+~
+0 -1 13329
+D1
+~
+~
+0 -1 13332
+S
+#13332
+Underground Sewers~
+You are in a small, single room section of the sewers, which
+consists of this and 3 other rooms to the east, south, and southeast.
+The ground here isn't made of the stone like the walls, the walls
+that line the rest of the sewers, but rather are made of tough dirt.
+~
+0 1073741833 13 0
+D1
+~
+~
+0 -1 13333
+D2
+~
+~
+0 -1 13335
+D3
+~
+~
+0 -1 13331
+D8
+~
+~
+0 -1 13334
+S
+#13333
+Underground Sewers~
+You are standing on the northeastern section of the room.  To the
+south of you the dirt gradually rises up a slope, producing something
+of a small hill.  Towards the west you see the way out back into the
+proper academy.
+~
+0 1073741833 13 0
+D2
+~
+~
+0 -1 13334
+D3
+~
+~
+0 -1 13332
+D9
+~
+~
+0 -1 13335
+S
+#13334
+Underground Sewers~
+Before you here is a large hill made of the packed, brown dirt that
+covers the floor in this section of the academy only.  Looking at the
+hill you notice a rather large hole in the center of it, something
+you cannot descend but looks rather conspicuous.
+~
+0 1073741833 13 1
+D0
+~
+~
+0 -1 13333
+D3
+~
+~
+0 -1 13335
+D7
+~
+~
+0 -1 13332
+> entry_prog 25~
+if isnpc($n)
+else
+if rand(50)
+mpechoat $n As you arrive into the room, and take notice of the small hill, something large and black crawls out of the hole.
+mpat 13334 mpmload 13321
+else
+mpechoat $n You come into the room, and see a huge red ant crawl out of the hole!
+mpat 13334 mpmload 13322
+endif
+endif
+~
+|
+S
+#13335
+Underground Sewers~
+You are at the southwestern corner of this room.  From here you can see the
+footsteps you've made while walking down in here trailing in the dirt.
+To the east the ground rises in a gradual increase, which forms a mound in
+to the southeastern corner of the room.  You know that to the north is the
+back to the main tunnel.
+~
+0 1073741833 13 2
+D0
+~
+~
+0 -1 13332
+D1
+~
+~
+0 -1 13334
+D6
+~
+~
+0 -1 13333
+S
+#13336
+???~
+~
+0 1075838988 11 0
+S
+#13340
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D0
+~
+~
+0 -1 13305
+D2
+~
+~
+0 -1 13341
+D8
+~
+~
+0 -1 13342
+D9
+~
+~
+0 -1 13356
+S
+#13341
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 101
+D0
+~
+~
+0 -1 13340
+D1
+~
+~
+0 -1 13342
+D3
+~
+~
+0 -1 13356
+D6
+~
+~
+0 -1 13312
+D7
+~
+~
+0 -1 13306
+S
+#13342
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D0
+~
+~
+0 -1 13312
+D1
+~
+~
+0 -1 13343
+D3
+~
+~
+0 -1 13341
+D6
+~
+~
+0 -1 13344
+D7
+~
+~
+0 -1 13340
+S
+#13343
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 102
+D0
+~
+~
+0 -1 13344
+D3
+~
+~
+0 -1 13342
+D7
+~
+~
+0 -1 13312
+S
+#13344
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D0
+~
+~
+0 -1 13345
+D2
+~
+~
+0 -1 13343
+D3
+~
+~
+0 -1 13312
+D7
+~
+~
+0 -1 13311
+D9
+~
+~
+0 -1 13342
+S
+#13345
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 101
+D0
+~
+~
+0 -1 13346
+D2
+~
+~
+0 -1 13344
+D3
+~
+~
+0 -1 13311
+D7
+~
+~
+0 -1 13310
+D9
+~
+~
+0 -1 13312
+S
+#13346
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D0
+~
+~
+0 -1 13347
+D2
+~
+~
+0 -1 13345
+D3
+~
+~
+0 -1 13310
+D7
+~
+~
+0 -1 13348
+D9
+~
+~
+0 -1 13311
+S
+#13347
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D2
+~
+~
+0 -1 13346
+D3
+~
+~
+0 -1 13348
+D9
+~
+~
+0 -1 13310
+S
+#13348
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D1
+~
+~
+0 -1 13347
+D2
+~
+~
+0 -1 13310
+D3
+~
+~
+0 -1 13349
+D8
+~
+~
+0 -1 13346
+D9
+~
+~
+0 -1 13309
+S
+#13349
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 101
+D1
+~
+~
+0 -1 13348
+D2
+~
+~
+0 -1 13309
+D3
+~
+~
+0 -1 13350
+D8
+~
+~
+0 -1 13310
+D9
+~
+~
+0 -1 13308
+S
+#13350
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 101
+D1
+~
+~
+0 -1 13349
+D2
+~
+~
+0 -1 13308
+D3
+~
+~
+0 -1 13351
+D8
+~
+~
+0 -1 13309
+D9
+~
+~
+0 -1 13352
+S
+#13351
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D1
+~
+~
+0 -1 13350
+D2
+~
+~
+0 -1 13352
+D8
+~
+~
+0 -1 13308
+S
+#13352
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 101
+D0
+~
+~
+0 -1 13351
+D1
+~
+~
+0 -1 13308
+D2
+~
+~
+0 -1 13353
+D6
+~
+~
+0 -1 13350
+D8
+~
+~
+0 -1 13307
+S
+#13353
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D0
+~
+~
+0 -1 13352
+D1
+~
+~
+0 -1 13307
+D2
+~
+~
+0 -1 13354
+D6
+~
+~
+0 -1 13308
+D8
+~
+~
+0 -1 13306
+S
+#13354
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 100
+D0
+~
+~
+0 -1 13353
+D1
+~
+~
+0 -1 13306
+D2
+~
+~
+0 -1 13355
+D6
+~
+~
+0 -1 13307
+D8
+~
+~
+0 -1 13356
+S
+#13355
+Turn in a Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887556 13 2
+D0
+~
+~
+0 -1 13354
+D1
+~
+~
+0 -1 13356
+D6
+~
+~
+0 -1 13306
+S
+#13356
+A Dark Passage~
+You are within a very dimly lit passage within the Amethyst academy.  You think
+you sense movement in the background and reach for your weapon.  Looking around
+the room, you notice it is bloodstained from repeated use in training.
+~
+0 1076887560 13 101
+D0
+~
+~
+0 -1 13306
+D1
+~
+~
+0 -1 13341
+D3
+~
+~
+0 -1 13355
+D6
+~
+~
+0 -1 13340
+D7
+~
+~
+0 -1 13354
+S
+#13400
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+M 0 13301 1 13303
+E 1 11298 1 7
+E 1 11296 1 10
+E 1 11297 1 8
+E 1 11300 1 16
+E 1 11299 1 5
+M 0 13304 1 13312
+E 1 13321 1 3
+M 0 13308 1 13307
+M 0 13319 1 13302
+M 0 13309 2 13311
+M 0 13312 12 13307
+M 0 13310 10 13308
+M 0 13314 4 13319
+M 0 13314 3 13316
+M 0 13313 4 13317
+M 0 13310 5 13306
+M 0 13309 5 13310
+M 0 13315 6 13322
+M 0 13316 5 13310
+M 0 13317 5 13318
+M 0 13317 3 13315
+M 0 13302 1 13304
+M 0 13303 2 13309
+M 0 13306 1 13320
+M 0 13307 1 13320
+M 0 13323 1 13343
+E 1 13314 1 5
+E 1 13315 1 11
+M 0 13324 1 13329
+E 1 13319 1 9
+M 0 13303 3 13308
+M 0 13303 3 13306
+M 0 13303 3 13311
+M 1 13305 1 13301
+M 0 13326 1 13319
+M 1 13311 1 13321
+G 1 13302 1
+G 1 13309 1
+G 1 13305 1
+G 1 13308 1
+G 1 13307 1
+M 0 13327 1 13305
+M 0 13328 1 13305
+E 1 13320 1 5
+O 0 12437 1 13325
+S
+
+
+#SHOPS
+ 13311    0  0  0  0  0    96  90         0 23    ; Eisen
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  13302 spec_cast_adept
+M  13325 spec_fido
+S
+
+
+#$

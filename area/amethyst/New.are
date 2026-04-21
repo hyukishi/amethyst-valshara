@@ -1,0 +1,2979 @@
+#AREA   Battlefield of the Humans and Drows~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+4
+
+#ECONOMY 0 31250000
+
+#CLIMATE 2 3 3
+
+#MOBILES
+#13201
+tree~
+the tree~
+A single dead tree sticks out of the ground.
+~
+This tree is long dead, having withered to nothing more then a thin,
+sickly looking piece of wood, providing a testament that nothing could
+obviously survive in this wasteland of marsh.
+~
+18874371 0 0 C
+0 0 0 40d1+0 0d0+0
+0 0
+112 112 0
+3 13 13 13 13 13 13
+0 0 0 0 0
+92 8 0 0 65536 65536 0
+0 0 0 0 0 0 0 0
+> fight_prog 100~
+mprestore self 1000
+if rand(33)
+mpechoat $n This doesn't seem to be getting you anywhere... you should probably just "stop".
+endif
+~
+> act_prog p stops.~
+mppeace $n
+mprestore self 1000
+~
+|
+#13202
+drow soldier crawling~
+a drow soldier~
+A drow soldier is crawling through the mud to avoid being detected.
+~
+~
+1090519041 16777728 -1000 C
+5 0 0 0d0+0 0d0+0
+2 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 1 0 0 2 2 0
+0 0 1 256 0 0 32 0
+#13203
+drow soldier running~
+a drow soldier~
+A drow soldier is running by, taking no notice of you, caught up in the commotion.
+~
+~
+1 16777728 -1000 C
+2 0 0 0d0+0 0d0+0
+2 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 1 0 0 2 2 0
+0 0 0 256 0 0 0 0
+> greet_prog 100~
+if isevil($n)
+else
+kill $n
+endif
+~
+|
+#13204
+drow soldier female~
+a female drow soldier~
+A female drow is trudging through the mud, looking out for targets.
+~
+~
+1073741825 16777728 -1000 C
+3 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 1 0 0 2 2 0
+0 0 4 256 0 0 0 0
+> greet_prog 100~
+if isevil($n)
+else
+'You will die!
+kill $n
+endif
+~
+|
+#13205
+drow lieutenant~
+the drow lieutenant~
+A drow lieutenant is here rallying troops into an infantry.
+~
+~
+1073741857 16777728 -1000 C
+7 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 1 0 0 2 2 0
+0 0 1 256 0 0 64 0
+#13206
+drow infantry unit~
+a drow infantry unit~
+A drow infantry unit is here waiting to march out into battle.
+~
+~
+1073741825 16777216 -1000 C
+1 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 1 0 0 2 2 0
+0 0 0 256 0 0 0 0
+#13207
+drow medic~
+a drow medic~
+A drow medic tends to the wounded drow soldiers.
+~
+~
+1090519105 16777728 -1000 C
+4 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 2 0 0 2 2 0
+0 0 0 256 0 0 0 8
+> entry_prog 100~
+if mobcount(0) > 0
+c 'cure light' drow
+endif
+~
+|
+#13208
+drow gunner~
+the drow gunner~
+A drow gunner stands at the ballista's trigger to fire upon the enemy.
+~
+He is standing near the ballista working on the operations of aiming
+and firing the boulders into the far center of the battlefield.
+You wonder how he could possibly succeed in hitting only the enemy
+and none of his own race.
+~
+3 16777728 -1000 C
+2 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 1 0 0 2 2 0
+0 0 0 256 0 0 0 0
+#13209
+drow lookout~
+the drow lookout~
+A drow lookout is assisting the gunner to find targets.
+~
+This drow is too busy surveying the progress of the war through her
+binocular device to notice your approach.  You could probably save a
+good many number of lives were you to take down this spy, though that
+would mean risking yours.
+~
+3 16777728 -1000 C
+2 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 4 0 0 2 2 0
+0 0 0 256 0 0 0 0
+#13210
+drow archer~
+a drow archer~
+A drow archer sits high up in a tree, sniping off passing soldiers.
+~
+~
+1073743875 16777728 -1000 C
+6 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+11 4 0 0 2 2 0
+0 0 0 256 0 0 0 0
+#13211
+human archer~
+a human archer~
+A human archers is sitting in one of the trees firing at the drows.
+~
+~
+1073743875 0 1000 C
+6 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#13300
+Erin~
+Erin~
+Erin is hiding here to handle the newcomers.  Leave her alone.
+~
+~
+1084229635 0 1000 C
+10 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+90 2 0 0 32768 32768 0
+0 0 0 0 0 0 0 0
+> act_prog p has entered the game.~
+mpinvis 10
+if multi($n) > 1
+mpechoat 0.$n _red Sorry, but you're not allowed on here right now...
+mpforce 0.$n quit
+else
+mppkset $n yes
+endif
+~
+> act_prog p has entered the game.~
+mpat hvak1 mpforce hvak1 ask What new soul has entered the troubled world of Amethyst?
+if class($n)==paladin
+mpat hvak2 mpfor hvak2 answer A noble paladin, $n.
+mpoload 13206 1
+endif
+if class($n)==caller
+mpat hvak2 mpfor hvak2 answer A knowledgeable caller, $n.
+mpoload 13203 1
+endif
+if class($n)==blackbelt
+mpat hvak2 mpfor hvak2 answer A blackbelt in the arts, $n.
+endif
+if class($n)==ranger
+mpat hvak2 mpfor hvak2 answer A courageous ranger, $n.
+mpoload 13233 1
+endif
+if class($n)==warrior
+mpat hvak2 mpfor hvak2 answer A robust warrior, $n.
+mpoload 13206 1
+endif
+if class($n)==druid
+mpat hvak2 mpfor hvak2 answer A mystic druid, $n.
+mpoload 13204 1
+endif
+if class($n)==cleric
+mpat hvak2 mpfor hvak2 answer A pious cleric, $n.
+mpoload 13205 1
+endif
+if class($n)==mage
+mpat hvak2 mpfor hvak2 answer A sorcerous mage, $n.
+mpoload 13204 1
+endif
+if class($n)==thief
+mpat hvak2 mpfor hvak2 answer A cunning thief, $n.
+mpoload 13203 1
+endif
+if class($n)==vampire
+mpat hvak2 mpfor hvak2 answer A shadowy vampire, $n.
+mpoload 13232 1
+endif
+if class($n)==augurer
+mpat hvak2 mpfor hvak2 answer A visionary augurer, $n.
+mpoload 13203 1
+endif
+give weapon $n
+mpforce $n wield weapon
+mpoload 13207 1
+mpoload 13209 1
+mpoload 13208 1
+mpoload 13208 1
+mpoload 13234 1
+mpoload 13234 1
+mpoload 13234 1
+mpoload 13234 1
+mpoload 13234 1
+put all backpack
+close backpack
+give backpack $n
+mpforce $n wear backpack
+~
+|
+#0
+
+
+#OBJECTS
+#13201
+bones hand skeleton~
+a skeleton hand~
+Someone's hand is lying here, completely stripped of all skin down to the bones.~
+~
+13 536870912 1
+0 0 0 0
+1 0 0 1
+E
+'skeleton' 'bone' 'bones' 'hand'~
+Ack!  What are you doing with this anyways??
+~
+#13202
+boots brown leather~
+a pair of roughly worn brown leather boots~
+A pair of old brown leather boots have been tossed aside here.~
+~
+9 0 65
+0 0 0 0
+2 0 0 1
+E
+'worn' 'brown' 'old' 'boots' 'leather'~
+These boots are pretty old, and look like they've been through
+some hard walking.  Made of a thick brown leather, they're not the
+optimal in comfortable footware, but are more then likely good
+at keeping one's feet dry in even ankle-high waters.
+~
+#13203
+crude bronze dagger weapon~
+a crudely-made bronze dagger~
+An almost harmless-looking dagger made of bronze has been dropped here.~
+~
+5 0 8193
+8 0 0 2
+3 0 0 1
+E
+'crude' 'bronze' 'dagger'~
+This probably wasn't superbly-crafted, even when it was brand
+new.  It is made of bronze, and is a single-piece weapon,
+proving it to be generic.  It is still sharp however, and is
+definetely not ineffective in killing most anything you would
+use this to attack or defend yourself from.
+~
+#13204
+thin wooden walking stick weapon~
+a thin, wooden walking stick~
+A thin, wooden stick about your height is laying here.~
+~
+5 0 8193
+8 0 0 0
+1 0 0 1
+E
+'thin' 'wooden' 'wood' 'stick' 'walking'~
+This stick is thin end rather smooth, not to mention almost as
+tall as yourself.  It looks like it would fit your hand very well,
+probably a good instrument to hold on long journeys over all types
+of terrain.
+~
+#13205
+small metal mace weapon~
+a small metal mace~
+A metal mace has been dropped here.~
+~
+5 0 8193
+8 0 0 7
+2 0 0 0
+E
+'small' 'metal' 'mace'~
+This mace is obviously not the greatest piece of weaponry in
+all the world, just a simplistic blunt sphere constructed of
+a standard metal fastened to a similarly made metal handle.
+Wielding this you're sure to be able to put up a mighty fight
+against anyone or anything.
+~
+#13206
+finely honed sword weapon~
+a finely honed sword~
+You see a finely honed sword here.~
+~
+5 0 8193
+12 0 0 1
+3 0 0 1
+E
+'finely' 'fine' 'honed' 'hone' 'sword'~
+This sword has obviously been through a fight or two, or maybe
+just used to chop firewood.  Either way it is perfectly capable
+of providing you with a good attack against anyone you might
+want to cut down in your path.
+~
+#13207
+cloth backpack~
+a cloth backpack~
+Someone dropped their backpack here.~
+~
+15 0 524289
+10 1 0 8
+1 0 0 1
+E
+'cloth' 'back' 'backpack' 'pack'~
+This handy piece of equipment is for putting possesions in,
+so that you can carry many things while walking the lands.
+It has a limited capacity, so you can only carry so much with it.
+~
+#13208
+torch~
+a torch~
+A piece of wood, partly wrapped in cloth is here.~
+~
+1 0 16385
+0 0 500 0
+1 3 0 1
+E
+'torch' 'wood'~
+Ah, the ever-useful torch...don't leave home without one or two...
+Holding this in your hand, you will light it, perfect for lighting
+dark caverns or dungeons, not to mention simply to see where you're
+going at nighttime while wandering the countryside.
+It only has so long that you can use it before inevitably burning
+itself out, so use it only when necessary for best performance.
+~
+#13209
+water flask~
+a flask of water~
+You see a flask with some water in it.~
+~
+17 0 1
+40 40 0 0
+1 5 0 1
+E
+'flask' 'water'~
+You can "drink" from this flask when you're thirsty and/or dehydrating.
+It's a very handy to thing to carry around, and you shouldn't be wandering
+far away from town without one.
+~
+#13210
+leggings torn~
+some torn leggings~
+A pair of worn-out leggings lay here.~
+~
+9 0 33 1
+0 0 0 0
+1 0 0 1
+E
+'torn' 'leggings'~
+These leggings aren't currently in the best of shape, they've
+probably been through some rough forests or something.  However
+they will work just fine as something to wear at least.
+~
+#13211
+rusted rusty helmet~
+a heavily rusted helmet~
+An almost fully-rusted helmet lays here.~
+~
+9 524288 17
+0 0 0 0
+1 0 0 1
+E
+'rusty' 'heavily' 'rusted' 'helmet'~
+This helmet was cast from iron, and has rusted greatly
+over time.  It's shaped in a one-size-fits-all manner, and
+despite it's appearance it would still provide pretty good
+protection for your head when worn.
+~
+#13212
+corpse human~
+the corpse~
+The body of a human unknown to you is laying here, very much deceased.~
+~
+23 0 0
+40 0 0 0
+1 0 0 1
+#13213
+ballista~
+the ballista~
+A huge ballista has been set up here, pointed towards the middle of the battlefield.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0 1
+#13214
+boulder~
+a boulder~
+You see a large boulder nearby, which is obviously going to be ammo for the ballista.~
+~
+12 0 0
+0 0 0 0
+1 0 0 1
+#13215
+boulder~
+a boulder~
+Another slightly smaller boulder is also ready to be launched upon the soldiers.~
+~
+12 0 0
+0 0 0 0
+1 0 0 1
+#13216
+corpse drow~
+the corpse~
+The dead body of someone almost elven-like lays here buried half-way under mud.~
+~
+23 0 0
+0 0 0 0
+1 0 0 1
+#13217
+corpse human~
+the corpse~
+The corpse of another human is here, still clutching his sword.~
+~
+23 0 0
+0 0 0 0
+1 0 0 1
+#13218
+broken sword hilt~
+a broken sword hilt~
+A broken hilt to a sword has been tossed away here, useless.~
+~
+13 0 16385
+0 0 0 0
+1 0 0 1
+#13219
+corpse human~
+the corpse~
+The corpse of a human lays here in red-stained mud, already stripped of her posessions.~
+~
+23 0 0
+0 0 0 0
+1 0 0 1
+#13220
+corpse drow~
+the corpse~
+The corpse of a fallen drow soldier lays here, mangled by multipled sword blows.~
+~
+23 0 0
+0 0 0 0
+1 0 0 1
+#13230
+longbow bow~
+a longbow~
+A longbow used from the war is here.~
+~
+56 0 262145
+12 1 2 14 10 0
+3 0 0 5
+#13231
+arrow~
+an arrow~
+An arrow has fallen to the ground.~
+~
+57 0 1
+12 1 5 14
+1 0 0 5
+#13232
+metal fangs weapon~
+some metal fangs~
+A set of metal fangs is here.~
+~
+5 524288 8193
+12 0 0 10
+1 0 0 1
+E
+'metal' 'fang' 'fangs'~
+These metal caps for teeth are jagged sharp, perfect for vampires
+to wield as a very effectful weapon.
+~
+#13233
+chipped knife weapon~
+a chipped knife~
+A slightly chipped knife is laying here.~
+~
+5 0 8193
+11 0 0 2
+1 0 0 1
+E
+'chip' 'chipped' 'knife'~
+This knife is somewhat damaged, with a couple small chips in the
+edge of the blade.  It is made of thick steel on a somewhat oversized
+handle that makes it look sort of like a smaller machete.
+~
+#13234
+food ration~
+a single food ration~
+A single food ration was dropped here.~
+~
+19 0 1
+100 0 0 0
+1 0 0 1
+E
+'food' 'ration'~
+This small amount of non-perishable food can be carried around
+with ease, and eating it will regain your strength when you
+become hungry or starving.
+~
+#13235
+knee-high green boots~
+knee-high green boots~
+A tall pair of green boots are here.~
+~
+9 0 65
+0 0 0 0
+2 0 0 1
+E
+'knee' 'high' 'knee-high' 'kneehigh' 'green' 'boots'~
+This pair of boots are made of some kind of simple material, but
+seem like they might be more then that somehow.  They go all
+the way up to the knees and would probably originate from some
+forest-type place.
+~
+#13236
+green longsleeve tunic~
+a green longsleeve tunic~
+You see a thin green tunic with longsleeves dropped here.~
+~
+9 0 9 1
+0 0 0 0
+1 0 0 1
+E
+'green' 'long' 'sleeve' 'sleeves' 'longsleeve' 'longsleeves' 'tunic'~
+This longsleeved tunic is made of very thin material, but still
+seems to provide pretty good warmth.  It's colored green like
+the trees, and would probably even be good camouflage in a forest.
+~
+#13237
+brown leather vest~
+a brown leather vest~
+A nice leather vest with a little bit of mud on it is here.~
+~
+9 0 9 2
+0 0 0 0
+1 0 0 1
+E
+'brown' 'leather' 'vest'~
+This vest is sewn together by pieces of medium-thickness leather.
+It doesn't look like it has a lot of armor value, but doesn't
+look half bad on you at least.
+~
+A
+17 -1
+#13298
+bladed whip~
+a bladed tri-whip~
+A tri-whip with knife blades is laying here.~
+~
+5 133632&4 8193
+12 0 0 4
+9 20 2 15
+E
+'bladed' 'triwhip' 'tri-whip' 'tri' 'whip' 'knife' 'blades' 'blade'~
+This weapon is diabollically devised for obvious intentions of
+torture and murder.  A whip split into three sections at the
+weapon-end has razor-sharp knife blades attached to them, creating
+a weapon capable of incredible injury and death depending on
+the skill of the user.
+This was obviouslly crafted by the dark elves known as the drow.
+~
+#13299
+enchanted drow living cloak flesh~
+enchanted drow cloak of living flesh~
+A hideous cloak of living flesh is here.~
+~
+9 137728&4 1025
+1 1 0 0
+4 10 1 12
+E
+'enchanted' 'drow' 'cloak' 'living' 'flesh'~
+This cloak is a terrible item created by some unknown mage from
+the flesh of a fallen foe to him.  It pulsates when you hold it
+in your hand, it crawls up your spine when on your back... a
+disturbing example of evil.
+~
+A
+27 16
+A
+27 8
+A
+29 32
+A
+29 64
+#13300
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1077936128 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#13201
+Gathering your Bearings~
+You've been wandering through the lands for some time now,
+travelling over mountains and through forests, passing miles
+upon miles of plains, arriving to this place.  You don't
+know quite what land this is, and who may rule it.  You're
+not even sure if you will meet anyone along your way in this
+foreign place..  Only that adventure is your goal, and what may
+cross along your path is yet for you to see.
+From where you stand here on this ledge you're looking down
+upon a dark area of land, a land that looks minorly flooded
+best to what you can tell.  There's no point in even trying to turn
+back now, you must venture on, and you must begin that by making
+your way down a relatively steep cliffside here.
+~
+~
+0 0 15 1
+D5
+~
+~
+0 -1 13202
+> act_prog p has entered the game.~
+mpat 13201 mpforce erin mpinvis 10
+~
+|
+S
+#13202
+A Wetlands~
+You're standing near a cliffside, looking up upon which you
+have just slidden down without too much trouble, yet would
+be near impossible to make your way back up.
+The earth is mushed with water, and thick vegetation grows
+all around, blocking your way in a great many directions.
+The sky above is dim even during daytime in this land,
+thank goodness you made sure to pack some torches when you
+left...  though that seems like ages ago.
+~
+~
+0 0 15 1
+D2
+~
+~
+0 -1 13240
+D3
+~
+~
+0 -1 13215
+D4
+~
+~
+2112 -1 13201
+D8
+~
+~
+0 -1 13203
+S
+#13203
+The Marsh~
+You're not far here from the cliff that you came down from
+before.  The land is barren of any creatures, with the
+exception of insects, go figure..  The water, though deeper
+in many spots moreso then others, is still relatively
+shallow here and pretty easy to make your way across.
+~
+~
+0 0 15 1
+D2
+~
+~
+0 -1 13204
+D3
+~
+~
+0 -1 13240
+D7
+~
+~
+0 -1 13202
+S
+#13204
+The Marsh~
+Stuffy air surrounds you, carrying the scent of the wetlands
+all around you wherever you are, an almost stench but not so
+aweful as some places you've seen in your time.  A shadow
+passes across you every once in awhile, as a large bird of
+some sort flies across the sky, probably searching for some
+form of life to make a meal out of in this surrounding area.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13203
+D1
+~
+~
+0 -1 13206
+D8
+~
+~
+0 -1 13205
+S
+#13205
+The Marsh~
+A disturbing feeling runs through your body as you wander
+around the wetlands to the menacing sky looming above,
+cloaking the land in a shade as far as you can see.  Full
+green and florishing plants raise out from below the slight
+cover of water across the ground, and wrap around even more
+plants, creating annoying blockades to some directions you
+might otherwise travel...  Cutting through wouldn't be an
+option, it would take too long and tiring work would be a
+bad idea since there is nowhere to stop for camp anywhere
+near you.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13207
+D7
+~
+~
+0 -1 13204
+S
+#13206
+The Marsh~
+You stumble walking along your way, stubbing your toe on something
+below the thin level of water under your feet, somewhere in the
+thick mud.  Probably just a rock, maybe even a heavy vine..there's
+plenty of those around here, poking up out from under the ground
+only to retreat back in another spot elsewhere.  Is it just your
+restless travelling, or is the marsh getting harder to manuver?
+How long have you been going at this?  Will you ever find an end
+to this place?
+~
+~
+0 0 15 1
+D3
+~
+~
+0 -1 13204
+> act_prog p uncovered a skeleton hand!~
+mpechoat $n Whoa!  Seems you tripped over some poor body's hand...searching in the surrounding water you fail to find anything else hidden from sight...what could this mean?
+~
+|
+S
+#13207
+The Marsh~
+Off to the south several hundred yards you can see a group of thin
+trees growing in a cluster, not really surrounded by anything else.
+Perhaps that would be something to move towards?  Other possibilities
+would be further east, where the vegetation grows begins to become
+more dense and structured, though what good could that really do?
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13213
+D2
+~
+~
+0 -1 13208
+D3
+~
+~
+0 -1 13205
+S
+#13208
+The Marsh~
+You are at the first few of a group of thin and not very tall trees,
+all of which are lacking leaves of any kind, just similarly thin
+branches of wood raising upwards in many divisions.  You also take
+simple notice of the water surrounding you and the trees as being
+seemingly deeper then the rest of the land, so unless you want to
+start actually wading, going any further then the trees would not be
+within your best interest probably.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13207
+D2
+~
+~
+0 -1 13209
+D8
+~
+~
+0 -1 13212
+D9
+~
+~
+0 -1 13211
+S
+#13209
+Center of the Trees~
+Having made your way through a few isles of trees, all of which
+are much thinner then yourself, but still growing together in a
+tight formation, you have reached an inner circle clearing, and
+you stand directly upon a small patch of actual dry ground about
+15 feet in diameter.
+This would be an ideal spot to simply rest or even make camp for
+the night.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13208
+D1
+~
+~
+0 -1 13212
+D2
+~
+~
+0 -1 13210
+D3
+~
+~
+0 -1 13211
+S
+#13210
+The Marsh~
+The water is progressively deeper here then on the opposite
+side of the patch of trees.  Going any further would be a bad
+idea, as the air is chilly even during the day, and you're not
+set up properly to travel through waist-high water, which
+undoubtedly will get deeper still as the ground must sink down
+into some kind of large pit of unknown proportion.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13209
+D6
+~
+~
+0 -1 13212
+D7
+~
+~
+0 -1 13211
+S
+#13211
+The Marsh~
+The ground seems to be lowering further down, you must be walking
+down some kind of gradual edge of a pit, though it's impossible to
+see anything with the murky water covering all.  Just to the east of
+you is a small amount of small, thin trees, apparently dead ones at
+that.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13209
+D6
+~
+~
+0 -1 13208
+D8
+~
+~
+0 -1 13210
+S
+#13212
+The Marsh~
+You're having trouble walking along the ground here, having to
+raise your feet higher when you step as the water rises up your
+legs, or are you just moving downwards as the ground slopes lower?
+It'd probably be better to go back northwards.
+~
+~
+0 0 15 1
+D3
+~
+~
+0 -1 13209
+D7
+~
+~
+0 -1 13208
+D9
+~
+~
+0 -1 13210
+S
+#13213
+The Marsh~
+You step off of the muddy ground, crossing over many large
+sturdy vines coming across in ways that overlap each other,
+until you're walking on top of them on something similar to
+a naturally formed stairs.  Further east however the way
+gets worse, as an amount of dead ones create a sort of wall
+of brambles, thorns sticking out all over.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13214
+D3
+~
+~
+0 -1 13207
+S
+#13214
+The Marsh~
+Climbing over large amounts of these vines, you find some kind
+of obstruction to the west, a great many dead vines, brown and
+dried, with thorns covering much of their outter surface.
+To the east you can make a final leap back onto the common
+ground of the wetlands.
+~
+~
+0 0 15 1
+D3
+~
+~
+0 -1 13213
+> entry_prog 33~
+if ispc($n)
+if wasinroom($n) == 13213
+mpechoat $n _red Ouch!  You're sticking yourself with thorns attempting to cross over the brambles.
+mpat 13214 mpdamage $n 3
+endif
+endif
+~
+|
+S
+#13215
+The Marsh~
+Your surroudings seem to be pretty desolate, brown opague water
+covers the ground, too muddy to see through.  Long blades of
+grass and an occasionally more evolved plant with leaves poke
+just slightly up from underneath, and a few incredibly annoying
+insects buzz your face, taunting you most likely to try to do
+something about it...you clasp your hand tighter around your
+weapon...
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13202
+D3
+~
+~
+0 -1 13216
+D8
+~
+~
+0 -1 13240
+S
+#13216
+The Marsh~
+The daytime isn't much different from nighttime, with a
+seemingly permanent shadow cast over this land, making it look
+all the more gloomy, and a chilly breeze often runs across the
+land at a high speed, making things all the more unpleasent.
+Hopefully you'll pass through this geographic region quickly
+and get to something better on the other side.
+To your north is the cliffside to higher land, but there is no
+way to get up here nor anywhere else you can find.
+~
+The nighttime isn't much different from daytime here, though
+still visually darker since there is no sun in the sky.  The
+wetlands seem gloomy and threatening, though signs of living
+anything are nowhere to be found here.
+Hopefully you'll pass through this geographic region quickly
+and get to something better on the other side.
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13215
+D3
+~
+~
+0 -1 13218
+D7
+~
+~
+0 -1 13217
+S
+#13217
+The Marsh~
+You round the corner of the cliffside you initially came down
+from, with still no way up... looks like you're indeed stuck
+here in the wetlands.
+~
+~
+0 0 15 1
+D8
+~
+~
+0 -1 13216
+S
+#13218
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13216
+D3
+~
+~
+0 -1 13219
+D9
+~
+~
+0 -1 13227
+S
+#13219
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13218
+D2
+~
+~
+0 -1 13227
+D3
+~
+~
+0 -1 13220
+D9
+~
+~
+0 -1 13228
+S
+#13220
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13219
+D2
+~
+~
+0 -1 13228
+D3
+~
+~
+0 -1 13221
+D8
+~
+~
+0 -1 13227
+D9
+~
+~
+0 -1 13229
+S
+#13221
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13220
+D2
+~
+~
+0 -1 13229
+D3
+~
+~
+0 -1 13222
+D8
+~
+~
+0 -1 13228
+D9
+~
+~
+0 -1 13230
+S
+#13222
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13221
+D2
+~
+~
+0 -1 13230
+D3
+~
+~
+0 -1 13223
+D8
+~
+~
+0 -1 13229
+D9
+~
+~
+0 -1 13231
+S
+#13223
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13222
+D2
+~
+~
+0 -1 13231
+D3
+~
+~
+0 -1 13224
+D8
+~
+~
+0 -1 13230
+D9
+~
+~
+0 -1 13232
+S
+#13224
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13223
+D2
+~
+~
+0 -1 13232
+D3
+~
+~
+0 -1 13225
+D8
+~
+~
+0 -1 13231
+S
+#13225
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13224
+D3
+~
+~
+0 -1 13226
+D8
+~
+~
+0 -1 13232
+S
+#13226
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13225
+S
+#13227
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13219
+D3
+~
+~
+0 -1 13228
+D6
+~
+~
+0 -1 13218
+D7
+~
+~
+0 -1 13220
+S
+#13228
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13220
+D1
+~
+~
+0 -1 13227
+D3
+~
+~
+0 -1 13229
+D6
+~
+~
+0 -1 13219
+D7
+~
+~
+0 -1 13221
+D9
+~
+~
+0 -1 13233
+S
+#13229
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13221
+D1
+~
+~
+0 -1 13228
+D2
+~
+~
+0 -1 13233
+D3
+~
+~
+0 -1 13230
+D6
+~
+~
+0 -1 13220
+D7
+~
+~
+0 -1 13222
+D9
+~
+~
+0 -1 13234
+S
+#13230
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13222
+D1
+~
+~
+0 -1 13229
+D2
+~
+~
+0 -1 13234
+D3
+~
+~
+0 -1 13231
+D6
+~
+~
+0 -1 13221
+D7
+~
+~
+0 -1 13223
+D8
+~
+~
+0 -1 13233
+D9
+~
+~
+0 -1 13235
+S
+#13231
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13223
+D1
+~
+~
+0 -1 13230
+D2
+~
+~
+0 -1 13235
+D3
+~
+~
+0 -1 13232
+D6
+~
+~
+0 -1 13222
+D7
+~
+~
+0 -1 13224
+D8
+~
+~
+0 -1 13234
+D9
+~
+~
+0 -1 13236
+S
+#13232
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13224
+D1
+~
+~
+0 -1 13231
+D2
+~
+~
+0 -1 13236
+D6
+~
+~
+0 -1 13223
+D7
+~
+~
+0 -1 13225
+D8
+~
+~
+0 -1 13235
+D9
+~
+~
+0 -1 13237
+S
+#13233
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13229
+D3
+~
+~
+0 -1 13234
+D6
+~
+~
+0 -1 13228
+D7
+~
+~
+0 -1 13230
+S
+#13234
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13230
+D1
+~
+~
+0 -1 13233
+D3
+~
+~
+0 -1 13235
+D6
+~
+~
+0 -1 13229
+D7
+~
+~
+0 -1 13231
+S
+#13235
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13231
+D1
+~
+~
+0 -1 13234
+D3
+~
+~
+0 -1 13236
+D6
+~
+~
+0 -1 13230
+D7
+~
+~
+0 -1 13232
+S
+#13236
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13232
+D1
+~
+~
+0 -1 13235
+D3
+~
+~
+0 -1 13237
+D6
+~
+~
+0 -1 13231
+S
+#13237
+The Marsh~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13236
+D6
+~
+~
+0 -1 13232
+S
+#13238
+The Marsh~
+With the sun high in the sky, it's as bright as it's going to get
+though nonetheless still enveloped in a shadow.  However, you
+believe that you spot some kind of passable pathway to the south,
+one you probably wouldn't have noticed otherwise.
+~
+Looking about you, you can see for large distances ahead, seeing
+not a lot more then just the empty marsh reaching out in all
+directions very far.
+~
+0 0 15 1
+D1
+~
+~
+0 -1 13216
+D3
+~
+~
+0 -1 13219
+D9
+~
+~
+0 -1 13227
+> time_prog 16~
+mpclosepassage 13216 3
+mpclosepassage 13219 1
+mpclosepassage 13227 6
+mpopenpassage 13216 13238 3
+mpopenpassage 13219 13238 1
+mpopenpassage 13227 13238 6
+mpopenpassage 13238 13239 2
+~
+> time_prog 18~
+mpclosepassage 13216 3
+mpclosepassage 13219 1
+mpclosepassage 13227 6
+mpopenpassage 13216 13218 3
+mpopenpassage 13219 13218 1
+mpopenpassage 13227 13218 6
+mpclosepassage 13238 2
+~
+|
+S
+#13239
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#13240
+The Marsh~
+Just to the north you see the beginning cliffside you first
+came down from.  The ways to move are open to you in any
+direction just about, but north, northwest, east, and south
+all look most promising to you from here.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13202
+D1
+~
+~
+0 -1 13203
+D2
+~
+~
+0 -1 13241
+D7
+~
+~
+0 -1 13215
+S
+#13241
+The Marsh~
+You see more and more green areas of land, as the water
+receeds in spots all around you and a greater number of
+grass blades can be seen covering the surface of the
+ground for miles around, condensing towards the south
+as the heart of the wetlands is further in that direction.
+~
+~
+0 0 15 1
+D0
+~
+~
+0 -1 13240
+D2
+~
+~
+0 -1 13242
+S
+#13242
+The Marsh~
+You remain cold and under the cover of perpetual darkness, the
+sky allows little light to pass down, this is indeed a place
+of gloom and despair.  Beyond that, you are aware of the
+presence of something or things flying high above you, probably
+something that spotted you as soon as you entered this land, and
+is passing time until a moment of oppertunity arises to make it's
+move on you.  Naturally, you have your objections to this idea.
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13241
+D2
+~
+~
+0 -1 13245
+D3
+~
+~
+0 -1 13244
+D8
+~
+~
+0 -1 13243
+S
+#13243
+The Misery~
+You are deep within the inner areas of the wetlands, before
+you hardly notice otherwise you are enveloped in a dense fog
+hovering over the land, creating a short range on how far ahead
+you can see in front of yourself in every direction.
+~
+~
+0 1610612736 15 1
+D7
+~
+~
+0 -1 13242
+S
+#13244
+The Marsh~
+You're wandering off from your original way going south,
+only to stop here and find that the wetlands continue on
+forever in all directions for several days' travel probably
+before you can imagine you would find an end.
+~
+~
+0 1073741824 15 1
+D1
+~
+~
+0 -1 13242
+D2
+~
+~
+0 -1 13249
+D3
+~
+~
+0 -1 13247
+D7
+~
+~
+0 -1 13246
+D9
+~
+~
+0 -1 13248
+S
+#13245
+The Misery~
+You hardly notice your scenery fading from sight, when
+you suddenly become aware that you are surrounded by
+a fog all around, extending further then you know of
+and limiting your sight to the point of only being
+able to see the hand you wave in front of your face.
+~
+~
+0 1610612736 15 1
+D0
+~
+~
+0 -1 13242
+D2
+~
+~
+0 -1 13252
+D3
+~
+~
+0 -1 13250
+S
+#13246
+The Marsh~
+Looking around in all directions, you see nothing for miles
+around but simple, open wetland, a green hue given to the
+black soil all over the place, and flooded puddles of
+muddy water everywhere.
+~
+~
+0 1073741824 15 1
+D8
+~
+~
+0 -1 13244
+S
+#13247
+The Marsh~
+Looking around in all directions, you see nothing for miles
+around but simple, open wetland, a green hue given to the
+black soil all over the place, and flooded puddles of
+muddy water everywhere.
+~
+~
+0 1073741824 15 1
+D1
+~
+~
+0 -1 13244
+S
+#13248
+The Marsh~
+Looking around in all directions, you see nothing for miles
+around but simple, open wetland, a green hue given to the
+black soil all over the place, and flooded puddles of
+muddy water everywhere.
+~
+~
+0 1073741824 15 1
+D6
+~
+~
+0 -1 13244
+S
+#13249
+The Marsh~
+Looking around in all directions, you see nothing for miles
+around but simple, open wetland, a green hue given to the
+black soil all over the place, and flooded puddles of
+muddy water everywhere.
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13244
+S
+#13250
+The Misery~
+You wander almost aimlessly around in the dense fog,
+with little hope of finding a way out anywhere nearby.
+The splashing of your footsteps in the puddles of water
+accompanies you everywhere you move.
+~
+~
+0 1610612736 15 1
+D1
+~
+~
+0 -1 13245
+D2
+~
+~
+0 -1 13251
+S
+#13251
+The Misery~
+The fog adds an chills the air even more then usual, with
+an icy breeze blowing through almost constantly.  Still
+wandering through the fog without clear idea of which way
+is what, there is little more you can do but continue
+walking according to your instincts.
+~
+~
+0 1610612736 15 1
+D0
+~
+~
+0 -1 13250
+D8
+~
+~
+0 -1 13252
+S
+#13252
+The Misery~
+Thick fog surrounds you all around...beyond the fog only
+silence.  No sounds of movement other then your own feet
+in mud as you walk at a steady pace.  The fog has broken
+in some small areas once or twice, such is the nature of
+fog evidentally.  You can't even keep warm in the 
+freezing cold, which you could figure would bother you
+if you weren't moving constantly.
+~
+~
+0 1610612736 15 1
+D0
+~
+~
+0 -1 13245
+D3
+~
+~
+0 -1 13254
+D7
+~
+~
+0 -1 13251
+D9
+~
+~
+0 -1 13253
+S
+#13253
+The Misery~
+Almost pure white is all that sits in front of your
+face.  Still trying to figure your way around, you
+are wont to question whether you truly know which
+way north or south is.
+~
+~
+0 1610612740 15 1
+D6
+~
+~
+0 -1 13252
+D8
+~
+~
+0 -1 13256
+S
+#13254
+The Misery~
+You are in the middle of a lighter fog, more of a mist really.
+It gets much denser more towards the general northern direction
+from where you're standing now, though to the south it spreads
+out thinner and visibility is clearer.
+~
+~
+0 1610612736 15 1
+D1
+~
+~
+0 -1 13252
+D9
+~
+~
+0 -1 13255
+S
+#13255
+The Misery~
+You come to a temporary clearing in the fog, but only to
+find yourself at a dead end surrounded by large amounts of
+rocks, piles of rocks which seem to be formed into walls.
+Halting to examine your surroundings, you can hear faint
+noises in the distance, but you're unclear exactly what
+direction.
+~
+~
+0 1073741824 15 1
+D6
+~
+~
+0 -1 13254
+S
+#13256
+The Misery~
+You are clouded in fog all around you, stretching out for all
+around you.  The air however has a faint odor to it, but you can't
+quite put your finger on what it is exactly.  You also are aware
+of a slightly more obvious sound coming from somewhere near you,
+much sound really.  It seems you are close to something.
+~
+~
+0 1610612736 15 1
+D2
+~
+~
+0 -1 13257
+D7
+~
+~
+0 -1 13253
+S
+#13257
+Battlefield~
+A fog covers much of the land to the entire northern region, obstructing
+most all of the scenary beyond from you.
+You find yourself here admist some kind of event, though everything
+is quite hectic and you're overcome by too many things happening all
+at once.  You pick out several distant figures across the fields,
+many tall, slender humanoid peoples running back and forth... They
+appear to be engaging some others in battle.  It's just at this time
+that you become aware of a dead person to your feet...
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+16777216 -1 13256
+D1
+~
+~
+0 -1 13258
+D2
+~
+~
+0 -1 13264
+D3
+~
+~
+0 -1 13265
+D8
+~
+~
+0 -1 13261
+D9
+~
+~
+0 -1 13266
+> entry_prog 10~
+if isevil($n)
+mpat 13270 mpforce human mpoload 13231 5
+mpat 13270 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13270 mpforce drow mpoload 13231 5
+mpat 13270 mpforce drow fire east $n
+else
+mpat 13270 mpforce human mpoload 13231 5
+mpat 13270 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13270 mpforce drow mpoload 13231 5
+mpat 13270 mpforce drow fire east $n
+endif
+~
+|
+S
+#13258
+Battlefield~
+Bodies are strewn out across the wetlands, many fallen soldiers
+of both sides, most mangled with aweful injuries inflicted from
+one-on-one fights of the surrounding war you've found yourself
+admist.
+Ear-splitting explosions of distant firepower echo across the
+fields from somewhere around you.
+~
+~
+0 1073741824 15 1
+D2
+~
+~
+0 -1 13261
+D3
+~
+~
+0 -1 13257
+D8
+~
+~
+0 -1 13259
+D9
+~
+~
+0 -1 13264
+> entry_prog 10~
+if isevil($n)
+mpat 13270 mpforce human mpoload 13231 5
+mpat 13270 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13270 mpforce drow mpoload 13231 5
+mpat 13270 mpforce drow fire east $n
+else
+mpat 13270 mpforce human mpoload 13231 5
+mpat 13270 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13270 mpforce drow mpoload 13231 5
+mpat 13270 mpforce drow fire east $n
+endif
+~
+|
+S
+#13259
+Battlefield~
+The fields of battle reach far across the land to the east and west,
+though the geography of this area allows for it to be contained within
+a surrounding circumference of impassible forests on both sides,
+and the only open direction is mostly southwards.
+~
+~
+0 1073741824 15 1
+D1
+~
+~
+0 -1 13260
+D2
+~
+~
+0 -1 13262
+D3
+~
+~
+0 -1 13261
+D7
+~
+~
+0 -1 13258
+D9
+~
+~
+0 -1 13263
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+else
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+else
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13260
+Battlefield~
+A large mass of trees stem from somewhere far to the north and
+reach down past here somewhere to the south as well, creating
+an ideal naturally-contained area for the fighting to take place.
+Far off to the west past all the moving figures out of sight
+you can see a similar amount of large trees.
+~
+~
+0 1073741824 15 1
+D3
+~
+~
+0 -1 13259
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+else
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+else
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13261
+Battlefield~
+You are somewhere in the open center area of the battlefield,
+trying your best to avoid becoming another casualty like those who
+lie dead at your feet.  You should make your way for some kind of
+cover, even though there are no obstructions anywhere within the
+wetland.
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13258
+D1
+~
+~
+0 -1 13259
+D2
+~
+~
+0 -1 13263
+D3
+~
+~
+0 -1 13264
+D7
+~
+~
+0 -1 13257
+D8
+~
+~
+0 -1 13262
+D9
+~
+~
+0 -1 13267
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+else
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+else
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13262
+Battlefield~
+Great long trenches trail from somewhere to the southwest, where
+some amount of people have hauled an incredible ballista from, and
+set it up to fire upon the center area of the battlefield.
+Off to the south you can see from here something of a village,
+though it's too far to make anything out about it specifically.
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13259
+D3
+~
+~
+0 -1 13263
+D7
+~
+~
+0 -1 13261
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+else
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+else
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13263
+Battlefield~
+You are near the eastern outskirts of the battlefield, but up ahead
+you see little more then trees.  Directly east you also vaguely
+spot a large object, but you don't know what it is.
+Far to the south there are a great many number of things, it looks
+possibly like a small village perhaps.
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13261
+D1
+~
+~
+0 -1 13262
+D3
+~
+~
+0 -1 13267
+D6
+~
+~
+0 -1 13259
+D7
+~
+~
+0 -1 13264
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+else
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+else
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13264
+Battlefield~
+All around you many deep trenches have been dug out in the swamp,
+though few appear to be occupied currently... those that are seem
+to have been blown out or raided and now guard only more dead
+bodies...
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13257
+D1
+~
+~
+0 -1 13261
+D2
+~
+~
+0 -1 13267
+D3
+~
+~
+0 -1 13266
+D6
+~
+~
+0 -1 13258
+D8
+~
+~
+0 -1 13263
+D9
+~
+~
+0 -1 13268
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+else
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+else
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13265
+Battlefield~
+Fog-covered trees line most of the north area, and round off the
+west and further eastern sides of the open fields, making this
+an easy place to get slaughtered in during this constant war.
+You are followed everywhere by loud noises of weapons clashing
+as peoples of two, maybe more, sides fight each other, and a
+slightly more uncommon explosion as a large boulder or cannonball
+comes hurling down from above.
+~
+~
+0 1073741824 15 1
+D1
+~
+~
+0 -1 13257
+D2
+~
+~
+0 -1 13266
+> entry_prog 10~
+if isevil($n)
+mpat 13270 mpforce human mpoload 13231 5
+mpat 13270 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13270 mpforce drow mpoload 13231 5
+mpat 13270 mpforce drow fire east $n
+else
+mpat 13270 mpforce human mpoload 13231 5
+mpat 13270 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13270 mpforce drow mpoload 13231 5
+mpat 13270 mpforce drow fire east $n
+endif
+~
+|
+S
+#13266
+Battlefield~
+The air is filled with many arrows shooting in every direction,
+though most seem to be coming from the wall of forest to the west
+of you which continues further to the south and allowing no pass
+out of this field anywhere near here.
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13265
+D1
+~
+~
+0 -1 13264
+D2
+~
+~
+0 -1 13268
+D6
+~
+~
+0 -1 13257
+D8
+~
+~
+0 -1 13267
+D9
+~
+~
+0 -1 13269
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+else
+mpat 13271 mpforce human mpoload 13231 5
+mpat 13271 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13271 mpforce drow mpoload 13231 5
+mpat 13271 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+else
+mpat 13273 mpforce human mpoload 13231 5
+mpat 13273 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13273 mpforce drow mpoload 13231 5
+mpat 13273 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13267
+Battlefield~
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13264
+D1
+~
+~
+0 -1 13263
+D3
+~
+~
+0 -1 13268
+D6
+~
+~
+0 -1 13261
+D7
+~
+~
+0 -1 13266
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+else
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+else
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13268
+Battlefield~
+~
+~
+0 1073741824 15 1
+D0
+~
+~
+0 -1 13266
+D1
+~
+~
+0 -1 13267
+D3
+~
+~
+0 -1 13269
+D6
+~
+~
+0 -1 13264
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+else
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+else
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13269
+Battlefield~
+~
+~
+0 1073741824 15 1
+D1
+~
+~
+0 -1 13268
+D6
+~
+~
+0 -1 13266
+> entry_prog 10~
+if rand(50)
+if isevil($n)
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+else
+mpat 13272 mpforce human mpoload 13231 5
+mpat 13272 mpforce human fire east $n
+endif
+endif
+if isgood($n)
+mpat 13272 mpforce drow mpoload 13231 5
+mpat 13272 mpforce drow fire east $n
+endif
+else
+if isevil($n)
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+if isneutral($n)
+if rand(50)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+else
+mpat 13275 mpforce human mpoload 13231 5
+mpat 13275 mpforce human fire west $n
+endif
+endif
+if isgood($n)
+mpat 13275 mpforce drow mpoload 13231 5
+mpat 13275 mpforce drow fire west $n
+endif
+endif
+~
+|
+S
+#13270
+In a forest~
+~
+~
+0 1610612744 3 100
+D1
+~
+~
+16777216 -1 13265
+S
+#13271
+In a forest~
+~
+~
+0 1073741824 3 100
+D1
+~
+~
+16777216 -1 13266
+S
+#13272
+In a forest~
+~
+~
+0 1073741824 3 100
+D1
+~
+~
+16777216 -1 13269
+S
+#13273
+In a forest~
+~
+~
+0 1073741824 3 100
+D3
+~
+~
+16777216 -1 13260
+S
+#13275
+In a forest~
+~
+~
+0 1073741824 3 100
+D3
+~
+~
+16777216 -1 13262
+S
+#13300
+Final Room~
+~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+O 1 13201 1 13206
+M 1 13201 1 13202
+O 1 13212 1 13257
+M 1 13208 1 13262
+M 1 13209 1 13262
+O 1 13213 1 13262
+O 1 13214 1 13262
+O 1 13215 1 13262
+O 1 13216 1 13264
+O 1 13217 1 13264
+O 1 13219 1 13258
+O 1 13220 1 13259
+M 1 13210 1 13270
+E 1 13230 1 21
+M 1 13211 1 13270
+E 1 13230 1 16
+M 1 13210 2 13273
+E 1 13230 1 21
+M 1 13211 2 13273
+E 1 13230 1 21
+M 1 13210 3 13271
+E 1 13230 1 21
+M 1 13211 3 13271
+E 1 13230 1 21
+M 1 13210 4 13272
+E 1 13230 1 21
+M 1 13211 4 13272
+E 1 13230 1 21
+M 1 13210 5 13275
+E 1 13230 1 21
+M 1 13211 5 13275
+E 1 13230 1 21
+M 1 13300 1 13201
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

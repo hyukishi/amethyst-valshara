@@ -1,0 +1,813 @@
+#AREA   {PROTO} Daikini's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Daikini~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#1101
+stream~
+a meandering stream~
+A slowly moving stream meanders through the hillside.~
+~
+17 1073741824 0
+100 100 0 0
+1 0 0
+#1102
+Withywindle~
+The Withywindle~
+The great river Withywindle, bubbles and churns.~
+~
+17 1073741824 0
+1000 1000 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#1101
+Entrance to the Old Forest~
+You stand on the edge of the infamous Old Forest.
+The Old Forest is rumored to allow travelers to enter, 
+only never to return.  Large trees loom overhead, so
+think is the canopy that less then a few feet in it is 
+completely dark. You wonder if you should turn back or
+try your chance in the forest and head southward.
+~
+0 1073741824 3 49
+D2
+~
+~
+0 -1 1102
+S
+#1102
+Finding Your Way~
+The light you carry only penetrates a few feet into the
+blackness.  Occasionally the light reflects off of the cobwebs
+that look as if they were carefully weaved into the branches
+ and other vegetation.  You can no longer see the entrance, but
+you know it is to your north.  Otherwise it looks as if the trail
+continues to the east, but you think you see a trail to the southeast.
+~
+0 1073741825 3 0
+D0
+~
+~
+0 -1 1101
+D6
+~
+~
+0 -1 1106
+D8
+~
+~
+2048 -1 1103
+S
+#1103
+Forest Closes In~
+Even though there is no wind, the trees move about you.  You
+could swear the trees are whispering some unintelligible 
+language.  Carefully you place your next step around constantly
+shifting roots.  Exits are to the northwest and south.
+~
+0 1073741825 3 0
+D2
+~
+~
+0 -1 1104
+D3
+~
+~
+0 -1 1107
+D7
+~
+~
+0 -1 1102
+S
+#1104
+The Trail Leads On~
+There are various strange things that live deep within the
+Old Forest and on the far side.  Because what else could be
+creating the paths.  Even the paths seem to be alive, constantly
+shifting.  The path goes to the north or south.
+~
+0 1073741825 3 0
+D0
+~
+~
+0 -1 1103
+D2
+~
+~
+0 -1 1105
+D3
+~
+~
+0 -1 1107
+S
+#1105
+Entering the Ring of Trees~
+The darkness seems to be pushed back as you continue
+southward.  You notice in front of you there is a clearing 
+of trees.  
+~
+0 1073741825 3 0
+D0
+~
+~
+0 -1 1104
+D2
+~
+~
+0 -1 1108
+D3
+~
+~
+0 -1 1107
+S
+#1106
+A Side Trail~
+Looking around only tree trunks of innumerable sizes and 
+shapes straight or bent, twisted, leaning, squat or
+slender, smooth or gnarled and branched an all the
+trunks were brown or gray with moss and slimy shaggy growths.
+~
+0 1073741825 3 0
+D7
+~
+~
+0 -1 1101
+D9
+~
+~
+0 -1 1102
+S
+#1107
+Another Side Trail~
+There is no sound, except an occasional drip of moisture
+falling from the uncanny still canopy above.  For the 
+moment the whispering has stopped, but all of a sudden you
+have the uncomfortable feeling that you are being watched.
+~
+0 1073741825 3 0
+D0
+~
+~
+0 -1 1102
+S
+#1108
+Circle of Trees~
+Suddenly you step out of the trees and find yourself in
+a wide circular space.  You welcome the sight of the sky
+above you, for while down under the Forest-roof you had
+not been able to see the sky.
+~
+0 1073741824 3 100
+D0
+~
+~
+0 -1 1105
+D2
+~
+~
+0 -1 1115
+D7
+~
+~
+0 -1 1109
+S
+#1109
+Walking the Circle~
+The leaves seem to be all thicker and greener about the edges
+of the glade, enclosing it with an almost solid wall.  A few 
+feet in from the circle of trees and the light seems to just
+fade away, not allowing any saplings or other vegetation that
+requires sun to grow.
+~
+0 1073741824 3 49
+D2
+~
+~
+0 -1 1110
+D8
+~
+~
+0 -1 1108
+S
+#1110
+Walking the Circle~
+The leaves seem to be all thicker and greener about the edges
+of the glade, enclosing it with an almost solid wall.  A few 
+feet in from the circle of trees and the light seems to just
+fade away, not allowing any saplings or other vegetation that
+requires sun to grow.
+~
+0 1073741824 3 49
+D8
+~
+~
+0 -1 1111
+S
+#1111
+Walking the Circle~
+The leaves seem to be all thicker and greener about the edges
+of the glade, enclosing it with an almost solid wall.  A few 
+feet in from the circle of trees and the light seems to just
+fade away, not allowing any saplings or other vegetation that
+requires sun to grow.
+~
+0 1073741824 3 49
+D1
+~
+~
+0 -1 1112
+D7
+~
+~
+0 -1 1110
+S
+#1112
+Walking the Circle~
+The leaves seem to be all thicker and greener about the edges
+of the glade, enclosing it with an almost solid wall.  A few 
+feet in from the circle of trees and the light seems to just
+fade away, not allowing any saplings or other vegetation that
+requires sun to grow.
+~
+0 1073741824 3 49
+D3
+~
+~
+0 -1 1111
+D6
+~
+~
+0 -1 1113
+S
+#1113
+Walking the Circle~
+The leaves seem to be all thicker and greener about the edges
+of the glade, enclosing it with an almost solid wall.  A few 
+feet in from the circle of trees and the light seems to just
+fade away, not allowing any saplings or other vegetation that
+requires sun to grow.
+~
+0 1073741824 3 49
+D0
+~
+~
+0 -1 1114
+D9
+~
+~
+0 -1 1112
+S
+#1114
+Walking the Circle~
+The leaves seem to be all thicker and greener about the edges
+of the glade, enclosing it with an almost solid wall.  A few
+feet in from the circle of trees and the light seems to just
+fade away, not allowing any saplings or other vegetation that
+requires sun to grow.
+~
+0 1073741824 3 49
+D2
+~
+~
+0 -1 1113
+D3
+~
+~
+0 -1 1109
+S
+#1115
+Leaving the Circle~
+At the far side of the glade there was a break in the wall of 
+trees, and a clear path beyond it.  You can see that the path
+goes back into the woods, wide in places and open above.
+~
+0 1073741824 3 69
+D0
+~
+~
+0 -1 1108
+D9
+~
+~
+0 -1 1116
+S
+#1116
+The Path Continues~
+Every now and then the trees drew in and over-shadowed
+the path with their dark boughs.  You continue down the path,
+it seems that you are travelling much quicker, now that 
+the tree roots have thinned and the feeling of being
+watched is gone.
+~
+0 1073741824 3 49
+D6
+~
+~
+0 -1 1115
+D9
+~
+~
+0 -1 1117
+S
+#1117
+The Wandering Path~
+The Old Forest finally begins to truly thin out.  A breeze greets
+you on your face.  A small hillock lies before you and to the 
+northeast you can see the forest threatening you to enter at your 
+own risk.
+~
+0 1073741824 3 74
+D4
+~
+~
+0 -1 1118
+D6
+~
+~
+0 -1 1116
+S
+#1118
+Climbing the Hillock~
+As you climb the hill, you notice the trees give way to
+wood parsley, fireweed, fluffy ashes and wild growing nettles
+and thistles.  Tall sedges rustle from the fresh breeze blowing
+out from the north.  You see the forest below you and 
+upward the trail continues.
+~
+0 1073741824 4 99
+D4
+~
+~
+128 -1 1119
+D5
+~
+~
+0 -1 1117
+S
+#1119
+Upon the Hillock~
+At last you stand on top of the hillock, it seems as though
+you have travelled for days.  The sedges and weeds have given
+way to turf.  As you look down the hillside, you chuckle to
+yourself because of the way the trees transition to weeds
+then weeds to turf, it reminds you of a bald mans head.
+~
+0 1073741824 4 100
+D5
+~
+~
+0 -1 1118
+D6
+~
+~
+0 -1 1120
+S
+#1120
+Walking the Ridge~
+You constantly watch your footing because not only 
+is the trail hard to see do to lack of use, the trail is 
+also littered with rocks and other debris which you
+have to step around.
+~
+0 1073741824 4 99
+D1
+~
+~
+0 -1 1121
+D9
+~
+~
+0 -1 1119
+S
+#1121
+The Path Continues~
+The trail is very hard to track, you notice that to the
+south the trail becomes more defined.  The smell of water
+reaches your nose.  It will be nice and refreshing to fill
+water flasks and wash up.
+~
+0 1073741824 4 99
+D2
+~
+~
+0 -1 1122
+D3
+~
+~
+0 -1 1120
+S
+#1122
+Crossing a Stream~
+The edge of the stream was slippery and as you take that last
+step you slip and fall into the stream with a load SPLASH!
+The stream is flows very slowly here and you can make out the
+faint sound of water gurgling ahead.
+~
+0 1073741824 4 99
+D0
+~
+~
+0 -1 1121
+D4
+~
+~
+0 -1 1123
+S
+#1123
+The Meandering Path~
+You hurry forward, delighted with the thought of climbing
+out above the roof of the Old Forest. Occasionally the 
+path dips, but again rise to allow a panoramic view of 
+the country side.
+~
+0 1073741824 4 100
+D1
+~
+~
+0 -1 1124
+D5
+~
+~
+0 -1 1122
+S
+#1124
+Admiring the Hillock~
+The air is gleaming with sunlight, but yet a haze can be 
+seen over the Old Forest.  This haze prevents you from seeing
+the western edge of the forest.  Large bird-like creatures
+can be seen circling to the west-southwest.
+~
+0 1073741824 4 99
+D3
+~
+~
+0 -1 1123
+D4
+~
+~
+0 -1 1125
+S
+#1125
+A Steep Climb~
+The trail becomes more rough.  The hillside has been 
+carved out to create steps.  Each step is of perfect
+shape and form and allows you to easily scale the steep
+hillside
+~
+0 1073741824 4 99
+D4
+~
+~
+0 -1 1126
+D5
+~
+~
+0 -1 1124
+S
+#1126
+Grand View~
+The vantage point allows you to see the area completely
+around you.  To the northeast mist still hangs over the
+damp and deep-cut valley.  The northern half of the Old
+Forest now fades from view.
+~
+0 1073741824 4 99
+D5
+~
+~
+0 -1 1125
+D8
+~
+~
+0 -1 1200
+S
+#1127
+The Withywindle~
+The stream you once crossed has grown stronger and noiser,
+and is flowing swiftly to the northeast.  The area around you
+seems to be a dim-lit gully over-arched by trees high above
+on the hillside.
+~
+0 1073741824 11 49
+D4
+~
+~
+0 -1 1200
+D6
+~
+~
+0 -1 1128
+S
+#1128
+Following the Withywindle~
+The ground is soft and as you walk each foot squishes into
+the bog-like ground.  Occasionaly a spring or two can 
+be seen gurgling from the ground, then flowing to
+the river to add to the power the Withywindle has amassed.
+~
+0 1073741824 3 49
+D0
+~
+~
+0 -1 1129
+D9
+~
+~
+0 -1 1127
+S
+#1129
+Finding The Trail~
+The trail somehow mysterically vanishes.  All traces of the 
+trail is lost.  The only obvious exit is back where you came,
+however you are sure the trail must lead on.  Maybe if you
+searched the area you could find the trail once again.
+~
+0 1073741824 3 70
+D2
+~
+~
+0 -1 1128
+D7
+~
+~
+2048 -1 1130
+S
+#1130
+The Trail Continues~
+Off in the distance you can the Withywindle's brown water
+flowing down the hillside.  The trail is much more distinguishable
+now.  You wonder if someone purposely was trying to hide the trail
+The thought passes and you decide you must press on.
+~
+0 1073741824 3 69
+D3
+~
+~
+0 -1 1131
+D8
+~
+~
+0 -1 1129
+S
+#1131
+The Forest Edge~
+The forest edge is bordered by ancient willows, some fallen 
+over, other willows are fleched with thousands of faded
+willow leaves.  A strong gust of wind causes the air to become
+thick with yellow willow leaves, fluttering down from the 
+branches.
+~
+0 1073741824 3 99
+D1
+~
+~
+0 -1 1130
+D3
+~
+~
+0 -1 1132
+S
+#1132
+A Small Field~
+There is a warm and gentle breeze blowng softly
+through the meadow.  The sun makes the meadow grasses
+look as if they are made of gold.  The northern part
+of the meadow is filled with wildflowers of all sorts
+of colors and shapes.
+~
+0 1073741824 2 99
+D0
+~
+~
+0 -1 1133
+D1
+~
+~
+0 -1 1131
+S
+#1133
+The Gate~
+The grass under foot is smooth and short, as if it had
+been mowed.  The distant forest now only looks like an
+overgrown hedge.  The path is well tended and bordered 
+with stone that leads up to a sturdy wrought iron 
+gate.
+~
+0 1073741824 2 99
+D2
+~
+~
+0 -1 1132
+D6
+~
+gate~
+526336 -1 1134
+S
+#1134
+The Courtyard~
+~
+0 1073741824 1 99
+D0
+~
+~
+0 -1 1135
+D1
+~
+~
+0 -1 1142
+D3
+~
+~
+0 -1 1138
+D9
+~
+~
+0 -1 1133
+S
+#1135
+The Fountain~
+~
+0 1073741824 1 99
+D2
+~
+~
+0 -1 1134
+D6
+~
+~
+0 -1 1137
+D7
+~
+~
+0 -1 1136
+S
+#1136
+The Western Wall~
+~
+0 1073741824 1 99
+D0
+~
+~
+0 -1 1139
+D1
+~
+~
+0 -1 1137
+D2
+~
+~
+0 -1 1138
+D8
+~
+~
+0 -1 1135
+S
+#1137
+Before the Main Entrance~
+~
+0 1073741824 1 99
+D1
+~
+~
+0 -1 1141
+D3
+~
+~
+0 -1 1136
+D9
+~
+~
+0 -1 1135
+S
+#1138
+Southwest Wall~
+~
+0 1073741824 1 99
+D0
+~
+~
+0 -1 1136
+D1
+~
+~
+0 -1 1134
+S
+#1139
+Northwest Wall~
+~
+0 1073741824 1 99
+D1
+~
+~
+0 -1 1140
+D2
+~
+~
+0 -1 1136
+S
+#1140
+Northeast Wall~
+~
+0 1073741824 1 99
+D2
+~
+~
+0 -1 1141
+D3
+~
+~
+0 -1 1139
+S
+#1141
+East Wall~
+~
+0 1073741824 1 99
+D0
+~
+~
+0 -1 1140
+D1
+~
+~
+0 -1 1142
+D2
+~
+~
+0 -1 1142
+D3
+~
+~
+0 -1 1137
+S
+#1142
+Southeast Wall~
+~
+0 1073741824 1 70
+D0
+~
+~
+0 -1 1141
+D3
+~
+~
+0 -1 1134
+S
+#1200
+A Skinny Ledge~
+The trail seems to have broken away from the hillside.  There
+is only a narrow piece of rock protruding to allow only
+the smallest of creatures to pass without slipping and falling.
+~
+0 1090519040 4 80
+D5
+~
+~
+0 -1 1127
+D7
+~
+~
+0 -1 1126
+S
+#0
+
+
+#RESETS
+O 1 1101 1 1122
+O 1 1102 1 1127
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,2414 @@
+#AREA   City of New Hope Sector 2~
+
+
+
+#VERSION 200
+#AUTHOR XahXhaX~
+
+#RANGES
+1 115 1 115
+$
+
+#RESETMSG You hear the sound of townsfolk conversing all around you.~
+
+#FLAGS
+0 60
+
+#ECONOMY 0 31249907
+
+#CLIMATE 3 1 1
+
+#NEIGHBOR City of New Hope~
+
+#NEIGHBOR Graveyard~
+
+#NEIGHBOR The Western Plains~
+
+#NEIGHBOR The Eastern Plains~
+
+#NEIGHBOR New Hope Castle~
+
+#NEIGHBOR City of New Hope Sector 2~
+
+#MOBILES
+#12601
+apple vender~
+the apple vender~
+A man is here with his cart selling apples.
+~
+~
+1090519043 0 200 C
+20 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+> fight_prog 100~
+yell Help!  Guards!
+mppmload 12512
+~
+> time_prog 6~
+wake
+mpoload 12421 1
+put apple applecart
+eat apple
+mposet applecart wear take
+get cart
+mpoload 12800 1
+unlock door
+open door
+north
+close south
+lock south
+mppurge xapplevender
+east
+east
+east
+north
+north
+north
+north
+north
+mposet applecart wear take
+drop cart
+yell Apples for sell, ripe juicy apples, only 3 gold coins each.
+~
+> time_prog 12~
+mposet applecart wear take
+get applecart
+south
+south
+south
+south
+south
+west
+south
+south
+south
+south
+mposet applecart wear take
+drop cart
+yell Fresh apples for sell.  Only 3 gold coins each.
+~
+> time_prog 16~
+mposet applecart wear take
+get applecart
+west
+west
+west
+west
+west
+west
+west
+west
+west
+west
+mposet applecart wear take
+drop applecart
+yell Who wants apples?  3 gold coins a piece.  Get your apples right here.
+~
+> time_prog 18~
+mposet applecart wear take
+get applecart
+north
+north
+north
+north
+east
+east
+east
+east
+mposet applecart wear take
+drop applecart
+yell Apples for sell, 3 gold coins each!
+~
+> time_prog 20~
+mposet applecart wear take
+get applecart
+east
+east
+east
+east
+mpoload 12800 1
+unlock south
+open south
+south
+mpforce all north
+close door
+lock door
+mppurge xapplevender
+mposet applecart wear take
+drop applecart
+sleep
+~
+> act_prog p gets an apple from the apple cart~
+'that will be 3 gold coins, please.
+if goldamt($n) < 3
+mpforce $n give apple vender
+'Sorry, looks like you don't have enough gold.
+put apple applecart
+else
+mpforce $n give 3 coins vender
+'Thank you $n, good day to you.
+smile
+endif
+~
+> greet_prog 60~
+'Hello, might I interest you in a nice apple?
+~
+|
+#12602
+new hope cityguard guard~
+the New Hope Cityguard~
+A New Hope cityguard patrols the streets.
+~
+~
+65 0 500 C
+21 0 0 4d10+600 2d4+12
+3 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 2048 0 128 524291
+> bribe_prog 1~
+'Thank you, but the city pays my salary for me.
+~
+> entry_prog prog 100~
+if rand(40)
+peer
+endif
+if mobinroom(12450) > 0
+yell To arms!  A spy is sneaking around the city streets!
+kill spy
+endif
+~
+|
+#12603
+mask merchant~
+the mask merchant~
+The mask merchant is here before you.
+~
+~
+1090521091 0 100 C
+23 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+> time_prog 9~
+wake
+down
+mpoload 12491 1
+unlock inventory
+open inventory
+get all inventory
+close inventory
+lock inventory
+mppurge shopkeeper
+mpoload 12799 1
+unlock door
+open door
+mppurge xmaskmerchant
+sit chair
+~
+> time_prog 20~
+stand
+open door
+'Time to close shop, see you tomorrow.
+mpforce all south
+close door
+mpoload 12799 1
+lock door
+mppurge xmaskmerchant
+mpoload 12491 1
+unlock inventory
+open inventory
+mppurge shopkeeper
+put all inventory
+close inventory
+mpoload 12491 1
+lock inventory
+mppurge shopkeeper
+up
+sleep
+~
+> act_prog p wakes you.~
+mptransfer $n 12661
+sleep
+~
+|
+#12604
+woman mother~
+the mother~
+A woman is standing at the doorstep of her house.
+~
+~
+1157627907 0 1000 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+3 8 0 0 1 1 0
+0 0 0 0 2048 0 0 0
+> greet_prog 75~
+if ispc($n)
+if sex($n) == 1
+'Excuse me, mister?
+endif
+if sex($n) == 2
+'Excuse me, miss?
+endif
+if sex($n) == 0
+'Excuse me, stranger?
+endif
+'I've been looking for my child, he left for school a few days ago and hasn't returned since... have you seen a little halfling boy anywhere?
+endif
+~
+> speech_prog nope. no. nope no~
+'Okay... if you do please tell him his mother has been worried about him.
+~
+> act_prog p head in response to your question.~
+'Okay... if you do please tell him his mother has been worried about him.
+~
+> act_prog p shakes his head.~
+'Okay... if you do please tell him his mother has been worried about him.
+~
+> act_prog p shakes her head.~
+'Okay... if you do please tell him his mother has been worried about him.
+~
+> act_prog p shakes its head.~
+'Okay... if you do please tell him his mother has been worried about him.
+~
+> time_prog 8~
+wake
+sit bed
+~
+> time_prog 13~
+stand
+open door
+north
+close door
+~
+> time_prog 15~
+open door
+south
+close door
+sit bed
+~
+> time_prog 22~
+sleep
+~
+|
+#12605
+New Hope Cityguard Captain~
+the captain~
+The captain of the New Hope Cityguards stands here to keep the peace.
+~
+~
+1073741827 0 1000 C
+40 0 0 4d100+2400 2d20+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+2 8 0 0 1 1 4
+0 0 0 112 2048 0 752 524291
+#12800
+demon plague~
+Demon Plague~
+A firey demon from hell has been summoned here.
+~
+~
+16777219 34079272 -1000 C
+100 0 0 32000d1+0 0d0+0
+0 0
+112 112 0
+25 13 13 13 25 13 13
+0 0 0 0 0
+85 8 0 0 8192 8192 5
+85 65 0 0 0 0 0 2052
+#0
+
+
+#OBJECTS
+#12601
+tree~
+a tree~
+A tree is growing in the front yard of the house.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+#12602
+apple cart applecart~
+the apple cart~
+The apple vender's apple cart is set here.~
+~
+15 0 0
+10 1 0 10
+1 0 0
+#12603
+brown bed~
+the brown bed~
+A bed with a single brown blanket on it is here.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#12604
+desk~
+the desk~
+A simple desk with one drawer is set against the south wall.~
+~
+15 0 0
+5 5 0 0
+1 0 0
+#12605
+bag appleseed seed~
+a bag of appleseed~
+A brown cloth bag is sitting here.~
+%s open$q $p and eat$q a bunch of the seeds.~
+19 0 1
+1 0 0 0
+1 0 0
+#12606
+cityguard broadsword~
+a cityguard's broadsword~
+A guard's broadsword has been dropped here.~
+~
+5 0 8193
+12 0 0 3
+9 0 0
+A
+53 50
+#12607
+steel armor~
+a suit of steel armor~
+A steel bodyplate of armor is laying here.~
+~
+9 524288 9 128
+0 0 0 0
+20 10 1
+#12608
+thick leather shirt~
+a thick leather shirt~
+A shirt made of thick leather lies here.~
+~
+9 262144 9 3
+0 0 0 0
+3 0 0
+#12609
+handheld lantern~
+a handheld lantern~
+A lantern is laying here on the ground, unlit.~
+~
+1 524288 16385
+0 0 -1 0
+1 5 0
+#12610
+confort chair~
+the comfort chair~
+You see a comfortable-looking chair here.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#12611
+green bed~
+the green bed~
+A green colored bed which hasn't been made yet is here.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#12612
+nightstand stand~
+the nightstand~
+A nightstand is next to the bedside.~
+~
+12 134217728 0
+0 0 0 0
+1 0 0
+#12613
+small bed~
+a small bed~
+A small half-sized bed is in the southeast corner of the room, untouched.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#12614
+large bed grey~
+a larger bed~
+A larger bed with grey blankets is in the southwest corner of the room.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#12615
+small stove~
+a small stove~
+A small stove with a dying fire lit in it is here.~
+~
+15 0 0
+1 0 0 0
+1 0 0
+#12616
+new hope cityguard helmet steel~
+a New Hope Cityguard's steel helmet~
+A steel helmet bearing the emblam of New Hope is here.~
+~
+9 524288 17
+0 0 0 0
+1 0 0
+#12617
+broken plant pot~
+a broken plant pot~
+A broken plant pot is sitting here on the doorstep.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#12618
+soiled headless doll~
+a soiled, headless doll~
+A dirty, destroyed child's doll is here.~
+~
+13 0 1
+0 0 0 0
+1 0 0
+#12619
+alter~
+the alter~
+A fascinating alter has been constructed by someone and placed here.~
+~
+25 1073741825 0
+0 0 0 0
+1 0 0
+E
+'alter'~
+This alter doesn't look like it was made, but moreso formed from some
+foreign metal you've never seen before.  It's shape has no symmetry,
+and almost no orderly formation.  The surface of the metal is very
+smooth and rounded, no edges or corners, it shines in the light and
+no smudges or fingerprints are anywhere to be found on it.
+It consits of a number of thick columns of metal in an almost random
+structure, but in the center of it some parts have cupped to create
+a sort of dish extending out from the rest of it, and within the
+bowl some kind of dark, ominous water has been pured into it.
+~
+E
+water~
+The dark water is pure and transparent, though almost completely
+black.  It has no odor that you can detect, and doesn't seem harmful
+as far as you can tell.
+~
+#12620
+holy gauntlet~
+a holy gauntlet~
+A single golden gauntlet is laying here in a divine aura.~
+~
+9 524416 129
+6 6 0 0
+1 0 0
+A
+1 2
+#12621
+cursed goggles~
+a pair of cursed goggles~
+Some enchanted black goggles are here.~
+~
+9 536720 131073
+1 1 0 0
+1 0 0
+A
+56 4
+A
+31 -3
+A
+56 4
+#12699
+sign~
+a sign~
+A sign has been posted here to inform you.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+E
+sign~
+Notice to residents of town:
+Sector 2 is still under construction.
+Thank you for your understanding.
+  -Kingdom of New Hope
+~
+#12701
+bone naga mask~
+the bone naga mask~
+A mask in the image of a bone naga is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 300 30
+#12702
+rabbit mask~
+the rabbit mask~
+A mask in the image of a rabbit is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 300 30
+#12703
+New Hope cityguard mask~
+the New Hope cityguard mask~
+A mask in the image of a New Hope cityguard is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 300 30
+#12704
+XahXhaX mask~
+the XahXhaX mask~
+A mask in the image of XahXhaX is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 300 30
+#12705
+drow mask~
+the drow mask~
+A mask in the image of an evil drow is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 300 30
+#12706
+giant snapper turtle mask~
+the giant snapper turtle mask~
+A mask in the image of a giant snapper turtle is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 300 30
+#12707
+blank mask~
+a blank mask~
+A blank mask is here.~
+~
+8 524288 1048577
+0 0 0 0
+1 200 20
+#12799
+xmaskmerchant key~
+his house key~
+A key is here.~
+~
+18 0 1
+0 0 0 0
+1 0 0
+#12800
+xapplevender key~
+his house key~
+A key is here.~
+~
+18 0 1
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#12601
+New Hope: Gnome Road, at the North Gate~
+You are at the north gate of sector 2 of New Hope.  This
+second area of New Hope was constructed to match the growing
+population of the city, and upon completion the current
+houses were moved here and new ones were built, making this
+the main residential area of the kingdom.
+~
+0 0 1 101
+D0
+~
+gate~
+1 -1 12436
+D1
+~
+~
+0 -1 12602
+D2
+~
+~
+0 -1 12617
+D3
+~
+~
+0 -1 12634
+S
+#12602
+New Hope: Gnome Road~
+You are eastern-more along Gnome Road, the northern-most
+road in sector 2.  To the west is the north gate which
+passes on into sector 1, which is seperated from this sector
+by the stone wall lining the entire road.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12603
+D3
+~
+~
+0 -1 12601
+S
+#12603
+New Hope: Gnome Road~
+Walking down the northern Gnome Road, you have come to
+an alleyway opening up to the south between some houses,
+and running behind them both.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12604
+D2
+~
+~
+0 -1 12616
+D3
+~
+~
+0 -1 12602
+S
+#12604
+New Hope: Gnome Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12605
+D2
+~
+door~
+3 -1 12708
+D3
+~
+~
+0 -1 12603
+S
+#12605
+New Hope: Gnome Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12606
+D2
+~
+door~
+3 -1 12710
+D3
+~
+~
+0 -1 12604
+S
+#12606
+New Hope: Gnome Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12607
+D2
+~
+door~
+3 -1 12712
+D3
+~
+~
+0 -1 12605
+S
+#12607
+New Hope: Gnome Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12608
+D3
+~
+~
+0 -1 12606
+D8
+~
+~
+0 -1 12609
+S
+#12608
+New Hope: Intersection of Gnome Road and Travel Street~
+This is the northeastern corner of the city, where Gnome Road
+runs to the west and Travel Street begins and leads to the south.
+~
+0 0 1 100
+D2
+~
+~
+0 -1 12609
+D3
+~
+~
+0 -1 12607
+S
+#12609
+New Hope: Travel Street~
+This is the northeastern corner of the city.  The east and
+northern walls meet just to the north at a 90 degree corner,
+but the road also cuts around to the northwest until it
+meets up with Gnome Road.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12608
+D2
+~
+~
+0 -1 12610
+D7
+~
+~
+0 -1 12607
+S
+#12610
+New Hope: Travel Street~
+You are at the entrance to an alley that runs behind a series
+of houses to the north and south sides of it, an alley that
+looks to be able to fit only so many people at a time as it
+is quite narrow.
+Travel Street continues both north and south of here.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12609
+D2
+~
+~
+0 -1 12644
+D3
+~
+~
+0 -1 12611
+S
+#12611
+New Hope, alleyway~
+You're standing in a semi-narrow alleyway, between two
+houses to the north and the south, very nice houses that
+are much larger then many in town, though both are only
+a single story tall.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12610
+D3
+~
+~
+0 -1 12612
+S
+#12612
+New Hope, alleyway~
+You are between the backs of two large houses, one to the north
+and another to the south.
+Just a bit ahead to the east the alleyway ends at Travel Street,
+and also goes further to the west.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12611
+D3
+~
+~
+0 -1 12613
+S
+#12613
+New Hope, alleyway~
+Another house is to the north of you, with a couple steps here
+leading up to it's back door.  To the south of you is a large
+field, littered with bits of garbage from people passing by,
+and overgrown with weeds.  Someday however it will probably
+be more homes.
+~
+0 0 1 100
+D0
+~
+backdoor~
+3 -1 12710
+D1
+~
+~
+0 -1 12612
+D3
+~
+~
+0 -1 12614
+S
+#12614
+New Hope, alleyway~
+Just to the north of you is the south end of a house, and
+to the west the alley turns around the corner of that house
+and leads north.  It also continues to the east where it
+will cross with Travel Street.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12613
+D3
+~
+~
+0 -1 12615
+S
+#12615
+New Hope, alleyway~
+You're standing at the backdoor to a house south of you
+here.  The alleyway goes a bit further north where it
+will come back out to Gnome Road, and goes even further
+then that to the east where it will come out to Travel
+Street.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12616
+D1
+~
+~
+0 -1 12614
+D2
+~
+backdoor~
+3 -1 12720
+S
+#12616
+New Hope, alleyway~
+You are in an alley just south off of Gnome Road.  To the
+south is the back of a building where the alleyway takes a
+turn around the corner of the building to the east of you
+and continues past.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12603
+D2
+~
+~
+0 -1 12615
+S
+#12617
+New Hope: Dagger Street~
+Dagger Street runs all the way from the northern to the southern side
+of sector 2, capped by the two gates on either end.
+Just to the north of you is the north gate going back to sector 1,
+and there is a single house to the west of where you stand now.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12601
+D2
+~
+~
+0 -1 12618
+D3
+~
+door~
+3 -1 12707
+S
+#12618
+New Hope: Dagger Street~
+You're walking down a vacant part of town, on Dagger Street.
+Empty fields are to both the east and west of you, where plenty
+of room to construct new houses is at.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12617
+D2
+~
+~
+0 -1 12619
+S
+#12619
+New Hope: Dagger Street~
+The road has a small red brick trail breaking off to the west
+leading up to the front door of house, painted red but
+weather-worn, a bit of junk sits on the doorstep off to the
+side from the doorway.
+To the east is a large grassy field spanning a large area to
+the northeast and southeast.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12618
+D2
+~
+~
+0 -1 12620
+D3
+~
+door~
+3 -1 12721
+S
+#12620
+New Hope: Dagger Street~
+Just to the south of where you stand is the center of sector 2,
+where this street crosses with Dragon Road.
+To the west of you is a large single-story rectangle house,
+only slightly run down...  Chipped red paint on wood makes up
+the outside of the building, up to the front door to the north.
+To the east of you is only a vacant lot, an overgrown field
+with bits of paper and garbage showing in some parts.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12619
+D2
+~
+~
+0 -1 12621
+S
+#12621
+New Hope: Intersection of Dragon Road and Dagger Street~
+The intersection of Dragon Road and Dagger Street would be the center
+of town, though it is not marked with any fountain or plaza like most
+places.  Instead you can a stone road leading out in all four
+directions, houses on either side in rows along it.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12620
+D1
+~
+~
+0 -1 12635
+D2
+~
+~
+0 -1 12658
+D3
+~
+~
+0 -1 12622
+S
+#12622
+New Hope: Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12621
+D3
+~
+~
+0 -1 12623
+S
+#12623
+New Hope: Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12622
+D3
+~
+~
+0 -1 12624
+S
+#12624
+New Hope: Dragon Road~
+~
+0 0 1 100
+D0
+~
+door~
+3 -1 12727
+D1
+~
+~
+0 -1 12623
+D2
+~
+door~
+3 -1 12731
+D3
+~
+~
+0 -1 12625
+S
+#12625
+New Hope: Intersection of Dwarf Street and Dragon Road~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12626
+D1
+~
+~
+0 -1 12624
+D2
+~
+~
+0 -1 12665
+S
+#12626
+New Hope: Dwarf Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12627
+D2
+~
+~
+0 -1 12625
+S
+#12627
+New Hope: Dwarf Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12628
+D1
+~
+door~
+3 -1 12725
+D2
+~
+~
+0 -1 12626
+S
+#12628
+New Hope: Dwarf Street~
+To the east of you is a medium-sized house which is set between
+two other houses both two-stories tall, one to the north of it and
+the other to the south of it.  This particular house looks like
+it is in good condition, though it also looks to be unoccupied.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12629
+D1
+~
+door~
+3 -1 12723
+D2
+~
+~
+0 -1 12627
+S
+#12629
+New Hope: Dwarf Street~
+You're somewhere in the northwestern corner of sector 2, on
+Dwarf Street which runs along the very western side of town.
+A stone wall surrounds the entire city, which runs here just
+behind a small house to the west of you standing in a dead end
+of town.
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12630
+D2
+~
+~
+0 -1 12628
+D3
+~
+door~
+3 -1 12700
+> death_prog 100~
+if mobinroom(12800) > 0
+mpat 12629 mppurge plague
+endif
+~
+|
+S
+#12630
+New Hope: Intersection of Gnome Road and Dwarf Street~
+You are at the intersection of Dwarf Street and Gnome Road,
+and with a wall to the north.  Just to the west this road
+ends at a deadend.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12632
+D2
+~
+~
+0 -1 12629
+D3
+~
+~
+0 -1 12631
+S
+#12631
+New Hope: Gnome Road, at a Dead End~
+You have come to a dead end at the very end of Gnome Road,
+which means you are at the far northwestern corner of town.
+To the south of you is the left side of another house.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12630
+S
+#12632
+New Hope: Gnome Road~
+From here you can see far to the west where Gnome Road ends
+at the western city wall.  To the south of you is somebody's
+front door, a two story building next to a taller three
+story building to the east of it.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12633
+D2
+~
+door~
+3 -1 12702
+D3
+~
+~
+0 -1 12630
+S
+#12633
+New Hope: Gnome Road~
+Walking down Gnome Road, you are in front of a tall house.
+By counting the rows of windows, it is obviously three
+stories tall, and surrounded by a 2 story building on
+the west side and a single-story building on the east.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12634
+D2
+~
+door~
+3 -1 12704
+D3
+~
+~
+0 -1 12632
+S
+#12634
+New Hope: Gnome Road~
+You are on Gnome Road, just west from the north gate of
+sector 2, the gate which leads into the sector 1 district
+of New Hope.  To the south you can see the left side of
+a house.
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12601
+D3
+~
+~
+0 -1 12633
+S
+#12635
+New Hope: Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12637
+D3
+~
+~
+0 -1 12621
+D6
+~
+~
+0 -1 12636
+S
+#12636
+New Hope~
+You are standing on a lawn, a small area of grass with a
+trail of bricks coming from the road to the southwest up
+northwards right to the front door of a home.
+~
+0 0 2 100
+D0
+~
+door~
+3 -1 12720
+D9
+~
+~
+0 -1 12635
+S
+#12637
+New Hope: Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12638
+D2
+~
+door~
+3 -1 12742
+D3
+~
+~
+0 -1 12635
+S
+#12638
+New Hope: Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12639
+D3
+~
+~
+0 -1 12637
+S
+#12639
+New Hope: Dragon Road~
+~
+0 0 1 100
+D0
+~
+door~
+3 -1 12717
+D1
+~
+~
+0 -1 12640
+D2
+~
+door~
+7 12800 12739
+D3
+~
+~
+0 -1 12638
+S
+#12640
+New Hope: Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12641
+D3
+~
+~
+0 -1 12639
+S
+#12641
+New Hope: Intersection of Roc Street and Dragon Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12642
+D2
+~
+~
+0 -1 12645
+D3
+~
+~
+0 -1 12640
+S
+#12642
+New Hope: Intersection of Dragon Road and Travel Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12643
+D3
+~
+~
+0 -1 12641
+S
+#12643
+New Hope: Travel Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12644
+D2
+~
+~
+0 -1 12642
+S
+#12644
+New Hope: Travel Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12610
+D2
+~
+~
+0 -1 12643
+D3
+~
+door~
+3 -1 12714
+S
+#12645
+New Hope: Roc Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12641
+D2
+~
+~
+0 -1 12646
+S
+#12646
+New Hope: Roc Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12645
+D2
+~
+~
+0 -1 12647
+S
+#12647
+New Hope: Roc Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12646
+D2
+~
+~
+0 -1 12648
+S
+#12648
+New Hope: Intersection of Golden Road and Roc Street~
+~
+0 0 1 102
+D0
+~
+~
+0 -1 12647
+D3
+~
+~
+0 -1 12649
+S
+#12649
+New Hope: Golden Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12648
+D3
+~
+~
+0 -1 12650
+S
+#12650
+New Hope: Golden Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12649
+D3
+~
+~
+0 -1 12651
+S
+#12651
+New Hope: Golden Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12650
+D3
+~
+~
+0 -1 12652
+S
+#12652
+New Hope: Golden Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12651
+D3
+~
+~
+0 -1 12653
+S
+#12653
+New Hope: Golden Road~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12654
+D1
+~
+~
+0 -1 12652
+D3
+~
+~
+0 -1 12656
+S
+#12654
+New Hope~
+~
+0 0 1 100
+D2
+~
+~
+0 -1 12653
+D3
+~
+~
+0 -1 12655
+S
+#12655
+New Hope: Dagger Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12657
+D1
+~
+~
+0 -1 12654
+D2
+~
+~
+0 -1 12656
+S
+#12656
+New Hope: Intersection of Golden Road and Dagger Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12655
+D1
+~
+~
+0 -1 12653
+D3
+~
+~
+0 -1 12659
+S
+#12657
+New Hope: Dagger Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12658
+D1
+~
+door~
+3 -1 12737
+D2
+~
+~
+0 -1 12655
+S
+#12658
+New Hope: Dagger Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12621
+D2
+~
+~
+0 -1 12657
+D3
+~
+door~
+3 -1 12735
+S
+#12659
+New Hope: Golden Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12656
+D3
+~
+~
+0 -1 12660
+S
+#12660
+New Hope: Golden Road~
+~
+0 0 1 100
+D1
+~
+~
+0 -1 12659
+D3
+~
+~
+0 -1 12661
+S
+#12661
+New Hope: Golden Road~
+~
+0 0 1 100
+D0
+~
+door~
+1 12799 12740
+D1
+~
+~
+0 -1 12660
+D3
+~
+~
+0 -1 12662
+S
+#12662
+New Hope: Intersection of Dwarf Street and Golden Road~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12663
+D1
+~
+~
+0 -1 12661
+S
+#12663
+New Hope: Dwarf Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12664
+D2
+~
+~
+0 -1 12662
+S
+#12664
+New Hope: Dwarf Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12665
+D2
+~
+~
+0 -1 12663
+S
+#12665
+New Hope: Dwarf Street~
+~
+0 0 1 100
+D0
+~
+~
+0 -1 12625
+D2
+~
+~
+0 -1 12664
+S
+#12700
+???~
+You're not quite sure what you've stepped into, but this is
+no ordinary house.  The walls of this single-room building 
+have been covered in large mirrors of many sizes, fit together
+to completely cover the walls.  The floor is cold grey
+concrete, but nearly completely smooth and without cracks.
+A light radiates from some point of origin that you can't
+find, but seems to be omni-directional as there is no shadow
+to anything here...  The only other thing here other then you
+is some sort of strange alter.
+~
+0 262152 0 100
+D1
+~
+door~
+262147 -1 12629
+> act_prog p drinks from the alter.~
+if ispc($n)
+if rand(25)
+mpat $n mpechoat $n _lbl As you drink from the water, a divine light surrounds you from somewhere.  You kneel to pray to the gods...
+if rand(10)
+if lck($n) > 16
+mpat $n mpechoat $n _lbl ...And the gods answer your prayers and bless you with a gift!
+mpoload 12620 1
+mpat 12700 give gauntlet $n
+else
+mpat $n mpechoat $n _lbl ...And the gods have deemed you unworthy and put a curse on you!
+mpoload 12621 1
+mpat 12700 give goggles $n
+mpat 12700 mpforce $n wear goggles
+endif
+else
+mpat $n mpechoat $n _lbl ...And you recieve no answer.
+endif
+endif
+endif
+~
+> act_prog p kneels down.~
+mpechoat $n _lbl Your prayer is well meant, but something is missing...
+~
+> act_prog p weapon to the sky!~
+if ispc($n)
+mpat $n mpechoat $n _lbl XahXhaX blesses you for your warrior's spirit.
+mpat $n c 'kindred strength' $n
+mpat $n c 'trollish vigor' $n
+endif
+~
+> act_prog p looks up at the heavens and cries~
+mpat $n mpechoat $n _lbl XahXhaX tells you 'Why not?'
+~
+> act_prog p whines 'I want to be an immortal already.  I need more hitpoints..I...'~
+mpat $n mpechoat $n _lbl The gods have cursed you for being an annoyance!
+if mobinarea(12800) < 1
+mpat 12629 mpmload 12800
+endif
+mpat 12629 mpforce plague mphate $n 12800
+~
+> act_prog p begs and grovels to the powers that be.~
+mpechoat $n _lbl Your prayer is well meant, but something is missing...
+~
+|
+S
+#12702
+House~
+~
+0 8 0 100
+D0
+~
+door~
+3 -1 12632
+D4
+~
+stairs~
+524288 -1 12703
+S
+#12703
+House, F2~
+~
+0 8 0 100
+D5
+~
+stairs~
+524288 -1 12702
+S
+#12704
+House~
+~
+0 8 0 100
+D0
+~
+door~
+3 -1 12633
+D4
+~
+stairs~
+524288 -1 12705
+S
+#12705
+House, F2~
+~
+0 8 0 100
+D4
+~
+~
+0 -1 12706
+D5
+~
+stairs~
+524288 -1 12704
+S
+#12706
+House, attic~
+~
+0 8 0 100
+D5
+~
+~
+524288 -1 12705
+S
+#12707
+House~
+You are standing in a single room abandoned house.  An amount
+of cobwebs infest most upper corners of the room, and more
+then a good covering of dust covers the wooden floor.
+~
+0 8 0 100
+D1
+~
+door~
+3 -1 12617
+S
+#12708
+House~
+~
+0 8 0 100
+D0
+~
+door~
+3 -1 12604
+D4
+~
+stairs~
+524288 -1 12709
+S
+#12709
+House, F2~
+~
+0 8 0 100
+D5
+~
+stairs~
+524288 -1 12708
+S
+#12710
+House~
+~
+0 8 0 100
+D0
+~
+door~
+3 -1 12605
+D2
+~
+backdoor~
+3 -1 12613
+D4
+~
+stairs~
+524288 -1 12711
+S
+#12711
+House, F2~
+~
+0 8 0 100
+D5
+~
+stairs~
+524288 -1 12710
+S
+#12712
+J the Bartender's Home~
+~
+0 8 0 100
+D0
+~
+door~
+3 -1 12606
+D1
+~
+~
+0 -1 12713
+S
+#12713
+House~
+~
+0 8 0 100
+D3
+~
+~
+0 -1 12712
+S
+#12714
+House~
+~
+0 8 0 100
+D1
+~
+door~
+3 -1 12644
+D2
+~
+~
+0 -1 12715
+D3
+~
+~
+0 -1 12716
+S
+#12715
+House~
+~
+0 8 0 100
+D0
+~
+~
+0 -1 12714
+S
+#12716
+House~
+~
+0 8 0 100
+D1
+~
+~
+0 -1 12714
+S
+#12717
+House~
+~
+0 8 0 100
+D2
+~
+door~
+3 -1 12639
+D3
+~
+~
+0 -1 12718
+D4
+~
+stairs~
+524288 -1 12719
+S
+#12718
+House~
+~
+0 8 0 100
+D1
+~
+~
+0 -1 12717
+S
+#12719
+House, F2~
+~
+0 8 0 100
+D5
+~
+stairs~
+524288 -1 12717
+S
+#12720
+House~
+~
+0 1073741832 0 100
+D0
+~
+backdoor~
+3 -1 12615
+D2
+~
+door~
+3 -1 12636
+S
+#12721
+House~
+~
+0 1073741832 0 100
+D1
+~
+door~
+3 -1 12619
+D2
+~
+~
+0 -1 12722
+S
+#12722
+House~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12721
+S
+#12723
+House~
+This house is completely empty, with a very "new" appearance to it.
+The floor is made of polished wood in very good condition, and
+the inner walls here are white, the smell of fresh paint fills
+the building.  An empty fireplace is even set into the south
+wall, and there's another room in back to the east.
+~
+0 1073741832 0 100
+D1
+~
+door~
+1 -1 12724
+D3
+~
+door~
+3 -1 12628
+S
+#12724
+House~
+This is a seperate, also empty room.  It would be ideal to make
+into a bedroom for any owner of the house.
+~
+0 1073741832 0 100
+D3
+~
+door~
+1 -1 12723
+S
+#12725
+House~
+~
+0 1073741832 0 100
+D3
+~
+door~
+3 -1 12627
+D4
+~
+stairs~
+524288 -1 12726
+S
+#12726
+House~
+~
+0 1073741832 0 100
+D5
+~
+stairs~
+524288 -1 12725
+S
+#12727
+House~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12728
+D2
+~
+door~
+3 -1 12624
+S
+#12728
+House~
+~
+0 1073741832 0 100
+D3
+~
+~
+0 -1 12727
+D4
+~
+stairs~
+524288 -1 12730
+S
+#12729
+House~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12730
+S
+#12730
+House~
+~
+0 1073741832 0 100
+D3
+~
+~
+0 -1 12729
+D5
+~
+stairs~
+524288 -1 12728
+S
+#12731
+House~
+~
+0 1073741832 0 100
+D0
+~
+door~
+3 -1 12624
+D1
+~
+~
+0 -1 12733
+D2
+~
+~
+0 -1 12732
+S
+#12732
+House~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12731
+S
+#12733
+House~
+~
+0 1073741832 0 100
+D2
+~
+~
+0 -1 12734
+D3
+~
+~
+0 -1 12731
+S
+#12734
+House~
+~
+0 1073741832 0 100
+D0
+~
+~
+0 -1 12733
+S
+#12735
+House~
+~
+0 1073741832 0 100
+D1
+~
+door~
+3 -1 12658
+D4
+~
+stairs~
+524288 -1 12736
+S
+#12736
+House~
+~
+0 1073741832 0 100
+D5
+~
+stairs~
+524288 -1 12735
+S
+#12737
+House~
+~
+0 1073741832 0 100
+D1
+~
+~
+0 -1 12738
+D3
+~
+door~
+3 -1 12657
+S
+#12738
+House~
+~
+0 1073741832 0 100
+D3
+~
+~
+0 -1 12737
+S
+#12739
+The Applevender's Home~
+This is the quaint home owned by the applevender, a street
+peddlar who makes his living selling apples to passers
+throughout town.
+There isn't a lot to this house, only a bed to sleep on,
+a desk, and a single window on the southern wall.
+~
+0 1073741832 0 100
+D0
+~
+door~
+7 12800 12639
+E
+'south'~
+blah
+~
+S
+#12740
+Mask Shop~
+This house has been converted into a home/shop.  Shelves
+line the walls where inventory can be displayed.  A
+comfortable chair is set in the northwestern corner next
+to a staircase leading upstairs.
+~
+0 1073741832 0 0
+D2
+~
+door~
+1 12799 12661
+D4
+~
+stairs~
+524288 -1 12741
+S
+#12741
+Mask Shop, F2~
+This is the living space of the house since the entire first floor
+is being used for the store.
+~
+0 1073741832 0 100
+D5
+~
+stairs~
+524288 -1 12740
+S
+#12742
+Cozy House~
+This is a tiny house, not much bigger on the inside then it looks
+from the outside.  It is only a single room which actually makes
+up about the size of half a larger house though.
+Two beds are up against the south wall, one on the east and
+the other west.  Only the smaller one is made.
+~
+0 1073741832 0 100
+D0
+~
+door~
+3 -1 12637
+S
+#12800
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+D 0 12629 3 1
+D 0 12632 2 1
+D 0 12702 0 1
+D 0 12633 2 1
+D 0 12704 0 1
+D 0 12617 3 1
+D 0 12707 1 1
+D 0 12604 2 1
+D 0 12708 0 1
+D 0 12605 2 1
+D 0 12606 2 1
+D 0 12712 0 1
+D 0 12644 3 1
+D 0 12714 1 1
+D 0 12717 2 1
+D 0 12436 2 0
+O 1 12601 1 12636
+D 0 12636 0 1
+D 0 12615 2 1
+D 0 12720 0 1
+D 0 12720 2 1
+D 0 12721 1 1
+D 0 12727 2 1
+D 0 12624 0 1
+D 0 12624 2 1
+D 0 12731 0 1
+D 0 12658 3 1
+D 0 12735 1 1
+D 0 12657 1 1
+D 0 12737 3 1
+D 0 12710 0 1
+D 0 12710 2 1
+D 0 12613 0 1
+D 0 12639 0 1
+D 0 12639 2 2
+M 1 12601 1 12739
+O 1 12603 1 12739
+O 1 12604 1 12739
+O 1 12602 1 12739
+D 0 12739 0 2
+M 1 12603 1 12741
+O 1 12611 1 12741
+O 1 12612 1 12741
+D 0 12661 0 2
+O 1 11002 1 12631
+M 1 12602 1 12601
+E 1 12608 1 5
+E 1 12607 1 5
+E 1 12606 1 16
+D 0 12601 0 0
+M 1 12602 2 12648
+E 1 12608 1 5
+E 1 12607 1 5
+E 1 12606 1 16
+D 0 12637 2 1
+M 1 12604 1 12742
+O 1 12613 1 12742
+O 1 12614 1 12742
+O 1 12615 1 12742
+D 0 12742 0 1
+M 1 12605 1 12621
+E 1 12608 1 5
+E 1 12607 1 5
+E 1 12606 1 16
+E 1 12616 1 6
+O 1 12617 1 12619
+O 1 12618 1 12619
+D 0 12619 3 1
+O 1 12619 1 12700
+D 0 12700 1 1
+O 1 12610 1 12740
+O 1 12492 1 12740
+D 0 12740 2 2
+D 0 12628 1 1
+D 0 12723 1 0
+D 0 12723 3 1
+O 0 12699 1 12601
+D 0 12466 0 0
+D 0 12466 0 0
+M 1 12446 2 11024
+E 1 12606 1 16
+E 1 12607 1 5
+E 1 12608 1 5
+E 1 12609 1 0
+D 0 11024 1 0
+M 1 12500 1 12439
+M 1 12404 1 12439
+G 1 12455 1
+G 1 12520 1
+E 1 3115 1 5
+G 1 12449 1
+E 1 11298 1 7
+E 1 32061 1 8
+G 1 12443 1
+G 1 12519 1
+G 1 12513 1
+G 1 12431 1
+G 1 12460 1
+G 1 12516 1
+G 1 12504 1
+G 1 12514 1
+G 1 12430 1
+G 1 12432 1
+G 1 12503 1
+G 1 12502 1
+G 1 12501 1
+G 1 12508 1
+O 1 12486 1 12439
+S
+
+
+#SHOPS
+ 12603    0  0  0  0  0    96  90         9 20    ; the mask merchant
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  12602 spec_guard
+M  12605 spec_guard
+S
+
+
+#$

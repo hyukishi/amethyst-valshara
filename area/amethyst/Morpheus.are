@@ -1,0 +1,1294 @@
+#AREA   {PROTO} Morpheus's area in progress~
+
+
+
+#VERSION 213
+#AUTHOR Morpheus~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31250009
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#12801
+angry buck deer~
+an angry buck~
+A buck turns and charges
+~
+~
+99 0 0 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+87 6 0 0 474345 474345 0
+0 0 101779006 0 0 0 128 0
+#12802
+hungry mist~
+the hungry mist~
+The hungry mist envelopes you.
+~
+~
+1 0 0 S
+5 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12803
+water sprite~
+a water sprite~
+A sprite dances playfully here.
+~
+~
+1 0 0 S
+5 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12804
+grizzly bear~
+a grizzly bear~
+A grizzly bear snoozes here.
+~
+~
+1 0 0 C
+7 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+87 3 0 0 0 0 0
+8 2 0 0 0 0 2 0
+#12805
+forest elf~
+a forest elf~
+A pair of eyes watch you from the trees.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12806
+Archam Druid~
+a wild boar~
+Archam welcomes you to his grove.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12807
+wild boar~
+a newly created wild boar~
+A wild boar hides just off the path.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12808
+trophy stag~
+a trophy stag~
+A stag looks up, alerted to you prescence.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12809
+squirrel~
+a squirrel~
+A squirrel scuttles down a tree beside you.
+~
+~
+65 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+87 6 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#12810
+lone wolf~
+a lone wolf~
+A wolf growls, haunches raised.
+~
+~
+97 0 0 C
+6 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+18 13 13 13 13 13 13
+0 0 0 0 0
+69 6 0 0 0 0 0
+8 10 0 0 0 0 2 0
+#12811
+Grizlt trader~
+Grizlt the trader~
+Grizlt the trader
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12812
+Arax hunter~
+Arax the hunter~
+Arax the hunter wanders, seeking game.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12813
+lost hunter~
+a lost hunter~
+A hunter has lost himself in the forest.
+~
+~
+65 0 0 C
+8 0 0 0d0+0 0d0+0
+1 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 6 0 0 1 1 0
+7 10 0 0 0 0 0 1
+#12814
+lost trapper~
+a lost trapper~
+A trapper sits here pondering the way out.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12815
+wandering newbie~
+a wandering newbie~
+A newbie wanders here, sword in hand.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12816
+water snake~
+a water snake~
+A water snake slithers up to you.
+~
+~
+1 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#12900
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 S
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#12801
+map woods~
+a map of the lost woods~
+A rolled up parchment lies here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12802
+newbie slayer~
+the newbie slayer~
+A blade that shines with the blood of fresh newbies lies here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12803
+heart mist~
+the heart of the mist~
+A small stone surrounded my swirling mist rests here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12804
+mist source hole~
+the source of the mist~
+~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12806
+tusk boar~
+the tusk of a mighty boar~
+A wickedly curved tusk lies here~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12807
+staff woods~
+The staff of the woods~
+A sturdy staff carved with runes lies here~
+~
+5 0 8193
+10 2 12 0
+1 50 5 1
+E
+'staff' 'woods'~
+You are looking at the staff of the woods, a weapon most commonly used by
+the druids in the forest to the east of New Hope.  It has intricate carvings
+up and down it's surface, and probably has some sort of religious importance
+to it.
+~
+#12808
+remedy~
+a remedy for newbies~
+A small silver flask lies here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12809
+druid amulet~
+a druidic amulet~
+A smoothed stone with a single rune lies here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12810
+rack horns~
+a mighty set of antlers~
+A rack of antlers is displayed proudly here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12811
+bow hunter~
+a hunter's bow~
+A might recurve bow, with a catgut string rests here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#12812
+walking stick~
+a walking stick~
+A stick lays on the ground here.~
+~
+5 0 8193
+8 2 2 0
+1 0 0 1
+E
+'walking' 'stick'~
+This is a sturdy stick, probably coming from a rather tall tree in a
+forest somewhere.  You could probably wield this without any trouble and cause
+some damage with it.
+~
+#12900
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#12801
+The arch of Oaks~
+As you step onto the hard packed pathway, you immediately notice two towering
+oak trees rising above you.  The great trees bowed by their own massive weight
+have bent towards eachother...their trunks interwined as one far above
+the ground.  The sounds of birds call out from the majestice branches, as
+shafts of sunlight penetrate the impressive foliage.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12802
+S
+#12802
+A well traveled path~
+You step onto a path, well worn by the travels of those before you.
+To either side young trees rise above the forest floor in competition
+for the life giving sun.  Northward the path lies shrouded in shadow
+and to the south you can hear the music of the birds.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12803
+D2
+~
+~
+0 -1 12801
+S
+#12803
+The darkening forest~
+Shadows crawl across the forest floor, while strange sounds call out
+from behind the trees.  Here the path splits offering three choices...
+South the forest seems to thin out and the sun shines unopposed.
+North the shadows continue to close in on the path.
+East another less worn path leads, and you can hear the trickle of water.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12811
+D1
+~
+~
+0 -1 12804
+D2
+~
+~
+0 -1 12802
+S
+#12804
+A gurgling brook~
+The path ends at a small brook tumbling merrily as it flows from the
+north to the south.  It appears that there is a path here obviously
+made by small creatures who come here to drink.  The path leads back
+to the west.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12805
+D2
+~
+~
+0 -1 12807
+D3
+~
+~
+0 -1 12803
+S
+#12805
+Upstream~
+As you wade upstream through the brook, you hear the delighted laugh 
+of water pixies playing about you.  Silver fish dart here and there
+curiously examining you and then speeding away at your first move.
+The brook continues to climb the hill side to the north, and 
+tumbles gleefully down the hill to the south.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12806
+D2
+~
+~
+0 -1 12804
+S
+#12806
+The Spring~
+As you reach the spring that feeds this happy little brook you notice  
+gleaming eyes watch you from above.  The ground around the spring is
+torn up as if some malicious creature had just stomped through here.
+Sadly the dense foliage of the forest prevents you from continuing 
+in any direction except south...
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 12805
+S
+#12807
+The growing stream~
+Here the current of the stream tugs at your feet as you walk.
+The trees of the forest rise to either side of you and the sounds
+of animals are nearly drowned out by the rushing water.  To the
+north the stream narrows into a brook, while south the current picks
+up as other brooks feed it.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12804
+D2
+~
+~
+0 -1 12808
+S
+#12808
+A fast flowing river~
+The river flows quickly beneath you, and nothing can be heard above
+the roar of the river rapids. The question is of course, should you
+head further upstream where it appears to be calmer, or take your 
+chances with the the raging foam that lies to the south.
+~
+~
+0 0 6 0
+D0
+~
+~
+0 -1 12807
+D2
+~
+~
+0 -1 12809
+S
+#12809
+The Rapids~
+The river is angry here, running with abandon to the south.  Sharp 
+rocks jutt out of the water like teeth, churning the water, changing 
+it to the white foam of rapids.  You see a piece of driftwood fly
+by you and smash itself to splinters on the rocks.  You are faced
+with a choice, go north to away from the rapids, or south into
+the angry river's mouth
+~
+~
+0 0 7 0
+D0
+~
+~
+0 -1 12808
+D2
+~
+~
+0 -1 12810
+S
+#12810
+The Waterfall~
+At the last possible moment you realize why the current is so horribly
+strong at this part of the river.  A mighty waterfall flows over the
+cliff edge, sending up clouds of watervapor into the air.  The roar
+of the waterfall fills your ears and you realize the only out is down.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12809
+D5
+~
+~
+0 -1 12843
+S
+#12811
+The Dark Forest~
+A gloomy mist hugs the ground, swirling in and out of the ancient,
+twisted trees.  Paths appear and disappear all around you, remaining
+only for a moment before being swallowed up by the forest again.
+Exits lie in all directions, but which one is correct...?
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 12813
+D1
+~
+~
+0 -1 12815
+D2
+~
+~
+0 -1 12803
+D3
+~
+~
+0 -1 12812
+S
+#12812
+A small clearing~
+You step from the dark forest into a small clearing of roses and brambles.
+It's the perfect place for some small nasty critter to hide, just waiting
+to attack you.  Better get them before they get you...
+The underbrush blocks every exit except to the east, back into the 
+swirling mist of the dark forest.
+~
+~
+0 0 3 1
+D1
+~
+~
+0 -1 12811
+S
+#12813
+Before the cave~
+The dark twisted branches and swirling mist are all about you, but
+you can percieve an opening to a cave to the north.  It's darker in 
+there than it is out here, but it's probably safer...isn't it?
+Maybe you should go to the south deeper into the dark forest, 
+perhaps take a different route.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 12814
+D2
+~
+~
+0 -1 12811
+S
+#12814
+The Grizzly's Den~
+Inside the cave isn't much better than outside it, no matter how much
+light you bring it's still horribly dark...
+Is that your breathing you hear, or something elses?
+You hear the dry crack of a bone snapping beneath your foot...
+Eeeeww was that bat guano?  Where are you?
+~
+~
+0 8 13 0
+D2
+~
+~
+0 -1 12813
+S
+#12815
+Deeper in the Dark Forest~
+Deep within the dark forest now the mist has grown much thicker 
+shrouding your view of your surroundings.  It almost seems animalistic
+in it's joy of hindering you.  You could continue upon the path you 
+were on, or turn back.  Perhaps wherever the path leads it is better 
+than here.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12816
+D3
+~
+~
+0 -1 12811
+S
+#12816
+The Swirling Mist~
+You can see nothing but the swirling white mist about you, hopefully
+one of these directions will get you out of here.  Sounds are warped
+here in the mists, it almost sounds like hissing and growling.  
+What could be out there, just waiting to attack?
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12817
+D1
+~
+~
+0 -1 12818
+D2
+~
+~
+0 -1 12819
+D3
+~
+~
+0 -1 12815
+S
+#12817
+A clearing~
+You step into an open clearing, there is grass growing here carefully
+kept and groomed. The birds chirping in the trees seem harmless enough
+in fact the whole scene seems to convey a sense of peace.  To the 
+south you see the swirling mists of the dark forest, and to the east
+the clearing seems to turn into a meadow, or grove of some sort.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12820
+D2
+~
+~
+0 -1 12816
+S
+#12818
+A small path~
+A small worn path lies here heading upward on a slant, it appears 
+that you have reach a small hill or mountain side, but the trees 
+obscure anything else from view. To the west you see the swirling
+mists of the dark forest, and the path continues to climb to the
+east.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12821
+D3
+~
+~
+0 -1 12816
+S
+#12819
+The heart of the Mist~
+From what little you can see, and that is basically nothing, the mist
+seems to be flowing out of a small gaping hole in the ground, but here
+the mist has a strange redish tint to it, like the color of dried
+blood. As far as you can tell the only way out is the way you came in.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12816
+S
+#12820
+The Druid's Grove~
+As you enter the grove you can feel the warmth that permeates the place.
+A druid seems to have chosen this place to be his special grove, where
+he can tend animals who are hurt or meerly frightened.  To the west you
+see a small clearing that seems to me almost wholey swallowed by the 
+forest, and to the north you can see a gigantic tree towering above
+the forest.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 12817
+S
+#12821
+Overlooking a spring~
+You step out into a small clearing on a cliff's edge.  Far below you
+see a small spring bubbling out of the ground.  Could that be the 
+source of the brook sound you heard earlier?  The path splits here
+heading north back into the forest and east where berries seem to be
+growing.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12823
+D1
+~
+~
+0 -1 12822
+D3
+~
+~
+0 -1 12818
+S
+#12822
+A small berry patch~
+All around you bushes grow bursting with sweet, tender berries.  They
+make a tasty treat for a hungry adventurer, or perhaps a hungry animal
+as the case may be.  Crickets chirp happily as a cool breeze blows.
+The path beneath you travels eastward towards a steep trail and west
+torwards an overlook of sorts.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12825
+D3
+~
+~
+0 -1 12821
+S
+#12823
+Forest path~
+As you head down the trail the forest envelops you once more. 
+Fortunately the whole atmosphere of the place seems friendlier. A small
+squirrel scuttles up a tree at you silent passing.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12824
+D2
+~
+~
+0 -1 12821
+S
+#12824
+Thinning Trees~
+Here there seems to be only a few scattered trees thinly covering the
+land scape.  Nothing much seems to break the horizon to the north where
+the plains lay.  To the south however the forestline seems to beckon
+you, beckon you torwards the thickening trees.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 12823
+S
+#12825
+An ascending trail~
+Here the trail climbs the hillside, the trees growing more scarce and
+they grow much shorter here.  Here it seems the forest edge receeds
+as you near the hilltop.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12826
+D3
+~
+~
+0 -1 12822
+S
+#12826
+Hilltop~
+You've reached the hilltop, nearly bare of trees the air seems somewhat
+colder up here than down below. Surrounding you is a magnificent sight
+as the forest lay spread before your eyes. To the north you see a large
+wooden cabin with smoke rising from the chimney.  To the west a trail
+winds down the hillside, but you also notice a much,much steeper trail
+that begins below you.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12827
+D3
+~
+~
+0 -1 12825
+D5
+~
+~
+0 -1 12828
+S
+#12827
+Trading Post~
+You step inside the cabin which offers comforting warmth to the chill
+of the outside air.  The walls are covered with all sorts of 
+paraphenilia that hunters and trappers have brought back from their
+forray's into the forest.  Pelts, weapons, pieces of armor, wooden 
+carvings, bones, rocks, well just about everything.  A fire burns in 
+the fireplace filling the room with the rich scent of pine and the 
+feeling of adventure.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 12826
+S
+#12828
+Trail to the Forest Bed.~
+A near verticle trail runs from the hilltop to the forest floor.
+Standing on the bare hillside, you feel the wind whipping mercilessly
+at your clothes. A hawk screams in the distance, diving for its prey
+somewhere in the deep forest.
+~
+~
+0 0 1 0
+D4
+~
+~
+0 -1 12826
+D5
+~
+~
+0 -1 12829
+S
+#12829
+Beginning of the game trail~
+You've reached the beginning of a game trail, where the various hunters
+and trappers of the forest find their food and make their living.  The 
+sounds of the forest come from all directions and your feet make no 
+sound on the hard packed earth.  The trail leads off torwards the west
+while a steep trail ascends to the hilltop above you.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 12830
+D4
+~
+~
+0 -1 12828
+S
+#12830
+Along the game trail~
+As you walk down the game trail you notice dozens of small animals 
+scuttling away at your approach.  Scents fill the air and small 
+flowers can be seen growing in patches of sunlight.  The trees and 
+underbrush grow to eitherside and the trail continues to the east
+and west.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12829
+D3
+~
+~
+0 -1 12831
+S
+#12831
+Along the game trail~
+As you walk down the game trail you notice dozens of small animals 
+scuttling away at your approach.  Scents fill the air and small 
+flowers can be seen growing in patches of sunlight.  The trees and 
+underbrush grow to eitherside and the trail continues to the east
+and west. You also notice a break in the underbrush to the south.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12830
+D2
+~
+~
+0 -1 12834
+D3
+~
+~
+0 -1 12832
+S
+#12832
+Along the game trail~
+As you walk down the game trail you notice dozens of small animals
+scuttling away at your approach.  Scents fill the air and small 
+flowers can be seen growing in patches of sunlight.  The trees and 
+underbrush grow to eitherside and the trail continues to the east
+and west.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12831
+D3
+~
+~
+0 -1 12833
+S
+#12833
+The end of the game trail~
+The trail seems to just vanish into the underbrush here.  How strange
+that a trail should just vanish...It seems that the only way out is 
+the way you came, back east along the trail.  Traces of blood stain
+the ground as if there was a fight here recently.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12832
+S
+#12834
+Off the trail~
+You seem to have wandered into the forest proper.  There are no trails
+here, merely trees and underbrush to block your movements. In fact you
+find you can only make any progress at all to the north and south. 
+Forests can be such strange places...
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12831
+D2
+~
+~
+0 -1 12835
+S
+#12835
+Deep in the forest~
+You've wandered very deep into the forest, maybe even too far to find
+your way back. You'd better be careful or you'll get lost in the tangle
+of trees.  Prickly bushes offer you only two options here though, north
+and south, and both options look pretty much the same.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12834
+D2
+~
+~
+0 -1 12836
+S
+#12836
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are yellow flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12836
+D1
+~
+~
+0 -1 12836
+D2
+~
+~
+0 -1 12837
+D3
+~
+~
+0 -1 12836
+S
+#12837
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are red flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12836
+D1
+~
+~
+0 -1 12836
+D2
+~
+~
+0 -1 12836
+D3
+~
+~
+0 -1 12838
+S
+#12838
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are blue flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12839
+D1
+~
+~
+0 -1 12836
+D2
+~
+~
+0 -1 12836
+D3
+~
+~
+0 -1 12836
+S
+#12839
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are white flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12836
+D1
+~
+~
+0 -1 12836
+D2
+~
+~
+0 -1 12840
+D3
+~
+~
+0 -1 12836
+S
+#12840
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are orange flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12836
+D1
+~
+~
+0 -1 12836
+D2
+~
+~
+0 -1 12841
+D3
+~
+~
+0 -1 12836
+S
+#12841
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are purple flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12836
+D1
+~
+~
+0 -1 12842
+D2
+~
+~
+0 -1 12836
+D3
+~
+~
+0 -1 12836
+S
+#12842
+Lost in the forest~
+Oh No! You are hoplessly lost in the deep forest!
+How will you ever find you way back?
+The only thing you notice are pink flowers growing here.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12836
+D1
+~
+~
+0 -1 12835
+D2
+~
+~
+0 -1 12836
+D3
+~
+~
+0 -1 12836
+S
+#12843
+The base of the Falls~
+You find yourself standing at the base of a might waterfall which towers
+to the north.  The roar of it fills your ears as small water sylphs dance
+around the in the spray as it hits the rocks below.  To the east you 
+notice a small path leading up the cliff to the top of the waterfall, and
+the river that the falls feed continues torwards the south.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12844
+D2
+~
+~
+0 -1 12847
+S
+#12844
+Path away from the Falls~
+As you step away from the falls that rage to the east you see a steep 
+trail leading back to the woods above the falls.  A porcupine skuttles
+into the underbrush to your right and the dirt of the path beneath your
+feet brings up small clouds of dust.  The sounds of the forest call to
+you once more from above.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 12843
+D4
+~
+~
+0 -1 12845
+S
+#12845
+Beside the Falls~
+To the trees to the west you see the river running swiftly to the falls,
+tumbling over the edge to the rocks below.  The path you've found continues
+to the north where it is engulfed by the forest trees once more.  
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12846
+D5
+~
+~
+0 -1 12844
+S
+#12846
+The paths end~
+The path ends here engulfed by the brush and trees of the forest. An 
+opening to the west leads back to the river, but here it seems to be
+fairly gentle.  It is only drop of a few feet into the river, but once
+you decide to go there may be no turning back...
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 12845
+D3
+~
+~
+0 -1 12807
+S
+#12847
+The river slows~
+As you travel along the river you see that it is moving sluggishly here.
+Perhaps that is due to the delta you notice to the south, that seems to
+empty out into a lake.  To the north you hear the pounding roar of a 
+mighty waterfall, but around you there is nothing to see but trees and
+and tiny silver fish darting below the surface.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12843
+D2
+~
+~
+0 -1 12848
+S
+#12848
+The River Delta~
+The water has slowed to almost a crawl, as it empties into the lake 
+south of here.  Upstream you notice the water moving noticably quicker,
+and the trees thicken from a meer peppering of willows and water plants
+to a full fledged forest.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12847
+S
+#12900
+Final Room~
+~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+O 0 11001 1 12801
+M 0 12801 1 12811
+M 0 12804 1 12814
+M 0 12810 1 12812
+M 0 12809 1 12802
+M 0 12813 1 12815
+E 1 12812 1 16
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

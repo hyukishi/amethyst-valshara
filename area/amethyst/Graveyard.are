@@ -1,0 +1,721 @@
+#AREA   Graveyard~
+
+
+
+#VERSION 214
+#AUTHOR Vvortex~
+
+#RANGES
+2 115 1 115
+$
+
+#RESETMSG You get an abrubt feeling of uneasyness.~
+
+#FLAGS
+0
+
+#ECONOMY 0 31250000
+
+#CLIMATE 0 4 4
+
+#NEIGHBOR New Hope~
+
+#NEIGHBOR The Western Plains~
+
+#NEIGHBOR New Hope Castle~
+
+#NEIGHBOR City of New Hope~
+
+#NEIGHBOR City of New Hope Sector 2~
+
+#MOBILES
+#10601
+gravedigger~
+the gravedigger~
+The gravedigger is moving steadily through the graveyard.
+~
+He is the gravedigger of the cemetary.  An aweful sort of old man, his face is
+worn and deformed, making this the only job available to himself.  He quietly
+and steadily paces back and forth through the graveyard through the night, and
+sleeps all during the day.
+~
+16777409 0 0 C
+5 0 0 20d10+30 5d5+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+3 512 0 0 131073 131072 0
+4 10 0 0 1058816 0 0 0
+> time_prog 20~
+mpgoto 10601
+~
+> time_prog 5~
+mpgoto 11288
+~
+|
+#0
+
+
+#OBJECTS
+#10601
+gravedigging shovel~
+a gravedigging shovel~
+Someone has left a shovel laying on the ground here.~
+~
+59 524288 16385
+0 0 0 0
+8 200 100 0
+E
+'grave' 'gravedigging' 'shovel'~
+It's a basic shovel.  Large size, durable metal scoop with thick wooden
+handle, perfect leverage, perfect for digging graves with.  For some reason
+when you hold this in your hands you get a heavy urge to dig a hole.
+~
+> use_prog 60~
+mpechoat 0.$n As you take the shovel into your hands, the idea of digging a hole sounds really good right now.
+~
+|
+#0
+
+
+#ROOMS
+#10601
+Graveyard, Northwest Corner~
+The trees curve towards the south and east here. The neighboring
+forest emits a scent of fresh air and pine trees. One might think
+that it is pretty safe here, if it weren't for the headstones
+which for some reason add a very sepulchral tone to the area.
+Scattered patches of shrubbery clutter the ground, causing you
+to have to watch your step so you don't fall.
+~
+~
+0 0 3 1
+D1
+~
+~
+0 -1 10602
+D2
+~
+~
+0 -1 10605
+D8
+~
+~
+0 -1 10606
+S
+#10602
+Graveyard~
+Several fancy headstones lie peacefully on the ground, bringing
+fears of death, and the unknown. Hopefully you don't find your
+own name here any time soon. Moss covers most anything you happen
+to glance at, and gives your surroundings the feel of age.
+Just to the north of you is where the old church used to be.  But
+that was as long ago as when the town well used to be filled up to the
+top with water.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10619
+D1
+~
+~
+0 -1 10603
+D2
+~
+~
+0 -1 10606
+D3
+~
+~
+0 -1 10601
+D8
+~
+~
+0 -1 10607
+D9
+~
+~
+0 -1 10605
+S
+#10603
+Graveyard~
+As you stroll through the homes of the mourned and the forgotten,
+you notice that something feels unnatural. It seems as if some
+supernatural force is surging through the area, causing every
+last object to seem to glow with an invisible radiance of power.
+you feel as if someone is trying to talk to you, speaking in an
+uncomprehensible tongue, that seems to change as you move from
+place to place.
+~
+~
+0 0 3 1
+D1
+~
+~
+0 -1 10604
+D2
+~
+~
+0 -1 10607
+D3
+~
+~
+0 -1 10602
+D8
+~
+~
+0 -1 10608
+D9
+~
+~
+0 -1 10606
+S
+#10604
+Graveyard, Northeast Corner~
+Exploring the graveyard further, you come to a curve in the trees
+that blocks further passage in the northeast direction. Far to
+the south, a dark crack in the trees can be made out. On occasion
+something may pass through this hold to mourn and pay homage to
+their long lost comrades.
+~
+~
+0 0 3 1
+D2
+~
+~
+0 -1 10608
+D3
+~
+~
+0 -1 10603
+D9
+~
+~
+0 -1 10607
+S
+#10605
+Graveyard~
+The tracks of some quite large beast can be seen heading straight
+towards one of the headstones nearby. The tracks stop right at
+the headstone as if whatever made the tracks just vanished into
+thin air. It definitely does not feel safe here, for you might
+not be welcomed kindly by whatever was previously here, if it
+were to come back.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10601
+D1
+~
+~
+0 -1 10606
+D2
+~
+~
+0 -1 10609
+D6
+~
+~
+0 -1 10602
+D8
+~
+~
+0 -1 10610
+S
+#10606
+Graveyard~
+You stand towards the middle of the graveyard. The chants of a
+preacher can be heard sanctifying the body of one who is 
+recently deceased. It is soothing to hear the voice of a holy
+man here where something about the surroundings feels...uneasing.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10602
+D1
+~
+~
+0 -1 10607
+D2
+~
+~
+0 -1 10610
+D3
+~
+~
+0 -1 10605
+D6
+~
+~
+0 -1 10603
+D7
+~
+~
+0 -1 10601
+D8
+~
+~
+0 -1 10611
+D9
+~
+~
+0 -1 10609
+S
+#10607
+Graveyard~
+From here you can accurately grasp the shape and size of the
+graveyard. It seems to be shaped like a square, and lies in a
+clearing within a deep wood. The only visible entrance or exit
+would be a short ways to the southeast, where there is a small
+dark hole in the trees.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10603
+D1
+~
+~
+0 -1 10608
+D2
+~
+~
+0 -1 10611
+D3
+~
+~
+0 -1 10606
+D6
+~
+~
+0 -1 10604
+D7
+~
+~
+0 -1 10602
+D8
+~
+~
+0 -1 10612
+D9
+~
+~
+0 -1 10610
+S
+#10608
+Graveyard~
+A large, fancy tombstone towers above your head here.  Must be
+the new home of one of the rich or famous citizens of New Hope.
+The tombstone is a sculpture of a man holding a stone tablet with
+some writing on it, and raising the other arm towards the sky
+holding a lightning bolt.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10604
+D2
+~
+~
+0 -1 10612
+D3
+~
+~
+0 -1 10607
+D7
+~
+~
+0 -1 10603
+D9
+~
+~
+0 -1 10611
+E
+tablet~
+The tablet reads, "It's too late to tell young Brice that
+sometimes lightning can strike twice."
+~
+S
+#10609
+Graveyard~
+Your eyes fall upon a tombstone that stands out amongst the others
+because it is crooked.  It is said that knocking over a tombstone
+is bad luck. Better not test that saying. Bad luck is something
+that you definitely don't want in a place like this.  You also
+see several flowers adorning a tombstone just next to the crooked
+one. They smell quite sweet.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10605
+D1
+~
+~
+0 -1 10610
+D2
+~
+~
+0 -1 10613
+D6
+~
+~
+0 -1 10606
+D8
+~
+~
+0 -1 10614
+S
+#10610
+Graveyard~
+A large withering old tree arches over, and it's branches hover
+above your head. The branches seem to be pushing themselves in
+your face, in an attempt to block your vision and scare you. 
+Looking up into the tree, to your horror you see the corpses of
+several small animals lying lifelessly on the tree's branches.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10606
+D1
+~
+~
+0 -1 10611
+D2
+~
+~
+0 -1 10614
+D3
+~
+~
+0 -1 10609
+D6
+~
+~
+0 -1 10607
+D7
+~
+~
+0 -1 10605
+D8
+~
+~
+0 -1 10615
+D9
+~
+~
+0 -1 10613
+S
+#10611
+Graveyard~
+The graveyard of New Hope is the final resting place for it's
+dead. It is a small, square-shaped opening in a dense wood. The
+eerie sounds of some unknown creature can be heard crunching 
+leaves, breaking twigs, and occasionally making a strange grunting
+sound. You almost feel as if you can smell the stench of fresh
+blood somewhere nearby.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10607
+D1
+~
+~
+0 -1 10612
+D2
+~
+~
+0 -1 10615
+D3
+~
+~
+0 -1 10610
+D6
+~
+~
+0 -1 10608
+D7
+~
+~
+0 -1 10606
+D8
+~
+~
+0 -1 10616
+D9
+~
+~
+0 -1 10614
+S
+#10612
+Graveyard~
+Directly to the south lies a dark opening. It appears to be the
+only way out of the graveyard. For some reason the graveyard isn't
+spoken about much by townsfolk. Could it have some foul secret 
+that nobody wishes to speak of? Whatever the reason, if you stay
+too long, you are destined to find out.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10608
+D2
+~
+~
+0 -1 10616
+D3
+~
+~
+0 -1 10611
+D7
+~
+~
+0 -1 10607
+D9
+~
+~
+0 -1 10615
+S
+#10613
+Graveyard, Southwest Corner~
+The southwest corner of the graveyard seems quite peaceful. The
+strange sounds that could be heard from everywhere else in the
+graveyard have mysteriously ceased. Berry bushes grow in a large
+patch along the trees. One would almost say that this would be
+an excellent spot for a picnic, if it weren't for the fact that
+this is a graveyard.
+~
+~
+0 4 3 1
+D0
+~
+~
+0 -1 10609
+D1
+~
+~
+0 -1 10614
+D6
+~
+~
+0 -1 10610
+S
+#10614
+Graveyard~
+Walking parallel to the barrier of trees to the south, you glance
+into the woods contemplating the unknown. As you walk, your thoughts
+seem to stray towards other things. Staring into the trees it seems
+as if you could almost make out a sinister face, staring at you
+from inside the wood. But when you rub your eyes and blink a few
+times, the face is gone.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10610
+D1
+~
+~
+0 -1 10615
+D3
+~
+~
+0 -1 10613
+D6
+~
+~
+0 -1 10611
+D7
+~
+~
+0 -1 10609
+S
+#10615
+Graveyard~
+Directly to the east there is a dark hole in the woods that seems
+large enough to fit through. Glancing into the hole you see nothing
+but darkness. A small ways to the west a small patch of berry bushes
+have grown. They seem to be the only fruit-bearing bush in the area.
+Despite the urge to go and taste the berries, you feel compelled
+to leave the graveyard. The thought of so many dead bodies beneath
+your feet is unnerving.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10611
+D1
+~
+~
+0 -1 10616
+D3
+~
+~
+0 -1 10614
+D6
+~
+~
+0 -1 10612
+D7
+~
+~
+0 -1 10610
+S
+#10616
+Graveyard, Southeast Corner~
+You stand in front of a dark tunnel in the trees. Looking through
+the tunnel, a bright light can be seen emanating from the other
+side.  Gazing at your surroundings you see several tombstones
+strewn about. Strange sounds come from the northeast, but their
+source seems nowhere to be found.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 10612
+D3
+~
+~
+0 -1 10615
+D7
+~
+~
+0 -1 10611
+D8
+~
+~
+0 -1 10617
+S
+#10617
+Dark Tunnel~
+You find yourself in a narrow dark tunnel. To the northwest, and
+likewise to the southeast, a bright light beckons to you. Staring
+to the southeast, you can see the occaisional traveler pass by.
+The smell of fresh forest air emits from the opening to the 
+northwest. But somehow you sense danger from that direction.
+~
+~
+0 1036 3 1
+D7
+~
+~
+0 -1 10616
+D8
+~
+~
+0 -1 10618
+S
+#10618
+New Hope, Near a Dark Tunnel~
+Two large willow trees cover the area with their flimsy branches,
+causing a nice shadowy covering from the elements. To the northwest
+A narrow, dark tunnel leads to New Hope's graveyard. Many a rumor
+has been heard about the ghastly inhabitants of the cemetary, it
+would be a horrifying experience to live out one of those rumors.
+Your better judgement warns you to stay away.
+~
+~
+0 8 1 100
+D1
+~
+~
+0 -1 12401
+D7
+~
+~
+0 -1 10617
+D9
+~
+~
+0 -1 12406
+S
+#10619
+Graveyard, at the old cathedral~
+The wind is cold and the setting of things is very uneasy.  Here
+stands the old cathedral, pre-church to the one now set in town.
+It is older than most anyone in the world minus the gods themselves.
+No one knows what happened to it exactly, but it just must be evil.
+The ruins look to be for the most part unsafe to the smaller person, 
+though if you are built in strength it may be worth a look around,
+the steps are right in front of you.
+~
+~
+0 1073741824 1 1
+D2
+~
+~
+0 -1 10602
+D10
+~
+steps~
+526336 -1 10620
+S
+#10620
+Amongst the ruins~
+You stand upon the top of a large slate of concrete, hexagonal
+in shape and very large.  Remains of stone walls and pillars
+surround you in a variety of mishaped forms, much like the old
+cities of Rome or Greece.  In the middle is a slab of concrete
+at a slant, doing a very poor job of covering a hole.  Echoes of
+noises can be heard if you put your ear to it, making you seriously
+qustion the thought of going down the pit.
+~
+~
+0 1073741824 1 1
+D10
+~
+steps~
+526336 -1 10619
+S
+#0
+
+
+#RESETS
+M 0 10601 1 10601
+E 1 10601 1 17
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

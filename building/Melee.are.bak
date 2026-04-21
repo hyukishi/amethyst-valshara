@@ -1,0 +1,1234 @@
+#AREA   Melee Magthere~
+
+
+
+#VERSION 200
+#AUTHOR Kyorlin~
+
+#RANGES
+1 10 1 75
+$
+
+#RESETMSG Spiders seem to surge arround you as they go about the buisness of Lloth~
+
+#FLAGS
+0 5
+
+#ECONOMY 0 799700
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#100
+e'rand-slave~
+E'rand~
+A ragged old slave sits here begging for life.
+~
+A pitiful excuse of a slave is backed up to the wall waving a short dagger
+at you in protest, as if it knows its life is at an end.
+~
+1 0 0 C
+0 0 0 1d1+1 1d1+1
+100 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+53 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+> death_prog 100~
+mpecho With E'rand's death, the platform he was standing on collapses,
+mpecho allowing you passage to the room below.
+mpopenpassage 101 102 5
+~
+|
+#101
+el'inss-innkeeper-drow-ancient~
+a newly created el'inss-innkeeper-drow-ancient~
+Some god abandoned a newly created el'inss-innkeeper-drow-ancient here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#102
+demon-aludemon-female-scantily-clad~
+a newly created demon-aludemon-female-scantily-clad~
+Some god abandoned a newly created demon-aludemon-female-scantily-clad here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#103
+haru haenoth~
+a newly created haru haenoth~
+Some god abandoned a newly created haru haenoth here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#104
+azash-haenoth~
+a newly created azash-haenoth~
+Some god abandoned a newly created azash-haenoth here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#105
+kobold-shackled~
+a newly created kobold-shackled~
+Some god abandoned a newly created kobold-shackled here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#106
+orc-slave-chained~
+a newly created orc-slave-chained~
+Some god abandoned a newly created orc-slave-chained here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#107
+troll-impaled-slave~
+a newly created troll-impaled-slave~
+Some god abandoned a newly created troll-impaled-slave here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#108
+gnoll-slave-bound~
+a newly created gnoll-slave-bound~
+Some god abandoned a newly created gnoll-slave-bound here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#109
+elf-prisoner-tortured~
+a newly created elf-prisoner-tortured~
+Some god abandoned a newly created elf-prisoner-tortured here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#110
+drow-cleric-forsaken~
+a newly created drow-cleric-forsaken~
+Some god abandoned a newly created drow-cleric-forsaken here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#111
+des-shopkeeper-kobold~
+a newly created des-shopkeeper-kobold~
+Some god abandoned a newly created des-shopkeeper-kobold here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#112
+gulak-troll-wandering~
+a newly created gulak-troll-wandering~
+Some god abandoned a newly created gulak-troll-wandering here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#113
+orc-female-slave~
+a newly created orc-female-slave~
+Some god abandoned a newly created orc-female-slave here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#114
+orc-slave-kartuge~
+a newly created orc-slave-kartuge~
+Some god abandoned a newly created orc-slave-kartuge here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#115
+troll-giant-dargoth-guildmaster~
+a newly created troll-giant-dargoth-guildmaster~
+Some god abandoned a newly created troll-giant-dargoth-guildmaster here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#116
+illithid-psionist-guildmaster~
+a newly created illithid-psionist-guildmaster~
+Some god abandoned a newly created illithid-psionist-guildmaster here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#199
+final-mob~
+a newly created final-mob~
+Some god abandoned a newly created final-mob here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#100
+rusted-shackle-newbie~
+rusted shackle~
+An ancient iron shackle lies here rusting.~
+~
+9 0 2097153
+0 0 0 0
+3 200 50
+E
+shackle rusting~
+While maybe this shackle may have served to keep an insolent slave in her
+place, it appears to be little more than a rusted decoration that offers
+little in the way of restraint or protection.
+~
+A
+18 1
+#101
+rothe-hide-armor~
+rothe hide armor~
+Several smelly sections of a rothes hide have been tied together and left on the ground.~
+~
+9 0 9
+8 8 0 0
+1 200 20
+E
+rothe hide armor~
+This is a smelly collection of cast aside scraps of rothe hide, probably
+stolen by some slave from its drow masters.  It would probably serve better
+than nothing but not by much.
+~
+A
+18 1
+#102
+dagger-old-wornout~
+a wornout dagger~
+A dagger that looks like it has seen better days has been abandoned here.~
+~
+5 0 8193
+3 1 7 2
+1 25 10
+E
+dagger wornout old~
+This weapon would be a prized possession for a slave, the fruits of a
+lifetime of labor for one so unfortunate as to be ground under the heel of
+the drow. As it is, however, it barely offers any protection at all.
+~
+A
+19 1
+A
+18 1
+#103
+rothe-steak~
+a grilled rothe steak~
+A piece of meet has fallen to the ground here.~
+~
+19 0 1
+10 10 0 0
+1 10 1
+#104
+mithril-athame-twisted~
+a twisted mithril athame~
+A short mithril dagger that appears almost serpentine in form lies here.~
+~
+5 0 24577
+12 4 2 2
+1 50 25
+E
+twisted mithril athame dagger~
+a short twisted dagger made of mithril that seems more of an ornamental 
+value than anything else.
+~
+A
+18 2
+A
+19 1
+#105
+short-sword-gladiator-slave's~
+a slave's sword~
+Some god dropped a newly created sword-common-mithril here.~
+~
+5 1073741824 0
+0 0 0 0
+1 0 0
+#106
+pool-water-brackish~
+a brackish pool~
+A pool of brackish water has accumulated here.~
+~
+17 0 0
+1000000 1000000 0 0
+1 0 0
+#107
+bone-ogre-femur-club-large~
+an ogre femur~
+A large bone that appears to have been used as some sort of club has fallen here.~
+~
+5 262144 8193
+3 3 3 7
+1 100 10
+E
+bone ogre femur club larg~
+This bone appears to have come from an ogre from its size, and would
+work rather nicely as a club.  It appears to be brittle from use, and 
+could break at any time.
+~
+A
+18 1
+> damage_prog 75~
+mpe The femur splinters into several pieces and falls to the ground.
+mpoload 108
+~
+|
+#108
+shattered-ogre-femur~
+a shattered bone~
+A piece of a large bone with a sharp end lies upon the ground.~
+~
+5 0 8193
+3 2 3 11
+1 0 0
+E
+shattered ogre femur~
+You see a splittered piece of broken bone that would serve nicely as a
+dagger.
+~
+A
+18 2
+#109
+rothe-hide-loin-cloth~
+a loincloth~
+A piece of rothe hide is emitting a rather disgusting odor.~
+~
+9 0 33
+2 2 0 0
+2 200 50
+E
+rothe hide loincloth~
+This appears to be a half tanned piece of rothe hide leather that is
+about ready to fall apart. It offers great freedom of movement but very
+little protection
+~
+A
+18 3
+> wear_prog 100~
+mpechoat $n You almost lose the contents of your stomach as you pull on the
+mpechoat $n loincloth.
+mpechoaround $n $n looks like they are about to puke as they pull on the
+mpechoaround $n most disgusting loincloth you have ever seen.
+~
+|
+#110
+leather-strap-necklace-bones~
+a bone necklace~
+A leather necklace with several pieces of bone hanging from it lies here.~
+~
+9 0 5
+1 1 0 0
+1 100 25
+E
+necklace bones leather~
+You see several bones of unidentifiable orgin tied to a leather strap
+that would probably fit perfectly around your neck.
+~
+A
+18 1
+#111
+whip-leather-black-rothe~
+a black leather whip~
+A long piece of black leather is has been drop here.~
+~
+5 262146 8193
+3 3 2 4
+3 200 20
+E
+whip black leather rothe~
+Two thin straps of leather tightly wound around eachother stretch
+outwards from a handle of bone.  This is probably a gift by the drow
+to the leader of the slaves so that he may save the drow the task of
+overseeing the other slaves.
+~
+A
+18 2
+#112
+drow-piwafwi-cloak~
+A black Piwafwi~
+A black cloak has been tossed here~
+~
+9 520 1025
+15 20 0 0
+1 125 12
+#113
+mace-magical-midrange~
+A magical mace~
+A magical mace is floating here before you~
+~
+5 524318 8193
+10 2 7 7
+5 245 24
+#114
+lloth-preistess-snake-whip~
+Lloth's preistess whip~
+A whip with living snake heads has been discarded here.~
+~
+13 1073741892 0
+0 0 0 0
+1 0 0
+#199
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#100
+Induction into Melee Magthere~
+One thing that a child of the underdark learns early is the importance of 
+station. Nothing, not even ones own life is more important. All for the glory
+of the Spider Queen, and in the name of her glory shall you find your own
+greatness. You find yourself within the walls of the Melee Magthere, school
+of warriors, and the first school a child of valshara such as yourself is 
+sent to. The brightest and most gifted in the mystical arts soon find their 
+way to the Magthere D'Faern, while the most favored find themselves learning
+the ways of the Spider Queen within the temple. Rumors of other paths exist,
+but for now there is only one way, and that tis the path below you.
+path before you.
+~
+0 4 13 0
+D5
+~
+~
+0 -1 101
+S
+#101
+The Art of War~
+The way of the drow is that of strife and chaos. To advance ones station,
+one must be willing to strike down ones brothers and sisters. Through cunning
+and intrigue rule the lives of the drow, there is always the impending threat
+of attack from outside, under which all drow must unite and defend the savage
+city they have carved from the caverns. For this reason, Melee Magthere exists.
+For this reason you must pass the challenge before you now.
+~
+0 4 13 0
+D5
+~
+~
+4096 -1 102
+S
+#102
+Inn of the Melee Magthere~
+You are within a large cavern deep within the stalgtite mound of the
+Melee Magthere. Although rooms are paid for for nobles, most
+chose instead to sleep in the common halls of the inn, since this way
+they are less likely to be singled out for assassination. To the south,
+you can hear the yelling and screaming of the slave pits.  The combat within
+serves as entertainment to the drow.  To the west you can go to the teachers
+within the school, while to the east there is a passage leading to the 
+streets of valshara.
+~
+0 33554436 1 0
+D0
+~
+~
+0 -1 116
+D1
+~
+~
+0 -1 127
+D2
+~
+~
+0 -1 103
+D3
+~
+~
+0 -1 115
+S
+#103
+Entrance to the Slave Pits~
+The Load sound of cheering comes from all around as many drow mill around,
+watching the fight in the room below.  Although there is an extensive complex
+of tunnels in and around the arena, most of the action occurs in the room
+below. It is rumored that to the south of the arena lies cells of tortured
+slaves, while in all other directions a young fighter may find oppenents upon
+which to test her skill.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 102
+D5
+~
+~
+0 -1 104
+S
+#104
+A Blood-Soaked Arena~
+You are in a large stone room almost completely covered in dried blood. Slaves
+are often brought here for the entertainment of their masters or as punishment,
+occasionally a drow will be cast within the pit as well if he is found unworthy
+of the challenges of the Magthere.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 135
+D2
+~
+~
+0 -1 105
+D3
+~
+~
+0 -1 118
+D4
+~
+~
+0 -1 103
+S
+#105
+In a Stone Tunnel~
+You are in a long stone tunnel that connects the arena to the holding pits,
+where slaves are tortured before they fight to the death in the arena.
+Sounds of screams and slaves pleading for their lives echo all around you, as
+the cruelty of the drow city embraces your soul.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 104
+D2
+~
+~
+0 -1 106
+S
+#106
+Entering the Torture Chambers~
+Screams of pain an anguish bombard you in all directions as the students of
+the Melee Magthere are given their introduction into the drow art of torture.
+No other race can be as cruel without killing the victims.  The children
+of Lloth have mastered the art of keeping one alive regardless of the 
+pain and damage they inflict upon the body.  The bloodsoaked walls and 
+broken bones that lie around belong not to the victims but rather to drow
+that failed to keep the victim alive as they tortured them.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 105
+D1
+~
+~
+0 -1 107
+D2
+~
+~
+0 -1 109
+D3
+~
+~
+0 -1 108
+S
+#107
+A Gruesome Example~
+You are in a small aclove, equiped with chains and shackles to hold down
+the slaves as they are tortured. Cries for mercy echo around the chamber,
+but most likely these cries will not be granted. The slaves will be made
+to live.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 106
+S
+#108
+A Gruesome Example~
+You are in a small aclove, equiped with chains and shackles to hold down
+the slaves as they are tortured. Cries for mercy echo around the chamber,
+but most likely these cries will not be granted. The slaves will be made
+to live.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 106
+S
+#109
+In the Center of the Bloodsoaked Cavern~
+Rivelets of blood pool and congel as they approach the center of this 
+cavern. The constant screams of the tortured slaves echo around you,
+and the lessons of Melee Magthere are ones that you will never forget
+for as long as you live.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 106
+D1
+~
+~
+0 -1 110
+D2
+~
+~
+0 -1 112
+D3
+~
+~
+0 -1 111
+S
+#110
+Significance of Anguish~
+Racks of healing potions sit next to whips and chains and masks along the
+walls. It is here that the novice drow most often recieves her first lessons
+in the art of torture, and for this reason the healing potions are provided.
+All drow must pass this test or be subject to the torture themselves. 
+You noticed several rivelets of blood flowing to the west.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 109
+S
+#111
+Lessons in Pain~
+Racks of healing potions sit next to whips and chains and masks along the
+walls. It is here that the novice drow most often recieves her first lessons
+in the art of torture, and for this reason the healing potions are provided.
+All drow must pass this test or be subject to the torture themselves. 
+Streams of blood from former victims slowly congel and flow to the east.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 109
+S
+#112
+At the Statue~
+Before you stands a giant statue of a spider with a female drow head, showing
+that even here, Lloth watches her children and judges whether or not they 
+are worthy of life. The greatest task before the drow is to wreak vengaence
+upon the realms of the surface for casting them into the underdark in ages 
+past. Without Lloths guidence, they surely would have fallen long ago. Only
+through the glory of Lloth can one achieve greatness here, and it is her
+will that all know the art of pain.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 109
+D1
+~
+~
+0 -1 113
+D3
+~
+~
+0 -1 114
+S
+#113
+Shrine of Suffering~
+Several implements of torture lie around on the floor, and in the center
+of the room there is a large table with a bucket full of blood attached 
+to it.  You are unsure what the purpose of it is, but it cannot be pleasant.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 112
+S
+#114
+Shrine of Suffering~
+Several implements of torture lie around on the floor, and in the center
+of the room there is a large table with a bucket full of blood attached 
+to it.  You are unsure what the purpose of it is, but it cannot be pleasant.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 112
+S
+#115
+The Room of Instruction~
+You have reached the western most point that new students in the Melee
+Magthere are allowed to go within the complex.  The door to the west appears
+to be blocked off currently and perhaps someday this will change.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 138
+D1
+~
+~
+0 -1 102
+S
+#116
+A small hidden Aclove~
+This is the temporary abode of the thief guild master.  He dislikes public
+places and will probably move away as soon as he finds a better home.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 102
+S
+#117
+Aclove~
+Further travel down the hallway has been blocked, and a small aclove
+has been created by the warrior elite of the Melee Magthere.
+~
+0 1073741828 1 0
+S
+#118
+Entering the Slave Tunnels~
+You are within the slave tunnels that lie beneath the Melee Magthere. Unlike
+the torture chamber south of the arena, the slaves in these tunnels
+are kept well fed and are even trained in the basics of fighting
+so that they can aid in the teaching of young drow.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 119
+D1
+~
+~
+0 -1 104
+D3
+~
+~
+0 -1 122
+S
+#119
+In a Stone Tunnel~
+Wandering through the tunnels, you notice several figures that dart away
+from you in fear. To the south you hear the ocasional scream or cheer
+coming from the arena, while to the north east there is an uneasy silence.
+It has long been rumored amoungst the students of the academy that the 
+slaves maintain a shadow economy and somewhere within these tunnels is a 
+shop at which you can better equip yourself.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 118
+D6
+~
+~
+0 -1 120
+S
+#120
+A Small Cavern~
+You are in a small cave that lies at the end of one branch of the slave
+tunnels. Cold granite surrounds you, and the slaves move silently about 
+in a way thats almost unnerving...even to a drow. To the southwest, you
+hear a trickle of water as well as the sounds of drow yelling and cheering.
+~
+0 1073741828 1 0
+D9
+~
+~
+0 -1 119
+S
+#121
+Wandering in Tunnels of Granite~
+The smooth grey walls of the tunnel rise up and arch together above you.
+Their smoothness is ocasionally interupted by the ocasional skull of some
+slave race, left there by the drow during the construction of the tunnels
+to remind the slaves of their place. To the south west, a steady dripping
+sound can be heard.
+~
+0 1073741828 1 0
+D9
+~
+~
+0 -1 122
+S
+#122
+Around a Curve~
+The granite tunnel curves around a large boulder that blocks passage to
+the north. The sound of water dripping can be heard to the northwest. The 
+exit to the north east seems strangely silent, almost as if it was anticipating
+your next move.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 118
+D3
+~
+~
+0 -1 133
+D6
+~
+~
+0 -1 121
+D7
+~
+~
+0 -1 123
+S
+#123
+At a Small Pool~
+The water dripping in from above has formed a small pool of brackish 
+water on the western side of the room.  Although not the most pleasant 
+method of quenching your thirst it would probably suffice in a pinch. The
+slaves treat it as a community water hole and you see several foot prints
+leading away in all directions.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 124
+D6
+~
+~
+0 -1 125
+D8
+~
+~
+0 -1 122
+S
+#124
+A Messy, Lived in Cave~
+The remains of several slaves litter this cave. Obviously the occupent 
+thinks quite highly of himself and has carved shelves into the walls upon
+which he keeps his trophies: the skulls of those he has killed. The filth
+is almost unbearable, with a thin layer of dried flaking blood covering 
+almost every surface.
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 123
+S
+#125
+A Bloodstained Tunnel~
+You are in a granite tunnel whose walls long ago gave up their grey tone
+for the dark red of dried blood. The smell of decay is all about and you
+have to wonder how anyone could live in such conditions, even slaves.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 126
+D9
+~
+~
+0 -1 123
+S
+#126
+The Tunnels of Decay~
+You are in a dark, bloodstained tunnel that reeks of decay. The ground
+underfoot makes crunching sounds as you walk across it. You bend down to 
+see what is causing it and relize that the floor is covered with pieces
+of broken bones. The stench of fresher deaths hangs heavy in the air.
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 125
+D7
+~
+~
+0 -1 128
+S
+#127
+Gates of the Melee Magthere~
+You stand under the magnificent gates of the Melee Magthere. To the east,
+a broad pathway heads to the north and south. Behind you lies the school of
+warriors, in which all drow are enrolled at some point in their lives, even
+if it is only for a few months. Time outside the Magthere can be kept by 
+the glowing creature that traverses the caverns roof daily.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 102
+S
+#128
+In an Ancient Passageway~
+This tunnel appears to have been in existance a very long time. There are
+several skulls imbedden in the walls and outlined by faerie fire illuminating
+the dark crumbling rock walls.  Silence seems to reign supreme here,
+interupted only by the ocasional death cry or water dripping from above.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 129
+D8
+~
+~
+0 -1 126
+S
+#129
+In a Twisting Passageway~
+The granite walls close around you, lit only by faerie fire. You hear the
+sound of almost silent footsteps in the distance, and the ocasional sound
+of water dripping down from above. The tunnel is full of the scent of
+decaying flesh and excrement.  
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 128
+D3
+~
+~
+0 -1 134
+D9
+~
+~
+0 -1 130
+S
+#130
+Wandering the Slave Tunnels~
+The walls seem to pass opressively close as you pass through the tunnels.
+The scent of death hangs heavy in the moist air, and silence seems to be
+almost absolute.  The floor is covered with splintered pieces of bone
+and stone, and the passage continues to the northeast and the south.
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 131
+D6
+~
+~
+0 -1 129
+S
+#131
+In a Dimly Lit Tunnel~
+You notice several skulls outlined by faerie fire placed in the walls 
+of the tunnel. The skulls probably belonged to the original builders of
+the tunnel which the drow saw fit to place there as a reminder to the 
+slaves of their place. You notice pieces of broken bone scattered around
+the floor and little else.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 130
+D8
+~
+~
+0 -1 132
+S
+#132
+A Choice of Directions~
+The skull lined tunnel splits off into three directions here. To the southeast,
+the sound of water dripping can be heard. The exit to the south appears to be
+some sort of lived in cave. To the northwest, the passageway twists and
+turns in the dim light of faerie fire.
+~
+0 1073741824 1 0
+D7
+~
+~
+0 -1 131
+D8
+~
+~
+0 -1 133
+S
+#133
+Wandering the Slave Tunnels~
+The cold granite walls of the tunnel enfolds you, illuminated only by
+the skulls of several races which are imbedded in the walls and surrounded
+by faerie fire. Silence and stealth seem to be a way of life here, and the
+only sound is that of the ocassional drop of water falling into a puddle from 
+above.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 122
+D7
+~
+~
+0 -1 132
+S
+#134
+A Run Down Sleeping Chamber~
+You are in a cave that appears to be the epitome of disorder. Pieces of
+broken bones and torn flesh lie all around. In the corner you notice what
+appears to be some type of bed, although you have serious questions about
+the person that uses it. 
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 129
+S
+#135
+Wandering Dimly Lit Tunnels~
+You are in a dimly lit tunnel, before a dark cave that lies to the south.
+There is a terrible stench emininating from the cave, and you hear grumbling
+from within. To the west, the sounds of the arena can be heard, while to the
+east large iron bars block passage into the gladiator tunnels.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 136
+D3
+~
+~
+0 -1 104
+S
+#136
+In a Large Cave~
+Debris is scattered all over this well lived in chamber. There appears to
+be some sort of bed formed from clothing and hides of many creatures. Upon
+the wall are strapped several exotic looking weapons and torture devices.
+The owner of this cave seems likely to be one of the most terrifying warriors
+you are ever likely to meet.
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 135
+S
+#137
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#138
+An Illithid inter planes pocket~
+You are in a large chamber within the Melee Magthere. Upon the walls are
+the tenticle enshrouded heads of illithids aiding the drow in battle.
+One of the few races to alley themselves with the children of Lloth, the
+Illithid representatives serve many functions within the city.
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 115
+S
+#139
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#140
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#199
+final room~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+M 1 100 1 101
+E 1 101 100 5
+E 1 102 100 16
+E 1 100 100 26
+E 1 100 100 25
+M 1 101 1 102
+G 1 103 1
+M 1 102 1 104
+M 1 103 1 115
+M 1 104 1 112
+M 1 105 1 107
+M 1 106 1 108
+M 1 108 1 110
+M 1 109 1 114
+M 1 110 1 113
+M 1 107 1 111
+M 1 32 1 116
+M 1 111 1 120
+G 1 113 1
+G 1 112 1
+G 1 101 1
+G 1 104 1
+M 0 102 3 119
+O 1 106 1 123
+M 1 112 1 124
+E 1 109 10 7
+E 1 107 10 16
+M 0 113 10 133
+E 1 110 100 3
+M 0 113 10 130
+E 1 110 100 3
+M 0 113 10 128
+E 1 110 100 3
+M 1 114 1 134
+E 1 111 20 16
+M 0 33 1 127
+M 1 115 1 136
+M 1 116 1 138
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,67 @@
+#AREA   {PROTO} Kyorlin's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Kyorlin~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#90000
+test~
+a newly created test~
+Some god abandoned a newly created test here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> speech_prog test~
+say asdf
+mpdelay self 2
+say asdf
+~
+|
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

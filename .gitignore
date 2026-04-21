@@ -1,0 +1,8 @@
+src/*.o
+src/smaug
+src/dns_slave
+src/*~
+log/*
+player/*
+backup/*
+corpses/*

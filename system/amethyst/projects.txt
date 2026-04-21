@@ -1,0 +1,38 @@
+Name		   New Hope~
+Owner		   None~
+Coder		    XahXhaX~
+Status		   No update.~
+Date		   Mon Jan 18 22:48:23 1999~
+Description         ~
+End
+Name		   Graveyard~
+Owner		   None~
+Status		   No update.~
+Date		   Mon Jan 18 22:49:07 1999~
+Description         ~
+End
+Name		   Castle~
+Owner		   None~
+Status		   No update.~
+Date		   Mon Jan 18 22:49:10 1999~
+Description         ~
+End
+Name		   Misery~
+Owner		   None~
+Status		   No update.~
+Date		   Mon Jan 18 22:49:19 1999~
+Description         ~
+End
+Name		   Tower~
+Owner		   None~
+Coder		    NightBlade~
+Status		   No update.~
+Date		   Mon Jan 18 22:49:31 1999~
+Description         ~
+End
+Name		   Unique Spells/Skills~
+Owner		   Kyorlin~
+Status		   No update.~
+Date		   Sun May  2 21:21:57 1999~
+Description         ~
+End

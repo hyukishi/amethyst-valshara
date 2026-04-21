@@ -1,0 +1,278 @@
+#AREA   Death Knights clan hall~
+
+
+
+#VERSION 213
+#AUTHOR Steff~
+
+#RANGES
+5 65 5 65
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 45000000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#100
+clan healer~
+clan healer~
+A Clan Healer Stands here, ready to heal you.
+~
+~
+3 0 -200 C
+50 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 5 0 0 1 1 5
+0 0 0 0 1056768 0 0 0
+> all_greet_prog 100~
+if isnpc($n)
+else
+mpecho The clan healer waves his arms about in arcane gestures...
+mprestore $n 32000
+mpechoat $n ...and suddenly you feel much better, and your wounds are gone.
+mpechoaround $n ...and $n looks much better and healthier.
+endif
+~
+|
+#0
+
+
+#OBJECTS
+#100
+Gold-Trimmed Fountian~
+fountian~
+A Gold-Trimmed Fountian is here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#101
+Armour Bin~
+Armour Bin~
+An Armour Bin sit's here.~
+~
+15 0 0
+9999 0 0 12
+2 0 0 0
+#102
+potion shelf~
+potion shelf~
+A Potion shelf sits here on the wall.~
+~
+15 0 0
+9999 0 0 12
+2 0 0 0
+#103
+weapons rack~
+weapons rack~
+A Large Weapons Rack Stand's here.~
+~
+15 0 0
+9999 0 0 12
+2 0 0 0
+#104
+scroll glass case~
+scroll glass case~
+A Glass Scroll Case is here.~
+~
+15 0 0
+9999 0 0 12
+2 0 0 0
+#105
+extras~
+extras~
+An Extras Bin Sit's here.~
+~
+15 0 0
+9999 0 0 12
+2 0 0 0
+#106
+clan board~
+clan board~
+The Death Knights Clan board stands here.~
+~
+12 0 0
+0 0 0 0
+1 0 0 0
+#107
+pie apple~
+Apple Pie~
+A steaming hot apple pie sit's here.~
+~
+19 0 1
+0 0 0 0
+1 5 0 0
+#108
+oven~
+Oven~
+A Oven stands here, full of pies.~
+~
+15 0 0
+9999 0 0 12
+2 0 0 0
+#0
+
+
+#ROOMS
+#100
+Hall of the Death Knights~
+This is an entrance to a, dark, gothic hall. The hall casts it's
+shadow on you, leaving a chill deep inside your soul. This is the
+Clan Hall of the Death Knights, do not tresspass. If you are a
+member, welcome again. The groud is made of a cobble brick
+and the hall in made from a dark brown brick, it looks as if it
+could withstand a good beating.
+~
+~
+0 8 1 1
+D0
+~
+~
+0 -1 101
+S
+#101
+Shrine of Steff~
+This is the largest room in the entire hall. There is a large
+fountain in front of you, it has the figure and face of your clan
+leader on it. This room is very well decorated, and very clean.
+But you can still see a few bloodstains left over on the dark blue
+rug. There is a single, large light here. Shedding light on the 
+fountain. There are exits to the south to the hall entrance to 
+the east to the Armoury, to the west to the Holy Word message
+board, and to the north to the Kitchen were you can grab some 
+grub.
+~
+~
+0 8 1 0
+D0
+~
+~
+0 -1 104
+D1
+~
+~
+0 -1 102
+D2
+~
+~
+0 -1 100
+D3
+~
+~
+0 -1 103
+S
+#102
+Armoury~
+This is a medium sized room, it is used to store equipment that
+has been collected from the clan leader and the other clan members
+feel free to take what you need, and please put some good 
+equipment in the appropriate bins.
+~
+~
+0 8 1 0
+D3
+~
+~
+0 -1 101
+S
+#103
+Holy Word~
+This is a smaller room, it has a few couches and tables in it.
+But it is unnaturaly quiet in here. There is a large board for
+clan members to post notes to other clan members. It is decorated
+with gold triming and a silver stand.
+~
+~
+0 65544 1 0
+D1
+~
+~
+0 -1 101
+S
+#104
+Kitchen~
+This is a small kitchen made from marbel. A cook stands here over
+a stove, cooking pies and pastrys for the clan members. Please be
+polite and leave some food for the other clan members, they need 
+too eat to.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 101
+S
+#105
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#106
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#107
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#108
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#109
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#110
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#0
+
+
+#RESETS
+M 1 100 1 101
+O 1 100 1 101
+O 1 101 1 102
+O 1 102 1 102
+O 1 103 1 102
+O 1 105 1 102
+O 1 104 1 102
+O 1 106 1 103
+O 1 108 1 104
+P 0 107 1 0
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

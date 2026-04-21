@@ -1,0 +1,17 @@
+Installing:
+
+1.  Uncompress the package
+
+2.  Change into the dotd-x.x.x directory.
+
+3.  Edit the following files to check for things that might need checking:
+	src/OPTIONS
+	imc/config
+
+4.  Run: make
+
+5.  Run: nohup startup &
+
+The mud should now be running, if you didn't get past step 4, chances are
+you need more system specific things.  The mud is designed and developed
+on Linux systems, both libc5 and glibc2.

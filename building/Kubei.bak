@@ -1,0 +1,86 @@
+#AREA   {PROTO} Kubei's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Kubei~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#60000
+Entrance to the Troll Shrine~
+You are standing at the entrance of the Troll Shrine, also known as
+Tishnuko.  Many troll live here, if you disturb their slumber then
+they will kill you.  Beware of these troll, they have sharp teeth
+and big pointy ears and big hair.  Leave them be or have bloodshed!
+~
+0 1073741824 0 0
+D1
+~
+~
+0 -1 60001
+S
+#60001
+Hallway to the sleeping chambers~
+Ahead of you, you hear snoring.  It shakes the walls horribly
+with great power making them tremble.  Get out of here before you
+are squashed like a very small insect!  To the north is the first 
+room in which the troll sleep.  Do not wake them!
+~
+0 1073741824 0 0
+D0
+~
+~
+0 -1 60002
+D3
+~
+~
+0 -1 60000
+S
+#60002
+Chamber 1~
+~
+0 1073741824 0 0
+D2
+~
+~
+0 -1 60001
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,54 @@
+#DEITY
+Filename		../deity/tyche~
+Name		Tyche~
+Description	Tyche appears as a rather small, slender, elfin human.
+SHe is able to cast "good luck" as a spell.  The recipient
+of this spell will always win any single contest
+no matter what the odds.  She can also shape change
+at will and speak with anything.
+The goddes is not treated very will in the pantheon, as the
+other deities think of her as a poor relative and not 
+having or being the same caliber.  She is therefore not
+usually willing to aid other deities in there struggle for
+power.
+~
+Alignment		500
+Worshippers	29
+Flee		0
+Flee_npcrace	0
+Flee_npcfoe	0
+Kill		0
+Kill_npcrace	0
+Kill_npcfoe	50
+Kill_magic	0
+Sac		10
+Bury_corpse	50
+Aid_spell		50
+Aid		50
+Steal		-50
+Backstab		-50
+Die		0
+Die_npcrace	0
+Die_npcfoe	0
+Spell_aid		0
+Dig_corpse	0
+Scorpse		0
+Savatar		0
+Sdeityobj		0
+Srecall		0
+Race		-1
+Class		-1
+Element		1
+Sex		-1
+Affected		0
+Npcrace		14
+Npcfoe		16
+Suscept		0
+Race2		-1
+Susceptnum	0
+Elementnum	0
+Affectednum	0
+Objstat		0
+End
+
+#END

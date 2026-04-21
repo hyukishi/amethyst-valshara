@@ -1,0 +1,12 @@
+/* Multiclass module by Kyorlin */
+/* Bitvectored races and values */
+#define CLASS_MAGE_MULTI       	BV00
+#define CLASS_CLERIC_MULTI     	BV01
+#define CLASS_THIEF_MULTI 	BV02
+#define CLASS_WARRIOR_MULTI	BV03
+#define CLASS_VAMPIRE_MULTI     BV04
+#define CLASS_DRUID_MULTI	BV05
+#define CLASS_RANGER_MULTI	BV06
+#define CLASS_AUGURER_MULTI	BV07
+#define CLASS_PALADIN_MULTI	BV08
+#define CLASS_NECROMANCER_MULTI BV09

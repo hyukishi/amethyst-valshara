@@ -1,0 +1,1288 @@
+#AREA   Valsharan Che'el~
+
+
+
+#VERSION 214
+#AUTHOR Xera~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#15101
+Schlooglebinder~
+A Schlooglebinder!~
+A Schlooglebinder lies here... WHAT IS A SCHLOOGLEBINDER??~
+~
+5 0 8193
+0 1000 2 11
+1 0 0 0
+A
+13 1000
+A
+19 1000
+A
+2 10
+A
+1 25
+A
+48 25
+A
+32 25
+#15102
+Throne~
+a godly throne~
+A Snartian Throne Sits Here, Colorful and Fluffy~
+~
+12 0 0
+0 0 16 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#15101
+Southern Gates of Valsharan~
+~
+~
+0 4 1 3
+D0
+~
+~
+0 -1 15102
+S
+#15102
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15103
+D2
+~
+~
+0 -1 15101
+S
+#15103
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15104
+D2
+~
+~
+0 -1 15102
+S
+#15104
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15105
+D2
+~
+~
+0 -1 15103
+S
+#15105
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15106
+D2
+~
+~
+0 -1 15104
+S
+#15106
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15107
+D2
+~
+~
+0 -1 15105
+S
+#15107
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15108
+D2
+~
+~
+0 -1 15106
+S
+#15108
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15109
+D2
+~
+~
+0 -1 15107
+S
+#15109
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15110
+D2
+~
+~
+0 -1 15108
+S
+#15110
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15111
+D2
+~
+~
+0 -1 15109
+S
+#15111
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15112
+D2
+~
+~
+0 -1 15110
+S
+#15112
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15113
+D2
+~
+~
+0 -1 15111
+S
+#15113
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15114
+D2
+~
+~
+0 -1 15112
+S
+#15114
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15115
+D2
+~
+~
+0 -1 15113
+S
+#15115
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15116
+D2
+~
+~
+0 -1 15114
+S
+#15116
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15117
+D2
+~
+~
+0 -1 15115
+S
+#15117
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15118
+D2
+~
+~
+0 -1 15116
+S
+#15118
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15119
+D2
+~
+~
+0 -1 15117
+D3
+~
+~
+0 -1 15120
+D6
+~
+~
+0 -1 15134
+S
+#15119
+Southern Gates of Valsharan~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15118
+S
+#15120
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15118
+D3
+~
+~
+0 -1 15121
+S
+#15121
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15120
+D3
+~
+~
+0 -1 15122
+S
+#15122
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15121
+D7
+~
+~
+0 -1 15123
+S
+#15123
+Intersection of Paths~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15124
+D8
+~
+~
+0 -1 15122
+S
+#15124
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15123
+D2
+~
+~
+0 -1 15125
+S
+#15125
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15124
+D9
+~
+~
+0 -1 15126
+S
+#15126
+Intersection of Paths~
+~
+~
+0 4 1 0
+D6
+~
+~
+0 -1 15125
+D7
+~
+~
+0 -1 15127
+S
+#15127
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15128
+D8
+~
+~
+0 -1 15126
+S
+#15128
+Intersection of Paths~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15127
+D3
+~
+~
+0 -1 15129
+S
+#15129
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15128
+D3
+~
+~
+0 -1 15130
+S
+#15130
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15129
+D3
+~
+~
+0 -1 15131
+S
+#15131
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15130
+D3
+~
+~
+0 -1 15132
+S
+#15132
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15131
+D3
+~
+~
+0 -1 15133
+S
+#15133
+Western Gate Of Val'Sharan~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15132
+S
+#15134
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15135
+D9
+~
+~
+0 -1 15118
+S
+#15135
+Intersection of Paths~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15134
+D8
+~
+~
+0 -1 15136
+S
+#15136
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15137
+D7
+~
+~
+0 -1 15135
+S
+#15137
+Intersection of Paths~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15136
+D6
+~
+~
+0 -1 15138
+S
+#15138
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15139
+D9
+~
+~
+0 -1 15137
+S
+#15139
+Intersection of Paths~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15138
+D8
+~
+~
+0 -1 15140
+S
+#15140
+Intersection of Paths~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15141
+D7
+~
+~
+0 -1 15139
+S
+#15141
+Intersection of Paths~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15140
+D6
+~
+~
+0 -1 15142
+S
+#15142
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15143
+D8
+~
+~
+0 -1 15158
+D9
+~
+~
+0 -1 15141
+S
+#15143
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15144
+D2
+~
+~
+0 -1 15142
+S
+#15144
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15145
+D2
+~
+~
+0 -1 15143
+S
+#15145
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15146
+D2
+~
+~
+0 -1 15144
+S
+#15146
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15147
+D2
+~
+~
+0 -1 15145
+S
+#15147
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15148
+D2
+~
+~
+0 -1 15146
+S
+#15148
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15149
+D2
+~
+~
+0 -1 15147
+S
+#15149
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15150
+D2
+~
+~
+0 -1 15148
+S
+#15150
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15151
+D2
+~
+~
+0 -1 15149
+S
+#15151
+Intersection of Paths~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15150
+D6
+~
+~
+0 -1 15152
+S
+#15152
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15153
+D9
+~
+~
+0 -1 15151
+S
+#15153
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15154
+D2
+~
+~
+0 -1 15152
+S
+#15154
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15155
+D2
+~
+~
+0 -1 15153
+S
+#15155
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15156
+D2
+~
+~
+0 -1 15154
+S
+#15156
+Intersection of Paths~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15157
+D2
+~
+~
+0 -1 15155
+S
+#15157
+Northern Gate~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15156
+S
+#15158
+Temple Gates~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15159
+D7
+~
+~
+0 -1 15142
+S
+#15159
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15158
+D1
+~
+~
+0 -1 15165
+D3
+~
+~
+0 -1 15160
+S
+#15160
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15161
+D1
+~
+~
+0 -1 15159
+D2
+~
+~
+0 -1 15163
+D3
+~
+~
+0 -1 15162
+S
+#15161
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15160
+S
+#15162
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15160
+S
+#15163
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15160
+D1
+~
+~
+0 -1 15164
+S
+#15164
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15168
+D3
+~
+~
+0 -1 15163
+D4
+~
+~
+0 -1 15169
+S
+#15165
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15166
+D1
+~
+~
+0 -1 15167
+D2
+~
+~
+0 -1 15168
+D3
+~
+~
+0 -1 15159
+S
+#15166
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15165
+S
+#15167
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15165
+S
+#15168
+Redit name Within the Temple of Lloth~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15165
+D3
+~
+~
+0 -1 15164
+S
+#15169
+Level of the Neophytes~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15170
+D4
+~
+~
+0 -1 15184
+D5
+~
+~
+0 -1 15164
+S
+#15170
+Level of the Neophytes~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15169
+D6
+~
+~
+0 -1 15173
+D7
+~
+~
+0 -1 15171
+S
+#15171
+Level of the Neophytes~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15174
+D6
+~
+~
+0 -1 15172
+D8
+~
+~
+0 -1 15170
+S
+#15172
+Level of the Neophytes~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15177
+D8
+~
+~
+0 -1 15173
+D9
+~
+~
+0 -1 15171
+S
+#15173
+Level of the Neophytes~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15180
+D7
+~
+~
+0 -1 15172
+D9
+~
+~
+0 -1 15170
+S
+#15174
+Sleeping Chambers~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15175
+D1
+~
+~
+0 -1 15171
+D2
+~
+~
+0 -1 15176
+S
+#15175
+Sleeping Chambers~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15174
+S
+#15176
+Sleeping Chambers~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15174
+S
+#15177
+Meditation Room~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15178
+D2
+~
+~
+0 -1 15172
+D3
+~
+~
+0 -1 15179
+S
+#15178
+Meditation Room~
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 15177
+S
+#15179
+Meditation Room~
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 15177
+S
+#15180
+Study Chamber~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15181
+D2
+~
+~
+0 -1 15182
+D3
+~
+~
+0 -1 15173
+D4
+~
+~
+0 -1 15183
+S
+#15181
+Study Chamber~
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 15180
+S
+#15182
+Study Chamber~
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 15180
+S
+#15183
+Chamber of The Mistress of Neophytes~
+~
+~
+0 4 1 0
+D5
+~
+~
+0 -1 15180
+S
+#15184
+Upon a Circular Stair~
+~
+~
+0 4 1 0
+D4
+~
+~
+0 -1 15185
+D5
+~
+~
+0 -1 15169
+S
+#15185
+Upon a Circular Stair~
+~
+~
+0 4 1 0
+D4
+~
+~
+0 -1 15186
+D5
+~
+~
+0 -1 15184
+S
+#15186
+Chambers of the Acolytes~
+~
+~
+0 4 1 0
+D5
+~
+~
+0 -1 15185
+S
+#0
+
+
+#RESETS
+O 1 11102 1 15186
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

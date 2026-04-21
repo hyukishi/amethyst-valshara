@@ -1,0 +1,126 @@
+#AREA   {PROTO} Asper's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Asper~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#50000
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50001
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50002
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50003
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50004
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50005
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50006
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50007
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50008
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50009
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50010
+Floating in a void~
+~
+0 1073741824 1 0
+S
+#50025
+Floating in a void~
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 50035
+S
+#50035
+Enterance to Caverns~
+A gigantic stone archway appears. Through the doorway its essence
+appears to be made of molten rock, nearing it you can conclude
+that the intense heat radiating off of it is not from any mortal form
+that has ever been witnessed, the massive doorway seems to be
+beconing you to enter, its vast caverns are wanting to be explored.
+~
+0 1073741824 13 2
+D0
+into the depths of the cave
+~
+~
+0 -1 50025
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

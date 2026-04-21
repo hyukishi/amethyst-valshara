@@ -1,0 +1,146 @@
+#AREA   {PROTO} Nosgoth's area in progress~
+
+
+
+#VERSION 200
+#AUTHOR Shilgarn~
+
+#RANGES
+-1 -1 -1 -1
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#1200
+A forming scene~
+As the wolrd starts forming arround you, it starts to 
+become recognizeable as the material plane. Trees start 
+sprouting out of the ground. Clouds racing arround 
+to find there place in the sky. Grass coming up through
+the ground at an alarming speed.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1201
+S
+#1201
+An unknown entrance~
+Large wooden doors, double the size of a mans height and width. A 
+stone wall playing out arround the large wooden gate. The smell of 
+baking bread is wafting through the air. The sounds of a blacksmith
+can be heard.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1202
+S
+#1202
+A pecular grove~
+Something sparkly seems to play a long the edge of your vision. 
+fireflys seem to be flying about laughing and playing despite your 
+presense. beautiful flowers of red, green, and blue can be seen 
+here with the fireflys dancing arround them.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1205
+D1
+~
+~
+0 -1 1203
+S
+#1203
+Before a smelly den~
+A small den lies just ahead. faint growling sounds can be heard 
+from the den. a small stream is coming from the den. its waters
+bowrn and murky looking, not something any humaniod creature 
+would want to drink.
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 1204
+D3
+~
+~
+0 -1 1202
+S
+#1204
+A smelly den~
+In side of a small den. Bones can be seen littering the ground. 
+The smell of a fresh kill wafting to your nose. A small firepit 
+sits in the middle of the room.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 1203
+S
+#1205
+A faerie grove~
+The faeries seem to get thicker here. Sents of baking bread 
+getting stronger. The laugher of children can be heard. A 
+squirel is chattering aloud to be left alone. roses line 
+the ground here.
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 1206
+D2
+~
+~
+0 -1 1202
+S
+#1206
+Floating in a void~
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 1205
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

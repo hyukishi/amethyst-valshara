@@ -1,0 +1,1650 @@
+#AREA   {PROTO} Vvortex's area in progress~
+
+
+
+#VERSION 213
+#AUTHOR God~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31270000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#12401
+an alchemist Garlac~
+An alchemist Garlac~
+An alchemist Garlac
+~
+He is a very old and wrinkled man, who stoops behind a counter here mixing a
+concoction of things into something or another.  You can hear him mumbling
+through his garbs, head to toe, as dusty and old as the shop is, and coughs
+out prices to you in a low raspy voice.
+~
+1073741827 552 0 C
+20 0 0 0d0+0 0d0+0
+1000 0
+112 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 1 0 0 1 1 0
+0 0 2047 0 0 0 0 0
+> time_prog 16~
+cough
+'I'm sorry, it's time for me to go home for today, I'll be back at 6.
+mpecho _gre An alchemist Garlac leaves into a back room.
+mptrans garlac 11288
+~
+> time_prog 6~
+mptrans garlac 12454
+mpat 12454 mpecho _gre An alchemist Garlac arrives from a back room.
+mpat 12454 'I'm opening up shop today, but only for awhile.
+mpat 12454 'I'm not feeling too well today.
+cough
+~
+> rand_prog 5~
+cough
+~
+> rand_prog 1~
+'I'm not feeling too well today I'm afraid, I'll be closing at 4.
+~
+|
+#12402
+Melody~
+Melody the Herbalist~
+Melody the herbalist stands here, filling out reciepts.
+~
+She is an overly cheerful sort of woman.  Very young still but in ownership
+of this very shop.  She has long red hair tied back behind her shoulders,
+dark green eyes, amd a small hint of greenness to match across her skin,
+showing here to have very strong elven blood somewhat.  She looks up at
+you while humming her songs, waiting for you to ask about buying something.
+~
+1073741827 552 0 C
+15 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 6 0 0 3 3 0
+0 0 2047 0 0 0 0 0
+> rand_prog 1~
+serenade
+~
+> rand_prog 1~
+mpecho Melody whistles out a complicated but familiar tune.
+~
+> time_prog 20~
+'Excuse me, but I'm closing now, it's time for me to go home I'm afraid.
+'Please come back at 10 tomorrow, I'll be back then.
+smile
+mpecho Melody leaves west.
+mptransfer melody 11288
+~
+> time_prog 10~
+mptransfer melody 12428
+mpecho Melody arrives from the west.
+smile
+'Hi there, I'm opening my store back up, just tell me what you want.
+~
+|
+#12403
+Thorne~
+Thorne the weapon dealer~
+Thorne stands here, lazily sharpening a sword.
+~
+Thorne towers above you, his muscles bulging through his clothes.
+His ogrish face twists into a sneer and he glares at you.
+Continuing to sharpen the sword, he waits while you make your selection.
+~
+1073741827 552 0 C
+40 0 0 2560d1+0 0d0+0
+1500 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+6 3 0 0 17 17 0
+0 0 0 0 0 0 0 0
+#12404
+E'rant~
+E'rant the Armorer~
+E'rant the Armorer is standing at a table assembling some armour.
+~
+He is hunched over a table, attempting to put together a few miscellaneous
+pieces of metal and animal hides into a body shaped armament.  He looks up
+at you with a quick glance, but fails to say anything whatsoever.
+Next to him is something like a trophy, something he must be very fond of.
+It seems very interesting.
+~
+1073741827 0 0 C
+30 0 0 1800d1+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+85 65 0 0 16496 0 0 0
+> all_greet_prog 100~
+mpechoat $n _gre E'rant glances at you.
+mpechoaround $n _gre E'rant glances at $n.
+~
+|
+#12405
+nameless clockmaker~
+He~
+The nameless clockmaker sits in the shadows here.
+~
+He looks to be older than even the very tower he occupies here.  His garment is
+made up of old white cloth wrapped about himself, his long gray beard barely
+poking through along with the rest of his face.  He seems to be a very
+intelligent person, probably very knowledgeable, it could serve you well to ask
+him about many things in the world, if you know how to ask him correctly.
+~
+1073741827 0 0 C
+55 0 0 32700d1+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+88 5 0 0 0 0 0
+0 0 0 0 0 0 0 0
+> speech_prog graveyard? graveyard. graveyard~
+'So, you want to know about the graveyard do you?  I can tell you much of it.
+'You see, I was walking these lands back before it was even built, and the now
+'ruined cathedral stood taller and mightier than the greatest building around
+'here now days, believe you me.  One particularly dark day, a dragon concieved
+'from the purest of evils I have ever witnessed, and I tell you that is a lot,
+'appeared and simply grinded it into the very pile of rubble it lays as today.
+'As for the dragon, it flew off, to a floating island I tell you.
+'And for the graveyard now?  Well, that cathedral was marked with evil, there
+'is a hole there, and should you be truely good and of courage, then go down
+'there to bare witness to many unspeakable horrors, but conquer them to cleanse
+'it of that evil.
+~
+> speech_prog cathedral? cathedral. cathedral~
+'Well now, that cathedral is very old.  It was once a shining tribute to the
+'gods, but was destroyed by an evil dragon who I swear came down from a
+'floating island.  After it was destroyed, it was turned into a cemetary, kind
+'of fitting  to match the gloom of the whole occasion, don't you think?
+'But that graveyard still stands there, off to the northwest part of town.
+'And you know what else?  That is the source of another morbid evil nowdays,
+'but that relates more to the tombstones...
+~
+> speech_prog tombstone? tombstones? tombstone. tombstones. tombstone tombstones~
+'Yes, those tombstones, at the graveyard.  Well, that cemetary happens to be
+'sitting right next to the western plains.  As a result of this and the evil
+'that now hangs over the old cathedral, skeletons and such forms of undead can
+'be seen roaming those plains, even in the middle of the day!  I feel sorry for
+'them, very much, I know many of them probably and they were good men and
+'women, not deserving of this fate in the least.  Perhaps if one was to travel
+'down into the earth and find the source of this, then they could be set free.
+'That person would be a true hero indeed.
+~
+> speech_prog skeletons? skeleton? skeletons. skeleton. skeletons skeleton~
+'Well, those are undead peoples, just like you and me.  Once they were anyways.
+'I suppose it would be better to ask about the tombstones then of them.
+~
+> speech_prog dragon? dragon. dragon~
+'Ah yes, that miserable beast.  Swept down one day from the skies and destroyed
+'out precious cathedral, which is now the graveyard site.  People wonder about
+'that thing, but I know better.  He came from a floating island in the sky.
+~
+> speech_prog island? island. island~
+'Ah yes, the floating island.  The one thing even I don't know much about.
+'I do know this though.  It's the home of a flying dragon.  I'm not talking
+'about your ordinary dragon race or creature here, I mean a REAL dragon.  One
+'of about the evilest you can get.  The other is that if you wanted a glimpse
+'of it, the best place I can think of would be to climb up the mountains to the
+'west, there's a peak there that I bet you could get a view across the world
+'from, not to mention an island in the sky.
+~
+> speech_prog town? town. town~
+'So you're wondering about this here town are you?  Well, not a lot to say
+'about it, not by me anyways.  I keep to myself here really.  If you want to
+'learn about the town, best thing would be to ask someone younger, like my
+'associate here, he comes at noon to keep things here in order while I go home.
+~
+> speech_prog church? church. church~
+'Are you interested in that church?  Well, I'm not truthfully.  It's nothing
+'like the old cathedral which used to be where the graveyard is now.  But I'll
+'say this, since that church was built it was made into the paladins guild.
+'I wonder why no one has wondered about that second floor even though there's
+'no apparent way up to it?
+if class($n) == Paladin
+'You're a paladin, aren't ya?  I'll tell you what to do, go behind the alter.
+'If the gods find you worthy then you will pass through a holy light to the
+'very back.  There you'll be able to get up to the second floor.  Good luck.
+else
+'Doesn't matter anyways, to get there you are under the judgement of the gods
+'and they wouldn't find anyone "worthy" of getting over there unless they were
+'a paladin themself.
+endif
+~
+> speech_prog tower? towers? tower. towers. tower towers~
+'So, these here towers huh?  Well, I'm not allowed to tell you about this here
+'tower.  Why?  I can't tell you that either.  Ha!
+chuckle
+'I can tell you, I suppose, that these both have higher purposes then what they
+'really appear to have.  Straight to the north is Tower Steel, this here is
+'Tower Clockworks.  I tell you to be careful poking your nose around something
+'like this though, otherwise you might end up, well, like me.  You really think
+'I'm allowed to leave this place?
+cackle
+~
+> speech_prog warrior? warriors? warrior. warriors. warrior warriors~
+'Warriors eh?  Only thing that really comes to mind mentioning that is those
+'blasted warriors down at the town inn.  I've had my own encounter with them,
+'gave the mean one the scar across his face myself actually.
+smile
+'He's half-orc you know?  If you speak the language then that's helps, but the
+'one thing is that they don't take kindly to anyone who isn't a warrior, they
+'are big on guild stuff.  That door they're guarding is the entrance to the
+'warrior guild.  To get in you gotta make friendly with them, especially the
+'mean one.  I'd go ask the bartender about them if you're that interested, that
+'and about that door too, I bet he knows something about that door that he's
+'just waiting to tell somebody.
+~
+> speech_prog garlac? garlac. garlac~
+'Why, you know Garlac over at the alchemy shop?  I'll be damned.  He's a good
+'old friend of mine, but I'm much, much older.  He's very sick now days, and I
+'haven't seen him in ages.  I can only hope he gets better soon.  If you tell
+'him you know me, he might be inclined to give you a little something every
+'now and then, but don't count on that.
+~
+|
+#12406
+bum~
+the town bum~
+The town bum is standing around, looking peculiarly at a stick he's holding.
+~
+~
+1073741825 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 6 0 0 0 0 0
+0 0 0 0 0 0 0 0
+> rand_prog 1~
+mumble
+~
+> rand_prog 1~
+rant
+~
+> act_prog coin, coins.~
+'the god thank ya, $n.
+~
+> act_prog gold.~
+get coins
+get coin
+'the gods thank ya, $n.
+~
+> act_prog p looks at you.~
+'What are ya looking at?!?
+~
+> act_prog slaps you cruelly~
+mpechoat $n The town bum whacks you lopside the head with his stick.
+mpechoaround $n WHACK!  The bum has hit $n with a stick, now $e knows better.
+~
+|
+#0
+
+
+#OBJECTS
+#12401
+a red potion~
+a red potion~
+A red potion labeled "healing" has been carelessly left here by someone.~
+~
+10 0 1
+1 -1 -1 -1
+1 200 20 0
+'heal' 'NONE' 'NONE'
+E
+'a' 'red' 'potion'~
+Held in a clear flask, this potion burns with the color of fire
+and swirls and fizzes of its own accord. You don't think you
+want to "quaff" it, but if it'll heal you, it might be worth it.
+~
+#12402
+an idiosyncratic potion~
+an idiosyncratic potion~
+An odd black potion is foaming in it's jar on the ground.~
+~
+10 0 1
+3 -1 19 -1
+1 100 10 0
+'sanctuary' 'bless' 'NONE'
+E
+'odd' 'black' 'potion'~
+You look at the peculiar black potion: It is in a simple glass flask, and has
+a number of white bubbles floating within the black liquid.  It also foams
+white at the top over the edge of it's container.  But for all intent it looks
+safe enough to quaff.
+~
+#12403
+An alchemist's special medicine~
+An alchemist's special medicine~
+An alchemist's medicine is on the ground here.~
+~
+10 0 1
+5 -1 89 98
+1 250 25 0
+'cure light' 'heal' 'inner warmth'
+E
+'medicine'~
+You look at the medicine, which is as odd as all the others that come from the
+alchemist.  This is a higher version of the red potion, and should do you some
+good to quaff it when in need of healing, even at a slightly higher level.
+~
+#12404
+pipeweed~
+some pipeweed~
+A small amount of pipeweed has been left here.~
+~
+32 0 1
+0 5 0 0
+1 50 13 0
+#12405
+black gwyvel~
+some black gwyvel~
+A small amount of black gwyvel has been left here.~
+~
+32 0 1
+0 5 1 0
+1 50 5 0
+#12406
+vermeir~
+some vermeir~
+A small amount of vermeir has been left here.~
+~
+32 0 1
+0 5 2 0
+1 50 5 0
+#12407
+nooracht~
+some nooracht~
+A small amount of nooracht has been left here.~
+~
+32 0 1
+0 5 3 0
+1 50 5 0
+#12408
+occadaal~
+some occadaal~
+A small amount of occadaal has been left here.~
+~
+32 0 1
+0 5 4 0
+1 50 5 0
+#12409
+breadl~
+some breadl~
+A small amount of breadl has been left here.~
+~
+32 0 1
+0 5 5 0
+1 50 5 0
+#12410
+a pipe~
+a pipe~
+Someone has left a brown wooden pipe here.~
+~
+30 0 16385
+5 0 0 0
+1 375 37 0
+E
+pipe~
+You see a simple, brown wooden pipe.  It has a single red stripe down it, and
+plenty of room to fill it with some kind of herb.  Afterwards it's simply a
+matter of lighting it, then smoking it to your discretion.
+~
+#0
+
+
+#ROOMS
+#12401
+New Hope, at the Furrier's~
+Standing here on the north side of town you feel odd shivers down you back.  In
+this day and age there is sorts of danger most everywhere in most any form, and
+the otherwise protective stone wall is broken apart here to your north, a
+fallen wall.  To your south is the furrier's shop, marked by a rather small
+building with a door to enter through to sell your pelts, skins, and hides.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12402
+D3
+~
+~
+0 -1 10618
+S
+#12402
+New Hope, sw of the northern gate~
+To the southeast is the town Bank, where money and such is exchanged, you
+understand.  There is a road leading south, then east to get to it by.  Also
+to the southwest is the Furrier's shop, and you can go west and then enter in
+through it's front door.  Right to the north of you, extending to the west in
+crumbled remains is what once was the northern wall, which ends off at the
+north gate just to the northeast.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12403
+D3
+~
+~
+0 -1 12401
+S
+#12403
+New Hope, at the northern gate~
+Many people can be seen here coming back and forth through the gate.  It is
+a large wooden gate, very sturdy at that, and is just barely standing now from
+the missing wall to the west.  What could have taken down this wall is anyone;s
+guess, it's kept very secretive.  Also to the south is the town Bank, though
+there is no road here leading to it, you'll have to go around some way.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12449
+D3
+~
+~
+0 -1 12402
+S
+#12404
+Floating in a void~
+~
+~
+0 1073741828 1
+S
+#12412
+New Hope, n of the western gate~
+You stand just to the north from the western gate.  From here you can see it
+standing inpenitratibly, reinforced by the stone wall that comes from each of
+it's sides and surrounds the town, though you cannot see over this tall stone
+wall.  To the east is the town well, source of water and such for the town, at
+least that's what it used to do before it dried up...
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12413
+D2
+~
+~
+0 -1 12419
+S
+#12413
+New Hope, at the town Well~
+The road here ends from the west, and the ground is simply a dirt trail here
+which circulates around a center well.  It is made of similar stone as that of
+the town wall.  Once providing good water to the town's inhabitants, it has
+since dried up in a very mysterious sort of way.  It is more of a landmark now
+of some kind, just a reminder of the simpler days long ago, though not of any
+real importance otherwise.
+~
+~
+0 1073741824 1
+D3
+~
+~
+0 -1 12412
+S
+#12419
+New Hope, at the western gate~
+You stand upon the western of the four gates of New Hope.  Like the others it
+is completely and perfectly the same in design and architecture, just as in
+it's strength.  To the east is the ever popular piece of town culture, the
+Theatre, and to the northeast is the town well.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12412
+D1
+~
+~
+0 -1 12420
+D10
+~
+gate~
+526337 -1 11024
+S
+#12420
+New Hope, in front of the Theatre~
+Here is the popular culture area of town, the Theatre.  From every now and
+then it runs a play or musical or anything else to keep up it's cost.  It is
+a mark of class, those who are truely of higher culture spend frequent time
+here and can be found here often.  Those who aren't as high class can be found
+laygin around the sides or something.
+~
+~
+0 1073741824 1
+D3
+~
+~
+0 -1 12419
+S
+#12424
+New Hope Gardens~
+This is the entrance to New Hopes Gardens.  Across here to the north, west, and
+northwest is a 2 by 2 part garden.  Many sorts of flowers and such can be
+found here, some with actual value and some without.  To the northwest you can
+see the herbalist shop, which also gains it's inventory from here, though that
+doesn't mean it's easy to.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12425
+D1
+~
+~
+0 -1 12427
+D6
+~
+~
+0 -1 12426
+S
+#12425
+New Hope Gardens~
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12426
+D2
+~
+~
+0 -1 12424
+D8
+~
+~
+0 -1 12427
+S
+#12426
+New Hope Gardens~
+~
+~
+0 1073741824 1
+D2
+~
+~
+0 -1 12427
+D3
+~
+~
+0 -1 12425
+D9
+~
+~
+0 -1 12424
+S
+#12427
+The Town Gardens~
+~
+~
+0 1073741828 1
+D0
+~
+~
+0 -1 12426
+D3
+~
+~
+0 -1 12424
+D7
+~
+~
+0 -1 12425
+S
+#12428
+Melody's Herbal Boutique~
+Yuo are in the herbalist store.  It is almost a cheery flower store, being next
+to the gardens and all.  Here you can buy many more sorts of vergetations than
+just flowers though.  Herbs have many special attributes when used properly,
+which usually consists of smoking them through a pipe, also available here.
+~
+~
+0 1076887564 0
+S
+#12436
+New Hope, at the southern gate~
+You are walking along the southern end of town.  No, this doesn't make you
+a confederate, but being a yankee around here just might get you killed though.
+But anyways, there is a long gray stone wall stretching across just to the
+south, reaching out further then you can see to the east and west.  It
+is made of very large stones, carefully laid so there is nowhere to slip a
+foot into if anyone wanted to climb it.
+To your luck however, you need not resort to such things, as an even taller
+wooden gate stands right here for you to go through.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12437
+D1
+~
+~
+0 -1 12498
+D10
+~
+gate~
+526337 -1 12436
+S
+#12437
+New Hope~
+Just off to the northeast of your postion here is a building.  A bit further
+along are two other buildings alongside it going to the east.  To the northwest
+however stands a taller building.  You look to the south next and see the giant
+stone wall which surrounds the town, and more specifically the southern gate
+to the direct south.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12438
+D2
+~
+~
+0 -1 12436
+S
+#12438
+New Hope, s of Town Square~
+You are south of Town Square Central, and the noise of all the
+people has faded somewhat. To your east is The Shining Shield armoury,
+and to your west is The New Hope Recruiter.
+This road runs north and south through the Town Square area.
+Eventually, it ends up on south street and straight out the south gate.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12439
+D2
+~
+~
+0 -1 12437
+S
+#12439
+Town Square Central~
+You stand in town square, the key place in the town to recieve healing.
+~
+~
+0 1073741828 1
+D1
+~
+~
+0 -1 12461
+D2
+~
+~
+0 -1 12438
+D6
+~
+~
+0 -1 12459
+S
+#12449
+New Hope, at the Stables~
+Traveling along the northern wall, you notice a foul smell. Glancing to the 
+south you see the stables and realize the source of this terrible odor. You 
+can hear lots of neighing and winneying coming from the horses there.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12451
+D2
+~
+~
+131072 -1 12450
+D3
+~
+~
+0 -1 12403
+S
+#12450
+The Stables~
+As you set your foot in the door, a large horse makes a loud noise which
+startles you.  A soothing voice calms the horse's nerves and it stops jumping
+about.  When searching for the source of this voice you see a Gith standing in
+a dark corner fixing a horseshoe.
+~
+~
+0 1073741824 1
+D0
+~
+~
+262144 -1 12449
+S
+#12451
+New Hope~
+A foul smell is blown in from the southwest.  It smells like an odd
+mixture of horse dung and hay.  A tall tower, the tallest thing in town
+from here, stands tall a short ways to the southeast.  There is
+something strange about this tower which sparks your curiosity.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12452
+D3
+~
+~
+0 -1 12449
+S
+#12452
+New Hope~
+Glancing to the east you see an occasional person slipping in or out of
+what appears to be the town wall.  How can anything walk through solid
+rock, you might think.  Further investigation could prove helpful.  But
+your eyes are once again drawn to a tall black tower to the south.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12453
+D3
+~
+~
+0 -1 12451
+S
+#12453
+New Hope, near a tunnel~
+Now you can see how people were travelling in and out of the wall, there is
+a small tunnel here.  Peeking through the tunnel, it appears there is a small
+shop on the other side.  Why would anyone put a shop in a place like that, you
+wonder, and curiosity compells you to find out.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12478
+D3
+~
+~
+0 -1 12452
+D9
+~
+~
+0 -1 12499
+D10
+~
+tunnel~
+526336 -1 12454
+S
+#12454
+Garlac's Alchemy Shop~
+You stand in a very small, stuffy single room.  The light from the other side
+of the tunnel is nonexistent, only a lantern on a large rotting counter makes
+the room clear.  Cobwebs have overcome this place, with great eases from the
+looks of it.  There are many simple shevels across the walls, with various
+'bottles and things placed on them, all overed in a fine layer of dust.
+~
+~
+0 1076888712 0
+D10
+~
+tunnel~
+526336 -1 12453
+S
+#12455
+New Hope, near a dark tower~
+A tower lies to the east.  It is pretty well known that all of these who are
+naturally adapt to magic go there to train.  A large pond lies directly to the
+south.  Across the pond you can see three similar buildings standing next to
+each other, side by side.
+~
+~
+0 1073741824 1
+D2
+~
+~
+0 -1 12460
+D6
+~
+~
+0 -1 12499
+S
+#12456
+New Hope, at the Jeweler's~
+The town is anything but quiet around here.  You stand at three of the main
+shops of town, the weaponry, armoury, and jewel shops all lined side to
+side in a row.  To the south right here is the door to that jewel shop, and
+to the west lies the other two.  Further west is more importantly the town
+square, where people meet for many purposes.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12467
+D2
+~
+door~
+131073 -1 12466
+D3
+~
+~
+0 -1 12462
+S
+#12459
+New Hope, nw of Town Square~
+You stand just to the northwest of the Town Square for New Hope.  It is the
+gathering place for people to come to gather and recieve emergency healing of
+sorts.  From here you can see a mass of people, all together in a fasion not
+created since the days of the Roman Empire and their banquets.
+~
+~
+0 1073741828 1
+D1
+~
+~
+0 -1 12460
+D9
+~
+~
+0 -1 12439
+S
+#12460
+New Hope, at a pond~
+You stand at the edge of the town pond.  Basically it occupies the center of
+the immediate area.  There are roads leading off to the w, n, sw, s, and se,
+and which roads meet here by revolving around the pond.  There is a small area
+of gress off to the otherwise empty east of the pond, where a couple benches
+In the very middle of the pond is a small bit of land for variations of wild-
+life such as miscelaneous birds to do whatever it is that they do away from
+intervention by the people passing through.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12455
+D2
+~
+~
+0 -1 12462
+D3
+~
+~
+0 -1 12459
+S
+#12461
+New Hope, e of Town Square and at the Armoury~
+You stand in the middle of the streets, trying your best to make your way
+through without getting in anybody's way, especially if that anyone is bigger
+then you.  To the south is a door on a short building, connected to another to
+the southeast.  On the building here however is a sign over the doorway, and
+perhaps it will make interesting reading.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12462
+D2
+~
+door~
+131073 -1 12465
+D3
+~
+~
+0 -1 12439
+E
+sign~
+You read the sign over the doorway:
+"The New Hope Shining Shield Armoury"
+That wasn't very interesting, boo-hoo.
+~
+S
+#12462
+New Hope, at the Weaponry~
+To your south you see a long building with a large sign 
+posted out front. It reads "The Thorny Club Weaponry and
+The Shining Shield Armoury". Sounds of metal clanging and the smell
+of leather, steel, and polish waft from that direction. Westward,
+you can hear the babble of all the people in Town Square.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12460
+D1
+~
+~
+0 -1 12456
+D2
+~
+door~
+1 -1 12464
+D3
+~
+~
+0 -1 12461
+S
+#12464
+The Thorny Club Weaponry~
+All around the room you see sharp gleaming blades and large
+instraments of destruction. The smell of steel and leather lingers
+in the air as you amble towards the counter. The walls and counter 
+are made of huge slabs of oak, and seem to tower above you. 
+Behind the counter stands a big, burly shopkeeper, sharpening the
+blade of a sinister looking sword.
+The western wall is missing, for the most part, allowing you to travel next
+door from inside here.
+~
+~
+0 1073742856 0
+D0
+~
+door~
+262145 -1 12462
+D3
+~
+~
+0 -1 12465
+S
+#12465
+The Shining Shield Armoury~
+Suits of assorted armors and shields of all types and sizes are hung with
+really little apparent care across the walls here, the rest laying in a large
+jumble of metal and hide off to the side of the room.  Amongst this entire
+mess stand E'rant the Armorer, the best, and most likely only armory man of
+New Hope.  He barely cares to glance up at you as you enter, and simply goes
+on about his business.
+This room has been joined to the weaponry to the east, and thus there is no
+wall there having obviously been knocked out.
+~
+~
+0 1073742856 0
+D0
+~
+door~
+262145 -1 12461
+D1
+~
+~
+0 -1 12464
+S
+#12466
+Garnet's Jewels~
+Nothing but glittering jewels hits your eyes as you open
+the door. Held in wooden and glass cases, they shine and sparkle in
+the light. All kinds of jewelry are here, from necklaces to rings
+to bracelets. All are either mundane or magical. A young woman
+stands behind the counter, examining new pieces of jewelry and
+setting them in the case. She looks up at you and gestures to a
+sign on the wall.
+~
+~
+0 1073742988 0
+D0
+~
+door~
+262145 -1 12456
+E
+sign~
+To see the fine selection of jewelry, type "list" 
+To buy something type "buy <object>"
+To value something type "value <object>"
+To sell something type "sell <object>"
+~
+S
+#12467
+New Hope~
+You see the Jewler's shop just to the southwest of here, and two other shops
+continue from it further to the west.  You are on a road right now that leads
+from the more stirring western side of town to the more peaceful eastern
+side.  There you will find the town Inn, the Barracks, and the gate to the
+outter Eastern Plains.
+~
+~
+0 1073741824 1
+D3
+~
+~
+0 -1 12456
+D6
+~
+~
+0 -1 12468
+S
+#12468
+New Hope~
+You seem to be in the middle of nowhere for the most part.  With the exception
+of a warrior passing through here from the Barracks to the Inn or vice-versa,
+this quiet edge of town doesn't recive much excitement at all.  Perhaps finding
+the eastern gate far to the northeast of here would be your best bet for some-
+thing to do.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12469
+D9
+~
+~
+0 -1 12467
+S
+#12469
+New Hope, at the Inn~
+Here before you stands a tall building apparently four stories tall.
+It is the New Hope Inn, meeting place of town's peoples to gather, chat,
+and drink 'til the cows come home.  Stories can be heard here of the outside
+wilderness and such, a useful source of information and a good place for a
+beginner to hang around in to gain some true wisdom of the outside world.
+There is a single somewhat worn door here to enter through to the inside.
+~
+~
+0 1073741824 1
+D2
+~
+~
+0 -1 12483
+D3
+~
+~
+0 -1 12468
+D7
+~
+~
+0 -1 12470
+S
+#12470
+New Hope~
+You look about your surroundings, and find this to be a pretty quiet corner
+of town.  Perhaps that is why they decided to stick the nearby Barracks here,
+to the northeast, and a nearby inn a bit longer aways to the southeast.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12473
+D1
+~
+~
+0 -1 12471
+D8
+~
+~
+0 -1 12469
+S
+#12471
+New Hope~
+Just to the north of where you stand lays the menacing Barracks, the new
+warrior's guild erected here in New Hope for the royal security of the town.
+Also just southeast, about the same distance, you can see the inn, probably
+located strategically for good business from the many warriors that pass by
+here.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12472
+D3
+~
+~
+0 -1 12470
+S
+#12472
+New Hope~
+Just to the south you see one side of the four-story New Hope Inn.  High above
+it's smokestack chimney puffs out constant smoke into the air, and the area
+here and around you smells easily of fine cooked meals and beverage.  Also you
+can't help but notice the threatening Barracks, a sign that times just aren't
+right in the world and a town such as this one needs twnety foot high stone
+walls and a functional barracks.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12482
+D3
+~
+~
+0 -1 12471
+S
+#12473
+New Hope, at the Barracks~
+You make your way off of the slightly, but not very much, more paved road and
+onto a more of a dirt pathway, which ends right here both north and south, but 
+goes on to the east right up to the door of the warrior's guild.
+Otherwise there is nothing more of interest here.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12478
+D2
+~
+~
+0 -1 12470
+S
+#12474
+Inside the bag shop~
+You try to close the door behind you, but it sangs on the rack of oddly
+shaped bags. The rack extends all the way around the room, ending on
+the other side of the doorway.  Bags and boxes of all shapes and sizes 
+hang on the racks and take up the shelves. Behind the counter, in fact,
+is an old bag herself. She stoops behind the counter and grumbles to
+herself about the youngins of today. She looks up at you and grumbles
+a bit more loudly, something about new fangled backpacks.
+~
+~
+0 1073741824 1
+D1
+~
+door~
+262145 -1 12485
+S
+#12478
+New Hope~
+Off in the distance, just a bit aways to the east you can make out the eastern
+gate of New Hope, which leads outside of the boundaries of the walls and into
+the heavily talked about open fields that the warriors at the bars sit around
+converse about to no end.
+Speaking of the warriors, just to the southeast of where you now stand is the
+town Barracks, which is home to the elitist warriors of New Hope.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12479
+D2
+~
+~
+0 -1 12473
+D3
+~
+~
+0 -1 12453
+S
+#12479
+New Hope~
+You walk through the simple streets of New Hope, barely noticing the other
+peoples as they pass you by, scurrying along to some business elsewhere.
+Just up the road to the east you can see where the continuation of the
+stone wall pauses for a large wooden gate, heavily fortified against whatever
+may lurk out in the wilderness.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12480
+D3
+~
+~
+0 -1 12478
+S
+#12480
+New Hope, at the eastern gate~
+You stand upon a giant wooden gate to the east, which has a high stone wall
+coming out from both sides of it, leading to the south and north.  It is
+composed of a mass of rather large, gray stones stacked up carefully so there
+is no place for one to climb up and scale over the wall...
+~
+~
+0 1073741824 1
+D2
+~
+~
+0 -1 12482
+D3
+~
+~
+0 -1 12479
+D10
+~
+gate~
+526337 -1 12480
+S
+#12482
+New Hope~
+You stand in the uneventful northeastern corner of the town.  Right beside you
+to the west is the backside of the Barracks, the new warrior's guild of New
+Hope.  Further up the road to the north you see one of the towers along the
+eastern side of town, in it's ever-present watch for intruders into the town.
+Also to the south, probably about the same distance, you can see the New Hope
+Inn.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12480
+D2
+~
+~
+0 -1 12472
+S
+#12483
+New Hope~
+The peacfulness of this place is overwhelming, making you almost drift off to
+sleep many times standing where you are.  Except for a bit of unintelligible
+sounds of voices coming from the newrby Inn to the northeast, nothing is here
+for the most part but lots of road and the occassional passerby.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12469
+D1
+~
+~
+0 -1 12484
+D2
+~
+~
+0 -1 12485
+S
+#12484
+New Hope~
+Just to the north of you stands a tall but skinny building, the town Inn.
+Smoke is coming from the rooftop, and you can smell some type of food which you
+can't quite figure out though.  You attempt to look around otherwise but all
+you can see is road, path, and more road.
+~
+~
+0 1073741824 1
+D2
+~
+~
+0 -1 12488
+D3
+~
+~
+0 -1 12483
+S
+#12485
+New Hope~
+You walk from along the north and south road, which lines across the side
+of a long pile of wood, taking up the middle of the road and splitting it into
+this and another side. Right here to the west is the Bag Of Holding Shoppe,
+where one may go to purchase a variety of bags, for what you will have to figur
+yourself.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12483
+D2
+~
+~
+0 -1 12486
+D3
+~
+door~
+131073 -1 12474
+S
+#12486
+New Hope, at the Pawn Shop~
+You are walking along the eastern side of town.  You can see the large stone
+wall peeking out from above the long piles of wood going north to south
+across here.  Here beside you is a door along the west leading into the
+New Hope Pawn Shop, where one may purchase used, worn, or just sold equipment
+of various types.  The road here ends, so you'll have to go back north to get
+to anywhere else in town.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12485
+D3
+~
+door~
+131073 -1 12487
+S
+#12487
+Your neighborhood pawn shop~
+Your attention here is distracted by some aweful music playing from some
+sort of device here in the back of the room.  Here in the pawn shop are 0 rooms
+which each have a different type of item to buy or sell.  If you dinf something
+that interests you, better get it quick before it's gone, as things go quick
+here.
+~
+~
+0 1073741836 0
+D1
+~
+door~
+262145 -1 12486
+S
+#12488
+New Hope~
+You stand upon the very eastern side of town.  You can tell by the large stone
+wall just to the east of you.  To the west is a large stack of wood which has
+been left there for some odd reason, and it extends to the south very far
+making you unable to cross over to the other side here.  A little bit to the
+north you can see a tall building, which most be the Inn.
+If you didn't know better, you could swear you just saw a figure jump down
+from the top of the wall just to the east and run off to the south.  But
+how could anyone climb something like a twenty foot stone wall?
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12484
+D2
+~
+~
+0 -1 12489
+S
+#12489
+New Hope~
+You stand upon the very eastern side of town.  You can tell by the large stone
+wall just to the east of you.  To the west is a large stack of wood which has
+been left there for some odd reason, and it extends just to the north
+and far to the south, making you unable to cross over to the other side here.
+Pretty far to the north you can make out a tall building, which must be the
+town Inn.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12488
+D2
+~
+~
+0 -1 12490
+S
+#12490
+New Hope~
+You are at the southeastern corner of town.  Here the brick wall takes a turn
+from coming from the north and goes west, but first takes a break right to the
+south where a large tower stands high.  The entrance is right here, that or
+else the road leads to the north and to the west where you can't see much from
+here.
+~
+~
+0 1073741824 1
+D0
+~
+~
+0 -1 12489
+D2
+~
+~
+133120 -1 12491
+D3
+~
+~
+0 -1 12492
+S
+#12491
+Watch Tower, clockworks~
+You stand in the southern watch tower out into the wall.  This is the tower
+of clockworks, where time is kept throughout the lands.  Looking high up you
+see many gears, bars, and tracks laying in testament to this.  Most of the
+parts are moving in their slow rotations and turns, however old they are.
+~
+~
+0 1073743240 0 0 0 3
+D0
+~
+~
+264192 -1 12490
+S
+#12492
+New Hope~
+You walk here along the southern road lining the wall.  To the southeast is
+the tall southern tower, and to the northwest is evidentally the town pawn
+shop, though you can't get to it from here, you'll have to find a way around
+to it.  Further up the road to the west your nose can catch the smell of food
+which appeals to your stomache easily.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12490
+D3
+~
+~
+0 -1 12493
+S
+#12493
+New Hope~
+Still along the southern road, you find the pawn shop directly north, though
+it seems to be only a side of the building, there's no way in from here.  You
+will have to find a way around obviously.  To the northwest is the bakery,
+where one can go for most food needs.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12492
+D3
+~
+~
+0 -1 12494
+S
+#12494
+New Hope, at the Bakery~
+The smell of foods fill the air right in front of the small bakery here.
+Being the only food place in town, with maybe the exception of the inn
+somewhat, this building attracts many peoples through the southern road.
+To the northeast you can see the backside of the pawn shop, and to the north is
+the door leading inside the bakery.
+~
+~
+0 1073741824 1
+D0
+~
+door~
+131073 -1 12495
+D1
+~
+~
+0 -1 12493
+D3
+~
+~
+0 -1 12496
+S
+#12495
+The Bakery~
+As you enter this cozy little shop, you sigh as your nostrils 
+fill with the aroma of bread, cookies, and cakes baking in an oven.
+You sneeze and slip in flour which is covering every inch of this shop.
+The dark wooden floor and your shoes have turned snow white from all of the
+flour.
+~
+~
+0 1073741828 1
+D2
+~
+door~
+262145 -1 12494
+S
+#12496
+New Hope~
+A large building is placed to the northwest, it is the town's one and only
+church.  It is freshly painted and everything, looks to be brand new.  For the
+most part it is too, ever since something happened to the old cathedral far off
+to the northwest part of town, where the cemetary is now located.  Also to
+the northeast you see the side of the barkey, and can smell the foods being
+prepared from here.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12494
+D3
+~
+~
+0 -1 12497
+S
+#12497
+New Hope, at the Church~
+A great church towers above you with a massive steeple and gargantuan
+bells. It is completely white with beautiful stained glass windows that
+portray the god Paladin and all the immortals of Amethyst.
+As you stare in awe at this church, you notice several men and
+women entering through the heavy oak doors. They look
+like mages, but they wear robes of white and carry strange holy symbols
+with them. Further down the southern road you can faintly smell something like
+bread baking...
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12496
+D3
+~
+~
+0 -1 12498
+S
+#12498
+New Hope, nw of the southern gate~
+This is the southern road, which spans the length of New Hope.
+Off to to your west is the southern gate, towering above you in all its glory.
+Along southern road on the east side you'll find the bakery and the church,
+and to the western side is the jail and Stitch the Tailor's clothing shop.
+Also on the southern road is the town's garden, established only a short time
+ago, and you can already imagine the blossoms and flowers which may be found
+there.
+~
+~
+0 1073741824 1
+D1
+~
+~
+0 -1 12497
+D3
+~
+~
+0 -1 12436
+S
+#12499
+New Hope, near a dark tower~
+Directly to the south lies a huge tower, the tallest building in town.
+Sometimes late at night people have said that they can see strange colors
+and explosions throught the upper windows of the tower.  They say that mages
+are up there, practicing their mystical art.
+~
+~
+0 1073741824 1
+D6
+~
+~
+0 -1 12453
+D9
+~
+~
+0 -1 12455
+S
+#0
+
+
+#RESETS
+M 0 12401 1 12454
+G 1 12401 2
+G 1 12402 1
+G 1 12403 1
+M 0 12402 1 12428
+G 1 12404 1
+G 1 12405 12402
+G 1 12406 12402
+G 1 12407 12402
+G 1 12408 12402
+G 1 12409 12402
+G 1 12410 12402
+M 0 12405 1 12491
+S
+
+
+#SHOPS
+ 12401   10  0  0  0  0   100  85         6 16    ; An alchemist Garlac
+ 12402   32 31 26  0  0    96  90        10 20    ; Melody the Herbalist
+ 12403    6  7  5  0  0   120  90         6 22    ; Thorne the weapon dealer
+ 12404    9  0  0  0  0   120  90         6 20    ; E'rant the Armorer
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,444 @@
+Name        Cleric~
+Class       1
+Attrprime   4
+Weapon      10315
+Guild       3003
+Skilladept  95
+Thac0       18
+Thac32      12
+Hpmin       3
+Hpmax       15
+HpCLev      12
+HpCAdd      3
+Mana        1
+ExpBase     15052407
+ExpPower    331689
+Skill 'aid' 4 95
+Skill 'animate dead' 16 95
+Skill 'armor' 2 95
+Skill 'bless' 1 95
+Skill 'blindness' 14 95
+Skill 'calm' 2 95
+Skill 'cause critical' 10 95
+Skill 'cause light' 1 95
+Skill 'cause serious' 7 95
+Skill 'conjure elemental' 13 95
+Skill 'create food' 5 95
+Skill 'create light' 2 95
+Skill 'create water' 3 95
+Skill 'cure light' 1 95
+Skill 'cure serious' 7 95
+Skill 'curse' 12 95
+Skill 'darkness' 3 95
+Skill 'detect evil' 1 95
+Skill 'detect invisibility' 5 95
+Skill 'detect magic' 3 95
+Skill 'dispel evil' 20 95
+Skill 'dispel good' 20 95
+Skill 'dispel magic' 10 95
+Skill 'dust devil' 3 95
+Skill 'earthquake' 15 95
+Skill 'faerie fire' 4 95
+Skill 'faerie fog' 11 95
+Skill 'flamestrike' 15 95
+Skill 'golem' 15 95
+Skill 'know alignment' 4 95
+Skill 'locate object' 11 95
+Skill 'poison' 13 95
+Skill 'protection from cold' 19 95
+Skill 'protection from electricity' 18 95
+Skill 'protection from evil group' 7 95
+Skill 'protection from good' 7 95
+Skill 'refresh' 3 95
+Skill 'remove curse' 8 95
+Skill 'remove paralysis' 6 95
+Skill 'second wind' 9 95
+Skill 'sense life' 4 95
+Skill 'summon' 19 95
+Skill 'true sight' 20 95
+Skill 'turn' 1 95
+Skill 'word of recall' 15 95
+Skill 'messenger' 1 95
+Skill 'read magic' 14 95
+Title
+Proselyte~
+Proselyte~
+Title
+Follower~
+Follower~
+Title
+Altar Boy~
+Altar Girl~
+Title
+Attendant~
+Attendant~
+Title
+Acolyte~
+Acolyte~
+Title
+Neophyte~
+Neophyte~
+Title
+Believer~
+Believer~
+Title
+Learner~
+Learner~
+Title
+Seeker~
+Seeker~
+Title
+High Seeker~
+High Seeker~
+Title
+Novice~
+Novive~
+Title
+Adept~
+Adept~
+Title
+Missionary~
+Missionary~
+Title
+Healer~
+Healer~
+Title
+Disciple~
+Disciple~
+Title
+Holy Man~
+Holy Woman~
+Title
+Clergyman~
+Clergywoman~
+Title
+Preacher~
+Preacher~
+Title
+Expositor~
+Expositress~
+Title
+Levite~
+Levitess~
+Title
+Chaplain~
+Chaplain~
+Title
+Deacon~
+Deaconess~
+Title
+Minister~
+Minister~
+Title
+Monk~
+Nun~
+Title
+Canon~
+Canon~
+Title
+Curate~
+Curess~
+Title
+Vicar~
+Vicaress~
+Title
+Priest~
+Priestess~
+Title
+High Priest~
+High Priestess~
+Title
+High Priest of the Sea~
+High Priestess of the Sea~
+Title
+High Priest of the Fire~
+High Priestess of the Fire~
+Title
+High Priest of the Earth~
+High Priestess of the Earth~
+Title
+High Priest of the Air~
+High Priestess of the Air~
+Title
+High Priest of the Ether~
+High Priestess of the Ether~
+Title
+High Priest of the Heavens~
+High Priestess of the Heavens~
+Title
+Rector~
+Rector~
+Title
+Monsignor~
+Lady of the Clergy~
+Title
+Patriarch~
+Matriarch~
+Title
+Elder Patriarch~
+Elder Matriarch~
+Title
+Grand Patriarch~
+Grand Matriarch~
+Title
+Supreme Patriarch~
+Supreme Matriarch~
+Title
+Cardinal~
+Cardinal~
+Title
+Elder Cardinal~
+Elder Cardinal~
+Title
+Grand Cardinal~
+Grand Cardinal~
+Title
+Supreme Cardinal~
+Supreme Cardinal~
+Title
+Cardinal of the Sea~
+Cardinal of the Sea~
+Title
+Cardinal of the Fire~
+Cardinal of the Fire~
+Title
+Cardinal of the Earth~
+Cardinal of the Earth~
+Title
+Cardinal of the Air~
+Cardinal of the Air~
+Title
+Cardinal of the Ether~
+Cardinal of the Ether~
+Title
+Cardinal of the Heavens~
+Cardinal of the Heavens~
+Title
+Bishop~
+Bishop~
+Title
+Bishop of the Sea~
+Bishop of the Sea~
+Title
+Bishop of the Fire~
+Bishop of the Fire~
+Title
+Bishop of the Earth~
+Bishop of the Earth~
+Title
+Bishop of the Air~
+Bishop of the Air~
+Title
+Bishop of the Heavens~
+Bishop of the Heavens~
+Title
+Lord Bishop
+Lady Bishop
+Title
+Arch Bishop~
+Arch Bishop~
+Title
+Arch Bishop of the Sea~
+Arch Bishop of the Sea~
+Title
+Arch Bishop of the Fire~
+Arch Bishop of the Fire~
+Title
+Arch Bishop of the Earth~
+Arch Bishop of the Earth~
+Title
+Arch Bishop of the Heavens~
+Arch Bishop of the Heavens~
+Title
+Arch Bishop of the Antiquity~
+Arch Bishop of the Antiquity~
+Title
+Supreme Bishop of the Humility~
+Supreme Bishop of the Humility~
+Title
+Supreme Bishop of the Virtue~
+Supreme Bishop of the Virtue~
+Title
+Supreme Bishop of the Light~
+Supreme Bishop of the Light~
+Title
+Supreme Bishop of the Valor~
+Supreme Bishop of the Valor~
+Title
+Supreme Bishop of the Healing~
+Supreme Bishop of the Healing~
+Title
+Supreme Bishop of the Power~
+Supreme Bishop of the Power~
+Title
+Supreme Bishop of the Antiquity~
+Supreme Bishop of the Antiquity~
+Title
+Supreme Bishop of the Humility~
+Supreme Bishop of the Humility~
+Title
+Master of Humility~
+Mistress of Humility~
+Title
+Master of Virtue~
+Mistress of Virtue~
+Title
+Master of Light~
+Mistress of Light~
+Title
+Master of Valor~
+Mistress of Valor~
+Title
+Master of Healing~
+Mistress of Healing~
+Title
+Master of Power~
+Mistress of Power~
+Title
+Master of Antiquity~
+Mistress of Antiquity~
+Title
+Master of Divinity~
+Mistress of Divinity~
+Title
+Redeemer~
+Redeemer~
+Title
+Lesser Demon Killer~
+Lesser Demon Killer~
+Title
+Demon Killer~
+Demon Killer~
+Title
+Greater Demon Killer~
+Greater Demon Killer~
+Title
+Supreme Demon Killer~
+Supreme Demon Killer~
+Title
+Ultimate Demon Killer~
+Ultimate Demon Killer~
+Title
+Ancient One~
+Ancient One~
+Title
+Celestial Body~
+Celestial Body~
+Title
+Avatar~
+Avatar~
+Title
+Avatar of a Savior~
+Avatar of a Savior~
+Title
+Avatar of a Demi-God~
+Avatar of a Demi-Goddess~
+Title
+Avatar of a Immortal~
+Avatar of a Immortal~
+Title
+Avatar of a Lesser God~
+Avatar of a Lesser God~
+Title
+Avatar of a Greater God~
+Avatar of a Greater God~
+Title
+Avatar of a Infinite God~
+Avatar of a Infinite God~
+Title
+Avatar of a Supremity~
+Avatar of a Supremity~
+Title
+Avatar of a Implementer~
+Avatar of a Implementer~
+Title
+Immortal~
+Immortal~
+Title
+Savior~
+Savior~
+Title
+Demi God~
+Demi Goddess~
+Title
+Lesser God~
+Lesser Goddess~
+Title
+God~
+Goddess~
+Title
+Greater God~
+Greater Goddess~
+Title
+Ascendant God~
+Acendant Goddess~
+Title
+Exalted God~
+Exalted Goddess~
+Title
+Ancient One~
+Ancient One~
+Title
+Eternal One~
+Eternal One~
+Title
+Infinite One~
+Infinite One~
+Title
+Supreme Entity~
+Supreme Entity~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+Title
+(null)~
+(null)~
+End

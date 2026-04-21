@@ -1,0 +1,1272 @@
+#AREA   Mountain Castle~
+
+
+
+#VERSION 214
+#AUTHOR God~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31250000
+
+#CLIMATE 4 0 3
+
+#MOBILES
+#12301
+mole~
+a mole~
+A mole pops out of an unseen hole and wanders the area.
+~
+~
+65 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+77 8 0 0 128 128 0
+0 0 0 0 0 0 0 0
+#12302
+eagle~
+an eagle~
+A large eagle soars through the sky.
+~
+~
+65 524288 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+42 8 0 0 512 512 0
+0 0 0 0 0 0 0 0
+#12400
+mob~
+a newly created mob~
+Some god abandoned a newly created mob here.
+~
+~
+1 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#12301
+boulder~
+the giant boulder~
+A giant boulder obstructs you from moving any further.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 1
+> push_prog 100~
+mea $n You press your hands up to the boulder and put all the strength you can muster into pushing...
+mpechoar $n $n attempts to shove the boulder aside...
+if str($n) < 22
+mea $n You strain yourself beyond your abilities, but the boulder doesn't budge.
+mpechoar $n can't manage to move the boulder.
+else
+mpe With a great crash, the boulder falls down the mountainside far below.
+mpopenpassage 12309 12310 0
+endif
+~
+|
+#12400
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#12301
+At the entrance of a Castle~
+You have come to the front of a castle, which is somewhat carved into the face
+of the mountainside.  It's structuring along the front here is made from stone
+different then that of the mountain, so it's obvious that it was built here
+upon the mountain as much as carved from it.  There is a man-made pathway
+running along the edges of the castle to the east and west, and around the
+sides.
+~
+~
+0 0 5 1
+D1
+~
+~
+0 -1 12302
+D3
+~
+~
+0 -1 12307
+S
+#12302
+Along the outer sides of the Mountain Castle~
+You are standing upon the path surrounding the castle's outer walls, which
+comes across the front and sides of the castle, right up to the face of the
+mountain.  Just to the west is the large opening into the castle, and to the
+east a bit the path curves north around the corner.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12303
+D3
+~
+~
+0 -1 12301
+S
+#12303
+Pathway around the Mountain Castle~
+Around the pathway there isn't a lot of directions to go other then up
+and down along the walking area.  The rock steeps down below all around
+the outside edge, and the high stone walls of the castle meet right up
+to the path on the inner edge.  To the west is the large entrance into
+the castle, and just to the east it curves around the corner to the north.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12304
+D3
+~
+~
+0 -1 12302
+S
+#12304
+Pathway around the Mountain Castle~
+You're standing at the eastern corner of the Mountain Castle.  The
+walkway running round the castle goes west, leading up to the entrance
+of the castle, and further to the opposite corner, and north ending at
+the rock face of the mountain.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12305
+D3
+~
+~
+0 -1 12303
+S
+#12305
+Pathway around the Mountain Castle~
+A single, small bush grows out of the ground here, up next to the stone
+wall of the castle.  Right around here the portion of the castle that
+is apparently built comes together with the mountainside, and continues
+for an unknown amount of length deep into the mountain.  You are just
+north of the corner of the castle, and the pathway continues to the north
+beyond here.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12306
+D2
+~
+~
+0 -1 12304
+S
+#12306
+Pathway around the Mountain Castle~
+The path ends abruptly here, being able to go no further north with the
+gigantic side of the mountain here, reaching far above you in this
+low valley.  You realize this is the sort of area that one would hide
+a passage into the castle when constructing it, a backdoor of some sort,
+usualy more for the purpose of getting out of the castle rather then
+inside in times of emergency.  At least, that's how most were built
+back then..
+~
+~
+0 1073741824 5 1
+D2
+~
+~
+0 -1 12305
+S
+#12307
+Along the outer sides of the Mountain Castle~
+The path is covered in plain dirt and not much else.  Despite this area being
+in a mountain valley, nod much anything grows down here.  It's just dust and
+rocks, and ground formed in hills and slopes up to the sides of the mountain.
+To the east only a few steps is the entrance into this castle formed in the
+mountain, and to the west further it ends at a corner of the wall where it
+curves to the north.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12301
+D3
+~
+~
+0 -1 12308
+S
+#12308
+Along the outer sides of the Mountain Castle~
+The stone walls embedded into the mountain reach up high above you,
+and not much more then a window here or there has been set into the
+side.  You find the main entrance to be up the path to the east,
+and just to the west is where it curves around the corner of the
+structure.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12307
+D3
+~
+~
+0 -1 12309
+S
+#12309
+Pathway around the Mountain Castle~
+A few pebbles drop off a ledge high above your head, along with some dust,
+just missing your eyes as you mistakenly look up to see where it came from.
+An out of place boulder obstructs the pathway going west, probably having
+fallen from above some time ago, much in the same way as the dust.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12308
+S
+#12310
+Ascending a trail up the mountains~
+The foot of a mountain starts here upon this hill, looking up it to the
+south you spot a very visible worn trail winding up a gradual slope of
+the base of the mountain, then in the slight distance it looks to turn
+past some large masses of rocks and disappears.
+~
+~
+0 1073741824 5 1
+D2
+~
+~
+0 -1 12311
+D4
+~
+~
+100665344 -1 12396
+S
+#12311
+A winding trail~
+A winding trail begins here from the north, as it ascends up a gradual
+slope.  The ground is pretty muddy with the exception of the worn trail
+you follow through some thin vegetation composed of overgrown weeds and
+waist-high bushes.  To the north is the foot of the mountain where it
+flattens to level ground.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12310
+D4
+~
+~
+100665344 -1 12396
+D8
+~
+~
+0 -1 12312
+S
+#12312
+Walking down a winding trail~
+The trail weaves in and out of bends to make it's way around the bushes
+and patches of thorns.  Trees are scarce though the couple that are
+planted have few leaves and produce no fruit or any kind.  You are
+only elevated from sea level a few dozen feet, looking to the north and
+being able to see where the base of the mountain is.
+~
+~
+0 1073741824 5 1
+D7
+~
+~
+0 -1 12311
+D9
+~
+~
+0 -1 12313
+S
+#12313
+Walking down a winding trail~
+The trail begins to straighten out, as you have to begin to raise
+your feet higher to step over some large thistle branches growing
+the walkway.  The problem is contained only in this nearby area though,
+looking southwards there looks to be no plants as the mountain gets
+steeper.  To the north the path continues to wind downwards.
+~
+~
+0 1073741824 5 1
+D6
+~
+~
+0 -1 12312
+D8
+~
+~
+0 -1 12314
+S
+#12314
+A bend in the trail~
+The mountain is steep here, as the trail begins fading but so far still
+detectable.  Many large natural rock structures surround you on all
+sides, huge offshaped pillars of rock sticking up out of the ground and
+many boulders of different sizes laying on the ground.  A noticeably large
+mound of good-sized rocks is just to the west, where the trail bends behind
+between the other side of them and the mountainside.
+~
+~
+0 1073741824 5 1
+D7
+~
+~
+0 -1 12313
+D9
+~
+~
+0 -1 12315
+S
+#12315
+Coming around the bend in the trail~
+The bend is wide as the pile of many hundreds of large rocks is large,
+probably rocks that have fallen from upwards the mountain and acumulated
+here on flatter ground then the steeper mountain range.  The trail is
+much noticeable more distinguished to the northeast.
+~
+~
+0 1073741824 5 1
+D3
+~
+~
+0 -1 12316
+D6
+~
+~
+0 -1 12314
+S
+#12316
+Behind a mound of rocks~
+The trail beneath your feet bends here coming out from behind these
+boulders to the east, and winds upwards the mountain to the south.
+The row of rocks are about 6 feet high total, making it just big
+enough to hide everything from view from one side of the mound to
+the other.  On the other side of you is a side of the mountain, making
+this a narrow divide.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12315
+D3
+~
+~
+0 -1 12317
+S
+#12317
+A path through the mountain~
+Travelling quite a ways across the trail, the side of the mountain to
+the south slopes down here to a passable level and the trail goes up the
+mountain to the south.  To the east the path travels very far in a
+narrow divide between the side of the mountain and a mound of rocks to
+the north.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12316
+D9
+~
+~
+0 -1 12318
+S
+#12318
+Off the mountain trail~
+Beneath your feet a thin remainder of a trail comes from northern
+direction, but an abundance of dirt passed over the ground ends the
+trail here.  To the south the ground runs up a hill to what looks
+like a dead end.
+~
+~
+0 1073741824 5 1
+D2
+~
+~
+0 -1 12319
+D6
+~
+~
+0 -1 12317
+D8
+~
+~
+0 -1 12320
+S
+#12319
+Standing at the mountainside~
+Standing facing to the south you see a steep mountainside.  Upon looking
+upwards it is a good 30 feet or so high to an edge, and you can't see much
+anything else beyond that.  This wall cuts across both to the east and
+west, there appears to be no way around it and no way to go but north.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12318
+D4
+~
+~
+64 -1 12321
+S
+#12320
+Straying from the trail~
+The ground is undistrubed, aside from your own travelling, telling you
+that few travel this here at best.  You speed up in short bursts in
+order to climb over the obstacle rocks while making your way across.
+~
+~
+0 1073741824 5 1
+D7
+~
+~
+0 -1 12318
+S
+#12321
+Up the mountainside~
+You are about midway up the mountainside, in mid-air.  The rock is
+steep and mostly verticle with nothing you could hold on to.  The
+ground is a few dozen feet below, but you are pretty close to the
+upper ledge above.
+~
+~
+0 1090519040 5 1
+D5
+~
+~
+0 -1 12319
+S
+#12322
+Standing at a ledge~
+The ground comes to an edge below your feet, dropping down almost completely
+vertically to the ground below, looks like you're standing a few stories
+high.  Up here the wind is obviously more active, and nothing living seems
+to grow, all you can see is red and orange rock, dust rising up as the winds
+pass over the surface.
+Looking down the cliff you can figure attempting to climb it would be very
+dangerous.
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12326
+D2
+~
+~
+0 -1 12323
+D8
+~
+~
+0 -1 12325
+S
+#12323
+At a small cave~
+The mountain raises far into the sky, still leading up higher then you must
+be able to view it from here, and still much too steep and with too few
+places to grip to climb up.  In the rock however you spot a cave several
+yards from where you stand, though you can see from here it's nothing more
+special then a tiny hole eroded into the mountain.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12322
+D1
+~
+~
+0 -1 12325
+D2
+~
+~
+0 -1 12324
+D6
+~
+~
+0 -1 12326
+S
+#12324
+In a small cave~
+You are in a small cave, barely standing up as the ceiling
+is only a little higher then your own height.  Looking upon
+the ground however you notice something you wouldn't have
+spotted from the outside, some ash on the ground, with a
+few small and half-burnt pieces of wood.
+~
+~
+0 1073742088 5 0
+D0
+~
+~
+0 -1 12323
+S
+#12325
+On the mountain ledge~
+This wide ledge of the mountain goes to the north and west slightly, mostly
+stopped only by the boulders or the mountainside.  To the east it comes to
+a curved end as it narrows into a trail leading further up the mountain's
+outter circumference, beginning here by winding around the side to the south
+of you.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12326
+D3
+~
+~
+0 -1 12323
+D7
+~
+~
+0 -1 12322
+S
+#12326
+On the mountain ledge~
+The mountain's ground is flat here for a large space, from the drop of the
+cliff to the north leading to the continuing side of the mountain to the
+south of you.  Little wind blows up here, other then the fact that that you
+are pretty high above sea-level ground and the elevation change makes
+the air thinner.
+~
+~
+0 1073741824 5 1
+D2
+~
+~
+0 -1 12325
+D3
+~
+~
+0 -1 12322
+D8
+~
+~
+0 -1 12327
+D9
+~
+~
+0 -1 12323
+S
+#12327
+Walking a narrow trail~
+You're standing atop an almost too-narrow trail which winds widely around
+the sides of the mountain, in and out of it's natural rock formation,
+and leading further high up the mountain.  There is really no other way
+to go about then the two directions the trail leads in, since the drop-
+off on the side is very steep, and it's further down to the next ledge
+then you really care to consider.
+~
+~
+0 1073741824 5 1
+D7
+~
+~
+0 -1 12326
+D8
+~
+~
+0 -1 12328
+S
+#12328
+On the narrow trail~
+Looking below you notice the lower areas below you have become increasingly
+dangerous, far below are many jagged rocks facing upwards like knives at
+you, and you work to not pay too much attention to the thought of falling.
+The trail leads downward in a slope to the northern directions and upwards
+to the south, both around corners of rocks protruding from the mountainside,
+making it difficult to see what you're coming up to before you actually get
+to it...
+~
+~
+0 1073741824 5 1
+D2
+~
+~
+0 -1 12329
+D7
+~
+~
+0 -1 12327
+S
+#12329
+Upon the cliffside trail~
+Walking along the trail, you pass under an arch-like formation of rock, a
+portion of the cliffside extending to the east, where a giant rectangular
+boulder rests on an edge, and another with one side on top of that and
+the other on a small ledge in the side of the mountain above you.
+On the southern side of this the trail winds more around the mountain to
+the western direction, while continuing north as well.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12328
+D2
+~
+~
+0 -1 12330
+S
+#12330
+Meeting of the trail and a winding path~
+The trail continues from here upwards to the west, where the mountain is
+split into multiple parts, with the main body of the mountain to the north
+and several large rock pillars rise up from somewhere below.  The path
+weaves in and out between these many pillar-looking pieces of the mountain.
+~
+~
+0 1073741824 5 1
+D0
+~
+~
+0 -1 12329
+D9
+~
+~
+0 -1 12331
+S
+#12331
+Upon a winding path~
+You are near the intersection point of the two trails, the one that
+curves around the mountainside, and this one that you're standing upon,
+one that is equally high up and winds back and forth amongst several
+rock formations that come up from somewhere in the mountain far below
+you.
+~
+~
+0 1073741824 5 1
+D6
+~
+~
+0 -1 12330
+D7
+~
+~
+0 -1 12332
+S
+#12332
+A winding pathway~
+The mountainside stretchs far across to the north of you, with one curved
+end in it to the east of you here, the other far to the west, though this
+mountain tends to have it's furthest ends beyond where any person could
+climb to, and instead has many series of trails and odd naturally
+shaped formations obstructing a climber's way.  You are on one such
+trail, which wraps around the first rock to the east of you, and continues
+further west.
+~
+~
+0 1073741824 5 1
+D3
+~
+~
+0 -1 12333
+D8
+~
+~
+0 -1 12331
+S
+#12333
+A winding pathway~
+~
+~
+0 1073741824 5 1
+D1
+~
+~
+0 -1 12332
+S
+#12384
+Sky: 4,4~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12388
+D3
+~
+~
+0 -1 12385
+D7
+~
+~
+0 -1 12389
+S
+#12385
+Sky: 4,3~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12389
+D1
+~
+~
+0 -1 12384
+D3
+~
+~
+0 -1 12386
+D6
+~
+~
+0 -1 12388
+D7
+~
+~
+0 -1 12390
+S
+#12386
+Sky: 4,2~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12390
+D1
+~
+~
+0 -1 12385
+D3
+~
+~
+0 -1 12387
+D6
+~
+~
+0 -1 12389
+D7
+~
+~
+0 -1 12391
+S
+#12387
+Sky: 4,1~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12391
+D1
+~
+~
+0 -1 12386
+D6
+~
+~
+0 -1 12390
+S
+#12388
+Sky: 3,4~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12392
+D2
+~
+~
+0 -1 12384
+D3
+~
+~
+0 -1 12389
+D7
+~
+~
+0 -1 12393
+D9
+~
+~
+0 -1 12385
+S
+#12389
+Sky: 3,3~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12393
+D1
+~
+~
+0 -1 12388
+D2
+~
+~
+0 -1 12385
+D3
+~
+~
+0 -1 12390
+D6
+~
+~
+0 -1 12392
+D7
+~
+~
+0 -1 12394
+D8
+~
+~
+0 -1 12384
+D9
+~
+~
+0 -1 12386
+S
+#12390
+Sky: 3,2~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12394
+D1
+~
+~
+0 -1 12389
+D2
+~
+~
+0 -1 12386
+D3
+~
+~
+0 -1 12391
+D6
+~
+~
+0 -1 12393
+D7
+~
+~
+0 -1 12395
+D8
+~
+~
+0 -1 12385
+D9
+~
+~
+0 -1 12387
+S
+#12391
+Sky: 3,1~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12395
+D1
+~
+~
+0 -1 12390
+D2
+~
+~
+0 -1 12387
+D6
+~
+~
+0 -1 12394
+D8
+~
+~
+0 -1 12386
+S
+#12392
+Sky: 2,4~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12396
+D2
+~
+~
+0 -1 12388
+D3
+~
+~
+0 -1 12393
+D7
+~
+~
+0 -1 12397
+D9
+~
+~
+0 -1 12389
+S
+#12393
+Sky: 2,3~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12397
+D1
+~
+~
+0 -1 12392
+D2
+~
+~
+0 -1 12389
+D3
+~
+~
+0 -1 12394
+D6
+~
+~
+0 -1 12396
+D7
+~
+~
+0 -1 12398
+D8
+~
+~
+0 -1 12388
+D9
+~
+~
+0 -1 12390
+S
+#12394
+Sky: 2,2~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12398
+D1
+~
+~
+0 -1 12393
+D2
+~
+~
+0 -1 12390
+D3
+~
+~
+0 -1 12395
+D6
+~
+~
+0 -1 12397
+D7
+~
+~
+0 -1 12399
+D8
+~
+~
+0 -1 12389
+D9
+~
+~
+0 -1 12391
+S
+#12395
+Sky: 2,1~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D0
+~
+~
+0 -1 12399
+D1
+~
+~
+0 -1 12394
+D2
+~
+~
+0 -1 12391
+D6
+~
+~
+0 -1 12398
+D8
+~
+~
+0 -1 12390
+S
+#12396
+Sky: 1,4~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1090519040 9 100
+D2
+~
+~
+0 -1 12392
+D3
+~
+~
+0 -1 12397
+D5
+~
+~
+16777216 -1 12310
+D9
+~
+~
+0 -1 12393
+S
+#12397
+Sky: 1,3~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D1
+~
+~
+0 -1 12396
+D2
+~
+~
+0 -1 12393
+D3
+~
+~
+0 -1 12398
+D8
+~
+~
+0 -1 12392
+D9
+~
+~
+0 -1 12394
+S
+#12398
+Sky: 1,2~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D1
+~
+~
+0 -1 12397
+D2
+~
+~
+0 -1 12394
+D3
+~
+~
+0 -1 12399
+D8
+~
+~
+0 -1 12393
+D9
+~
+~
+0 -1 12395
+S
+#12399
+Sky: 1,1~
+The sun shines in your eyes, making it somewhat difficult to see, but
+with your hand shielding your eyes as much as possible you look upwards
+to the sky to see what's above.
+~
+High above you see the moon hanging in the sky, lighting the mountain range
+all around you.
+~
+0 1073741824 9 100
+D1
+~
+~
+0 -1 12398
+D2
+~
+~
+0 -1 12395
+D8
+~
+~
+0 -1 12394
+S
+#12400
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+O 0 11001 1 12303
+M 0 12302 1 12396
+M 1 12302 2 12397
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,995 @@
+[*****] BUG: boot_slave: child: unable to exec: No such file or directory
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_obj_index: bad vnum 32215.
+[*****] BUG: Get_obj_index: bad vnum 11211.
+[*****] BUG: Get_obj_index: bad vnum 11210.
+[*****] BUG: Get_obj_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 11207.
+[*****] BUG: Get_obj_index: bad vnum 11206.
+[*****] BUG: Get_obj_index: bad vnum 11205.
+[*****] BUG: Get_obj_index: bad vnum 11204.
+[*****] BUG: Get_obj_index: bad vnum 11203.
+[*****] BUG: Get_obj_index: bad vnum 11202.
+[*****] BUG: Get_obj_index: bad vnum 12411.
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_mob_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 29841.
+[*****] BUG: Get_obj_index: bad vnum 2854.
+[*****] BUG: Get_obj_index: bad vnum 2802.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 11222.
+[*****] BUG: Get_mob_index: bad vnum 12410.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 3135.
+[*****] BUG: Get_obj_index: bad vnum 12425.
+[*****] BUG: Get_obj_index: bad vnum 12424.
+[*****] BUG: Get_obj_index: bad vnum 12423.
+[*****] BUG: Get_obj_index: bad vnum 12422.
+[*****] BUG: Get_obj_index: bad vnum 12421.
+[*****] BUG: Get_obj_index: bad vnum 12420.
+[*****] BUG: Get_room_index: bad vnum 11300.
+[*****] BUG: Get_obj_index: bad vnum 2859.
+[*****] BUG: Get_obj_index: bad vnum 13311.
+[*****] BUG: Get_obj_index: bad vnum 13312.
+[*****] BUG: Get_obj_index: bad vnum 12444.
+[*****] BUG: Get_obj_index: bad vnum 12437.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_mob_index: bad vnum 12417.
+[*****] BUG: Get_room_index: bad vnum 12407.
+[*****] BUG: Get_obj_index: bad vnum 12429.
+[*****] BUG: Get_obj_index: bad vnum 12428.
+[*****] BUG: Get_room_index: bad vnum 12436.
+[*****] BUG: Load_resets: 'D': room 12436 doesn't exist.
+[*****] BUG: Reset: D 0 12436 2 0
+[*****] BUG: Get_obj_index: bad vnum 12492.
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_mob_index: bad vnum 12500.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12455.
+[*****] BUG: Get_obj_index: bad vnum 12449.
+[*****] BUG: Get_obj_index: bad vnum 12443.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12460.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 12432.
+[*****] BUG: Get_obj_index: bad vnum 12486.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12412.
+[*****] BUG: Read_object: vnum 12204 bad type.
+[*****] BUG: ------------------------>     
+[*****] BUG: MpOpenPassage - Exit exists, Object #12530.
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 17
+[*****] BUG: i= 3, j=4, numchoise = 17 iClass=17
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 2
+[*****] BUG: i= 0, j=1, numchoise = 2 iClass=2
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 1
+[*****] BUG: i= 0, j=0, numchoise = 1 iClass=1. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 9
+[*****] BUG: i= 4, j=7, numchoise = 9 iClass=9
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 10
+[*****] BUG: i= 2, j=4, numchoise = 10 iClass=10
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 2
+[*****] BUG: i= 0, j=1, numchoise = 2 iClass=2
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 28
+[*****] BUG: i= 7, j=12, numchoise = 28 iClass=28. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 3
+[*****] BUG: i= 0, j=2, numchoise = 3 iClass=3
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 1
+[*****] BUG: i= 1, j=0, numchoise = 1 iClass=1. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoat - victim does not exist, Mob #12403.
+[*****] BUG: Mpechoaround - victim does not exist, Mob #12403.
+[*****] BUG: Mpslay: victim not in room, Mob #12403.
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 26
+[*****] BUG: i= 3, j=4, numchoise = 26 iClass=26
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: boot_slave: child: unable to exec: No such file or directory
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_obj_index: bad vnum 32215.
+[*****] BUG: Get_obj_index: bad vnum 11211.
+[*****] BUG: Get_obj_index: bad vnum 11210.
+[*****] BUG: Get_obj_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 11207.
+[*****] BUG: Get_obj_index: bad vnum 11206.
+[*****] BUG: Get_obj_index: bad vnum 11205.
+[*****] BUG: Get_obj_index: bad vnum 11204.
+[*****] BUG: Get_obj_index: bad vnum 11203.
+[*****] BUG: Get_obj_index: bad vnum 11202.
+[*****] BUG: Get_obj_index: bad vnum 12411.
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_mob_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 29841.
+[*****] BUG: Get_obj_index: bad vnum 2854.
+[*****] BUG: Get_obj_index: bad vnum 2802.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 11222.
+[*****] BUG: Get_mob_index: bad vnum 12410.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 3135.
+[*****] BUG: Get_obj_index: bad vnum 12425.
+[*****] BUG: Get_obj_index: bad vnum 12424.
+[*****] BUG: Get_obj_index: bad vnum 12423.
+[*****] BUG: Get_obj_index: bad vnum 12422.
+[*****] BUG: Get_obj_index: bad vnum 12421.
+[*****] BUG: Get_obj_index: bad vnum 12420.
+[*****] BUG: Get_room_index: bad vnum 11300.
+[*****] BUG: Get_obj_index: bad vnum 2859.
+[*****] BUG: Get_obj_index: bad vnum 13311.
+[*****] BUG: Get_obj_index: bad vnum 13312.
+[*****] BUG: Get_obj_index: bad vnum 12444.
+[*****] BUG: Get_obj_index: bad vnum 12437.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_mob_index: bad vnum 12417.
+[*****] BUG: Get_room_index: bad vnum 12407.
+[*****] BUG: Get_obj_index: bad vnum 12429.
+[*****] BUG: Get_obj_index: bad vnum 12428.
+[*****] BUG: Get_room_index: bad vnum 12436.
+[*****] BUG: Load_resets: 'D': room 12436 doesn't exist.
+[*****] BUG: Reset: D 0 12436 2 0
+[*****] BUG: Get_obj_index: bad vnum 12492.
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_mob_index: bad vnum 12500.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12455.
+[*****] BUG: Get_obj_index: bad vnum 12449.
+[*****] BUG: Get_obj_index: bad vnum 12443.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12460.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 12432.
+[*****] BUG: Get_obj_index: bad vnum 12486.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12412.
+[*****] BUG: Read_object: vnum 12204 bad type.
+[*****] BUG: ------------------------>     
+[*****] BUG: MpOpenPassage - Exit exists, Object #12530.
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 5
+[*****] BUG: i= 0, j=4, numchoise = 5 iClass=5
+[*****] BUG: 36
+[*****] BUG: i= 5, j=12, numchoise = 36 iClass=36. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: 1
+[*****] BUG: i= 0, j=0, numchoise = 1 iClass=1. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 3
+[*****] BUG: i= 6, j=12, numchoise = 3 iClass=3. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 32
+[*****] BUG: i= 5, j=6, numchoise = 32 iClass=32
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 3
+[*****] BUG: i= 0, j=2, numchoise = 3 iClass=3
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 1
+[*****] BUG: i= 0, j=0, numchoise = 1 iClass=1. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: NOEXISTS?
+[*****] BUG: 4
+[*****] BUG: i= 0, j=3, numchoise = 4 iClass=4
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: death_cry: invalid vnum
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 12
+[*****] BUG: i= 1, j=3, numchoise = 12 iClass=12
+[*****] BUG: 7
+[*****] BUG: i= 3, j=7, numchoise = 7 iClass=7
+[*****] BUG: 12
+[*****] BUG: i= 1, j=3, numchoise = 12 iClass=12
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 5
+[*****] BUG: i= 3, j=4, numchoise = 5 iClass=5
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: boot_slave: child: unable to exec: No such file or directory
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_obj_index: bad vnum 32215.
+[*****] BUG: Get_obj_index: bad vnum 11211.
+[*****] BUG: Get_obj_index: bad vnum 11210.
+[*****] BUG: Get_obj_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 11207.
+[*****] BUG: Get_obj_index: bad vnum 11206.
+[*****] BUG: Get_obj_index: bad vnum 11205.
+[*****] BUG: Get_obj_index: bad vnum 11204.
+[*****] BUG: Get_obj_index: bad vnum 11203.
+[*****] BUG: Get_obj_index: bad vnum 11202.
+[*****] BUG: Get_obj_index: bad vnum 12411.
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_mob_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 29841.
+[*****] BUG: Get_obj_index: bad vnum 2854.
+[*****] BUG: Get_obj_index: bad vnum 2802.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 11222.
+[*****] BUG: Get_mob_index: bad vnum 12410.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 3135.
+[*****] BUG: Get_obj_index: bad vnum 12425.
+[*****] BUG: Get_obj_index: bad vnum 12424.
+[*****] BUG: Get_obj_index: bad vnum 12423.
+[*****] BUG: Get_obj_index: bad vnum 12422.
+[*****] BUG: Get_obj_index: bad vnum 12421.
+[*****] BUG: Get_obj_index: bad vnum 12420.
+[*****] BUG: Get_room_index: bad vnum 11300.
+[*****] BUG: Get_obj_index: bad vnum 2859.
+[*****] BUG: Get_obj_index: bad vnum 13311.
+[*****] BUG: Get_obj_index: bad vnum 13312.
+[*****] BUG: Get_obj_index: bad vnum 12444.
+[*****] BUG: Get_obj_index: bad vnum 12437.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_mob_index: bad vnum 12417.
+[*****] BUG: Get_room_index: bad vnum 12407.
+[*****] BUG: Get_obj_index: bad vnum 12429.
+[*****] BUG: Get_obj_index: bad vnum 12428.
+[*****] BUG: Get_room_index: bad vnum 12436.
+[*****] BUG: Load_resets: 'D': room 12436 doesn't exist.
+[*****] BUG: Reset: D 0 12436 2 0
+[*****] BUG: Get_obj_index: bad vnum 12492.
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_mob_index: bad vnum 12500.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12455.
+[*****] BUG: Get_obj_index: bad vnum 12449.
+[*****] BUG: Get_obj_index: bad vnum 12443.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12460.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 12432.
+[*****] BUG: Get_obj_index: bad vnum 12486.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12412.
+[*****] BUG: Read_object: vnum 12204 bad type.
+[*****] BUG: ------------------------>     
+[*****] BUG: MpOpenPassage - Exit exists, Object #12530.
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: death_cry: invalid vnum
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 3
+[*****] BUG: i= 0, j=2, numchoise = 3 iClass=3
+[*****] BUG: death_cry: invalid vnum
+[*****] BUG: 3
+[*****] BUG: i= 0, j=2, numchoise = 3 iClass=3
+[*****] BUG: 6
+[*****] BUG: i= 1, j=12, numchoise = 6 iClass=6. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: Nanny: invalid racial language.
+[*****] BUG: 3
+[*****] BUG: i= 1, j=3, numchoise = 3 iClass=3
+[*****] BUG: NOEXISTS?
+[*****] BUG: 40
+[*****] BUG: i= 6, j=12, numchoise = 40 iClass=40. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: 25
+[*****] BUG: i= 3, j=12, numchoise = 25 iClass=25. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: death_cry: invalid vnum
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 3
+[*****] BUG: i= 1, j=3, numchoise = 3 iClass=3
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 4
+[*****] BUG: i= 0, j=3, numchoise = 4 iClass=4
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: NOEXISTS?
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: 1
+[*****] BUG: i= 0, j=0, numchoise = 1 iClass=1. IF I'M NOT SINGLE CLASS I'M SCREWED!!!
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: boot_slave: child: unable to exec: No such file or directory
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_obj_index: bad vnum 32215.
+[*****] BUG: Get_obj_index: bad vnum 11211.
+[*****] BUG: Get_obj_index: bad vnum 11210.
+[*****] BUG: Get_obj_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 11207.
+[*****] BUG: Get_obj_index: bad vnum 11206.
+[*****] BUG: Get_obj_index: bad vnum 11205.
+[*****] BUG: Get_obj_index: bad vnum 11204.
+[*****] BUG: Get_obj_index: bad vnum 11203.
+[*****] BUG: Get_obj_index: bad vnum 11202.
+[*****] BUG: Get_obj_index: bad vnum 12411.
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_obj_index: bad vnum 12606.
+[*****] BUG: Get_obj_index: bad vnum 12607.
+[*****] BUG: Get_obj_index: bad vnum 12608.
+[*****] BUG: Get_obj_index: bad vnum 12609.
+[*****] BUG: Get_mob_index: bad vnum 11209.
+[*****] BUG: Get_obj_index: bad vnum 29841.
+[*****] BUG: Get_obj_index: bad vnum 2854.
+[*****] BUG: Get_obj_index: bad vnum 2802.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 11222.
+[*****] BUG: Get_mob_index: bad vnum 12410.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 3135.
+[*****] BUG: Get_obj_index: bad vnum 12425.
+[*****] BUG: Get_obj_index: bad vnum 12424.
+[*****] BUG: Get_obj_index: bad vnum 12423.
+[*****] BUG: Get_obj_index: bad vnum 12422.
+[*****] BUG: Get_obj_index: bad vnum 12421.
+[*****] BUG: Get_obj_index: bad vnum 12420.
+[*****] BUG: Get_room_index: bad vnum 11300.
+[*****] BUG: Get_obj_index: bad vnum 2859.
+[*****] BUG: Get_obj_index: bad vnum 13311.
+[*****] BUG: Get_obj_index: bad vnum 13312.
+[*****] BUG: Get_obj_index: bad vnum 12444.
+[*****] BUG: Get_obj_index: bad vnum 12437.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_obj_index: bad vnum 12497.
+[*****] BUG: Get_mob_index: bad vnum 12417.
+[*****] BUG: Get_room_index: bad vnum 12407.
+[*****] BUG: Get_obj_index: bad vnum 12429.
+[*****] BUG: Get_obj_index: bad vnum 12428.
+[*****] BUG: Get_room_index: bad vnum 12436.
+[*****] BUG: Load_resets: 'D': room 12436 doesn't exist.
+[*****] BUG: Reset: D 0 12436 2 0
+[*****] BUG: Get_obj_index: bad vnum 12492.
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_room_index: bad vnum 12466.
+[*****] BUG: Load_resets: 'D': room 12466 doesn't exist.
+[*****] BUG: Reset: D 0 12466 0 0
+[*****] BUG: Get_mob_index: bad vnum 12446.
+[*****] BUG: Get_mob_index: bad vnum 12500.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12455.
+[*****] BUG: Get_obj_index: bad vnum 12449.
+[*****] BUG: Get_obj_index: bad vnum 12443.
+[*****] BUG: Get_obj_index: bad vnum 12431.
+[*****] BUG: Get_obj_index: bad vnum 12460.
+[*****] BUG: Get_obj_index: bad vnum 12430.
+[*****] BUG: Get_obj_index: bad vnum 12432.
+[*****] BUG: Get_obj_index: bad vnum 12486.
+[*****] BUG: Get_room_index: bad vnum 12439.
+[*****] BUG: Get_obj_index: bad vnum 12412.
+[*****] BUG: Read_object: vnum 12204 bad type.
+[*****] BUG: ------------------------>     
+[*****] BUG: MpOpenPassage - Exit exists, Object #12530.
+[*****] BUG: 26
+[*****] BUG: i= 3, j=4, numchoise = 26 iClass=26
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex
+[*****] BUG: room_is_dark: NULL pRoomIndex

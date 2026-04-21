@@ -1,0 +1,1506 @@
+#AREA   New Hope's Chuch, Inn, and Library~
+
+
+
+#VERSION 200
+#AUTHOR God~
+
+#RANGES
+1 115 1 115
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31250000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#11201
+jj~
+J the bartender~
+J the bartender is standing behind the bar counter, waiting for you to decide.
+~
+Somehow he looks very out of place for these lands.  More of a simpler being
+than most, he's just human and that's about it.  He's dressed in a black shirt
+and pants, with a wet stain or two over spilled drinks.  He is cleaning a cup
+in a very usual manner, and watches you watching him, waiting for you to order
+something already.
+~
+1073741827 0 0 C
+52 0 0 5000d1+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+> act_prog p looks at you.~
+if position($n) != 8
+mpechoat $n J says 'So $n, you wanna take a seat and order something or what?'
+else
+mpechoat $n J says 'Well?  You got a staring problem or something?'
+endif
+~
+> act_prog p buys~
+if position($n) != 8
+mptrans 0.$n 11293
+mpat $n mptrans 0.$n 11294
+'Why not sit down and drink that $n?
+endif
+~
+> speech_prog warriors? warrior? warriors. warrior. warriors warrior~
+mpechoat $n The bartender looks over to you, he must have overheard you.
+whisper $n 'So you're wondering about those warriors are you?
+mpechoat $n _whi They're always here.  They sit at that same table and drive away lots of customers, always being loud and rude and obnoxious.  The thing I wonder about is that door though...
+~
+> speech_prog doors? door? doors. door. doors door~
+mpechoat $n The bartender looks over to you, he must have overheard you.
+whisper $n You know that door over there to the west side of the room?
+mpechoat $n _whi Well, that was here even before I got here.  This inn is really owned by the King and all them.  I just think it's weird when I'm unable to take a look at a door in my own inn.  They're blocking it basically.  Wonder what's behind it...
+if class($n) == Warrior
+mpechoat $n _whi You know, you are a warrior yourself, perhaps you could get more out of them then I can.  I overheard a word once, it was "ztgythkgn".  It means "strength" to humans in orcish language, and that's about all I know.
+endif
+~
+> hour_prog 17~
+'Sorry people, but I'm on a one hour break now.  No drinks, no nothing.
+stretch
+~
+> time_prog 1~
+yawn
+'Allright everybody, it's time I closed up shop for tonight.
+'See you all at 10 sharp.
+south
+west
+mpgoto 11288
+mpat 11292 mpecho J the bartender leaves west.
+~
+> time_prog 10~
+mpat 11292 mpecho J the bartender arrives from the east.
+mpgoto 11292
+east
+north
+'Bar is now open
+~
+|
+#11202
+A fat warrior~
+a fat warrior~
+A fat warrior sits at a table, waiting impatiantly for more food.
+~
+A stout, chubby warrior sits here at a table conversing with two other
+warriors.  He has a long beard which he attempts to keep out of the way of his
+dining, but to not a lot of success.  He is obviously dwarven in race, and is
+dressed in the appropraite warrior attire of basic plate armour, with a sword
+in sheath at his side.
+at his side.
+~
+1073741827 0 0 C
+15 0 0 500d1+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+2 3 0 0 5 4 0
+0 0 0 0 1050624 0 0 0
+> act_prog p looks at you.~
+if class($n) == Warrior
+mpechoat $n The fatter one says "Well, if you want you can sit with us for a
+mpechoat $n  few minutes, but then you have to leave, we're busy here.'
+else
+mpechoat $n The fatter warrior says 'Don't look at me, talk to the boss here.'
+endif
+~
+|
+#11203
+A skinny warrior~
+a skinny warrior~
+A skinny warrior is sitting at a table with his two buddies.
+~
+This is the much skinnier and taller one of the trio.  He is a lot more clean
+cut and mannered than the other two of his companions, and doesn't seem quite
+as strong as either of them in his guild.  However, he is dressed in the proper
+get up of everything from his helmet down to his metal leggings.  He too
+carries a sword at his side and is definetely not someone you would want to
+mess with.
+~
+1073741827 0 0 C
+14 0 0 480d1+0 0d0+0
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 1050624 0 0 0
+#11204
+A mean warrior~
+a mean looking warrior~
+A much meaner looking warrior is sitting here making lots of racket.
+~
+This warrior just simply looks meaner than the other two.  He is obviously the
+strongest of the group, being much more built, and he makes a lot more noise
+than the other two as well.  He appears to be a half ogre from your best
+estimate, and judging by his and their actions he seems to be the leader of the
+pack if any, and is not someone to disturb over no good reason.
+~
+1073741827 0 0 C
+23 0 0 720d1+0 6d8+2
+0 0
+108 108 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+6 3 0 0 17 17 0
+85 65 0 0 1058816 0 0 3
+> act_prog p looks at you.~
+if class($n) == Warrior
+mpechoat $n The leader says 'Hello fellow warrior class.  I'm a bit busy now.'
+else
+mpechoat $n The mean warrior says 'Hey!  Can't you see we're busy here?'
+mpechoat $n _red 'LEAVE US ALONE!'
+endif
+~
+> speech_prog ztgythkgn? ztgythkgn. ztgythkgn~
+if class($n) == Warrior
+mpechoat $n Suddenly the noise and chatter stops, and all three of them turn to
+mpechoat $n you...
+mpechoat $n The leader says 'So, you're familiar with both of being a warrior
+mpechoat $n aND my own native tongue...  Well good for you.  You know, I like
+mpechoat $n you a lot.  Tell you what I'm gonna do, is let you through this
+mpechoat $n here door.  Follow the tunnel and you'll come to our own guild.
+mpechoat $n There will be people there who will help you.
+peer
+whisper $n Anytime you're ready, just say "ready".
+endif
+~
+> speech_prog ready? ready. ready~
+if class($n) ==  Warrior
+nod $n
+tell $n Hurry up, hurry up...
+mpopenpassage 11293 11289 0
+mpechoat $n The leader shoves you through the door quickly.
+mpforce $n north
+mpclosepassage 11293 0
+phew
+else
+look $n
+mpechoat $n The meaner warrior growls 'Ready for what?'
+mpechoat $n 'To get the ^#!&* beat out of you for interrupting us?'
+mpechoaround $n The really mean warrior looks like he's getting upset with $n.
+mpechoaround $n Perhaps you should keep your distance from $m.
+curse
+endif
+~
+> speech_prog strength? strength. strength~
+if race($n) == Half-Troll
+mpechoat $n Suddenly the noise and chatter stops, and all three of them turn to
+mpechoat $n you...
+mpechoat $n The leader says 'So, you're familiar with both of being a warrior
+mpechoat $n aND my own native tongue...  Well good for you.  You know, I like
+mpechoat $n you a lot.  Tell you what I'm gonna do, is let you through this
+mpechoat $n here door.  Follow the tunnel and you'll come to our own guild.
+mpechoat $n There will be people there who will help you.
+peer
+whisper $n Anytime you're ready, just say "ready".
+endif
+~
+> fight_prog 100~
+'I tire of fighting you, I will end this NOW.
+mpechoat 0.$n With that, the warrior grips his sword tighter around it's handle, and impales you with it all the way through.  Upon withdrawing it from your body, you fall down, the life draining from your body...
+mpslay 0.$n
+cackle
+raise
+sit
+~
+|
+#11205
+jx~
+J the bartender~
+J the bartender sits here on a stool at the barcounter.
+~
+Somehow he looks very out of place for these lands.  More of a simpler being
+than most, he's just human and that's about it.  He's dressed in a black shirt
+and pants, with a wet stain or two over spilled drinks.  He is sitting on a 
+stool at the barcounter, enjoying his simple break from work before returning
+to his routine of serving cutomers.
+~
+1073741827 0 0 C
+54 0 0 5000d1+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 1058816 0 0 0
+> time_prog 18~
+'Well, my break is over, and we're open for business again.
+stand
+~
+|
+#11206
+common drunk~
+a common drunk~
+A common drunk is standing around here, for no apparent reason.
+~
+~
+1073741825 0 0 C
+3 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+4 7 0 0 9 1 0
+85 65 0 0 1058816 0 0 0
+> act_prog p J the bartender stretches luxuriously.  Makes you want to, doesn't it?~
+'AaAhhhHh, Ma-aAnn.  NooW whhatt-t ddd o i ddDDO?
+~
+> act_prog p J the bartender leaves south.~
+'Well, iT'S T-T-T-timE I ssstuMBLe Outt-a hERe muySelf.
+stand
+south
+west
+mpgoto 11288
+mpat 11292 mpecho A common drunk leaves west.
+~
+> time_prog 10~
+mpat 11292 mpecho A common drunk arrives from the east.
+mpgoto 11292
+east
+north
+sit bar
+mumble
+~
+> rand_prog 100~
+sit bar
+~
+|
+#11207
+mistress tsythia~
+Mistress Tsythia~
+The Mistress Tsythia stands here to greet you.
+~
+This is a woman of great beauty.  Because of her health, she almost glows.
+You can barely take your eyes from her, she is hypnotizing.  She smiles at
+you, knowing you are appreciating her beauty.
+~
+1140850691 4194472 0 S
+0 0 0 1000d1+0 0d0+0
+0 0
+112 112 0
+> rand_prog 100~
+sit bar
+~
+|
+#11208
+Strato fanatic~
+Strato~
+Strato the religious fanatic/language teacher sits here in thought.
+~
+~
+1091567619 8 0 C
+18 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+2 2 0 0 5 1 0
+0 0 0 0 0 0 0 0
+> death_prog 100~
+mpecho _lbl Strato says 'Tis a shame for this sin to be committed in the eyes of the gods in a place of worship.  SUrely you realize you will be damned for this deed...'
+mpechoat 0.$n Suddenly the ceiling opens up above you and you find yourself being dragged upwards into the sky...  Then down, far down below the surface.  Indeed the gods have forsaken you now.
+mptransfer 0.$n 6
+mpgoto 11288
+~
+|
+#11209
+Knight Sir Max~
+Sir Max~
+Sir Max, owner of the mansion and Knight of New Hope, stands here before you.
+~
+~
+16778305 0 500 C
+50 0 0 20000d1+0 0d0+0
+5000 0
+112 112 1
+25 13 13 13 25 13 25
+0 0 0 0 0
+0 3 0 0 1 1 0
+85 65 0 0 0 0 1008 524291
+#11220
+librarian~
+the librarian~
+The librarian is sitting in a chair at her desk, reading a book.
+~
+~
+1090519043 0 1000 C
+20 0 0 0d0+0 0d0+0
+0 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 1058816 0 0 3
+#11288
+keeper~
+the keeper~
+The Keeper of MOBILE RESERVE (room 11288)
+~
+~
+1073743873 0 0 C
+50 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+90 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+> rand_prog 100~
+get corpse
+~
+> act_prog p death cry.~
+get corpse
+~
+> act_prog Firebandt's~
+get corpse
+~
+|
+#11300
+General Leo the Puff Slayer~
+General Leo~
+General Leo "The Puff Slayer" stands here dutifully.
+~
+He's clad in the finest of armours from head to toe, and dons a red cape
+across his back which hovers just above the ground as he moves about the
+area while performing his tasks.  He is the closest thing of a mortal
+who's strength can match a god's, and for this he's recognized as a friend
+by them.  Obviously someone you don't want to pick a fight with.
+~
+16779265 0 0 C
+54 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+25 25 25 25 25 25 25
+0 0 0 0 0
+90 8 0 0 65536 65536 0
+85 65 1790 0 1056768 0 24908016 1581055
+#0
+
+
+#OBJECTS
+#11202
+mug of black ale~
+a mug of black ale~
+A mug of black ale is sitting here, water condensating on it from the room temperature.~
+~
+17 0 1
+4 4 4 0
+4 3 10
+#11203
+large pitcher of black ale~
+a large pitcher of black ale~
+A larger pitcher of black demon ale sits here foaming at the top.~
+~
+17 0 1
+10 10 4 0
+10 7 20
+#11204
+a can of beer~
+a can of beer~
+A can of beer has been left here, warming up to that really disgusting point.~
+~
+17 0 1
+2 2 1 0
+1 1 2
+#11205
+shotglass of whiskey~
+a shotglass of whiskey~
+A shotglass with the label "Blacktooth Grin" has been left here.~
+~
+17 0 1
+1 1 5 0
+1 1 0
+#11206
+a cup of red liquid~
+a cup of red liquid~
+A cup of some sort of red liquid has been placed here, it smells funny.~
+~
+17 0 1
+15 15 7 0
+1 12 7
+#11207
+a bottle of whiskey~
+a bottle of whiskey~
+Somone obviously is a heavy drinker, they bought the whole damn bottle of whiskey!~
+~
+17 0 1
+12 12 5 0
+10 13 35
+#11208
+Montana belt~
+a brown leather belt with a large Montana Rodeo belt buckle.~
+A brown leather belt with a large Montana Rodeo belt buckle.~
+~
+9 0 2049
+0 0 0 0
+1 0 0
+#11209
+bottle of wine~
+a bottle of wine~
+A bottle of wine has been dropped here.~
+~
+17 0 1
+10 10 2 0
+1 9 20
+#11210
+bottle of fine wine~
+a bottle of finer wine~
+Someone has left a bottle of finer wine here for some reason.~
+~
+17 0 1
+10 10 2 0
+1 20 50
+#11211
+cup of coffee~
+a cup of coffee~
+A cup of coffee is sitting here cooling off.~
+~
+17 0 1
+3 3 12 0
+1 3 3
+#11212
+goblet blood~
+a goblet of blood~
+A goblet of blood is sitting here.~
+~
+17 0 1
+5 5 13 0
+2 5 0
+#11220
+librarian desk~
+the librarian desk~
+The librarian desk is next to the entrance.~
+~
+12 0 0
+0 0 0 0
+1 0 0
+#11221
+bookshelf shelf~
+a bookshelf~
+A bookshelf is filled with books of many sizes and color binding.~
+~
+15 0 0
+200 0 0 0
+1 0 0
+#11222
+items chest~
+an items chest~
+An items chest is sitting here collecting dust.~
+~
+15 1073741824 1
+100 13 0 12
+30 0 0
+#11230
+garlac book alchemy midas touch~
+a book by Garlac the Alchemist on the art of alchemy~
+A book on the midas touch spell by Garlac the Alchemist is here.~
+~
+34 0 1
+0 0 0 0
+1 0 0
+E
+'garlac' 'book' 'alchemy' 'midas' 'touch'~
+"You find a particularly interesting section in the book..."
+ 
+...the midas touch spell as being arguably the greatest trick
+an alchemist has.  My own findings on the spell find it to be
+an often unreliable spell, as the item must have some sort of
+real value to succeed, which can reduce the overall use of this
+spell to not much importance at all, but merely a parlor trick
+or a way to get rid of found equipment quickly and efficiently.
+ 
+After quite a many of extensive testing with this spell, I
+believe I have proven that not only the object is required to
+have a real value, but the gold amount that any given item
+is turned to is exactly half of that initial value...
+ 
+"hmm....fascinating......"
+~
+#11231
+catalog magical items merlin~
+a catalog to magical items by Merlin~
+A catalog to items in Merlin's shop is here.~
+~
+34 0 1
+0 0 0 0
+1 0 0
+E
+'catalog' 'magical' 'items' 'merlin'~
+"This isn't very interesting reading, just a catalog of the
+shopkeeper Merlin's inventory mostly, though the pictures are
+kind of nice."
+ 
+Item A249: Titan Wand
+           This splendid wand creates an earthquake at the using magician's
+           own will.  These tremors will result in damage to _everyone_ at
+           the same location as the user.  Merlin will not be held reliable
+           for improper use of any of his goods, especially this one.
+ 
+"Nothing more but other items are listed as well..."
+~
+#11232
+academy book~
+a book entitled "You're Out of the Academy, Now What?"~
+A book to help people fresh from the academy is here.~
+~
+34 0 1
+0 0 0 0
+1 0 0
+E
+'academy' 'book'~
+So you've made your way out of the academy, and are probably
+wondering what to do now.  Well, the first thing to do was head
+to the library, which you've obviously done.  While you're there,
+you'll want to absorb all the literature you can stand, and put
+together some sort of information database in your head, because
+the most trivial-seeming thing found in a book may prove handy
+some day.
+ 
+Most newbies are eager to just level and nothing more, which is fine.
+If this fits you, then put this book back and head to the west side of
+town where you'll find the town well.  Go down that and you'll enter
+into the sewers where you can further fight to gain in experience.
+ 
+If you can spare a bit more time, you might want to choose a god
+to devote yourself to (see help deity), set your title, and
+take a look around town to get a good idea where things are located.
+
+You'll probably need some better equipment, so try going east just
+once from Town Square Central (TSC) and you'll find a chain of
+three stores, armor, weapons, and jewelry.
+
+If you're needy, then try the donation room in the church also
+east of here.  Sometimes people may leave things there for people
+like you, and hopefully someday you will too.
+
+You can buy water flasks and torches at the general store near the
+southwestern corner of town, in the gardens.
+corner of town, in the gardens.
+Food can be purchased just a few rooms east of this library at
+the bakery.
+~
+#11233
+pamphlet stores~
+a pamphlet on stores~
+A small pamphlet about stores is here.~
+~
+34 0 1
+0 0 0 0
+1 0 0
+E
+'pamphlet' 'stores' 'store'~
+This is a short pamphlet on information on stores in the world of
+Amethyst.
+ 
+Stores naturally are places anywhere in the world where one may
+purchase things with value.  This includes the shops you would
+find in a city like New Hope, and the trading post in the woods.
+ 
+Some notes on shops:
+ *Some items have no value, since not everything you find or have
+  has any cost, and therefor is worth nothing except in auction
+  or if you find someone to buy it directly from you.
+ *Rarely do shops buy things back from people.  The weapondealer,
+  Thorne doesn't need nor want your junk, he has his own
+  inventory.  Some businesses like the pawn shop however specialize
+  in second-hand merchandise, and would be glad to pay you for it.
+ *_NEVER_ attack a shopkeeper.  They are too important to the world
+  to just die at the hands of some irate robber like yourself, and
+  it is almost a gurantee that they have been attempted to be robbed
+  before and know how to deal with you in a quick and probably
+  painful manner.
+ *It's often best to shop around before buying something if you're
+  hard on cash.  Stores in different locations can have different
+  price rates, some shopkeepers are able to inflate prices because
+  of their in-town location, while a store out aways from town
+  may sell something similar or exactly the same for a cheaper price.
+ *Stores have closing and opening times, because no one wants to
+  work 24 hours a day.  In most shops there will be a sign that
+  tells these exact times so that you will know when to come back
+  if you've happened along at a post-hours time.
+ *Please note that prices in all stores are based upon your level,
+  higher level means a slight increase in the price.  This is to
+  insure that the economy is kept stable.
+ *Also know that most shops that buy things from people only have
+  as much money as they make, if no one buys from the store
+  then that store will have no money to buy things.
+~
+#11293
+medallion of l0kI~
+the medallion of l0kI~
+A shiny sits here, looking at it sends echoes from the past through your mind.~
+~
+41 524289 5
+0 0 0 0
+1 0 0
+E
+'medallion' 'medal' 'l0ki' 'loki'~
+Many miniature carvings of runes are printed across the otherwise flawless
+surface of the medallion.  It has a dim glow to it, and increase as you bring
+it nearer to yourself.  It seems to speak, echoing images through your mind
+and ears with a hundred voices at once in unison of a hundred types.
+~
+A
+37 100
+A
+12 10
+A
+14 50
+A
+13 10
+A
+31 2
+> wear_prog 100~
+mpechoat $n The ancient godly runes on the medallion begin to shimmer and glow.
+~
+> exa_prog 100~
+mpechoat $n _red The medallion's runes radiate from within, and then fade.
+mpechoaround $n _red The medallion of l0kI begins to glow, then fades again.
+~
+|
+#11294
+l0kI throne~
+the throne~
+You see the throne of l0kI.~
+~
+12 -2146959103 0
+0 0 16 0
+1 0 0
+#11295
+barstool~
+one of the barstools~
+A row of barstools are positioned side by side at the bar.~
+~
+12 0 0
+0 0 16 0
+1 0 0
+#11296
+A warrior's sleeves~
+a pair of forged sleeves~
+A pair of warrior's sleeves lay here where they should not be.~
+~
+9 0 256
+0 0 0 0
+1 0 0
+#11297
+A warrior's boots~
+a pair of worn boots~
+A pair of warrior's boots lay here where they should not be.~
+~
+9 0 64
+0 0 0 0
+1 0 0
+#11298
+metal leggings~
+some metal leggings~
+Some warrior's leggings lay here where they should not be.~
+~
+9 0 32
+0 0 0 0
+1 0 0
+#11299
+A warrior's armour~
+a warrior's standard plate armour~
+A warrior's armour lays here where it should not be.~
+~
+9 0 8
+0 0 0 0
+1 0 0
+#11300
+A warrior's sword~
+a warrior's sword~
+A warrior's sword lays here where it should not be.~
+~
+5 0 8192
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#11213
+Church of New Hope~
+You stand on the eastern side of a large, one-room church.  Being the only
+church both in town and for miles around, many people come here to pray and
+serve.  There are two rows of aisles of benches going down the room from back
+here to the front.  Looking throughout the church from the inside, it's pretty
+worn down, the benches and walls are in need of repair in many places.  You
+wonder how anyone could let a church of all places slip into such a state...
+You notice a sign on the wall...
+~
+0 1077191820 0 2
+D0
+~
+~
+0 -1 11214
+D2
+~
+door~
+262145 -1 12497
+D3
+~
+~
+0 -1 11218
+E
+sign~
+Church of New Hope
+The gods prevent all magic from taking place here, which includes potions and
+the likes of as well.
+We cannot prevent violence however, and place it upon each and every person's
+head to not commit such deeds here in a place of worship.
+~
+S
+#11214
+Church of New Hope~
+You look around at the giant frames of stained glass high upon the eastern and
+far weastern walls of the church.  They are composed of many pieces of colored
+glass, and even at night this room is lit up with pigments of many sorts.  They
+depict some artist's best ability to depict such scenes as the creation of
+the world and law in the form of gifts of tools and fire.  Just to the ahead to
+the north is the higher alter.
+~
+0 1077191820 0 0
+D0
+~
+~
+0 -1 11215
+D2
+~
+~
+0 -1 11213
+D3
+~
+~
+0 -1 11217
+S
+#11215
+Church of New Hope, before the alter~
+You stand here just before the sermon alter.  In fear of being disrespectful
+you decide against going any further and doing anything that could get you
+damned for eternity.  Off to the side a small family of a mother and her two
+children clothed in rags and kneel in prayer to their god.  Between things like
+this and the state of condition of this church lies the testamony towards the
+King and his ruling.
+~
+0 1077191820 0 0
+D0
+~
+~
+0 -1 11222
+D2
+~
+~
+0 -1 11214
+D3
+~
+~
+0 -1 11216
+S
+#11216
+Church of New Hope, donation~
+You are at a small area set of to the side from the alter for donations.  It is
+basically just a pile of objects of many variety, set here by the ones who can
+afford to leave it for those just starting out or less fortunate then themself.
+So if you can spare something leave it, if you are needy take only what you
+need and not what you want, the gods don't take greed well.
+~
+0 1076913292 0 0
+D1
+~
+~
+0 -1 11215
+S
+#11217
+Church of New Hope~
+You are standing off to the western side of the large church.  Right here is
+a small booth, only blocked off from the rest of the church by an old raggy
+curtain.  From the top hangs a sign reading "Confess".  Obviously this is the
+confession booth, where one goes in attempt to clean themself of their sins
+for forgiveness from the priest and/or gods.  It is small and looks to only be
+able to hold one person at a time, so if occupied you will have to wait your
+turn or look somewhere else for absolution.
+~
+0 1077191820 0 0
+D1
+~
+~
+0 -1 11214
+D10
+~
+curtain~
+526337 -1 11219
+S
+#11218
+Church of New Hope~
+You are off to the western side of the church.  Here a religious fanatic sits
+all the time in deep thought, but also devotes it's time to teaching those who
+come to learn the many languages it has aquired over time for use in it's
+prayer.  To the north is a small booth with only a curtain seperating it from
+the rest of the church with a sign on it.
+~
+0 1077190796 0 0
+D1
+~
+~
+0 -1 11213
+D10
+~
+curtain~
+526337 -1 11219
+E
+sign~
+Confession booth:
+Please enter through other side north, thank you.
+~
+S
+#11219
+In the confession booth~
+You are standing in the dark confession booth, in case you didn't know.  It
+is somewhat lit by a small candle fixed into the wall above you.  It's very
+cramped and stuffy in here, so let's try to hurry up and give someone else a
+turn.  To the west is a window, sort of.  It's covered by a wooden panel, and
+you can't see through it because of the dim light, though you're sure that
+somone on the other side can see you.  Confess now or forever hold your peace.
+~
+0 1077322892 0 0
+D10
+~
+curtain~
+526337 -1 11218
+S
+#11220
+Priest's box~
+Welcome to the priest's box.  Please make your holy self right at home.
+To the north is the window to see into the confession booth, and you may listen
+in on whatever they have to say, and report it to an imm if you are not your-
+self one.  If so, then reward good and bad as it may desever, if not sure
+then report it to a higher immortal when they are available.
+~
+0 1073741832 0 0
+D0
+~
+~
+100663296 -1 11219
+D10
+~
+box~
+788480 -1 11221
+S
+#11221
+Behind the alter~
+You feel you have the right to go behind the alter and get access to the upper
+floor of the church, or the Paladin's guild as it is known.  Way off to the
+northeastern corner of the church is the ladder which ascends up to the second
+floor.  That or you can go south to get off the alter area.  There is also a
+door on the north side of the room, but it doesn't seem to open...
+~
+0 1077191820 0 0
+D10
+~
+box~
+526336 -1 11220
+S
+#11222
+Stepping up the alter~
+You are stepping up the alter now.  As you move time seems to slow to an almost
+halt, and a bright light from a large framed glass window above you shines a
+bright light directly into your eyes and the word "judgement" echoes through
+your ears.
+~
+0 1613767820 0 0
+D0
+~
+~
+2048 -1 11221
+D2
+~
+~
+2048 -1 11215
+> entry_prog 100~
+if isimmort($n)
+or class($n) == Paladin
+mpechoat $n _lbl The Gods find you worthy of entrance, proceed gifted one.
+mptrans 0.$n 11221
+mpat $n mpechoaround $n A bright light beams through and $n appears.
+else
+mpechoat $n _lbl You may not trespass upon this alter.
+mptrans 0.$n 11215
+mpat $n mpechoaround $n $n arrives from the north.
+endif
+mpat $n mpforce 0.$n look
+~
+|
+S
+#11225
+New Hope, a path to the inn~
+Here before you stands a tall building apparently four stories tall.
+It is the New Hope Inn, meeting place of town's peoples to gather, chat,
+and drink 'til the cows come home.  Stories can be heard here of the outside
+wilderness and such, a useful source of information and a good place for a
+beginner to hang around in to gain some true wisdom of the outside world
+There is a single somewhat worn door here to enter through to the inside.
+~
+0 1073741824 1 0
+D3
+~
+~
+0 -1 11292
+S
+#11271
+New Hope Public Library~
+~
+0 1074003976 0 100
+D0
+~
+~
+0 -1 11274
+S
+#11272
+New Hope Library: New Hope Urban Development~
+~
+0 1074003976 0 100
+D3
+~
+~
+0 -1 11274
+S
+#11273
+New Hope Library: History of the World~
+The books in this section are much larger and heavier then
+most of the other books in the library, these are all books
+recording history of not only New Hope but all other lands
+known to people.
+&gPlease return all books to where you got them from when
+you're done with them.
+~
+0 1074003976 0 100
+D1
+~
+~
+0 -1 11274
+S
+#11274
+New Hope Public Library~
+On the north side of the room is the stairwell leading down to
+the first floor of the library.  Here on the second floor you
+will find yet more book sections with more topics of interest
+to add to your knowledge.
+~
+0 1074003976 0 100
+D1
+~
+~
+0 -1 11272
+D2
+~
+~
+0 -1 11271
+D3
+~
+~
+0 -1 11273
+D5
+~
+stairwell~
+524288 -1 11277
+S
+#11275
+New Hope Library: Known Monsters~
+The books on these shelves are written records on several
+monsters known throughout the lands.  They cover weaknesses,
+tactics, statistics, and any miscellaneous information about
+the particular creature the author would have felt necessary
+to tell others about.
+&gPlease return all books to where you got them from when
+you're done with them.
+~
+0 1074003976 0 100
+D3
+~
+~
+0 -1 11277
+S
+#11276
+New Hope Library: Books on War~
+Book shelves line the north and western walls, books of
+a range of sizes and colors put in some kind of order by
+the librarian.  These books are written about war, which
+includes stuff about weapons, famous battles, fighting
+techniques, among other things.
+&gPlease return all books to where you got them from when
+you're done with them.
+~
+0 1074003976 0 100
+D1
+~
+~
+0 -1 11277
+S
+#11277
+New Hope Public Library~
+No bookshelves are in this part of the room, only a single
+staircase leading upwards to the second floor of the library.
+~
+0 1074003976 0 100
+D1
+~
+~
+0 -1 11275
+D2
+~
+~
+0 -1 11280
+D3
+~
+~
+0 -1 11276
+D4
+~
+staircase~
+524288 -1 11274
+S
+#11278
+New Hope Library: Books on Magic~
+The books on the shelves here are all on the subject matter
+of magic, which covers magical items, skills, powers, and
+enchantments.
+The books here even seem to have a magical aura of their own...
+&gPlease return all books to where you got them from when
+you're done with them.
+~
+0 1074003976 0 100
+D3
+~
+~
+0 -1 11280
+S
+#11279
+New Hope Library: Books for Newbies~
+This is the section of books and magazines oriented for
+both the younger people of New Hope, and any visitors to
+the city from out of town.
+&gPlease return all books to where you got them from when
+you're done with them.
+~
+0 1074003976 0 100
+D1
+~
+~
+0 -1 11280
+S
+#11280
+New Hope Public Library~
+You are in the first floor of the library.  To the every
+direction around you are shelves of books filling up the
+majority of space in the building.  To the west side of
+the entrance door is the librarian's desk, and on the
+north center side of the room you spot a staircase
+leading up to the second floor.
+~
+0 1074003976 0 100
+D0
+~
+~
+0 -1 11277
+D1
+~
+~
+0 -1 11278
+D2
+~
+door~
+1 -1 12433
+D3
+~
+~
+0 -1 11279
+S
+#11287
+MOBILE DROP-OFF ROOM~
+~
+0 1076895756 0 0
+S
+#11288
+MOBILE RESERVE~
+~
+0 1076895756 1 0
+> death_prog 100~
+mpat 11288 mpforce keeper get corpse
+~
+|
+S
+#11289
+The tunnel~
+~
+0 1073741828 1 0
+S
+#11290
+New Hope Inn, the center of the room~
+Well, you find yourself in the middle of the room.  Certain eyes are turned
+to you in an odd sort of way, perhaps you should make up your mind and move
+to a spot.  To the southwest you see the exit out, which sounds really good
+now as opposed to embarrassment.  To the northwest is some tables and to the
+southeast as well, but to the southeast is a staircase going up and northwest
+a door behind a group of some mean looking people.  To the northeast is the
+most popular part of the inn, the bar.
+~
+0 1073741832 0 0
+D6
+~
+~
+0 -1 11294
+D7
+~
+~
+0 -1 11293
+D8
+~
+~
+0 -1 11295
+D9
+~
+~
+0 -1 11292
+S
+#11291
+New Hope Inn~
+You enter in to the inn.  Immediatly your nose picks up the semi-wonderful
+scents of foods cooking and drinks being served.  This first floor you now
+stand in is basically one large room, composed of four parts.  Right now you
+stand at the door way, and can see to the northeast the bar which is at a slant
+blocking off that corner of the room, and there are tables and seats spread out
+to the north and east.  Also to the far east is a staircase which comes right
+back this way on it's path ascending into the second floor.
+~
+0 1073742856 0 0
+D0
+~
+~
+0 -1 11293
+D1
+~
+~
+0 -1 11295
+D3
+~
+~
+0 -1 12469
+D6
+~
+~
+0 -1 11290
+S
+#11292
+New Hope Inn~
+You can smell the food and drink at the bar even across the room here.
+From here you see tables to the north and the east sides of the room,
+and the bar off to the northeastern side, fixed from the north wall to the
+eastern at a slant, occupying the corner for the bartender.  Off to the east
+is the staircase leading upstairs, and right in front of you on the western
+wall is the door out.
+~
+0 1073741832 0 0
+D0
+~
+~
+0 -1 11293
+D1
+~
+~
+0 -1 11225
+D3
+~
+~
+0 -1 12469
+D6
+~
+~
+0 -1 11290
+S
+#11293
+New Hope Inn~
+Amongst you here are a handfull of tables with corresponding seats circling
+each.  In the very northwestern corner is a very discrete table, where an
+elitist-looking group of hard core warriors, probably on break from their
+duties at the nearby Barracks sit.  Behind them is a door, which they seem to
+be guarding for the most part.  Off to the east of you is the bar, to the south
+the exit, and along the southeastern side are more tables and the staircase
+leading upstairs.
+~
+0 1073741832 0 3
+D1
+~
+~
+0 -1 11294
+D2
+~
+~
+0 -1 11292
+D8
+~
+~
+0 -1 11290
+E
+door~
+You very carefully take a peek at the door behind the group of warriors.
+It's on the north wall, blocked off for the most part between the table and the
+warriors sitting at it, most of all the one on the right, the mean looking one.
+~
+> entry_prog 50~
+if class($n) == Warrior
+mpechoat $n You are overcome with a loud ruckus coming from a single table off
+mpechoat $n in the northwestern corner of the room.
+else
+mpechoat $n There is a group of warriors speaking loudly in the northwestern
+mpechoat $n corner of the room, though you can't understand the language.
+endif
+~
+> act_prog p A mean looking warrior sits down on the ground.~
+mpforce skinny sit
+mpforce fat sit
+~
+|
+S
+#11294
+New Hope Inn, at the bar~
+You are now standing at the bar, so pull up a seat and order yourself a drink,
+much like the others sitting at the bar are doing.  They are chatting amongst
+themselves in a rather loud and unruly manner, or rather lack of manners.
+Across the room to the southwest you see the exit, and tables and chairs to sit
+at to the west, and the south which also contains the staircase leading up.
+~
+0 1073741832 0 0
+D2
+~
+~
+0 -1 11295
+D3
+~
+~
+0 -1 11293
+D9
+~
+~
+0 -1 11290
+E
+'bar' 'counter' 'barcounter'~
+You look at the simple bar counter.  It is positioned at a diagonal from the
+north wall to the east wall of the inn.
+~
+> entry_prog 100~
+if ispc($n)
+if mobinroom(11201) > 0
+mpforce jj tell 0.$n Well howdy there $n, I've been expecting you around.
+mpforce jj tell 0.$n Why don't you go ahead and sit down and order a drink?
+else
+if mobinroom(11202) > 0
+mpforce jx tell 0.$n Sorry, but if you're looking to buy drinks I'm on break.
+endif
+endif
+endif
+~
+> act_prog J the bartender stretches luxuriously.  Makes you want to, doesn't it?~
+if time($i) == 17
+mptransfer jj 11288
+mpat 11288 mptransfer jx 11294
+mpforce jx sit bar
+endif
+~
+> act_prog J the bartender rises up.~
+if time($i) == 18
+mptransfer jx 11288
+mpat 11288 mptransfer jj 11294
+endif
+~
+|
+S
+#11295
+New Hope Inn~
+You are in the southeastern corner of the room, among more tables and chairs
+like that of on the opposite side to the northwest.  Just to to the north is
+the bar, where the bartender is constantly pouring and serving up his specialty
+beverages and foods to the wanting customers.  To the west is the exit back out
+to the town streets.  Running across the southern wall from the east to the
+west near that exit is the staircase leading upstairs to the second floor of
+this Inn.
+~
+0 1073741832 0 1
+D0
+~
+~
+0 -1 11294
+D4
+~
+staircase~
+524288 -1 11296
+D7
+~
+~
+0 -1 11290
+S
+#11296
+New Hope Inn~
+You stand on the second floor of the inn in a small hallway going from here to
+the east, with two doors one to the north and another down the hall, each to
+their own seperate room.  In the southwestern corner is the top of the stair-
+case which leads to the east and down to the east side of the first floor.
+~
+0 1073741836 0 0
+D0
+~
+door~
+9044992 -1 11297
+D1
+~
+~
+0 -1 11299
+D5
+~
+staircase~
+524288 -1 11295
+S
+#11297
+New Hope Inn~
+You're standing in a small room in the inn.  A dust-covered bed with a dimly
+lit lantern hanging from it rest in the center of the room.  There is a wooden
+chair sitting in the corner collecting dust.  Perhaps you could get some rest.
+The only exit is to the south.
+~
+0 1073741836 0 0
+D2
+~
+door~
+9176065 -1 11296
+S
+#11298
+New Hope Inn~
+You're standing in a small room on the second floor of the inn.  There is
+a worn-down bed and a dimly lit lantern in the center of the room and a 
+broken-down wooden chair in the corner.  Perhaps you could get some rest
+here.  The only exit is to the south.
+~
+0 1073741836 0 0
+D2
+~
+door~
+9176065 -1 11299
+S
+#11299
+New Hope Inn~
+You're standing in a hallway on the second floor of the inn.  It's a very
+simple room, with two doors, one right in front of you on the northern wall
+and one to the west on that northern wall too, each leading to the inn rooms.
+~
+0 1073741836 0 0
+D0
+~
+door~
+9044992 -1 11298
+D3
+~
+~
+0 -1 11296
+S
+#0
+
+
+#RESETS
+M 0 11204 1 11293
+E 1 11296 1 10
+E 1 11297 1 8
+E 1 11298 1 7
+E 1 11299 1 5
+E 1 11300 1 13
+M 0 11203 1 11293
+E 1 11296 1 10
+E 1 11297 1 8
+E 1 11298 1 7
+E 1 11299 1 5
+E 1 11300 1 13
+M 0 11202 1 11293
+E 1 11296 1 10
+E 1 11297 1 8
+E 1 11298 1 7
+E 1 11299 1 5
+E 1 11300 1 13
+M 0 11201 1 11294
+G 1 11210 1
+G 1 11209 1
+G 1 11212 1
+G 1 11211 1
+G 1 11202 11201
+G 1 11203 11201
+G 1 11204 11201
+G 1 11205 11201
+G 1 11206 11201
+G 1 11207 11201
+E 1 11208 1 13
+M 0 11205 1 11288
+G 1 11202 1
+G 1 11203 1
+G 1 11204 1
+G 1 11205 1
+G 1 11206 1
+G 1 11207 1
+E 1 11208 1 13
+G 1 11209 11201
+G 1 11210 11201
+G 1 11211 11201
+O 0 11295 1 11294
+M 0 11207 1 11294
+M 0 11206 1 11294
+M 0 12410 1 11288
+E 1 12497 1 12
+E 1 3135 1 16
+G 1 12425 1
+G 1 12424 1
+G 1 12423 1
+G 1 12422 1
+G 1 12421 1
+G 1 12420 1
+O 0 9 1 11300
+M 0 11208 1 11218
+E 1 12213 1 20
+E 1 2859 1 5
+M 0 11288 1 11288
+O 1 11221 1 11276
+O 1 11221 1 11275
+O 1 11221 1 11273
+O 1 11221 1 11272
+M 1 11220 1 11280
+O 1 11220 1 11280
+D 0 11280 2 0
+O 1 11221 1 11278
+P 0 11230 1 0
+P 1 11231 1 0
+O 0 13311 1 11216
+O 0 13312 1 11216
+P 0 12444 1 0
+P 1 11232 1 0
+O 1 11221 1 11279
+S
+
+
+#SHOPS
+ 11201    0  0  0  0  0    96  90        10  1    ; J the bartender
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

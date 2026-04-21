@@ -1,0 +1,75 @@
+act_comm.o: act_comm.c mud.h global.h chess.h tables.h gsn.h
+act_info.o: act_info.c mud.h global.h chess.h tables.h
+act_move.o: act_move.c mud.h global.h chess.h tables.h gsn.h
+act_obj.o: act_obj.c mud.h global.h chess.h tables.h bet.h gsn.h
+act_wiz.o: act_wiz.c mud.h global.h chess.h tables.h gsn.h
+ansi.o: ansi.c ansi.h mud.h global.h chess.h tables.h
+boards.o: boards.c mud.h global.h chess.h tables.h imc-mercbase.h \
+ imc-mercdefs.h
+build.o: build.c mud.h global.h chess.h tables.h
+chess.o: chess.c mud.h global.h chess.h tables.h imc.h imc-config.h \
+ imc-mercbase.h imc-mercdefs.h
+clans.o: clans.c mud.h global.h chess.h tables.h
+comm.o: comm.c mud.h global.h chess.h tables.h imc.h imc-config.h \
+ icec.h ice.h
+comments.o: comments.c mud.h global.h chess.h tables.h
+commodity.o: commodity.c mud.h global.h chess.h tables.h
+const.o: const.c mud.h global.h chess.h tables.h
+currency.o: currency.c mud.h global.h chess.h tables.h
+db.o: db.c mud.h global.h chess.h tables.h gsn.h
+deity.o: deity.c mud.h global.h chess.h tables.h gsn.h
+fight.o: fight.c mud.h global.h chess.h tables.h gsn.h
+grub.o: grub.c mud.h global.h chess.h tables.h
+handler.o: handler.c mud.h global.h chess.h tables.h gsn.h
+hashstr.o: hashstr.c
+ibuild.o: ibuild.c
+id.o: id.c mud.h global.h chess.h tables.h
+idale.o: idale.c mud.h global.h chess.h tables.h
+ienvy.o: ienvy.c mud.h global.h chess.h tables.h
+iimp.o: iimp.c mud.h global.h chess.h tables.h
+interp.o: interp.c mud.h global.h chess.h tables.h icec-mercbase.h \
+ icec.h ice.h imc-mercdefs.h
+intro.o: intro.c mud.h global.h chess.h tables.h
+ismaug.o: ismaug.c mud.h global.h chess.h tables.h
+magic.o: magic.c mud.h global.h chess.h tables.h poly.h gsn.h
+makeobjs.o: makeobjs.c mud.h global.h chess.h tables.h
+map.o: map.c mud.h global.h chess.h tables.h
+mapout.o: mapout.c mud.h global.h chess.h tables.h
+misc.o: misc.c mud.h global.h chess.h tables.h gsn.h
+mpxset.o: mpxset.c mud.h global.h chess.h tables.h
+mspecial.o: mspecial.c mud.h global.h chess.h tables.h gsn.h \
+ mspecial.h
+mud_comm.o: mud_comm.c mud.h global.h chess.h tables.h gsn.h
+mud_prog.o: mud_prog.c mud.h global.h chess.h tables.h
+multclas.o: multclas.c mud.h global.h chess.h tables.h
+ospecial.o: ospecial.c mud.h global.h chess.h tables.h ospecial.h
+player.o: player.c mud.h global.h chess.h tables.h
+property.o: property.c mud.h global.h chess.h tables.h
+requests.o: requests.c mud.h global.h chess.h tables.h
+reset.o: reset.c mud.h global.h chess.h tables.h
+river.o: river.c mud.h global.h chess.h tables.h
+rspecial.o: rspecial.c mud.h global.h chess.h tables.h rspecial.h
+save.o: save.c mud.h global.h chess.h tables.h gsn.h
+shops.o: shops.c mud.h global.h chess.h tables.h
+skills.o: skills.c mud.h global.h chess.h tables.h gsn.h
+smalloc.o: smalloc.c
+sql.o: sql.c
+tables.o: tables.c mud.h global.h chess.h tables.h imc-mercbase.h \
+ imc-mercdefs.h icec-mercbase.h icec.h ice.h
+track.o: track.c mud.h global.h chess.h tables.h gsn.h
+update.o: update.c mud.h global.h chess.h tables.h gsn.h
+icec-mercbase.o: icec-mercbase.c imc.h imc-config.h global.h \
+ imc-mercbase.h imc-mercdefs.h mud.h chess.h tables.h icec.h ice.h \
+ icec-mercbase.h
+imc-mercbase.o: imc-mercbase.c imc.h imc-config.h global.h icec.h \
+ ice.h imc-mercdefs.h mud.h chess.h tables.h imc-mercbase.h \
+ icec-mercbase.h
+imc.o: imc.c imc.h imc-config.h global.h
+imc-config.o: imc-config.c imc.h imc-config.h global.h
+imc-events.o: imc-events.c imc.h imc-config.h global.h
+imc-util.o: imc-util.c imc.h imc-config.h global.h
+imc-mail.o: imc-mail.c imc.h imc-config.h global.h
+imc-interp.o: imc-interp.c imc.h imc-config.h global.h
+icec.o: icec.c imc.h imc-config.h global.h icec.h ice.h
+ice.o: ice.c imc.h imc-config.h global.h ice.h
+imc-version.o: imc-version.c imc.h imc-config.h global.h

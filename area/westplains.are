@@ -1,0 +1,1427 @@
+#AREA   The Western Plains~
+
+
+
+#VERSION 200
+#AUTHOR Var~
+
+#RANGES
+2 115 1 115
+$
+
+#RESETMSG A cold wind blows through the land sending shivers down your spine.~
+
+#FLAGS
+0
+
+#ECONOMY 0 48049800
+
+#CLIMATE 1 3 4
+
+#NEIGHBOR Khelorn River Valley~
+
+#NEIGHBOR New Hope~
+
+#NEIGHBOR Graveyard~
+
+#NEIGHBOR New Hope Castle~
+
+#NEIGHBOR City of New Hope~
+
+#NEIGHBOR City of New Hope Sector 2~
+
+#MOBILES
+#11001
+plains skeleton~
+a plains skeleton~
+A plains skeleton walks here, apparently unaware of it's surroundings.
+~
+It walks the plains in an almost undead form, the plains skeleton has been
+derived by the body of a dead person, who unlike the undead is made up of no
+remaining flesh or other means of identifying it's previous life, and has not
+the simple decency of having died and put to rest.  Instead it roams the land
+in a state of consciousness unrecognizing of anything around it, obviuosly
+driven by some higher, aweful source.
+~
+2097249 0 -1000 C
+2 0 0 4d4+50 1d1+1
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+60 8 0 0 8193 8192 0
+0 0 0 0 0 1 1073741824 0
+#11002
+stronger skeleton~
+a plains skeleton~
+A plains skeleton is moving about the area, but this one looks pretty strong.
+~
+:::!/!!!!!:.
+                  .xUHWH!! !!?M88WHX:.
+                .X*#M@$!!  !X!M$$$$$$WWx:.
+               :!!!!!!?H! :!$!$$$$$$$$$$8X:
+              !!/  /:/!! :/!$!#$$$$$$$$$$8X:
+             :!/::!H!<   /.U$X!?R$$$$$$$$MM!
+             /!/!!!!// .:XW$$$U!!?$$$$$$RMM!
+               !:/// .:!M"T#$$$$WX??#MRRMMM!
+               /?WuxiW*`   `"#$$$$8!!!!??!!!
+             :X- M$$$$       `"T#$T/!8$WUXU/
+            :%`  /#$$$m:        /!/ ?$$$$$$
+          :!`.-   /T$$$$8xx.  .xWW- /""##*"
+W$@@M!!! .!// !!     .:XUW$W!/ `"/:    :
+#"//`.:x%`!!  !H:   !WM$$$$Ti.: .!WUn+!`
+:::/:!!`:X/ .: ?H.!u "$$$B$$$!W:U!T$$M/
+Wi./!X$?!-/    : ?$$$B$Wu("**$RM!
+$R@i.// !     :   /$$$$$B$$en:``
+?MXT@Wx./    :     /"##*$$$$M/
+~
+16777281 0 -1000 C
+5 0 0 0d0+0 1d3+1
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+60 8 0 0 8192 8192 0
+0 0 0 0 0 1 1073741824 0
+#11003
+lower undead creature~
+a creature~
+A lower undead creature is shifting from here towards something.
+~
+~
+16777281 0 -1000 C
+5 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+67 8 0 0 8192 8192 0
+3 4 1 0 0 1 0 0
+#11004
+ghoul~
+a ghoul~
+A ghoul wanders the western plains eternally.
+~
+~
+97 0 -1000 C
+4 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+36 8 0 0 8192 8192 0
+0 0 0 0 0 1 33554432 0
+#11099
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#11001
+rock~
+a rock~
+There is a small rock on the ground.~
+~
+56 0 1
+0 0 0 16
+1 0 0
+#11002
+bush~
+bush~
+A tall bush stands here by the side of the road~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+#11003
+bush~
+bush~
+A bush about middle-height is sitting here on the grass.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+#11004
+bush~
+bush~
+A row of bushes are standing here.~
+~
+12 1073741824 0
+0 0 0 0
+1 0 0
+#11050
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#11099
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#11001
+The Western Plains~
+A large plain opens to your west. You have entered The Western Plains. This 
+great land is known for it's great production of cotton and many mysterious
+and obvious dangers. For a second, you are stopped by the massive waves of
+wind that almost knock you off your feet and send chills up your spine. 
+The land is grassy and there is nothing special that you can make out by 
+looking west, except for endless grass.
+The north and south seem to be blocked by piles of rock.
+~
+0 0 2 100
+D1
+~
+~
+0 -1 11024
+D3
+~
+~
+0 -1 11002
+D7
+~
+~
+0 -1 11003
+D9
+~
+~
+0 -1 11013
+S
+#11002
+Grassy Fields~
+As you walk further west in the tall grass you are even more shocked when 
+you see the true size of these seemingly endless fields. You are sure that 
+there is mean things hiding in the grass, but what you have found is mostly 
+ants and moles. Harmless things.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11003
+D1
+~
+~
+0 -1 11001
+D2
+~
+~
+0 -1 11013
+D3
+~
+~
+0 -1 11009
+D7
+~
+~
+0 -1 11008
+D9
+~
+~
+0 -1 11010
+S
+#11003
+Grassy Fields~
+As soon as you walk a short distance north, the fields seem to shrink all the
+sudden. North you can clearly make out a forest and west you see mountains. 
+East you have large piles of rocks that seem unaproachable and south is the 
+only direction that you can see more grass plains.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11004
+D2
+~
+~
+0 -1 11002
+D3
+~
+~
+0 -1 11007
+D7
+~
+~
+0 -1 11007
+D8
+~
+~
+0 -1 11001
+D9
+~
+~
+0 -1 11008
+S
+#11004
+Grassy Fields~
+Yes, now you can see and you are positive that by going further north you will
+enter a forest. South you can see endless and yes definitely endless plains of
+grass. East are the piled rocks and west you see peaks of high mountains. The
+wind is calm here.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11005
+D2
+~
+~
+0 -1 11003
+D3
+~
+~
+0 -1 11007
+D7
+~
+~
+0 -1 11006
+D9
+~
+~
+0 -1 11008
+S
+#11005
+Nearing a forest~
+Straight north is a thick green forest and you can already smell the oak and
+pine wood. In the distance you hear birds and animals. Cold wind blows from 
+the south and you feel slightly chilled for a second. The rocks to your east 
+continue north into the forest and disappear. South and West is the 
+neverending Western Plain.
+~
+0 0 2 101
+D2
+~
+~
+0 -1 11004
+D3
+~
+~
+0 -1 11006
+D9
+~
+~
+0 -1 11007
+S
+#11006
+Nearing a forest~
+Straight north from here you can enter a large green forest. South west and
+east is all grass. No matter how hard you focus your eyes you can't see 
+anything in any direction besides north. You could walk a little, maybe you
+will see something. The plain can't be really endless.
+~
+0 0 2 100
+D1
+~
+~
+0 -1 11005
+D2
+~
+~
+0 -1 11007
+D3
+~
+~
+0 -1 11018
+D8
+~
+~
+0 -1 11004
+D9
+~
+~
+0 -1 11017
+S
+#11007
+Grassy Fields~
+All sudden you stop seeing anything no matter where you look. You are 
+surrounded by endless grass. You get scared. Just a minute ago you thought you
+could see mountains and trees and rocks and New Hope. Now all you see is
+endless grass that at points towers you. Maybe you should keep moving.
+~
+0 0 2 99
+D0
+~
+~
+0 -1 11006
+D1
+~
+~
+0 -1 11004
+D2
+~
+~
+0 -1 11008
+D3
+~
+~
+0 -1 11017
+D6
+~
+~
+0 -1 11005
+D7
+~
+~
+0 -1 11018
+D8
+~
+~
+0 -1 11003
+D9
+~
+~
+0 -1 11025
+S
+#11008
+Grassy Fields~
+North is a forest that can be slightly seen from the point you are at. To your
+west you can see gigantic mountains that seem to reach past the sky. East is
+the town gates of New Hope and south is all grass, neverending grass.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11007
+D1
+~
+~
+0 -1 11003
+D2
+~
+~
+0 -1 11009
+D3
+~
+~
+0 -1 11025
+D6
+~
+~
+0 -1 11004
+D7
+~
+~
+0 -1 11017
+D8
+~
+~
+0 -1 11002
+D9
+~
+~
+0 -1 11014
+S
+#11009
+Grassy Fields~
+You feel as if you were in the center of the great Western Plains. No matter
+how far the grass spreads out you can clearly see impassable mountains to
+your west, New Hope to the east and a forest to the north. South is the only 
+direction in which no matter how hard you try you just can't see anything 
+but endless grass.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11008
+D1
+~
+~
+0 -1 11002
+D2
+~
+~
+0 -1 11010
+D3
+~
+~
+0 -1 11014
+D6
+~
+~
+0 -1 11003
+D7
+~
+~
+0 -1 11025
+D8
+~
+~
+0 -1 11013
+D9
+~
+~
+0 -1 11015
+S
+#11010
+Grassy Fields~
+Here the only thing visible are the mountains to your west. The wind here
+is quite cold and more of it seems to be coming from the south. You wonder 
+why. The plains to the south are as normal and endless as the ones in any
+other direction.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11009
+D1
+~
+~
+0 -1 11013
+D2
+~
+~
+0 -1 11011
+D3
+~
+~
+0 -1 11015
+D6
+~
+~
+0 -1 11002
+D7
+~
+~
+0 -1 11014
+D8
+~
+~
+0 -1 11012
+D9
+~
+~
+0 -1 11016
+S
+#11011
+Grassy Fields~
+There is something strange about this part of the fields. Something that you
+feel but, can't quite put your finger on. The Fields just seem to keep on
+going and going to your south and north. West are mountains, tall rocky 
+mountains. Nothing special, really.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11010
+D1
+~
+~
+0 -1 11012
+D2
+~
+~
+0 -1 11022
+D3
+~
+~
+0 -1 11016
+D6
+~
+~
+0 -1 11013
+D7
+~
+~
+0 -1 11015
+D8
+~
+~
+0 -1 11021
+D9
+~
+~
+0 -1 11023
+S
+#11012
+Grassy Fields~
+The ocean of grass extends and seems to grow to your south. The only thing 
+that helps you navigate is the sky and the large piles of rocks that stand
+still to your east. Other than that, the field spreads out in pretty much
+every direction.
+~
+0 4 2 98
+D0
+~
+~
+0 -1 11013
+D2
+~
+~
+0 -1 11021
+D3
+~
+~
+0 -1 11011
+D7
+~
+~
+0 -1 11010
+D9
+~
+~
+0 -1 11022
+S
+#11013
+Grassy Fields~
+The fields seem to extend further south than west despite the name of this
+land. You can actually make out peeks of mountains to the west. Hmm, so 
+than the fields weren't endless. Some how you always feel strong and steady
+wind coming from the south.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11002
+D2
+~
+~
+0 -1 11012
+D3
+~
+~
+0 -1 11010
+D6
+~
+~
+0 -1 11001
+D7
+~
+~
+0 -1 11009
+D9
+~
+~
+0 -1 11011
+S
+#11014
+Grassy Fields~
+Your progress west is stopped by huge mountains. You are pretty sure you can't
+climb these even if you really wanted to. North you see nothing but grass and
+south you see a small strcture of some sort. Hmm, you have never seen this 
+carved rock before. Strange. East is New Hope.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11025
+D1
+~
+~
+0 -1 11009
+D2
+~
+~
+0 -1 11015
+D6
+~
+~
+0 -1 11008
+D8
+~
+~
+0 -1 11010
+S
+#11015
+Grassy Fields~
+Here the fields end and tall mountains begin. South east and north you can
+only see, endless grass. What lies underneath and within these fields of 
+grass is the kept secret. You might think it's just grass, but there has been
+oh too many that have seen visions Structures and horrid beasts. The field
+is not a maze, but it has secrets of it's own. Somehow now you know that this
+has to be so.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11014
+D1
+~
+~
+0 -1 11010
+D2
+~
+~
+0 -1 11016
+D6
+~
+~
+0 -1 11009
+D8
+~
+~
+0 -1 11011
+S
+#11016
+Grassy Fields~
+You look up at the mountains to the west of you and you are shocked by the
+insane height. Progressing south nor north will lead you nowhere but just
+to more grass. You remember that New Hope is somewhat northeast of here.
+You see a vision of a structure northeast of you.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11015
+D1
+~
+~
+0 -1 11011
+D2
+~
+~
+0 -1 11023
+D6
+~
+~
+0 -1 11010
+D8
+~
+~
+0 -1 11022
+S
+#11017
+Grassy Fields~
+Here the mountains seem shorter than ever, but the wind is actually stronger.
+For some reason the south wind is really cold. You wonder why this is so.
+South you see only endless grass fields and north you can see what appears
+to be a forest. West you can feel another source of wind. New Hope is
+somewhere east.
+You see something that appears to be a crack in the mountains to your west.
+~
+0 0 2 101
+D0
+~
+~
+0 -1 11018
+D1
+~
+~
+0 -1 11007
+D2
+~
+~
+0 -1 11025
+D6
+~
+~
+0 -1 11006
+D8
+~
+~
+0 -1 11008
+D10
+~
+crack~
+526336 -1 11019
+S
+#11018
+Nearing a forest~
+Going any further will lead you into a dark green forest. Away from the open 
+grass fields and into a dark stuffed confusing forest. You hear birds and 
+animals. Near the forest you feel the wind's strength fade and the rays of
+light pass through the branches and create a unique atmosphere.
+~
+0 0 2 99
+D1
+~
+~
+0 -1 11006
+D2
+~
+~
+0 -1 11017
+D6
+~
+~
+0 -1 11114
+D8
+~
+~
+0 -1 11007
+S
+#11019
+Defile in the Short Mountains~
+You are walking in somewhere strange.  It is a narrow underground path within
+the mountains.  It is relatively dark with little light coming in through the
+crack in the rocks, and a cold wind blows constantly from it, making this place
+almost unbarable.  More of it seems to be coming from the west end of the
+defile, and you could go there or go back into the fields through the crack to
+the east, if you can fig up the place you came out of.  It seems to be covered
+with rocks and dirt, so may take some digging.
+~
+0 9 13 0
+D3
+~
+~
+0 -1 11020
+D10
+~
+crack~
+526336 -1 11017
+S
+#11020
+Large Cavern~
+You are passing through the tunnel into a more open cavern area.  You don't
+know what to think at first, but then you take a look around and notice all
+kinds of clues.  Such things as interesting fossils in the walls and strange
+liquid substances all over the place.  This underground place leads deeper
+to the west, and gets narrower toward the exit east.
+~
+0 9 13 0
+D1
+~
+~
+0 -1 11019
+D3
+~
+~
+0 -1 11027
+S
+#11021
+Grassy Fields~
+Here, the fields seem to end, even the piles of rocks to your east end here
+the terrain changes, and yet it's still plain open space covered with grass
+and things crawling through it. You feel slightly lost. Maybe you should turn
+back before it's too late and your totally lost.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11012
+D3
+~
+~
+0 -1 11022
+D7
+~
+~
+0 -1 11011
+S
+#11022
+Grassy Fields~
+Here the fields get even more vast to the south, while to the west you can
+see mountains in the distance. East you see some more plains and north you 
+have ... you guessed it.. more plains. They don't seem to be as large as the
+ones to your south.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11011
+D1
+~
+~
+0 -1 11021
+D2
+~
+~
+0 -1 11026
+D3
+~
+~
+0 -1 11023
+D6
+~
+~
+0 -1 11012
+D7
+~
+~
+0 -1 11016
+S
+#11023
+Grassy Fields~
+South the fields expand vastly and you feel cold wind from that direction.
+Somewhere northeast you see the gates of New Hope and west you have impassable
+mountains. You feel kinda cold as you look up at the mountains and realize
+that you can't see the peaks.
+~
+0 0 2 100
+D0
+~
+~
+0 -1 11016
+D1
+~
+~
+0 -1 11022
+D6
+~
+~
+0 -1 11011
+S
+#11024
+The West Gate~
+You stand in a mean looking wooden gate, about 15-20 feet high. Nothing
+special about it. It seems to be built into the town's stone wall.  The gate
+is made of some of the strongest wood around and you can see scratches and 
+dents that it has suffered in the past while keeping the enemy from just 
+walking in. To the west you see endless grassy plains.
+You can see huge piles of rocks blocking your way north and south.
+~
+0 0 2 109
+D1
+~
+gate~
+655361 -1 12419
+D3
+~
+~
+0 -1 11001
+S
+#11025
+Grassy Fields~
+You see a forest in the distant north and within it you see a large stone 
+shimmering mansion peeking out. You focus your eyes but it disappears. Right
+after, you feel strong cold winds beating against you from the south where the
+only thing you can see is grass. West of you are mountains and east is 
+New Hope as far as you remember.
+~
+0 0 2 101
+D0
+~
+~
+0 -1 11017
+D1
+~
+~
+0 -1 11008
+D2
+~
+~
+0 -1 11014
+D6
+~
+~
+0 -1 11007
+D8
+~
+~
+0 -1 11009
+S
+#11026
+The Western Plains~
+Walking throught the plains, the wind begins to blow stronger, and it whips
+across your face harshly, and eventually begins to be painful.  With your
+eyes squinted you come to a structure of some sort, though you can't make
+out what it is in all of this.  You can feel some steps at your feet leading
+up to an entrance though.
+~
+0 1073741824 2 0
+D0
+~
+~
+0 -1 11022
+S
+#11027
+At the Edge of a Great Abyss~
+~
+0 1073741833 13 0
+D1
+~
+~
+0 -1 11020
+D5
+~
+~
+128 -1 11028
+S
+#11028
+Near the top of the Abyss~
+~
+0 1073741824 1 0
+D4
+~
+~
+128 -1 11027
+D9
+~
+~
+0 -1 11029
+S
+#11029
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11028
+D7
+~
+~
+0 -1 11030
+S
+#11030
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11031
+D8
+~
+~
+0 -1 11029
+S
+#11031
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D8
+~
+~
+0 -1 11032
+D9
+~
+~
+0 -1 11030
+S
+#11032
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D7
+~
+~
+0 -1 11031
+D9
+~
+~
+0 -1 11033
+S
+#11033
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11032
+D7
+~
+~
+0 -1 11034
+S
+#11034
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11035
+D8
+~
+~
+0 -1 11033
+S
+#11035
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D8
+~
+~
+0 -1 11036
+D9
+~
+~
+0 -1 11034
+S
+#11036
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D7
+~
+~
+0 -1 11035
+D9
+~
+~
+0 -1 11037
+S
+#11037
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11036
+D7
+~
+~
+0 -1 11038
+S
+#11038
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11039
+D8
+~
+~
+0 -1 11037
+S
+#11039
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D8
+~
+~
+0 -1 11040
+D9
+~
+~
+0 -1 11038
+S
+#11040
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D7
+~
+~
+0 -1 11039
+D9
+~
+~
+0 -1 11041
+S
+#11041
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11040
+D7
+~
+~
+0 -1 11042
+S
+#11042
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11043
+D8
+~
+~
+0 -1 11041
+S
+#11043
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D8
+~
+~
+0 -1 11044
+D9
+~
+~
+0 -1 11042
+S
+#11044
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D7
+~
+~
+0 -1 11043
+D9
+~
+~
+0 -1 11045
+S
+#11045
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11044
+D7
+~
+~
+0 -1 11046
+S
+#11046
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11047
+D8
+~
+~
+0 -1 11045
+S
+#11047
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D8
+~
+~
+0 -1 11048
+D9
+~
+~
+0 -1 11046
+S
+#11048
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D7
+~
+~
+0 -1 11047
+D9
+~
+~
+0 -1 11049
+S
+#11049
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D6
+~
+~
+0 -1 11048
+D7
+~
+~
+0 -1 11050
+S
+#11050
+Down in the Abyss~
+You are on a narrow pathway which winds downwards into the emptiness
+in a clockwise direction.  In the dark there is only pitch black
+enveloping you, the rock walls of the pit, and the only sound heard,
+the sound of your footsteps as you walk along trying not to trip
+over the edge and fall to your demise.
+There seems to be no bottom.
+~
+0 1073741833 13 0
+D8
+~
+~
+0 -1 11049
+S
+#11099
+Floating in a void~
+~
+0 1073741828 1 0
+S
+#0
+
+
+#RESETS
+O 0 11001 1 11018
+M 0 11001 1 11017
+M 0 11001 3 11010
+M 0 11002 2 11023
+M 0 11002 1 11021
+M 0 11003 1 11008
+M 0 11004 1 11026
+M 1 12446 2 11024
+E 1 12606 1 16
+E 1 12607 1 5
+E 1 12608 1 5
+E 1 12609 1 0
+D 0 11024 1 0
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

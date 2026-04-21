@@ -1,0 +1,24 @@
+&g|&G03/26 &g| &G11001&g|  God:  &GVar's area is now completely and utterly installed.  Curtesy of your neighborhood God }:^)
+&g|&G05/29 &g| &G13321&g|  Kyorlin:  &GStat bug is Squashed!!
+&g|&G05/29 &g| &G14505&g|  Rahl:  &GMuhahahahah..... How dare you enter my keep! NOW YOU SHALL DIE!!!!
+&g|&G05/29 &g| &G14505&g|  Rahl:  &Gsorry bout the message before just checking what it did
+&g|&G06/10 &g| &G10438&g|  Rahl:  &GI have succesfully edited my own vending machine: mpedit vanding edit 5 /g 43 mpgoto 10438
+&g|&G09/10 &g| &G13744&g|  Astier:  &Gchar
+&g|&G11/01 &g| &G    7&g|  XahXhaX:  &Gman, Rahl should have been shot
+&g|&G11/01 &g| &G    7&g|  XahXhaX:  &GFixed sectortype colors (missing ones), fixed atmob
+&g|&G11/03 &g| &G    7&g|  XahXhaX:  &GAdded sectortypes Lava, Swamp, and Beehive w/ colors for all
+&g|&G11/05 &g| &G    7&g|  XahXhaX:  &GAdded mpfear, mphate, and mphunt
+&g|&G11/05 &g| &G    7&g|  XahXhaX:  &GAdded Wyvern class
+&g|&G12/13 &g| &G    7&g|  XahXhaX:  &GFixed the bug where mobs couldn't drop stuff (as a result litterbug doesn't work for right now...oh well)
+&g|&G12/13 &g| &G12631&g|  XahXhaX:  &GMade it so you can reset multiple items to a single wearloc on a single mob
+&g|&G12/18 &g| &G12700&g|  XahXhaX:  &GFixed fountains so that it doesn't always say you drink from a fountain, instead says you're drinking from <short desc>
+&g|&G12/21 &g| &G    7&g|  XahXhaX:  &GGot the objecttypes bug ironed out already.
+&g|&G12/21 &g| &G12464&g|  XahXhaX:  &GMade it so that immortals can list shop items even when the store is normally closed because of shop hours.
+&g|&G12/21 &g| &G    7&g|  XahXhaX:  &GKickass....now drinkcons filled with blood will restore bp
+&g|&G12/23 &g| &G    7&g|  XahXhaX:  &GMobs that are pets can now go through nomob exits.
+&g|&G01/01 &g| &G    7&g|  XahXhaX:  &GCreated rune amulets for channel enabling.
+&g|&G01/01 &g| &G    7&g|  XahXhaX:  &GQuest channel now requires person to have the quest flag set.  It will thus be allowed without a rune object.
+&g|&G01/01 &g| &G    7&g|  XahXhaX:  &Gquest and dnd were r13 and r10 respectively...wonder what else is messed up in PCFLAGS...hrm
+&g|&G01/06 &g| &G    7&g|  XahXhaX:  &Gchanged killing self to echo acts to self and room instead of send_to_char (yeah, big deal, I know...)
+&g|&G01/06 &g| &G    7&g|  XahXhaX:  &Gmade it so exits with secret flags can't be walked through
+&g|&G01/10 &g| &G    7&g|  XahXhaX:  &GSecret exflags will finally work like it should

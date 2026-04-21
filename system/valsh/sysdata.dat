@@ -1,0 +1,68 @@
+#SYSTEM
+Highplayers    36
+Highplayertime Sat Feb 14 12:44:30 1998~
+Denynewplayers 0
+Nameresolving  0
+Waitforauth    0
+Specials       1
+Readallmail    70
+Readmailfree   1
+Writemailfree  1
+Takeothersmail 70
+IMCMailVnum    812
+Muse           74
+Think          61
+Build          68
+Log            65
+Protoflag      70
+Overridepriv   70
+Msetplayer     74
+Stunplrvsplr   65
+Stunregular    15
+Damplrvsplr    100
+Damplrvsmob    100
+Dammobvsplr    100
+Dammobvsmob    100
+Forcepc        72
+Guildoverseer  ~
+Guildadvisor   ~
+Saveflags      2557
+Savefreq       20
+Introdisable   0
+AggroPrcnt     0
+TotalLogins    3572
+LogDef         0 61 System~
+LogDef         1 61 Log~
+LogDef         2 61 RenameMe2~
+LogDef         3 61 OLC~
+LogDef         4 61 RenameMe4~
+LogDef         5 61 Comm~
+LogDef         6 61 LOGPC~
+LogDef         7 61 RenameMe7~
+LogDef         8 61 RenameMe8~
+LogDef         9 61 RenameMe9~
+LogDef         10 61 Monitor~
+LogDef         11 61 Buglog~
+LogDef         12 61 Debug~
+LogDef         13 61 Spells~
+LogDef         14 61 RenameMe14~
+LogDef         15 61 RenameMe15~
+LogDef         16 61 RenameMe16~
+LogDef         17 61 RenameMe17~
+LogDef         18 61 RenameMe18~
+LogDef         19 61 RenameMe19~
+LogDef         20 61 RenameMe20~
+LogDef         21 61 RenameMe21~
+LogDef         22 61 RenameMe22~
+LogDef         23 61 RenameMe23~
+LogDef         24 61 RenameMe24~
+LogDef         25 61 RenameMe25~
+LogDef         26 61 RenameMe26~
+LogDef         27 61 RenameMe27~
+LogDef         28 61 RenameMe28~
+LogDef         29 61 RenameMe29~
+LogDef         30 61 RenameMe30~
+LogDef         31 61 RenameMe31~
+End
+
+#END

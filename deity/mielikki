@@ -1,0 +1,52 @@
+#DEITY
+Filename		../deity/mielikki~
+Name		Mielikki~
+Description	She is the good god, a ranger god, the archenemy of Lloth....
+it is said she will help almost any one who wishes to fight Lloth
+ 
+With fair pure elven skin she looks like the average elven beuty
+long alustrious silver hair rest lightly over her naked nimble body
+hiding what isnt to be seen by others
+being she is intune with natur and the forest she feels clothes are
+not essential and chooses not to wear them....
+~
+Alignment		0
+Worshippers	2
+Flee		0
+Flee_npcrace	0
+Flee_npcfoe	0
+Kill		5
+Kill_npcrace	-20
+Kill_npcfoe	30
+Kill_magic	0
+Sac		15
+Bury_corpse	0
+Aid_spell		0
+Aid		15
+Steal		0
+Backstab		0
+Die		0
+Die_npcrace	0
+Die_npcfoe	0
+Spell_aid		0
+Dig_corpse	0
+Scorpse		250
+Savatar		0
+Sdeityobj		0
+Srecall		0
+Race		0
+Class		0
+Element		0
+Sex		-1
+Affected		4194304
+Npcrace		0
+Npcfoe		36
+Suscept		0
+Race2		0
+Susceptnum	0
+Elementnum	0
+Affectednum	0
+Objstat		0
+End
+
+#END

@@ -1,0 +1,3489 @@
+#AREA   City of Tempra~
+
+
+
+#VERSION 214
+#AUTHOR Kyorlin~
+
+#RANGES
+1 115 1 115
+$
+
+#RESETMSG The chime of church bells announces the hour.~
+
+#FLAGS
+4 30
+
+#ECONOMY 0 31221660
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#501
+astra high priestess healer~
+Astra~
+Astra, the High Priestess of Aowan and Keeper of the temple stands before you in a long flowing robe.
+~
+A devotee of Aowan, and a Healer, Astra stands before you clad in a simple
+dress, and is always ready to help those in need.
+~
+9 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#502
+gnome teacher librarian wizard~
+Gnome Librarian~
+A gnome librarian is here with his nose in a book.
+~
+A short gnarled and grizzled gnome sits hunched over with his nose buried
+in a book.  His great age shows, but so does his great wisdom as he seems
+to bathe the entire room in his knowledge.
+~
+1027 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+38 2 0 0 589925 589924 0
+0 0 0 0 1059840 0 0 0
+#503
+Tempra cartographer halfling mapmaker~
+Tempra Cartographer~
+A halfling mapmaker sits here
+~
+~
+3 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+3 16 0 0 131073 131072 0
+0 0 0 0 1058816 0 0 0
+#504
+goblin alchemist~
+The Goblin Alchemist~
+A Goblin Alchemist stands here trying to sell you something
+~
+~
+3 67108864 0 C
+0 0 0 1000d1000+0 100d100+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+39 16 0 0 11 10 1
+0 0 0 0 0 0 0 0
+#505
+follower~
+Follower~
+A follower of Order stands here guarding the truth
+~
+~
+65 0 500 C
+0 0 0 5d5+100 1d5+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 2
+0 0 0 0 0 0 0 0
+#506
+acolyte chaos~
+Acolyte of chaos~
+An acolyte of chaos is here studying the paints upon the walls.
+~
+~
+65 0 0 C
+0 0 0 8d11+100 6d5+5
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#507
+tempra cityguard~
+Tempra Cityguard~
+A Tempra Cityguard stands here
+~
+~
+65 0 750 C
+20 0 0 15d15+400 1d4+10
+1 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 256 0 0 1 1 3
+0 0 1755 0 0 0 128 3
+> entry_prog 95~
+mpecho The cityguard scans the area for trouble.
+if mobinroom(514) >= 1
+yell Die Thief!!
+mpkill thief
+endif
+~
+> death_prog 100~
+if mobinroom(514) >= 1
+mpforce thief get gold corpse
+mpforce thief yell BOOOYA! Another pig bites the dust!
+endif
+~
+|
+#508
+Cloud Thunder~
+A Thundercloud~
+A Thundercloud sits vigil over the altar.
+~
+~
+7 128 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#509
+Palan Storekeeper~
+Palan~
+The Shopkeeper, Palan, stands here impatiently
+~
+~
+3 0 0 C
+0 0 0 10000d10000+0 100d100+1000
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#510
+Targoth~
+Targoth~
+Targoth sits here doing his part to fill the temple coffers.
+~
+Cloaked within many dark robes, this former devotee of the dark elven
+goddess lloth stands before you. Having seen the light and rejected 
+his former ways he now does his best to support the cause of XahXhaX
+and the other good deities of the realm.
+~
+3 0 0 C
+0 0 0 1d1+30000 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#511
+Stella storekeeper~
+Stella~
+Stella the pet trainer sits here selling her wares.
+~
+~
+3 0 0 C
+0 0 0 1d1+30000 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 12
+0 0 0 0 0 0 0 0
+#512
+zack weaponsguy~
+Zack~
+Zack the halfgiant armoror stands here.
+~
+~
+131073 0 0 C
+0 0 0 100d100+0 100d100+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#513
+Herman postworker~
+Herman the postal employee~
+Herman the postal worker stands here sorting mail
+~
+~
+3 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> death_prog 100~
+mpecho As Herman drops to the ground, he whips out his Ak-47..
+mpechoat $n You feel a sudden explosion in your head.
+mpslay $n
+mppurge
+~
+|
+#514
+thief shadowy figure~
+a thief~
+A shadowy figure is hiding here trying to escape detection.
+~
+~
+65601 32768 -500 C
+0 0 0 1d20+450 4d2+5
+5 0
+112 112 0
+13 13 13 18 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 2
+0 0 1757 0 0 0 1024 524291
+> greet_prog 95~
+~
+> entry_prog 95~
+if mobinroom(507) >= 1
+yell AH HA! I got the drop on ya!
+backstab tempra
+endif
+~
+> death_prog 100~
+if mobinroom(507) >= 1
+mpforce cityguard yell Your fate is sealed villian!
+mpforce cityguard get gold corpse
+endif
+~
+> greet_prog 95~
+if goldamt($r) > 1000
+shout $r is a filthy rich pig!!!
+backstab 0.$r
+endif
+~
+|
+#515
+Blacksmith~
+the Blacksmith~
+A large Half-Ogre Blacksmith stands before you wielding a large hammer
+~
+~
+131075 0 0 C
+0 0 0 50d50+30000 30d10+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#516
+wanderer minstrel man~
+short The Bard of Tempra~
+Some god abandoned a newly created wanderer minstrel man here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#517
+Trull shopkeeper~
+Trull the shopkeeper~
+Trull the Armorsmith sizes you up for a new suit of armor.
+~
+~
+1073874947 0 0 C
+0 0 0 0d0+30000 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#518
+guard royal man~
+royal guardsman~
+A royal guard dressed in obsidion plate mail stands guarding the royal treasury.
+~
+~
+3 0 0 C
+51 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#519
+pony~
+pony~
+A small pony is grazing nearby.
+~
+~
+1074004225 0 0 C
+0 0 0 0d0+0 0d0+0
+3 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+86 16 0 0 1 135731809 0
+0 0 0 0 0 0 0 0
+#520
+Banker Tempra~
+Banker of Tempra~
+A tall banker walks forwards and greets you as you walk in the door.
+~
+~
+-2147483645 0 0 C
+0 0 0 100d100+30000 10d20+60
+100 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 8
+0 0 1695 0 0 0 1008 524291
+#521
+balance apostle~
+Apostle of Balance~
+An Apostle of Balance stands here attempting to make reason of chaos and order.
+~
+~
+65 0 0 C
+7 0 0 1d20+120 5d2+2
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 2
+0 0 0 0 0 0 0 0
+#522
+bouncer-concert-cafe~
+a bouncer~
+A large, burly bouncer, decked out with a black night stick and a spiked collar waits for you to cause trouble.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+10
+30 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 1743 0 0 0 256 3
+#530
+tempra janitor~
+the Tempra janitor~
+Tempra's janitor is here insuring the city is kept clean.
+~
+~
+67649 0 1000 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 1 1 0
+0 0 0 0 0 0 0 3
+> entry_prog 100~
+if mortcount(0) < 1
+get all
+endif
+~
+> time_prog 0~
+mpgoto 11287
+drop all
+drop 100 coins
+drop 100 coins
+drop 100 coins
+mpgoto 509
+~
+|
+#541
+alter's bodyodar~
+a newly created alter's bodyodar~
+Some god abandoned a newly created alter's bodyodar here.
+~
+~
+1073741825 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#542
+elven slave~
+an elf slave~
+A downtrodden elven slave stands here in shackles, waiting to do the bidding of his masters.
+~
+~
+3 0 200 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 1
+13 13 13 13 13 13 13
+0 0 0 0 0
+1 16 0 0 1 1 0
+0 0 8 0 0 0 0 0
+#550
+tribble~
+a tribble~
+A small furry tribble is here humming softly
+~
+~
+1 0 0 C
+0 0 0 5d5+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> rand_prog 20~
+MPECHO SQUEEK!!SQUEEK!
+MPMLOAD 550
+~
+|
+#551
+test~
+a newly created test~
+Say hello to me and see what i can do
+~
+~
+1 0 0 C
+0 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 16 0 0 1 1 0
+0 0 0 0 0 0 0 0
+> speech_prog hello~
+mpecho Hello $n the $c
+~
+|
+#0
+
+
+#OBJECTS
+#501
+low_obj~
+a newly created low_obj~
+Some god dropped a newly created low_obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#502
+club small~
+small club~
+Someone has dropped a club on the ground.~
+~
+5 8437760 8193
+9 3 3 7
+10 15 15 5
+E
+'thorn' 'thorned' 'club'~
+This large, heavy club has a series of bones impaled in it, which
+have been sharpened into thorns which give it the power to inflict
+maximum damage.  It is however overly large and hard to wield, and may
+slow you down pretty badly should you try to use it.
+~
+A
+19 4
+A
+18 3
+#503
+vibrating potion~
+vibrating potion~
+A potion that seems about to burst open with its internal energy has been abandoned here~
+~
+10 3 16385
+5 -1 -1 -1
+1 2 0 5
+'shockshield' 'NONE' 'NONE'
+#504
+Tempra-gauntlets-cityguard~
+Tempra cityguard gauntlets~
+A pair of discarded metal gauntlets lies here.~
+~
+9 0 129
+3 3 0 0
+2 20 2 0
+A
+18 2
+A
+19 1
+#505
+tempra obj~
+a newly created tempra obj~
+Some god dropped a newly created tempra obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#506
+fountain tempra~
+a fountain~
+A large marble fountain with a statue sits in the square.~
+~
+25 0 0
+50 50 0 0
+500 3000 300 0
+E
+fountain~
+It is very nice.  Made from fine white marble.
+~
+#507
+tempra obj~
+a newly created tempra obj~
+Some god dropped a newly created tempra obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#508
+tempra obj~
+a newly created tempra obj~
+Some god dropped a newly created tempra obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#509
+hammer-blacksmith-black~
+black hammer~
+A large black hammer is lying here.~
+~
+5 66 8193
+12 15 45 7
+1 0 0 0
+A
+18 3
+A
+19 3
+#510
+Tempra Broadsword~
+Tempra Broadsword~
+A broad sword bearing the insignia of Tempra lies here.~
+~
+5 0 8193
+12 5 3 1
+1 15 1 10
+A
+18 3
+A
+19 5
+#511
+tempra obj~
+a newly created tempra obj~
+Some god dropped a newly created tempra obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#512
+tempra obj~
+a newly created tempra obj~
+Some god dropped a newly created tempra obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#513
+tempra obj~
+a newly created tempra obj~
+Some god dropped a newly created tempra obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#514
+helmet-iron-tempra~
+an iron helmet~
+Someone has left an iron helmet, bearing the insignia of Tempra here.~
+~
+9 0 17
+5 5 0 0
+1 20 2 0
+A
+18 1
+A
+19 1
+#515
+armor-tempra-cityguard-plate~
+Tempra Platemail~
+A suit of platemail, bearing the insignia of Tempra, lies here.~
+~
+9 16793600&8 9
+0 0 0 0
+1 25 2 0
+A
+19 2
+A
+18 2
+#516
+handcuffs~
+handcuffs~
+A pair of iron handcuffs~
+You lock the handcuffs upon your wrists.~
+13 0 4097
+0 0 0 0 0 30
+1 0 0 100
+#517
+sword obsidian long~
+Obsidian Longsword~
+A black long sword has been discarded here.~
+~
+13 1283 8193
+12 9 9 3
+1 0 0 0
+A
+18 7
+A
+19 7
+#518
+dagger tempra sharp thief~
+a sharp dagger~
+A long sharp dagger is here having been discarded by a thief.~
+~
+5 0 8193
+12 0 0 2
+1 2 0 0
+A
+32 5
+A
+18 2
+A
+19 2
+#519
+longsword tempra standard~
+Tempra longsword~
+A longsword bearing the insignia of the tempra cityguards is lying here.~
+~
+5 0 8193
+12 5 5 1
+1 1 0 0
+A
+18 2
+A
+19 3
+#520
+arrow standard~
+an arrow~
+An arrow has fallin to the ground.~
+~
+57 0 1
+12 1 5 14
+1 1 0 0
+#521
+short bow shortbow~
+shortbow~
+A short bow made of oak lies here.~
+~
+56 0 262145
+12 0 3 14 2 0
+1 20 2 5
+A
+18 3
+A
+19 2
+#522
+eyepatch-jubei~
+Jubei's Eyepatch~
+Jubei's Eyepatch has been dropped here~
+~
+13 0 1048577
+0 0 0 0
+1 0 0 0
+A
+27 64
+A
+18 1
+A
+19 1
+#523
+a fountain~
+a fountain~
+A large marble statue that has water flowing from its mouth.~
+~
+25 0 0
+50 50 0 0
+500 3000 300 0
+E
+fountain~
+It is very nice.  Made from fine white marble.
+~
+#600
+final obj~
+a newly created final obj~
+Some god dropped a newly created final obj here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#501
+The Gates of Tempra~
+You are within the southern gates of tempra. The walls rise high above here,
+and you notice several armed figures patrolling along the top. To the south,
+the way ends at the barred southern gates. Perhaps someday they will open 
+but for now there is great fear that the armies of chaos still lurk without.
+~
+~
+0 4 3 0
+D0
+~
+~
+0 -1 505
+D2
+~
+~
+8389639 -1 623
+S
+#502
+Temple Courtyard~
+You are standing in a large open courtyard of the temple. To the east and west 
+lie the wings of the temple, and to the north lies an ornate altar to Vortex,
+behind which you catch a glimpse of a dimly lit room.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 593
+D1
+~
+~
+0 -1 503
+D2
+~
+~
+0 -1 585
+D3
+~
+~
+0 -1 552
+S
+#503
+Eastern wing~
+You are standing in the unfinished eastern wing of the temple. This is a
+recent addition and the only exits currently passable are to the west,
+which leads into the centre of the temple or up to the chambers of the priests 
+and priestesses.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 595
+D3
+~
+~
+0 -1 502
+D4
+~
+~
+0 -1 584
+D5
+~
+~
+0 -1 577
+S
+#504
+A Forgotten Altar to XahXhaX~
+You stand before a low wooden altar, seemingly out of place in this temple.
+Perhaps in this place where the other gods are named and worshipped, his
+power and prestige are somehow deminished, but then again, who knows, for
+the altar seems to radiate great power.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 593
+S
+#505
+Temple Street~
+You are standing in the intersection of Thunder Road and Temple Street. To the
+south lies the southern gates of the city of Tempra and to the north lies 
+Market Square. Far to the north you can see the gates of the Temple and a faint
+glint that makes you think of the altar that lies within.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 538
+D1
+~
+~
+0 -1 506
+D2
+~
+~
+0 -1 501
+D3
+~
+~
+0 -1 537
+S
+#506
+Thunder Road~
+You are standing upon Thunder Road. To the west you see an intersection
+with temple street and the southern gates. To the east the road continues.
+~
+~
+0 0 1 2
+D1
+~
+~
+0 -1 507
+D3
+~
+~
+0 -1 505
+S
+#507
+Thunder Road~
+You are in the middle of Thunder Road, halfway between Palace and the
+southern gate. Traffic to and from the palace is constantly passing you,
+as you travel further along upon your journey. To the south, the city's
+wall rises high, and to the north you see the backs of several shops.
+~
+~
+0 0 1 2
+D1
+~
+~
+0 -1 508
+D3
+~
+~
+0 -1 506
+S
+#508
+Thunder Road~
+Your travels upon Thunder Road continue, bringing you to a position just
+west of the end of Palace Street and some distance east of the gate. 
+To the north you see the backs of several shops and to the south, the wall
+rises high.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 509
+D3
+~
+~
+0 -1 507
+S
+#509
+Palace Street and Thunder Road~
+You are standing at the ends of Palace and Tempra streets. Far to the north,
+the parapets of the palace raise high, although currently offlimits to
+adventurers, in the past, the starting place of many quests. To the west
+lies the southern gate, and closer by to the north lies the center of town.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 510
+D3
+~
+~
+0 -1 508
+S
+#510
+Water Street and Palace~
+You are upon the corner of Palace Street and Water. To the west lies
+the world famous cafe of Tempra. To the south lies Thunder Road, and 
+to the north you see the end of Tempra Street. To the distant north,
+you see the towers of the eastern gate and the spires of the palace.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 511
+D2
+~
+~
+0 -1 509
+D3
+~
+~
+0 -1 542
+S
+#511
+Tempra and Palace~
+You are standing in the intersection of Tempra and palace. To the east, the
+city wall rises high, and to the west you can see the entrance to the stables
+and several of the other shops that lie along Tempra street. To the far north
+you see the eastern gate, and to the south you see another intersection.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 512
+D2
+~
+~
+0 -1 510
+D3
+~
+~
+0 -1 548
+S
+#512
+Before the Eastern Gate~
+You stand before the eastern gates of tempra, which lead into the uncharted 
+lands of the Chevka. To the west stands a large stable within which a mount
+can be obtained. To the south, you see an intersection with Tempra Street, and
+to the north you see one with Guild Row.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 513
+D1
+~
+~
+0 -1 608
+D2
+~
+~
+0 -1 511
+D3
+~
+~
+0 -1 603
+S
+#513
+Palace Street~
+You are on palace street just a little north of Tempra. Far to the north you
+see guild row. Several of the town's unsavory citizens lurk in the
+shadows here, ready to pounce upon the unwary.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 514
+D2
+~
+~
+0 -1 512
+S
+#514
+Palace Street~
+You are on Palace Street. To the west, the temple rises high into the sky, 
+while to the east stands the city wall. To the north there is an intersection 
+guild row, and to the south you can head to the eastern gate.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 515
+D2
+~
+~
+0 -1 513
+S
+#515
+Guild Row and Palace Street~
+You stand within a well travelled intersection. To the distant north,
+you see the palace rise high beyond the city wall. To the west there are
+many large buildings which house the master guildsman of each class. To
+the south, the road heads to the eastern gate and byond that to Tempra
+Road and its many shops.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 516
+D2
+~
+~
+0 -1 514
+D3
+~
+~
+0 -1 563
+S
+#516
+Palace Street~
+You are travelling upon Palace Street, halfway between Guild Row and Northern
+Run. To the west, many buildings rise obstructing your view, while to the east
+you see the wall which encircles the city.  Beyond the wall to the north,
+you can see the Palace of the lords of Tempra rising high into the sky.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 517
+D2
+~
+~
+0 -1 515
+S
+#517
+Palace Street and Northern Run~
+You are at the northeastern corner of tempra, where Palace Street and
+Northern Run intersect. To the north of you there is a large gate which leads 
+to the Palace. The gate is currently closed and locked, and several stern
+faced guards stand behind it, disauding you from making any attempt at breaking
+in. To the west, the road continues to the northern gate, and to the south,
+the road intersects with Guild Row.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 516
+D3
+~
+~
+0 -1 518
+S
+#518
+Northern Run~
+As you stand here, you find that your eyes are inexorably drawn upwards
+by the majesty of the palace to the north. To the east, a heavy flow
+of traffic constantly flows through the guards, who let none enter who
+do not have business with those inside the palace. To the distant west
+you can make out the towers of the western gate.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 517
+D3
+~
+~
+0 -1 519
+S
+#519
+Northern Run~
+You are upon Northern Run, halfway between the palace and the northern
+gates. To the south, there are many houses, and to the north, the city wall
+rises high, granting protection and security to all those that lie within.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 518
+D3
+~
+~
+0 -1 520
+S
+#520
+Northern Run~
+You are passing several houses and smaller buildings on your route down
+Northern Run. To the west you see the northern gates, and to the east,
+you see an intersection with Palace Street in the distance. Behind the
+wall to the north, you see the parapets of the palace of the lords of
+Tempra rising high into the sky, a monument that heralds back to Tempra's
+former days of glory as the hub of world commerce.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 519
+D3
+~
+~
+0 -1 521
+S
+#521
+Before the Northern Gate~
+You stand before the northern gates of tempra upon Northern Row. To the 
+south, there is a dark sinister looking alley, and to the east and west lay
+many houses. Above the gate you see guards patrolling the parapets of the 
+towers that guard the city against invaders.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 522
+D1
+~
+~
+0 -1 520
+D2
+~
+~
+0 -1 560
+D3
+~
+~
+0 -1 523
+S
+#522
+Under the Northern Gate~
+You stand within a large gate in the outer wall of tempra. To the north
+lies a great expanse of wilderness, while to the south you can continue back
+into the city. Above you, guards man the towers, standing vigilant against
+anything that could threaten the wellbeing of those within the city.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 576
+D2
+~
+~
+0 -1 521
+S
+#523
+Northern Run~
+You are just west of the northern gate upon Northern Run.  To the south
+of you, a row of houses marches by, and above the houses, you see the
+upper portions of the temple.  To the west, the road continues to Port
+street, following the wall which rises to the north.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 521
+D3
+~
+~
+0 -1 524
+S
+#524
+Northern Run~
+You are standing upon Northern Run, halfway between the northern gate,
+which lies to the east, and Port Street, which is to the west.  To the
+south of you, there is a large row of houses, and to the north, the
+walls that encircle the city rise high into the sky.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 523
+D3
+~
+~
+0 -1 525
+S
+#525
+Northern Run~
+You are travelling upon Northern Run a little west of the northern gate. To
+the south lies a row of houses, while to the north, the view is obstructed
+by a high wall which surrounds the city. To the west, the road turns sharply
+and becomes Port street, while to the east it heads onwards towards the
+northern gates. You see the distant palace above the wall to the east.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 524
+D3
+~
+~
+0 -1 526
+S
+#526
+Northern Run and Port Street~
+You are at the northern end of port street and the western end of Northern
+Run. Far to the east, you see the northern gate, and to the south you 
+see the western gate.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 525
+D2
+~
+~
+0 -1 527
+S
+#527
+Port Street~
+You are wandering upon Port Street to the north of the western gate.
+South of you, you hear and see the constant flow of people as they enter
+and leave the city, and to the north, the road continues to Northern Run.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 526
+D2
+~
+~
+0 -1 528
+S
+#528
+Western Gate~
+You are before the great western gate of Tempra. Beyond this door lies the
+trackless forests of the great western wilderness. To the south the road 
+continues past the shops of Tempra and Market streets to Thunder Road and 
+to the north it meets Northern Run
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 527
+D1
+~
+~
+0 -1 556
+D2
+~
+~
+0 -1 529
+D3
+~
+~
+0 -1 1058
+S
+#529
+Port Street~
+You are standing upon Port Street, just south of the western gate. To
+the southeast, a lone spire pierces the sky, holding within the great
+mages of tempra. To the distant south, you can hear the sounds of a 
+busling port town.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 528
+D2
+~
+~
+0 -1 530
+S
+#530
+Port Street~
+As you travel along port street, your eyes are drawn to a tower that rises
+high into the sky to the east. Constant flashes of light give hint to
+the arcane practices practiced therin. To the north lies the western gate.
+and to the south you see an opening in the buildings created by Tempra
+Street.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 529
+D2
+~
+~
+0 -1 531
+S
+#531
+Port Street~
+You are upon Port street, north of where Tempra runs into it. To the west
+stands a high wall, and to the east you see a large building. To the distant
+north, you can see traffic which is converging upon the western gate.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 530
+D2
+~
+~
+0 -1 532
+S
+#532
+Port Street~
+You are on Port Street, just north of Water and at the end of Tempra. To the d
+distant north lies the west gate, and to the east lie several shops leading up 
+to central Square.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 531
+D1
+~
+~
+0 -1 549
+D2
+~
+~
+0 -1 533
+S
+#533
+Water and Port Street~
+You are standing in the intersection fo port and Water streets. To the west
+stands a very large gate, through which you can see a bustling port. Not too
+far off to the south is Thunder Road, and a little ways to the north will put
+you on Tempra Road.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 532
+D1
+~
+~
+0 -1 543
+D2
+~
+~
+0 -1 534
+S
+#534
+Port Street and Thunder Road~
+You are at the intersection of Thunder Road and Port Street. To the north
+is the gate to the port, and to the east Thunder Road continues on to the
+Southern gates and beyond that to Palace.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 533
+D1
+~
+~
+0 -1 535
+S
+#535
+Thunder Road~
+As you travel along Thunder Road, you feel compelled to examine the shop to the
+north with its many momento's of Tempra's art and culture. You also see a few
+rare items in the window that appear to be made along different lines than 
+is common. You get the vague feeling that these rare objects are from before
+the cataclysm.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 622
+D1
+~
+~
+0 -1 536
+D3
+~
+~
+0 -1 534
+S
+#536
+Thunder Road~
+The road upon which you stand continues some distance in both directions.
+To the east, the distant rumble of traffic around the southern gate can be
+heard. To the west, you see a shop full of many strange and interesting
+trinkets.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 537
+D3
+~
+~
+0 -1 535
+S
+#537
+Thunder Road~
+You are standing upon a round which is named after the thundering noise
+of the armies marching through the southern gate. Although very seldom
+is there a cause for such alarm today, you see guards patrolling the
+gate which lies to the east of you. To the west, the road continues.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 505
+D3
+~
+~
+0 -1 536
+S
+#538
+Southern Square~
+This is the Southern Square of Tempra. It is here that the armies of the great
+nations of the north met their ends defending what was left of the mortal
+races. A great statue stands here in their honor, nearly blocking out the
+sun in its shadow. To the north lies the central square and to the south lies 
+the Southern Gates and Thunder Road.
+~
+~
+0 0 1 2
+D0
+~
+~
+0 -1 539
+D1
+~
+~
+0 -1 540
+D2
+~
+~
+0 -1 505
+D3
+~
+~
+0 -1 545
+S
+#539
+Central Square~
+This large open square is considered to be the center of Tempra. To
+the north the gates of the Temple are open wide and you can dimly see the
+wonders that lie within. To the south, Temple street continues to the 
+southern square and market street. To the east and west are the shops of 
+Tempra road.
+~
+~
+0 0 1 6
+D0
+~
+~
+0 -1 585
+D1
+~
+~
+0 -1 546
+D2
+~
+~
+0 -1 538
+D3
+~
+~
+0 -1 551
+S
+#540
+Water Street~
+You are just east of the Southern Square on Water Street. Through the windows
+to the north you can see the patrons of the Water Street Cafe sitting at the
+many tables within. To the south is the wall of some building, and to the east
+the road continues.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 541
+D3
+~
+~
+0 -1 538
+S
+#541
+Water Street~
+Before you to the north is the marble arch of the Water Street Cafe. To the
+south is a solid brink wall, and to the east and west the street continues.
+The smell of food hangs in the air here, and many patrons constantly walk in
+and out of the cafe.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 605
+D1
+~
+~
+0 -1 542
+D3
+~
+~
+0 -1 540
+S
+#542
+Water Street~
+You stand upon Water street. To the east lies an intersection with
+Palace Street, with the occasional messenger hurrying upon his way to
+some other part of the world. To the west stands a large Cafe, one of
+the landmarks of tempra.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 510
+D3
+~
+~
+0 -1 541
+S
+#543
+Water Street~
+You are upon water street, just to the east of where it intersects Port
+Street. To the north and south, you see the backs of some large buildings.
+To the distant west, you see a large gate looming high over head, and to 
+the east, you catch a glimpse of the cafe.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 544
+D3
+~
+~
+0 -1 533
+S
+#544
+Water Street~
+You are upon Water Street, aproximately halfway between the southern
+square and Port Street. To the north of you, you see the backs of several
+shops, while to the east and west, the road continues.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 545
+D3
+~
+~
+0 -1 543
+S
+#545
+Water Street~
+You are just to the west of the Southern Square upon Water Street. To
+the east, you see the cafe's bright windows and the steady flow of patrons
+in and out of its doors. To the west, water street draws near Port Street.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 538
+D3
+~
+~
+0 -1 544
+S
+#546
+Tempra Road~
+You are standing just east of central square on tempra street. To the south
+is the cartographers guild, and to the north is the Starlight Emporium.  
+Pedestrians wander to and fro here checking out all the shops.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 575
+D1
+~
+~
+0 -1 547
+D2
+~
+~
+0 -1 574
+D3
+~
+~
+0 -1 539
+S
+#547
+Tempra Road~
+You are on Tempra road. To the north is the Blacksmiths shop and to the south
+is the Tempra Armor Store. You can also proceed along Tempra to the east and w
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 601
+D1
+~
+~
+0 -1 548
+D2
+~
+~
+0 -1 602
+D3
+~
+~
+0 -1 546
+S
+#548
+Tempra Road~
+You are at the eastern end of Tempra road, where it empties into Palace. To
+the north is a large structure that seems to house several animals, and to the
+south is a large marble building with a sign proclaiming Tempra Bank: Opening 
+Soon.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 603
+D1
+~
+~
+0 -1 511
+D2
+~
+~
+0 -1 625
+D3
+~
+~
+0 -1 547
+S
+#549
+End of Tempra~
+You are standing at the west end of Tempra Road before the post office. To the
+east you see the intersection of Tempra and Tower road, and to the west you see
+Port Street.
+~
+~
+0 0 1 1
+D0
+~
+~
+0 -1 570
+D1
+~
+~
+0 -1 550
+D3
+~
+~
+0 -1 532
+S
+#550
+Tempra Street and Tower road~
+You are at the intersection of Tempra street and Tower Road. To the north
+you can see the upper portions of the Tower of Magery, and the breeze from
+the west smells of the sea, and makes your heart yearn for adventure. To the
+south lies a weaponshop.
+~
+~
+0 0 1 4
+D0
+~
+~
+0 -1 553
+D1
+~
+~
+0 -1 551
+D2
+~
+~
+0 -1 600
+D3
+~
+~
+0 -1 549
+S
+#551
+Tempra Street~
+You are standing just to the west of Central Square on Tempra Street. This
+road appears very busy, as people are constantly going in and out of the shops
+To the south is the General Store and to the north is TempraPets.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 598
+D1
+~
+~
+0 -1 539
+D2
+~
+~
+0 -1 597
+D3
+~
+~
+0 -1 550
+S
+#552
+The western wing~
+You are standing in the western wing of the temple where it joins the central
+section. To the north is the passage of trials and the Mortal board and above
+you lies the priests quarters awhere you may obtain help with a corpse retrival
+for a price.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 572
+D1
+~
+~
+0 -1 502
+D4
+~
+~
+0 -1 583
+S
+#553
+Tower Road~
+You are just north of Tempra on Tower Road. Over the buildings to the west 
+you see the tower of Magery, and to the north you see an entrance. Far to the
+north, this road leads to guild row, and to the south you hear the bustle and
+exitement from all of the shops.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 554
+D2
+~
+~
+0 -1 550
+S
+#554
+Tower Road~
+You are on tower road. To the west the tower ofTower of Mages rises above you,
+To the south you can see Tempra Street and to the distant north you can
+see the many travelesrs upon guild row.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 555
+D2
+~
+~
+0 -1 553
+D3
+~
+~
+0 -1 564
+S
+#555
+Northern End of Tower Road~
+You are at the northern end of tower road where it intersects Guild Row. To
+the southwest, the tower of high magic rises high into the sky, while to the
+north the constant traffic along the row makes travel difficult. To the east
+there is a row of houses, about half of which look uninhabited.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 557
+D2
+~
+~
+0 -1 554
+S
+#556
+Guild Row~
+To the south of you lies a strange shop with many unusual and exotic plants
+hanging in the windows. You are assulted by smells of various mystical
+ingrediants that seem to beckon to you to enter. To the west, the road ends
+abruptly at the western gate, and to the east it continues past several
+guilds to a large square.
+~
+~
+0 0 1 2
+D1
+~
+~
+0 -1 557
+D2
+~
+~
+0 -1 571
+D3
+~
+~
+0 -1 528
+S
+#557
+Guild Row~
+You are on Guild row, halfway between the square and Port Street. To the 
+north of you lie several buildings that may someday house guilds but are
+currently empty. To the southwest, you see the spire of the mysteries 
+piercing the sky. To the south lies tower road, upon which you may find
+the entrance to the tower of magic.
+~
+~
+0 0 1 1
+D1
+~
+~
+0 -1 558
+D2
+~
+~
+0 -1 555
+D3
+~
+~
+0 -1 556
+S
+#558
+Guild Row~
+You are standing on guild row just to the west of a large square.  To
+the south, you see the rear walls of the temple rising high into the sky.
+Many of the guilds here are not yet open to outsiders, but soon it is
+rumored that they shall be.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 559
+D3
+~
+~
+0 -1 557
+S
+#559
+Guild Square~
+You are standing in a large square just north of the rear of the temple.
+It appears that at one time the road continued to the south, but recent
+additions to the temple have overrun the old road. To the east and west
+lie the guild houses of tempra, within each, lies a trainer versed in 
+the arts of combat for his or her class. To the north, there is a small
+alley, through which you catch a glimpse of the northern gate.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 560
+D1
+~
+~
+0 -1 561
+D3
+~
+~
+0 -1 558
+S
+#560
+A Dark Alley~
+You are standing within a dark alley leading from the norther gates to
+Guild Square. You get the feeling that someone is watching you and that
+it is time to move on. However, you notice a pile of debris that appears
+to conceal something. Perhaps who or what it is that is watching you 
+hides within the pile.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 521
+D2
+~
+~
+0 -1 559
+S
+#561
+Guild Row~
+You are standing upon Guild Row and attemping not to get overrun by the
+traffic as people come and go upon their ways. To the west lies Guild
+Square, and to the distant east, the road ends at Palace Street.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 562
+D3
+~
+~
+0 -1 559
+S
+#562
+Guild Row~
+You stand in the middle of Guild Row, halfway between Guild Square and
+the intersection with Palace. To the north and south are guild houses
+of various trades. Hidden somewhere nearby is rumored to be the thieves
+guild, although few have ever seen it, and few still have lived
+to tell the tale.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 563
+D3
+~
+~
+0 -1 561
+S
+#563
+Guild Row~
+You are travelling along guild row. To the north and south of you lie
+the many guilds of Tempra. The road to the east ends at Palace Street, and
+to the west it continues to guild square.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 515
+D3
+~
+~
+0 -1 562
+S
+#564
+Tower Entrance~
+You are standing within the foyer of the Tower of Mages. The area seems 
+strangly vacant, but that is probably just an illusion. You have the constant
+feeling that you are being watched. From here you can either go back on the
+street to the east or up to the rest of the tower.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 554
+D4
+~
+~
+0 -1 565
+S
+#565
+The spiraling staircase.~
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 566
+D2
+~
+~
+0 -1 567
+D3
+~
+~
+0 -1 568
+D4
+~
+~
+0 -1 569
+D5
+~
+~
+0 -1 564
+S
+#566
+Floating in a void~
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 565
+S
+#567
+Floating in a void~
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 565
+S
+#568
+The Hall of Knowledge~
+You are stading in a giant library filled with ancient dust covered tomes.
+This place appears to be in a constant state of chaos however due to the
+aprentice mages that constantly run too and fro on errands for their 
+instructors. In the corner sits a gnomish mage with rather large spectacles,
+apparently searching for one lost spell or another. He might be willing
+to impart some of his knowledge upon you too, but then again he might just
+talk your ears off with useless nonsense.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 565
+S
+#569
+Floating in a void~
+~
+~
+0 0 1 0
+D5
+~
+~
+0 -1 565
+S
+#570
+Post Office~
+You are standing in the Tempra post office.
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 549
+S
+#571
+Mages Emporium~
+You stand within a small cluttered shop that smells of unusual spices
+and regents believed to possess magical powers. A hobbled shopkeeper
+eyes you eagerly from behind his counter in anticipation of a sale.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 556
+S
+#572
+End of the Hall~
+You are standing at the northern end of a large hall.  To the north an
+open door lies, leading to the cathedral.  To the east there is a large aclove
+with a message board for those that wish to leave notes.  To the south, 
+the hall turns sharply as it rejoins the main part of the temple.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 573
+D1
+~
+~
+0 -1 581
+D2
+~
+~
+0 -1 552
+S
+#573
+In a Small Courtyard~
+You stand in a Courtyard between the temple and the newly built
+cathedral that severs as a training ground for the clerics of amethyst.
+The clerics have found it necessary to practice their ways away from the
+main temple and have therefore placed their guild in such a spot.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 251
+D2
+~
+~
+0 -1 572
+S
+#574
+Tempra Cartographer's Guild~
+You are in a small dimly lit shop with piles of maps everywhere, the shop
+keeper stares at you expectantly, waiting for you to find something that 
+would interest you.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 546
+S
+#575
+Starlight Emporium~
+You are standing in the Starlight Emporium. Scrolls and potions line the walls
+and shelves, and there a several books open on the tables giving the room a 
+rather cluttered appearance.
+~
+~
+0 4 1 1
+D2
+~
+~
+0 -1 546
+S
+#576
+Path around Tempra~
+You are just outside the northern gates of tempra on a grassy path leading
+around it. There is a gap in the ridge directly north of you, and you see
+a barren desert like land to the north.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 401
+D1
+~
+~
+0 -1 621
+D2
+~
+~
+0 -1 522
+S
+#577
+Donation Rooms~
+Donation rooms, coming soon
+~
+~
+0 1028 1 1
+D0
+~
+~
+0 -1 578
+D1
+~
+~
+0 -1 580
+D2
+~
+~
+0 -1 579
+D3
+~
+~
+0 -1 594
+D4
+~
+~
+0 -1 503
+S
+#578
+Weapon donation room~
+You are standing in a room filled with weapons donated by the citizens of the L
+Realm to help those who are new to the game or need better equipment. Please
+don't sell what you find here, for doing so may make it less likely that player
+will donate in the future, and you may someday be in need.
+~
+~
+0 1028 1 0
+D2
+~
+~
+0 -1 577
+S
+#579
+Armor donation room~
+You are standing in a room filled with armor that has been donated by the
+citizens of the Lost Realm. This equipment is intended for those in need, 
+and therefore it is asked that you not sell it. The consequences for doing
+so could be severe.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 577
+S
+#580
+Item Donation room~
+This room is filled with potions, scrolls, and other items that have been 
+donated. Take anything that you need, all that is asked is that you do not
+sell what you find here.
+~
+~
+0 4 1 0
+D3
+~
+~
+0 -1 577
+S
+#581
+Temple Aclove~
+You are standing in a small aclove, there is an oppresive presence here that
+seems to demand your silence. Before you is the general mortal board,
+containing information of interest to all mortals of the Lost Realms.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 572
+S
+#582
+Before the door~
+You are standing on the temple balconly before a large wooden door.
+Above you hangs a rope ladder dangling from the top of the belfry, and to the 
+east and west lie stairways to the first floor.
+~
+~
+0 0 1 0
+D0
+door wooden north
+~
+door wooden~
+3 -1 588
+D1
+~
+~
+0 -1 584
+D3
+~
+~
+0 -1 583
+D4
+~
+~
+0 -1 586
+S
+#583
+Top of the Stairs~
+You are standing in a long hallway across the front of the temple. On the
+west side of the room is a staircase that leads back down to the first floor.
+To the east you see a door that leads into the chambers of the priests and 
+priestesses, and far to the east you see the outline of another stairway.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 582
+D5
+~
+~
+0 -1 552
+S
+#584
+Top of the Stairs~
+You are standing in a corrider that cuts across the front of the second floor
+of the temple. On the east side of this room is a staircase leading back down
+to the first floor and to the west you see a door leading into the northern 
+chambers of the temple.
+~
+~
+0 0 1 1
+D3
+~
+~
+0 -1 582
+D5
+~
+~
+0 -1 503
+S
+#585
+Entrance to the Temple of the Greater Gods~
+You are standing just within the 20 foot high doors of the Great temple. The
+wealth of the gods is definetly felt here, and rumor has it that the gods 
+themselves built this temple as their residence in this plane and as a final
+refuge for mortals during the last battles of the cataclysm. The doors are 
+held together with gold bands that are inlaid with more jewels than are in the
+average kingdoms treasury. The floor is tiled alternatly with giant emerald an
+ruby slices each several handspans across. In the distance, to the north you
+see a large alter constructed of mithril silver and gold, overwhich appears
+to hang a small patch of fog. To the south you see the city proceeding outward
+until it meets the great southern forests. The whole scene instills you with
+the wonder and power of what it took to make such a place.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 502
+D2
+~
+~
+0 -1 539
+S
+#586
+On the ladder~
+You are hanging from a rope ladder halfway up the bell tower. The wind
+blows easily through the cracks in the wood causing the ladder to 
+sway to and fro. There is a trap door directly above you, and below you sits
+the balcony.
+~
+~
+0 0 1 0
+D4
+~
+door trapdoor secret~
+3 -1 587
+D5
+~
+~
+0 -1 582
+S
+#587
+Temple attic~
+This room looks like it was originally intended to become a bell tower, but 
+for some reason was converted into a store room by the priests of the temple.
+It appears to have been invaded by a family of bats in recent times. Its
+many boarded up windows leaves you wondering what there is for them to eat in
+such a place. The more you think about it the more unnerving it seems.
+~
+~
+0 4 1 0
+D5
+~
+~
+3 -1 586
+S
+#588
+Beyond the door~
+To the south of you there is a great wooden door.  This door is extremely
+light and easy to open, despite the fact that it appears to weigh several
+hundred stones.  To the east, there is a strong scent of incense and other
+religious substances, while to the west, you hear the sounds of a great 
+wilderness, somehow transported into this temple.
+~
+~
+0 0 1 1
+D1
+~
+~
+0 -1 589
+D2
+~
+door wooden~
+3 -1 582
+D3
+~
+~
+0 -1 590
+S
+#589
+Before the Store~
+You are standing at a corner in the upper floor of the temple. To the
+north lies a small room that is set up as a shop in which you may purchase.
+a few small trinkets to aid you in your journey. To the west you can see the
+door of the high priests room and a corrider going past it.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 592
+D3
+~
+~
+0 -1 588
+S
+#590
+A Dimly Lit Corridor~
+The shadows upon the walls seem to dance and play tricks in this passage before
+the high priestess. To the east, there is a stairway heading down to the lower
+levels of the temple, where many of the altars lie.  This level seems different
+somehow, as if a hidden power dwells within its life, bringing the whole temple
+into some obscure form of consciousness.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 591
+D1
+~
+~
+0 -1 588
+S
+#591
+The Chamber of the High Priestess~
+A high priestess of Aowan stands before you, ready to tend your wounds
+for a small fee which shall be used for temple upkeep.  There is a large
+golden altar surrounded by living trees on the northern end of the room,
+and the ceiling is open to the sky.  As you look around the room you find
+it odd to see that everything within appears to be within its natural state,
+but such is the nature of the goddess of druidic knowledge.
+~
+~
+0 0 1 2
+D2
+~
+~
+0 -1 590
+S
+#592
+Temple store~
+You are in a small store within the temple. A priest is here selling the thing
+You are in a brightly decorated room with a long counter. There are several
+items upon the counter and a small sign hanging above that says "Temple store"
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 589
+S
+#593
+Altar of Vvortex, God of Chaos~
+Before you stands the altar of Vvortex, God of Chaos and Power. It appears to
+have been made from a very large uncut diamond plated with mythril silver.  
+archaic symbols are inlaid in gold upon the surface and the diamond shows
+through it all in spots seeming to generate its own light and in turn lighting
+the entire room. Three feet above the top of the altar sits a minature thunder
+cloud, ready to consume anything placed upon it.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 504
+D2
+~
+~
+0 -1 502
+D5
+~
+~
+0 -1 651
+S
+#594
+Equipment Graveyard~
+This room contains equipment found laying around tempra by the janitors,
+Although the gods are no longer interested in recieving it as a sacrifice,
+its value to new players or those who have lost their equipment is undeniable.
+If you are in need, do not fear to take from this pile for it is meant
+for all the inhabitants of the realm.
+~
+~
+0 4 1 0
+D1
+~
+~
+0 -1 577
+S
+#595
+Altar of Kyorlin, the Infinite, god of Balance.~
+You stand before an altar that seems to be a balanced mix of complete
+choas of metals and paint, and a very organized fractal pattern. To the
+north lies the chamber of acloves, and to the south lies the front of the 
+temple and the entrance to the upper chambers.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 596
+D2
+~
+~
+0 -1 503
+S
+#596
+Hall of statues~
+You are standing in a room with several acloves on the wall, each containing 
+a statue of an immortal. In the center of this room is a large message board
+for suggestions to the immortals of the realm.  
+~
+~
+0 4 1 0
+D2
+~
+~
+0 -1 595
+S
+#597
+Tempra General Store~
+You are standing in a large grocery store, the shelves are lined with many item
+that could prove useful in your travels, and the store keeper stands here 
+watching over all.
+~
+~
+0 4 1 0
+D0
+~
+~
+0 -1 551
+S
+#598
+Tempra Pet Store~
+You are standing in a small shop filled with several cages. There is a door
+int the northern wall with a sign on it proclaiming no admittance pet storage.
+The proprieter stands behind a counter waiting for you to make a purchase.
+~
+~
+0 5124 1 0
+D2
+~
+~
+0 -1 551
+S
+#599
+Pet Store Room KEEP OUT!~
+~
+~
+0 3145732 1 0
+S
+#600
+Zack's Weapons~
+The Armory is bright and clean with many weapons hung upon the walls. There
+is a forge in the back of the room where new weapons can be made. The 
+Shopkeeper sits behind a large glass display case that holds his prized 
+equipment.
+~
+~
+0 4 1 5
+D0
+~
+~
+0 -1 550
+S
+#601
+Blacksmith Shop~
+You are standing in the front of a large blacksmiths shop. The Proprietor
+stands ready to repair anything that may be in need for a price. In the back
+of the room you can see the furnace and bellows, and the warmth from that 
+direction is very intense.
+~
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 547
+S
+#602
+Trull's Armor~
+You are within a small shop.
+~
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 547
+S
+#603
+Tempra Stables~
+You are standing within a large barn containing many different mountable
+animals. A stablehand stands behind a low counter ready to help if you
+desire a mount.
+~
+~
+0 1073741828 1 0
+D1
+~
+~
+0 -1 512
+D2
+~
+~
+0 -1 548
+S
+#604
+Stable Store Room~
+KEEP OUT!
+Storage Pens for unused mounts...
+~
+~
+0 1073741828 1 0
+S
+#605
+Inside the Cafe~
+~
+~
+0 1073741828 1 0
+D1
+~
+~
+0 -1 606
+D2
+~
+~
+0 -1 541
+D3
+~
+~
+0 -1 607
+S
+#606
+Before the Stage~
+~
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 624
+D3
+~
+~
+0 -1 605
+S
+#607
+At the Counter~
+You are in the middle of a room full of strange and exotic smelling smoke.
+There is a large counter, behind which lie many packages inscribed with
+writing from different langauges.  The room around you is very crowded
+as the people push and shove their way up to the front of Tempra's
+second biggest tourist attraction.
+~
+~
+0 1073741828 1 0
+D1
+~
+~
+0 -1 605
+S
+#608
+Inside the Eastern gate~
+You are standing within the eastern gates of tempra. To the north is a small 
+door leading to a guard tower and to the west lies the main part of Tempra.
+To the east, you can proceed to the crossroads, and beyond that to the Chevka
+River.
+~
+~
+0 1073741828 1 0
+D1
+~
+~
+4 -1 609
+D3
+~
+~
+0 -1 512
+S
+#609
+Dusty Crossroads~
+You are standing upon a dusty crossroads surrounded by dark forest on
+three sides. To the west, the guard towers of Tempra loom high in the
+sky, and to the north and south a path continues along the cities outer
+wall.
+~
+~
+0 1073741824 1 1
+D0
+~
+~
+0 -1 611
+D1
+~
+~
+0 -1 652
+D2
+~
+~
+0 -1 610
+D3
+~
+~
+0 -1 608
+S
+#610
+Path Around Tempra~
+~
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 609
+S
+#611
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 612
+D2
+~
+~
+0 -1 609
+S
+#612
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 613
+D2
+~
+~
+0 -1 611
+S
+#613
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 614
+D2
+~
+~
+0 -1 612
+S
+#614
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 615
+D2
+~
+~
+0 -1 613
+S
+#615
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 616
+D2
+~
+~
+0 -1 614
+S
+#616
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 615
+D3
+~
+~
+0 -1 617
+S
+#617
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 616
+D3
+~
+~
+0 -1 618
+S
+#618
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 617
+D3
+~
+~
+0 -1 619
+S
+#619
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 618
+D3
+~
+~
+0 -1 620
+S
+#620
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 619
+D3
+~
+~
+0 -1 621
+S
+#621
+Path Around Tempra~
+~
+~
+0 1073741824 1 0
+D1
+~
+~
+0 -1 620
+D3
+~
+~
+0 -1 576
+S
+#622
+Souvineer Shop~
+~
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 535
+S
+#623
+Outside the Southern Gates~
+~
+~
+0 1073741828 1 0
+D0
+~
+~
+33 -1 501
+S
+#624
+Upon the Stage~
+Several minstrels and bards from distant lands have been gathered to
+put on a show here. What they sing and why may be beyond the grasp of
+many of the patrons, but their messages ring clear to those who seek
+adventure. Beyond the stage, you see a large gathering of people in what
+would appear to be an informal mosh pit.
+~
+~
+0 1073741828 1 0
+D2
+~
+~
+0 -1 606
+S
+#625
+First Royal Bank of Tempra~
+You are within the First Royal Bank of Tempra. There is a large sign here
+telling what services are offered. The bank serves as a place to keep 
+your money safe from thieves and scoundrels. Few would dare challenge the
+royal guards that stand vigil here.
+~
+~
+0 1073741828 1 0
+D0
+~
+~
+0 -1 548
+S
+#626
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#627
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#628
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#629
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#630
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#631
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#632
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#633
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#634
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#635
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#636
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#637
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#638
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#639
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#640
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#641
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#642
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#643
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#644
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#645
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#646
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#647
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#648
+Floating in a void~
+~
+~
+0 1073741828 1 0
+S
+#649
+In the Volcanic Pool~
+You immerse your self deeper into the pool. The black volcanic rock makes the
+warm bottom of the pool seem deeper than it is.  You have no problem standing
+here, as it is only waist deep.  The warm soathing water is crystal clear and
+and seems to have restored your will to continue the battle.
+~
+~
+0 1073741828 8 0
+D4
+~
+~
+0 -1 650
+S
+#650
+In a Hidden Chapel~
+You stand within a large chapel dedicated to the worship of Lloth. 
+This place was built by the drow long ago, and is often considered a
+safe house by those that dare to venture accross the surface. As a 
+priestess may often stop here and seek pleasure in her male consorts, basic
+emitities are also present.
+~
+~
+0 1073741828 0 7
+D4
+~
+~
+3 -1 11184
+D5
+~
+pool dive~
+657408 -1 649
+S
+#651
+Shrine of the Forsaken Gods~
+You are in a long hallway, lined with statues that seem to somehow be 
+struggling with hidden power to escape. This place seems somewhat subdued
+resembling in some ways a prison or a morgue.
+~
+~
+0 1073741824 1 0
+D4
+~
+~
+0 -1 593
+S
+#652
+Aproaching a large battlefield~
+You are standing before a large torn up plain. To the southeast, you 
+see a large encampment of troops, while to the east and north, multiple
+battle cries anounce the clashes between the armies of tempra and those
+of the encampment.
+~
+~
+0 1073741828 1 0
+D1
+~
+~
+0 -1 653
+D3
+~
+~
+0 -1 609
+S
+#653
+Into the Fray~
+You are standing in the center of a very large battlefield, apparently
+fought between the army of tempra, and the large encampment that lies
+to the south.  To continue further to the east or north would be extremely
+foolish, due to the large gathering of armies upon the field.
+~
+~
+0 1073741828 1 1
+D0
+~
+~
+0 -1 323
+D2
+~
+~
+0 -1 301
+D3
+~
+~
+0 -1 652
+S
+#654
+Leaving the Tempra Academy~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 655
+D2
+~
+~
+0 -1 699
+S
+#655
+Leaving the Tempra Academy~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 656
+D2
+~
+~
+0 -1 654
+S
+#656
+Leaving the Tempra Academy~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 657
+D2
+~
+~
+0 -1 655
+S
+#657
+Leaving the Tempra Academy~
+~
+~
+0 1073741824 1 0
+D2
+~
+~
+0 -1 656
+D4
+~
+~
+0 -1 658
+S
+#658
+Above the Planet~
+Welcome to Amethyst, we hope you will enjoy this mud, and we are 
+constantly adding new areas to explore as well as new abilities and skills.
+If you have any questions, feel free to ask on chat or leave an email to
+kyorlin@hotmail.com. To begin with, you have a single weapon, and for 
+as long as you keep it, you should be able to gather new equipment on
+your own.  If you are new to muds, type "SAY SCHOOL" to enter the tutorial
+where you will learn the basics of mudding.
+~
+~
+0 1073741824 1 0
+D5
+~
+~
+0 -1 657
+S
+#699
+Leaving the Tempra Academy~
+~
+~
+0 1073741824 1 0
+D0
+~
+~
+0 -1 654
+D5
+~
+~
+0 -1 585
+S
+#700
+Floating in a void~
+~
+~
+0 4 1 0
+S
+#0
+
+
+#RESETS
+D 0 501 2 2
+M 1 521 5 502
+M 1 521 5 502
+M 1 506 5 502
+M 1 505 5 503
+M 1 507 20 507
+E 1 514 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 507 20 507
+E 1 514 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 507 20 510
+E 1 514 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 513
+E 1 514 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 514 5 513
+E 1 518 1 16
+M 1 514 5 513
+E 1 518 1 16
+M 1 514 5 515
+E 1 518 1 16
+M 1 507 20 515
+E 1 514 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 507 20 516
+E 1 514 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 519
+E 1 514 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 523
+E 1 514 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 514 5 531
+E 1 518 1 16
+M 1 507 20 533
+E 1 504 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 533
+E 1 504 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 536
+E 1 504 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 538
+E 1 504 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 548
+E 1 504 1 9
+E 1 515 1 6
+E 1 519 1 16
+M 1 507 20 550
+E 1 504 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 506 5 552
+M 1 507 20 557
+E 1 504 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 507 20 557
+E 1 504 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 507 20 559
+E 1 505 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 561
+E 1 504 1 9
+E 1 514 1 6
+E 1 519 1 16
+M 1 507 20 563
+E 1 504 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 514 5 567
+M 1 507 20 567
+E 1 504 1 9
+E 1 514 1 6
+E 1 515 1 5
+E 1 519 1 16
+M 1 502 1 568
+M 1 513 1 570
+O 1 508 1 570
+M 1 506 5 572
+M 1 521 5 573
+M 1 506 5 573
+M 1 503 1 574
+M 1 504 1 575
+G 1 503 1
+M 1 505 5 581
+O 1 12600 1 581
+M 1 505 5 582
+D 0 582 0 1
+M 1 521 5 583
+M 1 506 5 583
+M 1 505 5 583
+M 1 521 5 584
+M 1 505 5 584
+D 0 586 4 1
+D 0 587 5 1
+D 0 588 2 1
+M 1 501 1 591
+M 1 510 1 592
+M 1 508 1 593
+O 1 505 1 596
+M 1 509 1 597
+G 1 13305 1
+G 1 13308 1
+G 1 13307 1
+M 1 511 1 598
+M 1 1008 3 599
+M 1 12419 2 599
+M 1 310 1 599
+M 1 311 1 599
+M 1 512 1 600
+G 1 521 1
+G 1 520 1
+G 1 510 1
+G 1 502 1
+M 1 515 1 601
+E 1 509 1 16
+G 1 515 1
+M 1 519 1 604
+D 0 623 0 0
+M 1 518 5 625
+M 1 518 5 625
+M 1 518 5 625
+M 1 518 5 625
+M 1 518 5 625
+M 0 520 1 625
+M 0 517 1 602
+O 0 523 1 539
+M 1 542 1 650
+O 1 11130 1 650
+O 1 11129 1 650
+D 0 650 4 1
+M 0 530 1 509
+S
+
+
+#SHOPS
+ 504    2  3 10 26 60   120   0         0 23    ; The Goblin Alchemist
+ 509    1 19 17  0  0   120  90         0 23    ; Palan
+ 510   33  0  0  0  0   120  90         0 23    ; Targoth
+ 512    0  0  0  0  0   120  90         0 23    ; Zack
+ 517    9  9  0  0  0   120  90         0 23    ; Trull the shopkeeper
+0
+
+
+#REPAIRS
+ 515    5  9 30         100   1         0 23    ; the Blacksmith
+0
+
+
+#SPECIALS
+M  501 spec_cast_cleric
+M  502 spec_cast_mage
+M  507 spec_guard
+M  514 spec_thief
+M  518 spec_executioner
+S
+
+
+#$

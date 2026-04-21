@@ -1,0 +1,2746 @@
+#AREA   Swamp~
+
+
+
+#VERSION 1
+#AUTHOR Delk~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#11901
+alligator~
+an alligator~
+A hungry alligator lurks here.
+~
+The alligator looks to be slow and bulky, but don't let it fool you. The tail
+looks strong and the alligator is naturally armoured.
+~
+69 0 0 C
+12 0 -1 12d25+20 0d0+0
+100 0
+108 108 0
+16 8 8 17 17 7 13
+0 0 0 0 0
+79 3 0 0 0 0 2
+0 0 0 0 0 0 7 0
+#11902
+Grok Guard~
+a grok guard~
+A grok stands guard here.
+~
+This tall, lanky humanoid has the head of a frog and the green skinned body of
+a human. A soiled loincloth is its only clothing. You can see that its feet and
+hands are webbed.
+~
+1 0 0 S
+15 0 0 0d0+0 0d0+0
+0 0
+108 108 1
+> speech_prog p Googalak~
+mpechoat $n The grok guard stares at you suspiciously.
+em shrugs and opens the gate.
+mpechoat $n The grok guard shoves you through the gate.
+em slams the gate shut.
+mptransfer $n 11955
+mpat 11955 mpforce $n look
+~
+|
+#0
+
+
+#OBJECTS
+#11901
+moss~
+a newly created moss~
+Some god dropped a newly created moss here.~
+~
+13 0 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#11901
+The Storeroom~
+(I'm not really sure yet about this room. Maybe hide some food and water here
+or maybe some decent eq or something. For now it remains unfinished.)
+~
+0 4 1
+D3
+~
+~
+0 -1 12000
+D5
+~
+door~
+0 -1 11902
+S
+#11902
+In the swamp~
+You stand in the middle of a vast, dark swamp. An eerie mist floats above the
+black water causing the shadows to shift and writhe. Long tendrils of spanish
+moss drip from the dead waterlogged oaks. The swamp extends in all directions.
+~
+0 0 3
+D0
+~
+~
+0 -1 11903
+D1
+~
+~
+0 -1 11907
+D2
+~
+~
+0 -1 11904
+D3
+~
+~
+0 -1 11910
+D6
+~
+~
+0 -1 11906
+D7
+~
+~
+0 -1 11905
+D8
+~
+~
+0 -1 11908
+D9
+~
+~
+0 -1 11909
+S
+#11903
+In the swamp~
+Thin, sickly reeds poke up through the dark water. Thick vines wrap tightly
+around the trunks of the water oaks as if trying to choke the very life from
+the trees. To the north the vegetation grows thicker. The swamp extends in all
+directions from here.
+~
+0 0 3
+D0
+~
+~
+0 -1 11912
+D1
+~
+~
+0 -1 11906
+D2
+~
+~
+0 -1 11902
+D3
+~
+~
+0 -1 11905
+D6
+~
+~
+0 -1 11913
+D7
+~
+~
+0 -1 11911
+D8
+~
+~
+0 -1 11907
+D9
+~
+~
+0 -1 11910
+S
+#11904
+In the swamp~
+Dark water flows silently from east to west. The trees here are covered with
+some strange, rust colored mold. A chilly mist hovers over the water clinging
+to your face like silky strands of spider web. The vast swamp extends in all
+directions from here.
+~
+0 0 3
+D0
+~
+~
+0 -1 11902
+D1
+~
+~
+0 -1 11908
+D2
+~
+~
+0 -1 11920
+D3
+~
+~
+0 -1 11909
+D6
+~
+~
+0 -1 11907
+D7
+~
+~
+0 -1 11910
+D8
+~
+~
+0 -1 11919
+D9
+~
+~
+0 -1 11921
+S
+#11905
+In the swamp~
+You come upon a small clearing in the swamp. Sitting on a log, knee deep in the
+cold water is the skeletal remains of some humanoid creature. Its head leans
+back against the trunk of a tree. Most of the flesh has rotted from the corpse
+preventing you from identifying the type of creature. The head is much too big
+for it to have been a human. In fact, the skull structure reminds you of a
+large frog. A chill passes through your body. You are reminded of that old
+adage about someone stepping on your grave.
+~
+0 0 3
+D0
+~
+~
+0 -1 11911
+D1
+~
+~
+0 -1 11903
+D2
+~
+~
+0 -1 11910
+D3
+~
+~
+0 -1 11925
+D6
+~
+~
+0 -1 11912
+D7
+~
+~
+0 -1 11926
+D8
+~
+~
+0 -1 11902
+D9
+~
+~
+0 -1 11924
+S
+#11906
+In the swamp~
+Tall green cedars share the swamp here with the dead looking oaks. A large
+slime covered log floats gently on the slow moving water. A thick, milky white
+mist hovers over the water. The mist seems to deaden all sound here in the
+swamp. The vegetation thickens to the north.
+~
+0 0 3
+D0
+~
+~
+0 -1 11913
+D1
+~
+~
+0 -1 11915
+D2
+~
+~
+0 -1 11907
+D3
+~
+~
+0 -1 11903
+D6
+~
+~
+0 -1 11914
+D7
+~
+~
+0 -1 11912
+D8
+~
+~
+0 -1 11916
+D9
+~
+~
+0 -1 11902
+E
+log~
+As you look closer, an eye opens on the log. The log swishes its thick, scaly
+tail and swims slowly to the east.
+~
+S
+#11907
+In the swamp~
+The water flows deeper and faster in this area of the swamp. The source of
+all this water must lie to the east. Tall dark oaks loom overhead casting
+ominous shadows upon the surface of the swamp. You get the uneasy feeling
+someone or something is watching you from deep inside those shadows.
+~
+0 0 3
+D0
+~
+~
+0 -1 11906
+D1
+~
+~
+0 -1 11916
+D2
+~
+~
+0 -1 11908
+D3
+~
+~
+0 -1 11902
+D6
+~
+~
+0 -1 11915
+D7
+~
+~
+0 -1 11903
+D8
+~
+~
+0 -1 11917
+D9
+~
+~
+0 -1 11904
+S
+#11908
+In the swamp~
+High overhead the tree branches and vines intertwine to form a thick canopy
+of vegetation that effectively blots out the sky. The darkness seem to soak up
+the light from your light source. Shadows dance and writhe as if to some
+silent, shadowy music.
+~
+0 0 3
+D0
+~
+~
+0 -1 11907
+D1
+~
+~
+0 -1 11917
+D2
+~
+~
+0 -1 11919
+D3
+~
+~
+0 -1 11904
+D6
+~
+~
+0 -1 11916
+D7
+~
+~
+0 -1 11902
+D8
+~
+~
+0 -1 11918
+D9
+~
+~
+0 -1 11920
+S
+#11909
+In the swamp~
+Oily drops of moisture cover your body as the chill mist clings to you. The
+shadows deepen here seeming to come alive. Red eyes reflect in the fringe of
+your light source. As you peer through the darkness a voice comes to you from
+deeper in the swamp. It is a deep, croaking voice in some strange, unknown
+language.
+~
+0 0 3
+D0
+~
+~
+0 -1 11910
+D1
+~
+~
+0 -1 11904
+D2
+~
+~
+0 -1 11921
+D3
+~
+~
+0 -1 11923
+D6
+~
+~
+0 -1 11902
+D7
+~
+~
+0 -1 11924
+D8
+~
+~
+0 -1 11920
+D9
+~
+~
+0 -1 11922
+S
+#11910
+In the swamp~
+The water here is shallow and stagnant. Oily bubbles ooze to the surface and
+burst, releasing sulferous fumes which causes your eyes to water. To the west
+you can see the muddy edge of the swamp while further east the water deepens
+towards the middle of the swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11905
+D1
+~
+~
+0 -1 11902
+D2
+~
+~
+0 -1 11909
+D3
+~
+~
+0 -1 11924
+D6
+~
+~
+0 -1 11903
+D7
+~
+~
+0 -1 11925
+D8
+~
+~
+0 -1 11904
+D9
+~
+~
+0 -1 11923
+S
+#11911
+In the swamp~
+A smokey gray mist clings to the water's surface like a wispy, ethereal shroud.
+Tall dead trees loom up from the murky water like skeletal sentinals guarding
+the gloom. The low hanging branches seem to reach for you as you pass beneath
+them. You hear a loud splash deeper in the swamp followed by the hysterical
+shrieks of some small animal. The shrieks are suddenly cut off.
+~
+0 0 3
+D1
+~
+~
+0 -1 11912
+D2
+~
+~
+0 -1 11905
+D3
+~
+~
+0 -1 11926
+D8
+~
+~
+0 -1 11903
+D9
+~
+~
+0 -1 11925
+S
+#11912
+In the swamp~
+A thicket of brambles blocks your passage to the north. Dark purple flowers
+that dot the thicket drip with some sticky white goo. Looking closer you can
+see the half digested corpses of small insects in the goo. A butterfly flits
+too close to the thicket and becomes entangled in the mess. Soon, it ceases its
+struggle as the acidy secretion dissolves the butterfly and the flowers feed.
+~
+0 0 3
+D1
+~
+~
+0 -1 11913
+D2
+~
+~
+0 -1 11903
+D3
+~
+~
+0 -1 11911
+D8
+~
+~
+0 -1 11906
+D9
+~
+~
+0 -1 11905
+S
+#11913
+In the swamp~
+The black swamp water is deep and cold. A thicket of brambles blocks the way
+north. A deep moaning is heard from somewhere deeper in the swamp. From the
+east, you see an ethereal, ghostly form emerge from the mist. It seems to be a
+part of the mist, or maybe a product of the mist. The ghost floats slowly over
+the water moaning some uncomprehensable jibberish. It hesistates in front of
+you and then, it raises a misty finger and points in your direction. The ghost
+begins to speak. Yooouuuu mmmuuuusssttt dessstrroy.... Suddenly, the deathly
+calm of the swamp is broken as a stiff breeze sweeps through the trees. The
+wind rips the misty form into feathery fragments. You hear a faint, muffled
+scream, "Nnnooo!!"
+~
+0 0 3
+D1
+~
+~
+0 -1 11914
+D2
+~
+~
+0 -1 11906
+D3
+~
+~
+0 -1 11912
+D8
+~
+~
+0 -1 11915
+D9
+~
+~
+0 -1 11903
+S
+#11914
+in the swamp~
+The black swamp water is deep and cold. Gnarled, dead oak trees covered with
+a rusty blight stand huddled in the cold water. Stinging, buzzing insects swarm
+around your face, getting into your ears and nose. You can hardly breath for
+fear of ingesting these tiny, bloodsucking pests. The load buzzing is nerve
+wracking. It's as if this cloud of gnats is trying to drive you out of their
+swamp. As you prepare to move on, something shiny under the water catches the
+edge of your light.
+~
+0 0 3
+D1
+~
+~
+0 -1 11927
+D2
+~
+~
+0 -1 11915
+D3
+~
+~
+0 -1 11913
+D8
+~
+~
+0 -1 11928
+D9
+~
+~
+0 -1 11906
+S
+#11915
+In the swamp~
+The water flows deep and silent. Thick, snaky vines twist and twine around the
+trees fighting their way to sunlight and life. A large green cypress tree
+towers over this area of the swamp. The tree regales in its triumph over the
+lifeless swamp. A bullfrog squats heavily on one of the many cypress knots that
+snake through the water. To the east you see a thicket of leafy bamboo.
+~
+0 0 3
+D0
+~
+~
+0 -1 11914
+D1
+~
+~
+0 -1 11928
+D2
+~
+~
+0 -1 11916
+D3
+~
+~
+0 -1 11906
+D6
+~
+~
+0 -1 11927
+D7
+~
+~
+0 -1 11913
+D8
+~
+~
+0 -1 11929
+D9
+~
+~
+0 -1 11907
+S
+#11916
+In the swamp~
+The black water flows deep here in the eastern part of the swamp. Large red
+crayfish flit backwards through the water ahead of your passing. High overhead
+something screeches a warning to the rest of the swamp. Peering through the
+darkness you can see the edge of a bamboo thicket to the east. West you see
+nothing as the darkness seems to swallow up the swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11915
+D1
+~
+~
+0 -1 11929
+D2
+~
+~
+0 -1 11917
+D3
+~
+~
+0 -1 11907
+D6
+~
+~
+0 -1 11928
+D7
+~
+~
+0 -1 11906
+D8
+~
+~
+0 -1 11930
+D9
+~
+~
+0 -1 11908
+S
+#11917
+In the swamp~
+The dark water swirls around the trunks of the pale, waterlogged oaks. The
+current flows into the swamp from the east. There lies the source of this vast
+water soaked wasteland. Long, grey tendrils of spanish moss snake down from the
+rotten tree branches and brush your face. A chill mist rises from the swirling
+black water and chills your bones.
+~
+0 0 3
+D0
+~
+~
+0 -1 11916
+D1
+~
+~
+0 -1 11930
+D2
+~
+~
+0 -1 11918
+D3
+~
+~
+0 -1 11908
+D6
+~
+~
+0 -1 11929
+D7
+~
+~
+0 -1 11907
+D8
+~
+~
+0 -1 11931
+D9
+~
+~
+0 -1 11919
+S
+#11918
+In the swamp~
+You stand in the southern edge of a vast swampy wasteland. Healthy grass and
+shrubbery give way to stunted, blighted mutations which grow somehow from the
+stagnant muck. Peering through the gloom to the north you can see a dark, misty
+expanse of swamp. Long smokey tendrils of spanish moss hang from the gnarled
+branches of the trees. The swamp is eerily quiet as if the darkness prevents
+sound from escaping the gloom. A narrow, seldom used trail leads out of the
+swamp to the southeast.
+~
+0 0 3
+D0
+~
+~
+0 -1 11917
+D1
+~
+~
+0 -1 11931
+D3
+~
+~
+0 -1 11919
+D6
+~
+~
+0 -1 11930
+D7
+~
+~
+0 -1 11908
+D8
+~
+~
+0 -1 11949
+S
+#11919
+In the swamp~
+You stand in the southern edge of a vast swampy wasteland. Thick brambles to
+the south prevent you from passing further in that direction. The soggy muck
+that makes up this part of the swamp bubbles and churns from some deep, unseen
+agitation. The mud bubbles and roils as if alive. Fat, bloated leeches cling to
+the slime coated trunks of the dead oaks here. This whole area is dead, and has
+been dead for centuries. The sulfurous stench is unbearable.
+~
+0 0 3
+D0
+~
+~
+0 -1 11908
+D1
+~
+~
+0 -1 11918
+D3
+~
+~
+0 -1 11920
+D6
+~
+~
+0 -1 11917
+D7
+~
+~
+0 -1 11904
+E
+leeches~
+A leech leaves a slimy trail on the tree trunk as it slowly makes its way
+back into the muck.
+~
+E
+leech~
+A leech leaves a slimy trail on the tree trunk as it slowly makes its way
+back into the muck.
+~
+S
+#11920
+In the swamp~
+You stand in the southern edge of a vast swampy wasteland. Thick brambles to
+the south prevent you from passing further in that direction. The soggy muck
+that makes up this part of the swamp bubbles and churns from some deep, unseen
+agitation. The mud bubbles and roils as if alive. As you look around, something
+slimy brushes your leg. Looking down you are amazed to see a large, two-headed
+water snake slithering through the muck. The snake heads north, deeper into the
+swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11904
+D1
+~
+~
+0 -1 11919
+D3
+~
+~
+0 -1 11921
+D6
+~
+~
+0 -1 11908
+D7
+~
+~
+0 -1 11909
+E
+snake~
+The mottled brown snake slithers along with some difficulty as its two heads
+seem to prefer different directions.
+~
+S
+#11921
+In the swamp~
+You stand in the southern edge of a vast swampy wasteland. Thick brambles to
+the south prevent you from passing further in that direction. The soggy muck
+that makes up this part of the swamp bubbles and churns from some deep, unseen
+agitation. The mud bubbles and roils as if alive. Fleshy red flowers grow on
+the end of thick serpintine stalks. The flowers turn to follow your movements.
+~
+0 0 3
+D0
+~
+~
+0 -1 11909
+D1
+~
+~
+0 -1 11920
+D3
+~
+~
+0 -1 11922
+D6
+~
+~
+0 -1 11904
+D7
+~
+~
+0 -1 11923
+E
+flowers stalks red fleshy~
+One of the flowers winks at you!
+~
+S
+#11922
+In the swamp~
+The deep muck of the swamp begins to give way to firmer ground. The ground is
+still damp and muddy, but rises to the south and west. The way south is blocked
+by a thicket of brambles. North and east, you see a mist shrouded expanse of
+watery waste. Dark blighted trees struggle up out of the muck only to face the
+parasitic attacks of moss and fungi. A large, squat bullfrog sits on a log here
+croaking out a warning to the rest of the swamp about your presence here.
+~
+0 0 3
+D0
+~
+~
+0 -1 11923
+D1
+~
+~
+0 -1 11921
+D3
+~
+~
+0 -1 11932
+D6
+~
+~
+0 -1 11909
+D7
+~
+~
+0 -1 11933
+E
+frog bullfrog~
+The bullfrog is huge and bloated. It's slimy skin is a ruddish brown instead
+of a healthy green. As you watch, the frog zaps a buzzing fly with its pale,
+pink tongue and then continues its croaking alert.
+~
+E
+frog bullfrog squat~
+The bullfrog is not intimidated by your stare. It croaks again, loudly!
+~
+> rand_prog 30~
+mpasound Cccrrrooooaaaakkkkkk!!!
+~
+|
+S
+#11923
+In the swamp~
+Dark yellowish mud marks the southeastern edge of the vast swamp. Huge, mutated
+insects buzz and flit against you, biting and stinging like winged nettles.
+The stench of age old death is overpowering. This seems to be a collection area
+for the flotsom that has made its way through the swamp. Bones and half rotted
+carcasses of various creatures have accumulated here into a stinking, maggot
+ridden pile.
+~
+0 0 3
+D0
+~
+~
+0 -1 11924
+D1
+~
+~
+0 -1 11909
+D2
+~
+~
+0 -1 11922
+D3
+~
+~
+0 -1 11933
+D6
+~
+~
+0 -1 11910
+D7
+~
+~
+0 -1 11934
+D8
+~
+~
+0 -1 11921
+D9
+~
+~
+0 -1 11932
+E
+flotsom bones carcasses corpses pile~
+As you look at the putrid pile of wasted flesh a giant rat wriggles its
+head up through the pile. Panting for breath, the rat dives back into its
+meal.
+~
+S
+#11924
+In the swamp~
+Sticky, smelly mud marks the edge of a vast swamp. Centuries of rot have
+accumulated here creating a pustular ooze. You should probably avoid breathing
+the fumes which emanate from the slimy muck. Web-toed footprints mark the
+passing of some large, upright creature. West, you can see that the vegetation
+thickens. East, buried in darkness lies the vast swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11925
+D1
+~
+~
+0 -1 11910
+D2
+~
+~
+0 -1 11923
+D3
+~
+~
+0 -1 11934
+D6
+~
+~
+0 -1 11905
+D7
+~
+~
+0 -1 11935
+D8
+~
+~
+0 -1 11909
+D9
+~
+~
+0 -1 11933
+S
+#11925
+In the swamp~
+An oily, slime covered ooze marks the edge of the swamp. Stunted, diseased
+shrubs struggle up through the muck seeking light and warmth. They seek in vain
+however. Thick albino flatworms wriggle through the mud, writhing and twisting
+together in a filthy knot. The main area of the swamp lies to the east. West,
+the vegetation thickens.
+~
+0 0 3
+D0
+~
+~
+0 -1 11926
+D1
+~
+~
+0 -1 11905
+D2
+~
+~
+0 -1 11924
+D3
+~
+~
+0 -1 11935
+D6
+~
+~
+0 -1 11911
+D7
+~
+~
+0 -1 11936
+D8
+~
+~
+0 -1 11910
+D9
+~
+~
+0 -1 11934
+E
+flatworms worms mud knot~
+The thick, pale worms wriggle through the mud stirring up the stench.
+~
+S
+#11926
+In the swamp~
+The dark water of the swamp gives way to a sickly, yellowish ooze. The muck is
+the result of centuries of death and rot. The stench here is overpowering. Fat
+white grubs slither and slink through the putrid mud. The spindly vegetation
+here is grotesquely mutated. Oily black fronds grow from stunted shrubs. A
+large, mud-brown mushroom grows here dripping black ichor from multiple splits
+in its bloated cap. The swamp deepens to the east. To the west you see the
+ground looks firmer.
+~
+0 0 3
+D1
+~
+~
+0 -1 11911
+D2
+~
+~
+0 -1 11925
+D3
+~
+~
+0 -1 11936
+D8
+~
+~
+0 -1 11905
+D9
+~
+~
+0 -1 11935
+E
+mushroom~
+This mushroom is dying a slow death. It looks diseased.
+~
+E
+grubs~
+The fat, pale grubs wriggle through the mud stirring up the stench.
+~
+E
+fronds shrubs~
+The ferns wave in an unfelt breeze. You notice that their movements have a
+particular rhythm.
+~
+S
+#11927
+in the swamp~
+The land rises here to a soggy marsh. A thicket of bamboo blocks further travel
+to the east. To the north stands a massive gate made of bamboo and thick vines.
+The tops of the bamboo have been carved into wicked sharp points to prevent
+anyone from trying to scale the gate. A crude sign has been shoved deep into
+the mud.
+~
+0 0 3
+D2
+~
+~
+0 -1 11928
+D3
+~
+~
+0 -1 11914
+D9
+~
+~
+0 -1 11915
+E
+sign~
+;
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+|                                      |
+|  ****  ***   *****  ***   *** *   *  |
+| *     *   *  *   * *   * *    * *    |
+| *  ** *   *  ****  ***** *    *      |
+| *   * *   *  *   * *   * *    * *    |
+|  ****  ***   ***** *   *  *** *   *  |
+|                                      |
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+                 |    |
+                 |    |
+                 |    |
+                 |    |       '
+                 |    |          '
+             '   |    |
+                 |    |   /
+            \  ' |    |  / ''
+             \/\/\/\/\/\/\/\
+~
+S
+#11928
+in the swamp~
+The black water runs deep here. A thicket of bamboo prevents passage further
+east. Tall dark water oaks rise eerily from the gloom. Thick vines loop around
+the tree trunks snaking their way up into the light. As you look, one of the
+vines begins to move! It is a snake! As thick as your waist and at least thirty
+feet long, this huge reptile looks to be able to swallow you whole! Good thing
+for you, it must have recently taken a meal as it slithers slowly deeper into
+the swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11927
+D2
+~
+~
+0 -1 11929
+D3
+~
+~
+0 -1 11915
+D7
+~
+~
+0 -1 11914
+D9
+~
+~
+0 -1 11916
+S
+#11929
+in the swamp~
+The black water runs deep here. A thicket of bamboo prevents passage further
+east. Tall dark water oaks rise eerily from the gloom. Thick vines loop around
+the tree trunks snaking their way up into the light. High up in the branches of
+the trees you see a huge spider web. Caught up in the web are birds, some quite
+large, and some quite alive. As you watch, a skittering movement catches your
+eye. An enormous black spider, easily as big as a large dog, moves out onto the
+web and attacks one of the living birds. The bird squawks and flutters in a
+desperate attempt to escape, yet it is no use. The spider sinks its fangs into
+the bird. The bird flutters, then its movements cease.
+~
+0 0 3
+D0
+~
+~
+0 -1 11928
+D2
+~
+~
+0 -1 11930
+D3
+~
+~
+0 -1 11916
+D7
+~
+~
+0 -1 11915
+D9
+~
+~
+0 -1 11917
+S
+#11930
+In the swamp~
+Deep, dark water rushes in to fill the swamp. A channel cuts through the bamboo
+thicket from the east. If you have some sort of boat, you can explore the
+channel and perhaps find the source of this expansive swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11929
+D1
+~
+~
+0 -1 11937
+D2
+~
+~
+0 -1 11931
+D3
+~
+~
+0 -1 11917
+D7
+~
+~
+0 -1 11916
+D9
+~
+~
+0 -1 11918
+S
+#11931
+In the swamp~
+Dark, rushing water swirls and eddies around the pale trunks of the diseased
+oaks. Bright yellow fungus grows on the trunks of the trees sucking out what
+little life remains in the boles. Large, slimy slugs as big as housecats ooze
+among the fungi leaving gooey trails of slime in their wake. The vegetation to
+the south is too thick to allow passage in that direction.
+~
+0 0 3
+D0
+~
+~
+0 -1 11930
+D3
+~
+~
+0 -1 11918
+D7
+~
+~
+0 -1 11917
+E
+yellow fungus~
+The fungus is shaped like huge, mutated human ears.
+~
+E
+slug slugs~
+A slug leaves a slimy trail on the tree trunk as it slowly makes its way
+back into the muck.
+~
+S
+#11932
+In the swamp~
+You stand in the southeastern corner of a vast swampy area. Prints in the muddy
+ground bear witness to the passage of many unrecognizable creatures. Leafy
+bushes grow thickly together preventing your passage to the south. To the west
+and southwest lie two paths that lead out of the darkness, while northeast the
+darkness thickens into an impenetrable gloom. Smoky mist clings to the swamp
+like an ethereal shroud.
+~
+0 0 3
+D0
+~
+~
+0 -1 11933
+D1
+~
+~
+0 -1 11922
+D3
+~
+~
+0 -1 11951
+D6
+~
+~
+0 -1 11923
+D9
+~
+~
+0 -1 11950
+S
+#11933
+In the swamp~
+The muddy ground is covered with oily puddles of stagnant water. Green, leafy
+vines creep along the ground, wrapping themselves around any available surface.
+As you stand and watch, one of the leafy tendrils snakes across the muck and
+begins to wrap itself around your leg. You easily extract yourself from the
+tangle, but as you do so you feel a stinging, burning sensation on your ankle.
+You examine the area and find a nasty welt has been burned into your skin.
+Perhaps you best avoid this poisonous ivy. 
+~
+0 0 3
+D0
+~
+~
+0 -1 11934
+D1
+~
+~
+0 -1 11923
+D2
+~
+~
+0 -1 11932
+D6
+~
+~
+0 -1 11924
+D8
+~
+~
+0 -1 11922
+S
+#11934
+In the swamp~
+The ground here is soggy, but firm. Green sawgrass grows thick and healthy. To
+the west you can see the swamp gives way to a verdant forest. East, the gloom
+deepens as the swamp seems to absorb all light. A tall, healthy oak tree towers
+over this area of the swamp.
+~
+0 0 3
+D0
+~
+~
+0 -1 11935
+D1
+~
+~
+0 -1 11924
+D2
+~
+~
+0 -1 11933
+D6
+~
+~
+0 -1 11925
+D8
+~
+~
+0 -1 11923
+E
+tree oak~
+The tree towers high and proud. One thick branch leans over low enough that you
+feel you might be able to jump high enough to reach it.
+~
+> act_prog p jumps into the air.~
+mpechoat $n You leap into the air. Your hands grasp the low hanging limb.
+mpechoat $n You pull yourself up into the leafy boughs.
+mpecho $n climbs the tree!
+mptransfer $n 11952
+mpat 11952 mpforce $n look
+~
+|
+S
+#11935
+In the swamp~
+The ground here is soggy, but firm. Green sawgrass grows thick and healthy. To
+the west you can see the swamp gives way to a verdant forest. East, the gloom
+deepens as the swamp seems to absorb all light. Thick, leafy vines loop around
+the branches of the trees like green snakes.
+~
+0 0 3
+D0
+~
+~
+0 -1 11936
+D1
+~
+~
+0 -1 11925
+D2
+~
+~
+0 -1 11934
+D6
+~
+~
+0 -1 11926
+D8
+~
+~
+0 -1 11924
+S
+#11936
+In the swamp~
+The ground here is firm. Thick, green sawgrass grows in healthy clumps. To
+the west you can see the swamp gives way to a verdant forest. East, the gloom
+deepens as the swamp seems to absorb all light. A leaf strewn trail leads off
+to the northwest. Southwest, you see a muddy path.
+~
+0 0 3
+D1
+~
+~
+0 -1 11926
+D2
+~
+~
+0 -1 11935
+D7
+~
+~
+0 -1 11954
+D8
+~
+~
+0 -1 11925
+D9
+~
+~
+0 -1 11953
+S
+#11937
+Bayou Laterge~
+The dark waters of Bayou Laterge rush westward to fill the vast swamp. The fast
+rushing water has cut deeply into the rich dirt to form steep banks on either
+side. Huge, gnarled oaks line the banks. Their branches seem to reach down for
+you as you pass underneath. The current fights to push you back into the swamp
+as if some unseen force does not wish for you to pass further north.
+~
+0 0 7
+D3
+~
+~
+0 -1 11930
+D6
+~
+~
+0 -1 11938
+S
+#11938
+Bayou Laterge~
+The bayou turns here. The force of the water has cut deeply into the eastern
+bank. You can see green grass and pine trees interspersed with the thinning
+hardwoods. The fast moving current fights hard to push you south back into the
+swamp.
+~
+0 0 7
+D1
+~
+~
+2099208 -1 11939
+D6
+~
+~
+0 -1 11945
+D9
+~
+~
+0 -1 11937
+S
+#11939
+In an underwater tunnel~
+The swirling mud prevents you from seeing anything down here. By groping around
+you can feel a passage south or west.
+~
+0 0 8
+D2
+~
+~
+2048 -1 11940
+D3
+~
+~
+2048 -1 11938
+S
+#11940
+In an underwater tunnel~
+The swirling mud prevents you from seeing anything down here. By groping around
+you can feel a passage sloping up to the southwest or you can go north.
+~
+0 0 8
+D0
+~
+~
+2048 -1 11939
+D9
+~
+~
+2048 -1 11941
+S
+#11941
+A clearing in the bamboo thicket~
+Finally! You emerge from the tunnel into a hard packed clearing in the middle
+of a bamboo thicket. Bamboo stalks as thick as your forearm have been pushed
+aside by some large, heavy creature to form a path south. A large muddy puddle
+leads down back into the watery passage.
+~
+0 0 1
+D2
+~
+~
+0 -1 11943
+D5
+~
+~
+0 -1 11940
+S
+#11942
+A clearing in the bamboo thicket~
+A large puddle in the middle of the clearing marks the entrance to the watery
+passage back to Bayou Laterge. Bamboo stalks as thick as your forearm have been
+pushed aside by some large, heavy creature to form a path south.
+~
+0 0 1
+D2
+~
+~
+0 -1 11943
+D5
+~
+~
+0 -1 11940
+S
+#11943
+On a path through the bamboo~
+Something huge must have passed through here recently. The thick bamboo stalks
+have been pushed aside as easily as grass bends in the wind. Large, claw tipped
+prints have been pressed into the hard-packed path. By the size of the prints
+and the width between them, you imagine that whatever passed here, it probably
+has little competition with the other wildlife of the swamp.
+~
+0 0 1
+D0
+~
+~
+0 -1 11942
+D2
+~
+~
+0 -1 11944
+S
+#11944
+A large clearing in the bamboo~
+You emerge from the thicket into a large dirt clearing. The center of the
+clearing is dominated by a tall, wet mound of mud. The mound is four feet high
+and has a concave depression at the top that is filled with large rubbery eggs
+the size of your fist. Whatever laid these eggs has to be huge. Tall, thick
+stalks of bamboo surround the clearing. This area is totally isolated from the
+main swamp.
+~
+0 0 1
+D0
+~
+~
+0 -1 11943
+S
+#11945
+Bayou Laterge~
+The bayou turns north here. The black water gurgles and churns as the torrent
+pushes southward toward the swamp. Large white clumps of greasy foam spin and
+bob on the choppy current bumping soggily against you in passing. The steep
+banks are much too slippery to climb. A thick forest grows overhead. A movement
+high up in the trees catches your eye
+~
+0 0 7
+D0
+~
+~
+0 -1 11946
+D9
+~
+~
+0 -1 11938
+E
+movement trees~
+High above you can see a corpse hanging by the neck from one of the trees.
+~
+S
+#11946
+Bayou Laterge~
+Bayou Laterge runs fast, wide and deep. The current fights hard against any
+passage north. On the east bank of the bayou a large oak, its roots undercut by
+the rushing water, has fallen over and hangs low over the water. As you pass by
+the tree, you notice that a taut rope is tied to one of the low hanging limbs
+and hangs down into the water. Something heavy keeps the rope tight in the fast
+current.
+~
+0 0 7
+D0
+~
+~
+0 -1 11947
+D2
+~
+~
+0 -1 11945
+S
+#11947
+Bayou Laterge~
+Bayou Laterge runs fast, wide and deep. The bayou turns northeast here. As you
+make your way something heavy brushes by. Looking down you see a bloated corpse
+floating face down. The corpse bobs and spins its way south toward the swamp.
+~
+0 0 7
+D2
+~
+~
+0 -1 11946
+D6
+~
+~
+0 -1 11948
+S
+#11948
+Bayou Laterge~
+Alas, you can go no further. The current here is too strong to allow further
+passage. The steep, slippery banks will not allow egress in either direction.
+It seems your only recourse is to move southward, back towards the swamp.
+~
+0 0 7
+D9
+~
+~
+0 -1 11947
+S
+#11949
+On a seldom used trail~
+The narrow trail is bordered by thick sage grass and cattails. The trail leads
+northwest toward a dark and mysterious swamp. South, the trail winds straight
+and narrow.
+~
+0 4 3
+D2
+~
+~
+0 -1 11972
+D7
+~
+~
+0 -1 11918
+S
+#11950
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The trees thin out to the south while north lies an
+expansive swamp.
+~
+0 4 3
+D2
+~
+~
+0 -1 11977
+D6
+~
+~
+0 -1 11932
+S
+#11951
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path. To the southwest the path meanders along
+while to the east you see the dark, gloomy expanse of a great swamp.
+~
+0 0 3
+D1
+~
+~
+0 -1 11932
+D9
+~
+~
+0 -1 11976
+S
+#11952
+Up a tree~
+You stand on a large limb high up in a tall oak tree. The limbs grow strong and
+close together here allowing you to easily climb higher into the tree. Down
+however is another story. Looks like you will have to jump.
+~
+0 0 3
+D4
+~
+~
+0 -1 11963
+> act_prog p jumps into the air.~
+mpechoat $n You jump down to the ground.
+mpechoat $n The soggy muck breaks your fall. You are not hurt.
+mptransfer $n 11934
+mpat 11934 mpforce $n look
+~
+|
+S
+#11953
+On a hard packed trail~
+Tall leafy oaks line the hard dirt track. To the northeast you can see the edge
+of a dark, gloomy swamp. West lies the forest.
+~
+0 0 3
+D3
+~
+~
+0 -1 11985
+D6
+~
+~
+0 -1 11936
+S
+#11954
+On a leaf strewn trail~
+The narrow path is covered with dead leaves and twigs. A rustling in the thick
+bushes catches your ear. Peering into the thicket you see a small squirrel
+scratching among the leaves foraging for nuts. The trail winds its way west
+toward the forest while northeast, another path cuts through the thicket.
+~
+0 0 3
+D3
+~
+~
+0 -1 11988
+D6
+~
+~
+0 -1 11993
+D8
+~
+~
+0 -1 11936
+S
+#11955
+Through the bamboo gate~
+You stand at the entrance of a small, poor village. Shabby bamboo huts are
+raised high above the swamp on shaky looking platforms. The platforms are also
+made of bamboo and vines. The huts are arranged in a rough circle around a
+clearing. Far to the north you see one hut that stands out from the rest. It
+is much larger and sturdier than the ragged huts that surround it. Two humanoid
+creatures work here with bamboo knives cutting the thicket back from the edge
+of the village. You imagine that the fight to keep the swamp from retaking the
+village area must be a constant and never ending battle. Piles of refuse burn
+throwing thick oily smoke into the air.
+~
+0 4 1
+D0
+~
+~
+0 -1 11956
+D2
+~
+~
+0 -1 11927
+D6
+~
+~
+0 -1 11958
+D7
+~
+~
+0 -1 11957
+E
+humanoid creatures~
+These workers are well muscled humanoids with green skin and webbed fingers
+and toes. They wear dirty loincloths made from some shiny reptile skin. The
+most distinguishing feature however is the head. Theses cretures have the head
+of a frog.
+~
+S
+#11956
+A clearing in the village~
+This hard packed dirt clearing must be the Grok equivalent of a village
+square. The rickety huts are arranged haphazardly around the clearing. A
+tall skinny Grok nods your way as he makes his way through the village.
+~
+0 4 1
+D0
+~
+~
+0 -1 11961
+D1
+~
+~
+0 -1 11958
+D2
+~
+~
+0 -1 11955
+D3
+~
+~
+0 -1 11957
+D6
+~
+~
+0 -1 11960
+D7
+~
+~
+0 -1 11959
+E
+tall skinny grok~
+The Grok has the body of a lithe, muscular human and the wide lipped mouth of
+a frog.  Its skin and hair are both green.
+~
+S
+#11957
+Beneath a hut~
+You stand underneath one of the ragged huts that these people call home. A
+crude entrance has been cut into the floor of the platform. A rickety bamboo
+ladder leads up into the hut.
+~
+0 4 1
+D0
+~
+~
+0 -1 11959
+D1
+~
+~
+0 -1 11956
+D4
+~
+~
+0 -1 11997
+D6
+~
+~
+0 -1 11961
+D8
+~
+~
+0 -1 11955
+S
+#11958
+Beneath a hut~
+You stand underneath one of the ragged huts that these people call home. A
+crude entrance has been cut into the floor of the platform. A rickety bamboo
+ladder leads up into the hut.
+~
+0 4 1
+D0
+~
+~
+0 -1 11960
+D3
+~
+~
+0 -1 11956
+D4
+~
+~
+0 -1 11996
+D7
+~
+~
+0 -1 11961
+D9
+~
+~
+0 -1 11955
+S
+#11959
+Beneath a hut~
+You stand underneath one of the ragged huts that these people call home. A
+crude entrance has been cut into the floor of the platform. A rickety bamboo
+ladder leads up into the hut.
+~
+0 4 1
+D1
+~
+~
+0 -1 11961
+D2
+~
+~
+0 -1 11957
+D4
+~
+~
+0 -1 11998
+D6
+~
+~
+0 -1 11962
+D8
+~
+~
+0 -1 11956
+S
+#11960
+Beneath a hut~
+You stand underneath one of the ragged huts that these people call home. A
+crude entrance has been cut into the floor of the platform. A rickety bamboo
+ladder leads up into the hut.
+~
+0 4 1
+D2
+~
+~
+0 -1 11958
+D3
+~
+~
+0 -1 11961
+D4
+~
+~
+0 -1 11995
+D7
+~
+~
+0 -1 11962
+D9
+~
+~
+0 -1 11956
+S
+#11961
+Beneath a large sturdy hut~
+This hut is built like no other hut in the small village. Instead of bamboo,
+this hut is fashioned from split cedar logs. The logs are notched and wedged
+with great precision. Dried mud has been used to chink the cracks in the walls.
+The roof of the hut is bamboo, with fresh green fronds plaited skillfully
+together to keep out the elements. From the looks of it, the fronds must be
+replaced regularly. A thick, sturdy trapdoor has been fashioned to the base of
+the platform overhead. A solid looking ladder made from cured cedar leads up
+to the trapdoor.
+~
+0 4 1
+D0
+~
+~
+0 -1 11962
+D1
+~
+~
+0 -1 11960
+D2
+~
+~
+0 -1 11956
+D3
+~
+~
+0 -1 11959
+D8
+~
+~
+0 -1 11958
+D9
+~
+~
+0 -1 11957
+S
+#11962
+Beneath a hut~
+You stand underneath one of the ragged huts that these people call home. A
+crude entrance has been cut into the floor of the platform. A rickety bamboo
+ladder leads up into the hut.
+~
+0 4 1
+D2
+~
+~
+0 -1 11961
+D4
+~
+~
+0 -1 11999
+D8
+~
+~
+0 -1 11960
+D9
+~
+~
+0 -1 11959
+S
+#11963
+Up a tree~
+You stand on a large limb high up in a tall oak tree. The limbs grow strong and
+close together here allowing you to easily climb in either direction. A
+squirrel squats on this limb chattering angrily at you.
+~
+0 0 3
+D4
+~
+~
+0 -1 11964
+D5
+~
+~
+0 -1 11952
+E
+squirrel~
+The squirrel looks upset at your intrusion into its home. If you could speak
+squirrel your ears would probably be burning by now.
+~
+S
+#11964
+High up in a tree~
+The tree sways gently in the breeze. Up this high you can see for miles in all
+directions. To the east, the Swamp spreads out like a cancerous blot on the
+landscape. A large forest of trees lies to the west. South you can see the
+rolling plains. You view north is blocked by clouds. You can scoot out onto
+more limbs in all directions.
+~
+0 0 3
+D0
+~
+~
+0 -1 11967
+D1
+~
+~
+0 -1 11966
+D2
+~
+~
+0 -1 11968
+D3
+~
+~
+0 -1 11965
+D5
+~
+~
+0 -1 11963
+S
+#11965
+Out on a limb~
+As you scoot out onto this limb your nostrils are assailed by a dreadful
+stench. A rotted corpse leans back against the trunk of the tree. Whatever this
+was, it was definately humanoid. Rotten rags shroud the mummified corpse. Above
+its head, some marks have been carved into the tree.
+~
+0 0 3
+D1
+~
+~
+0 -1 11964
+E
+marks~
+Someone has carved some words here into the tree. The carvings are fresh. It
+says ...password...GOOGALAK
+~
+E
+corpse mummy rags stench~
+The corpse is bloated and in an advanced stage of decay. Dark purplish blotches
+on the head and neck look like bites of some kind.
+~
+S
+#11966
+Out on a limb~
+Thick, silky spiderwebs coat the surface of the limb. As you look, you see that
+a huge spiderweb connects the branches of the tree here. The spider that spun
+this web must be massive. Large cocoons dot the web. Slicing open one of the
+cocoons you find the half digested corpse of a squirrel.
+;
+(temp) this room will house a large spider that will attack. This will go along
+with the rotted corpse over on the west side of the tree.
+~
+0 0 3
+D3
+~
+~
+0 -1 11964
+S
+#11967
+Out on a limb~
+You scoot out onto the tree limb to get a better view. Looking down, you see
+the muddy expanse of the swamp. Suddenly a breeze kicks up causing the limb to
+sway dangerously. You quickly scoot back over to the trunk of the tree before
+the wind can spill you from your perch.
+~
+0 0 3
+D2
+~
+~
+0 -1 11964
+S
+#11968
+Out on a limb~
+You scoot out onto the tree limb to get a better view. Looking down, you see
+the muddy expanse of the swamp. Suddenly a breeze kicks up causing the limb to
+sway dangerously. You quickly scoot back over to the trunk of the tree before
+the wind can spill you from your perch.
+~
+0 0 3
+D0
+~
+~
+0 -1 11964
+S
+#11969
+The Grok Chief's Chambers~
+The walls and floor of the large room are covered with thick skin rugs which
+act to deaden the acoustics of the room.  The center of the room is dominated
+by a large sturdy chair which is raised on a stepped platform.  A small
+cedar table stands next to the great chair. A gem encrusted goblet sits atop
+the table brimming with some bubbling brew. The half eaten carcass of some
+type of fowl rests on a silver platter next to the goblet.
+~
+0 4 1
+D2
+~
+~
+0 -1 12000
+E
+rugs skin~
+The thick fur rugs have been masterfully cured.
+~
+E
+chair~
+The tall backed, sturdy chair is made from tough white oak. Whoever built this
+chair is a master craftsman.
+~
+E
+goblet~
+On closer inspection you can see that the gems are just shiny stones. The
+goblet is made of tin and not very well made at that. Apparantly the Groks
+have much to learn about metal working.
+~
+E
+carcass fowl~
+This is the half eaten carcass of some type of large bird.
+~
+S
+#11970
+The Servant's Quarters~
+Comfortable looking beds line the walls here. Each bed has a small chest at
+the head of it.  In the middle of the room is a large table where the servants
+eat their meals and play games.
+~
+0 4 1
+D1
+~
+~
+0 -1 12000
+E
+beds~
+The beds are made with bamboo frames. A feather stuffed cushion lies atop each
+frame. They look very comfortable.
+~
+E
+table~
+The table is a simple wooden affair.
+~
+S
+#11971
+The Guard's Chambers~
+The spartan chambers offer only the basic comforts of life. Hard bunks line
+the walls. At the foot of each bunk is a small wooden footlocker. A weapon
+rack stands just inside the door.
+~
+0 4 1
+D0
+~
+~
+0 -1 12000
+E
+foot locker footlocker~
+Peering inside some of the footlockers you see that the guards have very few
+material possessions.
+~
+E
+bunks~
+The bunks are made of hard wood. There are no blankets or cushions. These
+Grok guards must live a hard life.
+~
+E
+rack weapons~
+The weapons rack is a simple bamboo frame which is designed to hold the
+sharp bamboo tridents that the Groks seem to favor.
+~
+S
+#11972
+On a seldom used trail~
+You stand upon a narrow and apparantly seldom used trail. The sage grass and
+weeds brush against your legs as you make your way along the path.
+~
+0 0 3
+D0
+~
+~
+0 -1 11949
+D2
+~
+~
+0 -1 11973
+S
+#11973
+On a seldom used trail~
+You stand upon a narrow and apparantly seldom used trail. The sage grass and
+weeds brush against your legs as you make your way along the path. A small
+shady clearing is just to your west. The trail continues north and southwest.
+~
+0 0 3
+D0
+~
+~
+0 -1 11972
+D3
+~
+~
+0 -1 11974
+D9
+~
+~
+0 -1 11975
+S
+#11974
+A small, shady clearing~
+A tall live oak spreads its leafy boughs overhead providing a small, cozy
+clearing where you can rest. Birds twit and sing among the branches. A small
+gray squirrel rummages among the leaves looking for acorns to stash. You feel
+safe here.
+~
+0 1024 1
+D1
+~
+~
+0 -1 11973
+S
+#11975
+A seldom used trail~
+You stand upon a narrow and apparantly seldom used trail. The sage grass and
+weeds brush against your legs as you make your way along the path. To the 
+southeast you can see rolling plains. Northeast the path continues through the
+sage.
+~
+0 0 3
+D6
+~
+~
+0 -1 11973
+S
+#11976
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path.
+~
+0 0 3
+D2
+~
+~
+0 -1 11978
+D6
+~
+~
+0 -1 11951
+S
+#11977
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path.
+~
+0 0 3
+D0
+~
+~
+0 -1 11950
+D8
+~
+~
+0 -1 11983
+S
+#11978
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path. A leaf strewn path cuts to the west while
+the dirt path that you are on continues north and southwest.
+~
+0 0 3
+D0
+~
+~
+0 -1 11976
+D3
+~
+~
+0 -1 11979
+D9
+~
+~
+0 -1 11981
+S
+#11979
+On a leaf strewn path~
+The leafy oaks tower over the path creating a dark shady tunnel through the
+trees. The path is eerily quiet. No birds sing, no insects buzz. You get the
+strange feeling that you are being watched.
+~
+0 0 3
+D1
+~
+~
+0 -1 11978
+D7
+~
+~
+0 -1 11980
+S
+#11980
+On a leaf strewn path~
+The leafy oaks tower over the path creating a dark shady tunnel through the
+trees. The path is eerily quiet. No birds sing, no insects buzz. You get the
+strange feeling that you are being watched.
+~
+0 0 3
+D8
+~
+~
+0 -1 11979
+S
+#11981
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path.
+~
+0 0 3
+D2
+~
+~
+0 -1 11982
+D6
+~
+~
+0 -1 11978
+S
+#11982
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path.
+~
+0 0 3
+D0
+~
+~
+0 -1 11981
+S
+#11983
+On a dirt path~
+A narrow dirt path winds through the trees. Clumps of greasy looking weeds grow
+up to the edgy of the path. The exposed tree roots threaten to trip you up as
+you make your way along the path.
+~
+0 0 3
+D2
+~
+~
+0 -1 11984
+D7
+~
+~
+0 -1 11977
+S
+#11984
+On a dirt path~
+You stand upon a narrow dirt path. Tall grass grows up to the edge of the path.
+To the south you see the rolling plains while north leads towards a gloomy
+darkness.
+~
+0 0 3
+D0
+~
+~
+0 -1 11983
+S
+#11985
+On a hard packed trail~
+Tall leafy oaks line the hard dirt track. The path winds through the trees in a
+east-west direction. A sudden breeze rustles the leaves of the trees causing a
+flock of blackbirds to take flight.
+~
+0 4 3
+D1
+~
+~
+0 -1 11953
+D3
+~
+~
+0 -1 11986
+S
+#11986
+On a hard packed trail~
+Tall leafy oaks line the hard dirt track. The path winds through the trees in a
+east-west direction. A sudden breeze rustles the leaves of the trees causing a
+flock of blackbirds to take flight.
+~
+0 4 3
+D1
+~
+~
+0 -1 11985
+D9
+~
+~
+0 -1 11987
+S
+#11987
+On a hard packed trail~
+Tall leafy oaks line the hard dirt track. The leafy branches wave gently in the
+breeze. The surface of the track is too hard to leave prints. To the south you
+see some trees have been cut down. They lie there waiting for someone to come
+along and cut them into firewood.
+~
+0 4 3
+D6
+~
+~
+0 -1 11986
+E
+trees firewood~
+The trees have been recently harvested. The stumps bleed sap freely.
+~
+S
+#11988
+On a leaf strewn trail~
+The narrow path forks here. Northwest and southwest lead into the forest. East
+you hear something large slogging through wet mud. The trail here has not seen
+much recent use. Dead leaves and twigs have accumulated here almost obscuring
+the path from sight.
+~
+0 4 3
+D1
+~
+~
+0 -1 11954
+D7
+~
+~
+0 -1 11989
+D9
+~
+~
+0 -1 11991
+S
+#11989
+On a leaf strewn trail~
+The narrow path is covered with dead leaves and twigs. Thick vegetation on
+both sides of the path press in on you brushing your legs as you pass. The
+trail has not seen much recent use.
+~
+0 4 3
+D3
+~
+~
+0 -1 11990
+D8
+~
+~
+0 -1 11988
+S
+#11990
+On a leaf strewn trail~
+This path has not seen much recent use. Dried leaves and twigs have accumulated
+almost completely covering the dirt path. The forest lies to the west while
+the trail winds on to the east.
+~
+0 4 1
+D1
+~
+~
+0 -1 11989
+D3
+~
+~
+0 -1 11992
+S
+#11991
+On a leaf strewn trail~
+The narrow path is covered with dead leaves and twigs. A gentle breeze causes
+more leaves to fall, burying the path a little deeper.
+~
+0 4 3
+D3
+~
+~
+0 -1 11992
+D6
+~
+~
+0 -1 11988
+S
+#11992
+On a leaf strewn trail~
+This path has not seen much recent use. Dried leaves and twigs have accumulated
+almost completely covering the dirt path. The forest lies to the west while
+the trail winds on to the east.
+~
+0 4 3
+D1
+~
+~
+0 -1 11991
+S
+#11993
+On a dark, eerie path~
+There's something strange about this dirt path through the thicket. You cannot
+quite put your finger on it, but something here is not right. The trees lining
+the trail look normal. The bushes and vines creeping up to the edge of the path
+are just like any other bushes and vines you have ever seen. Why then do you
+get the impression that you are being watched?
+~
+0 4 3
+D0
+~
+~
+0 -1 11994
+D9
+~
+~
+0 -1 11954
+S
+#11994
+On a dark, eerie path~
+There's something strange about this dirt path through the thicket. You cannot
+quite put your finger on it, but something here is not right. The trees lining
+the trail look normal. The bushes and vines creeping up to the edge of the path
+are just like any other bushes and vines you have ever seen. Why then do you
+get the impression that you are being watched?
+~
+0 4 3
+D2
+~
+~
+0 -1 11993
+S
+#11995
+Inside a hut~
+This hut is empty. Cobwebs fill the corners of the ceiling and everthing is
+covered in a heavy layer of dust. The bamboo shutters have been nailed shut.
+Rust colored stains splatter across the west wall. On closer examination, you
+realize that these stains are actually very old dried blood. Something met a
+violent end in this hut. You cannot quite put your finger on it, but something
+is not quite right about this place.
+~
+0 4 1
+D5
+~
+~
+0 -1 11960
+E
+shutters~
+The shutters are made of bamboo slats fastened together with thin vines.
+~
+E
+stains rust wall~
+You scrape the stain with a fingernail. Rust colored specks peel off of the
+wall. You realize that this is very old dried blood.
+~
+E
+dust~
+A combination of dust, mold and mildew. It covers everthing in a thick blanket
+of filth.
+~
+S
+#11996
+Inside a hut~
+This hut must belong to a great hunter. Cured pelts of strange, unrecognizeable
+origin are heaped in piles about the room. A gigantic snakeskin is pinned to
+the east wall. Skinning knives and curing utensils clutter the round, wood
+table in the southeast corner of the hut. Sinister looking traps made from
+sharpened bamboo share the northeast corner of the hut with several different
+exotic looking weapons. All of the weapons have been fashioned from native
+bamboo.
+~
+0 4 1
+D5
+~
+~
+0 -1 11958
+E
+snakeskin snake skin~
+The original owner of this outer covering must have been huge! The skin
+covers the entire wall, and laps around to cover part of the north wall.
+~
+E
+skinning knives utensils~
+Curved blades of extremely sharp material have been fastened to bamboo handles.
+Wooden bowls of some foul smelling substance clutter the table. This must be
+some type of homemade curing agent.
+~
+S
+#11997
+Inside a hut~
+Whoever lives in this hut is very neat and clean. A straw pallet in one corner
+looks fresh and comfortable. Bamboo furniture has been neatly arranged in the
+small living space. Windows have been cut out of the west and south walls. The
+windows have bamboo shutters and curtains made from cured snakeskin.
+~
+0 4 1
+D5
+~
+~
+0 -1 11957
+E
+staw pallet~
+The neat straw pallet has been fluffed and covered with a hairy blanket of some
+animal skin. It looks very comfortable.
+~
+E
+furniture~
+A dresser, table, chairs, cabinets and even a wardrobe, all wellcrafted from
+the local bamboo.
+~
+E
+shutters curtains~
+The shutters can be closed and latched when the weather turns bad effectively
+sealing the room from the weather. The curtains have been fashioned from a huge
+snakeskin.
+~
+E
+window~
+The view out the west window shows the vast swamp extending in that direction.
+Looking out the south window you can see the bamboo gate and the workers busily
+hacking the thick vegetation away from the village.
+~
+S
+#11998
+Inside a hut~
+You get the impression that a large family must share this hut. The place is a
+mess. Toys lie scattered about the place. Seven straw pallets line the east
+wall, each a different size and all of them unmade. Dirty dishes cover the long
+bamboo table that sits in the middle of the living space. Whoever lives here
+must have just finished their meal. A bamboo cradle near a comfortable looking
+rocking chair indicates a new addition to the family.
+~
+0 4 1
+D5
+~
+~
+0 -1 11959
+E
+toys~
+Dolls made from cured leather lie scattered amid the mess. You see a rubbery
+snake, a set of Grok soldiers carved from bamboo and  more.
+~
+E
+straw pallet~
+The family that lives here must live a hectic life. The pallets look clean, but
+are unmade.
+~
+E
+dishes table meal~
+The dirty dishes are arranged about the table as if the family that lives here
+have just finished eating a meal. The food is still fresh.
+~
+E
+cradle~
+The tiny bamboo cradle rocks gently in an unfelt breeze.
+~
+S
+#11999
+Inside a hut~
+As you enter the hut, your senses are assailed with a cacophany of color and
+smells. Rancid smoke burns your eyes. The smoke curls up from sticks of what
+smells like dung but must be some type of incense. Black candles are scattered
+on a junk filled table. Skin covered pallets circle the table. The room gives
+one the impression that some type of ritual either just took place or is soon
+to begin. Runic designs are scrawled on the walls of the hut. The bright red
+ink is still wet.
+~
+0 4 1
+D5
+~
+~
+0 -1 11962
+E
+ink~
+As you examine the ink, you quickly come to the realization that it is not ink
+but instead, it is fresh blood.
+~
+E
+runes runic rune designs walls~
+Most of the runes make no sense at all. A few do stand out though.
+                                                 
+                                                 
+   \___/          /|       \___/                 
+   /   \         / |       /   \                 
+   \o o/        /  |       \x x/    -----------/|
+   /   \     <-----|--     /   \    |_|-|_|----\|
+   \. ./        \  |       \. ./                 
+    \ /          \ |        \ /                  
+     V            \|         v                   
+                                                 
+                                                 
+~
+S
+#12000
+Inside the Chief's Hut~
+(Two guards will be here. One of the guards will have the key to the room
+to the north.)
+~
+0 4 1
+D0
+~
+~
+0 -1 11969
+D1
+~
+~
+0 -1 11901
+D2
+~
+~
+0 -1 11971
+D3
+~
+~
+0 -1 11970
+S
+#0
+
+
+#RESETS
+M 0 11901 10 11921
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

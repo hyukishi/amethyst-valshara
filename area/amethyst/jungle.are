@@ -1,0 +1,1738 @@
+#AREA   The Western Jungle~
+
+
+
+#VERSION 214
+#AUTHOR Resai~
+
+#RANGES
+1 115 1 115
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 31226734
+
+#CLIMATE 3 4 3
+
+#NEIGHBOR Khelorn River Valley~
+
+#MOBILES
+#1005
+swarm bee bees~
+a swarm of bees~
+A swarm of bees buzzes angerly around.
+~
+~
+97 524840 0 C
+3 0 0 10d10+20 1d1+1
+0 0
+112 112 0
+14 13 13 16 11 13 15
+0 0 0 0 0
+25 3 0 0 3 2 0
+0 0 32781 0 0 0 8 0
+#1006
+goblin bandit~
+a goblin bandit~
+A goblin wanders around the forest.
+~
+~
+101 0 -200 C
+6 0 0 20d5+10 2d4+2
+5 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+39 3 0 0 16385 16384 2
+0 0 249 0 0 0 0 0
+#1007
+goblin bandit~
+a goblin bandit~
+A goblin bandit sits in the cave.
+~
+~
+97 0 -200 C
+6 0 0 20d5+10 2d4+2
+6 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+39 3 0 0 16385 16384 0
+0 0 1277 0 0 0 0 0
+#1008
+parrot red~
+a red parrot~
+A red parrot flies through the jungle.
+~
+The parrot is covered with vibrant colored feathers, a bright red color
+dominating the plumage.
+~
+65 524288 0 C
+5 0 0 30d3+20 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+78 3 0 0 257 256 2
+0 0 98441 0 0 0 1 0
+#1009
+butterfly~
+a butterfly~
+A butterfly flutters around the jungle.
+~
+Bright colors splotch the wings of the large butterfly.
+~
+193 524288 0 C
+5 0 0 40d2+20 2d2+1
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+83 3 0 0 257 1 1
+0 0 33821 0 0 0 0 0
+#1010
+hummingbird bird~
+a hummingbird~
+A hummingbird hums from flower to flower.
+~
+~
+65 524288 0 C
+6 0 0 20d4+20 3d2+1
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+78 3 0 0 257 256 0
+0 0 33849 0 0 0 64 0
+#1011
+monkey~
+a monkey~
+A monkey swings from tree to tree.
+~
+~
+65 544 0 C
+6 0 0 10d8+20 2d2+2
+0 0
+112 112 0
+13 13 13 17 13 13 13
+0 0 0 0 0
+21 3 0 0 513 512 0
+0 0 65599 0 0 0 0 0
+#1012
+jaguar~
+a jaguar~
+A jaguar slinks around the jungle.
+~
+~
+65 0 0 C
+7 0 0 40d3+10 2d4+3
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+74 3 0 0 513 512 1
+0 0 66623 0 0 0 3 0
+#1013
+vines~
+twisting vines~
+Hanging vines writhe and twist.
+~
+Innocent-looking jungle vines have turned vicious.
+~
+97 0 0 C
+1 0 0 10d10+10 2d2+2
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+85 3 0 0 8193 8192 3
+0 0 0 16 0 0 64 0
+#1014
+snake~
+a green snake~
+A snake slithers around the jungle floor.
+~
+A long, twisty snake winds its way across the ground.
+~
+65 0 0 C
+6 0 0 50d2+10 2d3+3
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+79 3 0 0 1025 1024 1
+0 0 0 0 0 0 1 0
+#1015
+lizard basilisk~
+a basilisk~
+A long lizard waddles around on the ground.
+~
+~
+65 0 0 C
+7 0 0 60d2+0 2d3+2
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+79 3 0 0 1025 1024 1
+0 0 66623 0 0 0 1 8192
+#1016
+sloth animal~
+a sloth~
+A slow-moving animal hangs from a nearby branch.
+~
+~
+65 0 0 C
+6 0 0 40d2+20 2d2+3
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+76 3 0 0 513 512 0
+0 0 1087 0 0 0 0 0
+#1017
+beetle~
+a huge beetle~
+A huge beetle scuttles around on the ground.
+~
+~
+65 0 0 C
+5 0 0 50d2+10 2d2+2
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+26 3 0 0 257 256 0
+0 0 45 0 0 0 0 0
+#1018
+frog~
+a frog~
+A brightly-colored from sits here on a tree stump.
+~
+~
+65 0 0 C
+6 0 0 50d2+10 2d3+3
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1025 1024 0
+0 0 1087 0 0 0 0 0
+#1019
+spider~
+a spider~
+A spider scurries over the ground here.
+~
+~
+65 0 0 C
+5 0 0 20d3+20 2d1+1
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+63 3 0 0 257 256 0
+0 0 61 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#1005
+feather red~
+a bright red feather~
+A bright red feather on the ground stands out.~
+~
+9 0 65537
+4 4 0 12
+1 200 20 0
+E
+feather red~
+The bright red feather looks like it might have been a tail feather
+from some unlucky parrot.
+ 
+~
+A
+13 10
+A
+12 10
+A
+31 1
+> use_prog 100~
+mea $n You stick a red feather behind your ear.
+mer $n $n sticks a read feather behind $s ear.
+~
+|
+#1006
+buckler wood wooden shield~
+a wooden buckler~
+A small, wooden shield lies on the ground.~
+~
+9 0 513
+5 5 0 12
+1 250 25 0
+A
+17 -10
+> use_prog 100~
+mea $n You tightly grip a wooden buckler in front of you.
+mer $n $n tightly grips a wooden buckler in front of $m.
+~
+|
+#1007
+stream brook water~
+a stream~
+A small stream of water flows southward.~
+~
+25 0 0
+100 100 0 0
+1 0 0 0
+#1008
+shortsword sword~
+a shortsword~
+A shiny sword has been left here.~
+~
+5 524352 8193
+12 0 0 1
+2 200 50 9
+A
+18 2
+A
+19 1
+#1009
+beehive hive~
+a beehive~
+A large beehive is attached to the bottom of a branch here.~
+~
+15 0 0
+10 0 0 12
+1 0 0 2
+E
+hive beehive~
+This is a massive hive, and a loud buzzing comes from it. The thing seems
+almost alive as the many bees inside make it sway a bit from side to side.
+~
+> exa_prog 60~
+mpe The hive rocks, and a swarm of bees pours out!
+mpmload 1005
+~
+|
+#1010
+flower orange~
+an orange flower~
+A beautiful flower has been left on the floor.~
+~
+9 0 16385
+3 3 0 12
+1 75 20 3
+A
+25 1
+A
+12 10
+#1011
+rose flower~
+a red rose~
+A perfectly-formed red rose has been left here.~
+~
+9 0 16385
+3 3 0 12
+1 75 30 3
+A
+25 1
+A
+13 10
+#1012
+bush shrub~
+a large bush~
+A large bush sits here quietly.~
+~
+12 0 0
+0 0 0 0
+1 0 0 5
+E
+bush~
+The bush is a dark green color and sports red flowers that almost look like
+roses.... in fact, they ARE roses! What's a rose bush doing in a jungle?
+~
+> exa_prog 30~
+mea $n You notice a loose flower.
+mer $n $n notices a loose flower.
+mpe The flower starts to sway in a sudden wind, breaks loose, and falls.
+mpoload 1011 3
+~
+|
+#1013
+bush shrub~
+a large bush~
+A large bush sits here quietly.~
+~
+12 0 0
+0 0 0 0
+1 0 0 0
+E
+bush~
+The bush is a dark green color and sports bright orange flowers.
+~
+> exa_prog 30~
+mea $n You notice a loose flower.
+mer $n $n notices a loose flower.
+mpe The flower starts to sway in a sudden wind, and breaks off.
+mpoload 1010 2
+~
+|
+#1014
+comb honey honeycomb~
+a glistening honeycomb~
+A glistening honeycomb lies here, forgotten~
+~
+26 0 1
+3 -1 -1 -1 50 0
+1 3 0 0
+'cure light' 'NONE' 'NONE'
+#1015
+note goblin~
+a goblinish note~
+A crumpled note lies on the ground.~
+~
+13 0 1
+0 0 0 0
+1 0 0 2
+E
+note goblin~
+&PThe note reads:&W
+  Brarg-
+
+      Moved the base. You have to open the vines now.
+
+              -Blug
+~
+#1016
+belt leather~
+a thick leather belt~
+A long strip of leather sits here.~
+~
+9 0 2049
+3 3 0 0
+2 80 20 0
+A
+17 -2
+A
+3 1
+A
+13 5
+#1017
+table wooden~
+a wooden table~
+A wooden table stands in the middle of the cave.~
+~
+12 0 0
+0 0 0 0
+1 0 0 2
+#1018
+chair wooden~
+a newly created chair wooden~
+Some god dropped a newly created chair wooden here.~
+~
+13 0 0
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#1003
+A Wooded Crossroads~
+You are upon a grassy crossroads, to the south lies a dark jungle, while to the
+west, the trail rises up the side of a large hill.
+~
+~
+0 0 3 0
+D2
+~
+~
+0 -1 1031
+D3
+~
+~
+0 -1 29949
+S
+#1004
+A Dark Path~
+The jungle takes on a much darker hue to the west, and a constant wailing can
+be heard.  The path to the east leads back into the safer reaches of the 
+jungle.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1014
+D3
+~
+~
+0 -1 2809
+S
+#1005
+A Small Path Near A Jungle~
+Sunlight catches the moisture hanging in the air and is refracted, making
+a large rainbow above you. The jungle teems with life, not all of it safe.
+A path leads east to Tempra and west through the jungle.
+~
+Moonlight makes the jungle look grown entirely out of silver, giving it a
+spooky appearence. The jungle teems with life, not all of it safe. A path
+leads east to Tempra and west through the jungle.
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1058
+D3
+~
+~
+0 -1 1006
+S
+#1006
+A Small Path Through The Jungle~
+Dense foliage blocks the sky, but enough light filters through the large
+trees' branches to let you see by. A small path has been torn through the
+jungle, running in an east-west direction. In other directions, it's possible
+to travel, even without a trail.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1007
+D1
+~
+~
+0 -1 1005
+D2
+~
+~
+0 -1 1033
+D3
+~
+~
+0 -1 1010
+S
+#1007
+In A Jungle~
+This conjuction of semi-trails has made the ground somewhat trampled, and
+animal tracks abound here, leading in all directions. The large trees in
+this area surround you, and water drips from the thick foliage.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1020
+D2
+~
+~
+0 -1 1006
+D3
+~
+~
+0 -1 1008
+D6
+~
+~
+0 -1 1022
+D9
+~
+~
+0 -1 1010
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1008
+In A Jungle~
+A small stream flows in from the north and heads southward, but is impossible
+to follow beyond this area because of the dense undergrowth that makes travel
+unwise in the southerly direction. The jungle smells of wet dirt and bright
+flowers.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 1019
+D1
+~
+~
+0 -1 1007
+D3
+~
+~
+0 -1 1009
+D7
+~
+~
+0 -1 1018
+S
+#1009
+In A Jungle~
+A soft burbling sound comes from the east, heralding the presence of some
+source of running water. The jungle smells of wet dirt and sweet flowers, and
+from time to time you can see flashes of color that must mean that bright birds
+inhabit this jungle.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1008
+D2
+~
+~
+0 -1 1011
+D3
+~
+~
+0 -1 1016
+S
+#1010
+A Small Path Through The Jungle~
+A small path here runs east and west, the only trace of civilization in the
+jungle wilderness. The ground is eternally wet from the dripping foliage and
+frequent rain, and the tracks of all that have passed here are all too plain.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1006
+D3
+~
+~
+0 -1 1011
+D6
+~
+~
+0 -1 1007
+D9
+~
+~
+0 -1 1036
+S
+#1011
+A Small Path Through The Jungle~
+The path diverges here, around a small sapling that has grown in the middle
+of it. Apparently the path is not frequently, or well, maintained. It continues
+both east and west from here.
+~
+~
+0 0 3 3
+D0
+~
+~
+0 -1 1009
+D1
+~
+~
+0 -1 1010
+D3
+~
+~
+0 -1 1012
+D7
+~
+~
+0 -1 1016
+S
+#1012
+A Small Path Through The Jungle~
+Vines dangle thickly from the overhead foliage, almost making it impossible to
+see in this section of the jungle. Twitterings and calls from a multitude of
+birds makes the air constantly full of sound.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1011
+D2
+~
+~
+0 -1 1037
+D3
+~
+~
+0 -1 1013
+D7
+~
+~
+0 -1 1015
+S
+#1013
+A Small Path Through The Jungle~
+A giant tree sits next to the small east-west path here, its base easily larger
+than what five trolls could encircle. Long vines grow up and down the base,
+some of them growing sweet-smelling flowers. The roots from the tree poke above
+the surface of the ground every few feet, making the path all too easy to trip
+on.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1012
+D2
+~
+~
+0 -1 1039
+D3
+~
+~
+0 -1 1014
+D8
+~
+~
+0 -1 1037
+S
+#1014
+A Small Path Through The Jungle~
+The trail turns into nothing here, disappearing into the dark dirt of the
+jungle. Small bushes surround the trail, looking like honor guards for the
+travellers.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1013
+D3
+~
+~
+0 -1 1004
+D6
+~
+~
+0 -1 1015
+S
+#1015
+In A Jungle~
+A dead tree lies on its side here, already covered with moss, and no doubt
+the home of a colony of termites and probably other insects as well. Bird
+tracks circle the tree, showing that the termites aren't in the safest home
+possible.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1016
+D8
+~
+~
+0 -1 1012
+D9
+~
+~
+0 -1 1014
+S
+#1016
+In A Jungle~
+A small puddle has formed here from drippings from the trees. It's full of
+mud and leaf bits and looks to have some insect eggs floating in it, waiting
+to hatch. Several small semi-paths offer themselves to adventurers.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1017
+D1
+~
+~
+0 -1 1009
+D3
+~
+~
+0 -1 1015
+D8
+~
+~
+0 -1 1011
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1017
+In A Jungle~
+The tracks of some large, four-toed creature wander through this area, leading
+in no particular direction. Judging by the depth of the tracks, it was a very
+large animal indeed. A small bush grows here in a small patch of sunlight that
+has managed to fly down from the sky unimpeded by branches.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1029
+D1
+~
+~
+0 -1 1018
+D2
+~
+~
+0 -1 1016
+D6
+~
+~
+0 -1 1028
+E
+tracks~
+The tracks look somewhat feline, but you can't be sure.
+~
+E
+bush~
+The bush looks like it might grow flowers soon.
+~
+S
+#1018
+In A Jungle~
+The air in the jungle is scented by a plethora of bright flowers growing
+all over the place. Sunlight filters through the lofty boughs of the trees,
+striking the ground in uneven blotches, highlighting flowers and making them
+almost glow. Several directions offer themselves for wandering.
+~
+The air in the jungle is scented by a plethora of bright flowers growing
+all over the place. Moonlight filters through the lofty boughs of the trees,
+striking the ground in uneven blotches, highlighting flowers and making them
+almost glow. Several directions offer themselves for wandering.
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1028
+D3
+~
+~
+0 -1 1017
+D8
+~
+~
+0 -1 1008
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1019
+In A Jungle~
+A small stream of water bubbles up from underground here, making a burbling
+sound as it flows southward. Judging from the amount of tracks surrounding it,
+this is a very popular place for animals to frequent.
+~
+~
+0 0 3 0
+D2
+~
+~
+0 -1 1008
+S
+#1020
+In A Jungle~
+Patterned shadows and light fall upon the ground, cast by the thick foliage
+and the sun and moon's valiant attempts to cross it. The patterns sway with
+the wind, causing the ground to seem the slightest bit unsteady if you look
+at it for too long.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1021
+D2
+~
+~
+0 -1 1007
+D7
+~
+~
+0 -1 1023
+S
+#1021
+In A Jungle~
+A huge swarm of tiny, tiny insects fly around here in dizzying patterns,
+almost invisible against the dark background of the jungle. A few small
+semi-paths offer themselves as ways through the jungle.
+~
+~
+0 0 3 0
+D2
+~
+~
+0 -1 1020
+D8
+~
+~
+0 -1 1022
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1022
+In A Jungle~
+Draping vines swing back and forth in decreasing diameter and increasing
+slowness. The vines are of varied type- some are thick and dark and some are
+thin and bright, although all are some shade of green. A few of the long vines
+grow small flowers, which give some mix of colors.
+~
+~
+0 0 3 0
+D7
+~
+~
+0 -1 1021
+D9
+~
+~
+0 -1 1007
+S
+#1023
+In A Jungle~
+Draping vines swing back and forth in decreasing diameter and increasing
+slowness. The vines are of varied type- some are thick and dark and some are
+thin and bright, although all are some shade of green. A few of the long vines
+grow small flowers, which give some mix of colors.
+~
+~
+0 0 3 0
+D6
+~
+~
+0 -1 1024
+D8
+~
+~
+0 -1 1020
+S
+#1024
+In A Jungle~
+A small puddle has formed here from drippings from the trees. It's full of
+mud and leaf bits and looks to have some insect eggs floating in it, waiting
+to hatch. Several small semi-paths offer themselves to adventurers.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1025
+D8
+~
+~
+0 -1 1027
+D9
+~
+~
+0 -1 1023
+S
+#1025
+In A Jungle~
+The moisture in the air is an almost tangible thing, and it almost feels as
+if you could swim through the air with as much ease as you could walk on the
+ground. The ground here is dark with wetness and with the tracks of animals
+that have recently wandered through here.
+~
+~
+0 0 3 0
+D3
+~
+~
+0 -1 1024
+D8
+~
+~
+0 -1 1026
+S
+#1026
+In A Jungle~
+Strange hoots and calls of the native fauna echo through the air, and the
+flora add a sweet odor unlike the kinds that grow in different climates. The
+large trees here are tall and imposing, with vines crawling their way up them
+like an organic staircase.
+~
+~
+0 0 3 0
+D7
+~
+~
+0 -1 1025
+S
+#1027
+In A Jungle~
+A large rock is the only remarkable thing in this section of the jungle. The
+surface of it is a mottled greyish color and it seems to be rather smooth from
+the passage of time and lots of rain. The rock is a bright contrast to the dark
+colors of the surrounding jungle.
+~
+~
+0 0 3 0
+D7
+~
+~
+0 -1 1024
+S
+#1028
+In A Jungle~
+A thick layer of dark green vines completely cover what would be the north
+exit. More vines drape from the trees, dangling almost to the jungle floor.
+Flecks of color that are the only thing you can see of birds sporadically
+swoop around the canopy.
+~
+~
+0 0 3 0
+D0
+~
+vines~
+9 -1 1059
+D2
+~
+~
+0 -1 1018
+D9
+~
+~
+0 -1 1017
+S
+#1029
+In A Jungle~
+A huge swarm of tiny, tiny insects fly around here in dizzying patterns,
+almost invisible against the dark background of the jungle. A few small
+semi-paths offer themselves as ways through the jungle.
+~
+~
+0 0 3 0
+D2
+~
+~
+0 -1 1017
+D3
+~
+~
+0 -1 1030
+S
+#1030
+In A Jungle~
+Large trees block your path is any way except north, south, and east. The
+foliage of the trees is bright green and healthy, proving the vitality of
+the large jungle. the air in this section is especially sweet; there must be
+a source close by.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1031
+D1
+~
+~
+0 -1 1029
+D2
+~
+~
+0 -1 1032
+S
+#1031
+In A Jungle~
+Patterned shadows and light fall upon the ground, cast by the thick foliage
+and the sun and moon's valiant attempts to cross it. The patterns sway with
+the wind, causing the ground to seem the slightest bit unsteady if you look
+at it for too long.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 1003
+D2
+~
+~
+0 -1 1030
+S
+#1032
+In A Jungle~
+A large bush sits here, unimpeded by other vegetation on the floor of the
+jungle. Small, blood-red flowers grow on the bush. The dirt here is very dark
+and wet, and seems very nourishing for plantlife. Strange hoots and calls of
+the native fauna echo through the air.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1030
+S
+#1033
+In A Jungle~
+The tracks of some large, four-toed creature wander through this area, leading
+in no particular direction. Judging by the depth of the tracks, it was a very
+large animal indeed. A small bush grows here in a small patch of sunlight that
+has managed to fly down from the sky unimpeded by branches.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1006
+D3
+~
+~
+0 -1 1034
+E
+bush~
+The bush looks like it might grow flowers soon.
+~
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1034
+In A Jungle~
+The air in the jungle is scented by a plethora of bright flowers growing
+all over the place. Moonlight filters through the lofty boughs of the trees,
+striking the ground in uneven blotches, highlighting flowers and making them
+almost glow. Several directions offer themselves for wandering.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1033
+D2
+~
+~
+0 -1 1035
+S
+#1035
+In A Jungle~
+Many small semi-paths made by animals conjoin here, allowing travellers to
+leave in many directions. The jungle's air is thick with moisture and the
+sweet smell of many flowers. You can hear a faint buzzing sound coming from
+the east.
+~
+~
+0 0 3 2
+D0
+~
+~
+0 -1 1034
+D1
+~
+~
+0 -1 1045
+D2
+~
+~
+0 -1 1056
+D3
+~
+~
+0 -1 1040
+D7
+~
+~
+0 -1 1036
+D8
+~
+~
+0 -1 1048
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1036
+In A Jungle~
+Strange hoots and calls of the native fauna echo through the air, and the
+flora add a sweet odor unlike the kinds that grow in different climates could. 
+Large trees here are tall and imposing, with vines crawing their way up them
+like an organic staircase.
+~
+~
+0 0 3 0
+D3
+~
+~
+0 -1 1037
+D6
+~
+~
+0 -1 1010
+D8
+~
+~
+0 -1 1035
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1037
+In A Jungle~
+Vines drape from branches of trees, run across the ground, and circle the
+great trunks. Vines seem to be everywhere in this jungle, their greenness
+abated only by the small flowers that they grow.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1012
+D1
+~
+~
+0 -1 1036
+D2
+~
+~
+0 -1 1038
+D7
+~
+~
+0 -1 1013
+S
+#1038
+In A Jungle~
+A huge swarm of tiny, tiny insects flies around here in dizzying patterns,
+almost invisible against the dark background of the jungle. A few small
+semi-paths offer themselves as ways through the jungle.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1037
+D1
+~
+~
+0 -1 1040
+D7
+~
+~
+0 -1 1039
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1039
+In A Jungle~
+Patterned shadows and light fall upon the ground, cast by the thick foliage
+and the sun and moon's valiant attempts to cross it. The patterns sway with
+the wind, causing the ground to seem the slightest bit unsteady if you look
+at it for too long.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 1013
+D8
+~
+~
+0 -1 1038
+S
+#1040
+In A Jungle~
+A large rock is the only remarkable thing in this section of the jungle. The
+surface of it is a mottled greyish color and it seems to be rather smooth from
+the passage of time and lots of rain. The rock is a bright contrast to the dark
+colors of the surrounding jungle.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1035
+D2
+~
+~
+0 -1 1041
+D3
+~
+~
+0 -1 1038
+E
+rock~
+The rock seems to have a little bit of lichen growing on it, but not much.
+~
+S
+#1041
+In A Small Clearing~
+For some reason, the trees that so dominate the rest of the jungle are not
+growing in this section. Grass and small wildflowers instead cover the ground,
+and sunlight actually has a chance to get through, making this section much
+brighter.
+~
+For some reason, the trees that so dominate the rest of the jungle are not
+growing in this section. Grass and small wildflowers instead cover the ground,
+and moonlight actually has a chance to get through, making this section much
+brighter.
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1040
+D2
+~
+~
+0 -1 1042
+D3
+~
+~
+0 -1 1044
+D9
+~
+~
+0 -1 1043
+S
+#1042
+In A Small Clearing~
+The grass grows thickly here, spotted with small flowers here and there. The
+clearing stops abruptly to the east and south, where the jungle again grows
+with a thick line of trees that are impossible to cross.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1041
+D3
+~
+~
+0 -1 1043
+D7
+~
+~
+0 -1 1044
+S
+#1043
+In A Small Clearing~
+To the west and south, the jungle again begins to grow, the line between
+clearing and jungle cut starkly. The clearing extends to the east, north,
+and northeast. Thick, lush grass and small, multi-color flowers grow here
+in abundance.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1044
+D1
+~
+~
+0 -1 1042
+D6
+~
+~
+0 -1 1041
+S
+#1044
+In A Small Clearing~
+The clearing here is devoid of trees, hosting small bushes, grass, and
+flowers instead. The clearing extends in several directions, and the jungle
+grows to the north and west, a thick line of trees.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1041
+D2
+~
+~
+0 -1 1043
+D8
+~
+~
+0 -1 1042
+S
+#1045
+In A Jungle~
+A small bush with large, orange flowers sits serenely. For some reason, no
+other vegetation grows near it, leaving it unmolested and able to receive as
+much sunlight as it needs. The flowers are large and floppy-looking with long,
+wide petals. You can hear a faint buzzing coming from the east.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1047
+D3
+~
+~
+0 -1 1035
+D6
+~
+~
+0 -1 1046
+S
+#1046
+In A Jungle~
+You can hear a muted buzzing sound coming from the south. The jungle grows
+thickly, and the knitted boughs of the canopy block most of the light coming
+from the sky. The ground is almost bare of plants because of this lack, only
+hosting a small bush here or there where a small puddle of light seeps through.
+~
+~
+0 0 3 0
+D2
+~
+~
+0 -1 1047
+D9
+~
+~
+0 -1 1045
+S
+#1047
+In A Jungle~
+A large tree is growing here, one of its branches much lower than the others.
+On that branch is attached a large beehive, buzzing and shaking a bit, making
+it look almost alive.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 1046
+D3
+~
+~
+0 -1 1045
+S
+#1048
+In A Jungle~
+Patterned shadows and light fall upon the ground, cast by the thick foliage
+and the sun and moon's valient attempts to cross it. The patterns sway with
+the wind, causing the ground to seem the slightest bit unsteady if you look
+at it for too long.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1049
+D7
+~
+~
+0 -1 1035
+> all_greet_prog 5~
+mpe Some nearby vines start to twist and writhe...
+mpmload 1013
+~
+|
+S
+#1049
+In A Jungle~
+A small puddle has formed here from drippings from the trees. It's full of
+mud and leaf bits and looks to have some insect eggs floating in it, waiting
+to hatch. Several small semi-paths offer themselves to adventurers.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1055
+D3
+~
+~
+0 -1 1048
+D6
+~
+~
+0 -1 1050
+S
+#1050
+In A Jungle~
+The moisture in the air is an almost tangible thing, and it almost feels as
+if you could swim through the air with as much ease as you could walk on the
+ground. The ground here is dark with wetness and with the track of animals
+that have recently wandered through here.
+~
+~
+0 0 3 0
+D8
+~
+~
+0 -1 1051
+D9
+~
+~
+0 -1 1049
+S
+#1051
+In A Jungle~
+Draping vines swing back and forth in decreasing diameter and increasing
+slowness. The vines are of varied type- some are thick and dark and some are
+thin and bright, although all are some shade of green. A few of the long vines
+grow small flowers, which give some mix of colors.
+~
+~
+0 0 3 0
+D7
+~
+~
+0 -1 1050
+D9
+~
+~
+0 -1 1052
+S
+#1052
+In A Jungle~
+A large rock is the only remarkable thing in this section of the jungle. The
+surface of it is a mottled greyish color and it seems to be rather smooth from
+the passage of time and lots of rain. The rock is a bright contrast to the dark
+colors of the surrounding jungle.
+~
+~
+0 0 3 0
+D3
+~
+~
+0 -1 1053
+D6
+~
+~
+0 -1 1051
+E
+rock~
+The rock has begun to be covered with a bit of lichen.
+~
+S
+#1053
+In A Jungle~
+The air in the jungle is scented by a plethora of bright flowers growing
+all over the place. Sunlight filters through the lofty boughs of the trees,
+striking the ground in uneven blotches, highlighting flowers and making them
+almost glow. Several directions offer themselves for wandering.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1052
+D3
+~
+~
+0 -1 1054
+D6
+~
+~
+0 -1 1055
+S
+#1054
+In A Jungle~
+Strange hoots and calls of the native fauna echo through the air, and the
+flora add a sweet odor unlike the kinds that grow in different climates could.
+Large trees here are tall and imposing, with vines crawling their way up them
+like an organic staircase.
+~
+~
+0 0 3 0
+D1
+~
+~
+0 -1 1053
+S
+#1055
+In A Jungle~
+A huge swarm of tiny, tiny insects fly around here in dizzying patterns,
+almost invisible against the dark background of the jungle. A few small
+semi-paths offer themselves as ways through the jungle.
+~
+~
+0 0 3 0
+D3
+~
+~
+0 -1 1049
+D9
+~
+~
+0 -1 1053
+S
+#1056
+In A Jungle~
+Large trees block your path is any way except north or south. The foliage
+of the trees is bright green and healthy, proving the vitality of the large
+jungle. The air in this section is especially sweet; there must be a source
+close by.
+~
+~
+0 0 3 1
+D0
+~
+~
+0 -1 1035
+D2
+~
+~
+0 -1 1057
+S
+#1057
+In A Jungle~
+A large, green bush sits in this corner of the jungle, its foliage looking
+out of place. Large orange flowers grow on it, scenting the air with a sweet
+fragrance. A few of the flowers lie crushed upon the ground, littering it
+with flecks of color.
+~
+~
+0 0 3 0
+D0
+~
+~
+0 -1 1056
+D2
+~
+~
+0 -1 11100
+E
+flower flowers~
+The bright orange flowers have long, draping petals, and grow in abundace
+upon the bush.
+~
+E
+ground flecks color~
+The ground is spotted with crushed orange flowers.
+~
+S
+#1058
+A Small Path~
+Small bushes grow near the path, a prelude to the thick jungle you can see
+ahead. To the east, the city of Tempra looms grandly. The path leads west
+straight through the jungle.
+~
+~
+0 1073741824 3 2
+D1
+~
+~
+0 -1 528
+D3
+~
+~
+0 -1 1005
+S
+#1059
+In A Small Cave~
+This small cave seems to be used as a hide-out. A thick curtain of vines blocks
+the southern exit. A small table sits in the middle of the cavern, surrounded
+by several small chairs. The floor is covered with gravel.
+~
+~
+0 0 3 0
+D2
+~
+vines~
+1 -1 1028
+E
+table chair chairs~
+A table and chairs sit in the middle of the cave.
+~
+E
+gravel~
+Grey gravel covers the floor.
+~
+S
+#0
+
+
+#RESETS
+O 1 1007 1 1019
+O 1 1007 1 1008
+O 1 1012 1 1032
+O 1 1013 1 1057
+O 1 1009 1 1047
+P 0 1014 1 0
+M 1 1008 1 1046
+M 1 1009 1 1049
+M 1 1010 1 1035
+M 1 1011 1 1036
+M 1 1012 1 1012
+M 1 1014 1 1009
+M 1 1015 1 1020
+M 1 1016 1 1025
+M 1 1017 1 1028
+D 0 1028 0 0
+M 1 1019 1 1017
+M 1 1008 2 1007
+M 1 1019 2 1033
+M 1 1016 2 1038
+M 1 1017 2 1037
+M 1 1011 2 1053
+M 1 1009 2 1018
+M 1 1010 2 1029
+M 1 1014 2 1043
+M 1 1007 1 1059
+D 0 1059 2 0
+M 1 1006 1 1034
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

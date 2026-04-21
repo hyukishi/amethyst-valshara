@@ -1,0 +1,215 @@
+#AREA   Player Relations office of Xero~
+
+
+
+#VERSION 213
+#AUTHOR God~
+
+#RANGES
+0 0 0 0
+$
+
+#RESETMSG CA-CHUNC! CLINK!  The office air conditioner switches on.~
+
+#FLAGS
+0 10
+
+#ECONOMY 0 31250000
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#10201
+Larren~
+Larren~
+Larren the assitant sits on a chair in the corner, waiting for an assignment.
+~
+~
+1 0 0 C
+1 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 3 0 0 1 1 0
+0 0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#10201
+cabinet~
+a filing cabinet~
+A tall file cabinet is positioned along the western wall here.~
+~
+15 -2146959360 0
+101 1 10202 0
+1 0 0 0
+#10202
+key~
+cabinet key~
+A small key has been left here by someone.~
+~
+18 524288 1
+10201 0 10202 0
+1 0 0 0
+#10203
+file1~
+file1~
+File1 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10204
+file2~
+file2~
+File2 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10205
+file3~
+file3~
+File3 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10206
+file4~
+file4~
+File4 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10207
+file5~
+file5~
+File5 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10208
+file6~
+file6~
+File6 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10209
+file7~
+file7~
+File7 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10210
+file8~
+file8~
+File8 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#10212
+file9~
+file10~
+File10 is sitting here.~
+~
+47 0 1
+0 0 0 0
+1 0 0 0
+#0
+
+
+#ROOMS
+#10201
+Garren & Associates~
+You stand in the medium sized, one room office.  It's not incredibly large, but
+serves it's purpose.  There is a single desk in the middle of the room, towards
+the north wall, with a large black office chair standing out from behind it.
+Miscellaneous papers are scattered across it's top, as well as on top of
+several tall cabinets which line the western side of the room, each made of a
+simple metal and supporting three large drawers for the owner to log his
+many files into.  To the north as well, behind the desk and chair, is a window
+leading out somewhere into the world.  Also, you notice a chair right before
+you, perhaps you'd like to sit down.
+~
+~
+0 8 0 0
+D0
+~
+~
+100665344 -1 10300
+D5
+~
+~
+0 -1 10203
+S
+#10202
+Messageboard Room of Immortals~
+You are standing within a large room with Ivory Walls.  There is a large fire
+place at the foot of a very long table which is surrounded by chairs.  The
+chair at the head of the table beckons you onwards although something within
+you hesitates breifly as you consider sitting upon it.
+~
+~
+0 1073741832 0 0
+D1
+~
+~
+0 -1 10203
+S
+#10203
+Coder's Sanctum~
+You are within the inner sanctum of the coders.  To the west you can return to
+the main council room.  Before you is a room filled with almost every 
+concievable comfort you can immagine, probably a result of the endless creation
+taking place within.
+~
+~
+0 1073741832 0 0
+D3
+~
+~
+0 -1 10202
+S
+#0
+
+
+#RESETS
+O 0 10201 1 10201
+P 0 10203 0 10201
+P 0 10204 0 10201
+P 0 10205 0 10201
+P 0 10206 0 10201
+P 0 10207 0 10201
+P 0 10208 0 10201
+P 0 10209 0 10201
+P 0 10210 0 10201
+P 0 10212 0 10201
+M 0 10201 1 10201
+O 0 11110 1 10203
+O 0 11109 1 10202
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

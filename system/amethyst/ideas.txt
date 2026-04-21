@@ -1,0 +1,138 @@
+[11174] Kyorlin: make copyover message a control panal setting
+[11174] Kyorlin: make deathtraps force puff to say death_room code
+[13309] Kyorlin: fractional light sensetivity
+[11174] Kyorlin: smartsac
+[  104] Kyorlin: mpmanarestore
+[  104] Kyorlin: color sit think
+[12439] Kyorlin: make do cook work slice should be ITEM_VNUM cook not item_vnum food
+[ 1054] Kyorlin: character ldo_loadup doesn't change last time
+[    2] Kyorlin: fix /l in editor so it shows all lines...make mail
+[    2] Kyorlin: limited to 24 - 30 lines
+[    1] Glaurung: add swim skill
+[11173] Kyorlin: tongue trainer
+[ 1003] Kyorlin: treasure tables
+[11142] Kyorlin: lower lev of travellers to 9 in khelorn
+[11174] Kyorlin: change do_verion in multi to do_update
+[ 2800] Hawkin: hows about a cure poison potion at the aclemey shop....
+[11173] Silverwolf: have a note read next command
+[13402] SoulReaper: OK heres an idea... edit help builder to include looking up wizhelp.. kinda hard to find these commands without knowing they are there ya know...
+[13401] SoulReaper: Could we get a lvl 0 help file about the days of the week and the months of the year... also a mud time to real time ratio would be cool
+[13408] SoulReaper: Do you think you could add the year to the time command?  also I have all the days and months written down I gleened them from the code
+[12454] Hawkin: How about a "show" command...  Where a player can show a description or a name of something without having to give it to another player...
+[11135] Shade: there should be a helpfile for boats, if they really do work... :)
+[10203] Kyorlin: add control numbers to buglist/idealist/typolist
+[13304] Kyorlin: enclose emote in parenthesis...and client protocal
+[12485] Jabralter: the city is to confusing, I would make it very simple.
+[12485] Jabralter: a little clerification: the start city:)
+[13321] Oct: how about selling something to increase mv for warriors since mana isn't used
+[13330] Grock: I think if you feed from somone poison you two should be poison...
+[13305] Quasie: show what monsters / npcs you have killed 
+[13336] Quasie: put something in the room after you deafeat firebrandt
+[13405] SoulReaper: is there a list that shows how much each spell costs??  Should there be?
+[13304] Pottle: add a front, middle and back row command to the group options, that way whoever initiates attack does not take the brunt of enemy strikes, also mages can cast spells from backrow
+[13321] Neab: I enjoy the world of Amethyst very much.  Especially now that there are a few "regular" players that keep returning.  However, since there are not many persons on here upgrading ones equipment without have a large mob to take on the other mobs isAn
+[13302] Pottle: an ask <mob> command that allows you to speak with mobs, also you could ask <mob> <word> and get more info etc.
+[10611] Archaon: a good low lv spot to lv up at
+[    1] Kyorlin: no teleport area flag
+[13312] Martus: map of town
+[13314] Martus: vampire's should have natural infravision (see in dark at all times)
+[29801] Drajin: I was thinking warriors should have gouge because almost every mob can do, and most of them are warrior class type, but just a idea
+[    7] XahXhaX: make it so "loadup" doesn't affect the "last" of a character.
+[  505] Kyorlin: fix meta
+[  601] Kyorlin: five minute rule on pkills
+[    7] XahXhaX: certain sectortypes probably shouldn't change colors between night/day, like number 0 for example.
+[    7] XahXhaX: *****command to sell/trade things between players.  Like <command> <player> <your item> <their item> then gives second person like 10 or so seconds to confirm/cancel
+[11103] Galliant: should not get kicked off for kicking over 20 times in battle
+[13304] Sennard: the guilds should have lookers for members to keep items and spare armor
+[13325] Lou: this is for necro and his guild items, how bout a transfusion tube so that vampires with blood let can send blood drictly to thier cmorads?
+[11173] Kyorlin: global socials
+[11173] Kyorlin: make mobs able to hate more than one ch
+[11024] Imp: I think it would be a good idea to make a rough map of Amethyst and to have it displayed using some  sort of 'map' command. Detailed maps could be obtained by various map salesperson in different locations. Imp
+[11024] Imp: RE: map idea. The rough map should just show where the areas are located in relation to eachother.. not detailed paths to get there. Imp
+[11173] Kyorlin: target self players mobs
+[    1] Coolman: have multiple life its pissing me off
+[13356] Chain: can u make it so i can see my health go up instead of having it just jump up 20-30 pionts
+[ 3109] Stormwind: consent order
+[ 3106] Stormwind: dagger throwing
+[12410] Stormwind: make shopkeepers not sell chars items they can't use
+[10208] Kyorlin: make food and pills the same color
+[13301] Kyorlin: tank % and enemy % in prompt
+[11173] Kyorlin: immune thirst/hunger skill
+[11173] Kyorlin: make elemental fury do half the damage of a backstab each hit (on the hit all section)
+[11110] Stormwind: look at sanc and protect
+[13307] Ravnor: There should be an idea board for players to post their own info/char pics/etc. on the website -Ravnor (zenderweb@hotmail.com)
+[11174] Kyorlin: BOOT TO THE HEAD!
+[13304] Ravnor: spell: spell shield-any spells casted on person effected will be reflected on caster for period of time spell shield is in effect -Ravnor Darkwater (zenderweb@hotmail.com)
+[11173] Kyorlin: resist poison
+[  445] Kyorlin: rock drops in wastelands
+[13302] Raven: way of the mantis
+[    7] XahXhaX: mobs up to level 101 so we can make invis mobs that won't be seen by any mortal player.
+[  517] Stormwind: make mobs rewield weapons after being disarmed
+[12439] Stormwind: fix town square statue is still in descs
+[11100] Stormwind: favor donations?
+[ 2807] Stormwind: make it possible to start combat with a skill
+[11800] Krypton: <I don't know>
+[12439] Stormwind: spellcraft
+[  529] Stormwind: make shopkeepers detect hidden so they can't tell you if your hiding or not
+[  597] Neab: Druids should be able to get a spell that protects them from stun, similiar to the mages.
+[12439] Neab: Druids for being mage like should get a extradimensional portal spell for holding thier goods.
+[32322] Kyorlin: illusion of class for vampires...can hide the fact they are vampires
+[13305] VirusX: Character should have autolook when they wake up
+[13305] VirusX: Let there be maps for towns
+[13305] Ultima: Have a mini-map on upper screen....easier to see than read
+[13305] Ultima: Have more ppl to come play this game
+[12439] Ultima: i'm intresting in heading a guild..but how do i do that?
+[11206] Elgluth: make eq say its damaged
+[12463] Elgluth: mana lower cost item???
+[12463] Jilorbb: I think there should be an item that reduces mana cost
+[11208] Szithal: bloody ritual
+[11208] Szithal: blood ritual
+[13500] SoulReaper: Make hlist sort by level too
+[13453] SoulReaper: Making the "who list" seperated .. non deadlies(if they still exsist)deadlies,imms
+[    1] Kyorlin: areas newbie
+[12447] Hawkin: Get the bank working.. make it so that you lose gold when you are killed.  Gold has weight.. maybe 1/10 of a pound.  Make different denomiations so that large amounts can be carried around.
+[12447] Hawkin: Make it cost to gain a level. practice skills and so on..
+[12447] Hawkin: when you die you lose exp.  Now I dont know if this already works but they can lose a level if exp falls lower than what it was to gain the level.
+[11173] Kyorlin: fix attacks like gaze
+[11210] Kyorlin: soultaker
+[10202] Kyorlin: onlyclass
+[13703] Kyorlin: exit messages on mobs for when they leave rooms
+[13450] SoulReaper: should there be a limit to what classes and be brought together for multiclassing?  Mage and cleric are oppisites...
+[  533] Szithal: antimale antifemale flag
+[  533] Szithal: affect sex to a certain sex also...possibly race and others too
+[  856] Kyorlin: con_get_align
+[  856] Kyorlin: I like Mage Clerics...besides thats legal buy AD&D rules...
+[11173] Kyorlin: pixie optional fly
+[    7] XahXhaX: note to self: change think color.
+[ 2814] Szithal: fix portals
+[12494] Kyorlin: fix recent to send_to_pager
+[12494] Kyorlin: trans messages
+[    7] XahXhaX: reset frequency based on amount of people populating an area....possible?
+[13303] Eouijaemuik: why dont you give warriors a skill to attack mages in shadowform?
+[13322] Eouijaemuik: each guild should get a special power that others outside the guild do not have
+[13324] Eouijaemuik: and it would be cool if there was an artifact that was in the guild that gives them their power and that it could be removed if someone were to get in there and one guild could get all of the artifacts and have all the powers if they could get them 
+[12465] Eouijaemuik: and if a gui;ld member attacks another member og his guild his power should be taken away and he should be banished from the guild:)
+[11173] Kyorlin: make parry once per round max depending on style
+[11173] Kyorlin: make shopkeepers tell players they can't use stuff
+[13315] Gandalf: saddlebags for pets?
+[    1] Kyorlin: vampire hearts
+[    7] XahXhaX: resistant/immune/susceptible to steal would be really good
+[12322] XahXhaX: weight incorporated somehow into succesful/unsuccessful climbing.  Maybe even a weight-strength ratio
+[  815] Kyorlin: spell that makes things go pos sleep...aura of sleep
+[11707] Munster: smell me bungis
+[12436] Kyorlin: help for bags?
+[11173] Kyorlin: nofollow
+[11174] Kyorlin: multiplay: check connction on port 23...if not port 23 bbs give email to send reason too
+[13301] Kyorlin: petrification...
+[    7] XahXhaX: ***give copyover a parameter to specifiy what time of day the mud begins at***
+[11174] Kyorlin: front row/backrow for groups
+[    7] XahXhaX: _THAT_ is a _kickass_ idea...front back rows...someone else suggested that too I think
+[    7] XahXhaX: Okay, how about no []() allowed for titles for mortals, that way newbies don't get confused when someone claims to be in a guild/council...
+[12611] Necros: ok so when the giulds are done can multiclassed chars join two guilds???
+[  579] Kyorlin: random handedness
+[    9] Archat: Dice command (dice=Heikki throws a dice and get [3])
+[    9] Archat: Leveless eq system
+[    8] Judicanteus: add exits command
+[13316] Lucifer: How about you have Merchants tell you something like this when you cant use equipment..    You cant use that.  Want to buy it anyway Y N?  
+[    7] Strife: none set should be changed to immortal/class name
+[    1] Shilgarn: is there any way you could disable the multiclass

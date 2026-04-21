@@ -1,0 +1,172 @@
+#AREA   {PROTO} Castle's area in progress~
+
+
+
+#VERSION 214
+#AUTHOR Castle~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#12502
+North Garden, at the gate to New Hope, City~
+You are at the north gate to the city of New Hope.  A large, metal gate set
+in the space between the large stone walls that surround the border of the
+town, reaching at least 30 feet high.  You are also at the base of a large
+hill, which slopes upwards to the north, and the Castle of New Hope sits on
+the top.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 12503
+D2
+~
+gate~
+524289 -1 12403
+S
+#12503
+North Garden~
+The path winds back and forth in wide curves up the hill, with flowers and
+ornate statues and decorations set on either side on the well-kept green
+grass.  To the south is the stone wall of the north side of town, with the
+north gate entrance back into the city.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 12502
+D6
+~
+~
+0 -1 12504
+S
+#12504
+North Garden~
+The way the place is kept gives a certain idea of wealth to the kingdom of
+New Hope, with the great invincible castle to the north upon the hill, and
+it's surrounding area where you stand.  When a kingdom can put time and money
+into more trivial things and give off a good appearance, it shows something
+about the richness and prosperity of the land.
+~
+~
+0 0 1 0
+D6
+~
+~
+0 -1 12505
+D9
+~
+~
+0 -1 12503
+S
+#12505
+North Garden Plaza~
+The stone-layed path coming from the north and south directions here come into
+a plaze area, with a great fountain in the middle, flowing with water day and
+night.  Some have chosen this as an alternative to Town Square Central in the
+city, as the peaceful and beauty of the garden gives it a much better
+atmosphere and sets a nicer mood for all who come to visit the area.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 12506
+D7
+~
+~
+0 -1 12507
+D9
+~
+~
+0 -1 12504
+S
+#12506
+North Garden~
+You're at a small side area off to the east side of the Garden Plaza.
+It simply follows the path from the west and ends in a small circle,
+with bushes of flowers surrounding it in all directions.
+~
+~
+0 0 1 0
+D3
+~
+~
+0 -1 12505
+S
+#12507
+North Garden~
+To the southeast the hill levels out, where the Garden Plaza is.
+Just a bit ahead to the north, at the peak of the hill, is the great
+castle of New Hope.  The path continues to wind to the northeast here.
+~
+~
+0 0 1 0
+D6
+~
+~
+0 -1 12508
+D8
+~
+~
+0 -1 12505
+S
+#12508
+North Garden~
+~
+~
+0 0 1 0
+D9
+~
+~
+0 -1 12507
+S
+#12600
+Floating in a void~
+~
+~
+0 0 1 0
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$

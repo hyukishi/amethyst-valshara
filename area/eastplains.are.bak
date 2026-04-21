@@ -1,0 +1,2473 @@
+#AREA   The Eastern Plains~
+
+
+
+#VERSION 200
+#AUTHOR God~
+
+#RANGES
+2 115 1 115
+$
+
+#RESETMSG You take a quick glimpse backwards, but see hardly anything at all...~
+
+#FLAGS
+0 45
+
+#ECONOMY 0 30941414
+
+#CLIMATE 3 1 0
+
+#NEIGHBOR The Ogre Nest~
+
+#NEIGHBOR New Hope~
+
+#NEIGHBOR Newbie Forest Area~
+
+#NEIGHBOR Swamp~
+
+#NEIGHBOR New Hope Castle~
+
+#NEIGHBOR City of New Hope~
+
+#NEIGHBOR City of New Hope Sector 2~
+
+#MOBILES
+#12201
+hermit~
+the hermit~
+The hermit of this hut sits here on the ground.
+~
+It's not quite what you'd have expected, some kind of ape-like creature
+who evidentally is more intelligent then your average creatures.  It's built
+this here hut, and lives by travelling to and from the forest for things, and
+has many varities of these things from the forest lying here, perhaps you can
+bargain with it for some stuff.
+~
+1073743873 0 0 C
+12 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+21 5 0 0 0 0 0
+0 15 0 0 2048 0 0 0
+> greet_prog 100~
+'A visitor!  What do you want?
+~
+> death_prog 100~
+groan
+if rand(20) == 1
+'You haven't beaten me yet.
+mpechoaround $n As the hermit draws it's last breath, it condenses it's power to strike $n dead where $e stands!
+mpechoat $n With it's last breath, the hermit strikes you dead in your tracks!
+mpslay $n
+else
+mpoload 12202 10
+mpecho As the hermit dies, it drops something on the ground.
+drop shield
+endif
+mptransfer hermit 11288
+mpat 12300 mpecho The hermit's corpse returns to the earth from whence it came...
+~
+> act_prog p buys a match.~
+mpecho _lbl The hermit says 'Now bring that match back here anytime and give it to me and I will create for you a fire.'
+~
+> act_prog p gives you a match.~
+mpecho _lbl The hermit says 'You want a fire?  I make for you fire.'
+nw
+mpat 0.$n mpechoat $n You decide to follow the hermit.
+mpat 0.$n mpforce $n nw
+mpecho The hermit strikes the match against the side of it's leg, and the sparks fall into some dry straw, producing a lit fire.
+mpoload 30 1
+mptransfer hermit 12300
+mpat 12242 mpecho The hermit leaves southeast.
+~
+|
+#12202
+rabid squirrel~
+a squirrel~
+A squirrel is running across the fields.
+~
+You happen to spot a quick moving squirrel running across the fields.  It
+seems to be moving in a funny sort of way though, kind of lopsided and
+limping/stumbling every few steps.  Also you notice some kind of discoloration
+near it's mouth.
+~
+69697 0 100 C
+5 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+87 8 0 0 128 128 0
+0 0 65537 0 0 0 262145 0
+> death_prog 10~
+mpecho _red GGRGGGGRGGRGRGAAAAAAAAAAAAAAAAAAAAAAAAAAKKKKKKKKKKKKKKKKK!
+mpecho _lbl The squirrel lets out an aweful noise before slumping over and dying.
+~
+|
+#12203
+stray ogre~
+a stray ogre~
+A stray ogre is wandering away from it's homearea, and somehow ended up here.
+~
+~
+1 0 -400 C
+10 0 0 5d5+200 0d0+0
+11 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+6 8 0 0 17 16 0
+11 10 15 0 0 0 64 0
+> death_prog 100~
+if inroom($i) == 12201
+mpat 11287 drop 11 coins
+endif
+~
+|
+#12204
+wild boar~
+a wild boar~
+A wild boar is roaming the plains for prey.
+~
+It is a rather large, smelly animal.  Like a large pig, only a lot less tame.
+It must have been left behind here some time ago and has now learned to kill
+for it's dinner and survive here on the plains.
+~
+65633 0 0 C
+4 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+87 3 0 0 0 0 0
+0 0 67108865 0 0 0 128 0
+#12205
+wandering gnoll~
+a gnoll~
+A gnoll is wandering about the plains with a lost look on it's face.
+~
+It doesn't appear to be the type of gnoll you would see in the academy.
+Instead this is a rather large sort of it's race, standing at least 6 feet
+tall, with some brute muscles as well.  Life out on the plains obviously can
+strengthen even a gnoll into shape it appears.
+~
+65601 0 0 C
+14 0 0 500d1+0 5d5+10
+8 0
+112 112 0
+25 13 13 13 13 13 13
+0 0 0 0 0
+37 8 0 0 512 512 0
+0 0 1239 0 0 0 0 0
+#12206
+plains scavenger creature~
+a plains scavenger~
+Some kind of plains scavenging creature is crawling along here, eyes shining with alertness.
+~
+It's some kind of mangled, mutated creature that roams these plains here.
+It seems to be missing it's lower torso/legs, and crawls along the ground,
+pulling it's hideous body by it's three arms.  Surveying it for a minute, you
+decide it does not look something you'd want to pick a fight with, as it seems 
+to be content on it's own uninterrupted path.
+~
+16777285 4194344 -300 C
+24 0 -100 10d100+2000 10d12+15
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+89 8 0 0 8192 8192 2
+20 14 2 0 0 256 530 532480
+> act_prog You get a~
+quaff potion
+~
+|
+#12207
+travelling merchant~
+a merchant~
+A travel-worn merchant is wandering the area, attempting to sell her inventory.
+~
+She travells the world over, from plains to swamp to towns, selling her goods
+where she can find a buyer.  She is dressed in a large amount of garment for
+most any weather or climate, and can barely make out what she looks like from
+under a multi-colored pathced hood.
+~
+16779397 0 0 C
+50 0 0 200d20+500 0d0+0
+5000 0
+112 112 2
+13 13 13 13 13 13 13
+0 0 0 0 0
+0 8 0 0 0 0 0
+0 0 0 0 0 0 0 0
+> death_prog 100~
+mpecho Having been wounded and in need of escape, the travelling merchant somehow vanishes in a puff of smoke.
+mpgoto 11287
+~
+|
+#12208
+field mouse~
+a small field mouse~
+A small field mouse twitches it's whiskers at you.
+~
+This tiny field mouse is very wild, but cute in a way.  It
+would be just wrong of you to even consider harming such an
+innocent creature.
+~
+16842753 0 400 C
+2 0 0 0d0+0 0d0+0
+0 0
+112 112 0
+13 13 13 13 13 13 13
+0 0 0 0 0
+77 8 0 0 128 128 0
+0 0 65536 0 0 0 0 0
+#12300
+final mob~
+a newly created final mob~
+Some god abandoned a newly created final mob here.
+~
+~
+1073741825 0 0 S
+0 0 0 0d0+0 0d0+0
+0 0
+108 108 0
+#0
+
+
+#OBJECTS
+#12201
+match~
+a match~
+A match from the hermit on the fields is here.~
+~
+43 0 1
+0 0 0 0
+1 7 10
+#12202
+bamboo shield~
+a bamboo shield~
+Someone has left some bamboo here.~
+~
+9 0 513
+20 0 0 0
+1 0 0
+E
+'bamboo' 'shield'~
+It is a shield, at least to your best guess, that's what it appeasr to be.
+A multiple of bamboo poles arranged of descending then ascending lengths,
+then tied together with some sort of vine rope.  Obviously a homemade job,
+and not anything much to look at either, but does it really work?
+~
+A
+40 50
+A
+48 50
+A
+14 30
+A
+13 20
+#12203
+boar's boars meat~
+some boar's meat~
+A chunk of cooked boar meat has been dropped here.~
+~
+19 0 1
+20 0 0 0
+1 7 20
+#12204
+boarhide sling~
+a boarhide sling~
+A rather poorly made boarhide sling lies here.~
+~
+55 0 262145
+7 0 0 16
+1 100 50
+#12205
+boar's boars tusk knife~
+a boar's tusk~
+A tusk shaped like a jagged knife is laying here.~
+~
+5 0 8193
+9 0 0 2
+1 75 140
+E
+'boars' 'boar' 'tusk' 'knife' 'jagged'~
+It is a large white tusk of a boar, much like the ones found roaming the
+eastern plains.  It has been obviously hand carved into a tool/weapon of
+sort, a jagged knife.
+~
+A
+27 512
+#12206
+squirrel squirrels squirrel's teeth~
+a pair of squirrel's teeth~
+A set of squirrel's teeth are on the ground.~
+~
+5 0 8193
+12 2 8 10
+1 200 300
+E
+'teeth' 'squirrels' 'squirrel' 'pair' 'set'~
+It is two squirrels teeth that have been hollowed out in the middle from
+the top downwards, then set in some kind of tusk, like that of the boar's
+tusk.  It would be interesting to find a good use for these, they surely
+must have some purpose.
+~
+A
+30 33
+#12207
+hermit's hermits clothing~
+some hermit's clothing~
+A pile of clothing lays here, it resembles a toga of sort.~
+~
+13 0 9
+0 0 0 0
+1 0 0
+E
+'hermits' 'clothing' 'toga'~
+It's a full series of clothing from top to bottom, kind of like a toga of
+sort, the hermit in the hut made it to wear from slabs of boar hide, squirrel
+fur, and a few other unrecognizable pelts and skins from in and around the
+forests.
+~
+#12208
+cloak shadows~
+a cloak of shadows~
+Someone has left some dark garment here.~
+~
+9 0 1025
+0 0 0 0
+1 300 1000
+E
+'cloak' 'shadows'~
+It is made of a very dark material that somehow seems to blend into almost
+any background.  Wearing this makes you fee
+as if you're not even in the room
+sometimes.  An interesting article of clothing at a rather costly price.
+~
+A
+13 -10
+A
+37 10
+A
+36 10
+#12209
+gold nugget~
+a gold nugget~
+A lump of gold has been dropped here!~
+~
+8 0 1
+0 0 0 0
+20 5000 500
+E
+'nugget' 'gold' 'lump'~
+It's a good zize, slightly heavy gold nugget, definetely worth something to
+anyone who collects things of gold or treasure.  Surely you can get some
+actual money for this somewhere.
+~
+#12210
+scimitar~
+a scimitar~
+A thick, curved blade is laying on the ground here.~
+~
+5 524288 8193
+10 0 0 3
+12 100 890
+E
+scimitar~
+It looks like it's from some distant land.  You've heard stories about priates
+on ships, and even men in deserts who wield this as the weapon of choice.
+Holding it in your hands, you find it gives you a sense of courage to know that
+you too hold this blade.
+~
+A
+18 1
+A
+5 1
+A
+19 2
+#12211
+quilted patched garment~
+an old garment full of patches~
+A quilted pile of clothing has been dropped here.~
+~
+13 0 1025
+0 0 0 0
+1 0 0
+#12212
+basic gerneric whip~
+a whip~
+A basic, generic whip is laying here in a curled position.~
+~
+5 0 8193
+10 0 0 4
+1 70 760
+E
+'whip' 'generic' 'basic'~
+An incredibly lightweight weapon, you barely even notice it.  It's definetely
+not the greatest whip in all the lands, just your basic generic whip.
+~
+A
+31 2
+#12213
+bifocal glasses~
+a pair of bifocal glasses~
+Someone has dropped their glasses here.~
+~
+13 0 131073
+0 0 0 0
+1 80 400
+A
+42 10
+#12300
+final object~
+a newly created final object~
+Some god dropped a newly created final object here.~
+~
+13 1073741824 0
+0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#12201
+The Eastern Plains, at the gate to New Hope~
+You are in the Eastern Plains, which occupy the eastern side of the continent.
+It is mainly open fields, whith the exception of some small trees, terribly
+worn from the weather.  Seems not much can survive outside of the sanctuary
+of the walls of town, at least not very well.  And with the openess of these
+plains comes easy moveability.  All directions are open to you, supposing
+you can keep from becoming lost.
+Before you stands an enormous gate leading to the town of New Hope.
+~
+0 1073741824 2 9
+D0
+~
+~
+0 -1 12210
+D1
+~
+~
+0 -1 12216
+D2
+~
+~
+0 -1 12202
+D3
+~
+gate~
+655361 -1 12480
+D6
+~
+~
+0 -1 12220
+D7
+~
+~
+0 -1 12211
+D8
+~
+~
+0 -1 12221
+D9
+~
+~
+0 -1 12203
+> entry_prog 100~
+if ispc($n)
+if wasinroom($n) == 12480
+else
+mpat 12201 mpforce gate 'Greetings stranger.  Enjoy your stay in New Hope.  If this is your first visit to the town then please see "help new hope"
+endif
+endif
+~
+|
+S
+#12202
+The Eastern Plains, s of the gate to New Hope~
+You can see to the north the gate leading to the town of New Hope.
+You can also see the wall of the town travelling from just northwest to the
+southwest.  Otherwise it is pretty desolate.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12201
+D1
+~
+~
+0 -1 12221
+D2
+~
+~
+0 -1 12205
+D3
+~
+~
+0 -1 12203
+D6
+~
+~
+0 -1 12216
+D8
+~
+~
+0 -1 12222
+D9
+~
+~
+0 -1 12204
+S
+#12203
+The Eastern Plains~
+Right to the west as well as the north is the wall surrounding the town
+of New Hope.  It continues past you to the south for as far as you can see
+from here.  The weather is harsh on you, it feels very uncomfortable,
+and you think how much nicer it would be INSIDE the town.
+~
+0 1073741824 2 2
+D1
+~
+~
+0 -1 12202
+D2
+~
+~
+0 -1 12204
+D6
+~
+~
+0 -1 12201
+D8
+~
+~
+0 -1 12205
+S
+#12204
+The Eastern Plains~
+To the immediate west of you is a large stone wall, continuing from
+the south as well as the north.  It is very high, and though it is made
+of seperate, individual gray stones it is not climable, so you can't see
+over it into the town.  At least not at this part you can't.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12203
+D1
+~
+~
+0 -1 12205
+D2
+~
+~
+0 -1 12206
+D6
+~
+~
+0 -1 12202
+D8
+~
+~
+0 -1 12207
+S
+#12205
+The Eastern Plains~
+If you look to the western distance you can see a rather large stone
+wall (both obviously in height and length).  It is only a little bit
+aways, you could reach it in a matter of minutes.  It looks to be the
+eastern edge of the town of New Hope.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12202
+D1
+~
+~
+0 -1 12222
+D2
+~
+~
+0 -1 12207
+D3
+~
+~
+0 -1 12204
+D6
+~
+~
+0 -1 12221
+D7
+~
+~
+0 -1 12203
+D8
+~
+~
+0 -1 12223
+D9
+~
+~
+0 -1 12206
+S
+#12206
+The Eastern Plains~
+You look to the west and see the usual stone wall, and smoke coming up
+from somewhere behind it.  Most likely it comes from an alchemist,
+blacksmith, inn, something along those lines.  It smells rather good
+really, and you think to yourself about getting into town to check it
+out.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12204
+D1
+~
+~
+0 -1 12207
+D2
+~
+~
+0 -1 12209
+D6
+~
+~
+0 -1 12205
+D8
+~
+~
+0 -1 12208
+S
+#12207
+The Eastern Plains~
+To the northwest and west you can see a long gray stone wall running
+along what must be the eastern side of town.  It is just a little bit
+ahead really.  To the west however you can make out what looks to be
+smoke coming from the other side of the wall!!
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12205
+D1
+~
+~
+0 -1 12223
+D2
+~
+~
+0 -1 12208
+D3
+~
+~
+0 -1 12206
+D6
+~
+~
+0 -1 12222
+D7
+~
+~
+0 -1 12204
+D8
+~
+~
+0 -1 12212
+D9
+~
+~
+0 -1 12209
+S
+#12208
+The Eastern Plains~
+You find yourself just off from the town's large stone wall.  At your feet
+the color of the grass turns to a sicker brown instead of the fresher green you
+would expect within the safety of a town.  But as the grass wears thin, it
+picks up into a wide dirt area, almost a trail.  Though this hasn't been worn
+by the footsteps of travellers, it is the vast years of harsh weather the
+outter lands are subjected to through the seasons.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12207
+D1
+~
+~
+0 -1 12212
+D2
+~
+~
+0 -1 12214
+D3
+~
+~
+0 -1 12209
+D6
+~
+~
+0 -1 12223
+D7
+~
+~
+0 -1 12206
+D8
+~
+~
+0 -1 12215
+D9
+~
+~
+0 -1 12213
+S
+#12209
+The Eastern Plains~
+You look to your side at the usual western stone wall.  It stands tall
+at what you'd estimate a good twenty feet at least, all composed of large,
+gray stones.  You look at it for a moment.  It is built well to keep anyone
+from ever getting over it.  Though on closer examination of the wall you find
+a small series of rocks leading up the wall which stick out far enough to
+perhaps carry your feet to ascend over it.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12206
+D1
+~
+~
+0 -1 12208
+D2
+~
+~
+0 -1 12213
+D6
+~
+~
+0 -1 12207
+D8
+~
+~
+0 -1 12214
+S
+#12210
+The Eastern Plains, n of the gate to New Hope~
+Just to the south a bit is the gate to New Hope.  A very sound sight for you,
+compared to the hardships of the desolate and worn plains.  In the distance
+you pick up a God-aweful howl of some kind, making the gate and the inner
+safety it provides seem pretty good right now.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12218
+D1
+~
+~
+0 -1 12220
+D2
+~
+~
+0 -1 12201
+D3
+~
+~
+0 -1 12211
+D6
+~
+~
+0 -1 12219
+D8
+~
+~
+0 -1 12216
+S
+#12211
+The Eastern Plains, nw of the gate to New Hope~
+Just south of your position is the stone wall surrounding the town.  Facing
+south you watch the wall go just to the east then turn to the south further
+where it will meet with the northeastern gate to the town.  To your immediate
+west you see the wall too, perhaps it's purpose is more for this land moreso
+than the town...
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12217
+D1
+~
+~
+0 -1 12210
+D6
+~
+~
+0 -1 12218
+D8
+~
+~
+0 -1 12201
+S
+#12212
+The Eastern Plains~
+You attempt to search this no-man's land with your eyse, scanning the distance
+as far as you can possibly make yourself.  You see nothing from here, not even
+your back to where you came from.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12223
+D1
+~
+~
+0 -1 12259
+D2
+~
+~
+0 -1 12215
+D3
+~
+~
+0 -1 12208
+D6
+~
+~
+0 -1 12232
+D7
+~
+~
+0 -1 12207
+D9
+~
+~
+0 -1 12214
+S
+#12213
+The Eastern Plains~
+You find the plains rather boring, and so you get down on your hands
+and knees to count the blades of grass..............................
+Yeppers, just as you thought!  There are two billion, ninety five million,
+two hundred seven thousand, three hundred ninety eight blades of grass
+here, which is five million, 3 thousand, nine hundred sixty one less
+than the last area, and four million, three hundred thirty one thousand,
+nine hundred ten more than the one before that.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12209
+D1
+~
+~
+0 -1 12214
+D6
+~
+~
+0 -1 12208
+S
+#12214
+The Eastern Plains~
+You look on to the east in amazement.  Before your eyes across the distance
+you can spot with accuracy the grass fading and turning into a huge dirt trail
+of sort.  The land seems to turn to dirt and become a no-man's land right here.
+Fascinating.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12208
+D1
+~
+~
+0 -1 12215
+D3
+~
+~
+0 -1 12213
+D6
+~
+~
+0 -1 12212
+D7
+~
+~
+0 -1 12209
+S
+#12215
+The Eastern Plains~
+The once grassy plains have become an almost wasteland.  You have not seen
+a living thing as long as you've been out here.  Most likely anything else
+that would have came out here found the constant change from pounding rains
+and thunders to ardent heat unbearable and either gave up and died here or
+took off for it's own life.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12212
+D3
+~
+~
+0 -1 12214
+D6
+~
+~
+0 -1 12259
+D7
+~
+~
+0 -1 12208
+S
+#12216
+The Eastern Plains, e of the gate to New Hope~
+In the short distance to the west you can see the town gate to New Hope,
+standing standing mighty and indifferent to the harsh passing of time
+and weather around it.  Extending from it north to south is a great wall
+made of gray stone reaching high off the ground.  You look around you
+elsewhere to see what you can, though there is nothing from where you
+stand.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12220
+D1
+~
+~
+0 -1 12224
+D2
+~
+~
+0 -1 12221
+D3
+~
+~
+0 -1 12201
+D7
+~
+~
+0 -1 12210
+D8
+~
+~
+0 -1 12225
+D9
+~
+~
+0 -1 12202
+S
+#12217
+The Eastern Plains~
+You stand upon the border of what looks to be a pretty large forest.  It
+reaches a bit past here to the west, though there is no way to get back
+there between the wall and the large trees.  It also continues to the east,
+where you can see take a turn off to the south.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12218
+D2
+~
+~
+0 -1 12211
+S
+#12218
+The Eastern Plains~
+You now come to a small opening of the trees, where you can enter into the
+forest, which continues in both directions east and west, to the east being it
+turns south and cuts through the plains.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12219
+D2
+~
+~
+0 -1 12210
+D3
+~
+~
+0 -1 12217
+D8
+~
+~
+0 -1 12220
+D9
+~
+~
+0 -1 12211
+S
+#12219
+The Eastern Plains~
+You come to a small area of the plains, much like a haven.  You stand in a
+corner where the edge of the forest to the north of you reaches to the west and
+south.  You look at the trees on this edge of the forest and can't seem to find
+any place where you can enter into the forest.
+~
+0 1073741824 2 1
+D2
+~
+~
+0 -1 12220
+D3
+~
+~
+0 -1 12218
+D9
+~
+~
+0 -1 12210
+S
+#12220
+The Eastern Plains, ne of the gate to New Hope~
+Just to the southwest of your position you can see the large gate to the town
+of New Hope.  You can also see to the north, about the same distance as to the
+gate, the edge of a forest.  The trees are large and in many numbers, you don't
+quite see a way to get in, though you are a little far to tell.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12219
+D2
+~
+~
+0 -1 12216
+D3
+~
+~
+0 -1 12210
+D7
+~
+~
+0 -1 12218
+D8
+~
+~
+0 -1 12224
+D9
+~
+~
+0 -1 12201
+S
+#12221
+The Eastern Plains~
+To the northwest a bit up the ways you see the large gate to the town of
+New Hope.  You are walking along a sort of line in a way, where the western
+grass turns to dust in the eastern wasteland of the brown plains.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12216
+D1
+~
+~
+0 -1 12225
+D2
+~
+~
+0 -1 12222
+D3
+~
+~
+0 -1 12202
+D6
+~
+~
+0 -1 12224
+D7
+~
+~
+0 -1 12201
+D8
+~
+~
+0 -1 12226
+D9
+~
+~
+0 -1 12205
+S
+#12222
+The Eastern Plains~
+You look out to the east but all you can see is a land uninhabited for a very
+long time.  And to the west you can just barely make out the shadow of the
+great stone wall which surrounds the town, the only signs of civilization for
+as far as you can see.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12221
+D1
+~
+~
+0 -1 12226
+D2
+~
+~
+0 -1 12223
+D3
+~
+~
+0 -1 12205
+D6
+~
+~
+0 -1 12225
+D7
+~
+~
+0 -1 12202
+D8
+~
+~
+0 -1 12232
+D9
+~
+~
+0 -1 12207
+S
+#12223
+The Eastern Plains~
+You examine the soil at your feet.  It is moist, and unusual for this area.
+Perhaps even more unusual is the tree at which's base it lays.  An unimpressive
+tree, though it is very green and seems to be well surviving.  But how it is
+living is the question on your mind.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12222
+D1
+~
+~
+0 -1 12232
+D2
+~
+~
+0 -1 12212
+D3
+~
+~
+0 -1 12207
+D6
+~
+~
+0 -1 12226
+D7
+~
+~
+0 -1 12205
+D8
+~
+~
+0 -1 12259
+D9
+~
+~
+0 -1 12208
+S
+#12224
+The Eastern Plains~
+Below your feet lies a morose kind of ground. You are walking along simple
+dirt, trying to find anything around here at all.  You see some trees which
+grow up from the ground, and cut across the terrain from the east and continue
+on to the north by northwest.
+~
+0 1073741824 2 2
+D2
+~
+~
+0 -1 12225
+D3
+~
+~
+0 -1 12216
+D7
+~
+~
+0 -1 12220
+D8
+~
+~
+0 -1 12227
+D9
+~
+~
+0 -1 12221
+S
+#12225
+The Eastern Plains~
+Right before you to the west you can see the dirt you are standing upon fade
+and become taken over by greener grass, signs of better prosperity ahead
+towards where the town of New Hope should be loacted at.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12224
+D1
+~
+~
+0 -1 12227
+D2
+~
+~
+0 -1 12226
+D3
+~
+~
+0 -1 12221
+D7
+~
+~
+0 -1 12216
+D8
+~
+~
+0 -1 12228
+D9
+~
+~
+0 -1 12222
+S
+#12226
+The Eastern Plains~
+To the west you see that odd line between grass and ruin.  Not exactly a line,
+but a very small spectrum, it only takes about two or three feet for the grass
+to wear away and only dirt is left in it's position, and you wonder what this
+is all about, and if anyone else knows of this.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12225
+D1
+~
+~
+0 -1 12228
+D2
+~
+~
+0 -1 12232
+D3
+~
+~
+0 -1 12222
+D6
+~
+~
+0 -1 12227
+D7
+~
+~
+0 -1 12221
+D8
+~
+~
+0 -1 12233
+D9
+~
+~
+0 -1 12223
+S
+#12227
+The Eastern Plains~
+Despite the fact that at your feet lays miles and miles of wasteland to the
+south and around you, there is a giant forest growing to the north which
+spreads somewhere from the east and across the west by northwest further than
+you can see from here.  The trees are very tall, thick, and sturdy and produce
+many thousands upon thousands of green leaves high above you.  A very odd thing
+to find indeed...
+~
+0 1073741824 2 1
+D2
+~
+~
+0 -1 12228
+D3
+~
+~
+0 -1 12225
+D7
+~
+~
+0 -1 12224
+D9
+~
+~
+0 -1 12226
+S
+#12228
+The Eastern Plains~
+Standing high above you are many trees, which together produce a forest across
+the north portion of the plains.  However, these many trees are grouped
+together unsually close, and you can't seem to find an entrance here to
+get into the inner parts of the forest.  You look to the south, and find it
+to be very empty, so perhaps following this border of trees as it leads both
+north to the west and east wouldn't be such a bad idea.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12227
+D2
+~
+~
+0 -1 12233
+D3
+~
+~
+0 -1 12226
+D7
+~
+~
+0 -1 12225
+D8
+~
+~
+0 -1 12229
+D9
+~
+~
+0 -1 12232
+S
+#12229
+The Eastern Plains~
+You are along the outskirts of a great forest.  The large trees which make it
+up are very green and healty, and thus seem to be surviving very well on their
+own despite the great wasteland and emptiness to the south and all around you.
+You can't seem to find a way in, though if you look hard enough you're sure
+there must be an opening to squeeze through somewhere.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12231
+D2
+~
+~
+0 -1 12257
+D3
+~
+~
+0 -1 12233
+D6
+~
+~
+0 -1 12230
+D7
+~
+~
+0 -1 12228
+D8
+~
+~
+0 -1 12237
+D9
+~
+~
+0 -1 12258
+S
+#12230
+The Eastern Plains~
+You stand at the edge of a great forest.  You can hear simple but familiar
+noises from within such as birds and rustling of leaves.  Right before you to
+the west is an actual opening into the forest, marked by something of a path
+from the dirt of this here wasteland.  Otherwise the trees are bunched together
+in an incredibly unusual manner.
+~
+0 1073741824 2 1
+D2
+~
+~
+0 -1 12231
+D8
+~
+~
+0 -1 12234
+D9
+~
+~
+0 -1 12229
+S
+#12231
+The Eastern Plains~
+You walk through the dirt, or more like tread after this long of a time, just
+off from a large forest to the northwest.  Is it a mirage, you consider, but
+no.  A forest of this size is very hard to miss, and is most definetely here.
+Otherwise all you find is more and more of the same exact thing, nothing at
+all, surrounding you and encompassing you everywhere here.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12230
+D1
+~
+~
+0 -1 12234
+D2
+~
+~
+0 -1 12237
+D3
+~
+~
+0 -1 12229
+D8
+~
+~
+0 -1 12238
+D9
+~
+~
+0 -1 12257
+S
+#12232
+The Eastern Plains~
+You are walking throught the plains like you have been so far, and notice
+a few footprints along the ground, heading to the east.  Most of them have
+already been covered away, but these few are imprinted in stronger terrain and
+thus are preserving very nicely.  You don't see much else around here to the
+west, and a forest of some sort far north.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12226
+D1
+~
+~
+0 -1 12233
+D2
+~
+~
+0 -1 12259
+D3
+~
+~
+0 -1 12223
+D6
+~
+~
+0 -1 12228
+D7
+~
+~
+0 -1 12222
+D8
+~
+~
+0 -1 12258
+D9
+~
+~
+0 -1 12212
+S
+#12233
+The Eastern Plains~
+Your eyes pick up a small amount of footprints along the ground, imbedded in
+some rather rough patches of dirt, coming from just east where you can see the
+rest of them, and facing west, but they end here.  They are large and
+apparently the features suggest an ogre or orc or troll of some sort.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12228
+D1
+~
+~
+0 -1 12229
+D2
+~
+~
+0 -1 12258
+D3
+~
+~
+0 -1 12232
+D7
+~
+~
+0 -1 12226
+D8
+~
+~
+0 -1 12257
+D9
+~
+~
+0 -1 12259
+S
+#12234
+The Eastern Plains~
+To the north are many large trees, forming a very thick forest with no signs of
+an entry point of any form anywhere here.  The regular plains ground begins to
+climb in an uphill manner though and continues to the east.
+Off in the distance to the south, and a bit west, you can see a very small
+structure in the distance.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12235
+D2
+~
+~
+0 -1 12238
+D3
+~
+~
+0 -1 12231
+D7
+~
+~
+0 -1 12230
+D9
+~
+~
+0 -1 12237
+S
+#12235
+The Eastern Plains~
+You stand at the edge of a large forest, with many large, thick trees
+bordering it, though you can hear many animal noisese and such on the
+inside.  They are too close together here to enter, though it comes to a
+corner just to the east, and further to the west.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12236
+D3
+~
+~
+0 -1 12234
+D9
+~
+~
+0 -1 12238
+S
+#12236
+The Eastern Plains~
+You are on top of a hill.  There are trees just to the northwest and northeast
+with a small clearing just north for entry into the forest.  The trees also
+continue along the east, not allowing travel any further east.  To the
+south the plains stretch long and wide and continue to the west for the most
+part.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 3100
+D3
+~
+~
+0 -1 12235
+S
+#12237
+The Eastern Plains~
+Just a bit ahead to the northeast and northwest you can see many trees,
+which obviously have formed a forest of some extent.  You can't see much
+west, though you do know that the town is somewhere from looking at the 
+sky.  To the south however is something a bit more interesting, though it's
+too far away to tell what it is exactly.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12231
+D1
+~
+~
+0 -1 12238
+D2
+~
+~
+0 -1 12240
+D3
+~
+~
+0 -1 12257
+D6
+~
+~
+0 -1 12234
+D7
+~
+~
+0 -1 12229
+D8
+~
+~
+0 -1 12239
+D9
+~
+~
+0 -1 12251
+S
+#12238
+The Eastern Plains~
+You find the forest to the northeast and northwest comes around far east and
+is coming south right where you stand, then breaks back off east where you
+can't quite see it from here.  Also you can see something in the southern
+distance, though it's too far to tell what it is exactly from here.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12234
+D2
+~
+~
+0 -1 12239
+D3
+~
+~
+0 -1 12237
+D6
+~
+~
+0 -1 12235
+D7
+~
+~
+0 -1 12231
+D9
+~
+~
+0 -1 12240
+S
+#12239
+The Eastern Plains~
+Here the ground takes on some changes, changing from desolate rotting ground
+to full vegetation, with the forest to the north and south, extending east,
+and an opening to walk through here to the east.  Also to the southwest you
+can see a structure, which appears to be a small cabin or hut from here.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12238
+D1
+~
+~
+0 -1 11992
+D3
+~
+~
+0 -1 12240
+D7
+~
+~
+0 -1 12237
+D9
+~
+~
+0 -1 12241
+S
+#12240
+The Eastern Plains~
+The forest is here, enveloping the area just to the northeast and east,
+and it runs south for as far as you can see.  Also to the direct south
+you can see a small hut looking thing, seeing as how you're pretty close
+to it.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12237
+D1
+~
+~
+0 -1 12239
+D2
+~
+~
+0 -1 12241
+D3
+~
+~
+0 -1 12251
+D6
+~
+~
+0 -1 12238
+D7
+~
+~
+0 -1 12257
+D9
+~
+~
+0 -1 12248
+S
+#12241
+The Eastern Plains~
+You are approaching the small hut.  You can see now it is indeed a hut in
+fact, though the question is who on earth would be living out here.  Also,
+you see unfortunately that the forest wraps all the way around from the east
+and goes along the south of the plains very far to the west, past the hut.
+No telling if you're going to be able to venture any further south with that
+in the way...
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12240
+D2
+~
+~
+0 -1 12242
+D3
+~
+~
+0 -1 12248
+D6
+~
+~
+0 -1 12239
+D7
+~
+~
+0 -1 12251
+S
+#12242
+The Eastern Plains, at a hut~
+You have now reached the hut.  It isn't very high off the ground, it's only
+maybe 7 to 8 feet tall max.  Not incredibly wide either, almost like a tent
+or a tee-pee, though it is made of all kinds of miscellaneous woods and straw,
+probably gathered from within this forest here.  It rests on the outskirts
+of the trees in this corner of the plains, as they continue west and north.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12241
+D3
+~
+~
+0 -1 12247
+D7
+~
+~
+0 -1 12248
+D8
+~
+~
+16781312 -1 12300
+D9
+~
+~
+0 -1 12246
+S
+#12243
+The Eastern Plains~
+You stand here along the edge of a major forest, one which continues further
+then the eye can see to the east and northeast.  The trees are very large,
+not to mention placed together very tightly, so there's no way to get into
+forest at any point here.
+~
+0 1073741828 2 1
+D0
+~
+~
+0 -1 12244
+D3
+~
+~
+0 -1 12252
+D6
+~
+~
+0 -1 12245
+D7
+~
+~
+0 -1 12253
+S
+#12244
+The Eastern Plains~
+The ground here seems dead at best, showing no signs of possible planting any
+sort of plant life.  Yet just to the south is a forest which seems to grow
+out of the ground, but doesn't seem natural to better sense.  This forest
+also continues northwards far east, and to the east along the border you can
+make out a small shape in the distance.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12256
+D1
+~
+~
+0 -1 12245
+D2
+~
+~
+0 -1 12243
+D3
+~
+~
+0 -1 12253
+D6
+~
+~
+0 -1 12249
+D9
+~
+~
+0 -1 12252
+S
+#12245
+The Eastern Plains~
+Just further to the east, and a little to the northeast, you can spot what
+appears to be small structure, like a house or hut of some sort.  Why anyone
+would build their residence out here is beyond anyone's guess, but it looks
+worthy to check out.
+~
+0 1073741824 2 2
+D0
+~
+~
+0 -1 12249
+D1
+~
+~
+0 -1 12246
+D3
+~
+~
+0 -1 12244
+D6
+~
+~
+0 -1 12247
+D7
+~
+~
+0 -1 12256
+D9
+~
+~
+0 -1 12243
+S
+#12246
+The Eastern Plains~
+You are close to a hut, which stands just to the east past some trees, so
+you will have to go around northeast then down if you wanted to get to it.
+To the north and west you can't see anything over the horizon, except more and
+more empty land.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12247
+D3
+~
+~
+0 -1 12245
+D6
+~
+~
+0 -1 12242
+D7
+~
+~
+0 -1 12249
+S
+#12247
+The Eastern Plains~
+Looking off to the west and north, you see nothing but an endless stretch of
+open land, with the occasional creature of some sort hunting for it's meal
+off aways.  Just to the east stands a small hut, though from here you can't
+tell if it is abandoned or not.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12248
+D1
+~
+~
+0 -1 12242
+D2
+~
+~
+0 -1 12246
+D3
+~
+~
+0 -1 12249
+D7
+~
+~
+0 -1 12250
+D9
+~
+~
+0 -1 12245
+S
+#12248
+The Eastern Plains~
+Just to the east is the edge of more forest.  You can't figure out how the
+forest grows out here, it seems simple that it wouldn't consume these plains
+because of the state of the land, totally unpleasant to any kind of farming
+without a doubt.  You look the the west and northwest and don't see anything
+except what seems to be a lone tree in the middle of these plains.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12251
+D1
+~
+~
+0 -1 12241
+D2
+~
+~
+0 -1 12247
+D3
+~
+~
+0 -1 12250
+D6
+~
+~
+0 -1 12240
+D7
+~
+~
+0 -1 12260
+D8
+~
+~
+0 -1 12242
+D9
+~
+~
+0 -1 12249
+S
+#12249
+The Eastern Plains~
+Far off to the east you can see a small building, which must be the hut.
+About the same distance, though to the north, you spot a lone tree standing
+erect against the horizon, which holds nothing else, either north or to
+the west, at least as far as you can see from here anyways.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12250
+D1
+~
+~
+0 -1 12247
+D2
+~
+~
+0 -1 12245
+D3
+~
+~
+0 -1 12256
+D6
+~
+~
+0 -1 12248
+D8
+~
+~
+0 -1 12246
+D9
+~
+~
+0 -1 12244
+S
+#12250
+The Eastern Plains~
+Just a little further to the north is a single tree, which you have probably
+noticed for awhile now in the area surrounding it.  It is rather hard to miss
+and is odd since it is not connected to the rest of the forest surrounding
+these plains.
+~
+0 1073741824 2 2
+D0
+~
+~
+0 -1 12260
+D1
+~
+~
+0 -1 12248
+D2
+~
+~
+0 -1 12249
+D6
+~
+~
+0 -1 12251
+D8
+~
+~
+0 -1 12247
+D9
+~
+~
+0 -1 12256
+S
+#12251
+The Eastern Plains~
+You take a moment to reflect on your surroundings, which evidentally has not
+changed for some time.  You believe New Hope to be west of here, though you
+can't tell from this far away.  There is a single tree not connected to
+anything else here to the immediate west, and a forest which is from the east
+to the southeast then runs along the far south, though that's a bit far.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12257
+D1
+~
+~
+0 -1 12240
+D2
+~
+~
+0 -1 12248
+D3
+~
+~
+0 -1 12260
+D6
+~
+~
+0 -1 12237
+D7
+~
+~
+0 -1 12258
+D8
+~
+~
+0 -1 12241
+D9
+~
+~
+0 -1 12250
+S
+#12252
+The Eastern Plains~
+You are at the end of the eastern plains, where they run into a forest just
+to the south of you.  Also to the south is an opening in the forest, into a
+sort of pathway, and you can hear wildlife sounds from within even where you
+stand.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12253
+D1
+~
+~
+0 -1 12243
+D2
+~
+~
+0 -1 12824
+D6
+~
+~
+0 -1 12244
+D7
+~
+~
+0 -1 12254
+S
+#12253
+The Eastern Plains~
+Just off to the south you see a border of trees lining the entire southern
+end of the eastern plains.  Massive trees, reaching up to the sky, a nice
+sight in itself...  To the west you can see your deader side of the ground
+come back to a more revived look, with New Hope probably somewhere further
+down the way.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12244
+D2
+~
+~
+0 -1 12252
+D3
+~
+~
+0 -1 12254
+D6
+~
+~
+0 -1 12256
+D8
+~
+~
+0 -1 12243
+S
+#12254
+The Eastern Plains~
+A line of trees cuts the plains short to the south of here, stretching from
+wall of New Hope to the west to far in the west.  Although you can't find
+a way into the forest where you stand now, you're bound to be able to find
+a way in if you follow the borderline.  Though to the east of here the ground
+turns browner and the grass dies off.
+~
+0 1073741824 2 2
+D1
+~
+~
+0 -1 12253
+D3
+~
+~
+0 -1 12255
+D8
+~
+~
+0 -1 12252
+S
+#12255
+The Eastern Plains~
+You're practically in a corner of the plains, with the stone wall of New Hope
+to the west of you, and a forest to the south of you.  The plains stretch out
+to the north and northeast however, and you can sometimes see a small figure
+running around in the distance, probably searching for prey.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12254
+S
+#12256
+The Eastern Plains~
+You're somewhere towards the center of plains, without anything really
+around you or in sight.  However, you do see towering trees lining across
+the southern end of the plains, just a little further south from where
+you are right now.
+~
+0 1073741824 2 1
+D1
+~
+~
+0 -1 12249
+D2
+~
+~
+0 -1 12244
+D6
+~
+~
+0 -1 12250
+D8
+~
+~
+0 -1 12245
+D9
+~
+~
+0 -1 12253
+S
+#12257
+The Eastern Plains~
+Coming up to the southwest just ahead of you stands a lone tree, not
+an impressively large or even healthy tree for the matter, but
+still once of the only things out here in the otherwise rather
+desolate area of the eastern plains.  Further to the north though is a
+line of trees, grouped together as a forest across the north side of
+the plains.
+~
+0 1073741824 2 2
+D0
+~
+~
+0 -1 12229
+D1
+~
+~
+0 -1 12237
+D2
+~
+~
+0 -1 12251
+D3
+~
+~
+0 -1 12258
+D6
+~
+~
+0 -1 12231
+D7
+~
+~
+0 -1 12233
+D8
+~
+~
+0 -1 12240
+D9
+~
+~
+0 -1 12260
+S
+#12258
+The Eastern Plains~
+You're somewhere in the middle of the plains, with not a lot of anything
+impressive around you, with the exception of that single tree to the
+direct south of you, which is somehow seperated from the forests that line
+both the northern and southern ends of the forest.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12233
+D1
+~
+~
+0 -1 12257
+D2
+~
+~
+0 -1 12260
+D3
+~
+~
+0 -1 12259
+D6
+~
+~
+0 -1 12229
+D7
+~
+~
+0 -1 12232
+D8
+~
+~
+0 -1 12251
+S
+#12259
+The Eastern Plains~
+You are standing towards the northwest of the lone tree in the plains,
+which happens to be only a few steps to the southeast from right here.
+Out to the northeast you can see the ill, nonliving ground change to a
+nicer, more normal looking grass-covered plains, surrounding New Hope
+which is just further west of here.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12232
+D1
+~
+~
+0 -1 12258
+D3
+~
+~
+0 -1 12212
+D6
+~
+~
+0 -1 12233
+D7
+~
+~
+0 -1 12223
+D8
+~
+~
+0 -1 12260
+D9
+~
+~
+0 -1 12215
+S
+#12260
+The Eastern Plains~
+You look down at the ground beneath your feet as you quickly move through the
+plains, not wanting to be here a minute longer than necessary.  Luckily you
+look up just as you come to a rather large tree.  Somehow in the middle of
+nowhere this tree seems to be surviving, despite what years of cold and harsh
+weather and the absence of any water for miles.  Many questions run through
+your mind on this peculiar occurrence, and what odd fate may have led you to
+it.  You study it over, and see many long, strong branches leading up to the
+top hidden in the green leafage.
+~
+0 1073741824 2 1
+D0
+~
+~
+0 -1 12258
+D1
+~
+~
+0 -1 12251
+D2
+~
+~
+0 -1 12250
+D6
+~
+~
+0 -1 12257
+D7
+~
+~
+0 -1 12259
+D8
+~
+~
+0 -1 12248
+S
+#12299
+Swamp shop~
+Here you have stubled upon another no-name, backwoods shop in the middle of
+nowhere.  This is simply a small cave-like hole cut away in a huge mess of
+vines and other vegetation, where someone usually comes to sell some oddly
+or hand crafted items.
+~
+0 1073741837 0 1
+S
+#12300
+Inside a small hut~
+You are crouching in a rather small hut, made of tiny pieces of wood
+and leaves and all kinds of other things found in the forest.  Laying
+all along the ground are a variety of objects from the forest, most of
+which don't look overly important, nor useful, so it's probably not worth
+your time.
+~
+0 1073742088 0 1
+D7
+~
+~
+4096 -1 12242
+S
+#0
+
+
+#RESETS
+M 0 12202 3 12206
+M 0 12201 1 12300
+E 1 12207 1 5
+G 1 12206 1
+G 1 12205 1
+G 1 12204 1
+G 1 12203 1
+G 1 12201 1
+E 1 12411 1 16
+M 0 12202 4 12227
+M 0 12203 1 12229
+M 0 12204 2 12240
+M 0 12205 1 12214
+M 0 12205 2 12238
+M 0 11105 1 12239
+O 0 11001 2 12218
+O 0 11001 1 12230
+O 0 11001 1 12235
+M 0 12206 1 12242
+M 0 12207 1 12205
+G 1 12213 1
+G 1 12212 1
+G 1 12209 1
+E 1 12211 1 12
+G 1 12210 1
+M 0 12208 3 12259
+M 1 12446 2 12201
+E 1 12606 1 16
+E 1 12607 1 5
+E 1 12608 1 5
+E 1 12609 1 0
+D 0 12201 3 0
+S
+
+
+#SHOPS
+ 12201    0  0  0  0  0   120  90         0 23    ; the hermit
+ 12207   19  0  0  0  0   120  50         0 23    ; a merchant
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+M  12202 spec_poison
+M  12206 spec_fido
+S
+
+
+#$

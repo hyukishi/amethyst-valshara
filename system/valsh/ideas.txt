@@ -1,0 +1,4 @@
+0988594629000001 [  107] Kyorlin: kobold race
+0988595181000002 [  111] Kyorlin: trull race
+0989453518000001 [ 3021] Kyorlin: deep dragons
+0989461250000002 [ 4002] Kyorlin: introduce

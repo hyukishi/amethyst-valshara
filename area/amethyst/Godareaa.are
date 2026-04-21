@@ -1,0 +1,308 @@
+#AREA   {PROTO} GodareaA's area in progress~
+
+
+
+#VERSION 213
+#AUTHOR GodareaA~
+
+#RANGES
+0 0 0 0
+$
+
+#FLAGS
+0
+
+#ECONOMY 0 0
+
+#CLIMATE 2 2 2
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#11201
+Knight's Mansion, Entryway~
+You are in the entry room of the Knight's mansion.  Looking around here you
+find it to be very extravegant.  It has a wood theme to the building, and
+furniture, all of which is furnished and polished to perfection in sight.
+You see some broken glass on the floor near your feet, which probably came
+from a matching broken window above the mess, sloppily left there.  In the
+middle of the mess is a rock, probably thrown in by one of those hilarious
+rogues, though you doubt the knight will be very happy when he finds out...
+~
+~
+0 0 0 0
+D1
+~
+~
+0 -1 11202
+S
+#11202
+Knight's Mansion~
+You look around at the nice wooden walls and relating furniture.  It is a nice,
+polished dark brown, and some things have a red to them, like the velvety
+lining on the back of a chair.  You try to estimate how much this place must
+have cost, obviously a fortune: your tax dollars at work.  You see above you
+the continuation of a winding staircase which comes from the room to the north.
+~
+~
+0 8 0 0
+D0
+~
+~
+0 -1 11203
+D3
+~
+~
+0 -1 11201
+S
+#11203
+Knight's Mansion~
+You see the staircase above descending ever closer to the ground as it wraps
+around the middle area of the building, between the four rooms, an interesting
+vision of architecture no doubt.  You look around the room at paintings upon
+the walls.  There are also shelves of books upon the north, west, and southern
+walls, and a comfotable looking chair beside a small table in the center.  On
+the wall is a fireplace.  There is no lit fire in it currently, it holds only
+some cinder and ash.  It is rather big, somebody could probably fit in it if
+they had a reason to.
+~
+~
+0 8 0 0
+D2
+~
+~
+0 -1 11202
+D3
+~
+~
+0 -1 11204
+D10
+You look in the fireplace but it is too dark to see anything.
+~
+fireplace~
+592000 -1 11211
+S
+#11204
+Knight's Mansion, First Floor~
+You now find yourself at the base of the winding staircase, leading up to a
+second floor.  Besides that, there are a number of statues here, most likely
+dummies of some sort, set upon stands, and suited in fine armors.  You look
+upon the ever shiny gleam of the armor, the helmets, gauntlets, etc, and the
+fierce looking spiked end of a mace in one hand or the razor sharp edge of a
+double edged sword in another.
+~
+~
+0 8 0 0
+D1
+~
+~
+0 -1 11203
+D4
+~
+~
+0 -1 11205
+S
+#11205
+Knight's Mansion, Second Floor~
+Before you is the winding staircase leading downstairs.  The floor creaks under
+your step now, making you a little annoyed and a little cautious
+are you
+really supposed to be here?  On the western wall you see some graffiti, which
+you could probably look at.
+There isn't much anything else here of significance, except maybe some kind of
+desk sitting against the wall.
+~
+~
+0 8 0 0
+D1
+~
+~
+0 -1 11206
+D5
+~
+~
+0 -1 11204
+S
+#11206
+Knight's Mansion~
+Upon the eastern wall is the extension of the fireplace directly below this
+room, from the floor up to the ceiling.  You look about at a few miscellaneous
+paintings hung upon the walls in this room.  The revelations of the brilliance
+in this art work is the sort of thing you might see on a screen in an Indian
+restaurant in Panama.  With the tapestries of mustached riders with scimitars.
+The ivory balls, one inside the other, their seams showing.  The long tea room,
+mirrors on both sides, and the tired looking rubber plants.  One depicts a
+scene of a boat in what looks to be a dark swamp, oared across the river that
+is death by a reaper.  A very grim picture...
+~
+~
+0 8 0 0
+D2
+~
+~
+0 -1 11207
+D3
+~
+~
+0 -1 11205
+S
+#11207
+Knight's Mansion~
+You look about at the exits in this room, the one to the north, and a door on
+the western wall.  It is very ornamented, even for this place.  By this, of
+course, meaning that it is decorated very unnecessarily with very beautiful
+gems.  Unfortunatly, the door looks rather sturdy, it could require a great
+deal of strength to remove even one, and the consequences would be anyone's
+guess, suppossing the knight caught you.
+~
+~
+0 8 0 0
+D0
+~
+~
+0 -1 11206
+D3
+~
+door~
+3 -1 11208
+S
+#11208
+Knight's Mansion, Knight's Room~
+You are in the owner's own room.  To your surprise, it's not very different
+then any other room in this mansion.  There is something which resembles a
+bed, and a desk next to it, both upon the southern wall.  The desk is rather
+large, and almost reaches up to the ceiling.
+~
+~
+0 8 0 0
+D1
+~
+door~
+3 -1 11207
+D10
+~
+desk~
+592000 -1 11209
+S
+#11209
+Rooftop, SW~
+You are on the southwestern corner of the rooftop.  Being two stories above
+the ground, you can see rather far out across the town from here, but not far
+enough up as to not be able to hear voices of the various peoples below.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 11212
+D1
+~
+~
+0 -1 11210
+D5
+~
+~
+0 -1 11208
+D6
+~
+~
+0 -1 11211
+S
+#11210
+Rooftop, SE~
+You are still on the rooftop.  Yeppers.  The ever exciting rooftop.  The
+incredibly fascinating rooftop, the fun never ends here.  Nope.  Maybe you
+should just jump, two stories could be enough to break your neck if you
+landed on it just right.  That, or maybe if you're an elf, that could do
+the trick too.
+~
+~
+0 0 1 0
+D0
+~
+~
+0 -1 11211
+D3
+~
+~
+0 -1 11209
+D7
+~
+~
+0 -1 11212
+S
+#11211
+Rooftop, NE~
+You are on the northeastern corner of the rooftop.  On the very corner is a
+chimney, coming from the fireplace directly two floors below this one.  You
+can't see down it for the most part, it's dark.  So obviously there is no
+fire lit, seeing as how no smoke emits from here either.
+~
+~
+0 0 1 0
+D2
+~
+~
+0 -1 11210
+D3
+~
+~
+0 -1 11212
+D9
+~
+~
+0 -1 11209
+D10
+~
+~
+0 -1 11203
+S
+#11212
+Rooftop, NW~
+You are on the northwestern corner of the rooftop.  Seeing as how you are
+outside here, you can move freely in any direction, well, almost any.  You
+may want to stay away from the edge, it is sorta high.  But then again, you
+may not.
+~
+~
+0 0 1 0
+D1
+~
+~
+0 -1 11211
+D2
+~
+~
+0 -1 11209
+D8
+~
+~
+0 -1 11210
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#REPAIRS
+0
+
+
+#SPECIALS
+S
+
+
+#$
