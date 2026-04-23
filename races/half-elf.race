@@ -1,0 +1,17 @@
+Name        Half-Elf~
+Race        9
+Classes     128
+Str_Plus    -1
+Dex_Plus    1
+Wis_Plus    0
+Int_Plus    1
+Con_Plus    -1
+Cha_Plus    1
+Lck_Plus    0
+Hit         3
+Mana        3
+Language    2
+Exp_Mult    100
+Height      72
+Weight      165
+End

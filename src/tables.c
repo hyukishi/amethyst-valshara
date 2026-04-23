@@ -22,6 +22,27 @@
 bool load_race_file( char *fname );
 void write_race_file( int ra );
 
+typedef struct fallback_race_data FALLBACK_RACE_DATA;
+
+struct fallback_race_data
+{
+    int race;
+    const char *name;
+    int language;
+    int class_restriction;
+    int str_plus;
+    int dex_plus;
+    int wis_plus;
+    int int_plus;
+    int con_plus;
+    int cha_plus;
+    int lck_plus;
+    int hit;
+    int mana;
+    int height;
+    int weight;
+};
+
 
 /* global variables */
 int top_sn;
@@ -40,6 +61,82 @@ SKILLTYPE *		disease_table	[MAX_DISEASE];
 
 LANG_DATA *		first_lang;
 LANG_DATA *		last_lang;
+
+static const FALLBACK_RACE_DATA fallback_pc_races[] =
+{
+    { RACE_HUMAN,      "Human",      LANG_COMMON,      0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 70, 180 },
+    { RACE_ELF,        "Elf",        LANG_ELVEN,       0,  -1,  2,  0,  1, -1,  1, 0, -2, 10, 72, 150 },
+    { RACE_DWARF,      "Dwarf",      LANG_DWARVEN,   257,   1,  0,  1,  0,  2, -1, 0,  6, -6, 52, 170 },
+    { RACE_HALFLING,   "Halfling",   LANG_HALFLING,  419,  -2,  1,  0,  0,  1,  0, 0, -3, 10, 40,  90 },
+    { RACE_PIXIE,      "Pixie",      LANG_PIXIE,     408,  -4,  3,  0, -1, -2,  3, 0, -5, 40, 24,  30 },
+    { RACE_VAMPIRE,    "_Vampire_",  LANG_COMMON,      0,   1,  0,  0,  0,  2, -2, 0,  0,  0, 70, 170 },
+    { RACE_HALF_OGRE,  "Half-Ogre",  LANG_OGRE,      483,   2, -3, -1, -2,  3, -4, 0,  5, -8, 84, 260 },
+    { RACE_HALF_ORC,   "Half-Orc",   LANG_ORCISH,    483,   1, -2, -2, -1,  2, -4, 0,  6, -9, 74, 210 },
+    { RACE_HALF_TROLL, "Half-Troll", LANG_TROLLISH,  355,   3, -2, -2,  1,  2, -5, 0,  7, -9, 82, 280 },
+    { RACE_HALF_ELF,   "Half-Elf",   LANG_ELVEN,     128,  -1,  1,  0,  1, -1,  1, 0,  3,  3, 72, 165 },
+    { RACE_GITH,       "Gith",       LANG_GITH,      352,   1,  2, -1,  1, -2, -5, 1,  4, 20, 72, 160 },
+    { RACE_DROW,       "Drow",       LANG_ELVEN,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 70, 150 },
+    { RACE_SEA_ELF,    "Sea-Elf",    LANG_ELVEN,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 71, 155 },
+    { RACE_GNOME,      "Gnome",      LANG_GNOME,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 42,  85 },
+    { RACE_LIZARDMAN,  "Lizardman",  LANG_COMMON,      0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 76, 220 }
+};
+
+static void init_fallback_race( const FALLBACK_RACE_DATA *fallback )
+{
+    struct race_type *race;
+    int i;
+
+    if ( fallback->race < 0 || fallback->race >= MAX_RACE )
+        return;
+
+    if ( race_table[fallback->race] == NULL )
+        CREATE( race_table[fallback->race], struct race_type, 1 );
+
+    race = race_table[fallback->race];
+    *race = _race_table[fallback->race];
+
+    if ( fallback->name != NULL && fallback->name[0] != '\0' )
+        snprintf( race->race_name, sizeof(race->race_name), "%-.15s", fallback->name );
+
+    race->class_restriction = fallback->class_restriction;
+    race->str_plus = fallback->str_plus;
+    race->dex_plus = fallback->dex_plus;
+    race->wis_plus = fallback->wis_plus;
+    race->int_plus = fallback->int_plus;
+    race->con_plus = fallback->con_plus;
+    race->cha_plus = fallback->cha_plus;
+    race->lck_plus = fallback->lck_plus;
+    race->hit = fallback->hit;
+    race->mana = fallback->mana;
+
+    for ( i = 0; i < MAX_WHERE_NAME; ++i )
+        race->where_name[i] = where_name[i];
+
+    if ( race->language == LANG_UNKNOWN )
+        race->language = fallback->language;
+    if ( race->exp_multiplier == 0 )
+        race->exp_multiplier = 100;
+    if ( race->height == 0 )
+        race->height = fallback->height;
+    if ( race->weight == 0 )
+        race->weight = fallback->weight;
+}
+
+static void seed_fallback_races( void )
+{
+    int i;
+
+    MAX_PC_RACE = 0;
+    for ( i = 0; i < (int)(sizeof(fallback_pc_races) / sizeof(fallback_pc_races[0])); ++i )
+    {
+        init_fallback_race( &fallback_pc_races[i] );
+        if ( race_table[fallback_pc_races[i].race] != NULL
+        &&   race_table[fallback_pc_races[i].race]->race_name[0] != '\0' )
+            ++MAX_PC_RACE;
+    }
+
+    bug( "load_races: race list empty, using built-in fallback races", 0 );
+}
 
 char * const skill_tname[] = { "unknown", "Spell", "Skill", "Weapon", "Tongue", "Herb", "Racial", "Disease" };
 
@@ -1691,14 +1788,13 @@ void load_races( )
     if ( ( fpList = fopen( racelist, "r" ) ) == NULL )
     {
         bug( "load_races: Cannot open race list %s", racelist );
+        seed_fallback_races( );
         for ( i = 0; i < MAX_RACE; i++ )
-        {
             if ( race_table[i] == NULL )
             {
                 CREATE( race_table[i], struct race_type, 1 );
                 sprintf( race_table[i]->race_name, "%s", "unused" );
             }
-        }
         return;
     }
 
@@ -1716,6 +1812,8 @@ void load_races( )
 	else
 	  MAX_PC_RACE++;
     }
+    if ( MAX_PC_RACE == 0 )
+        seed_fallback_races( );
     for ( i = 0; i < MAX_RACE; i++ )
     {
         if ( race_table[i] == NULL )

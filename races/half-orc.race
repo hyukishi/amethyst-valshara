@@ -1,0 +1,17 @@
+Name        Half-Orc~
+Race        7
+Classes     483
+Str_Plus    1
+Dex_Plus    -2
+Wis_Plus    -2
+Int_Plus    -1
+Con_Plus    2
+Cha_Plus    -4
+Lck_Plus    0
+Hit         6
+Mana        -9
+Language    32
+Exp_Mult    100
+Height      74
+Weight      210
+End

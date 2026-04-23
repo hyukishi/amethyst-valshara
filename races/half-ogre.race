@@ -1,0 +1,17 @@
+Name        Half-Ogre~
+Race        6
+Classes     483
+Str_Plus    2
+Dex_Plus    -3
+Wis_Plus    -1
+Int_Plus    -2
+Con_Plus    3
+Cha_Plus    -4
+Lck_Plus    0
+Hit         5
+Mana        -8
+Language    16
+Exp_Mult    100
+Height      84
+Weight      260
+End

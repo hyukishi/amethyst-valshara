@@ -1,0 +1,17 @@
+Name        Elf~
+Race        1
+Classes     0
+Str_Plus    -1
+Dex_Plus    2
+Wis_Plus    0
+Int_Plus    1
+Con_Plus    -1
+Cha_Plus    1
+Lck_Plus    0
+Hit         -2
+Mana        10
+Language    2
+Exp_Mult    100
+Height      72
+Weight      150
+End

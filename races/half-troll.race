@@ -1,0 +1,17 @@
+Name        Half-Troll~
+Race        8
+Classes     355
+Str_Plus    3
+Dex_Plus    -2
+Wis_Plus    -2
+Int_Plus    1
+Con_Plus    2
+Cha_Plus    -5
+Lck_Plus    0
+Hit         7
+Mana        -9
+Language    64
+Exp_Mult    100
+Height      82
+Weight      280
+End
