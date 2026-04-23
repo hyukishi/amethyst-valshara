@@ -59,7 +59,8 @@ static void starter_weapon_choice( CHAR_DATA *ch, sh_int weapon_vnums[], int *we
     switch ( ch->race )
     {
         case RACE_DWARF:
-        case RACE_GNOME:
+        case RACE_HALF_OGRE:
+        case RACE_HALF_TROLL:
         case RACE_LIZARDMAN:
             primary = OBJ_VNUM_SCHOOL_MACE;
             break;
@@ -68,6 +69,7 @@ static void starter_weapon_choice( CHAR_DATA *ch, sh_int weapon_vnums[], int *we
         case RACE_PIXIE:
         case RACE_VAMPIRE:
         case RACE_DROW:
+        case RACE_GNOME:
             primary = OBJ_VNUM_SCHOOL_DAGGER;
             break;
 
@@ -115,6 +117,15 @@ void outfit_new_character( CHAR_DATA *ch, bool reoutfit )
     if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_VEST, 1 ) ) != NULL && !reoutfit )
         equip_char( ch, obj, WEAR_BODY );
 
+    if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_HELMET, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_HEAD );
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_BOOTS, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_FEET );
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_ANKLET, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_ANKLE_L );
+
     if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_SHIELD, 1 ) ) != NULL && !reoutfit )
         equip_char( ch, obj, WEAR_SHIELD );
 
@@ -129,6 +140,9 @@ void outfit_new_character( CHAR_DATA *ch, bool reoutfit )
         equip_char( ch, obj, WEAR_HOLD );
 
     starter_object( ch, OBJ_VNUM_BURLAP_SACK, 1 );
+    starter_object( ch, OBJ_VNUM_SCHOOL_FOOD, 1 );
+    starter_object( ch, OBJ_VNUM_SCHOOL_WATER, 1 );
+    starter_object( ch, OBJ_VNUM_HEALING_POTION, 1 );
 }
 
 /*
