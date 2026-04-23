@@ -893,6 +893,7 @@ D5
 mpat 13301 mpforce academy mpinvis 50
 ~
 |
+M 13300 1 1 .
 S
 #13302
 Amethyst Mud Academy~
@@ -921,6 +922,7 @@ D3
 ~
 ~
 0 -1 13321
+M 13301 2 2 .
 S
 #13303
 Academy Training Room~
@@ -936,6 +938,7 @@ D3
 ~
 ~
 0 -1 13302
+M 13301 3 2 .
 S
 #13304
 Preparing for Combat~
@@ -959,6 +962,7 @@ D5
 ~
 ~
 0 -1 13305
+M 13301 2 1 .
 S
 #13305
 Choice of Directions~
@@ -1003,6 +1007,7 @@ D9
 ~
 ~
 0 -1 13306
+M 13302 3 3 .
 S
 #13306
 A Dark Passage~
@@ -1035,6 +1040,7 @@ D9
 ~
 ~
 0 -1 13355
+M 13302 2 4 .
 S
 #13307
 A Dark Passage~
@@ -1059,6 +1065,7 @@ D9
 ~
 ~
 0 -1 13354
+M 13302 2 3 .
 S
 #13308
 A Dark Passage~
@@ -1091,6 +1098,7 @@ D9
 ~
 ~
 0 -1 13353
+M 13302 2 2 .
 S
 #13309
 A Dark Passage~
@@ -1115,6 +1123,7 @@ D7
 ~
 ~
 0 -1 13350
+M 13302 3 2 .
 S
 #13310
 A Dark Passage~
@@ -1147,6 +1156,7 @@ D9
 ~
 ~
 0 -1 13305
+M 13302 4 2 .
 S
 #13311
 A Dark Passage~
@@ -1171,6 +1181,7 @@ D8
 ~
 ~
 0 -1 13344
+M 13302 4 3 .
 S
 #13312
 A Dark Passage~
@@ -1203,6 +1214,7 @@ D9
 ~
 ~
 0 -1 13341
+M 13302 4 4 .
 S
 #13313
 A Forming Planet~
@@ -1218,6 +1230,7 @@ D4
 ~
 ~
 0 -1 13302
+M 13303 1 1 .
 S
 #13314
 Underground Sewers~
@@ -1236,6 +1249,7 @@ D4
 ~
 ~
 16777344 -1 12413
+M 13306 1 7 .
 S
 #13315
 Underground Sewers~
@@ -1263,6 +1277,7 @@ D8
 ~
 ~
 0 -1 13322
+M 13306 1 6 .
 S
 #13316
 Culdesac~
@@ -1280,6 +1295,7 @@ D9
 ~
 ~
 0 -1 13315
+M 13306 2 5 .
 S
 #13317
 Culdesac~
@@ -1297,6 +1313,7 @@ D3
 ~
 ~
 0 -1 13316
+M 13306 3 5 .
 S
 #13318
 Culdesac~
@@ -1316,6 +1333,7 @@ D8
 ~
 ~
 0 -1 13319
+M 13306 4 5 .
 S
 #13319
 Culdesac, u-turn~
@@ -1348,6 +1366,7 @@ around as some kind of hobby, but either way lucky for you it's cracked open
 enough to squeeze through without too much trouble, thought no telling why
 anyone would want to, it's dark in there.
 ~
+M 13306 5 6 .
 S
 #13320
 Chamber of the Watch~
@@ -1360,6 +1379,7 @@ other than those of the two mobs residing here.  Do not ever move
 or purge either of these mobiles if the pre-auth system is used. **
 ~
 0 2097164 0 0
+M 13305 1 1 .
 S
 #13321
 Academy store~
@@ -1375,6 +1395,7 @@ D1
 ~
 ~
 0 -1 13302
+M 13301 1 2 .
 S
 #13322
 Culdesac~
@@ -1394,6 +1415,7 @@ D7
 ~
 ~
 0 -1 13315
+M 13306 2 7 .
 S
 #13323
 Culdesac~
@@ -1413,6 +1435,7 @@ D3
 ~
 ~
 0 -1 13322
+M 13306 3 7 .
 S
 #13324
 Culdesac~
@@ -1432,6 +1455,7 @@ D6
 ~
 ~
 0 -1 13319
+M 13306 4 7 .
 S
 #13325
 Small room~
@@ -1452,6 +1476,7 @@ Acutally, the grating is on the other side of the wall really, you're looking
 at a big hole in the wall.  Pretty neat, huh?  Bet you could fit back through
 there too.
 ~
+M 13306 6 6 .
 S
 #13326
 Underground Sewers~
@@ -1469,6 +1494,7 @@ D6
 ~
 ~
 0 -1 13327
+M 13306 1 5 .
 S
 #13327
 Underground Sewers~
@@ -1488,6 +1514,7 @@ D9
 ~
 ~
 0 -1 13326
+M 13306 2 4 .
 S
 #13328
 Underground Sewers~
@@ -1505,6 +1532,7 @@ D9
 ~
 ~
 0 -1 13327
+M 13306 3 3 .
 S
 #13329
 Underground Sewers~
@@ -1522,6 +1550,7 @@ D9
 ~
 ~
 0 -1 13328
+M 13306 4 2 .
 S
 #13330
 Underground Sewers~
@@ -1536,6 +1565,7 @@ D9
 ~
 ~
 0 -1 13329
+M 13306 5 1 .
 S
 #13331
 Underground Sewers~
@@ -1554,6 +1584,7 @@ D1
 ~
 ~
 0 -1 13332
+M 13306 4 3 .
 S
 #13332
 Underground Sewers~
@@ -1579,6 +1610,7 @@ D8
 ~
 ~
 0 -1 13334
+M 13306 5 3 .
 S
 #13333
 Underground Sewers~
@@ -1600,6 +1632,7 @@ D9
 ~
 ~
 0 -1 13335
+M 13306 6 3 .
 S
 #13334
 Underground Sewers~
@@ -1634,6 +1667,7 @@ endif
 endif
 ~
 |
+M 13306 6 4 .
 S
 #13335
 Underground Sewers~
@@ -1656,11 +1690,13 @@ D6
 ~
 ~
 0 -1 13333
+M 13306 5 4 .
 S
 #13336
 ???~
 ~
 0 1075838988 11 0
+M 13307 1 1 .
 S
 #13340
 A Dark Passage~
@@ -1685,6 +1721,7 @@ D9
 ~
 ~
 0 -1 13356
+M 13302 3 4 .
 S
 #13341
 A Dark Passage~
@@ -1713,6 +1750,7 @@ D7
 ~
 ~
 0 -1 13306
+M 13302 3 5 .
 S
 #13342
 A Dark Passage~
@@ -1741,6 +1779,7 @@ D7
 ~
 ~
 0 -1 13340
+M 13302 4 5 .
 S
 #13343
 A Dark Passage~
@@ -1761,6 +1800,7 @@ D7
 ~
 ~
 0 -1 13312
+M 13302 5 5 .
 S
 #13344
 A Dark Passage~
@@ -1789,6 +1829,7 @@ D9
 ~
 ~
 0 -1 13342
+M 13302 5 4 .
 S
 #13345
 A Dark Passage~
@@ -1817,6 +1858,7 @@ D9
 ~
 ~
 0 -1 13312
+M 13302 5 3 .
 S
 #13346
 A Dark Passage~
@@ -1845,6 +1887,7 @@ D9
 ~
 ~
 0 -1 13311
+M 13302 5 2 .
 S
 #13347
 A Dark Passage~
@@ -1865,6 +1908,7 @@ D9
 ~
 ~
 0 -1 13310
+M 13302 5 1 .
 S
 #13348
 A Dark Passage~
@@ -1893,6 +1937,7 @@ D9
 ~
 ~
 0 -1 13309
+M 13302 4 1 .
 S
 #13349
 A Dark Passage~
@@ -1921,6 +1966,7 @@ D9
 ~
 ~
 0 -1 13308
+M 13302 3 1 .
 S
 #13350
 A Dark Passage~
@@ -1949,6 +1995,7 @@ D9
 ~
 ~
 0 -1 13352
+M 13302 2 1 .
 S
 #13351
 A Dark Passage~
@@ -1969,6 +2016,7 @@ D8
 ~
 ~
 0 -1 13308
+M 13302 1 1 .
 S
 #13352
 A Dark Passage~
@@ -1997,6 +2045,7 @@ D8
 ~
 ~
 0 -1 13307
+M 13302 1 2 .
 S
 #13353
 A Dark Passage~
@@ -2025,6 +2074,7 @@ D8
 ~
 ~
 0 -1 13306
+M 13302 1 3 .
 S
 #13354
 A Dark Passage~
@@ -2053,6 +2103,7 @@ D8
 ~
 ~
 0 -1 13356
+M 13302 1 4 .
 S
 #13355
 Turn in a Dark Passage~
@@ -2073,6 +2124,7 @@ D6
 ~
 ~
 0 -1 13306
+M 13302 1 5 .
 S
 #13356
 A Dark Passage~
@@ -2101,12 +2153,15 @@ D7
 ~
 ~
 0 -1 13354
+M 13302 2 5 .
 S
 #13400
 Floating in a void~
 ~
 0 1073741828 1 0
+M 13308 1 1 .
 S
+#0
 #0
 
 
