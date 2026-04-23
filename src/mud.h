@@ -3335,6 +3335,12 @@ do								\
 		(skill) );					\
 } while(0)
 
+#define ASSIGN_GSN_OPTIONAL(gsn, skill)				\
+do								\
+{								\
+    (gsn) = skill_lookup((skill));				\
+} while(0)
+
 #define CHECK_SUBRESTRICTED(ch)					\
 do								\
 {								\
@@ -4463,6 +4469,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define BACKUP_DIR	"../backup/"    /* Backup Player files		*/
 #define GOD_DIR		"../gods/"	/* God Info Dir			*/
 #define BOARD_DIR	"../boards/"	/* Board data dir		*/
+#define AREA_DIR	"../area/"	/* Area data dir		*/
 #define CLAN_DIR	"../clans/"	/* Clan data dir		*/
 #define COUNCIL_DIR  	"../councils/"  /* Council data dir		*/
 #define GUILD_DIR       "../guilds/"    /* Guild data dir               */
@@ -4485,7 +4492,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  * in this directory is the name of the immortal who requested the watch
  */
 
-#define AREA_LIST	"area.lst"	/* List of areas		*/
+#define AREA_LIST	AREA_DIR "area.lst"	/* List of areas		*/
 #define WATCH_LIST      "watch.lst"     /* List of watches              */
 #define BAN_LIST        "ban.lst"       /* List of bans                 */
 #define RESERVED_LIST	"reserved.lst"	/* List of reserved names	*/

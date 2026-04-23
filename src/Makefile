@@ -71,7 +71,7 @@ smaug: $(O_FILES)
 	chmod g+w $(O_FILES)
 
 dns: dns_slave.o
-	fm -f dns_slave
+	rm -f dns_slave
 	$(CC) $(D_FLAGS) -o dns_slave dns_slave.o
 	chmod g+w dns_slave
 	chmod a+x dns_slave

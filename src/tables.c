@@ -1590,7 +1590,7 @@ void load_classes( )
     /* 
      * Pre-init the class_table with blank classes
      */
-    for ( i=0;i<=MAX_CLASS; i++ )
+    for ( i = 0; i < MAX_CLASS; i++ )
         class_table[i] = NULL;
 
     sprintf( classlist, "%s%s", CLASS_DIR, CLASS_LIST );
@@ -1615,7 +1615,7 @@ void load_classes( )
 	  MAX_PC_CLASS++;
     }
     fclose( fpList );
-    for ( i=0;i<=MAX_CLASS;i++ )
+    for ( i = 0; i < MAX_CLASS; i++ )
     {
 	if ( class_table[i] == NULL )
 	{
@@ -1690,8 +1690,16 @@ void load_races( )
     sprintf( racelist, "%s%s", RACEDIR, RACE_LIST );
     if ( ( fpList = fopen( racelist, "r" ) ) == NULL )
     {
-	perror( racelist );
-	exit( 1 );
+        bug( "load_races: Cannot open race list %s", racelist );
+        for ( i = 0; i < MAX_RACE; i++ )
+        {
+            if ( race_table[i] == NULL )
+            {
+                CREATE( race_table[i], struct race_type, 1 );
+                sprintf( race_table[i]->race_name, "%s", "unused" );
+            }
+        }
+        return;
     }
 
     for ( ; ; )

@@ -287,6 +287,7 @@ void	load_mobiles	args( ( AREA_DATA *tarea, FILE *fp ) );
 void	load_objects	args( ( AREA_DATA *tarea, FILE *fp ) );
 void 	load_projects   args( ( void ) );
 void	load_resets	args( ( AREA_DATA *tarea, FILE *fp ) );
+void    validate_resets args( ( void ) );
 void	load_rooms	args( ( AREA_DATA *tarea, FILE *fp ) );
 void	load_shops	args( ( AREA_DATA *tarea, FILE *fp ) );
 void 	load_repairs	args( ( AREA_DATA *tarea, FILE *fp ) );
@@ -581,12 +582,12 @@ void boot_db( bool fCopyOver )
 	ASSIGN_GSN( gsn_bludgeons,	"bludgeons" );
 	ASSIGN_GSN( gsn_bows,		"bows" );
 	ASSIGN_GSN( gsn_crossbows,	"crossbows" );
-        ASSIGN_GSN( gsn_darts,		"darts" );
+        ASSIGN_GSN_OPTIONAL( gsn_darts,		"darts" );
 	ASSIGN_GSN( gsn_blowguns,	"blowguns" );
-	ASSIGN_GSN( gsn_throwing_daggers, "throwing daggers" );
+	ASSIGN_GSN_OPTIONAL( gsn_throwing_daggers, "throwing daggers" );
         ASSIGN_GSN( gsn_sharpen, 	"sharpen" );
         ASSIGN_GSN( gsn_tiger, 		"circle of the tiger");
-	ASSIGN_GSN( gsn_shieldwork,	"shieldwork" );
+	ASSIGN_GSN_OPTIONAL( gsn_shieldwork,	"shieldwork" );
 	ASSIGN_GSN( gsn_detrap,		"detrap" );
 	ASSIGN_GSN( gsn_backstab,	"backstab" );
 	ASSIGN_GSN( gsn_circle,		"circle" );
@@ -663,7 +664,7 @@ void boot_db( bool fCopyOver )
 	ASSIGN_GSN( gsn_trollish,	"trollese" );
 	ASSIGN_GSN( gsn_goblin,		"goblin" );
 	ASSIGN_GSN( gsn_halfling,	"halfling" );
-	ASSIGN_GSN( gsn_retreat,	"retreat" );
+	ASSIGN_GSN_OPTIONAL( gsn_retreat,	"retreat" );
     }
     
     log_string("Reading in plane file...");
@@ -683,20 +684,23 @@ void boot_db( bool fCopyOver )
 	    exit( 1 );
 	}
 
-	for ( ; ; )
-	{
-	    strcpy( strArea, fread_word( fpList ) );
+	    for ( ; ; )
+	    {
+		strcpy( strArea, fread_word( fpList ) );
 	    if ( strArea[0] == '$' )
 		break;
 
-	    load_area_file( last_area, strArea );
+		load_area_file( last_area, strArea );
 	    
+	    }
+	    fclose( fpList );
 	}
-	fclose( fpList );
-    }
-    
-    log_string("Making sure rooms are planed...");
-    check_planes(NULL);
+
+        log_string("Validating reset references...");
+        validate_resets();
+	    
+	log_string("Making sure rooms are planed...");
+	check_planes(NULL);
 
    /*
     *   initialize supermob.
@@ -1599,47 +1603,36 @@ void load_resets( AREA_DATA *tarea, FILE *fp )
 	    return;
 
 	case 'M':
-	    if ( get_mob_index( arg1 ) == NULL && fBootDb )
-		boot_log( "Load_resets: %s (%d) 'M': mobile %d doesn't exist.",
-		    tarea->filename, count, arg1 );
-	    if ( get_room_index( arg3 ) == NULL && fBootDb )
-		boot_log( "Load_resets: %s (%d) 'M': room %d doesn't exist.",
-		    tarea->filename, count, arg3 );
+	    if ( !fBootDb )
+	    {
+		get_mob_index( arg1 );
+		get_room_index( arg3 );
+	    }
 	    break;
 
 	case 'O':
-	    if ( get_obj_index(arg1) == NULL && fBootDb )
-		boot_log( "Load_resets: %s (%d) '%c': object %d doesn't exist.",
-		    tarea->filename, count, letter, arg1 );
-	    if ( get_room_index(arg3) == NULL && fBootDb )
-		boot_log( "Load_resets: %s (%d) '%c': room %d doesn't exist.",
-		    tarea->filename, count, letter, arg3 );
+	    if ( !fBootDb )
+	    {
+		get_obj_index(arg1);
+		get_room_index(arg3);
+	    }
 	    break;
 
 	case 'P':
-	    if ( get_obj_index(arg1) == NULL && fBootDb )
-		boot_log( "Load_resets: %s (%d) '%c': object %d doesn't exist.",
-		    tarea->filename, count, letter, arg1 );
-	    if ( arg3 > 0 )
+	    if ( !fBootDb )
 	      {
-		if ( get_obj_index(arg3) == NULL && fBootDb )
-		  {
-		    boot_log( "Load_resets: %s (%d) 'P': destination object %d doesn't exist.",
-			tarea->filename, count, arg3 );
-		  }
-		else
-		  {
-		    if ( extra > 1 )
-		      not01 = TRUE;
-		  }
+		get_obj_index(arg1);
+		if ( arg3 > 0 )
+		  get_obj_index(arg3);
 	      }
+	    if ( arg3 > 0 && extra > 1 )
+	      not01 = TRUE;
 	    break;
 
 	case 'G':
 	case 'E':
-	    if ( get_obj_index(arg1) == NULL && fBootDb )
-		boot_log( "Load_resets: %s (%d) '%c': object %d doesn't exist.",
-		    tarea->filename, count, letter, arg1 );
+	    if ( !fBootDb )
+		get_obj_index(arg1);
 	    break;
 
 	case 'T':
@@ -1647,9 +1640,8 @@ void load_resets( AREA_DATA *tarea, FILE *fp )
 
 	case 'H':
 	    if ( arg1 > 0 )
-		if ( get_obj_index(arg1) == NULL && fBootDb )
-		    boot_log( "Load_resets: %s (%d) 'H': object %d doesn't exist.",
-			tarea->filename, count, arg1 );
+		if ( !fBootDb )
+		    get_obj_index(arg1);
 	    break;
 
 	case 'B':
@@ -1776,7 +1768,67 @@ void load_resets( AREA_DATA *tarea, FILE *fp )
     return;
 }
 
+void validate_resets( void )
+{
+    AREA_DATA *tarea;
 
+    for ( tarea = first_area; tarea; tarea = tarea->next )
+    {
+        RESET_DATA *reset;
+        int count = 0;
+
+        for ( reset = tarea->first_reset; reset; reset = reset->next )
+        {
+            ++count;
+
+            switch ( reset->command )
+            {
+            default:
+                break;
+
+            case 'M':
+                if ( get_mob_index( reset->arg1 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'M': mobile %d doesn't exist.",
+                        tarea->filename, count, reset->arg1 );
+                if ( get_room_index( reset->arg3 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'M': room %d doesn't exist.",
+                        tarea->filename, count, reset->arg3 );
+                break;
+
+            case 'O':
+                if ( get_obj_index( reset->arg1 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'O': object %d doesn't exist.",
+                        tarea->filename, count, reset->arg1 );
+                if ( get_room_index( reset->arg3 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'O': room %d doesn't exist.",
+                        tarea->filename, count, reset->arg3 );
+                break;
+
+            case 'P':
+                if ( get_obj_index( reset->arg1 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'P': object %d doesn't exist.",
+                        tarea->filename, count, reset->arg1 );
+                if ( reset->arg3 > 0 && get_obj_index( reset->arg3 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'P': destination object %d doesn't exist.",
+                        tarea->filename, count, reset->arg3 );
+                break;
+
+            case 'G':
+            case 'E':
+                if ( get_obj_index( reset->arg1 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) '%c': object %d doesn't exist.",
+                        tarea->filename, count, reset->command, reset->arg1 );
+                break;
+
+            case 'H':
+                if ( reset->arg1 > 0 && get_obj_index( reset->arg1 ) == NULL )
+                    boot_log( "Load_resets: %s (%d) 'H': object %d doesn't exist.",
+                        tarea->filename, count, reset->arg1 );
+                break;
+            }
+        }
+    }
+}
 
 /*
  * Load a room section.
@@ -4322,6 +4374,11 @@ void make_wizlist( )
   last_wiz  = NULL;
 
   dp = opendir( GOD_DIR );
+  if ( !dp )
+  {
+    bug( "make_wizlist: Cannot open god dir %s", GOD_DIR );
+    return;
+  }
 
   ilevel = 0;
   dentry = readdir( dp );
@@ -5672,6 +5729,7 @@ void fix_area_exits( AREA_DATA *tarea )
 
 void load_area_file( AREA_DATA *tarea, char *filename )
 {
+    char areapath[MAX_INPUT_LENGTH];
 /*    FILE *fpin;
     what intelligent person stopped using fpArea?????
     if fpArea isn't being used, then no filename or linenumber
@@ -5689,10 +5747,14 @@ void load_area_file( AREA_DATA *tarea, char *filename )
 
     if ( ( fpArea = fopen( filename, "r" ) ) == NULL )
     {
-	perror( filename );
-	bug( "load_area: error loading file (can't open)" );
-	bug( filename );
-	return;
+        sprintf( areapath, "%s%s", AREA_DIR, filename );
+        if ( ( fpArea = fopen( areapath, "r" ) ) == NULL )
+        {
+	    perror( filename );
+	    bug( "load_area: error loading file (can't open)" );
+	    bug( filename );
+	    return;
+        }
     }
     area_version = 0;
     for ( ; ; )
@@ -5822,8 +5884,13 @@ void load_buildlist( void )
 	bool badfile = FALSE;
 	char temp;
 	
-	dp = opendir( GOD_DIR );
-	dentry = readdir( dp );
+		dp = opendir( GOD_DIR );
+		if ( !dp )
+		{
+			bug( "Load_buildlist: Cannot open god dir %s", GOD_DIR );
+			return;
+		}
+		dentry = readdir( dp );
 	while ( dentry )
 	{
 		if ( dentry->d_name[0] != '.' )
@@ -7302,4 +7369,3 @@ bool recent_add( CHAR_DATA *ch ) {
 
    return TRUE;
 }
-

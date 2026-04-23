@@ -593,8 +593,10 @@ bool load_clan_file( char *clanfile )
 
 	LINK( clan, first_clan, last_clan, next, prev );
 
-	if ( clan->storeroom == 0
-	|| (storeroom = get_room_index( clan->storeroom )) == NULL )
+	if ( clan->storeroom == 0 )
+	    return found;
+
+	if ( (storeroom = get_room_index( clan->storeroom )) == NULL )
 	{
 	    log_string( "Storeroom not found" );
 	    return found;
@@ -2526,4 +2528,3 @@ if (chance < number_percent( ))
     send_to_char("You cannot do that to someone who is standing.\n\r", ch);
     return;
 }
-

@@ -99,7 +99,8 @@ int imc_readconfig(void)
   cf=fopen(configfile, "r");
   if (!cf)
   {
-    imc_logerror("imc_readconfig: couldn't open %s", configfile);
+    if (errno != ENOENT)
+      imc_logerror("imc_readconfig: couldn't open %s", configfile);
     return 0;
   }
 
@@ -673,7 +674,8 @@ int imc_readignores(void)
   inf=fopen(name, "r");
   if (!inf)
   {
-    imc_logerror("imc_readignores: couldn't open %s", name);
+    if (errno != ENOENT)
+      imc_logerror("imc_readignores: couldn't open %s", name);
     return 0;
   }
 
@@ -1247,5 +1249,4 @@ const char *imc_getstats(void)
   imc_shrinksbuf(buf);
   return buf;
 }
-
 

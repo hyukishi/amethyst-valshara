@@ -29,6 +29,7 @@
 #endif
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
 #include <stdlib.h>
 #include <time.h>
 #include <stdarg.h>
@@ -106,7 +107,8 @@ void icec_load_channels(void)
   fp=fopen(name, "r");
   if (!fp)
   {
-    imc_logerror("Can't open %s", name);
+    if (errno != ENOENT)
+      imc_logerror("Can't open %s", name);
     return;
   }
 

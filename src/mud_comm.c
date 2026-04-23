@@ -2332,13 +2332,12 @@ void do_mp_open_passage( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if( (pexit = get_exit( fromRoom, exit_num )) != NULL )
-    {
-	if( !IS_SET( pexit->exit_info, EX_PASSAGE) )
-	  return;
-	progbug( "MpOpenPassage - Exit exists", ch );
-	return;
-    }
+	if( (pexit = get_exit( fromRoom, exit_num )) != NULL )
+	{
+		if( !IS_SET( pexit->exit_info, EX_PASSAGE) )
+		  return;
+		return;
+	}
 
     pexit = make_exit( fromRoom, targetRoom, exit_num );
     pexit->keyword 		= STRALLOC( "" );

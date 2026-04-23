@@ -51,7 +51,7 @@ char *format_inet_addr(char *buf, struct in_addr addr)
 
 
 #ifndef HAS_STPCPY
-char *stpcpy(char *dest, char *src)
+static char *dns_stpcpy(char *dest, const char *src)
 {
   strcpy( dest, src );
   return(dest + strlen(dest) );
@@ -70,11 +70,12 @@ int my_read(int s, char *buf, size_t len)
 
 #ifdef SVR4
 RETSIGTYPE
-slave_signal()
+slave_signal(int signum)
 #else
-void slave_signal()
+void slave_signal(int signum)
 #endif				/* SVR4 */
 {
+  (void) signum;
   if( getppid() == 1 )
   {
     if( !arg_for_errors )
@@ -90,11 +91,12 @@ void slave_signal()
 
 #ifdef SVR4
 RETSIGTYPE
-timeout_signal()
+timeout_signal(int signum)
 #else
-void timeout_signal()
+void timeout_signal(int signum)
 #endif				/* SVR4 */
 {
+  (void) signum;
   fprintf( stderr, "'%s' 5 minute timeout\n", arg_for_errors );
   exit(1);
 }
@@ -134,9 +136,9 @@ int iptoname( char *arg )
   if( hp )
   {
     buf[0] = SLAVE_IPTONAME;
-    p = stpcpy( buf + 1, arg );
+    p = dns_stpcpy( buf + 1, arg );
     *p++ = ' ';
-    p = stpcpy( p, hp->h_name );
+    p = dns_stpcpy( p, hp->h_name );
     *p++ = '\n';
     my_write( 1, buf, p - buf );
   }
@@ -148,11 +150,12 @@ int iptoname( char *arg )
 
 #ifdef SVR4
 RETSIGTYPE
-child_signal()
+child_signal(int signum)
 #else
-void child_signal()
+void child_signal(int signum)
 #endif				/* SVR4 */
 {
+  (void) signum;
   /* collect any children */
   while( waitpid(0, NULL, WNOHANG) > 0 );
   signal( SIGCHLD, child_signal );
