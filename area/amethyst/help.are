@@ -6564,17 +6564,28 @@ SEE ALSO
 
 10 DEITIES DEITY~
 NAME
-    DEITIES DEITY - The deities command displays all the deities of the world. Using an
+    DEITIES - list the gods of Valshara and inspect an individual deity
 
 SYNOPSIS
-    Syntax:  deities
-    Syntax:  deities <deity>
+    Syntax: deities
+    Syntax: deities <deity>
 
 DESCRIPTION
-    The deities command displays all the deities of the world. Using an argument will display the target deity's description.
+    DEITIES shows the active gods of the world. Using a deity name displays
+    that deity's description and ideals.
+
+    The pantheon now includes broad deities such as Tyche, Tempus, and
+    Kyorlin, along with racial patrons for many peoples of Valshara. Examples
+    include Corellon Larethian for elves, Moradin for dwarves, Yondalla for
+    halflings, Lloth for drow, Lady Gith for gith, and Semuanya for
+    lizardfolk.
+
+    Some deities accept worshippers of any race, while others are limited to
+    one or two specific races. If a god rejects your race, you must choose a
+    different patron.
 
 SEE ALSO
-    supplicate, favor, devote.
+    DEVOTE, FAVOR, SUPPLICATE
 ~
 
 0 DEMONSKIN~
@@ -6710,19 +6721,28 @@ DESCRIPTION
 
 10 DEVOTE~
 NAME
-    DEVOTE - Devote allows you to devote yourself to a deity. If you leave your deity
+    DEVOTE - bind yourself to a deity
 
 SYNOPSIS
-    Syntax:  devote <deity>
-    Syntax:  devote none
+    Syntax: devote <deity>
+    Syntax: devote none
 
 DESCRIPTION
-    Devote allows you to devote yourself to a deity. If you leave your deity for another, your favor is set to -1000 and you are blinded for a period of time.
+    DEVOTE allows you to pledge yourself to a deity. Your chosen deity affects
+    your FAVOR gains and losses, and determines whose aid you may seek through
+    SUPPLICATE.
 
-    Note: You must 'devote none' first before devoting to a new deity.
+    Many deities now have racial themes. Some are open to all, while others
+    only accept particular races. Use DEITIES before devoting if you want to
+    review the pantheon and find a patron that suits your character.
+
+    To abandon your current deity, use 'devote none'. Forsaking a deity is
+    punished harshly: your favor drops deeply into the negative and you are
+    cursed with blindness for a time. You must renounce your old deity before
+    choosing a new one.
 
 SEE ALSO
-    supplicate, deities, favor.
+    DEITIES, FAVOR, SUPPLICATE
 ~
 
 1 DEXTERITY DEX~
@@ -7744,15 +7764,23 @@ DESCRIPTION
 
 10 FAVOR~
 NAME
-    FAVOR - Your favor reflects how much your deity favors you. It can increase if
+    FAVOR - the measure of your standing with your deity
 
 DESCRIPTION
-    Your favor reflects how much your deity favors you. It can increase if you follow the principles of your deity, and decrease if you go against your deity's wishes. A high favor gives you better chance rolls and weapon bonuses, while a low favor penalizes you. You also use favor when supplicating for special favors. Favor ranges from -1000 to 1000.
+    FAVOR reflects how pleased your deity is with your actions. High favor can
+    improve your fortunes and makes divine aid easier to obtain. Low favor
+    brings penalties and may leave you unable to rely on your god when you
+    most need help.
 
-    Note: If you deviate from your deity's alignment, you shall suffer a penalty in favor for some actions.
+    Favor rises when you act in ways your deity approves of and falls when you
+    betray that deity's nature. Different gods reward different conduct. A war
+    god may value bold battle, a luck deity may reward aid and daring, and a
+    darker deity may respond well to ruthless acts while despising mercy.
+
+    Straying too far from your deity's alignment will also cost favor.
 
 SEE ALSO
-    deities, devote, supplicate.
+    DEITIES, DEVOTE, SUPPLICATE
 ~
 
 0 FEED~
@@ -14419,20 +14447,24 @@ DESCRIPTION
 
 10 SUPPLICATE~
 NAME
-    SUPPLICATE - Supplicate begs your deity (if you have one) for aid. You may supplicate
+    SUPPLICATE - beg divine aid from your deity
 
 SYNOPSIS
-    Syntax:  supplicate <supplication>
+    Syntax: supplicate <corpse|avatar|object|recall>
 
 DESCRIPTION
-    Supplicate begs your deity (if you have one) for aid. You may supplicate for 'corpse', which retrieves your corpse, 'avatar', which summons an avatar of the deity, 'object', which summons an object of the deity and 'recall', which sends the player back to his recall point (bypassing norecall flag).
+    SUPPLICATE asks your deity for direct aid. The exact favors available
+    depend on the god you serve and the amount of FAVOR you have earned.
 
-    Note: All deities offer corpse and recall, while object and avatar are for particular deities only.
+    All deities can answer requests for 'corpse' and 'recall'. Only certain
+    deities provide a divine object or a summoned avatar.
 
-    Deadlies may not supplicate for their corpse.
+    Supplication is not free. Each request costs favor, and a deity that is
+    displeased with you may be unwilling or unable to help. If you are a
+    deadly character, you may not supplicate for your corpse.
 
 SEE ALSO
-    deities, favor, devote.
+    DEITIES, DEVOTE, FAVOR
 ~
 
 0 SWITCH~

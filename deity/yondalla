@@ -1,0 +1,47 @@
+#DEITY
+Filename		yondalla~
+Name		Yondalla~
+Description	Yondalla is the Watchful Matron of the halflings, keeper of hearth, luck, and quiet courage.
+She favors those who protect home and kin, avoid needless cruelty, and prove that small hands can
+still shape great destinies. Her blessings often arrive as good timing and safe roads.
+~
+Alignment		600
+Worshippers	0
+Flee		5
+Flee_npcrace	0
+Flee_npcfoe	0
+Kill		2
+Kill_npcrace	0
+Kill_npcfoe	5
+Kill_magic	0
+Sac		8
+Bury_corpse	10
+Aid_spell		10
+Aid		10
+Steal		-10
+Backstab		-5
+Die		0
+Die_npcrace	0
+Die_npcfoe	0
+Spell_aid		5
+Dig_corpse	-5
+Scorpse		200
+Savatar		0
+Sdeityobj		0
+Srecall		100
+Race		3
+Class		-1
+Element		0
+Sex		-1
+Affected		0
+Npcrace		0
+Npcfoe		0
+Suscept		0
+Race2		-1
+Susceptnum	0
+Elementnum	0
+Affectednum	0
+Objstat		0
+End
+
+#END

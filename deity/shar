@@ -1,0 +1,47 @@
+#DEITY
+Filename		shar~
+Name		Shar~
+Description	Shar is the Lady of Loss and Night, a cold goddess of shadow, secrecy, and hungry emptiness.
+Vampires and other creatures of darkness often turn to her when they embrace power purchased at the cost
+of warmth, sunlight, and ordinary mortal joys. She offers survival, secrecy, and dominion in the dark.
+~
+Alignment		-700
+Worshippers	0
+Flee		5
+Flee_npcrace	0
+Flee_npcfoe	0
+Kill		5
+Kill_npcrace	0
+Kill_npcfoe	10
+Kill_magic	2
+Sac		10
+Bury_corpse	-10
+Aid_spell		0
+Aid		0
+Steal		10
+Backstab		15
+Die		-5
+Die_npcrace	0
+Die_npcfoe	0
+Spell_aid		0
+Dig_corpse	10
+Scorpse		300
+Savatar		0
+Sdeityobj		0
+Srecall		150
+Race		5
+Class		-1
+Element		0
+Sex		-1
+Affected		0
+Npcrace		0
+Npcfoe		0
+Suscept		0
+Race2		-1
+Susceptnum	0
+Elementnum	0
+Affectednum	0
+Objstat		0
+End
+
+#END

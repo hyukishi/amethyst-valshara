@@ -1,0 +1,47 @@
+#DEITY
+Filename		kyorlin~
+Name		Kyorlin~
+Description	Kyorlin the Infinite is revered in Valshara as a god of balance, judgment, and measured wisdom.
+His faithful seek the center between extremes: neither cruelty nor naivete, neither chaos without purpose
+nor law without mercy. Many humans and thoughtful wanderers look to Kyorlin when the world grows uncertain.
+~
+Alignment		0
+Worshippers	0
+Flee		0
+Flee_npcrace	0
+Flee_npcfoe	0
+Kill		2
+Kill_npcrace	0
+Kill_npcfoe	5
+Kill_magic	0
+Sac		8
+Bury_corpse	10
+Aid_spell		10
+Aid		10
+Steal		-15
+Backstab		-15
+Die		0
+Die_npcrace	0
+Die_npcfoe	0
+Spell_aid		5
+Dig_corpse	-5
+Scorpse		300
+Savatar		0
+Sdeityobj		0
+Srecall		150
+Race		0
+Class		-1
+Element		0
+Sex		-1
+Affected		0
+Npcrace		0
+Npcfoe		0
+Suscept		0
+Race2		-1
+Susceptnum	0
+Elementnum	0
+Affectednum	0
+Objstat		0
+End
+
+#END
