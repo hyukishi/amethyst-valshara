@@ -39,6 +39,7 @@ struct fallback_race_data
     int lck_plus;
     int hit;
     int mana;
+    int mana_regen;
     int height;
     int weight;
 };
@@ -64,21 +65,21 @@ LANG_DATA *		last_lang;
 
 static const FALLBACK_RACE_DATA fallback_pc_races[] =
 {
-    { RACE_HUMAN,      "Human",      LANG_COMMON,      0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 70, 180 },
-    { RACE_ELF,        "Elf",        LANG_ELVEN,       0,  -1,  2,  0,  1, -1,  1, 0, -2, 10, 72, 150 },
-    { RACE_DWARF,      "Dwarf",      LANG_DWARVEN,   257,   1,  0,  1,  0,  2, -1, 0,  6, -6, 52, 170 },
-    { RACE_HALFLING,   "Halfling",   LANG_HALFLING,  419,  -2,  1,  0,  0,  1,  0, 0, -3, 10, 40,  90 },
-    { RACE_PIXIE,      "Pixie",      LANG_PIXIE,     408,  -4,  3,  0, -1, -2,  3, 0, -5, 40, 24,  30 },
-    { RACE_VAMPIRE,    "_Vampire_",  LANG_COMMON,      0,   1,  0,  0,  0,  2, -2, 0,  0,  0, 70, 170 },
-    { RACE_HALF_OGRE,  "Half-Ogre",  LANG_OGRE,      483,   2, -3, -1, -2,  3, -4, 0,  5, -8, 84, 260 },
-    { RACE_HALF_ORC,   "Half-Orc",   LANG_ORCISH,    483,   1, -2, -2, -1,  2, -4, 0,  6, -9, 74, 210 },
-    { RACE_HALF_TROLL, "Half-Troll", LANG_TROLLISH,  355,   3, -2, -2,  1,  2, -5, 0,  7, -9, 82, 280 },
-    { RACE_HALF_ELF,   "Half-Elf",   LANG_ELVEN,     128,  -1,  1,  0,  1, -1,  1, 0,  3,  3, 72, 165 },
-    { RACE_GITH,       "Gith",       LANG_GITH,      352,   1,  2, -1,  1, -2, -5, 1,  4, 20, 72, 160 },
-    { RACE_DROW,       "Drow",       LANG_ELVEN,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 70, 150 },
-    { RACE_SEA_ELF,    "Sea-Elf",    LANG_ELVEN,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 71, 155 },
-    { RACE_GNOME,      "Gnome",      LANG_GNOME,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 42,  85 },
-    { RACE_LIZARDMAN,  "Lizardman",  LANG_COMMON,      0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 76, 220 }
+    { RACE_HUMAN,      "Human",      LANG_COMMON,      0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 0, 70, 180 },
+    { RACE_ELF,        "Elf",        LANG_ELVEN,       0,  -1,  2,  0,  1, -1,  1, 0, -2, 10, 1, 72, 150 },
+    { RACE_DWARF,      "Dwarf",      LANG_DWARVEN,   257,   1,  0,  1,  0,  2, -1, 0,  6, -6, 0, 52, 170 },
+    { RACE_HALFLING,   "Halfling",   LANG_HALFLING,  419,  -2,  1,  0,  0,  1,  0, 0, -3, 10, 0, 40,  90 },
+    { RACE_PIXIE,      "Pixie",      LANG_PIXIE,     408,  -4,  3,  0, -1, -2,  3, 0, -5, 40, 3, 24,  30 },
+    { RACE_VAMPIRE,    "_Vampire_",  LANG_COMMON,      0,   1,  0,  0,  0,  2, -2, 0,  0,  0, 1, 70, 170 },
+    { RACE_HALF_OGRE,  "Half-Ogre",  LANG_OGRE,      483,   2, -3, -1, -2,  3, -4, 0,  5, -8, 0, 84, 260 },
+    { RACE_HALF_ORC,   "Half-Orc",   LANG_ORCISH,    483,   1, -2, -2, -1,  2, -4, 0,  6, -9, 0, 74, 210 },
+    { RACE_HALF_TROLL, "Half-Troll", LANG_TROLLISH,  355,   3, -2, -2,  1,  2, -5, 0,  7, -9, 0, 82, 280 },
+    { RACE_HALF_ELF,   "Half-Elf",   LANG_ELVEN,     128,  -1,  1,  0,  1, -1,  1, 0,  3,  3, 1, 72, 165 },
+    { RACE_GITH,       "Gith",       LANG_GITH,      352,   1,  2, -1,  1, -2, -5, 1,  4, 20, 2, 72, 160 },
+    { RACE_DROW,       "Drow",       LANG_ELVEN,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 2, 70, 150 },
+    { RACE_SEA_ELF,    "Sea-Elf",    LANG_ELVEN,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 2, 71, 155 },
+    { RACE_GNOME,      "Gnome",      LANG_GNOME,       0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 1, 42,  85 },
+    { RACE_LIZARDMAN,  "Lizardman",  LANG_COMMON,      0,   0,  0,  0,  0,  0,  0, 0,  0,  0, 0, 76, 220 }
 };
 
 static void init_fallback_race( const FALLBACK_RACE_DATA *fallback )
@@ -108,6 +109,7 @@ static void init_fallback_race( const FALLBACK_RACE_DATA *fallback )
     race->lck_plus = fallback->lck_plus;
     race->hit = fallback->hit;
     race->mana = fallback->mana;
+    race->mana_regen = fallback->mana_regen;
 
     for ( i = 0; i < MAX_WHERE_NAME; ++i )
         race->where_name[i] = where_name[i];

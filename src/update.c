@@ -70,6 +70,74 @@ char * corpse_descs[] =
 
 extern int      top_exit;
 
+static bool is_full_spellcaster_class( int class_index )
+{
+    switch ( class_index )
+    {
+        case CLASS_MAGE:
+        case CLASS_CLERIC:
+        case CLASS_DRUID:
+        case CLASS_AUGURER:
+        case CLASS_CALLER:
+        case CLASS_NECROMANCER:
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+static bool is_hybrid_spellcaster_class( int class_index )
+{
+    switch ( class_index )
+    {
+        case CLASS_VAMPIRE:
+        case CLASS_RANGER:
+        case CLASS_PALADIN:
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+static int passive_caster_mana_bonus( CHAR_DATA *ch )
+{
+    static int meditate_sn = -2;
+    int best_bonus;
+    int i;
+
+    best_bonus = 0;
+
+    for ( i = 0; i < MAX_CLASS; ++i )
+    {
+        if ( !xIS_SET( ch->class, i ) || ch->level[i] <= 0 )
+            continue;
+
+        if ( is_full_spellcaster_class( i ) )
+            best_bonus = UMAX( best_bonus, 1 + ch->level[i] / 12 );
+        else if ( is_hybrid_spellcaster_class( i ) )
+            best_bonus = UMAX( best_bonus, 1 + ch->level[i] / 18 );
+    }
+
+    if ( best_bonus <= 0 || IS_NPC( ch ) )
+        return best_bonus;
+
+    if ( meditate_sn == -2 )
+        meditate_sn = skill_lookup( "meditate" );
+
+    if ( IS_VALID_SN( meditate_sn ) && ch->pcdata->learned[meditate_sn] > 0 )
+        best_bonus += UMIN( 3, ch->pcdata->learned[meditate_sn] / 35 );
+
+    return best_bonus;
+}
+
+static int racial_mana_bonus( CHAR_DATA *ch )
+{
+    if ( ch->race < 0 || ch->race >= MAX_RACE || race_table[ch->race] == NULL )
+        return 0;
+
+    return race_table[ch->race]->mana_regen;
+}
+
 /*
  * Advancement stuff.
  */
@@ -280,21 +348,22 @@ int hit_gain( CHAR_DATA *ch )
 int mana_gain( CHAR_DATA *ch )
 {
     int gain;
+    int regen_bonus;
 
     gain = 0;
     if ( IS_NPC(ch) )
     {
-    if ( xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) )
-	gain = ch->perm_int;
+    if ( xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_VAMPIRE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) || xIS_SET( ch->class, CLASS_CALLER ) )
+        gain = ch->perm_int;
     if ( xIS_SET( ch->class, CLASS_DRUID ) || xIS_SET( ch->class, CLASS_AUGURER ) || xIS_SET( ch->class, CLASS_CLERIC ) || xIS_SET( ch->class, CLASS_RANGER ) || xIS_SET( ch->class, CLASS_PALADIN ) )
-        gain = ch->perm_wis;
+        gain = UMAX( gain, ch->perm_wis );
     }
     else
     {
-	if(xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) )
+	if(xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_VAMPIRE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) || xIS_SET( ch->class, CLASS_CALLER ) )
 	gain = UMIN( get_curr_int(ch)/5, UMAX( 1, ch->level[best_magic_class(ch)] / 4 ) );
         if(xIS_SET( ch->class, CLASS_CLERIC ) || xIS_SET( ch->class, CLASS_PALADIN ) || xIS_SET( ch->class, CLASS_AUGURER ) || xIS_SET( ch->class, CLASS_DRUID ) || xIS_SET( ch->class, CLASS_RANGER ) )
-	gain = UMIN( get_curr_wis(ch)/5, UMAX( 1, ch->level[best_magic_class(ch)] / 4 ) );
+	gain = UMAX( gain, UMIN( get_curr_wis(ch)/5, UMAX( 1, ch->level[best_magic_class(ch)] / 4 ) ) );
 
 	if ( ch->position < POS_SLEEPING )
 	  return 0;
@@ -303,6 +372,9 @@ int mana_gain( CHAR_DATA *ch )
 	case POS_SLEEPING: gain += 3;	break;
 	case POS_RESTING:  gain += 2;	break;
 	}
+
+        regen_bonus = passive_caster_mana_bonus( ch ) + racial_mana_bonus( ch );
+        gain += regen_bonus;
 
 	if ( ch->pcdata->condition[COND_FULL]   == 0 )
 	    gain /= 2;
@@ -314,6 +386,9 @@ int mana_gain( CHAR_DATA *ch )
 
     if ( IS_AFFECTED(ch, AFF_POISON) )
 	gain /= 4;
+
+    if ( IS_NPC( ch ) )
+        gain += passive_caster_mana_bonus( ch ) + racial_mana_bonus( ch );
 
     return UMIN(gain, ch->max_mana - ch->mana);
 }

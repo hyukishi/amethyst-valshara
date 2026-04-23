@@ -200,25 +200,29 @@ int best_magic_class( CHAR_DATA *ch )
   char buf[MAX_STRING_LENGTH];
 
   if(xIS_SET(ch->class, CLASS_MAGE))
-    return 0;
+    return CLASS_MAGE;
   if(xIS_SET(ch->class, CLASS_CLERIC))
-    return 1;
+    return CLASS_CLERIC;
   if(xIS_SET(ch->class, CLASS_DRUID))
-    return 5;
+    return CLASS_DRUID;
   if(xIS_SET(ch->class, CLASS_AUGURER))
-    return 7;
+    return CLASS_AUGURER;
   if(xIS_SET(ch->class, CLASS_VAMPIRE))
-    return 4;
+    return CLASS_VAMPIRE;
+  if(xIS_SET(ch->class, CLASS_NECROMANCER))
+    return CLASS_NECROMANCER;
+  if(xIS_SET(ch->class, CLASS_CALLER))
+    return CLASS_CALLER;
   if(xIS_SET(ch->class, CLASS_RANGER))
-    return 6;
+    return CLASS_RANGER;
   if(xIS_SET(ch->class, CLASS_PALADIN))
-    return 8;
+    return CLASS_PALADIN;
   if(xIS_SET(ch->class, CLASS_THIEF))
-    return 2;
+    return CLASS_THIEF;
   if(xIS_SET(ch->class, CLASS_WARRIOR))
-    return 3;
+    return CLASS_WARRIOR;
   if(xIS_SET(ch->class, CLASS_BARBARIAN))
-    return 9;
+    return CLASS_BARBARIAN;
   if(IS_NPC(ch))
   {
     sprintf(buf, "Mob: %d has no class.", ch->pIndexData->vnum);
@@ -243,4 +247,3 @@ int skill_level( CHAR_DATA *ch, int sn )
    return found;
 }
 		
-

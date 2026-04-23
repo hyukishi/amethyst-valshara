@@ -10,6 +10,7 @@ Cha_Plus    -5
 Lck_Plus    1
 Hit         4
 Mana        20
+Mana_Regen  2
 Language    524288
 Exp_Mult    100
 Height      72
