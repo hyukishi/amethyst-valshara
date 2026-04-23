@@ -3561,14 +3561,14 @@ void do_name( CHAR_DATA *ch, char *argument )
   
 char *default_fprompt( CHAR_DATA *ch )
 {
-  static char buf[60];
+  static char buf[80];
 
   strcpy(buf, "&w<&Y%hhp ");
   if ( IS_VAMPIRE(ch) )
     strcat(buf, "&R%bbp");
   else
     strcat(buf, "&C%mm");
-  strcat(buf, " &G%vmv&w> ");
+  strcat(buf, " &G%vmv &R%n:%e/%Ehp&w> ");
   if ( IS_NPC(ch) || IS_IMMORTAL(ch) )
     strcat(buf, "%i%R");
   return buf;
@@ -3783,6 +3783,18 @@ void display_prompt( DESCRIPTOR_DATA *d )
 	else
 	  stat = ch->max_mana;
 	break;
+      case 'e':
+          if ( !ch->fighting || ( victim = ch->fighting->who ) == NULL )
+            stat = 0;
+          else
+            stat = UMAX( 0, victim->hit );
+          break;
+      case 'E':
+          if ( !ch->fighting || ( victim = ch->fighting->who ) == NULL )
+            stat = 0;
+          else
+            stat = victim->max_hit;
+          break;
         case 'N': /* Tank */
 	  if ( !IS_IMMORTAL(ch) ) break;
           if ( !ch->fighting || ( victim = ch->fighting->who ) == NULL )
@@ -3800,7 +3812,6 @@ void display_prompt( DESCRIPTOR_DATA *d )
           }
           break;
         case 'n':
-	  if ( !IS_IMMORTAL(ch) ) break;
           if (!ch->fighting || (victim = ch->fighting->who) == NULL )
             strcpy( pbuf, "N/A" );
           else {

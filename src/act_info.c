@@ -1438,6 +1438,7 @@ void show_race_line( CHAR_DATA *ch, CHAR_DATA *victim )
 void show_condition( CHAR_DATA *ch, CHAR_DATA *victim )
 {
     char buf[MAX_STRING_LENGTH];
+    char hpbuf[MAX_STRING_LENGTH];
     float percent;
 
     if ( victim->max_hit > 0 )
@@ -1475,6 +1476,17 @@ void show_condition( CHAR_DATA *ch, CHAR_DATA *victim )
 	else if ( percent >=  20 ) strcat( buf, " are leaking guts.\n\r"      );
 	else if ( percent >=  10 ) strcat( buf, " are almost dead.\n\r"       );
 	else                       strcat( buf, " are DYING.\n\r"             );
+    }
+
+    if ( victim->max_hit > 0 )
+    {
+	size_t len = strlen( buf );
+
+	while ( len > 0 && ( buf[len - 1] == '\n' || buf[len - 1] == '\r' ) )
+	    buf[--len] = '\0';
+
+	sprintf( hpbuf, " [%d/%d hp]\n\r", UMAX( 0, victim->hit ), victim->max_hit );
+	strcat( buf, hpbuf );
     }
 
     buf[0] = UPPER(buf[0]);
@@ -4792,4 +4804,3 @@ void do_recent( CHAR_DATA *ch, char *argument ) {
    }
    return;
 }
-

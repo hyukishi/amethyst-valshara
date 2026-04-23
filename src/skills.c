@@ -1488,15 +1488,16 @@ void learn_from_success( CHAR_DATA *ch, int sn )
 	sklvl = ch->level[skill_level(ch, sn)];
     if ( ch->pcdata->learned[sn] < adept )
     {
-	chance = ch->pcdata->learned[sn] + (5 * skill_table[sn]->difficulty);
+	chance = ch->pcdata->learned[sn] + (3 * skill_table[sn]->difficulty);
 	percent = number_percent();
 	if ( percent >= chance )
-	  learn = 1;
+	  learn = 2;
 	else
-	if ( chance - percent > 25 )
+	if ( chance - percent > 45 )
 	  return;
 	else
 	  learn = 1;
+	learn += UMAX( 0, adept - ch->pcdata->learned[sn] ) / 35;
 	ch->pcdata->learned[sn] = UMIN( adept, ch->pcdata->learned[sn] + learn );
 	if ( ch->pcdata->learned[sn] == adept )	 /* fully learned! */
 	{
@@ -5911,4 +5912,3 @@ separate_obj(obj);
       learn_from_success( ch, gsn_sharpen );
       return;
 }
-

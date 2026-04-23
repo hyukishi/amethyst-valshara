@@ -16,6 +16,7 @@
  ****************************************************************************/
 
 #include <sys/types.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -3652,9 +3653,33 @@ int xp_compute( CHAR_DATA *gch, CHAR_DATA *victim )
  * Added code to produce different messages based on weapon type - FB
  * Added better bug message so you can track down the bad dt's -Shaddai
  */
+static const char *append_damage_amount( const char *message, int dam, char *buf, size_t size )
+{
+    size_t len;
+    char punct;
+
+    if ( dam <= 0 || message == NULL || message[0] == '\0' )
+	return message;
+
+    len = strlen( message );
+    while ( len > 0 && isspace( (unsigned char) message[len - 1] ) )
+	--len;
+
+    if ( len > 0 && ( message[len - 1] == '.' || message[len - 1] == '!' || message[len - 1] == '?' ) )
+    {
+	punct = message[len - 1];
+	snprintf( buf, size, "%.*s (%d)%c", (int)( len - 1 ), message, dam, punct );
+    }
+    else
+	snprintf( buf, size, "%.*s (%d)", (int) len, message, dam );
+
+    return buf;
+}
+
 void new_dam_message( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, OBJ_DATA *obj )
 {
     char buf1[256], buf2[256], buf3[256];
+    char dbuf1[256], dbuf2[256], dbuf3[256];
     char bugbuf[MAX_STRING_LENGTH];
     const char *vs;
     const char *vp;
@@ -3809,11 +3834,11 @@ void new_dam_message( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, OBJ_DAT
 	    else
 	    {
 		if ( skill->hit_char && skill->hit_char[0] != '\0' )
-		  act( AT_HIT, skill->hit_char, ch, NULL, victim, TO_CHAR );
+		  act( AT_HIT, append_damage_amount( skill->hit_char, dam, dbuf2, sizeof(dbuf2) ), ch, NULL, victim, TO_CHAR );
 		if ( skill->hit_vict && skill->hit_vict[0] != '\0' )
-		  act( AT_HITME, skill->hit_vict, ch, NULL, victim, TO_VICT );
+		  act( AT_HITME, append_damage_amount( skill->hit_vict, dam, dbuf3, sizeof(dbuf3) ), ch, NULL, victim, TO_VICT );
 		if ( skill->hit_room && skill->hit_room[0] != '\0' )
-		  act( AT_ACTION, skill->hit_room, ch, NULL, victim, TO_NOTVICT );
+		  act( AT_ACTION, append_damage_amount( skill->hit_room, dam, dbuf1, sizeof(dbuf1) ), ch, NULL, victim, TO_NOTVICT );
 		if ( skill->hit_room && skill->hit_room[0] != '\0' && skill->hit_vict &&		     skill->hit_vict[0] != '\0' && skill->hit_char && skill->hit_char[0]		     != '\0' )
 		  return;
 	    } 
@@ -4032,7 +4057,7 @@ void do_flee( CHAR_DATA *ch, char *argument )
   if (!(ch->fighting)) {
     for(f=0; f<(ch->flee); f++) {
       for(i=0; i<6; i++) {
-        attempt = number_bits( 3 ) + number_bits( 2 );  /* Select a random direction */
+        attempt = number_range( 0, 5 );  /* Select a random direction */
         if (get_exit( ch->in_room, attempt))
 	{
 	  act( AT_FLEE, "$n panics, and attempts to flee.", ch, NULL, NULL, TO_ROOM);
@@ -4074,8 +4099,8 @@ void do_flee( CHAR_DATA *ch, char *argument )
 
   tries=0;
   do {
-    for(i=0; i<3; i++) {
-      attempt = number_range(0, 11 );  /* Select a random direction */
+    for(i=0; i<8; i++) {
+      attempt = number_range(0, 5 );  /* Select a random direction */
        if (get_exit( ch->in_room, attempt))
        { 
         found = TRUE;
@@ -4173,7 +4198,7 @@ void do_flee( CHAR_DATA *ch, char *argument )
   if (!(ch->fighting)) {
     for(f=0; f<((ch->flee)-tries); f++) {
       for(i=0; i<6; i++) {
-        attempt = number_bits( 4 );  /* Select a random direction */
+        attempt = number_range( 0, 5 );  /* Select a random direction */
         if (get_exit( ch->in_room, attempt) &&    
 	(attempt != badroom)) {
 
