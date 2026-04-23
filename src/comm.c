@@ -33,6 +33,104 @@
 #include "icec.h"
 #include "imc.h"
 
+static OBJ_DATA *starter_object( CHAR_DATA *ch, sh_int vnum, int level )
+{
+    OBJ_INDEX_DATA *obj_ind;
+    OBJ_DATA *obj;
+
+    obj_ind = get_obj_index( vnum );
+    if ( obj_ind == NULL )
+        return NULL;
+
+    obj = create_object( obj_ind, level );
+    if ( obj == NULL )
+        return NULL;
+
+    obj_to_char( obj, ch );
+    return obj;
+}
+
+static void starter_weapon_choice( CHAR_DATA *ch, sh_int weapon_vnums[], int *weapon_count )
+{
+    int primary;
+
+    *weapon_count = 0;
+
+    switch ( ch->race )
+    {
+        case RACE_DWARF:
+        case RACE_GNOME:
+        case RACE_LIZARDMAN:
+            primary = OBJ_VNUM_SCHOOL_MACE;
+            break;
+
+        case RACE_HALFLING:
+        case RACE_PIXIE:
+        case RACE_VAMPIRE:
+        case RACE_DROW:
+            primary = OBJ_VNUM_SCHOOL_DAGGER;
+            break;
+
+        default:
+            primary = OBJ_VNUM_SCHOOL_SWORD;
+            break;
+    }
+
+    weapon_vnums[(*weapon_count)++] = primary;
+
+    if ( xIS_SET( ch->class, CLASS_MAGE )
+    ||   xIS_SET( ch->class, CLASS_THIEF )
+    ||   xIS_SET( ch->class, CLASS_VAMPIRE )
+    ||   xIS_SET( ch->class, CLASS_AUGURER )
+    ||   xIS_SET( ch->class, CLASS_NECROMANCER ) )
+        if ( primary != OBJ_VNUM_SCHOOL_DAGGER )
+            weapon_vnums[(*weapon_count)++] = OBJ_VNUM_SCHOOL_DAGGER;
+
+    if ( xIS_SET( ch->class, CLASS_CLERIC )
+    ||   xIS_SET( ch->class, CLASS_DRUID ) )
+        if ( primary != OBJ_VNUM_SCHOOL_MACE )
+            weapon_vnums[(*weapon_count)++] = OBJ_VNUM_SCHOOL_MACE;
+
+    if ( xIS_SET( ch->class, CLASS_WARRIOR )
+    ||   xIS_SET( ch->class, CLASS_RANGER )
+    ||   xIS_SET( ch->class, CLASS_PALADIN )
+    ||   xIS_SET( ch->class, CLASS_BARBARIAN )
+    ||   xIS_SET( ch->class, CLASS_CALLER ) )
+        if ( primary != OBJ_VNUM_SCHOOL_SWORD )
+            weapon_vnums[(*weapon_count)++] = OBJ_VNUM_SCHOOL_SWORD;
+}
+
+void outfit_new_character( CHAR_DATA *ch, bool reoutfit )
+{
+    OBJ_DATA *obj;
+    sh_int weapon_vnums[3];
+    int i;
+    int weapon_count;
+
+    starter_weapon_choice( ch, weapon_vnums, &weapon_count );
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_BANNER, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_LIGHT );
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_VEST, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_BODY );
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_SHIELD, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_SHIELD );
+
+    for ( i = 0; i < weapon_count; ++i )
+    {
+        obj = starter_object( ch, weapon_vnums[i], 1 );
+        if ( obj != NULL && i == 0 && !reoutfit )
+            equip_char( ch, obj, WEAR_WIELD );
+    }
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_ADVENTURERS_GUIDE, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_HOLD );
+
+    starter_object( ch, OBJ_VNUM_BURLAP_SACK, 1 );
+}
+
 /*
  * Socket and TCP/IP stuff.
  */
@@ -2398,7 +2496,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 	if ( ch->level[max_sec_level(ch)] == 0 )
 	{
-	    OBJ_DATA *obj;
 	    int iLang;
 
 	    ch->pcdata->clan_name = STRALLOC( "" );
@@ -2480,35 +2577,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
                already turned on.  Very few people don't use those. */
 	    xSET_BIT( ch->act, PLR_AUTOGOLD ); 
 	    xSET_BIT( ch->act, PLR_AUTOEXIT ); 
-	    /* New players have to earn eq
-            obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_BANNER), 0 );
-	    obj_to_char( obj, ch );
-	    equip_char( ch, obj, WEAR_LIGHT );
-
-	    obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_VEST), 0 );
-	    obj_to_char( obj, ch );
-	    equip_char( ch, obj, WEAR_BODY );
-
-	    obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_SHIELD), 0 );
-	    obj_to_char( obj, ch );
-	    equip_char( ch, obj, WEAR_SHIELD );
-
-	    obj = create_object( get_obj_index(class_table[ch->class]->weapon),
-		0 );
-	    obj_to_char( obj, ch );
-	    equip_char( ch, obj, WEAR_WIELD );
-*/
-            /* Added by Brittany, Nov 24/96.  The object is the adventurer's guide
-               to the realms of despair, part of Academy.are. */
-            {
-            OBJ_INDEX_DATA *obj_ind = get_obj_index( 13310 );
-            if ( obj_ind != NULL )
-            {
-              obj = create_object( obj_ind, 0 );
-              obj_to_char( obj, ch );
-              equip_char( ch, obj, WEAR_HOLD );
-            }
-            }
+	    outfit_new_character( ch, FALSE );
 	    if (!sysdata.WAIT_FOR_AUTH)
 	      char_to_room( ch, get_room_index( ROOM_VNUM_SCHOOL ) );
 	    else

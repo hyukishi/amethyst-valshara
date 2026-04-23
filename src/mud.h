@@ -1695,8 +1695,10 @@ typedef enum
 #define OBJ_VNUM_NOTE		     36
 #define OBJ_VNUM_STONE		     38
 #define OBJ_VNUM_DEITY		     64
+#define OBJ_VNUM_BURLAP_SACK        123
 
 /* Academy eq */
+#define OBJ_VNUM_ADVENTURERS_GUIDE 13310
 #define OBJ_VNUM_SCHOOL_MACE	  13313
 #define OBJ_VNUM_SCHOOL_DAGGER	  13311
 #define OBJ_VNUM_SCHOOL_SWORD	  13312
@@ -4895,6 +4897,7 @@ int 	min_sec_level		args( ( CHAR_DATA *ch ) );
 int	skill_level		args( ( CHAR_DATA *ch, int sn ) );
 int     has_class		args( ( MOB_INDEX_DATA *ch ) );
 int	num_classes		args( ( CHAR_DATA *ch ) );
+void    outfit_new_character args( ( CHAR_DATA *ch, bool reoutfit ) );
 /* planes.c */
 PLANE_DATA *	plane_lookup	args( ( const char *name ) );
 void		load_planes	args( ( void ) );

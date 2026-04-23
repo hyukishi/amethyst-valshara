@@ -4853,7 +4853,6 @@ void do_newbieset( CHAR_DATA *ch, char *argument )
 {
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
-    OBJ_DATA *obj;
     CHAR_DATA *victim;
 
     set_char_color( AT_IMMORT, ch );
@@ -4881,53 +4880,7 @@ void do_newbieset( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-     obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_VEST), 1 );
-     obj_to_char(obj, victim);
-     obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_SHIELD), 1 );
-     obj_to_char(obj, victim);
-     obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_BANNER), 1 );
-     obj_to_char(obj, victim);
-
-     if ( (xIS_SET( victim->class, CLASS_MAGE) ) || (xIS_SET( victim->class, CLASS_THIEF) )
-     || (xIS_SET( victim->class, CLASS_VAMPIRE ) ) || (xIS_SET( victim->class, CLASS_AUGURER) ) )
-     {
-       obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_DAGGER), 1 );
-       obj_to_char(obj, victim);
-     }
-     else if ( (xIS_SET( victim->class, CLASS_CLERIC ) ) || (xIS_SET( victim->class, CLASS_DRUID ) ) )
-     {
-       obj = create_object( get_obj_index(OBJ_VNUM_SCHOOL_MACE), 1 );
-       obj_to_char(obj, victim);
-     }
-     else if ( (xIS_SET( victim->class, CLASS_WARRIOR) ) || (xIS_SET( victim->class, CLASS_RANGER )) || (xIS_SET( victim->class, CLASS_PALADIN )) )
-     {
-       obj = create_object(get_obj_index(OBJ_VNUM_SCHOOL_SWORD), 1 );
-       obj_to_char(obj, victim);
-     }
-  
-     /* Added by Brittany, on Nov. 24, 1996. The object is the adventurer's 
-          guide to the realms of despair, part of academy.are. */
-     {
-       OBJ_INDEX_DATA *obj_ind = get_obj_index( 13310 );
-       if ( obj_ind != NULL )
-       {
-         obj = create_object( obj_ind, 1 );
-         obj_to_char( obj, victim );
-       }
-     }
-
-/* Added the burlap sack to the newbieset.  The sack is part of sgate.are
-   called Spectral Gate.  Brittany */
-
-     {
-
-       OBJ_INDEX_DATA *obj_ind = get_obj_index( 123 );
-       if ( obj_ind != NULL )
-       {
-         obj = create_object( obj_ind, 1 );
-         obj_to_char( obj, victim );
-       }
-     }
+    outfit_new_character( victim, TRUE );
 
     act( AT_IMMORT, "$n has equipped you with a newbieset.", ch, NULL, victim, TO_VICT);
     ch_printf( ch, "You have re-equipped %s.\n\r", victim->name );
