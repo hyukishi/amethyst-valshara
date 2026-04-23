@@ -2502,10 +2502,7 @@ int get_real_obj_weight( OBJ_DATA *obj )
 bool room_is_dark( ROOM_INDEX_DATA *pRoomIndex )
 {
     if ( !pRoomIndex )
-    {
-	bug( "room_is_dark: NULL pRoomIndex", 0 );
-	return TRUE;
-    }
+	return FALSE;
 
     if ( pRoomIndex->light > 0 )
 	return FALSE;
@@ -4313,4 +4310,3 @@ void timeString( time_t time, char here[16] ) {
    sprintf( here, tim );
    return;
 }
-

@@ -3982,13 +3982,15 @@ void do_config( CHAR_DATA *ch, char *argument )
       set_char_color( AT_DGREEN, ch );
       send_to_char( "\n\r\n\rMisc:      ", ch );
       set_char_color( AT_GREY, ch );
-      ch_printf( ch, "%-12s   %-12s   %-12s",
+      ch_printf( ch, "%-12s   %-12s   %-12s   %-12s",
 	   xIS_SET(ch->act, PLR_TELNET_GA )		? "[+] TELNETGA"
-                                                        : "[-] telnetga",
+	                                                        : "[-] telnetga",
            IS_SET( ch->pcdata->flags, PCFLAG_GROUPWHO ) ? "[+] GROUPWHO"
-                                                        : "[-] groupwho",
+	                                                        : "[-] groupwho",
            IS_SET( ch->pcdata->flags, PCFLAG_NOINTRO )  ? "[+] NOINTRO"
-                                                        : "[-] nointro" );
+	                                                        : "[-] nointro",
+           xIS_SET(ch->act, PLR_AUTOMAP )               ? "[+] AUTOMAP"
+	                                                        : "[-] automap" );
  
       set_char_color( AT_DGREEN, ch );
       send_to_char( "\n\r\n\rSettings:  ", ch );
@@ -4055,8 +4057,8 @@ void do_config( CHAR_DATA *ch, char *argument )
 	else if ( !str_prefix( arg+1, "drag"     ) ) bit = PLR_SHOVEDRAG;
 	else if ( IS_IMMORTAL( ch )
 	     &&   !str_prefix( arg+1, "vnum"     ) ) bit = PLR_ROOMVNUM;
-	else if ( IS_IMMORTAL( ch )
-	     &&   !str_prefix( arg+1, "map"      ) ) bit = PLR_AUTOMAP;     /* maps */
+	else if ( !str_prefix( arg+1, "map"      )
+	     ||   !str_prefix( arg+1, "automap"  ) ) bit = PLR_AUTOMAP;     /* maps */
 
 	if (bit)
         {
