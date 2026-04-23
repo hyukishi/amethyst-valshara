@@ -750,7 +750,8 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
     ch->desc			= d;
     ch->pcdata->filename	= STRALLOC( fname );
     ch->name			= NULL;
-    ch->act			= multimeb(PLR_BLANK, PLR_COMBINE, PLR_PROMPT, -1);
+    ch->act			= multimeb(PLR_BLANK, PLR_COMBINE, PLR_PROMPT,
+				 PLR_AUTOLOOT, PLR_AUTOSAC, PLR_AUTOMAP, -1);
     ch->perm_str		= 13;
     ch->perm_int		= 13;
     ch->perm_wis		= 13;

@@ -195,6 +195,31 @@ char *hallucinated_object( int ms, bool fShort )
     return "Whoa!!!";
 }
 
+static const char *weapon_skill_name( int dam_type )
+{
+    switch ( dam_type )
+    {
+        default:         return "pugilism";
+        case DAM_HIT:
+        case DAM_SUCTION:
+        case DAM_BITE:
+        case DAM_BLAST:  return "pugilism";
+        case DAM_SLASH:
+        case DAM_SLICE:  return "long blades";
+        case DAM_PIERCE:
+        case DAM_STAB:   return "short blades";
+        case DAM_WHIP:   return "flexible arms";
+        case DAM_CLAW:   return "talonous arms";
+        case DAM_POUND:
+        case DAM_CRUSH:  return "bludgeons";
+        case DAM_BOLT:   return "crossbows";
+        case DAM_ARROW:  return "bows";
+        case DAM_DART:   return "darts";
+        case DAM_STONE:  return "slings";
+        case DAM_PEA:    return "blowguns";
+    }
+}
+
 
 /*
  * Show a list to a character.
@@ -1646,7 +1671,8 @@ void do_examine( CHAR_DATA *ch, char *argument )
 
 	case ITEM_WEAPON:
 	    dam = INIT_WEAPON_CONDITION - obj->value[0];
-	    strcpy( buf, "As you look more closely, you notice that it is ");
+	    sprintf( buf, "As you look more closely, you notice that it is a %s weapon and is ",
+		weapon_skill_name( obj->value[3] ) );
 	    if (dam ==  0) strcat( buf, "in superb condition.");
        else if (dam ==  1) strcat( buf, "in excellent condition.");
        else if (dam ==  2) strcat( buf, "in very good condition.");

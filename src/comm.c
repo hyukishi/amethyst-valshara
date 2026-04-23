@@ -2587,10 +2587,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		[ch->sex == SEX_FEMALE ? 1 : 0] ); 
 	    set_title( ch, buf ); 
 
-            /* Added by Narn.  Start new characters with autoexit and autgold
-               already turned on.  Very few people don't use those. */
+            /* Start new characters with the most commonly used defaults. */
 	    xSET_BIT( ch->act, PLR_AUTOGOLD ); 
 	    xSET_BIT( ch->act, PLR_AUTOEXIT ); 
+	    xSET_BIT( ch->act, PLR_AUTOLOOT );
+	    xSET_BIT( ch->act, PLR_AUTOSAC );
+	    xSET_BIT( ch->act, PLR_AUTOMAP );
 	    outfit_new_character( ch, FALSE );
 	    if (!sysdata.WAIT_FOR_AUTH)
 	      char_to_room( ch, get_room_index( ROOM_VNUM_SCHOOL ) );
@@ -3561,14 +3563,14 @@ void do_name( CHAR_DATA *ch, char *argument )
   
 char *default_fprompt( CHAR_DATA *ch )
 {
-  static char buf[80];
+  static char buf[128];
 
   strcpy(buf, "&w<&Y%hhp ");
   if ( IS_VAMPIRE(ch) )
     strcat(buf, "&R%bbp");
   else
     strcat(buf, "&C%mm");
-  strcat(buf, " &G%vmv &R%n:%e/%Ehp&w> ");
+  strcat(buf, " &G%vmv &Yxp:%x/%X &yg:%g &R%n:%e/%Ehp&w> ");
   if ( IS_NPC(ch) || IS_IMMORTAL(ch) )
     strcat(buf, "%i%R");
   return buf;
@@ -3576,14 +3578,14 @@ char *default_fprompt( CHAR_DATA *ch )
 
 char *default_prompt( CHAR_DATA *ch )
 {
-  static char buf[60];
+  static char buf[96];
 
   strcpy(buf, "&w<&Y%hhp ");
   if ( IS_VAMPIRE(ch) )
     strcat(buf, "&R%bbp");
   else
     strcat(buf, "&C%mm");
-  strcat(buf, " &G%vmv&w> ");
+  strcat(buf, " &G%vmv &Yxp:%x/%X &yg:%g&w> ");
   if ( IS_NPC(ch) || IS_IMMORTAL(ch) )
     strcat(buf, "%i%R");
   return buf;

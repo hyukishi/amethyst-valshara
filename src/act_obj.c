@@ -20,6 +20,31 @@
 #include <string.h>
 #include <time.h>
 #include "mud.h"
+
+static const char *weapon_skill_name( int dam_type )
+{
+    switch ( dam_type )
+    {
+        default:         return "pugilism";
+        case DAM_HIT:
+        case DAM_SUCTION:
+        case DAM_BITE:
+        case DAM_BLAST:  return "pugilism";
+        case DAM_SLASH:
+        case DAM_SLICE:  return "long blades";
+        case DAM_PIERCE:
+        case DAM_STAB:   return "short blades";
+        case DAM_WHIP:   return "flexible arms";
+        case DAM_CLAW:   return "talonous arms";
+        case DAM_POUND:
+        case DAM_CRUSH:  return "bludgeons";
+        case DAM_BOLT:   return "crossbows";
+        case DAM_ARROW:  return "bows";
+        case DAM_DART:   return "darts";
+        case DAM_STONE:  return "slings";
+        case DAM_PEA:    return "blowguns";
+    }
+}
 #include "bet.h"
 
 
@@ -2506,7 +2531,8 @@ void do_auction (CHAR_DATA *ch, char *argument)
 		  break;
         
 		case ITEM_WEAPON:
-		  sprintf( buf, "Damage is %d to %d (average %d).%s\n\r",
+		  sprintf( buf, "Weapon type is %s. Damage is %d to %d (average %d).%s\n\r",
+			weapon_skill_name( obj->value[3] ),
 			obj->value[1], obj->value[2],
 			( obj->value[1] + obj->value[2] ) / 2,
 			IS_OBJ_STAT( obj, ITEM_POISONED) ?
@@ -3151,4 +3177,3 @@ void do_rolldie(CHAR_DATA *ch, char *argument)
  }
  
  /*dice chance deal throw*/
-
