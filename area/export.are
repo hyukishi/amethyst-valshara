@@ -1264,7 +1264,7 @@ Some god dropped a newly created spacerobj here.~
 #ROOMS
 #9810
 Winter Altar~
-~
+A cold stillness gathers around this altar, as if winter itself has been invited to dwell here. Frosted stone and pale light lend the chamber a solemn, ritual character.~
 0 1073741833 0
 D2
 ~
@@ -1277,7 +1277,7 @@ D8
 S
 #9811
 The Winter Pit~
-~
+The pit below is bitterly cold, its depths seeming to swallow both warmth and sound. The stone is slick and unforgiving, and every breath hangs in the air before fading.~
 0 1073741833 0
 D2
 ~
@@ -1286,7 +1286,7 @@ D2
 S
 #9812
 A dark cell~
-~
+This cramped stone cell is deprived of comfort and nearly stripped of light. The walls are close, the air is stale, and the room feels designed to confine both body and spirit.~
 0 1073741833 0
 D1
 ~
@@ -1295,7 +1295,7 @@ D1
 S
 #9813
 North Mage Route~
-~
+This corridor forms part of the north mage route, a stark passage linking ritual chambers and inner cells. Arcane traffic has worn the way smooth, but little warmth remains in its stone.~
 0 1073741833 0
 D1
 ~
@@ -1312,7 +1312,7 @@ D3
 S
 #9814
 North Mage Route~
-~
+This corridor forms part of the north mage route, a stark passage linking ritual chambers and inner cells. Arcane traffic has worn the way smooth, but little warmth remains in its stone.~
 0 1073741833 0
 D1
 ~
@@ -1325,7 +1325,7 @@ D3
 S
 #9815
 Spring~
-~
+A gentler air touches this chamber, and the harshness of the surrounding complex eases for a moment. There is a sense of renewal here, as though the season itself has been captured in ritual form.~
 0 1073741833 0
 D1
 ~
@@ -1338,7 +1338,7 @@ D3
 S
 #9816
 Spring Altar~
-~
+This altar bears the lighter mood of spring, where growth, thaw, and returning life are honored through old observances. The chamber feels calmer here, though magic still hums quietly in the stone.~
 0 1073741833 0
 D3
 ~
@@ -1351,7 +1351,7 @@ D9
 S
 #9817
 The Spring Pit~
-~
+The pit here is damp and echoing, less cruel in tone than the harsher seasonal chambers but no less dangerous. Moisture beads along the walls and vanishes into shadow below.~
 0 1073741833 0
 D2
 ~
@@ -1360,7 +1360,7 @@ D2
 S
 #9818
 A dark cell~
-~
+This cramped stone cell is deprived of comfort and nearly stripped of light. The walls are close, the air is stale, and the room feels designed to confine both body and spirit.~
 0 1073741833 0
 D2
 ~
@@ -1369,7 +1369,7 @@ D2
 S
 #9819
 East Mage Route~
-~
+This stretch of the east mage route is narrow and severe, built to move adepts between cells, pits, and ritual spaces with grim efficiency. The stones here remember a great deal of passing magic.~
 0 1073741833 0
 D0
 ~
@@ -1386,7 +1386,7 @@ D3
 S
 #9820
 East Mage Route~
-~
+This stretch of the east mage route is narrow and severe, built to move adepts between cells, pits, and ritual spaces with grim efficiency. The stones here remember a great deal of passing magic.~
 0 1073741833 0
 D0
 ~
@@ -1399,7 +1399,7 @@ D2
 S
 #9821
 Summer~
-~
+Heat gathers in this chamber, turning the air heavy and dry. Even in silence the room feels active, as though the season of flame and force has taken root here.~
 0 1073741833 0
 D0
 ~
@@ -1412,7 +1412,7 @@ D2
 S
 #9822
 Summer Altar~
-~
+A warm radiance clings to this altar, celebrating the fierce abundance and blazing energy of summer. The chamber is bright in mood, but not in a way that feels entirely safe.~
 0 1073741833 0
 D0
 ~
@@ -1429,7 +1429,7 @@ D7
 S
 #9823
 The Summer Pit~
-~
+The pit below radiates a deep oppressive warmth, and the surrounding stone seems scorched by long exposure. Looking downward, you feel more threatened by heat than by depth.~
 0 1073741833 0
 D0
 ~
@@ -1446,7 +1446,7 @@ D3
 S
 #9824
 A dark cell~
-~
+This cramped stone cell is deprived of comfort and nearly stripped of light. The walls are close, the air is stale, and the room feels designed to confine both body and spirit.~
 0 1073741833 0
 D1
 ~
@@ -1459,7 +1459,7 @@ D3
 S
 #9825
 South Mage Route~
-~
+The south mage route runs through this chamber in hard angles and practical stone. It is a place of passage, not rest, where the architecture serves ritual order above all else.~
 0 1073741833 0
 D0
 ~
@@ -1476,7 +1476,7 @@ D3
 S
 #9826
 South Mage Route~
-~
+The south mage route runs through this chamber in hard angles and practical stone. It is a place of passage, not rest, where the architecture serves ritual order above all else.~
 0 1073741833 0
 D1
 ~
@@ -1489,7 +1489,7 @@ D3
 S
 #9827
 Autumn~
-~
+A dry, fading atmosphere settles over this chamber, carrying the quiet dignity of things nearing their end. The room feels reflective, touched by decline without quite surrendering to decay.~
 0 1073741833 0
 D1
 ~
@@ -1502,7 +1502,7 @@ D3
 S
 #9828
 Autumn Altar~
-~
+This altar honors autumn through solemn balance: harvest, loss, and the beauty of decline held together in ritual form. The room feels restrained, as if power here is meant to be measured rather than spent.~
 0 1073741833 0
 D1
 ~
@@ -1515,7 +1515,7 @@ D6
 S
 #9829
 The Autumn Pit~
-~
+Leaves are absent, yet the pit still suggests autumn through its dry chill and brittle hush. Sound falls away quickly here, swallowed by a depth that feels patient rather than ravenous.~
 0 9 0
 D0
 ~
@@ -1524,7 +1524,7 @@ D0
 S
 #9830
 A dark cell~
-~
+This cramped stone cell is deprived of comfort and nearly stripped of light. The walls are close, the air is stale, and the room feels designed to confine both body and spirit.~
 0 1073741833 0
 D0
 ~
@@ -1537,7 +1537,7 @@ D2
 S
 #9831
 West Mage Route~
-~
+This section of the west mage route is another bare conduit through the complex, intended for movement rather than reflection. The passage is cleanly cut, spare, and heavy with the residue of old workings.~
 0 1073741833 0
 D0
 ~
@@ -1554,7 +1554,7 @@ D2
 S
 #9832
 West Mage Route~
-~
+This section of the west mage route is another bare conduit through the complex, intended for movement rather than reflection. The passage is cleanly cut, spare, and heavy with the residue of old workings.~
 0 1073741833 0
 D0
 ~
@@ -1567,7 +1567,7 @@ D2
 S
 #9833
 Winter~
-~
+The season of winter is embodied here in mute stone and severe cold. The chamber feels emptied of excess, leaving only discipline, stillness, and the threat of endurance without comfort.~
 0 1073741833 0
 D0
 ~
@@ -1580,7 +1580,7 @@ D2
 S
 #9834
 Winter Attendant~
-~
+This chamber appears set aside for one who tends the winter rites. The space is spare, orderly, and marked by a life lived in service to a cold and exacting season.~
 0 1073741833 0
 D7
 ~
@@ -1592,8 +1592,8 @@ D8
 0 -1 9835
 S
 #9835
-Winter Liar~
-~
+Winter Lair~
+This private room feels like a retreat for a winter devotee, though there is little ease to be found in it. Chill stone and sparse furnishings suggest habit, austerity, and long isolation.~
 0 1073741833 0
 D5
 ~
@@ -1606,7 +1606,7 @@ D7
 S
 #9836
 North Mage Route~
-~
+This corridor forms part of the north mage route, a stark passage linking ritual chambers and inner cells. Arcane traffic has worn the way smooth, but little warmth remains in its stone.~
 0 1073741833 0
 D0
 ~
@@ -1619,7 +1619,7 @@ D2
 S
 #9837
 North Mage Route~
-~
+This corridor forms part of the north mage route, a stark passage linking ritual chambers and inner cells. Arcane traffic has worn the way smooth, but little warmth remains in its stone.~
 0 1073741833 0
 D0
 ~
@@ -1632,7 +1632,7 @@ D2
 S
 #9838
 Spring Attendant~
-~
+This chamber is arranged for the attendant of spring, with a softer atmosphere than most rooms in the complex. Even so, its order and restraint remind you that this is still a place of ritual duty.~
 0 1073741833 0
 D6
 ~
@@ -1644,8 +1644,8 @@ D9
 0 -1 9839
 S
 #9839
-Spring Liar~
-~
+Spring Lair~
+This small retreat holds a trace of gentleness uncommon in the surrounding halls. It feels like a place where one might rest between ceremonies devoted to renewal and growth.~
 0 1073741833 0
 D5
 ~
@@ -1658,7 +1658,7 @@ D6
 S
 #9840
 East Mage Route~
-~
+This stretch of the east mage route is narrow and severe, built to move adepts between cells, pits, and ritual spaces with grim efficiency. The stones here remember a great deal of passing magic.~
 0 1073741833 0
 D1
 ~
@@ -1671,7 +1671,7 @@ D3
 S
 #9841
 East Mage Route~
-~
+This stretch of the east mage route is narrow and severe, built to move adepts between cells, pits, and ritual spaces with grim efficiency. The stones here remember a great deal of passing magic.~
 0 1073741833 0
 D1
 ~
@@ -1684,7 +1684,7 @@ D3
 S
 #9842
 Summer Attendant~
-~
+The room of the summer attendant carries lingering warmth, as though the season's rites never wholly leave it. The space is functional, but charged with a faint restless energy.~
 0 1073741833 0
 D7
 ~
@@ -1696,8 +1696,8 @@ D8
 0 -1 9822
 S
 #9843
-Summer Liar~
-~
+Summer Lair~
+This private chamber feels hotter than the corridors outside, and the stones seem to hold the memory of ritual fire. Rest here would come fitfully, with warmth pressing in from every side.~
 0 1073741833 0
 D5
 ~
@@ -1710,7 +1710,7 @@ D8
 S
 #9844
 South Mage Route~
-~
+The south mage route runs through this chamber in hard angles and practical stone. It is a place of passage, not rest, where the architecture serves ritual order above all else.~
 0 1073741833 0
 D0
 ~
@@ -1723,7 +1723,7 @@ D2
 S
 #9845
 South Mage Route~
-~
+The south mage route runs through this chamber in hard angles and practical stone. It is a place of passage, not rest, where the architecture serves ritual order above all else.~
 0 1073741833 0
 D0
 ~
@@ -1736,7 +1736,7 @@ D2
 S
 #9846
 Autumn Attendant~
-~
+This chamber belongs to the autumn attendant, and its atmosphere is quieter than the rest of the seasonal halls. There is an almost clerical calm here, touched by weariness and acceptance.~
 0 1073741833 0
 D6
 ~
@@ -1748,8 +1748,8 @@ D9
 0 -1 9828
 S
 #9847
-Autumn Liar~
-~
+Autumn Lair~
+A muted stillness fills this room, where an autumn devotee might retire between observances. The space feels contemplative, marked by restraint and the knowledge that all bright things eventually fade.~
 0 1073741833 0
 D5
 ~
@@ -1762,7 +1762,7 @@ D9
 S
 #9848
 West Mage Route~
-~
+This section of the west mage route is another bare conduit through the complex, intended for movement rather than reflection. The passage is cleanly cut, spare, and heavy with the residue of old workings.~
 0 1073741833 0
 D1
 ~
@@ -1775,7 +1775,7 @@ D3
 S
 #9849
 West Mage Route~
-~
+This section of the west mage route is another bare conduit through the complex, intended for movement rather than reflection. The passage is cleanly cut, spare, and heavy with the residue of old workings.~
 0 1073741833 0
 D1
 ~
@@ -3118,7 +3118,7 @@ You see the top of the staircase.
 S
 #9895
 The deepest pit~
-~
+You stand near the deepest part of the pit complex, where the surrounding stone seems to lean inward and the darkness below grows almost tangible. The air here carries the oppressive weight of old confinement.~
 0 1073741833 0
 D0
 ~
@@ -3135,7 +3135,7 @@ D2
 S
 #9896
 The fire pit~
-~
+Heat rolls through this chamber from the fire pit at its heart, making the very stone feel alive with smoldering force. The room is dangerous in a patient, elemental way.~
 0 1073741833 0
 D0
 ~
@@ -3152,7 +3152,7 @@ D3
 S
 #9897
 The deepest pit~
-~
+You stand near the deepest part of the pit complex, where the surrounding stone seems to lean inward and the darkness below grows almost tangible. The air here carries the oppressive weight of old confinement.~
 0 1073741833 0
 D0
 ~
@@ -3169,7 +3169,7 @@ D3
 S
 #9898
 The Passage to the pits~
-~
+This passage serves as a grim threshold between the outer chambers and the deeper pits below. The air grows heavier here, and each step forward feels like a descent into something less merciful.~
 0 9 0
 D2
 ~
@@ -3182,7 +3182,7 @@ D4
 S
 #9899
 The servants passage~
-~
+This narrow service corridor was built for unseen hands to move between the deeper chambers. It is plain, practical, and quietly oppressive, like a path never meant for honored guests.~
 0 9 0
 D2
 ~
