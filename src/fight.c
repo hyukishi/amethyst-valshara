@@ -3731,9 +3731,18 @@ void new_dam_message( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, OBJ_DAT
 	skill = skill_table[dt];
     if ( dt == TYPE_HIT )
     {
-	sprintf( buf1, "$n %s $N%c",  vp, punct );
-	sprintf( buf2, "You %s $N%c", vs, punct );
-	sprintf( buf3, "$n %s you%c", vp, punct );
+	if ( dam > 0 )
+	{
+	    sprintf( buf1, "$n %s $N (%d)%c",  vp, dam, punct );
+	    sprintf( buf2, "You %s $N (%d)%c", vs, dam, punct );
+	    sprintf( buf3, "$n %s you (%d)%c", vp, dam, punct );
+	}
+	else
+	{
+	    sprintf( buf1, "$n %s $N%c",  vp, punct );
+	    sprintf( buf2, "You %s $N%c", vs, punct );
+	    sprintf( buf3, "$n %s you%c", vp, punct );
+	}
     }
     else
     if ( dt > TYPE_HIT && is_wielding_poisoned( ch ) )
@@ -3749,9 +3758,18 @@ void new_dam_message( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, OBJ_DAT
 	    attack  = attack_table[0];
         }
 
-	sprintf( buf1, "$n's poisoned %s %s $N%c", attack, vp, punct );
-	sprintf( buf2, "Your poisoned %s %s $N%c", attack, vp, punct );
-	sprintf( buf3, "$n's poisoned %s %s you%c", attack, vp, punct ); 
+	if ( dam > 0 )
+	{
+	    sprintf( buf1, "$n's poisoned %s %s $N (%d)%c", attack, vp, dam, punct );
+	    sprintf( buf2, "Your poisoned %s %s $N (%d)%c", attack, vp, dam, punct );
+	    sprintf( buf3, "$n's poisoned %s %s you (%d)%c", attack, vp, dam, punct );
+	}
+	else
+	{
+	    sprintf( buf1, "$n's poisoned %s %s $N%c", attack, vp, punct );
+	    sprintf( buf2, "Your poisoned %s %s $N%c", attack, vp, punct );
+	    sprintf( buf3, "$n's poisoned %s %s you%c", attack, vp, punct );
+	}
     }
     else
     {
@@ -3817,9 +3835,18 @@ void new_dam_message( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, OBJ_DAT
 	    attack  = attack_table[0];
 	}
 
-	sprintf( buf1, "$n's %s %s $N%c",  attack, vp, punct );
-	sprintf( buf2, "Your %s %s $N%c",  attack, vp, punct );
-	sprintf( buf3, "$n's %s %s you%c", attack, vp, punct );
+	if ( dam > 0 )
+	{
+	    sprintf( buf1, "$n's %s %s $N (%d)%c",  attack, vp, dam, punct );
+	    sprintf( buf2, "Your %s %s $N (%d)%c",  attack, vp, dam, punct );
+	    sprintf( buf3, "$n's %s %s you (%d)%c", attack, vp, dam, punct );
+	}
+	else
+	{
+	    sprintf( buf1, "$n's %s %s $N%c",  attack, vp, punct );
+	    sprintf( buf2, "Your %s %s $N%c",  attack, vp, punct );
+	    sprintf( buf3, "$n's %s %s you%c", attack, vp, punct );
+	}
     }
 
 
