@@ -2018,6 +2018,7 @@ void do_laws( CHAR_DATA *ch, char *argument )
 void do_help( CHAR_DATA *ch, char *argument )
 {
     HELP_DATA *pHelp;
+    const char *text;
 
     if ( (pHelp = get_help( ch, argument )) == NULL )
     {
@@ -2025,7 +2026,13 @@ void do_help( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( pHelp->level >= 0 && str_cmp( argument, "imotd" ) )
+    text = pHelp->text;
+    if ( text[0] == '.' )
+        text++;
+
+    if ( pHelp->level >= 0
+    &&   str_cmp( argument, "imotd" )
+    &&   strncmp( text, "NAME\n", 5 ) != 0 )
     {
 	send_to_pager( pHelp->keyword, ch );
 	send_to_pager( "\n\r", ch );
@@ -2034,10 +2041,7 @@ void do_help( CHAR_DATA *ch, char *argument )
     /*
      * Strip leading '.' to allow initial blanks.
      */
-    if ( pHelp->text[0] == '.' )
-	send_to_pager_color( pHelp->text+1, ch );
-    else
-	send_to_pager_color( pHelp->text  , ch );
+    send_to_pager_color( text, ch );
     return;
 }
 
