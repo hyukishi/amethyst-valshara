@@ -2271,6 +2271,14 @@ Log         2
 End
 
 #COMMAND
+Name        resetpassword~
+Code        do_resetpassword
+Position    100
+Level       121
+Log         2
+End
+
+#COMMAND
 Name        practice~
 Code        do_practice
 Position    104

@@ -5236,6 +5236,167 @@ void do_form_password( CHAR_DATA *ch, char *argument)
    return;
 }
 
+void do_resetpassword( CHAR_DATA *ch, char *argument )
+{
+   char arg[MAX_INPUT_LENGTH];
+   char password[MAX_INPUT_LENGTH];
+   char *pArg;
+   char *pwdnew;
+   char *p;
+   char cEnd;
+   char filekey[256];
+   char filename[1024];
+   struct stat fst;
+   DESCRIPTOR_DATA *d;
+   CHAR_DATA *victim;
+   bool loaded;
+   bool offline_loaded;
+
+   if ( IS_NPC( ch ) )
+      return;
+
+   set_char_color( AT_IMMORT, ch );
+
+   if ( get_trust( ch ) < LEVEL_SUPREME )
+   {
+      send_to_char( "You can't do that.\n\r", ch );
+      return;
+   }
+
+   pArg = arg;
+   while ( isspace( *argument ) )
+      argument++;
+
+   cEnd = ' ';
+   if ( *argument == '\'' || *argument == '"' )
+      cEnd = *argument++;
+
+   while ( *argument != '\0' )
+   {
+      if ( *argument == cEnd )
+      {
+         argument++;
+         break;
+      }
+      *pArg++ = *argument++;
+   }
+   *pArg = '\0';
+
+   argument = one_argument( argument, password );
+
+   if ( arg[0] == '\0' || password[0] == '\0' )
+   {
+      send_to_char( "Syntax: resetpassword <player> <newpassword>\n\r", ch );
+      send_to_char( "Use quotes around multi-word character names.\n\r", ch );
+      return;
+   }
+
+   strcpy( filekey, player_filename( arg ) );
+
+   if ( !str_cmp( arg, ch->name ) || !str_cmp( filekey, ch->pcdata->filename ) )
+   {
+      send_to_char( "Use PASSWORD to change your own password.\n\r", ch );
+      return;
+   }
+
+   if ( strlen( password ) < 5 )
+   {
+      send_to_char( "New password must be at least five characters long.\n\r", ch );
+      return;
+   }
+
+   victim = NULL;
+   offline_loaded = FALSE;
+
+   for ( victim = first_char; victim; victim = victim->next )
+      if ( !IS_NPC( victim )
+      && ( !str_cmp( victim->name, arg )
+      ||   !str_cmp( victim->pcdata->filename, filekey ) ) )
+         break;
+
+   d = NULL;
+   if ( victim == NULL )
+   {
+      sprintf( filename, "%s%c/%s", PLAYER_DIR, tolower( filekey[0] ),
+               capitalize( filekey ) );
+      if ( stat( filename, &fst ) == -1 )
+      {
+         send_to_char( "No such player.\n\r", ch );
+         return;
+      }
+
+      CREATE( d, DESCRIPTOR_DATA, 1 );
+      d->next = NULL;
+      d->prev = NULL;
+      d->connected = CON_GET_NAME;
+      d->outsize = 2000;
+      CREATE( d->outbuf, char, d->outsize );
+
+      loaded = load_char_obj( d, arg, FALSE );
+      if ( !loaded || d->character == NULL )
+      {
+         if ( d->character )
+            free_char( d->character );
+         DISPOSE( d->outbuf );
+         DISPOSE( d );
+         send_to_char( "Unable to load that player.\n\r", ch );
+         return;
+      }
+
+      add_char( d->character );
+      victim = d->character;
+      victim->desc = NULL;
+      d->character = NULL;
+      offline_loaded = TRUE;
+   }
+
+   if ( get_trust( victim ) >= get_trust( ch ) )
+   {
+      send_to_char( "You can't reset the password of an equal or higher immortal.\n\r", ch );
+      if ( offline_loaded )
+      {
+         extract_char( victim, TRUE );
+         DISPOSE( d->outbuf );
+         DISPOSE( d );
+      }
+      return;
+   }
+
+   pwdnew = crypt( password, victim->name );
+   for ( p = pwdnew; *p != '\0'; p++ )
+   {
+      if ( *p == '~' )
+      {
+         send_to_char( "New password not acceptable, try again.\n\r", ch );
+         if ( offline_loaded )
+         {
+            extract_char( victim, TRUE );
+            DISPOSE( d->outbuf );
+            DISPOSE( d );
+         }
+         return;
+      }
+   }
+
+   DISPOSE( victim->pcdata->pwd );
+   victim->pcdata->pwd = str_dup( pwdnew );
+   save_char_obj( victim );
+
+   ch_printf( ch, "Password for %s has been reset.\n\r", victim->name );
+   if ( victim->desc )
+      ch_printf( victim, "Your password has been reset by %s.\n\r", ch->name );
+
+   sprintf( log_buf, "%s reset the password for %s.", ch->name, victim->name );
+   log_string_plus( log_buf, LOG_COMM, LEVEL_LOG );
+
+   if ( offline_loaded )
+   {
+      extract_char( victim, TRUE );
+      DISPOSE( d->outbuf );
+      DISPOSE( d );
+   }
+}
+
 /*
  * Purge a player file.  No more player.  -- Altrag
  */

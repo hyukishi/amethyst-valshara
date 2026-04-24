@@ -5254,6 +5254,7 @@ struct	menu_data
 
 DECLARE_DO_FUN( do_redraw_page  );
 DECLARE_DO_FUN( do_refresh_page );
+DECLARE_DO_FUN( do_resetpassword );
 DECLARE_DO_FUN( do_pagelen	);
 DECLARE_DO_FUN( do_omenu  	);
 DECLARE_DO_FUN( do_rmenu  	);

@@ -1632,7 +1632,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
       /*
        * No tilde allowed because of player file format.
        */
-      pwdnew = crypt( arg3, ch->name );
+      pwdnew = crypt( arg3, victim->name );
       for ( p = pwdnew; *p != '\0'; p++ )
       {
 	if ( *p == '~' )
@@ -9473,5 +9473,4 @@ void RelDestroy( relation_type tp, void *actor, void *subject ) {
          break;
          }
 }
-
 
