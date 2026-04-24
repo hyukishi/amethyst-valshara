@@ -394,7 +394,6 @@ DO_FUN *skill_function( char *name )
 	if ( !str_cmp( name, "do_force" ))		return do_force;
 	if ( !str_cmp( name, "do_forceclose" ))		return do_forceclose;
 	if ( !str_cmp( name, "do_form_password" ))	return do_form_password;
-	if ( !str_cmp( name, "do_resetpassword" ))	return do_resetpassword;
 	if ( !str_cmp( name, "do_fprompt" ))		return do_fprompt;
 	if ( !str_cmp( name, "do_fquit" ))		return do_fquit;
 	if ( !str_cmp( name, "do_freeze" ))		return do_freeze;
@@ -683,6 +682,7 @@ DO_FUN *skill_function( char *name )
 	if ( !str_cmp( name, "do_repeat" ))		return do_repeat;
 	if ( !str_cmp( name, "do_reply" ))		return do_reply;
 	if ( !str_cmp( name, "do_report" ))		return do_report;
+	if ( !str_cmp( name, "do_resetpassword" ))	return do_resetpassword;
 	if ( !str_cmp( name, "do_rescue" ))		return do_rescue;
 	if ( !str_cmp( name, "do_reserve" ))		return do_reserve;
 	if ( !str_cmp( name, "do_reset" ))		return do_reset;
