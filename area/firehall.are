@@ -6104,6 +6104,7 @@ valves~
 They bear a skull shaped depression near the lock...
 
 ~
+M 32000 1 1 o
 S
 #32001
 An Obsidian Passage~
@@ -6136,6 +6137,7 @@ The valves open onto the outside world.
 ~
 valves~
 8389671 32215 32000
+M 32001 1 1 o
 S
 #32002
 A Hidden Guardpost~
@@ -6155,6 +6157,7 @@ The curtain conceals unknown dangers.
 ~
 ~
 3 -1 32001
+M 32002 1 1 o
 S
 #32003
 An Obsidian Passage~
@@ -6181,6 +6184,7 @@ The hall runs southwest towards the exit.
 ~
 ~
 0 -1 32001
+M 32003 1 1 o
 S
 #32004
 A Meeting of Halls~
@@ -6214,6 +6218,7 @@ The hall runs southwest towards the exit.
 ~
 ~
 0 -1 32003
+M 32004 1 1 H
 S
 #32005
 The Throne Room of the King~
@@ -6241,6 +6246,7 @@ A meeting of passages can be seen.
 ~
 ~
 0 -1 32004
+M 32005 1 1 o
 > rand_prog 33~
 mpe _red A gout of flame bursts from a gap in the wall!
 if ispc($r)
@@ -6288,6 +6294,7 @@ The throne room runs as far as you can see westward.
 ~
 ~
 0 -1 32005
+M 32006 1 1 o
 > entry_prog 100~
 if race($n) == dwarf
 mea $n You are enraged by this insulting depiction of your proud race.
@@ -6331,6 +6338,7 @@ cruelty in each mosaic, however; the fire giants are renowned for their
 mistreatment of all races.
 
 ~
+M 32007 1 1 o
 > rand_prog 5~
 mpe _red A gout of flame bursts from a gap in the wall!
 if ispc($r)
@@ -6367,6 +6375,7 @@ D8
 ~
 statue~
 1035 -1 32009
+M 32008 1 1 o
 S
 #32009
 A Secret Passage~
@@ -6398,6 +6407,7 @@ This statue could conceivably conceal an exit.
 ~
 statue~
 1035 -1 32012
+M 32008 2 2 o
 S
 #32010
 A Small Cave~
@@ -6418,6 +6428,7 @@ D9
 ~
 ~
 0 -1 32011
+M 32008 2 1 o
 S
 #32011
 Lair of the Pyrohydra~
@@ -6452,6 +6463,7 @@ walk this plane. Imprisoned is he, and should ye seek to reach him,
 you must seek out his book, and recite the chant therein...
 
 ~
+M 32008 1 2 o
 > speech_prog p I seek the wyrm~
 mea $n _red Visions of hellfire cloud your vision...
 mptrans $n 32197
@@ -6493,6 +6505,7 @@ A statue blocks the exit.
 ~
 statue~
 1035 -1 32009
+M 32009 1 1 o
 S
 #32013
 Residental Halls~
@@ -6524,6 +6537,7 @@ A pair of iron doors bars entrance to this area.
 ~
 ~
 3 -1 32014
+M 32010 1 1 H
 S
 #32014
 Chambers of the Queen~
@@ -6557,6 +6571,7 @@ Servants are quartered here.
 ~
 ~
 0 -1 32016
+M 32011 1 1 o
 S
 #32015
 The Chamber of Frupy~
@@ -6580,6 +6595,7 @@ The main chamber of the Queen's Wing.
 ~
 ~
 0 -1 32014
+M 32012 1 1 o
 S
 #32016
 A Crowded Chamber~
@@ -6600,6 +6616,7 @@ The main chamber of the Queen's Wing.
 ~
 ~
 0 -1 32014
+M 32013 1 1 o
 S
 #32017
 A Smoky Hallway~
@@ -6633,6 +6650,7 @@ The entrance to the residental halls.
 ~
 ~
 0 -1 32013
+M 32014 1 1 H
 S
 #32018
 The King's Royal Guard~
@@ -6651,6 +6669,7 @@ This door conceals unknown peril.
 ~
 ~
 3 -1 32017
+M 32015 1 1 o
 S
 #32019
 The King's Private Chambers~
@@ -6677,6 +6696,7 @@ This door conceals unknown peril.
 ~
 ~
 7 -1 32017
+M 32016 1 1 o
 S
 #32020
 A Junction~
@@ -6708,6 +6728,7 @@ Several halls meet here.
 ~
 ~
 0 -1 32004
+M 32017 1 1 o
 S
 #32021
 A Disturbing Odour~
@@ -6741,6 +6762,7 @@ The source of the odor and the noises.
 ~
 ~
 0 -1 32022
+M 32018 1 1 o
 S
 #32022
 Hall of Giantish Culinary Delights~
@@ -6768,6 +6790,7 @@ D10
 ~
 chute~
 133120 -1 32057
+M 32019 2 2 H
 > entry_prog 100~
 if race($n) == half-troll
 mea $n The roasting meat appears oddly appetizing to your bestial side.
@@ -6796,6 +6819,7 @@ Closer towards the foul odor.
 ~
 ~
 3 -1 32021
+M 32020 1 1 o
 S
 #32024
 A Gloomy Corridor~
@@ -6826,6 +6850,7 @@ A junction lies here.
 ~
 ~
 0 -1 32020
+M 32021 1 1 o
 S
 #32025
 A Comfortable Lounge~
@@ -6863,6 +6888,7 @@ A door conceals hidden perils.
 ~
 ~
 3 -1 32024
+M 32022 1 1 #
 S
 #32026
 The King's Council Room~
@@ -6894,6 +6920,7 @@ A door conceals hidden perils.
 ~
 ~
 7 -1 32025
+M 32023 1 1 o
 S
 #32027
 A Pillered Hallway~
@@ -6920,6 +6947,7 @@ South leads to the Throne Room
 ~
 ~
 0 -1 32006
+M 32024 1 1 H
 S
 #32028
 A Pillered Hallway~
@@ -6944,6 +6972,7 @@ A pillared hall runs south.
 ~
 ~
 0 -1 32027
+M 32025 1 1 H
 S
 #32029
 A Pillered Hallway~
@@ -6976,6 +7005,7 @@ The flaming skull makes you reluctant to intrude.
 ~
 ~
 7 -1 32026
+M 32026 2 2 H
 S
 #32030
 The End of the Hall~
@@ -7004,6 +7034,7 @@ D3
 ~
 ~
 0 -1 32039
+M 32026 2 1 H
 S
 #32031
 The Advisor's Study~
@@ -7041,6 +7072,7 @@ You Want It When?!?
  
 
 ~
+M 32022 2 1 o
 S
 #32032
 The Advisor's Chambers~
@@ -7058,6 +7090,7 @@ D0
 ~
 ~
 7 -1 32025
+M 32022 1 2 o
 S
 #32033
 A Torchlit Junction~
@@ -7097,6 +7130,7 @@ The fearsome scowl that creases its toothy face is certainly
 authentic, however.
 
 ~
+M 32027 1 1 o
 S
 #32034
 A Quiet Wing~
@@ -7129,6 +7163,7 @@ This door is marked with runes of containment.
 ~
 ~
 1031 -1 32035
+M 32028 2 1 o
 S
 #32035
 A Comfortable Lounge~
@@ -7147,6 +7182,7 @@ D6
 ~
 ~
 1031 -1 32034
+M 32028 1 2 #
 S
 #32036
 The End of the Corridor~
@@ -7178,6 +7214,7 @@ A steeply sloping passage descends into darkness.
 ~
 ~
 0 -1 32038
+M 32029 1 2 o
 S
 #32037
 A Barracks Hall~
@@ -7195,6 +7232,7 @@ D2
 ~
 tapestry~
 11 -1 32036
+M 32029 1 1 H
 S
 #32038
 A Descent into Darkness~
@@ -7220,6 +7258,7 @@ The passage slopes back upwards.
 ~
 ~
 0 -1 32036
+M 32030 1 1 o
 S
 #32039
 A Brightly Lit Junction~
@@ -7251,6 +7290,7 @@ Another junction lies in this direction.
 ~
 ~
 0 -1 32033
+M 32026 1 1 o
 S
 #32040
 A Secure Chamber~
@@ -7283,6 +7323,7 @@ The corridor stretches into the distance.
 ~
 ~
 0 -1 32030
+M 32026 3 1 o
 S
 #32041
 The Chimera Guard~
@@ -7309,6 +7350,7 @@ Horrid noises come from this direction.
 ~
 ~
 8388615 -1 32042
+M 32031 1 1 o
 S
 #32042
 Chimera Pen~
@@ -7328,6 +7370,7 @@ D0
 ~
 ~
 8388615 -1 32041
+M 32031 1 2 o
 S
 #32043
 A Bend in the Corridor~
@@ -7353,6 +7396,7 @@ The corridor stretches into the distance.
 ~
 ~
 0 -1 32040
+M 32032 1 1 o
 S
 #32044
 A Barracks Hall~
@@ -7372,6 +7416,7 @@ South leads away from the barracks.
 ~
 ~
 0 -1 32043
+M 32033 1 1 H
 S
 #32045
 The Living Quarters~
@@ -7404,6 +7449,7 @@ D3
 ~
 ~
 3 -1 32046
+M 32034 2 2 o
 S
 #32046
 A Residental Hall~
@@ -7423,6 +7469,7 @@ The main area of the residental halls.
 ~
 ~
 3 -1 32045
+M 32034 1 2 H
 S
 #32047
 Fire Giant Creche~
@@ -7443,6 +7490,7 @@ The main area of the residental halls.
 ~
 ~
 3 -1 32045
+M 32034 2 1 o
 S
 #32048
 The Hound Pens~
@@ -7475,6 +7523,7 @@ The carnage continues...
 ~
 ~
 0 -1 32049
+M 32034 3 2 o
 S
 #32049
 The Hound Pens~
@@ -7499,6 +7548,7 @@ The carnage continues...
 ~
 ~
 0 -1 32048
+M 32035 1 1 o
 S
 #32050
 The Hound Pens~
@@ -7529,6 +7579,7 @@ The carnage continues...
 ~
 ~
 0 -1 32048
+M 32036 1 1 o
 S
 #32051
 The Keeper of the Hounds~
@@ -7549,6 +7600,7 @@ The carnage continues...
 ~
 tapestry~
 11 -1 32050
+M 32037 1 1 #
 S
 #32052
 A Dimly Lit Corridor~
@@ -7584,6 +7636,7 @@ The passage rises sharply to the upper level.
 ~
 ~
 0 -1 32038
+M 32039 2 1 o
 S
 #32053
 The Hall of Dead Kings~
@@ -7605,6 +7658,7 @@ D5
 ~
 sarcophagus~
 11 -1 32137
+M 32039 1 1 H
 S
 #32054
 A Shadowy Junction~
@@ -7637,6 +7691,7 @@ The corridor continues into the distance.
 ~
 ~
 0 -1 32052
+M 32040 1 1 o
 S
 #32055
 A Shadowy Corridor~
@@ -7668,6 +7723,7 @@ A fiery glow comes from this direction.
 ~
 ~
 0 -1 32056
+M 32041 1 1 o
 S
 #32056
 The Forge~
@@ -7694,6 +7750,7 @@ It would be foolish indeed to enter the lava bed!
 ~
 ~
 0 -1 32057
+M 32042 1 1 o
 > rand_prog 33~
 mpe _red A gas jet erupts from the wall!
 if ispc($r)
@@ -7714,6 +7771,7 @@ Your belongings are reduced to slag in seconds. Way to go.
 ~
 ~
 0 3147790 0 0
+M 32019 1 1 o
 S
 #32058
 A Torchlit Corridor~
@@ -7739,6 +7797,7 @@ A corridor runs east towards living quarters.
 ~
 ~
 0 -1 32059
+M 32043 1 1 o
 S
 #32059
 A Broad Corridor~
@@ -7770,6 +7829,7 @@ A well lit corridor runs west.
 ~
 ~
 16777216 -1 32058
+M 32044 1 1 .
 S
 #32060
 A Foul Smelling Chamber~
@@ -7789,6 +7849,7 @@ An escape from the stench.
 ~
 ~
 0 -1 32059
+M 32045 1 1 o
 S
 #32061
 Two Doors~
@@ -7825,6 +7886,7 @@ The corridor heads west.
 ~
 ~
 0 -1 32059
+M 32046 1 1 o
 S
 #32062
 The Engineers' Hall~
@@ -7846,6 +7908,7 @@ A door opens onto a corridor.
 ~
 ~
 3 -1 32061
+M 32047 1 1 H
 S
 #32063
 A Crowded Chamber~
@@ -7865,6 +7928,7 @@ A door opens onto a corridor.
 ~
 ~
 3 -1 32061
+M 32048 1 1 o
 S
 #32064
 Community Quarters~
@@ -7885,6 +7949,7 @@ West leads back to the other quarters.
 ~
 ~
 0 -1 32061
+M 32049 1 1 o
 S
 #32065
 A World of Pain~
@@ -7915,6 +7980,7 @@ A junction lies outside.
 ~
 ~
 0 -1 32066
+M 32050 1 1 o
 S
 #32066
 A Junction in the Cell Block~
@@ -7953,6 +8019,7 @@ A world of pain awaits you...
 ~
 ~
 0 -1 32065
+M 32051 1 2 o
 S
 #32067
 The Bottom of the Well~
@@ -7970,6 +8037,7 @@ The top of the well is only a pinpoint of light...
 ~
 ~
 64 -1 32065
+M 32052 1 1 o
 S
 #32068
 The West Cell Block~
@@ -8004,6 +8072,7 @@ D3
 ~
 ~
 0 -1 32054
+M 32040 2 1 o
 S
 #32069
 A Filthy Cell~
@@ -8024,6 +8093,7 @@ A locked door bars access to this cell.
 ~
 ~
 7 -1 32068
+M 32053 1 1 o
 S
 #32070
 A Filthy Cell~
@@ -8044,6 +8114,7 @@ A locked door bars access to this cell.
 ~
 ~
 7 -1 32068
+M 32054 1 1 o
 S
 #32071
 The West Cell Block~
@@ -8080,6 +8151,7 @@ More cells line the corridor.
 ~
 ~
 0 -1 32068
+M 32055 1 1 o
 S
 #32072
 A Filthy Cell~
@@ -8100,6 +8172,7 @@ A locked door bars access to this cell.
 ~
 ~
 7 -1 32071
+M 32056 1 1 o
 S
 #32073
 A Filthy Cell~
@@ -8120,6 +8193,7 @@ A locked door bars access to this cell.
 ~
 ~
 7 -1 32071
+M 32057 1 1 o
 S
 #32074
 A Bend in the Corridor~
@@ -8149,6 +8223,7 @@ D4
 ~
 ~
 2048 -1 32104
+M 32058 1 1 o
 S
 #32075
 A Horrid Encounter~
@@ -8178,6 +8253,7 @@ D4
 ~
 ~
 2048 -1 32106
+M 32058 3 1 o
 S
 #32076
 An Opulent Lounge~
@@ -8209,6 +8285,7 @@ The private quarters of the ehp'ss beckon.
 ~
 brocade~
 3 -1 32077
+M 32060 1 1 o
 S
 #32077
 The Chamber of the Ehp'ss~
@@ -8242,6 +8319,7 @@ A brocaded hanging conceals what lies ahead.
 ~
 brocade~
 3 -1 32076
+M 32061 1 1 o
 > act_prog p has entered the game.~
 mea $n _pur A massive purple tentacle yanks you from the room!
 mptrans $n 32075
@@ -8285,6 +8363,7 @@ A door blocks an entrance to a cell.
 ~
 ~
 7 -1 32079
+M 32063 2 3 o
 S
 #32079
 A Filthy Cell~
@@ -8310,6 +8389,7 @@ D3
 ~
 stone~
 1035 -1 32077
+M 32061 2 1 o
 S
 #32080
 A Filthy Cell~
@@ -8330,6 +8410,7 @@ A door blocks the exit from the cell.
 ~
 ~
 7 -1 32078
+M 32064 1 1 o
 S
 #32081
 A Major Junction~
@@ -8360,6 +8441,7 @@ D5
 ~
 ~
 0 -1 32110
+M 32063 2 2 o
 S
 #32082
 A Simple Junction~
@@ -8391,6 +8473,7 @@ A quiet corridor.
 ~
 ~
 0 -1 32083
+M 32063 2 1 o
 > entry_prog 100~
 if race($n) == half-troll
 mea $n The stink of dark trolls, your subterranean cousins, is strong.
@@ -8422,6 +8505,7 @@ A simple junction.
 ~
 ~
 0 -1 32082
+M 32065 1 1 o
 S
 #32084
 The Guest Wing~
@@ -8453,6 +8537,7 @@ A long corridor runs south.
 ~
 ~
 0 -1 32083
+M 32066 1 1 o
 S
 #32085
 Quarters of the Jarl's Men~
@@ -8473,6 +8558,7 @@ A door conceals a room.
 ~
 ~
 3 -1 32084
+M 32067 1 1 o
 S
 #32086
 Chambers of the Ambassador~
@@ -8493,6 +8579,7 @@ A door conceals a room.
 ~
 ~
 3 -1 32084
+M 32068 1 1 o
 S
 #32087
 A Stinking Hall~
@@ -8518,6 +8605,7 @@ A simple junction.
 ~
 ~
 0 -1 32082
+M 32069 1 1 H
 S
 #32088
 A Guard Post~
@@ -8550,6 +8638,7 @@ An escape from the horror.
 ~
 ~
 0 -1 32087
+M 32070 1 1 o
 S
 #32089
 A Thrall Pen~
@@ -8568,6 +8657,7 @@ The horrid captors await.
 ~
 ~
 0 -1 32088
+M 32071 1 1 o
 S
 #32090
 A Thrall Pen~
@@ -8592,6 +8682,7 @@ The pens continue.
 ~
 ~
 0 -1 32091
+M 32072 1 1 o
 S
 #32091
 A Thrall Pen~
@@ -8610,6 +8701,7 @@ The pens continue.
 ~
 ~
 0 -1 32090
+M 32073 1 1 o
 S
 #32092
 The Cells~
@@ -8638,6 +8730,7 @@ D3
 ~
 ~
 0 -1 32066
+M 32051 2 2 o
 S
 #32093
 A Filthy Cell~
@@ -8658,6 +8751,7 @@ Blocked freedom!
 ~
 ~
 7 -1 32092
+M 32051 2 1 o
 S
 #32094
 A Filthy Cell~
@@ -8678,6 +8772,7 @@ Blocked freedom!
 ~
 ~
 7 -1 32092
+M 32051 2 3 o
 S
 #32095
 The Cells~
@@ -8715,6 +8810,7 @@ The corridor continues.
 ~
 ~
 0 -1 32092
+M 32051 3 2 o
 S
 #32096
 A Filthy Cell~
@@ -8735,6 +8831,7 @@ A locked door prevents escape.
 ~
 ~
 7 -1 32095
+M 32074 1 1 o
 S
 #32097
 A Filthy Cell~
@@ -8755,6 +8852,7 @@ A locked door prevents escape.
 ~
 ~
 7 -1 32095
+M 32075 1 1 o
 S
 #32098
 The End of the Corridor~
@@ -8786,6 +8884,7 @@ The Cell Block.
 ~
 ~
 0 -1 32095
+M 32076 1 1 o
 S
 #32099
 A Filthy Cell~
@@ -8804,6 +8903,7 @@ D0
 ~
 ~
 16778247 -1 32098
+M 32076 1 2 o
 S
 #32100
 A Guard Room~
@@ -8831,6 +8931,7 @@ The Cell Block.
 ~
 ~
 3 -1 32098
+M 32077 1 1 o
 S
 #32101
 A Blackened Chamber~
@@ -8855,6 +8956,7 @@ It is hard to make anything out...
 ~
 ~
 0 -1 32126
+M 32078 1 1 o
 S
 #32102
 A Narrow Corridor~
@@ -8886,6 +8988,7 @@ A shifting, writhing mass of tentacles fills the corridor.
 ~
 ~
 0 -1 32075
+M 32063 1 2 o
 S
 #32103
 A Filthy Cell~
@@ -8906,6 +9009,7 @@ Freedom!
 ~
 ~
 7 -1 32102
+M 32079 1 1 o
 S
 #32104
 The Temple of the Eye~
@@ -8938,6 +9042,7 @@ The mural depicts giants worshipping an amorphous golden eye, offering
 to it sacrifices of elves, dwarves and even fellow giants. 
 
 ~
+M 32059 1 2 T
 S
 #32105
 The Temple of the Eye~
@@ -8963,6 +9068,7 @@ D3
 ~
 ~
 0 -1 32104
+M 32059 2 2 T
 S
 #32106
 The Temple of the Eye~
@@ -8989,6 +9095,7 @@ D5
 ~
 ~
 0 -1 32075
+M 32059 3 2 T
 S
 #32107
 The Temple of the Eye~
@@ -9011,6 +9118,7 @@ D2
 ~
 ~
 0 -1 32104
+M 32059 1 1 T
 S
 #32108
 The Altar of the Elder Elemental God~
@@ -9038,6 +9146,7 @@ D3
 ~
 ~
 0 -1 32107
+M 32059 2 1 T
 > entry_prog 100~
 mea $n _pur Your mind is filled with visions of ghastly horrors!
 mpdamage $n 50
@@ -9066,6 +9175,7 @@ D3
 ~
 ~
 0 -1 32108
+M 32059 3 1 T
 S
 #32110
 A Rough Hewn Tunnel~
@@ -9092,6 +9202,7 @@ A pair of doors block the passage.
 ~
 ~
 3 -1 32111
+M 32062 1 1 o
 S
 #32111
 A Cavernous Hall~
@@ -9132,6 +9243,7 @@ A door blocks the passage.
 ~
 ~
 3 -1 32110
+M 32080 1 3 H
 S
 #32112
 The Crimson Portal~
@@ -9181,6 +9293,7 @@ however, reads-
 The hydra holds the entrance, the chimera holds the tome
 
 ~
+M 32081 1 3 +
 > act_prog p bashes against the portal, but it holds strong.~
 mea $n _red Twin bolts of fire lance from the door, striking you!
 mer $n _red Twin bolts of fire lance from the door, striking $n!
@@ -9214,6 +9327,7 @@ D7
 ~
 ~
 0 -1 32111
+M 32080 2 4 o
 S
 #32114
 The Great Caverns~
@@ -9251,6 +9365,7 @@ A rock pool can be made out.
 ~
 ~
 0 -1 32113
+M 32080 3 3 o
 S
 #32115
 A Meeting of Tunnels~
@@ -9283,6 +9398,7 @@ A foul odor exudes from this direction.
 ~
 ~
 0 -1 32117
+M 32082 1 1 o
 S
 #32116
 A Dead End~
@@ -9302,6 +9418,7 @@ Safety!
 ~
 ~
 0 -1 32115
+M 32083 1 1 o
 > entry_prog 100~
 if rand(25)
 mea $n _yel A large piercer drops from the ceiling, impaling you!
@@ -9354,6 +9471,7 @@ The caves continue.
 ~
 ~
 0 -1 32121
+M 32084 1 1 o
 S
 #32118
 The Troll Caves~
@@ -9378,6 +9496,7 @@ The caves continue.
 ~
 ~
 0 -1 32120
+M 32085 1 1 o
 S
 #32119
 The Troll Caves~
@@ -9403,6 +9522,7 @@ The caves continue.
 ~
 ~
 0 -1 32120
+M 32086 1 1 o
 S
 #32120
 The Troll Caves~
@@ -9427,6 +9547,7 @@ The caves continue.
 ~
 ~
 0 -1 32119
+M 32087 1 1 o
 S
 #32121
 The Troll Caves~
@@ -9451,6 +9572,7 @@ The caves continue.
 ~
 ~
 0 -1 32117
+M 32088 1 1 o
 S
 #32122
 A Narrow Cavern~
@@ -9475,6 +9597,7 @@ Trolls!
 ~
 ~
 0 -1 32121
+M 32089 1 1 o
 S
 #32123
 A Rock Pool~
@@ -9494,6 +9617,7 @@ Trolls!
 ~
 ~
 0 -1 32122
+M 32090 1 1 o
 S
 #32124
 A Narrow Passage~
@@ -9520,6 +9644,7 @@ D9
 ~
 ~
 0 -1 32114
+M 32080 4 2 o
 S
 #32125
 A Guard Post~
@@ -9539,6 +9664,7 @@ The darkness continues.
 ~
 ~
 0 -1 32124
+M 32080 3 2 o
 S
 #32126
 A Command Post~
@@ -9585,6 +9711,7 @@ A red glow suffuses the chamber.
 ~
 ~
 0 -1 32112
+M 32080 4 1 o
 S
 #32127
 A Giant Sentry Post~
@@ -9611,6 +9738,7 @@ A barracks chamber.
 ~
 ~
 0 -1 32128
+M 32091 1 1 o
 S
 #32128
 A Giant Barracks Chamber~
@@ -9637,6 +9765,7 @@ A sentry post.
 ~
 ~
 0 -1 32129
+M 32092 1 1 o
 S
 #32129
 A Giant Sentry Post~
@@ -9669,6 +9798,7 @@ A dark junction.
 ~
 ~
 0 -1 32131
+M 32093 1 1 o
 S
 #32130
 A Hound Pit~
@@ -9689,6 +9819,7 @@ A giant sentry post.
 ~
 ~
 0 -1 32129
+M 32094 1 1 !
 S
 #32131
 A Dark Junction~
@@ -9727,6 +9858,7 @@ A great door leads to the upper levels.
 ~
 ~
 0 -1 32111
+M 32095 1 1 o
 S
 #32132
 A Dead End~
@@ -9746,6 +9878,7 @@ A dark junction offers safety.
 ~
 ~
 0 -1 32131
+M 32096 1 1 o
 S
 #32133
 A Long Tunnel~
@@ -9777,6 +9910,7 @@ The air is warmer than usual in this direction.
 ~
 ~
 0 -1 32134
+M 32097 1 2 o
 S
 #32134
 Lair of the False Dragon~
@@ -9793,6 +9927,7 @@ D9
 ~
 ~
 0 -1 32133
+M 32097 2 1 o
 S
 #32135
 A Long Tunnel~
@@ -9819,6 +9954,7 @@ The tunnel extends into the darkness.
 ~
 ~
 0 -1 32136
+M 32098 1 1 o
 S
 #32136
 A Long Tunnel~
@@ -9845,6 +9981,7 @@ The tunnel extends into the darkness.
 ~
 ~
 0 -1 32137
+M 32038 1 1 o
 S
 #32137
 The End of the Journey~
@@ -9867,6 +10004,7 @@ D7
 ~
 ~
 0 -1 32136
+M 32038 2 2 o
 S
 #32138
 Further into the Darkness~
@@ -9892,6 +10030,7 @@ A command post.
 ~
 ~
 0 -1 32126
+M 32099 1 1 o
 S
 #32139
 A Choice of Passages~
@@ -9923,6 +10062,7 @@ It is too dark to see!
 ~
 ~
 0 -1 32140
+M 32100 1 1 o
 S
 #32140
 A Winding Passage~
@@ -9947,6 +10087,7 @@ It is too dark to see!
 ~
 ~
 0 -1 32141
+M 32101 1 1 o
 > entry_prog 100~
 mea $n _yel As you enter you trip an alarm!
 mpe _whi A loud clattering noise is heard as dozens of iron balls roll by.
@@ -9975,6 +10116,7 @@ It is too dark to see!
 ~
 ~
 0 -1 32140
+M 32102 1 1 o
 S
 #32142
 A Jeweled Cavern~
@@ -10003,6 +10145,7 @@ The passage heads into darkness.
 ~
 ~
 0 -1 32143
+M 32103 1 1 o
 S
 #32143
 A Short Passage~
@@ -10029,6 +10172,7 @@ The temperature begins to increase markedly in this direction.
 ~
 ~
 0 -1 32144
+M 32104 1 1 o
 S
 #32144
 Approaching the River~
@@ -10060,6 +10204,7 @@ The heat intensifies.
 ~
 ~
 0 -1 32146
+M 32105 1 1 o
 S
 #32145
 A Curious Chamber~
@@ -10080,6 +10225,7 @@ Heat and warmth in overwhelming doses await.
 ~
 ~
 0 -1 32144
+M 32106 1 1 o
 S
 #32146
 The River of Lava~
@@ -10115,6 +10261,7 @@ The only way across...
 ~
 ~
 0 -1 32148
+M 32107 1 1 o
 S
 #32147
 A Hot Reception~
@@ -10131,6 +10278,7 @@ D0
 ~
 ~
 0 -1 32146
+M 32107 1 2 o
 S
 #32148
 The Rope Bridge~
@@ -10167,6 +10315,7 @@ The near side.
 ~
 ~
 0 -1 32146
+M 32108 1 1 =
 S
 #32149
 Instantly Vaporized~
@@ -10175,6 +10324,7 @@ Why?
 ~
 ~
 0 3145742 0 0
+M 32109 1 1 o
 S
 #32150
 The Far Side~
@@ -10207,6 +10357,7 @@ Jeopardy!
 ~
 ~
 0 -1 32148
+M 32110 1 1 o
 S
 #32151
 A Dark Passage~
@@ -10240,6 +10391,7 @@ Who knows?
 ~
 ~
 16777216 -1 32152
+M 32111 2 2 o
 S
 #32152
 Approaching the Underdark.~
@@ -10256,6 +10408,7 @@ D8
 ~
 ~
 0 -1 32151
+M 32111 1 1 o
 S
 #32196
 Council Chamber~
@@ -10281,6 +10434,7 @@ The red glow of the lava is visible.
 ~
 ~
 0 -1 32150
+M 32112 1 1 o
 S
 #32197
 A Fiery Cavern~
@@ -10305,6 +10459,7 @@ D6
 ~
 ~
 0 -1 32198
+M 32081 1 2 o
 > act_prog p has entered the game.~
 mea $n _red Magical forces hurl you through the portal!
 mptrans $n 32112
@@ -10332,6 +10487,7 @@ D9
 ~
 ~
 0 -1 32197
+M 32081 2 1 o
 > act_prog p has entered the game.~
 mea $n You hurtle downwards into the chasm, plummeting to your death!
 mpslay $n
@@ -10344,6 +10500,7 @@ Floating in a void~
 ~
 ~
 0 3145741 0 0
+M 32113 1 1 o
 S
 #0
 

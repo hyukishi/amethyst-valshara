@@ -54,6 +54,7 @@ D9
 ~
 door~
 262145 -1 12442
+M 11202 3 4 .
 S
 #11202
 Knight's Mansion~
@@ -72,6 +73,7 @@ D3
 ~
 ~
 0 -1 11201
+M 11202 4 4 o
 S
 #11203
 Knight's Mansion~
@@ -98,6 +100,7 @@ You look in the fireplace but it is too dark to see anything.
 ~
 fireplace~
 592000 -1 11211
+M 11202 4 3 o
 S
 #11204
 Knight's Mansion, First Floor~
@@ -117,6 +120,7 @@ D4
 ~
 ~
 0 -1 11205
+M 11202 3 3 o
 S
 #11205
 Knight's Mansion, Second Floor~
@@ -137,6 +141,7 @@ D5
 ~
 ~
 0 -1 11204
+M 11203 1 1 o
 S
 #11206
 Knight's Mansion~
@@ -159,6 +164,7 @@ D3
 ~
 ~
 0 -1 11205
+M 11203 2 1 o
 S
 #11207
 Knight's Mansion~
@@ -178,6 +184,7 @@ D3
 ~
 door~
 1 -1 11208
+M 11203 2 2 o
 S
 #11208
 Knight's Mansion, Knight's Room~
@@ -195,6 +202,7 @@ D10
 ~
 desk~
 592000 -1 11209
+M 11201 1 1 o
 S
 #11209
 Rooftop, SW~
@@ -219,6 +227,7 @@ D6
 ~
 ~
 0 -1 11211
+M 11202 2 3 .
 S
 #11210
 Rooftop, SE~
@@ -241,6 +250,7 @@ D7
 ~
 ~
 0 -1 11212
+M 11202 2 2 .
 S
 #11211
 Rooftop, NE~
@@ -266,6 +276,7 @@ D10
 ~
 ~
 0 -1 11203
+M 11202 3 2 .
 S
 #11212
 Rooftop, NW~
@@ -287,6 +298,7 @@ D8
 ~
 ~
 0 -1 11210
+M 11202 1 1 .
 S
 #0
 

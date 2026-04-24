@@ -55,11 +55,14 @@ int     	exit_lookup (int vnum1, int vnum2);
 void 		draw_map (CD * ch, RID * rm, int flag, int mode);
 char   		*you_are_here (int row, int col, char *map);
 char            get_map_code( RID *room, int mode );
+const char      *get_map_color( RID *room, char glyph, bool current_room );
+void            append_map_text( int *index, const char *text );
+void            append_map_glyph( CD *ch, RID *room, char glyph, bool current_room, int mode, int *index );
 
 /*
  * Local Variables & Structs
  */
-char    text_map[4150];
+char    text_map[65536];
 extern  MID * first_map;/* should be global */
 struct map_stuff {
     int     vnum;
@@ -202,6 +205,93 @@ char get_map_code( RID *room, int mode )
    return (char) '?';
 }
 
+const char *get_map_color( RID *room, char glyph, bool current_room )
+{
+   if ( current_room )
+      return "\x1B[1;37m";
+
+   if ( IS_SET(room->room_flags, ROOM_DEATH) )
+      return "\x1B[1;31m";
+   if ( IS_SET(room->room_flags, ROOM_SAFE) )
+      return "\x1B[1;32m";
+
+   switch ( room->sector_type )
+   {
+      case SECT_WATER_SWIM:
+      case SECT_WATER_NOSWIM:
+      case SECT_UNDERWATER:
+      case SECT_OCEANFLOOR:
+         return "\x1B[1;34m";
+
+      case SECT_FOREST:
+      case SECT_SWAMP:
+         return "\x1B[0;32m";
+
+      case SECT_HILLS:
+      case SECT_MOUNTAIN:
+         return "\x1B[0;37m";
+
+      case SECT_DESERT:
+         return "\x1B[1;33m";
+
+      case SECT_AIR:
+         return "\x1B[1;36m";
+
+      case SECT_LAVA:
+         return "\x1B[1;31m";
+
+      case SECT_UNDERGROUND:
+      case SECT_HIVE:
+      case SECT_INSIDE:
+         return "\x1B[0;35m";
+
+      case SECT_CITY:
+         return "\x1B[0;33m";
+   }
+
+   switch ( glyph )
+   {
+      case '+': return "\x1B[1;33m";
+      case '#': return "\x1B[0;37m";
+      case '$': return "\x1B[1;33m";
+      case 'T': return "\x1B[1;35m";
+      case 'I': return "\x1B[1;36m";
+      case 'H': return "\x1B[1;32m";
+      case '!': return "\x1B[1;31m";
+      case '^': return "\x1B[0;37m";
+      case '*': return "\x1B[0;32m";
+      case '~': return "\x1B[1;34m";
+      case ':': return "\x1B[1;33m";
+      case 'o': return "\x1B[0;35m";
+      case '.':
+      case ',':
+         return "\x1B[0;37m";
+   }
+
+   return "\x1B[0;37m";
+}
+
+void append_map_text( int *index, const char *text )
+{
+   while ( *text != '\0' && *index < (int)sizeof(text_map) - 1 )
+      text_map[(*index)++] = *text++;
+}
+
+void append_map_glyph( CD *ch, RID *room, char glyph, bool current_room, int mode, int *index )
+{
+   if ( mode == 0 && xIS_SET(ch->act, PLR_ANSI) )
+   {
+      append_map_text( index, get_map_color( room, glyph, current_room ) );
+      if ( *index < (int)sizeof(text_map) - 1 )
+         text_map[(*index)++] = glyph;
+      append_map_text( index, "\x1B[0m" );
+      return;
+   }
+
+   if ( *index < (int)sizeof(text_map) - 1 )
+      text_map[(*index)++] = glyph;
+}
+
 void draw_map (CD * ch, RID * rm, int flag, int mode) {
     MID * map_index;
     RID * tmp_rm;
@@ -250,40 +340,17 @@ void draw_map (CD * ch, RID * rm, int flag, int mode) {
 	    {
 	       if(map_index->map_of_vnums[y][x]==ch->in_room->vnum)
 	       {
-		  if ( xIS_SET(ch->act, PLR_ANSI) ){
-	             text_map[i] = (char) '\x1B';    /* Bold */
-		     i++;
-	             text_map[i] = (char) '[';
-		     i++;
-	             text_map[i] = (char) '1';
-		     i++;
-	             text_map[i] = (char) 'm';
-		     i++;
-	             /*text_map[i] = (char) tmp_rm -> map -> entry;*/
-	             text_map[i] = (char) get_map_code(tmp_rm, mode); 
-		     i++;
-	             text_map[i] = (char) '\x1B';   /* Normal */
-		     i++;
-	             text_map[i] = (char) '[';
-		     i++;
-	             text_map[i] = (char) '0';
-		     i++;
-	             text_map[i] = (char) 'm';
-		     i++;
-                     
-		  } else {
+		  if ( xIS_SET(ch->act, PLR_ANSI) )
+		     append_map_glyph( ch, tmp_rm, get_map_code(tmp_rm, mode), TRUE, mode, &i );
+		  else {
 	             text_map[i] = (char) '*';
 		     i++;
                   }
 	       } else  {
-	           text_map[i] = (char) get_map_code(tmp_rm, mode); 
-	           /*text_map[i] = (char) tmp_rm -> map -> entry; */
-	           i++;
+	           append_map_glyph( ch, tmp_rm, get_map_code(tmp_rm, mode), FALSE, mode, &i );
 	       }
             } else {
-	       text_map[i] = (char) get_map_code(tmp_rm, mode); 
-	       /*text_map[i] = (char) tmp_rm -> map -> entry;*/
-	       i++;
+	       append_map_glyph( ch, tmp_rm, get_map_code(tmp_rm, mode), FALSE, mode, &i );
             }
 	    nontriv = i;
 	}
@@ -1559,5 +1626,3 @@ char_to_number (char code) {
 #undef OD  
 #undef OID  
 #undef XD 
-
-

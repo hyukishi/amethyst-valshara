@@ -402,6 +402,7 @@ D0
 ~
 ~
 0 -1 15302
+M 15302 1 8 o
 S
 #15302
 Underground Sewers~
@@ -430,6 +431,7 @@ D8
 ~
 ~
 0 -1 15309
+M 15302 1 7 o
 S
 #15303
 Culdesac~
@@ -448,6 +450,7 @@ D9
 ~
 ~
 0 -1 15302
+M 15302 2 6 o
 S
 #15304
 Culdesac~
@@ -466,6 +469,7 @@ D3
 ~
 ~
 0 -1 15303
+M 15302 3 6 o
 S
 #15305
 Culdesac~
@@ -486,6 +490,7 @@ D8
 ~
 ~
 0 -1 15306
+M 15302 4 6 o
 S
 #15306
 Culdesac~
@@ -510,6 +515,7 @@ D9
 ~
 ~
 0 -1 15307
+M 15302 5 7 o
 S
 #15307
 Culdesac~
@@ -530,6 +536,7 @@ D6
 ~
 ~
 0 -1 15306
+M 15302 4 8 o
 S
 #15308
 Culdesac~
@@ -550,6 +557,7 @@ D3
 ~
 ~
 0 -1 15309
+M 15302 3 8 o
 S
 #15309
 Culdesac~
@@ -570,6 +578,7 @@ D7
 ~
 ~
 0 -1 15302
+M 15302 2 8 o
 S
 #15310
 Underground Sewers~
@@ -588,6 +597,7 @@ D6
 ~
 ~
 0 -1 15311
+M 15302 1 6 o
 S
 #15311
 Underground Sewers~
@@ -608,6 +618,7 @@ D9
 ~
 ~
 0 -1 15310
+M 15302 2 5 o
 S
 #15312
 Underground Sewers~
@@ -626,6 +637,7 @@ D9
 ~
 ~
 0 -1 15311
+M 15302 3 4 o
 S
 #15313
 Underground Sewers~
@@ -648,6 +660,7 @@ D9
 ~
 ~
 0 -1 15312
+M 15302 4 3 o
 S
 #15314
 Underground Sewers~
@@ -667,6 +680,7 @@ D1
 ~
 ~
 0 -1 15315
+M 15302 4 4 o
 S
 #15315
 Underground Sewers~
@@ -693,6 +707,7 @@ D8
 ~
 ~
 0 -1 15317
+M 15302 5 4 o
 S
 #15316
 Underground Sewers~
@@ -715,6 +730,7 @@ D9
 ~
 ~
 0 -1 15318
+M 15302 6 4 o
 S
 #15317
 Underground Sewers~
@@ -737,6 +753,7 @@ D7
 ~
 ~
 0 -1 15315
+M 15302 6 5 o
 > entry_prog 25~
 if ispc($n)
 if rand(50)
@@ -772,6 +789,7 @@ D6
 ~
 ~
 0 -1 15316
+M 15302 5 5 o
 S
 #15319
 Underground Sewers~
@@ -797,6 +815,7 @@ The large iron door is covered mostly in rust from the many years it must
 have been down here so far, though the door's strength is still impossible
 to forceably break through.
 ~
+M 15302 5 2 o
 > act_prog p Firebrandt rises from his rest.~
 mpat 15319 mpforce firebrandt sw
 mpat 15313 mpforce firebrandt sw
@@ -818,6 +837,7 @@ D9
 ~
 door~
 8389671 15303 15319
+M 15302 6 1 o
 S
 #15321
 Small room~
@@ -837,6 +857,7 @@ D5
 ~
 ~
 0 -1 15322
+M 15302 6 7 o
 S
 #15322
 Underground Sewers, B2~
@@ -883,6 +904,7 @@ D9
 ~
 ~
 0 -1 15329
+M 15301 2 2 o
 S
 #15323
 Underground Sewers, B2~
@@ -905,6 +927,7 @@ D8
 ~
 ~
 0 -1 15322
+M 15301 1 1 o
 S
 #15324
 Underground Sewers, B2~
@@ -936,6 +959,7 @@ D9
 ~
 ~
 0 -1 15330
+M 15301 2 1 o
 S
 #15325
 Underground Sewers, B2~
@@ -959,6 +983,7 @@ D9
 ~
 ~
 0 -1 15322
+M 15301 3 1 o
 S
 #15326
 Underground Sewers, B2~
@@ -994,6 +1019,7 @@ D9
 ~
 ~
 0 -1 15328
+M 15301 3 2 o
 S
 #15327
 Underground Sewers, B2~
@@ -1012,6 +1038,7 @@ D7
 ~
 ~
 0 -1 15322
+M 15301 3 3 o
 S
 #15328
 Underground Sewers, B2~
@@ -1038,6 +1065,7 @@ D7
 ~
 ~
 0 -1 15330
+M 15301 2 3 o
 S
 #15329
 Underground Sewers, B2~
@@ -1056,6 +1084,7 @@ D6
 ~
 ~
 0 -1 15322
+M 15301 1 3 o
 S
 #15330
 Underground Sewers, B2~
@@ -1082,6 +1111,7 @@ D8
 ~
 ~
 0 -1 15328
+M 15301 1 2 o
 S
 #15331
 Underground Sewers~
@@ -1092,12 +1122,14 @@ D3
 ~
 opening~
 258 -1 15326
+M 15301 4 2 o
 S
 #15400
 Floating in a void~
 ~
 ~
 0 1073741828 1 0
+M 15303 1 1 o
 S
 #0
 

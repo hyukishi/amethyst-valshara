@@ -2386,6 +2386,7 @@ D3
 ~
 ~
 0 -1 10618
+M 12401 5 2 .
 S
 #12402
 New Hope, Southwest of the Northern Gate~
@@ -2407,6 +2408,7 @@ D3
 ~
 ~
 0 -1 12401
+M 12401 6 2 +
 S
 #12403
 New Hope, at the North Gate~
@@ -2428,6 +2430,7 @@ D3
 ~
 ~
 0 -1 12402
+M 12401 7 2 +
 S
 #12404
 The Furrier's~
@@ -2445,6 +2448,7 @@ The sign reads:
 Spot marked for future Furrier's.
 Soon to open hopefully, come again.
 ~
+M 12401 5 3 .
 S
 #12405
 The Healer's Shop~
@@ -2458,6 +2462,7 @@ D3
 ~
 door~
 262145 -1 12406
+M 12401 4 3 $
 S
 #12406
 New Hope, at the Healer~
@@ -2485,6 +2490,7 @@ D8
 ~
 ~
 16777216 -1 12407
+M 12401 3 3 .
 S
 #12407
 Magic Shop~
@@ -2504,6 +2510,7 @@ Merlin's Magic Shop
 opens at 6 a.m.
 closes at 8 p.m.
 ~
+M 12401 4 4 $
 S
 #12408
 New Hope, at the Tavern~
@@ -2525,6 +2532,7 @@ D3
 ~
 ~
 0 -1 12409
+M 12401 2 3 I
 S
 #12409
 New Hope~
@@ -2542,6 +2550,7 @@ D2
 ~
 ~
 0 -1 12410
+M 12401 1 3 .
 S
 #12410
 New Hope, at the Brewery~
@@ -2559,6 +2568,7 @@ D2
 ~
 ~
 0 -1 12412
+M 12401 1 4 .
 S
 #12412
 New Hope, North of the West Gate~
@@ -2581,6 +2591,7 @@ D2
 ~
 ~
 0 -1 12419
+M 12401 1 5 +
 S
 #12413
 New Hope, at the town Well~
@@ -2601,6 +2612,7 @@ You attempt to peer down the well, but it's too dark to see anything.
 ~
 well~
 17303680 -1 13314
+M 12401 2 5 .
 S
 #12419
 New Hope, at the Western Gate~
@@ -2626,6 +2638,7 @@ D3
 ~
 gate~
 786433 -1 11024
+M 12401 1 6 +
 S
 #12420
 New Hope, in front of the Theatre~
@@ -2640,6 +2653,7 @@ D3
 ~
 ~
 0 -1 12419
+M 12401 2 6 .
 S
 #12421
 New Hope, South of the West Gate~
@@ -2657,6 +2671,7 @@ D2
 ~
 ~
 0 -1 12422
+M 12401 1 7 +
 S
 #12422
 New Hope~
@@ -2675,6 +2690,7 @@ D2
 ~
 ~
 0 -1 12423
+M 12401 1 8 .
 S
 #12423
 New Hope, at the Garden~
@@ -2697,6 +2713,7 @@ D6
 ~
 ~
 0 -1 12424
+M 12401 1 9 .
 S
 #12424
 New Hope Gardens~
@@ -2723,6 +2740,7 @@ D9
 ~
 ~
 0 -1 12423
+M 12401 2 8 .
 S
 #12425
 New Hope Gardens~
@@ -2745,6 +2763,7 @@ D8
 ~
 ~
 0 -1 12427
+M 12401 2 7 .
 S
 #12426
 New Hope Gardens~
@@ -2770,6 +2789,7 @@ D9
 ~
 ~
 0 -1 12424
+M 12401 3 7 .
 S
 #12427
 New Hope Gardens~
@@ -2791,6 +2811,7 @@ D7
 ~
 ~
 0 -1 12425
+M 12401 3 8 .
 S
 #12428
 Melody's Herbal and all-around General Store~
@@ -2810,6 +2831,7 @@ Melody's herbal Boutique
 Open at 10 a.m.
 Close at 8 p.m.
 ~
+M 12401 4 6 $
 S
 #12429
 New Hope~
@@ -2828,6 +2850,7 @@ D3
 ~
 ~
 0 -1 12423
+M 12401 2 9 .
 S
 #12430
 New Hope~
@@ -2851,6 +2874,7 @@ D6
 ~
 ~
 0 -1 12434
+M 12401 3 9 .
 S
 #12432
 New Hope~
@@ -2870,6 +2894,7 @@ D3
 ~
 ~
 0 -1 12430
+M 12401 4 9 .
 S
 #12433
 New Hope, at the Public Library~
@@ -2897,6 +2922,7 @@ D7
 ~
 ~
 0 -1 12434
+M 12401 5 9 I
 S
 #12434
 New Hope, at the Jail~
@@ -2919,6 +2945,7 @@ D9
 ~
 ~
 0 -1 12430
+M 12401 4 8 .
 S
 #12435
 New Hope, West of the South Gate~
@@ -2937,6 +2964,7 @@ D3
 ~
 ~
 0 -1 12433
+M 12401 6 9 +
 S
 #12436
 New Hope, at the Southern Gate~
@@ -2966,6 +2994,7 @@ D3
 ~
 ~
 0 -1 12435
+M 12401 7 9 +
 S
 #12437
 New Hope~
@@ -2984,6 +3013,7 @@ D2
 ~
 ~
 0 -1 12436
+M 12401 7 8 .
 S
 #12438
 New Hope, s of Town Square~
@@ -3002,6 +3032,7 @@ D2
 ~
 ~
 0 -1 12437
+M 12401 7 7 .
 S
 #12439
 The Central Town Square~
@@ -3028,6 +3059,7 @@ D6
 ~
 ~
 0 -1 12459
+M 12401 7 6 .
 S
 #12440
 New Hope, w of Town Square~
@@ -3045,6 +3077,7 @@ D1
 ~
 ~
 0 -1 12439
+M 12401 6 6 .
 S
 #12441
 New Hope, at the Post Office~
@@ -3068,6 +3101,7 @@ D3
 ~
 door~
 16908289 -1 12500
+M 12401 6 7 .
 S
 #12442
 New Hope~
@@ -3091,6 +3125,7 @@ D6
 ~
 door~
 16908289 -1 11201
+M 12401 6 5 .
 S
 #12443
 Inside the Jailhouse~
@@ -3109,6 +3144,7 @@ D2
 ~
 door~
 262145 -1 12434
+M 12401 3 6 .
 S
 #12444
 New Hope~
@@ -3132,6 +3168,7 @@ D3
 ~
 ~
 131072 -1 12445
+M 12401 6 4 .
 S
 #12445
 New Hope, in a dark alley~
@@ -3149,6 +3186,7 @@ D9
 ~
 ~
 0 -1 12446
+M 12401 5 4 .
 > entry_prog 50~
 if isnpc($n)
 and time($n) > 20
@@ -3172,6 +3210,7 @@ D6
 ~
 ~
 0 -1 12445
+M 12401 4 5 .
 S
 #12447
 New Hope~
@@ -3189,6 +3228,7 @@ D2
 ~
 ~
 0 -1 12444
+M 12401 6 3 .
 S
 #12449
 New Hope, at the Stables~
@@ -3209,6 +3249,7 @@ D3
 ~
 ~
 0 -1 12403
+M 12401 8 2 .
 S
 #12451
 New Hope~
@@ -3226,6 +3267,7 @@ D3
 ~
 ~
 0 -1 12449
+M 12401 9 2 .
 S
 #12452
 New Hope~
@@ -3243,6 +3285,7 @@ D3
 ~
 ~
 0 -1 12451
+M 12401 10 2 .
 S
 #12453
 New Hope, near a tunnel~
@@ -3268,6 +3311,7 @@ D10
 ~
 tunnel~
 17303552 -1 12454
+M 12401 11 2 .
 S
 #12454
 Garlac's Alchemy Shop~
@@ -3288,6 +3332,7 @@ Garlac's Alchemy Shop
 opens at 6 a.m.
 closes at 4 p.m.
 ~
+M 12401 10 1 $
 S
 #12455
 New Hope, near a dark tower~
@@ -3305,6 +3350,7 @@ D6
 ~
 ~
 0 -1 12499
+M 12401 9 4 #
 S
 #12456
 New Hope, at the Jeweler's~
@@ -3331,6 +3377,7 @@ D7
 ~
 ~
 0 -1 12460
+M 12401 10 6 .
 S
 #12458
 Prison~
@@ -3384,6 +3431,7 @@ refundable or reversable.
 For an example, should you choose to lose 1 strength, say
 "I accept the penalty of strength".
 ~
+M 12401 3 5 o
 > speech_prog p I accept the penalty of gold~
 if goldamt($n) > 299999
 mpat 12458 mptransfer $n 12481
@@ -3426,6 +3474,7 @@ D9
 ~
 ~
 0 -1 12439
+M 12401 8 5 .
 S
 #12460
 New Hope, at a pond~
@@ -3458,6 +3507,7 @@ D9
 ~
 ~
 0 -1 12461
+M 12401 9 5 ,
 S
 #12461
 New Hope, e of Town Square and at the Armoury~
@@ -3489,6 +3539,7 @@ sign~
 You read the sign over the doorway:
 "The New Hope Shining Shield Armoury"
 ~
+M 12401 8 6 .
 S
 #12462
 New Hope, at the Weaponry~
@@ -3515,6 +3566,7 @@ D3
 ~
 ~
 0 -1 12461
+M 12401 9 6 .
 S
 #12463
 Armour and Weapon Repair~
@@ -3539,6 +3591,7 @@ Armour and Waepon Repair Shop
 opens at 6 a.m.
 closes at midnight
 ~
+M 12401 9 8 o
 S
 #12464
 The Thorny Club Weaponry~
@@ -3571,6 +3624,7 @@ The Thorny Club Weaponry
 opens at 6 a.m.
 closes at midnight
 ~
+M 12401 9 7 o
 > act_prog p The town bum arrives~
 mpat 12464 mpforce thorne 'I've told you for the last time to keep out of my @#!%@ shop you lousy bum!
 mpat 12464 mpforce thorne kill bum
@@ -3611,6 +3665,7 @@ The Shining Shield Armoury
 opens at 6 a.m.
 closes at midnight
 ~
+M 12401 8 7 o
 S
 #12466
 Sparkling Jewels and Accessories Jewelry Store~
@@ -3636,6 +3691,7 @@ Sparkling Jewels and Accessories Jewelry Store
 opens at 6 a.m.
 closes at midnight
 ~
+M 12401 10 7 $
 S
 #12467
 New Hope~
@@ -3654,6 +3710,7 @@ D6
 ~
 ~
 0 -1 12468
+M 12401 11 6 .
 S
 #12468
 New Hope~
@@ -3672,6 +3729,7 @@ D9
 ~
 ~
 0 -1 12467
+M 12401 12 5 .
 S
 #12469
 New Hope, at the Inn~
@@ -3699,6 +3757,7 @@ D7
 ~
 ~
 0 -1 12470
+M 12401 13 5 I
 S
 #12470
 New Hope~
@@ -3719,6 +3778,7 @@ D8
 ~
 ~
 0 -1 12469
+M 12401 12 4 .
 S
 #12471
 New Hope~
@@ -3737,6 +3797,7 @@ D3
 ~
 ~
 0 -1 12470
+M 12401 13 4 .
 S
 #12472
 New Hope~
@@ -3756,6 +3817,7 @@ D3
 ~
 ~
 0 -1 12471
+M 12401 14 4 .
 S
 #12473
 New Hope, at the Barracks~
@@ -3773,6 +3835,7 @@ D2
 ~
 ~
 0 -1 12470
+M 12401 12 3 .
 S
 #12474
 Inside the bag shop~
@@ -3789,6 +3852,7 @@ D1
 ~
 door~
 262145 -1 12485
+M 12401 12 7 $
 S
 #12475
 New Hope Stables~
@@ -3798,16 +3862,19 @@ D0
 ~
 ~
 0 -1 12449
+M 12401 8 3 o
 S
 #12476
 STABLES RESERVE~
 ~
 0 1073741828 1 0
+M 12402 1 1 .
 S
 #12477
 Some of the things you see in the glass case-~
 ~
 0 1610612740 1 0
+M 12401 10 8 .
 S
 #12478
 New Hope~
@@ -3831,6 +3898,7 @@ D3
 ~
 ~
 0 -1 12453
+M 12401 12 2 .
 S
 #12479
 New Hope~
@@ -3849,6 +3917,7 @@ D3
 ~
 ~
 0 -1 12478
+M 12401 13 2 .
 S
 #12480
 New Hope, at the East Gate~
@@ -3870,6 +3939,7 @@ D3
 ~
 ~
 0 -1 12479
+M 12401 14 2 +
 > time_prog 0~
 if rand(1)
 mpat 12480 mpecho The sky crackles with thunder and lightning, and the gates blast open.  Puff the Fractal Dragon has returned to New Hope.
@@ -3885,6 +3955,7 @@ This is the room where items concerning jail are left.  Stay out of here
 unless you have reason to be here.
 ~
 0 1076887564 0 0
+M 12403 1 1 o
 S
 #12482
 New Hope, South of the Eastern Gate~
@@ -3904,6 +3975,7 @@ D2
 ~
 ~
 0 -1 12472
+M 12401 14 3 +
 S
 #12483
 New Hope~
@@ -3925,6 +3997,7 @@ D2
 ~
 ~
 0 -1 12485
+M 12401 13 6 .
 S
 #12484
 New Hope~
@@ -3942,6 +4015,7 @@ D3
 ~
 ~
 0 -1 12483
+M 12401 14 6 .
 S
 #12485
 New Hope, at the Bag Shop~
@@ -3964,6 +4038,7 @@ D3
 ~
 door~
 131073 -1 12474
+M 12401 13 7 $
 S
 #12486
 New Hope, at the Pawn Shop~
@@ -3987,6 +4062,7 @@ D3
 ~
 door~
 16908289 -1 12487
+M 12401 13 8 $
 S
 #12487
 Your neighborhood pawn shop~
@@ -4007,6 +4083,7 @@ Pawn Shop
 Doors open at noon
 close at 6 a.m.
 ~
+M 12401 12 8 $
 S
 #12488
 New Hope~
@@ -4028,6 +4105,7 @@ D2
 ~
 ~
 0 -1 12489
+M 12401 14 7 .
 > hour_prog 0~
 if rand(1)
 if mobinarea(12450)
@@ -4058,6 +4136,7 @@ D2
 ~
 ~
 0 -1 12490
+M 12401 14 8 .
 S
 #12490
 New Hope~
@@ -4080,6 +4159,7 @@ D3
 ~
 ~
 0 -1 12492
+M 12401 14 9 .
 S
 #12491
 Watch Tower, clockworks~
@@ -4093,6 +4173,7 @@ D0
 ~
 ~
 264192 -1 12490
+M 12401 14 10 #
 S
 #12492
 New Hope~
@@ -4115,6 +4196,7 @@ D3
 ~
 ~
 0 -1 12493
+M 12401 13 9 .
 S
 #12493
 New Hope~
@@ -4132,6 +4214,7 @@ D3
 ~
 ~
 0 -1 12494
+M 12401 12 9 .
 S
 #12494
 New Hope, at the Bakery~
@@ -4154,6 +4237,7 @@ D3
 ~
 ~
 0 -1 12496
+M 12401 11 9 .
 S
 #12495
 The Bakery~
@@ -4167,6 +4251,7 @@ D2
 ~
 door~
 262145 -1 12494
+M 12401 11 8 o
 > act_prog p buys~
 mpforce cook 'If that's all you want I'll go to my back room to do inventory.
 mptransfer cook 11288
@@ -4192,6 +4277,7 @@ D3
 ~
 ~
 0 -1 12497
+M 12401 10 9 .
 S
 #12497
 New Hope, at the Church~
@@ -4217,6 +4303,7 @@ D3
 ~
 ~
 0 -1 12498
+M 12401 9 9 T
 S
 #12498
 New Hope, East of the South Gate~
@@ -4237,6 +4324,7 @@ D3
 ~
 ~
 0 -1 12436
+M 12401 8 9 +
 S
 #12499
 New Hope, near a dark tower~
@@ -4254,6 +4342,7 @@ D9
 ~
 ~
 0 -1 12455
+M 12401 10 3 #
 S
 #12500
 Post Office~
@@ -4271,6 +4360,7 @@ D3
 ~
 ~
 0 -1 12501
+M 12401 5 7 o
 S
 #12501
 Fixit Room~
@@ -4283,6 +4373,7 @@ D1
 ~
 ~
 0 -1 12500
+M 12401 4 7 o
 S
 #0
 

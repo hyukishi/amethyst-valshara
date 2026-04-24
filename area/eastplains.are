@@ -478,6 +478,7 @@ D9
 ~
 ~
 0 -1 12203
+M 12201 2 3 +
 > entry_prog 100~
 if ispc($n)
 if wasinroom($n) == 12480
@@ -523,6 +524,7 @@ D9
 ~
 ~
 0 -1 12204
+M 12201 2 4 +
 S
 #12203
 The Eastern Plains~
@@ -548,6 +550,7 @@ D8
 ~
 ~
 0 -1 12205
+M 12201 1 4 ,
 S
 #12204
 The Eastern Plains~
@@ -577,6 +580,7 @@ D8
 ~
 ~
 0 -1 12207
+M 12201 1 5 ,
 S
 #12205
 The Eastern Plains~
@@ -618,6 +622,7 @@ D9
 ~
 ~
 0 -1 12206
+M 12201 2 5 ,
 S
 #12206
 The Eastern Plains~
@@ -648,6 +653,7 @@ D8
 ~
 ~
 0 -1 12208
+M 12201 1 6 ,
 S
 #12207
 The Eastern Plains~
@@ -689,6 +695,7 @@ D9
 ~
 ~
 0 -1 12209
+M 12201 2 6 ,
 S
 #12208
 The Eastern Plains~
@@ -732,6 +739,7 @@ D9
 ~
 ~
 0 -1 12213
+M 12201 2 7 ,
 S
 #12209
 The Eastern Plains~
@@ -763,6 +771,7 @@ D8
 ~
 ~
 0 -1 12214
+M 12201 1 7 ,
 S
 #12210
 The Eastern Plains, n of the gate to New Hope~
@@ -796,6 +805,7 @@ D8
 ~
 ~
 0 -1 12216
+M 12201 2 2 +
 S
 #12211
 The Eastern Plains, nw of the gate to New Hope~
@@ -822,6 +832,7 @@ D8
 ~
 ~
 0 -1 12201
+M 12201 1 2 +
 S
 #12212
 The Eastern Plains~
@@ -858,6 +869,7 @@ D9
 ~
 ~
 0 -1 12214
+M 12201 3 7 ,
 S
 #12213
 The Eastern Plains~
@@ -882,6 +894,7 @@ D6
 ~
 ~
 0 -1 12208
+M 12201 1 8 ,
 S
 #12214
 The Eastern Plains~
@@ -911,6 +924,7 @@ D7
 ~
 ~
 0 -1 12209
+M 12201 2 8 ,
 S
 #12215
 The Eastern Plains~
@@ -937,6 +951,7 @@ D7
 ~
 ~
 0 -1 12208
+M 12201 3 8 ,
 S
 #12216
 The Eastern Plains, e of the gate to New Hope~
@@ -976,6 +991,7 @@ D9
 ~
 ~
 0 -1 12202
+M 12201 3 3 +
 S
 #12217
 The Eastern Plains~
@@ -993,6 +1009,7 @@ D2
 ~
 ~
 0 -1 12211
+M 12201 1 1 ,
 S
 #12218
 The Eastern Plains~
@@ -1021,6 +1038,7 @@ D9
 ~
 ~
 0 -1 12211
+M 12201 2 1 ,
 S
 #12219
 The Eastern Plains~
@@ -1042,6 +1060,7 @@ D9
 ~
 ~
 0 -1 12210
+M 12201 3 1 ,
 S
 #12220
 The Eastern Plains, ne of the gate to New Hope~
@@ -1075,6 +1094,7 @@ D9
 ~
 ~
 0 -1 12201
+M 12201 3 2 +
 S
 #12221
 The Eastern Plains~
@@ -1115,6 +1135,7 @@ D9
 ~
 ~
 0 -1 12205
+M 12201 3 4 ,
 S
 #12222
 The Eastern Plains~
@@ -1156,6 +1177,7 @@ D9
 ~
 ~
 0 -1 12207
+M 12201 3 5 ,
 S
 #12223
 The Eastern Plains~
@@ -1197,6 +1219,7 @@ D9
 ~
 ~
 0 -1 12208
+M 12201 3 6 ,
 S
 #12224
 The Eastern Plains~
@@ -1226,6 +1249,7 @@ D9
 ~
 ~
 0 -1 12221
+M 12201 4 3 ,
 S
 #12225
 The Eastern Plains~
@@ -1262,6 +1286,7 @@ D9
 ~
 ~
 0 -1 12222
+M 12201 4 4 ,
 S
 #12226
 The Eastern Plains~
@@ -1303,6 +1328,7 @@ D9
 ~
 ~
 0 -1 12223
+M 12201 4 5 ,
 S
 #12227
 The Eastern Plains~
@@ -1330,6 +1356,7 @@ D9
 ~
 ~
 0 -1 12226
+M 12201 5 4 ,
 S
 #12228
 The Eastern Plains~
@@ -1365,6 +1392,7 @@ D9
 ~
 ~
 0 -1 12232
+M 12201 5 5 ,
 S
 #12229
 The Eastern Plains~
@@ -1403,6 +1431,7 @@ D9
 ~
 ~
 0 -1 12258
+M 12201 6 6 ,
 S
 #12230
 The Eastern Plains~
@@ -1425,6 +1454,7 @@ D9
 ~
 ~
 0 -1 12229
+M 12201 7 5 ,
 S
 #12231
 The Eastern Plains~
@@ -1459,6 +1489,7 @@ D9
 ~
 ~
 0 -1 12257
+M 12201 7 6 ,
 S
 #12232
 The Eastern Plains~
@@ -1501,6 +1532,7 @@ D9
 ~
 ~
 0 -1 12212
+M 12201 4 6 ,
 S
 #12233
 The Eastern Plains~
@@ -1538,6 +1570,7 @@ D9
 ~
 ~
 0 -1 12259
+M 12201 5 6 ,
 S
 #12234
 The Eastern Plains~
@@ -1568,6 +1601,7 @@ D9
 ~
 ~
 0 -1 12237
+M 12201 8 6 ,
 S
 #12235
 The Eastern Plains~
@@ -1589,6 +1623,7 @@ D9
 ~
 ~
 0 -1 12238
+M 12201 9 6 ,
 S
 #12236
 The Eastern Plains~
@@ -1607,6 +1642,7 @@ D3
 ~
 ~
 0 -1 12235
+M 12201 10 6 ,
 S
 #12237
 The Eastern Plains~
@@ -1649,6 +1685,7 @@ D9
 ~
 ~
 0 -1 12251
+M 12201 7 7 ,
 S
 #12238
 The Eastern Plains~
@@ -1682,6 +1719,7 @@ D9
 ~
 ~
 0 -1 12240
+M 12201 8 7 ,
 S
 #12239
 The Eastern Plains~
@@ -1711,6 +1749,7 @@ D9
 ~
 ~
 0 -1 12241
+M 12201 8 8 ,
 S
 #12240
 The Eastern Plains~
@@ -1748,6 +1787,7 @@ D9
 ~
 ~
 0 -1 12248
+M 12201 7 8 ,
 S
 #12241
 The Eastern Plains~
@@ -1779,6 +1819,7 @@ D7
 ~
 ~
 0 -1 12251
+M 12201 7 9 ,
 S
 #12242
 The Eastern Plains, at a hut~
@@ -1809,6 +1850,7 @@ D9
 ~
 ~
 0 -1 12246
+M 12201 7 10 ,
 S
 #12243
 The Eastern Plains~
@@ -1834,6 +1876,7 @@ D7
 ~
 ~
 0 -1 12253
+M 12201 4 12 ,
 S
 #12244
 The Eastern Plains~
@@ -1868,6 +1911,7 @@ D9
 ~
 ~
 0 -1 12252
+M 12201 4 11 ,
 S
 #12245
 The Eastern Plains~
@@ -1901,6 +1945,7 @@ D9
 ~
 ~
 0 -1 12243
+M 12201 5 11 ,
 S
 #12246
 The Eastern Plains~
@@ -1926,6 +1971,7 @@ D7
 ~
 ~
 0 -1 12249
+M 12201 6 11 ,
 S
 #12247
 The Eastern Plains~
@@ -1959,6 +2005,7 @@ D9
 ~
 ~
 0 -1 12245
+M 12201 6 10 ,
 S
 #12248
 The Eastern Plains~
@@ -2001,6 +2048,7 @@ D9
 ~
 ~
 0 -1 12249
+M 12201 6 9 ,
 S
 #12249
 The Eastern Plains~
@@ -2038,6 +2086,7 @@ D9
 ~
 ~
 0 -1 12244
+M 12201 5 10 ,
 S
 #12250
 The Eastern Plains~
@@ -2071,6 +2120,7 @@ D9
 ~
 ~
 0 -1 12256
+M 12201 5 9 ,
 S
 #12251
 The Eastern Plains~
@@ -2113,6 +2163,7 @@ D9
 ~
 ~
 0 -1 12250
+M 12201 6 8 ,
 S
 #12252
 The Eastern Plains~
@@ -2142,6 +2193,7 @@ D7
 ~
 ~
 0 -1 12254
+M 12201 3 12 ,
 S
 #12253
 The Eastern Plains~
@@ -2172,6 +2224,7 @@ D8
 ~
 ~
 0 -1 12243
+M 12201 3 11 ,
 S
 #12254
 The Eastern Plains~
@@ -2194,6 +2247,7 @@ D8
 ~
 ~
 0 -1 12252
+M 12201 2 11 ,
 S
 #12255
 The Eastern Plains~
@@ -2207,6 +2261,7 @@ D1
 ~
 ~
 0 -1 12254
+M 12201 1 11 ,
 S
 #12256
 The Eastern Plains~
@@ -2236,6 +2291,7 @@ D9
 ~
 ~
 0 -1 12253
+M 12201 4 10 ,
 S
 #12257
 The Eastern Plains~
@@ -2279,6 +2335,7 @@ D9
 ~
 ~
 0 -1 12260
+M 12201 6 7 ,
 S
 #12258
 The Eastern Plains~
@@ -2316,6 +2373,7 @@ D8
 ~
 ~
 0 -1 12251
+M 12201 5 7 ,
 S
 #12259
 The Eastern Plains~
@@ -2354,6 +2412,7 @@ D9
 ~
 ~
 0 -1 12215
+M 12201 4 7 ,
 S
 #12260
 The Eastern Plains~
@@ -2391,6 +2450,7 @@ D8
 ~
 ~
 0 -1 12248
+M 12201 5 8 ,
 S
 #12299
 Swamp shop~
@@ -2400,6 +2460,7 @@ vines and other vegetation, where someone usually comes to sell some oddly
 or hand crafted items.
 ~
 0 1073741837 0 1
+M 12202 1 1 $
 S
 #12300
 Inside a small hut~
@@ -2414,6 +2475,7 @@ D7
 ~
 ~
 4096 -1 12242
+M 12201 8 11 o
 S
 #0
 

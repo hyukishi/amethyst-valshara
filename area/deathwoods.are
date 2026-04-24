@@ -2616,6 +2616,7 @@ D0
 ~
 ~
 0 -1 2801
+M 2801 13 13 o
 S
 #2801
 A Dark Junction~
@@ -2642,6 +2643,7 @@ D2
 ~
 ~
 0 -1 2800
+M 2801 13 12 o
 S
 #2802
 An Overgrown Path~
@@ -2662,6 +2664,7 @@ D3
 ~
 ~
 0 -1 2801
+M 2801 14 12 .
 S
 #2803
 A Dead(!) End...~
@@ -2679,6 +2682,7 @@ D3
 ~
 ~
 0 -1 2802
+M 2801 15 12 o
 S
 #2804
 A Convergence of Trails~
@@ -2703,6 +2707,7 @@ D3
 ~
 ~
 0 -1 2805
+M 2801 13 11 .
 S
 #2805
 Side Paths~
@@ -2731,6 +2736,7 @@ D3
 ~
 ~
 0 -1 2818
+M 2801 12 11 .
 S
 #2806
 A Sticky End~
@@ -2748,6 +2754,7 @@ D0
 ~
 ~
 0 -1 2805
+M 2801 12 12 o
 S
 #2807
 A Variety of Paths~
@@ -2772,6 +2779,7 @@ D6
 ~
 ~
 0 -1 2808
+M 2801 14 11 .
 S
 #2808
 A Shadowy Trail~
@@ -2793,6 +2801,7 @@ D9
 ~
 ~
 0 -1 2807
+M 2801 15 10 .
 S
 #2809
 A Meeting of Paths~
@@ -2821,6 +2830,7 @@ D9
 ~
 ~
 0 -1 2808
+M 2801 16 9 .
 > rand_prog 1~
 mpe _lbl The sound of running water reaches your ears.
 
@@ -2842,6 +2852,7 @@ D2
 ~
 ~
 0 -1 2809
+M 2801 16 8 o
 S
 #2811
 Frequent Slaughter~
@@ -2870,6 +2881,7 @@ D3
 ~
 ~
 0 -1 2812
+M 2801 15 9 o
 S
 #2812
 A Crossroads~
@@ -2900,6 +2912,7 @@ D6
 ~
 ~
 0 -1 2847
+M 2801 14 9 .
 S
 #2813
 Dark Trails~
@@ -2920,6 +2933,7 @@ D2
 ~
 ~
 0 -1 2807
+M 2801 14 10 .
 S
 #2814
 A Solemn Statue~
@@ -2949,6 +2963,7 @@ D7
 ~
 ~
 0 -1 2833
+M 2801 13 9 o
 S
 #2815
 A Narrow Trail~
@@ -2970,6 +2985,7 @@ D3
 ~
 ~
 0 -1 2814
+M 2801 12 8 .
 S
 #2816
 A Fork in the Trail~
@@ -2995,6 +3011,7 @@ D3
 ~
 ~
 0 -1 2821
+M 2801 11 9 .
 S
 #2817
 Dark Trails~
@@ -3015,6 +3032,7 @@ D2
 ~
 ~
 0 -1 2818
+M 2801 11 10 .
 S
 #2818
 Further in the Forest~
@@ -3039,6 +3057,7 @@ D9
 ~
 ~
 0 -1 2820
+M 2801 11 11 o
 S
 #2819
 A Grisly Fate~
@@ -3056,6 +3075,7 @@ D2
 ~
 ~
 0 -1 2805
+M 2801 12 10 o
 S
 #2820
 A Bend in the Trail~
@@ -3076,6 +3096,7 @@ D6
 ~
 ~
 0 -1 2818
+M 2801 10 12 .
 S
 #2821
 The End of the Path~
@@ -3093,6 +3114,7 @@ D1
 ~
 ~
 0 -1 2816
+M 2801 10 9 .
 S
 #2822
 A Second Bend~
@@ -3115,6 +3137,7 @@ D1
 ~
 ~
 0 -1 2820
+M 2801 9 12 o
 S
 #2823
 Footprints in the Dirt~
@@ -3141,6 +3164,7 @@ D3
 ~
 ~
 0 -1 2825
+M 2801 9 11 o
 S
 #2824
 A Dark Clearing~
@@ -3159,6 +3183,7 @@ D2
 ~
 ~
 0 -1 2823
+M 2801 9 10 o
 S
 #2825
 The Twisting, Turning Path~
@@ -3179,6 +3204,7 @@ D7
 ~
 ~
 0 -1 2826
+M 2801 8 11 .
 S
 #2826
 Deep in the Forest~
@@ -3203,6 +3229,7 @@ D8
 ~
 ~
 0 -1 2825
+M 2801 7 10 o
 S
 #2827
 An Older Section of the Forest~
@@ -3234,6 +3261,7 @@ nude women and men in classic poses, the type of architecture that you
 have seen in history texts detailing Brythunia's rich history.
 
 ~
+M 2801 6 10 o
 S
 #2828
 Taraitiga~
@@ -3264,6 +3292,7 @@ D6
 ~
 ~
 0 -1 2827
+M 2801 5 11 o
 S
 #2829
 Rivers of Slime~
@@ -3290,6 +3319,7 @@ D7
 ~
 ~
 0 -1 2830
+M 2801 7 9 o
 S
 #2830
 A Pool of Slime~
@@ -3308,6 +3338,7 @@ D8
 ~
 ~
 0 -1 2829
+M 2801 6 8 o
 S
 #2831
 An Ancient Path~
@@ -3338,6 +3369,7 @@ You have a bad feeling about the clearing up ahead...
 ~
 ~
 0 -1 2832
+M 2801 8 9 .
 S
 #2832
 AMBUSH!~
@@ -3357,6 +3389,7 @@ flesh, looted and left for the vultures to pick clean.
 ~
 ~
 0 3153991 3 100
+M 2808 1 1 o
 S
 #2833
 A Gloomy Path~
@@ -3378,6 +3411,7 @@ D8
 ~
 ~
 0 -1 2814
+M 2801 11 7 .
 S
 #2834
 A Bloodstained Trail~
@@ -3398,6 +3432,7 @@ D9
 ~
 ~
 0 -1 2814
+M 2801 14 8 .
 S
 #2835
 Gloom Shrouded Foliage~
@@ -3423,6 +3458,7 @@ D7
 ~
 ~
 0 -1 2841
+M 2801 14 7 o
 S
 #2836
 Crumbling Remains~
@@ -3449,6 +3485,7 @@ D6
 ~
 ~
 0 -1 2837
+M 2801 14 6 o
 > rand_prog 33~
 if ispc($r)
 mea $r Ghostly hands brush and tug at you, sending shivers up your spine...
@@ -3482,6 +3519,7 @@ D9
 ~
 ~
 0 -1 2836
+M 2801 14 4 o
 > rand_prog 33~
 mpe _lbl The sound of running water reaches your ears.
 
@@ -3507,6 +3545,7 @@ D8
 ~
 ~
 0 -1 2837
+M 2801 13 3 .
 S
 #2839
 More Branches of the Path~
@@ -3532,6 +3571,7 @@ D9
 ~
 ~
 0 -1 2841
+M 2801 13 4 .
 S
 #2840
 A Thatched Cottage Deep in the Woods~
@@ -3556,6 +3596,7 @@ D2
 ~
 ~
 0 -1 2839
+M 2801 12 2 o
 > rand_prog 33~
 mpe A sweet aroma, of herbs and fine foods, drifts in from the north.
 
@@ -3593,6 +3634,7 @@ D9
 ~
 ~
 0 -1 2842
+M 2801 12 5 o
 S
 #2842
 Sinister Vegetation~
@@ -3613,6 +3655,7 @@ D6
 ~
 ~
 0 -1 2841
+M 2801 11 6 o
 S
 #2843
 A Stone Arch~
@@ -3633,6 +3676,7 @@ D5
 ~
 ~
 0 -1 2844
+M 2801 11 5 o
 S
 #2844
 The Base of the Stair~
@@ -3656,6 +3700,7 @@ D4
 ~
 ~
 0 -1 2843
+M 2800 2 1 o
 S
 #2845
 A Chilly Crypt~
@@ -3674,6 +3719,7 @@ D1
 ~
 ~
 39 -1 2844
+M 2800 1 1 o
 S
 #2846
 A Messy Dwelling~
@@ -3690,6 +3736,7 @@ D2
 ~
 ~
 3 -1 2840
+M 2801 12 1 o
 S
 #2847
 Outside the Stockade~
@@ -3715,6 +3762,7 @@ D9
 ~
 ~
 0 -1 2812
+M 2801 15 8 o
 S
 #2848
 The Stockade~
@@ -3752,6 +3800,7 @@ D4
 ~
 ~
 0 -1 2849
+M 2801 15 7 o
 S
 #2849
 The Watchtower~
@@ -3770,6 +3819,7 @@ D5
 ~
 ~
 0 -1 2848
+M 2802 13 7 #
 S
 #2850
 Commanders' Quarters~
@@ -3801,6 +3851,7 @@ D3
 ~
 ~
 3 -1 2853
+M 2801 15 6 o
 S
 #2851
 Lieutenant's Quarters~
@@ -3816,6 +3867,7 @@ D3
 ~
 ~
 3 -1 2850
+M 2801 16 6 o
 S
 #2852
 The Commander's Office~
@@ -3833,6 +3885,7 @@ D2
 ~
 ~
 3 -1 2850
+M 2801 15 5 o
 S
 #2853
 Lieutenant's Office~
@@ -3848,6 +3901,7 @@ D1
 ~
 ~
 3 -1 2850
+M 2801 13 5 o
 S
 #2854
 Ruined Barracks~
@@ -3866,6 +3920,7 @@ D1
 ~
 ~
 0 -1 2848
+M 2801 13 6 o
 S
 #2855
 Ruined Barracks~
@@ -3884,6 +3939,7 @@ D3
 ~
 ~
 0 -1 2848
+M 2801 16 7 o
 S
 #2856
 The Rubble Strewn Streets~
@@ -3909,6 +3965,7 @@ D3
 ~
 ~
 0 -1 2857
+M 2801 5 12 .
 S
 #2857
 A Ruined Structure~
@@ -3924,6 +3981,7 @@ D1
 ~
 ~
 0 -1 2856
+M 2801 4 12 o
 S
 #2858
 The Rubble Strewn Streets~
@@ -3948,6 +4006,7 @@ D9
 ~
 ~
 0 -1 2860
+M 2801 5 13 .
 S
 #2859
 A Ruined Structure~
@@ -3963,6 +4022,7 @@ D3
 ~
 ~
 0 -1 2858
+M 2801 6 13 o
 S
 #2860
 The Rubble Strewn Streets~
@@ -3983,6 +4043,7 @@ D6
 ~
 ~
 0 -1 2858
+M 2801 4 14 .
 S
 #2861
 The End of the Concourse~
@@ -4002,6 +4063,7 @@ D2
 ~
 ~
 0 -1 2862
+M 2801 3 14 o
 S
 #2862
 A Ruined Structure~
@@ -4024,6 +4086,7 @@ D4
 ~
 ~
 64 -1 2863
+M 2801 3 15 o
 S
 #2863
 The Second Floor~
@@ -4041,6 +4104,7 @@ D5
 ~
 ~
 64 -1 2862
+M 2802 1 15 o
 S
 #2864
 The Western Boulevard~
@@ -4066,6 +4130,7 @@ D3
 ~
 ~
 0 -1 2866
+M 2801 4 11 o
 S
 #2865
 A Ruined Structure~
@@ -4081,6 +4146,7 @@ D2
 ~
 ~
 0 -1 2864
+M 2801 4 10 o
 S
 #2866
 The Rubble Strewn Streets~
@@ -4101,6 +4167,7 @@ D3
 ~
 ~
 0 -1 2867
+M 2801 3 11 .
 S
 #2867
 The Rubble Strewn Streets~
@@ -4126,6 +4193,7 @@ D7
 ~
 ~
 0 -1 2868
+M 2801 2 11 .
 S
 #2868
 A Ruined Chapel~
@@ -4145,6 +4213,7 @@ D8
 ~
 ~
 0 -1 2867
+M 2801 1 10 T
 S
 #2869
 An Ancient Dwelling~
@@ -4167,6 +4236,7 @@ D2
 ~
 ~
 0 -1 2870
+M 2801 2 12 o
 S
 #2870
 An Ignoble Fate~
@@ -4184,6 +4254,7 @@ D0
 ~
 ~
 0 -1 2869
+M 2801 2 13 o
 S
 #2871
 The Stone Causeway~
@@ -4206,6 +4277,7 @@ D2
 ~
 ~
 0 -1 2831
+M 2801 8 8 =
 S
 #2872
 A Dark Corridor~
@@ -4224,6 +4296,7 @@ D0
 ~
 ~
 0 -1 2873
+M 2801 8 7 o
 S
 #2873
 Travelling Blindly~
@@ -4245,6 +4318,7 @@ D2
 ~
 ~
 0 -1 2872
+M 2801 8 6 o
 S
 #2874
 The Darkness Continues~
@@ -4265,6 +4339,7 @@ D2
 ~
 ~
 0 -1 2873
+M 2801 8 5 o
 S
 #2875
 A Damp Cell~
@@ -4279,6 +4354,7 @@ D3
 ~
 ~
 7 -1 2877
+M 2801 9 4 o
 S
 #2876
 A Damp Cell~
@@ -4293,6 +4369,7 @@ D1
 ~
 ~
 7 -1 2877
+M 2801 7 4 o
 S
 #2877
 An Unpleasant Greeting~
@@ -4325,6 +4402,7 @@ D3
 ~
 ~
 7 -1 2876
+M 2801 8 4 o
 S
 #2878
 The Base of the Stairs~
@@ -4346,6 +4424,7 @@ D4
 ~
 ~
 0 -1 2879
+M 2801 8 3 o
 S
 #2879
 The Second Tier~
@@ -4367,6 +4446,7 @@ D5
 ~
 ~
 0 -1 2878
+M 2802 6 3 o
 S
 #2880
 Gallery of the Macabre~
@@ -4391,6 +4471,7 @@ D3
 ~
 ~
 0 -1 2881
+M 2802 6 2 o
 S
 #2881
 A Grim Sight~
@@ -4417,6 +4498,7 @@ D3
 ~
 ~
 0 -1 2882
+M 2802 5 2 o
 S
 #2882
 The Mausoleum~
@@ -4440,6 +4522,7 @@ D3
 ~
 ~
 0 -1 2883
+M 2802 4 2 o
 S
 #2883
 Approaching the High Tower~
@@ -4461,6 +4544,7 @@ D1
 ~
 ~
 0 -1 2882
+M 2802 3 2 #
 S
 #2884
 The Base of the Stair~
@@ -4481,6 +4565,7 @@ D4
 ~
 ~
 0 -1 2885
+M 2802 3 1 o
 S
 #2885
 The Ancient Stair~
@@ -4502,6 +4587,7 @@ D5
 ~
 ~
 0 -1 2884
+M 2803 1 1 o
 S
 #2886
 The Ancient Star~
@@ -4526,6 +4612,7 @@ D5
 ~
 ~
 0 -1 2885
+M 2804 1 1 o
 S
 #2887
 The Ancient Star~
@@ -4547,6 +4634,7 @@ D5
 ~
 ~
 0 -1 2886
+M 2805 2 2 o
 S
 #2888
 A Massive Chamber~
@@ -4568,6 +4656,7 @@ D5
 ~
 ~
 0 -1 2887
+M 2806 2 2 o
 S
 #2889
 The Glowing Sphere~
@@ -4588,6 +4677,7 @@ D4
 ~
 sphere~
 67 -1 2890
+M 2806 2 1 o
 S
 #2890
 Halls of Peril~
@@ -4632,6 +4722,7 @@ D9
 ~
 ~
 0 -1 2890
+M 2807 2 2 H
 > act_prog p from below.~
 mpe The sphere slides shut behind you, barring the entrance.
 mpe You appear to have entered the uppermost sanctum of Cresslix!
@@ -4683,6 +4774,7 @@ D9
 ~
 ~
 0 -1 2891
+M 2807 3 2 H
 S
 #2892
 Halls of Peril~
@@ -4727,6 +4819,7 @@ D9
 ~
 ~
 0 -1 2895
+M 2807 1 2 H
 S
 #2893
 Halls of Peril~
@@ -4771,6 +4864,7 @@ D9
 ~
 ~
 0 -1 2893
+M 2807 1 1 H
 S
 #2894
 Halls of Peril~
@@ -4815,6 +4909,7 @@ D9
 ~
 ~
 0 -1 2890
+M 2807 3 1 H
 S
 #2895
 Halls of Peril~
@@ -4859,6 +4954,7 @@ D9
 ~
 ~
 0 -1 2895
+M 2805 2 4 H
 S
 #2896
 Halls of Peril~
@@ -4903,6 +4999,7 @@ D9
 ~
 ~
 0 -1 2896
+M 2805 2 3 H
 S
 #2897
 Halls of Peril~
@@ -4943,6 +5040,7 @@ D9
 ~
 ~
 0 -1 2897
+M 2805 1 3 H
 S
 #2898
 Halls of Peril~
@@ -4991,6 +5089,7 @@ D9
 ~
 ~
 0 -1 2898
+M 2805 1 1 H
 S
 #2899
 The Sanctum of Evil~
@@ -5007,6 +5106,7 @@ D0
 ~
 ~
 4096 -1 2889
+M 2806 1 1 o
 > rand_prog 33~
 if ispc($r)
 mea $r Smoke fills your lungs and fire scorches your legs!

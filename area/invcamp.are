@@ -457,6 +457,7 @@ D2
 ~
 ~
 0 -1 302
+M 301 2 1 o
 S
 #302
 At the Guard Post~
@@ -484,6 +485,7 @@ D3
 ~
 ~
 0 -1 304
+M 301 2 2 o
 S
 #303
 The Eastern Guard Tower~
@@ -502,6 +504,7 @@ D3
 ~
 ~
 0 -1 302
+M 301 3 2 #
 S
 #304
 The Western Guard Tower~
@@ -520,6 +523,7 @@ D1
 ~
 ~
 0 -1 302
+M 301 1 2 #
 S
 #305
 Travelling in the encampment~
@@ -538,6 +542,7 @@ D2
 ~
 ~
 0 -1 306
+M 301 2 3 o
 S
 #306
 At the Bonfire~
@@ -584,6 +589,7 @@ D9
 ~
 ~
 0 -1 312
+M 301 2 4 o
 S
 #307
 In a Large Tent~
@@ -597,6 +603,7 @@ D9
 ~
 ~
 0 -1 306
+M 301 3 3 o
 S
 #308
 The Captains Tent~
@@ -615,6 +622,7 @@ D3
 ~
 ~
 0 -1 306
+M 301 3 4 o
 S
 #309
 The Back of the Tent~
@@ -629,6 +637,7 @@ D2
 ~
 ~
 0 -1 308
+M 301 4 2 o
 S
 #310
 In a Large Tent~
@@ -642,6 +651,7 @@ D8
 ~
 ~
 0 -1 306
+M 301 1 3 o
 S
 #311
 In a Large Tent~
@@ -655,6 +665,7 @@ D1
 ~
 ~
 0 -1 306
+M 301 1 4 o
 S
 #312
 In a Large Tent~
@@ -668,6 +679,7 @@ D6
 ~
 ~
 0 -1 306
+M 301 1 5 o
 S
 #313
 In a Large Tent~
@@ -681,6 +693,7 @@ D7
 ~
 ~
 0 -1 306
+M 301 3 5 o
 S
 #314
 Approaching a Large Structure~
@@ -699,6 +712,7 @@ D2
 ~
 ~
 8389671 316 315
+M 301 2 5 o
 S
 #315
 Entering the Guard Barracks~
@@ -724,6 +738,7 @@ D3
 ~
 ~
 0 -1 319
+M 301 2 6 o
 S
 #316
 In the Guard Barracks~
@@ -741,6 +756,7 @@ D3
 ~
 ~
 0 -1 315
+M 301 3 6 o
 S
 #317
 In the Guard Barracks~
@@ -758,6 +774,7 @@ D3
 ~
 ~
 0 -1 318
+M 301 3 7 o
 S
 #318
 In the Guard Barracks~
@@ -784,6 +801,7 @@ D3
 ~
 ~
 0 -1 320
+M 301 2 7 o
 S
 #319
 In the Guard Barracks~
@@ -801,6 +819,7 @@ D2
 ~
 ~
 0 -1 320
+M 301 1 6 o
 S
 #320
 In the Guard Barracks~
@@ -818,6 +837,7 @@ D1
 ~
 ~
 0 -1 318
+M 301 1 7 o
 S
 #321
 The Chamber of the Commander~
@@ -836,6 +856,7 @@ D2
 ~
 cell door south~
 25166887 307 322
+M 301 2 8 o
 S
 #322
 A Small Cell~
@@ -850,6 +871,7 @@ D0
 ~
 ~
 6 -1 321
+M 301 2 9 o
 S
 #323
 In the battlefield~
@@ -868,6 +890,7 @@ D2
 ~
 ~
 0 -1 653
+M 302 1 2 o
 S
 #324
 In the Battlefield~
@@ -890,6 +913,7 @@ D3
 ~
 ~
 0 -1 323
+M 302 2 2 o
 S
 #325
 In the battlefield~
@@ -908,6 +932,7 @@ D3
 ~
 ~
 0 -1 326
+M 302 2 1 o
 S
 #326
 Floating in a void~
@@ -922,6 +947,7 @@ D2
 ~
 ~
 0 -1 323
+M 302 1 1 o
 S
 #327
 Upon the Outskirts~
@@ -945,6 +971,7 @@ D3
 ~
 ~
 0 -1 653
+M 302 2 3 o
 S
 #328
 Floating in a void~
@@ -955,6 +982,7 @@ D3
 ~
 ~
 0 -1 325
+M 302 3 1 o
 S
 #329
 Floating in a void~
@@ -969,6 +997,7 @@ D3
 ~
 ~
 0 -1 324
+M 302 3 2 o
 S
 #330
 Floating in a void~
@@ -983,12 +1012,14 @@ D3
 ~
 ~
 0 -1 327
+M 302 3 3 o
 S
 #350
 Floating in a void~
 ~
 ~
 0 4 1 0
+M 303 1 1 o
 S
 #0
 

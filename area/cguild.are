@@ -738,6 +738,7 @@ D2
 ~
 ~
 0 -1 573
+M 252 3 5 H
 S
 #252
 Cathedral Foyer~
@@ -767,6 +768,7 @@ D7
 ~
 ~
 0 -1 253
+M 252 3 4 o
 S
 #253
 Left Aisle~
@@ -787,6 +789,7 @@ D8
 ~
 ~
 0 -1 252
+M 252 2 3 o
 S
 #254
 Main Aisle~
@@ -813,6 +816,7 @@ D3
 ~
 ~
 0 -1 253
+M 252 3 3 o
 S
 #255
 Left Aisle~
@@ -836,6 +840,7 @@ D9
 ~
 ~
 0 -1 252
+M 252 4 3 o
 S
 #256
 Left Aisle - Approching Bishop~
@@ -855,6 +860,7 @@ D2
 ~
 ~
 0 -1 253
+M 252 2 2 $
 S
 #257
 Approaching the Altar~
@@ -887,6 +893,7 @@ D7
 ~
 ~
 0 -1 259
+M 252 3 2 T
 S
 #258
 Approaching the Ciborium~
@@ -904,6 +911,7 @@ D3
 ~
 ~
 0 -1 257
+M 252 4 2 o
 S
 #259
 Bishop's Throne~
@@ -922,6 +930,7 @@ D8
 ~
 ~
 0 -1 257
+M 252 2 1 $
 S
 #260
 At the Altar~
@@ -940,6 +949,7 @@ D5
 ~
 ~
 0 -1 257
+M 253 2 2 T
 S
 #261
 The Ciborium~
@@ -958,6 +968,7 @@ D9
 ~
 ~
 0 -1 257
+M 252 4 1 o
 S
 #262
 Behind the Alter~
@@ -976,6 +987,7 @@ D5
 ~
 ~
 2048 -1 263
+M 253 2 1 o
 S
 #263
 An Eerie Stairwell~
@@ -993,6 +1005,7 @@ D5
 ~
 ~
 0 -1 264
+M 252 3 1 o
 S
 #264
 The Bishop's Study~
@@ -1007,6 +1020,7 @@ D4
 ~
 ~
 1 -1 263
+M 251 1 1 $
 S
 #265
 The Baptistry~
@@ -1019,6 +1033,7 @@ D1
 ~
 ~
 1 -1 259
+M 252 1 1 o
 S
 #266
 Entering the Bell Tower~
@@ -1037,6 +1052,7 @@ D4
 ~
 ~
 0 -1 267
+M 252 2 4 #
 S
 #267
 Somewhere in the Bell Tower~
@@ -1055,6 +1071,7 @@ D5
 ~
 ~
 0 -1 266
+M 253 1 4 #
 S
 #268
 Atop the Bell Tower~
@@ -1068,6 +1085,7 @@ D5
 ~
 ~
 0 -1 267
+M 254 1 1 #
 S
 #269
 Corridor to the Monastery~
@@ -1085,6 +1103,7 @@ D8
 ~
 ~
 0 -1 270
+M 252 5 1 o
 S
 #270
 Entrance to the Augustinian Monastery~
@@ -1106,6 +1125,7 @@ D7
 ~
 ~
 0 -1 269
+M 252 6 2 o
 S
 #271
 North Corridor~
@@ -1133,6 +1153,7 @@ D8
 ~
 ~
 33554432 -1 276
+M 252 7 2 o
 S
 #272
 Northeast Corner~
@@ -1154,6 +1175,7 @@ D9
 ~
 ~
 133120 -1 276
+M 252 8 2 o
 S
 #273
 The Shrine~
@@ -1169,6 +1191,7 @@ D0
 ~
 ~
 0 -1 271
+M 252 7 3 T
 S
 #274
 West Corridor~
@@ -1190,6 +1213,7 @@ D2
 ~
 ~
 0 -1 280
+M 252 6 3 o
 S
 #275
 Chant Room~
@@ -1215,6 +1239,7 @@ don't want (preferbily usefull eq) and take what ever eq you want.
 Thanks,
 - The Guild Leader
 ~
+M 252 6 4 o
 > rand_prog 30~
 mpe _blu A feeling of fulfillment overcomes you.
 ~
@@ -1241,6 +1266,7 @@ Welcome to the Magik Shop
 Store hours are 8am to 5pm
  
 ~
+M 252 8 3 $
 > rand_prog 30~
 mpecho _lbl Gregor talks with his plants as he works.
 ~
@@ -1271,6 +1297,7 @@ D7
 ~
 ~
 33554432 -1 276
+M 252 7 4 o
 S
 #278
 Armor and Weapons Dealer~
@@ -1289,6 +1316,7 @@ Welcome to The Armor and Weapons Shop.
  
 Store hours are from 5 am until 11 pm.  Thank You for shopping at Ardagh's.
 ~
+M 252 5 5 o
 S
 #279
 General Store~
@@ -1312,6 +1340,7 @@ to aid you on your journey.
  
 Store hours are from 8am until 2am.
 ~
+M 252 6 1 $
 S
 #280
 Southwest Corner~
@@ -1333,6 +1362,7 @@ D6
 ~
 ~
 0 -1 279
+M 252 5 3 o
 S
 #281
 South Corridor~
@@ -1350,6 +1380,7 @@ D3
 ~
 ~
 0 -1 280
+M 252 5 2 o
 S
 #282
 Southeast Corner~
@@ -1366,11 +1397,13 @@ D3
 ~
 ~
 0 -1 281
+M 252 7 5 o
 S
 #283
 Magik Store Room~
 ~
 0 3145732 1 0
+M 255 1 1 $
 S
 #284
 Store Room~
@@ -1388,6 +1421,7 @@ D3
 ~
 ~
 35 -1 279
+M 252 7 1 $
 S
 #0
 

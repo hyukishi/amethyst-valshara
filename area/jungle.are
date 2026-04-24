@@ -454,6 +454,7 @@ D3
 ~
 ~
 0 -1 29949
+M 1003 3 1 .
 S
 #1004
 A Dark Path~
@@ -471,6 +472,7 @@ D3
 ~
 ~
 0 -1 2809
+M 1003 1 6 .
 S
 #1005
 A Small Path Near A Jungle~
@@ -491,6 +493,7 @@ D3
 ~
 ~
 0 -1 1006
+M 1003 8 6 .
 S
 #1006
 A Small Path Through The Jungle~
@@ -517,6 +520,7 @@ D3
 ~
 ~
 0 -1 1010
+M 1003 7 6 .
 S
 #1007
 In A Jungle~
@@ -546,6 +550,7 @@ D9
 ~
 ~
 0 -1 1010
+M 1003 7 5 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -577,6 +582,7 @@ D7
 ~
 ~
 0 -1 1018
+M 1003 6 5 o
 S
 #1009
 In A Jungle~
@@ -599,6 +605,7 @@ D3
 ~
 ~
 0 -1 1016
+M 1003 5 5 o
 S
 #1010
 A Small Path Through The Jungle~
@@ -624,6 +631,7 @@ D9
 ~
 ~
 0 -1 1036
+M 1003 6 6 .
 S
 #1011
 A Small Path Through The Jungle~
@@ -649,6 +657,7 @@ D7
 ~
 ~
 0 -1 1016
+M 1003 5 6 .
 S
 #1012
 A Small Path Through The Jungle~
@@ -674,6 +683,7 @@ D7
 ~
 ~
 0 -1 1015
+M 1003 4 6 .
 S
 #1013
 A Small Path Through The Jungle~
@@ -701,6 +711,7 @@ D8
 ~
 ~
 0 -1 1037
+M 1003 3 6 .
 S
 #1014
 A Small Path Through The Jungle~
@@ -722,6 +733,7 @@ D6
 ~
 ~
 0 -1 1015
+M 1003 2 6 .
 S
 #1015
 In A Jungle~
@@ -744,6 +756,7 @@ D9
 ~
 ~
 0 -1 1014
+M 1003 3 5 o
 S
 #1016
 In A Jungle~
@@ -769,6 +782,7 @@ D8
 ~
 ~
 0 -1 1011
+M 1003 4 5 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -808,6 +822,7 @@ E
 bush~
 The bush looks like it might grow flowers soon.
 ~
+M 1003 4 4 o
 S
 #1018
 In A Jungle~
@@ -834,6 +849,7 @@ D8
 ~
 ~
 0 -1 1008
+M 1003 5 4 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -852,6 +868,7 @@ D2
 ~
 ~
 0 -1 1008
+M 1003 6 4 o
 S
 #1020
 In A Jungle~
@@ -874,6 +891,7 @@ D7
 ~
 ~
 0 -1 1023
+M 1003 7 4 o
 S
 #1021
 In A Jungle~
@@ -891,6 +909,7 @@ D8
 ~
 ~
 0 -1 1022
+M 1003 7 3 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -914,6 +933,7 @@ D9
 ~
 ~
 0 -1 1007
+M 1003 8 4 o
 S
 #1023
 In A Jungle~
@@ -932,6 +952,7 @@ D8
 ~
 ~
 0 -1 1020
+M 1003 6 3 o
 S
 #1024
 In A Jungle~
@@ -953,6 +974,7 @@ D9
 ~
 ~
 0 -1 1023
+M 1003 7 2 o
 S
 #1025
 In A Jungle~
@@ -971,6 +993,7 @@ D8
 ~
 ~
 0 -1 1026
+M 1003 8 2 o
 S
 #1026
 In A Jungle~
@@ -985,6 +1008,7 @@ D7
 ~
 ~
 0 -1 1025
+M 1003 9 3 o
 S
 #1027
 In A Jungle~
@@ -999,6 +1023,7 @@ D7
 ~
 ~
 0 -1 1024
+M 1003 8 3 o
 S
 #1028
 In A Jungle~
@@ -1021,6 +1046,7 @@ D9
 ~
 ~
 0 -1 1017
+M 1003 5 3 o
 S
 #1029
 In A Jungle~
@@ -1038,6 +1064,7 @@ D3
 ~
 ~
 0 -1 1030
+M 1003 4 3 o
 S
 #1030
 In A Jungle~
@@ -1060,6 +1087,7 @@ D2
 ~
 ~
 0 -1 1032
+M 1003 3 3 o
 S
 #1031
 In A Jungle~
@@ -1078,6 +1106,7 @@ D2
 ~
 ~
 0 -1 1030
+M 1003 3 2 o
 S
 #1032
 In A Jungle~
@@ -1092,6 +1121,7 @@ D0
 ~
 ~
 0 -1 1030
+M 1003 3 4 o
 S
 #1033
 In A Jungle~
@@ -1114,6 +1144,7 @@ E
 bush~
 The bush looks like it might grow flowers soon.
 ~
+M 1003 7 7 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -1137,6 +1168,7 @@ D2
 ~
 ~
 0 -1 1035
+M 1003 6 7 o
 S
 #1035
 In A Jungle~
@@ -1171,6 +1203,7 @@ D8
 ~
 ~
 0 -1 1048
+M 1003 6 8 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -1198,6 +1231,7 @@ D8
 ~
 ~
 0 -1 1035
+M 1003 5 7 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -1228,6 +1262,7 @@ D7
 ~
 ~
 0 -1 1013
+M 1003 4 7 o
 S
 #1038
 In A Jungle~
@@ -1249,6 +1284,7 @@ D7
 ~
 ~
 0 -1 1039
+M 1003 4 8 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -1272,6 +1308,7 @@ D8
 ~
 ~
 0 -1 1038
+M 1003 3 7 o
 S
 #1040
 In A Jungle~
@@ -1298,6 +1335,7 @@ E
 rock~
 The rock seems to have a little bit of lichen growing on it, but not much.
 ~
+M 1003 5 8 o
 S
 #1041
 In A Small Clearing~
@@ -1328,6 +1366,7 @@ D9
 ~
 ~
 0 -1 1043
+M 1003 5 9 o
 S
 #1042
 In A Small Clearing~
@@ -1349,6 +1388,7 @@ D7
 ~
 ~
 0 -1 1044
+M 1003 5 10 o
 S
 #1043
 In A Small Clearing~
@@ -1371,6 +1411,7 @@ D6
 ~
 ~
 0 -1 1041
+M 1003 4 10 o
 S
 #1044
 In A Small Clearing~
@@ -1392,6 +1433,7 @@ D8
 ~
 ~
 0 -1 1042
+M 1003 4 9 o
 S
 #1045
 In A Jungle~
@@ -1414,6 +1456,7 @@ D6
 ~
 ~
 0 -1 1046
+M 1003 7 8 o
 S
 #1046
 In A Jungle~
@@ -1432,6 +1475,7 @@ D9
 ~
 ~
 0 -1 1045
+M 1003 8 7 o
 S
 #1047
 In A Jungle~
@@ -1449,6 +1493,7 @@ D3
 ~
 ~
 0 -1 1045
+M 1003 8 8 o
 S
 #1048
 In A Jungle~
@@ -1467,6 +1512,7 @@ D7
 ~
 ~
 0 -1 1035
+M 1003 7 9 o
 > all_greet_prog 5~
 mpe Some nearby vines start to twist and writhe...
 mpmload 1013
@@ -1493,6 +1539,7 @@ D6
 ~
 ~
 0 -1 1050
+M 1003 8 9 o
 S
 #1050
 In A Jungle~
@@ -1511,6 +1558,7 @@ D9
 ~
 ~
 0 -1 1049
+M 1003 9 8 o
 S
 #1051
 In A Jungle~
@@ -1529,6 +1577,7 @@ D9
 ~
 ~
 0 -1 1052
+M 1003 10 9 o
 S
 #1052
 In A Jungle~
@@ -1551,6 +1600,7 @@ E
 rock~
 The rock has begun to be covered with a bit of lichen.
 ~
+M 1003 9 10 o
 S
 #1053
 In A Jungle~
@@ -1573,6 +1623,7 @@ D6
 ~
 ~
 0 -1 1055
+M 1003 8 10 o
 S
 #1054
 In A Jungle~
@@ -1587,6 +1638,7 @@ D1
 ~
 ~
 0 -1 1053
+M 1003 7 10 o
 S
 #1055
 In A Jungle~
@@ -1604,6 +1656,7 @@ D9
 ~
 ~
 0 -1 1053
+M 1003 9 9 o
 S
 #1056
 In A Jungle~
@@ -1622,6 +1675,7 @@ D2
 ~
 ~
 0 -1 1057
+M 1003 6 9 o
 S
 #1057
 In A Jungle~
@@ -1649,6 +1703,7 @@ E
 ground flecks color~
 The ground is spotted with crushed orange flowers.
 ~
+M 1003 6 10 o
 S
 #1058
 A Small Path~
@@ -1666,6 +1721,7 @@ D3
 ~
 ~
 0 -1 1005
+M 1003 9 6 .
 S
 #1059
 In A Small Cave~
@@ -1687,6 +1743,7 @@ E
 gravel~
 Grey gravel covers the floor.
 ~
+M 1003 5 2 o
 S
 #0
 

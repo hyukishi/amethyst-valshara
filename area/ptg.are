@@ -986,11 +986,13 @@ D9
 ~
 ~
 0 -1 10903
+M 10903 9 4 o
 S
 #10902
 ...~
 ~
 0 12 0 100
+M 10906 1 1 o
 S
 #10903
 Hallway~
@@ -1008,6 +1010,7 @@ D6
 ~
 ~
 0 -1 10901
+M 10903 8 5 H
 S
 #10904
 Hallway~
@@ -1024,6 +1027,7 @@ D7
 ~
 ~
 0 -1 10905
+M 10903 7 5 H
 S
 #10905
 Hallway~
@@ -1041,6 +1045,7 @@ D9
 ~
 ~
 0 -1 10906
+M 10903 6 4 H
 S
 #10906
 Entering the combat area~
@@ -1059,6 +1064,7 @@ D6
 ~
 ~
 0 -1 10905
+M 10903 5 5 o
 S
 #10907
 Inside the Labyrinth~
@@ -1077,6 +1083,7 @@ D3
 ~
 ~
 0 -1 10908
+M 10903 5 6 o
 S
 #10908
 Inside the Labyrinth~
@@ -1094,6 +1101,7 @@ D9
 ~
 ~
 0 -1 10909
+M 10903 4 6 o
 S
 #10909
 Inside the Labyrinth~
@@ -1115,6 +1123,7 @@ D6
 ~
 ~
 0 -1 10908
+M 10903 3 7 o
 S
 #10910
 Inside the Labyrinth~
@@ -1139,6 +1148,7 @@ D8
 ~
 ~
 0 -1 10911
+M 10903 3 8 o
 S
 #10911
 Inside the Labyrinth~
@@ -1155,6 +1165,7 @@ D7
 ~
 ~
 0 -1 10910
+M 10903 4 9 o
 > leave_prog 5~
 mpoload 10901 1
 mpat 10911 drop moss
@@ -1177,6 +1188,7 @@ D9
 ~
 ~
 0 -1 10913
+M 10903 4 10 o
 S
 #10913
 Inside the Labyrinth~
@@ -1193,6 +1205,7 @@ D6
 ~
 ~
 0 -1 10912
+M 10903 3 11 o
 S
 #10914
 Inside the Labyrinth~
@@ -1210,6 +1223,7 @@ D2
 ~
 ~
 0 -1 10913
+M 10903 3 10 o
 S
 #10915
 Inside the Labyrinth~
@@ -1223,6 +1237,7 @@ D2
 ~
 ~
 0 -1 10914
+M 10903 3 9 o
 > entry_prog 10~
 if ispc($n)
 mpecho The torch on the wall flickers, crackles, then a single spark falls to the ground...
@@ -1245,6 +1260,7 @@ D8
 ~
 ~
 0 -1 10910
+M 10903 2 7 o
 S
 #10917
 Inside the Labyrinth~
@@ -1261,6 +1277,7 @@ D3
 ~
 ~
 0 -1 10910
+M 10903 4 8 o
 S
 #10918
 Inside the Labyrinth~
@@ -1278,6 +1295,7 @@ D3
 ~
 ~
 0 -1 10917
+M 10903 5 8 o
 S
 #10919
 Inside the Labyrinth~
@@ -1295,6 +1313,7 @@ D8
 ~
 ~
 0 -1 10920
+M 10903 6 8 o
 S
 #10920
 Inside the Labyrinth~
@@ -1310,6 +1329,7 @@ D7
 ~
 ~
 0 -1 10919
+M 10903 7 9 o
 S
 #10921
 Inside the Labyrinth~
@@ -1328,6 +1348,7 @@ D3
 ~
 ~
 0 -1 10922
+M 10903 6 9 o
 S
 #10922
 Inside the Labyrinth~
@@ -1346,6 +1367,7 @@ D8
 ~
 ~
 0 -1 10923
+M 10903 5 9 o
 S
 #10923
 Inside the Labyrinth~
@@ -1363,6 +1385,7 @@ D7
 ~
 ~
 0 -1 10922
+M 10903 6 10 o
 S
 #10924
 Inside the Labyrinth~
@@ -1377,6 +1400,7 @@ D10
 ~
 plants~
 919552 -1 10925
+M 10903 7 10 o
 S
 #10925
 Inside the Labyrinth~
@@ -1392,6 +1416,7 @@ D3
 ~
 ~
 0 -1 10926
+M 10903 6 11 o
 > act_prog p from somewhere.~
 mpechoat 0.$n You appear to have found a way to slip through the wall and into another room on the other side...  The opening closes behind you, however, as soon as you're on the other side...
 mpmload 10914
@@ -1419,6 +1444,7 @@ D4
 ~
 ~
 2112 -1 10929
+M 10903 5 11 .
 S
 #10927
 Inside the Labyrinth~
@@ -1435,6 +1461,7 @@ D1
 ~
 ~
 0 -1 10926
+M 10903 4 11 o
 S
 #10928
 Inside the Labyrinth~
@@ -1452,6 +1479,7 @@ D9
 ~
 ~
 0 -1 10933
+M 10903 5 10 o
 > rand_prog 25~
 if mortcount(10928) > 0
 mpmload 10915
@@ -1476,6 +1504,7 @@ D5
 ~
 ~
 0 -1 10926
+M 10904 1 11 .
 S
 #10930
 Top of the Labyrinth, Catwalk~
@@ -1494,6 +1523,7 @@ D2
 ~
 ~
 0 -1 10929
+M 10904 1 10 .
 S
 #10931
 Top of the Labyrinth, Catwalk~
@@ -1511,6 +1541,7 @@ D5
 ~
 ~
 128 -1 11026
+M 10904 1 9 .
 S
 #10932
 Inside the Labyrinth~
@@ -1524,6 +1555,7 @@ D0
 ~
 ~
 0 -1 10935
+M 10903 8 9 o
 S
 #10933
 Inside the Labyrinth~
@@ -1542,6 +1574,7 @@ D6
 ~
 ~
 0 -1 10928
+M 10903 3 12 o
 > all_greet_prog 10~
 mpechoat $n You must have come too close to one of the walls, and was hit from behind by something of a meat eating plant.
 ehind by something of a meat eating plant.
@@ -1573,6 +1606,7 @@ D8
 ~
 ~
 0 -1 10968
+M 10903 7 6 o
 S
 #10935
 Inside the Labyrinth~
@@ -1590,6 +1624,7 @@ D2
 ~
 ~
 0 -1 10936
+M 10903 7 7 o
 S
 #10936
 Inside the Labyrinth~
@@ -1608,6 +1643,7 @@ D8
 ~
 ~
 0 -1 10937
+M 10903 6 7 o
 S
 #10937
 Inside the Labyrinth~
@@ -1625,6 +1661,7 @@ D9
 ~
 ~
 0 -1 10938
+M 10903 8 6 o
 S
 #10938
 Inside the Labyrinth~
@@ -1642,6 +1679,7 @@ D6
 ~
 ~
 4096 -1 10937
+M 10903 6 5 o
 S
 #10939
 Entrance to the Undead Maze~
@@ -1660,6 +1698,7 @@ D4
 ~
 ~
 16777216 -1 10938
+M 10902 6 6 o
 S
 #10940
 Further into the maze...~
@@ -1677,6 +1716,7 @@ D2
 ~
 ~
 0 -1 10939
+M 10902 6 5 o
 S
 #10941
 A Crossroads~
@@ -1701,6 +1741,7 @@ D3
 ~
 ~
 0 -1 10942
+M 10902 6 4 .
 S
 #10942
 A Dead End~
@@ -1714,6 +1755,7 @@ D1
 ~
 ~
 0 -1 10941
+M 10902 5 4 o
 S
 #10943
 Garden of Living Death~
@@ -1748,6 +1790,7 @@ D7
 ~
 ~
 0 -1 10959
+M 10902 6 3 o
 S
 #10944
 A Narrowing Passageway~
@@ -1764,6 +1807,7 @@ D3
 ~
 ~
 0 -1 10941
+M 10902 7 4 .
 S
 #10945
 The Stairway Down~
@@ -1781,6 +1825,7 @@ D5
 ~
 ~
 0 -1 10946
+M 10902 8 4 .
 S
 #10946
 A Spiral Staircase~
@@ -1793,6 +1838,7 @@ D4
 ~
 ~
 0 -1 10945
+M 10901 1 1 o
 S
 #10947
 The Beasts Pen~
@@ -1819,6 +1865,7 @@ D3
 ~
 ~
 0 -1 10961
+M 10902 8 2 o
 S
 #10948
 The Beasts Pen~
@@ -1845,6 +1892,7 @@ D3
 ~
 ~
 0 -1 10947
+M 10902 9 2 o
 S
 #10949
 The Beasts Pen~
@@ -1872,6 +1920,7 @@ D3
 ~
 ~
 0 -1 10948
+M 10902 10 2 o
 S
 #10950
 Dogs Pen~
@@ -1885,6 +1934,7 @@ D2
 ~
 ~
 0 -1 10947
+M 10902 8 1 o
 S
 #10951
 Hawks Pen~
@@ -1898,6 +1948,7 @@ D0
 ~
 ~
 0 -1 10947
+M 10902 8 3 o
 S
 #10952
 Bat Pen~
@@ -1911,6 +1962,7 @@ D2
 ~
 ~
 0 -1 10948
+M 10902 9 1 o
 S
 #10953
 Wolverine Pen~
@@ -1924,6 +1976,7 @@ D0
 ~
 ~
 0 -1 10948
+M 10902 9 3 o
 S
 #10954
 Lion Pen~
@@ -1937,6 +1990,7 @@ D2
 ~
 ~
 0 -1 10949
+M 10902 10 1 o
 S
 #10955
 Babboon Pen~
@@ -1950,6 +2004,7 @@ D0
 ~
 ~
 0 -1 10949
+M 10902 10 3 o
 S
 #10956
 Dragons Pen~
@@ -1963,6 +2018,7 @@ D3
 ~
 ~
 0 -1 10949
+M 10902 11 2 o
 > act_prog p opens a burnt chest.~
 if mobinroom(10917) > 0
 mpat 10956 mpecho A magical force prevents a burnt chest from opening, and it snaps itself shut again...
@@ -1991,6 +2047,7 @@ D6
 ~
 ~
 0 -1 10960
+M 10902 5 3 o
 S
 #10958
 Southeast Corner of the Garden~
@@ -2012,6 +2069,7 @@ D7
 ~
 ~
 0 -1 10960
+M 10902 7 3 o
 S
 #10959
 Westen Wall of the Garden~
@@ -2041,6 +2099,7 @@ D8
 ~
 ~
 0 -1 10943
+M 10902 5 2 #
 S
 #10960
 Center of the Garden~
@@ -2087,6 +2146,7 @@ D9
 ~
 ~
 0 -1 10957
+M 10902 6 2 o
 S
 #10961
 Eastern Wall of the Garden~
@@ -2120,6 +2180,7 @@ D9
 ~
 ~
 0 -1 10943
+M 10902 7 2 #
 S
 #10962
 Northwest Corner of the Garden~
@@ -2141,6 +2202,7 @@ D8
 ~
 ~
 0 -1 10960
+M 10902 5 1 o
 S
 #10963
 Northern Wall of the Garden~
@@ -2171,6 +2233,7 @@ D9
 ~
 ~
 0 -1 10959
+M 10902 6 1 #
 > death_prog 100~
 if mobinroom(10925) == 0
 mpat 10963 mpmload 10925
@@ -2206,6 +2269,7 @@ D9
 ~
 ~
 0 -1 10960
+M 10902 7 1 o
 > time_prog 12~
 if ovnumroom(10908) == 0
 and mobinarea(10924) == 0
@@ -2231,6 +2295,7 @@ D5
 ~
 ~
 0 -1 10960
+M 10903 6 1 o
 S
 #10966
 Lair of the Zombie Spider~
@@ -2248,6 +2313,7 @@ D5
 ~
 ~
 0 -1 10965
+M 10904 2 1 o
 S
 #10967
 Spiders Backroom~
@@ -2261,6 +2327,7 @@ D5
 ~
 ~
 0 -1 10966
+M 10905 1 1 o
 S
 #10968
 Inside the Labyrinth~
@@ -2279,6 +2346,7 @@ D7
 ~
 ~
 0 -1 10934
+M 10903 8 7 o
 S
 #10969
 Inside the Labyrinth~
@@ -2293,6 +2361,7 @@ D0
 ~
 ~
 0 -1 10970
+M 10903 8 8 o
 S
 #10970
 Inside the Labyrinth~
@@ -2311,6 +2380,7 @@ D5
 ~
 ~
 256 -1 10971
+M 10903 7 8 o
 S
 #10971
 Underground Tunnel~
@@ -2329,6 +2399,7 @@ D7
 ~
 ~
 0 -1 10972
+M 10902 7 9 o
 S
 #10972
 Underground Tunnel~
@@ -2346,6 +2417,7 @@ D8
 ~
 ~
 0 -1 10971
+M 10902 6 8 o
 S
 #10973
 Underground Tunnel~
@@ -2363,6 +2435,7 @@ D8
 ~
 ~
 0 -1 10972
+M 10902 5 7 o
 S
 #10974
 Underground Tunnel~
@@ -2381,6 +2454,7 @@ D7
 ~
 ~
 0 -1 10975
+M 10902 4 7 o
 S
 #10975
 Underground Tunnel~
@@ -2399,6 +2473,7 @@ D8
 ~
 ~
 0 -1 10974
+M 10902 3 6 o
 S
 #10976
 Underground Tunnel~
@@ -2417,6 +2492,7 @@ D8
 ~
 ~
 0 -1 10975
+M 10902 2 5 o
 S
 #10977
 Underground Tunnel~
@@ -2435,6 +2511,7 @@ D8
 ~
 ~
 0 -1 10976
+M 10902 1 4 o
 S
 #10978
 Inside the Labyrinth~
@@ -2444,6 +2521,7 @@ D5
 ~
 ~
 256 -1 10977
+M 10903 1 3 o
 S
 #10979
 Inside the Labyrinth~
@@ -2458,6 +2536,7 @@ D1
 ~
 ~
 0 -1 10934
+M 10903 6 6 o
 S
 #10980
 The entrance to the hive~
@@ -2471,6 +2550,7 @@ D0
 ~
 ~
 16777216 -1 10981
+M 10907 2 10 o
 S
 #10981
 Inside the hive~
@@ -2492,6 +2572,7 @@ D2
 ~
 ~
 16777216 -1 10980
+M 10907 2 9 o
 S
 #10982
 The Hive~
@@ -2512,6 +2593,7 @@ D2
 ~
 ~
 0 -1 10981
+M 10907 2 8 o
 S
 #10983
 The Hive~
@@ -2539,6 +2621,7 @@ D3
 ~
 ~
 2048 -1 10984
+M 10907 2 7 o
 S
 #10984
 The Hive~
@@ -2556,6 +2639,7 @@ D1
 ~
 ~
 0 -1 10983
+M 10907 1 7 o
 S
 #10985
 The Hive~
@@ -2572,6 +2656,7 @@ D3
 ~
 ~
 0 -1 10983
+M 10907 3 7 o
 > entry_prog ~
 if ispc($n)
 and mobinarea(10909) < 11
@@ -2598,6 +2683,7 @@ D2
 ~
 ~
 0 -1 10983
+M 10907 2 6 o
 S
 #10987
 Center of the Hive~
@@ -2632,6 +2718,7 @@ D9
 ~
 ~
 0 -1 10991
+M 10907 2 5 o
 S
 #10988
 In the small opening~
@@ -2643,6 +2730,7 @@ D5
 ~
 opening~
 524416 -1 10987
+M 10907 1 5 o
 S
 #10989
 The Hive~
@@ -2657,6 +2745,7 @@ D8
 ~
 ~
 0 -1 10987
+M 10907 1 4 o
 > act_prog p drops a skull.~
 mpforce $n jump
 ~
@@ -2678,6 +2767,7 @@ D9
 ~
 ~
 0 -1 10987
+M 10907 3 4 o
 > act_prog p bee flies in from the north.~
 if rand(80)
 mpat 10990 mpforce bee southwest
@@ -2698,6 +2788,7 @@ D6
 ~
 ~
 0 -1 10987
+M 10907 1 6 o
 S
 #10992
 The Hive~
@@ -2711,11 +2802,13 @@ D7
 ~
 ~
 0 -1 10987
+M 10907 3 6 o
 S
 #10993
 The Hive~
 ~
 0 1073741837 16 0
+M 10908 1 1 o
 S
 #10998
 The Hive~
@@ -2729,6 +2822,7 @@ D2
 ~
 ~
 0 -1 10990
+M 10907 3 3 o
 > act_prog p bee flies in from the north.~
 if rand(40)
 mpat 10998 mpforce bee south
@@ -2752,6 +2846,7 @@ D2
 ~
 ~
 0 -1 10998
+M 10907 3 2 o
 S
 #11000
 The backroom of the Hive~
@@ -2764,6 +2859,7 @@ D2
 ~
 ~
 0 -1 10999
+M 10907 3 1 o
 S
 #0
 

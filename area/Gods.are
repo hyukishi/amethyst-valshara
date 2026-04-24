@@ -758,6 +758,7 @@ the likes of as well.
 We cannot prevent violence however, and place it upon each and every person's
 head to not commit such deeds here in a place of worship.
 ~
+M 11213 3 5 T
 S
 #11214
 Church of New Hope~
@@ -781,6 +782,7 @@ D3
 ~
 ~
 0 -1 11217
+M 11213 3 4 T
 S
 #11215
 Church of New Hope, before the alter~
@@ -804,6 +806,7 @@ D3
 ~
 ~
 0 -1 11216
+M 11213 3 3 T
 S
 #11216
 Church of New Hope, donation~
@@ -818,6 +821,7 @@ D1
 ~
 ~
 0 -1 11215
+M 11213 2 3 T
 S
 #11217
 Church of New Hope~
@@ -838,6 +842,7 @@ D10
 ~
 curtain~
 526337 -1 11219
+M 11213 2 4 T
 S
 #11218
 Church of New Hope~
@@ -861,6 +866,7 @@ sign~
 Confession booth:
 Please enter through other side north, thank you.
 ~
+M 11213 2 5 T
 S
 #11219
 In the confession booth~
@@ -876,6 +882,7 @@ D10
 ~
 curtain~
 526337 -1 11218
+M 11213 1 4 o
 S
 #11220
 Priest's box~
@@ -894,6 +901,7 @@ D10
 ~
 box~
 788480 -1 11221
+M 11213 1 5 o
 S
 #11221
 Behind the alter~
@@ -908,6 +916,7 @@ D10
 ~
 box~
 526336 -1 11220
+M 11213 3 1 o
 S
 #11222
 Stepping up the alter~
@@ -925,6 +934,7 @@ D2
 ~
 ~
 2048 -1 11215
+M 11213 3 2 o
 > entry_prog 100~
 if isimmort($n)
 or class($n) == Paladin
@@ -958,6 +968,7 @@ D3
 ~
 ~
 0 -1 11292
+M 11214 3 3 I
 S
 #11271
 New Hope Public Library~
@@ -967,6 +978,7 @@ D0
 ~
 ~
 0 -1 11274
+M 11217 2 2 I
 S
 #11272
 New Hope Library: New Hope Urban Development~
@@ -976,6 +988,7 @@ D3
 ~
 ~
 0 -1 11274
+M 11217 3 1 H
 S
 #11273
 New Hope Library: History of the World~
@@ -991,6 +1004,7 @@ D1
 ~
 ~
 0 -1 11274
+M 11217 1 1 H
 S
 #11274
 New Hope Public Library~
@@ -1016,6 +1030,7 @@ D5
 ~
 stairwell~
 524288 -1 11277
+M 11217 2 1 I
 S
 #11275
 New Hope Library: Known Monsters~
@@ -1032,6 +1047,7 @@ D3
 ~
 ~
 0 -1 11277
+M 11216 3 1 H
 S
 #11276
 New Hope Library: Books on War~
@@ -1048,6 +1064,7 @@ D1
 ~
 ~
 0 -1 11277
+M 11216 1 1 H
 S
 #11277
 New Hope Public Library~
@@ -1071,6 +1088,7 @@ D4
 ~
 staircase~
 524288 -1 11274
+M 11216 2 1 I
 S
 #11278
 New Hope Library: Books on Magic~
@@ -1086,6 +1104,7 @@ D3
 ~
 ~
 0 -1 11280
+M 11216 3 2 H
 S
 #11279
 New Hope Library: Books for Newbies~
@@ -1100,6 +1119,7 @@ D1
 ~
 ~
 0 -1 11280
+M 11216 1 2 H
 S
 #11280
 New Hope Public Library~
@@ -1127,16 +1147,19 @@ D3
 ~
 ~
 0 -1 11279
+M 11216 2 2 I
 S
 #11287
 MOBILE DROP-OFF ROOM~
 ~
 0 1076895756 0 0
+M 11218 1 1 o
 S
 #11288
 MOBILE RESERVE~
 ~
 0 1076895756 1 0
+M 11219 1 1 .
 > death_prog 100~
 mpat 11288 mpforce keeper get corpse
 ~
@@ -1146,6 +1169,7 @@ S
 The tunnel~
 ~
 0 1073741828 1 0
+M 11220 1 1 .
 S
 #11290
 New Hope Inn, the center of the room~
@@ -1174,6 +1198,7 @@ D9
 ~
 ~
 0 -1 11292
+M 11214 3 2 I
 S
 #11291
 New Hope Inn~
@@ -1202,6 +1227,7 @@ D6
 ~
 ~
 0 -1 11290
+M 11214 1 2 I
 S
 #11292
 New Hope Inn~
@@ -1229,6 +1255,7 @@ D6
 ~
 ~
 0 -1 11290
+M 11214 2 3 I
 S
 #11293
 New Hope Inn~
@@ -1259,6 +1286,7 @@ You very carefully take a peek at the door behind the group of warriors.
 It's on the north wall, blocked off for the most part between the table and the
 warriors sitting at it, most of all the one on the right, the mean looking one.
 ~
+M 11214 2 2 I
 > entry_prog 50~
 if class($n) == Warrior
 mpechoat $n You are overcome with a loud ruckus coming from a single table off
@@ -1300,6 +1328,7 @@ E
 You look at the simple bar counter.  It is positioned at a diagonal from the
 north wall to the east wall of the inn.
 ~
+M 11214 2 1 I
 > entry_prog 100~
 if ispc($n)
 if mobinroom(11201) > 0
@@ -1350,6 +1379,7 @@ D7
 ~
 ~
 0 -1 11290
+M 11214 4 3 I
 S
 #11296
 New Hope Inn~
@@ -1371,6 +1401,7 @@ D5
 ~
 staircase~
 524288 -1 11295
+M 11215 1 2 I
 S
 #11297
 New Hope Inn~
@@ -1384,6 +1415,7 @@ D2
 ~
 door~
 9176065 -1 11296
+M 11215 1 1 I
 S
 #11298
 New Hope Inn~
@@ -1397,6 +1429,7 @@ D2
 ~
 door~
 9176065 -1 11299
+M 11215 2 1 I
 S
 #11299
 New Hope Inn~
@@ -1413,6 +1446,7 @@ D3
 ~
 ~
 0 -1 11296
+M 11215 2 2 I
 S
 #0
 

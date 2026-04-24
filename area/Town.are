@@ -649,6 +649,7 @@ D3
 ~
 ~
 0 -1 12634
+M 12601 6 1 +
 S
 #12602
 New Hope: Gnome Road~
@@ -666,6 +667,7 @@ D3
 ~
 ~
 0 -1 12601
+M 12601 7 1 .
 S
 #12603
 New Hope: Gnome Road~
@@ -686,6 +688,7 @@ D3
 ~
 ~
 0 -1 12602
+M 12601 8 1 .
 S
 #12604
 New Hope: Gnome Road~
@@ -703,6 +706,7 @@ D3
 ~
 ~
 0 -1 12603
+M 12601 9 1 .
 S
 #12605
 New Hope: Gnome Road~
@@ -720,6 +724,7 @@ D3
 ~
 ~
 0 -1 12604
+M 12601 10 1 .
 S
 #12606
 New Hope: Gnome Road~
@@ -737,6 +742,7 @@ D3
 ~
 ~
 0 -1 12605
+M 12601 11 1 .
 S
 #12607
 New Hope: Gnome Road~
@@ -754,6 +760,7 @@ D8
 ~
 ~
 0 -1 12609
+M 12601 12 1 .
 S
 #12608
 New Hope: Intersection of Gnome Road and Travel Street~
@@ -769,6 +776,7 @@ D3
 ~
 ~
 0 -1 12607
+M 12601 13 1 .
 S
 #12609
 New Hope: Travel Street~
@@ -790,6 +798,7 @@ D7
 ~
 ~
 0 -1 12607
+M 12601 13 2 .
 S
 #12610
 New Hope: Travel Street~
@@ -812,6 +821,7 @@ D3
 ~
 ~
 0 -1 12611
+M 12601 13 3 .
 S
 #12611
 New Hope, alleyway~
@@ -829,6 +839,7 @@ D3
 ~
 ~
 0 -1 12612
+M 12601 12 3 .
 S
 #12612
 New Hope, alleyway~
@@ -846,6 +857,7 @@ D3
 ~
 ~
 0 -1 12613
+M 12601 11 3 .
 S
 #12613
 New Hope, alleyway~
@@ -868,6 +880,7 @@ D3
 ~
 ~
 0 -1 12614
+M 12601 10 3 .
 S
 #12614
 New Hope, alleyway~
@@ -885,6 +898,7 @@ D3
 ~
 ~
 0 -1 12615
+M 12601 9 3 .
 S
 #12615
 New Hope, alleyway~
@@ -907,6 +921,7 @@ D2
 ~
 backdoor~
 3 -1 12720
+M 12601 8 3 .
 S
 #12616
 New Hope, alleyway~
@@ -924,6 +939,7 @@ D2
 ~
 ~
 0 -1 12615
+M 12601 8 2 .
 S
 #12617
 New Hope: Dagger Street~
@@ -945,6 +961,7 @@ D3
 ~
 door~
 3 -1 12707
+M 12601 6 2 .
 S
 #12618
 New Hope: Dagger Street~
@@ -961,6 +978,7 @@ D2
 ~
 ~
 0 -1 12619
+M 12601 6 3 .
 S
 #12619
 New Hope: Dagger Street~
@@ -984,6 +1002,7 @@ D3
 ~
 door~
 3 -1 12721
+M 12601 6 4 .
 S
 #12620
 New Hope: Dagger Street~
@@ -1004,6 +1023,7 @@ D2
 ~
 ~
 0 -1 12621
+M 12601 6 5 .
 S
 #12621
 New Hope: Intersection of Dragon Road and Dagger Street~
@@ -1029,6 +1049,7 @@ D3
 ~
 ~
 0 -1 12622
+M 12601 6 6 .
 S
 #12622
 New Hope: Dragon Road~
@@ -1042,6 +1063,7 @@ D3
 ~
 ~
 0 -1 12623
+M 12601 5 6 .
 S
 #12623
 New Hope: Dragon Road~
@@ -1055,6 +1077,7 @@ D3
 ~
 ~
 0 -1 12624
+M 12601 4 6 .
 S
 #12624
 New Hope: Dragon Road~
@@ -1076,6 +1099,7 @@ D3
 ~
 ~
 0 -1 12625
+M 12601 3 6 .
 S
 #12625
 New Hope: Intersection of Dwarf Street and Dragon Road~
@@ -1093,6 +1117,7 @@ D2
 ~
 ~
 0 -1 12665
+M 12601 2 6 .
 S
 #12626
 New Hope: Dwarf Street~
@@ -1106,6 +1131,7 @@ D2
 ~
 ~
 0 -1 12625
+M 12601 2 5 .
 S
 #12627
 New Hope: Dwarf Street~
@@ -1123,6 +1149,7 @@ D2
 ~
 ~
 0 -1 12626
+M 12601 2 4 .
 S
 #12628
 New Hope: Dwarf Street~
@@ -1144,6 +1171,7 @@ D2
 ~
 ~
 0 -1 12627
+M 12601 2 3 .
 S
 #12629
 New Hope: Dwarf Street~
@@ -1166,6 +1194,7 @@ D3
 ~
 door~
 3 -1 12700
+M 12601 2 2 .
 > death_prog 100~
 if mobinroom(12800) > 0
 mpat 12629 mppurge plague
@@ -1192,6 +1221,7 @@ D3
 ~
 ~
 0 -1 12631
+M 12601 2 1 .
 S
 #12631
 New Hope: Gnome Road, at a Dead End~
@@ -1204,6 +1234,7 @@ D1
 ~
 ~
 0 -1 12630
+M 12601 1 1 .
 S
 #12632
 New Hope: Gnome Road~
@@ -1225,6 +1256,7 @@ D3
 ~
 ~
 0 -1 12630
+M 12601 3 1 .
 S
 #12633
 New Hope: Gnome Road~
@@ -1246,6 +1278,7 @@ D3
 ~
 ~
 0 -1 12632
+M 12601 4 1 .
 S
 #12634
 New Hope: Gnome Road~
@@ -1263,6 +1296,7 @@ D3
 ~
 ~
 0 -1 12633
+M 12601 5 1 .
 S
 #12635
 New Hope: Dragon Road~
@@ -1280,6 +1314,7 @@ D6
 ~
 ~
 0 -1 12636
+M 12601 7 6 .
 S
 #12636
 New Hope~
@@ -1296,6 +1331,7 @@ D9
 ~
 ~
 0 -1 12635
+M 12601 8 5 ,
 S
 #12637
 New Hope: Dragon Road~
@@ -1313,6 +1349,7 @@ D3
 ~
 ~
 0 -1 12635
+M 12601 8 6 .
 S
 #12638
 New Hope: Dragon Road~
@@ -1326,6 +1363,7 @@ D3
 ~
 ~
 0 -1 12637
+M 12601 9 6 .
 S
 #12639
 New Hope: Dragon Road~
@@ -1347,6 +1385,7 @@ D3
 ~
 ~
 0 -1 12638
+M 12601 10 6 .
 S
 #12640
 New Hope: Dragon Road~
@@ -1360,6 +1399,7 @@ D3
 ~
 ~
 0 -1 12639
+M 12601 11 6 .
 S
 #12641
 New Hope: Intersection of Roc Street and Dragon Road~
@@ -1377,6 +1417,7 @@ D3
 ~
 ~
 0 -1 12640
+M 12601 12 6 .
 S
 #12642
 New Hope: Intersection of Dragon Road and Travel Street~
@@ -1390,6 +1431,7 @@ D3
 ~
 ~
 0 -1 12641
+M 12601 13 6 .
 S
 #12643
 New Hope: Travel Street~
@@ -1403,6 +1445,7 @@ D2
 ~
 ~
 0 -1 12642
+M 12601 13 5 .
 S
 #12644
 New Hope: Travel Street~
@@ -1420,6 +1463,7 @@ D3
 ~
 door~
 3 -1 12714
+M 12601 13 4 .
 S
 #12645
 New Hope: Roc Street~
@@ -1433,6 +1477,7 @@ D2
 ~
 ~
 0 -1 12646
+M 12601 12 7 .
 S
 #12646
 New Hope: Roc Street~
@@ -1446,6 +1491,7 @@ D2
 ~
 ~
 0 -1 12647
+M 12601 12 8 .
 S
 #12647
 New Hope: Roc Street~
@@ -1459,6 +1505,7 @@ D2
 ~
 ~
 0 -1 12648
+M 12601 12 9 .
 S
 #12648
 New Hope: Intersection of Golden Road and Roc Street~
@@ -1472,6 +1519,7 @@ D3
 ~
 ~
 0 -1 12649
+M 12601 12 10 .
 S
 #12649
 New Hope: Golden Road~
@@ -1485,6 +1533,7 @@ D3
 ~
 ~
 0 -1 12650
+M 12601 11 10 .
 S
 #12650
 New Hope: Golden Road~
@@ -1498,6 +1547,7 @@ D3
 ~
 ~
 0 -1 12651
+M 12601 10 10 .
 S
 #12651
 New Hope: Golden Road~
@@ -1511,6 +1561,7 @@ D3
 ~
 ~
 0 -1 12652
+M 12601 9 10 .
 S
 #12652
 New Hope: Golden Road~
@@ -1524,6 +1575,7 @@ D3
 ~
 ~
 0 -1 12653
+M 12601 8 10 .
 S
 #12653
 New Hope: Golden Road~
@@ -1541,6 +1593,7 @@ D3
 ~
 ~
 0 -1 12656
+M 12601 7 10 .
 S
 #12654
 New Hope~
@@ -1554,6 +1607,7 @@ D3
 ~
 ~
 0 -1 12655
+M 12601 7 9 .
 S
 #12655
 New Hope: Dagger Street~
@@ -1571,6 +1625,7 @@ D2
 ~
 ~
 0 -1 12656
+M 12601 6 9 .
 S
 #12656
 New Hope: Intersection of Golden Road and Dagger Street~
@@ -1588,6 +1643,7 @@ D3
 ~
 ~
 0 -1 12659
+M 12601 6 10 .
 S
 #12657
 New Hope: Dagger Street~
@@ -1605,6 +1661,7 @@ D2
 ~
 ~
 0 -1 12655
+M 12601 6 8 .
 S
 #12658
 New Hope: Dagger Street~
@@ -1622,6 +1679,7 @@ D3
 ~
 door~
 3 -1 12735
+M 12601 6 7 .
 S
 #12659
 New Hope: Golden Road~
@@ -1635,6 +1693,7 @@ D3
 ~
 ~
 0 -1 12660
+M 12601 5 10 .
 S
 #12660
 New Hope: Golden Road~
@@ -1648,6 +1707,7 @@ D3
 ~
 ~
 0 -1 12661
+M 12601 4 10 .
 S
 #12661
 New Hope: Golden Road~
@@ -1665,6 +1725,7 @@ D3
 ~
 ~
 0 -1 12662
+M 12601 3 10 .
 S
 #12662
 New Hope: Intersection of Dwarf Street and Golden Road~
@@ -1678,6 +1739,7 @@ D1
 ~
 ~
 0 -1 12661
+M 12601 2 10 .
 S
 #12663
 New Hope: Dwarf Street~
@@ -1691,6 +1753,7 @@ D2
 ~
 ~
 0 -1 12662
+M 12601 2 9 .
 S
 #12664
 New Hope: Dwarf Street~
@@ -1704,6 +1767,7 @@ D2
 ~
 ~
 0 -1 12663
+M 12601 2 8 .
 S
 #12665
 New Hope: Dwarf Street~
@@ -1717,6 +1781,7 @@ D2
 ~
 ~
 0 -1 12664
+M 12601 2 7 .
 S
 #12700
 ???~
@@ -1735,6 +1800,7 @@ D1
 ~
 door~
 262147 -1 12629
+M 12601 1 2 o
 > act_prog p drinks from the alter.~
 if ispc($n)
 if rand(25)
@@ -1793,6 +1859,7 @@ D4
 ~
 stairs~
 524288 -1 12703
+M 12601 3 2 o
 S
 #12703
 House, F2~
@@ -1802,6 +1869,7 @@ D5
 ~
 stairs~
 524288 -1 12702
+M 12602 1 1 o
 S
 #12704
 House~
@@ -1815,6 +1883,7 @@ D4
 ~
 stairs~
 524288 -1 12705
+M 12601 4 2 o
 S
 #12705
 House, F2~
@@ -1828,6 +1897,7 @@ D5
 ~
 stairs~
 524288 -1 12704
+M 12602 2 1 o
 S
 #12706
 House, attic~
@@ -1837,6 +1907,7 @@ D5
 ~
 ~
 524288 -1 12705
+M 12603 1 1 o
 S
 #12707
 House~
@@ -1849,6 +1920,7 @@ D1
 ~
 door~
 3 -1 12617
+M 12601 5 2 o
 S
 #12708
 House~
@@ -1862,6 +1934,7 @@ D4
 ~
 stairs~
 524288 -1 12709
+M 12601 9 2 o
 S
 #12709
 House, F2~
@@ -1871,6 +1944,7 @@ D5
 ~
 stairs~
 524288 -1 12708
+M 12602 7 1 o
 S
 #12710
 House~
@@ -1888,6 +1962,7 @@ D4
 ~
 stairs~
 524288 -1 12711
+M 12601 10 2 o
 S
 #12711
 House, F2~
@@ -1897,6 +1972,7 @@ D5
 ~
 stairs~
 524288 -1 12710
+M 12602 8 1 o
 S
 #12712
 J the Bartender's Home~
@@ -1910,6 +1986,7 @@ D1
 ~
 ~
 0 -1 12713
+M 12601 11 2 o
 S
 #12713
 House~
@@ -1919,6 +1996,7 @@ D3
 ~
 ~
 0 -1 12712
+M 12601 12 2 o
 S
 #12714
 House~
@@ -1936,6 +2014,7 @@ D3
 ~
 ~
 0 -1 12716
+M 12601 12 4 o
 S
 #12715
 House~
@@ -1945,6 +2024,7 @@ D0
 ~
 ~
 0 -1 12714
+M 12601 12 5 o
 S
 #12716
 House~
@@ -1954,6 +2034,7 @@ D1
 ~
 ~
 0 -1 12714
+M 12601 11 4 o
 S
 #12717
 House~
@@ -1971,6 +2052,7 @@ D4
 ~
 stairs~
 524288 -1 12719
+M 12601 10 5 o
 S
 #12718
 House~
@@ -1980,6 +2062,7 @@ D1
 ~
 ~
 0 -1 12717
+M 12601 9 5 o
 S
 #12719
 House, F2~
@@ -1989,6 +2072,7 @@ D5
 ~
 stairs~
 524288 -1 12717
+M 12602 8 4 o
 S
 #12720
 House~
@@ -2002,6 +2086,7 @@ D2
 ~
 door~
 3 -1 12636
+M 12601 8 4 o
 S
 #12721
 House~
@@ -2015,6 +2100,7 @@ D2
 ~
 ~
 0 -1 12722
+M 12601 5 4 o
 S
 #12722
 House~
@@ -2024,6 +2110,7 @@ D0
 ~
 ~
 0 -1 12721
+M 12601 5 5 o
 S
 #12723
 House~
@@ -2042,6 +2129,7 @@ D3
 ~
 door~
 3 -1 12628
+M 12601 3 3 o
 S
 #12724
 House~
@@ -2053,6 +2141,7 @@ D3
 ~
 door~
 1 -1 12723
+M 12601 4 3 o
 S
 #12725
 House~
@@ -2066,6 +2155,7 @@ D4
 ~
 stairs~
 524288 -1 12726
+M 12601 3 4 o
 S
 #12726
 House~
@@ -2075,6 +2165,7 @@ D5
 ~
 stairs~
 524288 -1 12725
+M 12602 1 3 o
 S
 #12727
 House~
@@ -2088,6 +2179,7 @@ D2
 ~
 door~
 3 -1 12624
+M 12601 3 5 o
 S
 #12728
 House~
@@ -2101,6 +2193,7 @@ D4
 ~
 stairs~
 524288 -1 12730
+M 12601 4 5 o
 S
 #12729
 House~
@@ -2110,6 +2203,7 @@ D1
 ~
 ~
 0 -1 12730
+M 12602 1 4 o
 S
 #12730
 House~
@@ -2123,6 +2217,7 @@ D5
 ~
 stairs~
 524288 -1 12728
+M 12602 2 4 o
 S
 #12731
 House~
@@ -2140,6 +2235,7 @@ D2
 ~
 ~
 0 -1 12732
+M 12601 3 7 o
 S
 #12732
 House~
@@ -2149,6 +2245,7 @@ D0
 ~
 ~
 0 -1 12731
+M 12601 3 8 o
 S
 #12733
 House~
@@ -2162,6 +2259,7 @@ D3
 ~
 ~
 0 -1 12731
+M 12601 4 7 o
 S
 #12734
 House~
@@ -2171,6 +2269,7 @@ D0
 ~
 ~
 0 -1 12733
+M 12601 4 8 o
 S
 #12735
 House~
@@ -2184,6 +2283,7 @@ D4
 ~
 stairs~
 524288 -1 12736
+M 12601 5 7 o
 S
 #12736
 House~
@@ -2193,6 +2293,7 @@ D5
 ~
 stairs~
 524288 -1 12735
+M 12602 3 6 o
 S
 #12737
 House~
@@ -2206,6 +2307,7 @@ D3
 ~
 door~
 3 -1 12657
+M 12601 7 8 o
 S
 #12738
 House~
@@ -2215,6 +2317,7 @@ D3
 ~
 ~
 0 -1 12737
+M 12601 8 8 o
 S
 #12739
 The Applevender's Home~
@@ -2233,6 +2336,7 @@ E
 'south'~
 blah
 ~
+M 12601 10 7 o
 S
 #12740
 Mask Shop~
@@ -2250,6 +2354,7 @@ D4
 ~
 stairs~
 524288 -1 12741
+M 12601 3 9 $
 S
 #12741
 Mask Shop, F2~
@@ -2261,6 +2366,7 @@ D5
 ~
 stairs~
 524288 -1 12740
+M 12602 1 8 $
 S
 #12742
 Cozy House~
@@ -2275,11 +2381,13 @@ D0
 ~
 door~
 3 -1 12637
+M 12601 8 7 o
 S
 #12800
 Floating in a void~
 ~
 0 1073741828 1 0
+M 12604 1 1 .
 S
 #0
 

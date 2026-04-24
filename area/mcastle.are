@@ -110,6 +110,7 @@ D3
 ~
 ~
 0 -1 12307
+M 12301 4 3 #
 S
 #12302
 Along the outer sides of the Mountain Castle~
@@ -128,6 +129,7 @@ D3
 ~
 ~
 0 -1 12301
+M 12301 5 3 #
 S
 #12303
 Pathway around the Mountain Castle~
@@ -147,6 +149,7 @@ D3
 ~
 ~
 0 -1 12302
+M 12301 6 3 #
 S
 #12304
 Pathway around the Mountain Castle~
@@ -165,6 +168,7 @@ D3
 ~
 ~
 0 -1 12303
+M 12301 7 3 #
 S
 #12305
 Pathway around the Mountain Castle~
@@ -185,6 +189,7 @@ D2
 ~
 ~
 0 -1 12304
+M 12301 7 2 #
 S
 #12306
 Pathway around the Mountain Castle~
@@ -202,6 +207,7 @@ D2
 ~
 ~
 0 -1 12305
+M 12301 7 1 #
 S
 #12307
 Along the outer sides of the Mountain Castle~
@@ -222,6 +228,7 @@ D3
 ~
 ~
 0 -1 12308
+M 12301 3 3 #
 S
 #12308
 Along the outer sides of the Mountain Castle~
@@ -241,6 +248,7 @@ D3
 ~
 ~
 0 -1 12309
+M 12301 2 3 #
 S
 #12309
 Pathway around the Mountain Castle~
@@ -255,6 +263,7 @@ D1
 ~
 ~
 0 -1 12308
+M 12301 1 3 #
 S
 #12310
 Ascending a trail up the mountains~
@@ -273,6 +282,7 @@ D4
 ~
 ~
 100665344 -1 12396
+M 12302 4 1 .
 S
 #12311
 A winding trail~
@@ -296,6 +306,7 @@ D8
 ~
 ~
 0 -1 12312
+M 12302 4 2 .
 S
 #12312
 Walking down a winding trail~
@@ -315,6 +326,7 @@ D9
 ~
 ~
 0 -1 12313
+M 12302 5 3 .
 S
 #12313
 Walking down a winding trail~
@@ -334,6 +346,7 @@ D8
 ~
 ~
 0 -1 12314
+M 12302 4 4 .
 S
 #12314
 A bend in the trail~
@@ -354,6 +367,7 @@ D9
 ~
 ~
 0 -1 12315
+M 12302 5 5 .
 S
 #12315
 Coming around the bend in the trail~
@@ -372,6 +386,7 @@ D6
 ~
 ~
 0 -1 12314
+M 12302 4 6 .
 S
 #12316
 Behind a mound of rocks~
@@ -392,6 +407,7 @@ D3
 ~
 ~
 0 -1 12317
+M 12302 3 6 o
 S
 #12317
 A path through the mountain~
@@ -411,6 +427,7 @@ D9
 ~
 ~
 0 -1 12318
+M 12302 2 6 .
 S
 #12318
 Off the mountain trail~
@@ -433,6 +450,7 @@ D8
 ~
 ~
 0 -1 12320
+M 12302 1 7 .
 S
 #12319
 Standing at the mountainside~
@@ -451,6 +469,7 @@ D4
 ~
 ~
 64 -1 12321
+M 12302 1 8 o
 S
 #12320
 Straying from the trail~
@@ -464,6 +483,7 @@ D7
 ~
 ~
 0 -1 12318
+M 12302 2 8 .
 S
 #12321
 Up the mountainside~
@@ -478,6 +498,7 @@ D5
 ~
 ~
 0 -1 12319
+M 12303 1 8 o
 S
 #12322
 Standing at a ledge~
@@ -503,6 +524,7 @@ D8
 ~
 ~
 0 -1 12325
+M 12304 1 1 o
 S
 #12323
 At a small cave~
@@ -530,6 +552,7 @@ D6
 ~
 ~
 0 -1 12326
+M 12304 1 2 o
 S
 #12324
 In a small cave~
@@ -545,6 +568,7 @@ D0
 ~
 ~
 0 -1 12323
+M 12304 1 3 o
 S
 #12325
 On the mountain ledge~
@@ -568,6 +592,7 @@ D7
 ~
 ~
 0 -1 12322
+M 12304 2 2 o
 S
 #12326
 On the mountain ledge~
@@ -595,6 +620,7 @@ D9
 ~
 ~
 0 -1 12323
+M 12304 2 1 o
 S
 #12327
 Walking a narrow trail~
@@ -615,6 +641,7 @@ D8
 ~
 ~
 0 -1 12328
+M 12304 3 2 .
 S
 #12328
 On the narrow trail~
@@ -636,6 +663,7 @@ D7
 ~
 ~
 0 -1 12327
+M 12304 4 3 .
 S
 #12329
 Upon the cliffside trail~
@@ -656,6 +684,7 @@ D2
 ~
 ~
 0 -1 12330
+M 12304 4 4 .
 S
 #12330
 Meeting of the trail and a winding path~
@@ -674,6 +703,7 @@ D9
 ~
 ~
 0 -1 12331
+M 12304 4 5 .
 S
 #12331
 Upon a winding path~
@@ -693,6 +723,7 @@ D7
 ~
 ~
 0 -1 12332
+M 12304 3 6 .
 S
 #12332
 A winding pathway~
@@ -714,6 +745,7 @@ D8
 ~
 ~
 0 -1 12331
+M 12304 2 5 .
 S
 #12333
 A winding pathway~
@@ -724,6 +756,7 @@ D1
 ~
 ~
 0 -1 12332
+M 12304 1 5 .
 S
 #12384
 Sky: 4,4~
@@ -747,6 +780,7 @@ D7
 ~
 ~
 0 -1 12389
+M 12303 4 4 o
 S
 #12385
 Sky: 4,3~
@@ -778,6 +812,7 @@ D7
 ~
 ~
 0 -1 12390
+M 12303 3 4 o
 S
 #12386
 Sky: 4,2~
@@ -809,6 +844,7 @@ D7
 ~
 ~
 0 -1 12391
+M 12303 2 4 o
 S
 #12387
 Sky: 4,1~
@@ -832,6 +868,7 @@ D6
 ~
 ~
 0 -1 12390
+M 12303 1 4 o
 S
 #12388
 Sky: 3,4~
@@ -863,6 +900,7 @@ D9
 ~
 ~
 0 -1 12385
+M 12303 4 3 o
 S
 #12389
 Sky: 3,3~
@@ -906,6 +944,7 @@ D9
 ~
 ~
 0 -1 12386
+M 12303 3 3 o
 S
 #12390
 Sky: 3,2~
@@ -949,6 +988,7 @@ D9
 ~
 ~
 0 -1 12387
+M 12303 2 3 o
 S
 #12391
 Sky: 3,1~
@@ -980,6 +1020,7 @@ D8
 ~
 ~
 0 -1 12386
+M 12303 1 3 o
 S
 #12392
 Sky: 2,4~
@@ -1011,6 +1052,7 @@ D9
 ~
 ~
 0 -1 12389
+M 12303 4 2 o
 S
 #12393
 Sky: 2,3~
@@ -1054,6 +1096,7 @@ D9
 ~
 ~
 0 -1 12390
+M 12303 3 2 o
 S
 #12394
 Sky: 2,2~
@@ -1097,6 +1140,7 @@ D9
 ~
 ~
 0 -1 12391
+M 12303 2 2 o
 S
 #12395
 Sky: 2,1~
@@ -1128,6 +1172,7 @@ D8
 ~
 ~
 0 -1 12390
+M 12303 1 2 o
 S
 #12396
 Sky: 1,4~
@@ -1155,6 +1200,7 @@ D9
 ~
 ~
 0 -1 12393
+M 12303 4 1 o
 S
 #12397
 Sky: 1,3~
@@ -1186,6 +1232,7 @@ D9
 ~
 ~
 0 -1 12394
+M 12303 3 1 o
 S
 #12398
 Sky: 1,2~
@@ -1217,6 +1264,7 @@ D9
 ~
 ~
 0 -1 12395
+M 12303 2 1 o
 S
 #12399
 Sky: 1,1~
@@ -1240,12 +1288,14 @@ D8
 ~
 ~
 0 -1 12394
+M 12303 1 1 o
 S
 #12400
 Floating in a void~
 ~
 ~
 0 1073741828 1 0
+M 12305 1 1 o
 S
 #0
 

@@ -1074,6 +1074,7 @@ D2
 ~
 gate~
 655361 -1 12403
+M 12503 6 17 +
 S
 #12503
 North Garden~
@@ -1092,6 +1093,7 @@ D6
 ~
 ~
 0 -1 12504
+M 12503 6 16 o
 S
 #12504
 North Garden~
@@ -1111,6 +1113,7 @@ D9
 ~
 ~
 0 -1 12503
+M 12503 7 15 o
 S
 #12505
 North Garden Plaza~
@@ -1134,6 +1137,7 @@ D9
 ~
 ~
 0 -1 12504
+M 12503 8 14 o
 S
 #12506
 North Garden~
@@ -1147,6 +1151,7 @@ D3
 ~
 ~
 0 -1 12505
+M 12503 9 14 o
 S
 #12507
 North Garden~
@@ -1164,6 +1169,7 @@ D8
 ~
 ~
 0 -1 12505
+M 12503 7 13 o
 S
 #12508
 North Garden~
@@ -1182,6 +1188,7 @@ D9
 ~
 ~
 0 -1 12507
+M 12503 8 12 o
 S
 #12509
 North Garden~
@@ -1201,6 +1208,7 @@ D8
 ~
 ~
 0 -1 12508
+M 12503 7 11 o
 S
 #12510
 North Garden~
@@ -1222,6 +1230,7 @@ D8
 ~
 ~
 0 -1 12509
+M 12503 6 10 o
 S
 #12511
 At New Hope Castle~
@@ -1253,6 +1262,7 @@ D5
 ~
 ~
 4096 -1 12599
+M 12503 7 9 #
 > act_prog p A castle guard arrives from the north.~
 mpforce guard north
 ~
@@ -1277,6 +1287,7 @@ D2
 ~
 ~
 4096 -1 12511
+M 12503 7 8 #
 S
 #12513
 New Hope Castle~
@@ -1297,6 +1308,7 @@ D2
 ~
 ~
 0 -1 12512
+M 12503 7 7 #
 S
 #12514
 New Hope Castle~
@@ -1316,6 +1328,7 @@ D2
 ~
 ~
 0 -1 12513
+M 12503 7 6 #
 S
 #12515
 New Hope Castle~
@@ -1337,6 +1350,7 @@ D2
 ~
 ~
 0 -1 12514
+M 12503 7 5 #
 S
 #12516
 New Hope Castle~
@@ -1355,6 +1369,7 @@ D2
 ~
 ~
 0 -1 12515
+M 12503 7 4 #
 S
 #12517
 New Hope Castle~
@@ -1386,6 +1401,7 @@ D3
 ~
 ~
 0 -1 12518
+M 12503 7 3 #
 S
 #12518
 New Hope Castle~
@@ -1408,6 +1424,7 @@ D3
 ~
 ~
 0 -1 12519
+M 12503 6 3 #
 S
 #12519
 New Hope Castle~
@@ -1428,6 +1445,7 @@ D2
 ~
 ~
 0 -1 12520
+M 12503 5 3 #
 S
 #12520
 New Hope Castle~
@@ -1448,6 +1466,7 @@ D3
 ~
 door~
 1 -1 12524
+M 12503 5 4 #
 S
 #12521
 New Hope Castle~
@@ -1466,6 +1485,7 @@ D2
 ~
 door~
 8389671 12592 12517
+M 12503 7 2 #
 S
 #12522
 New Hope Castle~
@@ -1490,6 +1510,7 @@ D4
 ~
 ~
 0 -1 12523
+M 12503 7 1 #
 S
 #12523
 New Hope Castle~
@@ -1514,6 +1535,7 @@ E
 The name "Max" has been scratched into the stone, a little lower then
 waist-high.
 ~
+M 12504 1 1 #
 S
 #12524
 New Hope Castle~
@@ -1531,6 +1553,7 @@ D3
 ~
 ~
 0 -1 12525
+M 12503 4 4 #
 > act_prog p The cook arrives from the west.~
 force cook west
 mpat 12524 mpforce cook west
@@ -1562,6 +1585,7 @@ D9
 ~
 ~
 0 -1 12528
+M 12503 3 4 #
 > act_prog p A castle guard arrives from the east.~
 mpat 12525 mpforce guard east
 ~
@@ -1587,6 +1611,7 @@ D9
 ~
 ~
 0 -1 12527
+M 12503 2 3 #
 S
 #12527
 New Hope Castle, Kitchen~
@@ -1607,6 +1632,7 @@ D8
 ~
 ~
 0 -1 12528
+M 12503 1 4 #
 S
 #12528
 New Hope Castle, Kitchen~
@@ -1621,6 +1647,7 @@ D7
 ~
 ~
 0 -1 12527
+M 12503 2 5 #
 S
 #12529
 New Hope Castle, Staircase room~
@@ -1639,6 +1666,7 @@ D5
 ~
 ~
 0 -1 12523
+M 12505 1 1 #
 S
 #12530
 The Pantry~
@@ -1655,6 +1683,7 @@ D2
 ~
 door~
 7 12591 12526
+M 12503 2 2 o
 S
 #12531
 New Hope Castle~
@@ -1674,6 +1703,7 @@ D2
 ~
 ~
 0 -1 12532
+M 12505 1 2 #
 S
 #12532
 New Hope Castle~
@@ -1696,6 +1726,7 @@ D2
 ~
 ~
 0 -1 12533
+M 12505 1 3 #
 S
 #12533
 New Hope Castle~
@@ -1706,6 +1737,7 @@ D0
 ~
 ~
 0 -1 12532
+M 12505 1 4 #
 S
 #12534
 New Hope Castle~
@@ -1727,6 +1759,7 @@ D3
 ~
 ~
 0 -1 12517
+M 12503 8 3 #
 S
 #12535
 New Hope Castle~
@@ -1748,6 +1781,7 @@ D3
 ~
 ~
 0 -1 12534
+M 12503 9 3 #
 S
 #12536
 New Hope Castle~
@@ -1771,6 +1805,7 @@ D2
 ~
 ~
 0 -1 12542
+M 12503 9 4 #
 S
 #12537
 New Hope Bank~
@@ -1790,6 +1825,7 @@ D3
 ~
 door~
 8651809 12592 12536
+M 12503 10 4 o
 S
 #12538
 New Hope Bank~
@@ -1807,6 +1843,7 @@ D4
 ~
 ~
 0 -1 12539
+M 12503 11 4 o
 S
 #12539
 New Hope Bank~
@@ -1829,6 +1866,7 @@ D5
 ~
 ~
 0 -1 12538
+M 12504 5 4 o
 S
 #12540
 New Hope Bank~
@@ -1850,6 +1888,7 @@ D3
 ~
 ~
 0 -1 12539
+M 12504 6 4 o
 S
 #12541
 New Hope Bank, Messaging Center~
@@ -1861,6 +1900,7 @@ D1
 ~
 ~
 0 -1 12539
+M 12504 4 4 o
 S
 #12542
 New Hope Castle~
@@ -1886,6 +1926,7 @@ D2
 E
 sign~
 ~
+M 12503 9 5 #
 S
 #12543
 New Hope Castle~
@@ -1905,6 +1946,7 @@ D8
 ~
 ~
 0 -1 12544
+M 12503 10 5 #
 S
 #12544
 New Hope Castle~
@@ -1923,6 +1965,7 @@ D8
 ~
 ~
 0 -1 12545
+M 12503 11 6 #
 S
 #12545
 New Hope Castle, Laboratory~
@@ -1941,6 +1984,7 @@ D7
 ~
 ~
 262144 -1 12544
+M 12503 12 7 #
 S
 #12546
 New Hope Castle, Bedroom~
@@ -1956,6 +2000,7 @@ D3
 ~
 door~
 3 -1 12532
+M 12505 2 3 #
 S
 #12547
 New Hope Castle~
@@ -1972,6 +2017,7 @@ D2
 ~
 ~
 0 -1 12548
+M 12503 9 6 #
 S
 #12548
 New Hope Castle~
@@ -1982,6 +2028,7 @@ D0
 ~
 ~
 0 -1 12547
+M 12503 9 7 #
 S
 #12594
 The Moat~
@@ -1999,6 +2046,7 @@ D9
 ~
 ~
 0 -1 12595
+M 12502 2 2 o
 S
 #12595
 The Moat~
@@ -2020,6 +2068,7 @@ D6
 ~
 ~
 0 -1 12594
+M 12502 1 1 o
 S
 #12596
 The Moat~
@@ -2043,6 +2092,7 @@ D4
 ~
 ~
 2112 -1 12510
+M 12502 1 3 o
 S
 #12597
 The Moat~
@@ -2066,6 +2116,7 @@ D4
 ~
 ~
 2112 -1 12510
+M 12502 2 1 o
 S
 #12598
 The Moat~
@@ -2089,6 +2140,7 @@ D4
 ~
 ~
 2112 -1 12510
+M 12502 2 3 o
 S
 #12599
 The Moat~
@@ -2107,12 +2159,14 @@ D4
 ~
 ~
 2112 -1 12510
+M 12502 3 1 o
 S
 #12600
 Floating in a void~
 ~
 ~
 0 4 1 0
+M 12506 1 1 o
 S
 #0
 

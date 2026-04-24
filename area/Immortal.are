@@ -588,6 +588,7 @@ D5
 ~
 ~
 0 -1 10207
+M 10203 1 1 o
 S
 #10202
 Messageboard Room of Immortals~
@@ -599,6 +600,7 @@ D1
 ~
 ~
 0 -1 10208
+M 10202 1 1 o
 S
 #10203
 Coder's Sanctum~
@@ -613,6 +615,7 @@ D8
 ~
 ~
 0 -1 10208
+M 10202 2 1 o
 S
 #10204
 High upon Mount Olympus~
@@ -663,6 +666,7 @@ gate~
    jgs|- ||  |  |  | ||:::::::::::::::::::::|| |  |  |  ||- |  | 
  ---------`````````````````````````````````````````````````---------
 ~
+M 10201 1 1 o
 S
 #10205
 Temple of the Gods~
@@ -688,6 +692,7 @@ D5
 ~
 ~
 0 -1 10204
+M 10202 3 3 T
 S
 #10206
 Temple of the Gods~
@@ -710,6 +715,7 @@ D7
 ~
 ~
 0 -1 10208
+M 10202 4 3 T
 S
 #10207
 Temple of the Gods~
@@ -759,6 +765,7 @@ Kortimbar:Kortimbar's room
 Llanos   :Llanos' Chilling room
 Morgoth  :The Lord of Darkness, Morgoth's Room
 ~
+M 10202 2 3 T
 S
 #10208
 Immortal Lounge~
@@ -800,6 +807,7 @@ D9
 ~
 ~
 0 -1 10207
+M 10202 3 2 o
 S
 #10209
 Discussion room~
@@ -814,6 +822,7 @@ D3
 ~
 door~
 8651809 -1 10208
+M 10202 4 2 o
 S
 #10210
 Immortal Request Board Room~
@@ -825,6 +834,7 @@ D9
 ~
 door~
 8651809 -1 10208
+M 10202 4 1 o
 S
 #10211
 Immortal Lounge, at the bar~
@@ -838,6 +848,7 @@ D2
 ~
 ~
 0 -1 10208
+M 10202 3 1 o
 S
 #10212
 The court jester's room~
@@ -849,6 +860,7 @@ D5
 ~
 ~
 0 -1 10207
+M 10202 1 2 o
 S
 #10213
 Kortimbar's room~
@@ -864,6 +876,7 @@ D5
 ~
 ~
 0 -1 10207
+M 10202 1 4 o
 S
 #10214
 Llanos' Chilling room~
@@ -878,6 +891,7 @@ D5
 ~
 ~
 0 -1 10207
+M 10202 2 2 o
 S
 #10215
 The Lord of Darkness, Morgoth's Room~
@@ -888,6 +902,7 @@ D5
 ~
 ~
 0 -1 10207
+M 10202 2 4 o
 S
 #10216
 Floating in a void~
@@ -896,12 +911,14 @@ Daikini...come see me when you get on
 ~
 ~
 0 1073741828 1 0
+M 10204 1 1 o
 S
 #10300
 Floating in a void~
 ~
 ~
 0 1073741828 1 0
+M 10205 1 1 o
 S
 #0
 

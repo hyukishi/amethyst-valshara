@@ -1809,6 +1809,7 @@ a road
 ~
 ~
 0 -1 40001
+M 40000 1 1 .
 S
 #40001
 A Mountain Road~
@@ -1827,6 +1828,7 @@ a road
 ~
 ~
 0 -1 40000
+M 40001 1 1 .
 S
 #40002
 A Mountain Road~
@@ -1855,6 +1857,7 @@ directly from the game and credit should be given to Matel Electronics and TSR.
 The city/village is from Scourge, summer 1996.  Some mob ideas are from TSR's
 Monstrous Manual, copyright 1993, TSR, Inc.
 ~
+M 40002 1 1 .
 S
 #40003
 A Mountain Road~
@@ -1873,6 +1876,7 @@ a road
 ~
 ~
 0 -1 40002
+M 40003 1 1 .
 S
 #40004
 A Mountain Path~
@@ -1892,6 +1896,7 @@ a road
 ~
 ~
 0 -1 40003
+M 40004 1 1 .
 S
 #40005
 Before the City of Cloudy Mountain~
@@ -1913,6 +1918,7 @@ a road
 ~
 ~
 0 -1 40004
+M 40005 1 1 ^
 S
 #40006
 The Court~
@@ -1937,6 +1943,7 @@ along south wall
 ~
 ~
 0 -1 40020
+M 40006 1 1 .
 S
 #40007
 The Court~
@@ -1967,6 +1974,7 @@ the court
 ~
 ~
 0 -1 40006
+M 40007 1 1 .
 S
 #40008
 The Court~
@@ -1992,6 +2000,7 @@ the court
 ~
 ~
 0 -1 40007
+M 40008 1 1 .
 S
 #40009
 The Court~
@@ -2019,6 +2028,7 @@ E
 houses town~
 These houses are big, very big.  
 ~
+M 40009 1 1 .
 S
 #40010
 The Court~
@@ -2047,6 +2057,7 @@ the court
 ~
 ~
 0 -1 40009
+M 40010 1 1 .
 S
 #40011
 The Court~
@@ -2070,6 +2081,7 @@ the court
 ~
 ~
 0 -1 40010
+M 40011 1 1 .
 S
 #40012
 The Court~
@@ -2094,6 +2106,7 @@ the court
 ~
 ~
 0 -1 40009
+M 40012 1 1 .
 S
 #40013
 The Court~
@@ -2122,6 +2135,7 @@ the court
 ~
 ~
 0 -1 40012
+M 40013 1 1 .
 S
 #40014
 The Court~
@@ -2152,6 +2166,7 @@ the court
 ~
 ~
 0 -1 40013
+M 40014 1 1 .
 S
 #40015
 The Court~
@@ -2175,6 +2190,7 @@ the court
 ~
 ~
 0 -1 40012
+M 40015 1 1 .
 S
 #40016
 The Court~
@@ -2202,6 +2218,7 @@ the court
 ~
 ~
 0 -1 40015
+M 40016 1 1 .
 S
 #40017
 The Court~
@@ -2227,6 +2244,7 @@ the court
 ~
 ~
 0 -1 40016
+M 40017 1 1 .
 S
 #40018
 The Court~
@@ -2256,6 +2274,7 @@ a dark alley
 ~
 ~
 0 -1 40021
+M 40018 1 1 .
 S
 #40019
 The Court~
@@ -2286,6 +2305,7 @@ the court
 ~
 ~
 0 -1 40018
+M 40019 1 1 .
 S
 #40020
 The Court~
@@ -2315,6 +2335,7 @@ the court
 ~
 ~
 0 -1 40019
+M 40020 1 1 .
 S
 #40021
 The Court~
@@ -2338,6 +2359,7 @@ the court
 ~
 ~
 0 -1 40018
+M 40021 1 1 .
 S
 #40022
 The Court~
@@ -2365,6 +2387,7 @@ the court
 ~
 ~
 0 -1 40021
+M 40022 1 1 .
 S
 #40023
 The Court~
@@ -2387,6 +2410,7 @@ the court
 ~
 ~
 0 -1 40022
+M 40023 1 1 .
 S
 #40024
 The Court~
@@ -2404,6 +2428,7 @@ the court
 ~
 ~
 0 -1 40021
+M 40024 1 1 .
 S
 #40025
 Drakknor's Home~
@@ -2418,6 +2443,7 @@ the court
 ~
 ~
 0 -1 40022
+M 40025 1 1 o
 S
 #40026
 The Court~
@@ -2436,6 +2462,7 @@ the court
 ~
 ~
 0 -1 40023
+M 40026 1 1 .
 S
 #40027
 The Court~
@@ -2459,6 +2486,7 @@ the court
 ~
 ~
 0 -1 40024
+M 40027 1 1 .
 S
 #40028
 The Court~
@@ -2486,6 +2514,7 @@ a grate
 ~
 grate do~
 3 -1 40043
+M 40028 1 1 .
 S
 #40029
 The Court~
@@ -2508,6 +2537,7 @@ the court
 ~
 ~
 0 -1 40028
+M 40029 1 1 .
 S
 #40030
 The Court~
@@ -2530,6 +2560,7 @@ along the north wall
 ~
 ~
 0 -1 40097
+M 40030 1 1 .
 S
 #40031
 Before the Palace~
@@ -2568,6 +2599,7 @@ crest~
 A black mountain on a red background with two winged dragons crawling up both
 sides.
 ~
+M 40031 1 1 .
 S
 #40032
 The Court~
@@ -2591,6 +2623,7 @@ the court
 ~
 ~
 0 -1 40031
+M 40032 1 1 .
 S
 #40033
 Narz's Chamber~
@@ -2604,6 +2637,7 @@ the palace
 ~
 ~
 0 -1 40034
+M 40033 1 1 o
 S
 #40034
 The Palace~
@@ -2633,6 +2667,7 @@ Narz's chamber
 ~
 ~
 0 -1 40034
+M 40034 1 1 o
 S
 #40035
 Fred's Room~
@@ -2646,6 +2681,7 @@ the palace
 ~
 ~
 0 -1 40034
+M 40035 1 1 o
 S
 #40036
 Zonk's Bedroom~
@@ -2657,6 +2693,7 @@ the palace
 ~
 ~
 0 -1 40037
+M 40036 1 1 o
 S
 #40037
 The Palace~
@@ -2685,6 +2722,7 @@ Zonk's bedroom
 ~
 ~
 0 -1 40036
+M 40037 1 1 o
 S
 #40038
 Zilch's Pad~
@@ -2697,6 +2735,7 @@ the palace
 ~
 ~
 0 -1 40037
+M 40038 1 1 o
 S
 #40039
 The King's Throne Room~
@@ -2710,6 +2749,7 @@ the waiting room
 ~
 ~
 0 -1 40040
+M 40039 1 1 o
 S
 #40040
 The Waiting Room~
@@ -2738,6 +2778,7 @@ the King's throne room
 ~
 ~
 0 -1 40039
+M 40040 1 1 o
 S
 #40041
 The Queen's Bedroom~
@@ -2753,6 +2794,7 @@ the waiting room
 ~
 ~
 0 -1 40040
+M 40041 1 1 o
 S
 #40042
 A Secret Room~
@@ -2771,6 +2813,7 @@ a cave
 ~
 ~
 3 -1 40152
+M 40042 1 1 o
 S
 #40043
 A Dark Room~
@@ -2793,6 +2836,7 @@ North of Here Waits Certain
           Death.  Many Have Fallen
           To This Horrible Monster.
 ~
+M 40043 1 1 o
 S
 #40044
 The Lag Monster's Lair~
@@ -2805,6 +2849,7 @@ a room
 ~
 ~
 0 -1 40043
+M 40044 1 1 o
 S
 #40045
 The North Wall~
@@ -2823,6 +2868,7 @@ the court
 ~
 ~
 0 -1 40032
+M 40045 1 1 #
 S
 #40046
 The North Wall~
@@ -2841,6 +2887,7 @@ the north wall
 ~
 ~
 0 -1 40045
+M 40046 1 1 #
 S
 #40047
 The North Wall~
@@ -2859,6 +2906,7 @@ along north wall
 ~
 ~
 0 -1 40046
+M 40047 1 1 #
 S
 #40048
 The North Wall~
@@ -2882,6 +2930,7 @@ along north wall
 ~
 ~
 0 -1 40047
+M 40048 1 1 #
 S
 #40049
 The North Wall~
@@ -2900,6 +2949,7 @@ the north wall
 ~
 ~
 0 -1 40048
+M 40049 1 1 #
 S
 #40050
 The North Wall~
@@ -2919,6 +2969,7 @@ the north wall
 ~
 ~
 0 -1 40049
+M 40050 1 1 #
 S
 #40051
 The Northeast Corner~
@@ -2941,6 +2992,7 @@ the northeast tower
 ~
 ~
 0 -1 40052
+M 40051 1 1 .
 S
 #40052
 The Northeast Tower~
@@ -2955,6 +3007,7 @@ back to the village
 ~
 ~
 0 -1 40051
+M 40052 1 1 #
 S
 #40053
 The East Wall~
@@ -2973,6 +3026,7 @@ the east wall
 ~
 ~
 0 -1 40054
+M 40053 1 1 #
 S
 #40054
 The East Wall~
@@ -2991,6 +3045,7 @@ the east wall
 ~
 ~
 0 -1 40055
+M 40054 1 1 #
 S
 #40055
 The East Wall~
@@ -3009,6 +3064,7 @@ an intersection
 ~
 ~
 0 -1 40056
+M 40055 1 1 #
 S
 #40056
 An Intersection~
@@ -3032,6 +3088,7 @@ a dark alley
 ~
 ~
 0 -1 40190
+M 40056 1 1 .
 S
 #40057
 The East Wall~
@@ -3054,6 +3111,7 @@ a home
 ~
 ~
 0 -1 40058
+M 40057 1 1 #
 S
 #40058
 A Home~
@@ -3066,6 +3124,7 @@ the east wall
 ~
 ~
 0 -1 40057
+M 40058 1 1 o
 S
 #40059
 The East Wall~
@@ -3083,6 +3142,7 @@ along the east wall
 ~
 ~
 0 -1 40060
+M 40059 1 1 #
 S
 #40060
 The East Wall~
@@ -3101,6 +3161,7 @@ the southeast corner
 ~
 ~
 0 -1 40061
+M 40060 1 1 #
 S
 #40061
 The Southeast Corner~
@@ -3123,6 +3184,7 @@ the southeast tower
 ~
 ~
 0 -1 40062
+M 40061 1 1 .
 S
 #40062
 The Southeast Tower~
@@ -3135,6 +3197,7 @@ back to the village
 ~
 ~
 0 -1 40061
+M 40062 1 1 #
 S
 #40063
 The South Wall~
@@ -3153,6 +3216,7 @@ The south wall
 ~
 ~
 0 -1 40064
+M 40063 1 1 #
 S
 #40064
 The South Wall~
@@ -3171,6 +3235,7 @@ along south wall
 ~
 ~
 0 -1 40065
+M 40064 1 1 #
 S
 #40065
 The South Wall~
@@ -3189,6 +3254,7 @@ along south wall
 ~
 ~
 0 -1 40066
+M 40065 1 1 #
 S
 #40066
 The South Wall~
@@ -3207,6 +3273,7 @@ along south wall
 ~
 ~
 0 -1 40067
+M 40066 1 1 #
 S
 #40067
 The South Wall~
@@ -3225,6 +3292,7 @@ the south wall
 ~
 ~
 0 -1 40068
+M 40067 1 1 #
 S
 #40068
 The South Wall~
@@ -3243,6 +3311,7 @@ the court
 ~
 ~
 0 -1 40008
+M 40068 1 1 #
 S
 #40069
 A Noble's Home~
@@ -3255,6 +3324,7 @@ the court
 ~
 ~
 0 -1 40014
+M 40069 1 1 o
 S
 #40070
 A Dark Alley~
@@ -3271,6 +3341,7 @@ the court
 ~
 ~
 0 -1 40020
+M 40070 1 1 .
 S
 #40071
 The East Market Square~
@@ -3295,6 +3366,7 @@ a dark alley
 ~
 ~
 0 -1 40070
+M 40071 1 1 $
 S
 #40072
 The East Market Square~
@@ -3318,6 +3390,7 @@ east market
 ~
 ~
 0 -1 40071
+M 40072 1 1 $
 S
 #40073
 The East Market Square~
@@ -3336,6 +3409,7 @@ east market
 ~
 ~
 0 -1 40072
+M 40073 1 1 $
 S
 #40074
 The East Market Square~
@@ -3364,6 +3438,7 @@ east market
 ~
 ~
 0 -1 40073
+M 40074 1 1 $
 S
 #40075
 Warrior's Guild~
@@ -3381,6 +3456,7 @@ warrior guild
 ~
 ~
 0 -1 40074
+M 40075 1 1 H
 S
 #40076
 The Warrior Guild~
@@ -3398,6 +3474,7 @@ warrior guild
 ~
 ~
 0 -1 40075
+M 40076 1 1 H
 S
 #40077
 Baz Chamber~
@@ -3408,6 +3485,7 @@ Warrior guild
 ~
 ~
 0 -1 40076
+M 40077 1 1 o
 S
 #40078
 A Citizen's Home~
@@ -3420,6 +3498,7 @@ the north wall
 ~
 ~
 0 -1 40048
+M 40078 1 1 o
 S
 #40079
 The East Market Square~
@@ -3443,6 +3522,7 @@ east market
 ~
 ~
 0 -1 40074
+M 40079 1 1 $
 S
 #40080
 The East Market Square~
@@ -3466,6 +3546,7 @@ east market
 ~
 ~
 0 -1 40079
+M 40080 1 1 $
 S
 #40081
 Arnok's Adobe~
@@ -3479,6 +3560,7 @@ east market
 ~
 ~
 0 -1 40080
+M 40081 1 1 o
 S
 #40082
 The East Market Square~
@@ -3502,6 +3584,7 @@ east market
 ~
 ~
 0 -1 40191
+M 40082 1 1 $
 S
 #40083
 The East Market Square~
@@ -3532,6 +3615,7 @@ Maaklan  Residence
 ~
 ~
 0 -1 40084
+M 40083 1 1 $
 S
 #40084
 Maaklan Residence~
@@ -3550,6 +3634,7 @@ Maaklan quarters
 ~
 ~
 0 -1 40085
+M 40084 1 1 o
 S
 #40085
 Maaklan Quarters~
@@ -3562,6 +3647,7 @@ the rest of residence
 ~
 ~
 0 -1 40084
+M 40085 1 1 o
 S
 #40086
 The East Market Square~
@@ -3585,6 +3671,7 @@ the east market
 ~
 ~
 0 -1 40096
+M 40086 1 1 $
 S
 #40087
 The East Market Square~
@@ -3603,6 +3690,7 @@ east market
 ~
 ~
 0 -1 40088
+M 40087 1 1 $
 S
 #40088
 The East Market Square~
@@ -3626,6 +3714,7 @@ east market
 ~
 ~
 0 -1 40089
+M 40088 1 1 $
 S
 #40089
 The East Market Square~
@@ -3654,6 +3743,7 @@ east market
 ~
 ~
 0 -1 40093
+M 40089 1 1 $
 S
 #40090
 Cleric's Guild~
@@ -3677,6 +3767,7 @@ cleric's guild
 ~
 ~
 0 -1 40091
+M 40090 1 1 H
 S
 #40091
 Inside the Cleric Guild~
@@ -3690,6 +3781,7 @@ cleric's guild
 ~
 ~
 0 -1 40090
+M 40091 1 1 H
 S
 #40092
 The Altar~
@@ -3702,6 +3794,7 @@ Cleric's Guild
 ~
 ~
 0 -1 40090
+M 40092 1 1 T
 S
 #40093
 The East Market Square~
@@ -3720,6 +3813,7 @@ east market
 ~
 ~
 0 -1 40089
+M 40093 1 1 $
 S
 #40094
 The East Market Square~
@@ -3743,6 +3837,7 @@ east market
 ~
 ~
 0 -1 40093
+M 40094 1 1 $
 S
 #40095
 The East Market Square~
@@ -3766,6 +3861,7 @@ east market
 ~
 ~
 0 -1 40094
+M 40095 1 1 $
 S
 #40096
 The East Market Square~
@@ -3788,6 +3884,7 @@ sigh...one last market exit
 ~
 ~
 0 -1 40095
+M 40096 1 1 $
 S
 #40097
 The North Wall~
@@ -3806,6 +3903,7 @@ the north wall
 ~
 ~
 0 -1 40098
+M 40097 1 1 #
 S
 #40098
 The North Wall~
@@ -3829,6 +3927,7 @@ the north wall
 ~
 ~
 0 -1 40100
+M 40098 1 1 #
 S
 #40099
 A Noble's Home~
@@ -3840,6 +3939,7 @@ along wall
 ~
 ~
 0 -1 40098
+M 40099 1 1 o
 S
 #40100
 The North Wall~
@@ -3858,6 +3958,7 @@ north wall
 ~
 ~
 0 -1 40101
+M 40100 1 1 #
 S
 #40101
 The North Wall~
@@ -3876,6 +3977,7 @@ north wall
 ~
 ~
 0 -1 40102
+M 40101 1 1 #
 S
 #40102
 The North Wall~
@@ -3894,6 +3996,7 @@ north wall
 ~
 ~
 0 -1 40103
+M 40102 1 1 #
 S
 #40103
 The North Wall~
@@ -3912,6 +4015,7 @@ northwest corner
 ~
 ~
 0 -1 40104
+M 40103 1 1 #
 S
 #40104
 The Northwest Corner~
@@ -3935,6 +4039,7 @@ the northwest tower
 ~
 ~
 0 -1 40105
+M 40104 1 1 .
 S
 #40105
 The Northwest Tower~
@@ -3948,6 +4053,7 @@ the village
 ~
 ~
 0 -1 40104
+M 40105 1 1 #
 S
 #40106
 The West Wall~
@@ -3966,6 +4072,7 @@ west wall
 ~
 ~
 0 -1 40107
+M 40106 1 1 #
 S
 #40107
 The West Wall~
@@ -3984,6 +4091,7 @@ along west wall
 ~
 ~
 0 -1 40108
+M 40107 1 1 #
 S
 #40108
 The West Wall~
@@ -4002,6 +4110,7 @@ west wall
 ~
 ~
 0 -1 40109
+M 40108 1 1 #
 S
 #40109
 An Intersection~
@@ -4025,6 +4134,7 @@ west wall
 ~
 ~
 0 -1 40110
+M 40109 1 1 .
 S
 #40110
 The West Wall~
@@ -4042,6 +4152,7 @@ west wall
 ~
 ~
 0 -1 40111
+M 40110 1 1 #
 S
 #40111
 The West Wall~
@@ -4059,6 +4170,7 @@ west wall
 ~
 ~
 0 -1 40112
+M 40111 1 1 #
 S
 #40112
 The West Wall~
@@ -4077,6 +4189,7 @@ southwest corner
 ~
 ~
 0 -1 40113
+M 40112 1 1 #
 S
 #40113
 The Southwest Corner~
@@ -4100,6 +4213,7 @@ southwest tower
 ~
 ~
 0 -1 40114
+M 40113 1 1 .
 S
 #40114
 The Southwest Tower~
@@ -4113,6 +4227,7 @@ the village
 ~
 ~
 0 -1 40113
+M 40114 1 1 #
 S
 #40115
 The South Wall~
@@ -4130,6 +4245,7 @@ south wall
 ~
 ~
 0 -1 40113
+M 40115 1 1 #
 S
 #40116
 The South Wall~
@@ -4148,6 +4264,7 @@ south wall
 ~
 ~
 0 -1 40115
+M 40116 1 1 #
 S
 #40117
 The South Wall~
@@ -4166,6 +4283,7 @@ south wall
 ~
 ~
 0 -1 40116
+M 40117 1 1 #
 S
 #40118
 The South Wall~
@@ -4184,6 +4302,7 @@ south wall
 ~
 ~
 0 -1 40117
+M 40118 1 1 #
 S
 #40119
 The South Wall~
@@ -4202,6 +4321,7 @@ south wall
 ~
 ~
 0 -1 40118
+M 40119 1 1 #
 S
 #40120
 The South Wall~
@@ -4219,6 +4339,7 @@ the south wall
 ~
 ~
 0 -1 40119
+M 40120 1 1 #
 S
 #40121
 A Dark Alley~
@@ -4241,6 +4362,7 @@ west market
 ~
 ~
 0 -1 40123
+M 40121 1 1 .
 S
 #40122
 A Citizen's House~
@@ -4252,6 +4374,7 @@ a dark alley
 ~
 ~
 0 -1 40121
+M 40122 1 1 o
 S
 #40123
 The West Market Square~
@@ -4276,6 +4399,7 @@ west market
 ~
 ~
 0 -1 40147
+M 40123 1 1 $
 S
 #40124
 The West Market Square~
@@ -4299,6 +4423,7 @@ west market
 ~
 ~
 0 -1 40151
+M 40124 1 1 $
 S
 #40125
 The West Market Square~
@@ -4317,6 +4442,7 @@ west market
 ~
 ~
 0 -1 40126
+M 40125 1 1 $
 S
 #40126
 The West Market Square~
@@ -4340,6 +4466,7 @@ west market
 ~
 ~
 0 -1 40127
+M 40126 1 1 $
 S
 #40127
 The West Market Square~
@@ -4368,6 +4495,7 @@ west market
 ~
 ~
 0 -1 40131
+M 40127 1 1 $
 S
 #40128
 The Mage Guild~
@@ -4385,6 +4513,7 @@ west market
 ~
 ~
 0 -1 40127
+M 40128 1 1 H
 S
 #40129
 Mage's Guild~
@@ -4403,6 +4532,7 @@ mage guild
 ~
 ~
 0 -1 40128
+M 40129 1 1 H
 S
 #40130
 Barnok's Study~
@@ -4416,6 +4546,7 @@ mage guild
 ~
 ~
 0 -1 40129
+M 40130 1 1 o
 S
 #40131
 The West Market Square~
@@ -4435,6 +4566,7 @@ west market
 ~
 ~
 0 -1 40132
+M 40131 1 1 $
 S
 #40132
 The West Market Square~
@@ -4463,6 +4595,7 @@ a noble's manor
 ~
 ~
 0 -1 40133
+M 40132 1 1 $
 S
 #40133
 A Noble's Manor~
@@ -4475,6 +4608,7 @@ the market
 ~
 ~
 0 -1 40132
+M 40133 1 1 o
 S
 #40134
 The West Market Square~
@@ -4504,6 +4638,7 @@ a dark alley
 ~
 ~
 0 -1 40135
+M 40134 1 1 $
 S
 #40135
 A Dark Alley~
@@ -4522,6 +4657,7 @@ west wall
 ~
 ~
 0 -1 40109
+M 40135 1 1 .
 S
 #40136
 Kringe's Domain~
@@ -4541,6 +4677,7 @@ west market
 ~
 ~
 0 -1 40134
+M 40136 1 1 o
 S
 #40137
 Kringe's Treasure Room~
@@ -4554,6 +4691,7 @@ Kringe's domain
 ~
 ~
 0 -1 40136
+M 40137 1 1 o
 S
 #40138
 The West Market Square~
@@ -4577,6 +4715,7 @@ west market
 ~
 ~
 0 -1 40139
+M 40138 1 1 $
 S
 #40139
 The West Market Square~
@@ -4606,6 +4745,7 @@ thief guild
 ~
 ~
 0 -1 40140
+M 40139 1 1 $
 S
 #40140
 The Thieves' Guild~
@@ -4624,6 +4764,7 @@ thief guild
 ~
 ~
 0 -1 40141
+M 40140 1 1 H
 S
 #40141
 The Thief Guild~
@@ -4642,6 +4783,7 @@ the assassin's room
 ~
 wall west~
 3 -1 40142
+M 40141 1 1 H
 S
 #40142
 The assassin's Room~
@@ -4653,6 +4795,7 @@ thief guild
 ~
 wall east door~
 0 -1 40141
+M 40142 1 1 o
 S
 #40143
 Ghanekar's Lair~
@@ -4665,6 +4808,7 @@ west market
 ~
 ~
 0 -1 40139
+M 40143 1 1 o
 S
 #40144
 The West Market Square~
@@ -4686,6 +4830,7 @@ west market
 ~
 ~
 0 -1 40139
+M 40144 1 2 $
 S
 #40145
 The West Market Square~
@@ -4708,6 +4853,7 @@ west market
 ~
 ~
 0 -1 40144
+M 40145 1 1 $
 S
 #40146
 The West Market Square~
@@ -4725,6 +4871,7 @@ west market
 ~
 ~
 0 -1 40145
+M 40146 1 1 $
 S
 #40147
 The West Market Square~
@@ -4747,6 +4894,7 @@ west market
 ~
 ~
 0 -1 40148
+M 40147 1 1 $
 S
 #40148
 The West Market Square~
@@ -4769,6 +4917,7 @@ the market
 ~
 ~
 0 -1 40149
+M 40148 1 1 $
 S
 #40149
 The West Market Square~
@@ -4791,6 +4940,7 @@ west market
 ~
 ~
 0 -1 40138
+M 40144 1 1 $
 S
 #40150
 The West Market Square~
@@ -4813,6 +4963,7 @@ west market
 ~
 ~
 0 -1 40132
+M 40149 1 1 $
 S
 #40151
 The West Market Square~
@@ -4836,6 +4987,7 @@ west market
 ~
 ~
 0 -1 40150
+M 40149 2 1 $
 S
 #40152
 A Cavern~
@@ -4861,6 +5013,7 @@ back to the palace
 ~
 trapdoor~
 1 -1 40042
+M 40150 1 1 o
 S
 #40153
 The Dracolich's Lair~
@@ -4874,6 +5027,7 @@ cavern
 ~
 ~
 0 -1 40152
+M 40151 1 1 o
 S
 #40154
 The Caves of Cloudy Mountain~
@@ -4896,6 +5050,7 @@ a cavern
 ~
 ~
 0 -1 40152
+M 40152 1 1 o
 S
 #40155
 The Caves of Cloudy Mountain~
@@ -4918,6 +5073,7 @@ the caves
 ~
 ~
 0 -1 40154
+M 40153 1 1 o
 S
 #40156
 The Caves of Cloudy Mountain~
@@ -4940,6 +5096,7 @@ the caves
 ~
 ~
 0 -1 40155
+M 40154 1 1 o
 S
 #40157
 The Caves of Cloudy Mountain~
@@ -4962,6 +5119,7 @@ the caves
 ~
 ~
 0 -1 40158
+M 40155 1 1 o
 S
 #40158
 The Caves of Cloudy Mountain~
@@ -4984,6 +5142,7 @@ the caves
 ~
 ~
 0 -1 40155
+M 40156 1 1 o
 S
 #40159
 The Caves of Cloudy Mountain~
@@ -5006,6 +5165,7 @@ the caves
 ~
 ~
 0 -1 40177
+M 40157 1 1 o
 S
 #40160
 The Caves of Cloudy Mountain~
@@ -5028,6 +5188,7 @@ the caves
 ~
 ~
 0 -1 40179
+M 40158 1 1 o
 S
 #40161
 The Caves of Cloudy Mountain~
@@ -5050,6 +5211,7 @@ the caves
 ~
 ~
 0 -1 40160
+M 40159 1 1 o
 S
 #40162
 The Caves of Cloudy Mountain~
@@ -5072,6 +5234,7 @@ the caves
 ~
 ~
 0 -1 40163
+M 40160 1 1 o
 S
 #40163
 The Caves of Cloudy Mountain~
@@ -5094,6 +5257,7 @@ the caves
 ~
 ~
 0 -1 40182
+M 40161 1 1 o
 S
 #40164
 A Winding Cavern~
@@ -5112,6 +5276,7 @@ the caves
 ~
 ~
 0 -1 40163
+M 40162 1 1 o
 S
 #40165
 A Winding Cavern~
@@ -5130,6 +5295,7 @@ cavern
 ~
 ~
 0 -1 40166
+M 40163 1 1 o
 S
 #40166
 A Winding Cavern~
@@ -5148,6 +5314,7 @@ the cavern
 ~
 ~
 0 -1 40165
+M 40164 1 1 o
 S
 #40167
 A Winding Cavern~
@@ -5167,6 +5334,7 @@ a chamber
 ~
 ~
 0 -1 40168
+M 40165 1 1 o
 S
 #40168
 A Large Chamber~
@@ -5180,6 +5348,7 @@ cavern
 ~
 ~
 0 -1 40167
+M 40166 1 1 o
 S
 #40169
 The Caves of Cloudy Mountain~
@@ -5202,6 +5371,7 @@ the caves
 ~
 ~
 0 -1 40162
+M 40167 1 1 o
 S
 #40170
 The Caves of Cloudy Mountain~
@@ -5224,6 +5394,7 @@ the caves
 ~
 ~
 0 -1 40157
+M 40168 1 1 o
 S
 #40171
 The Caves of Cloudy Mountain~
@@ -5246,6 +5417,7 @@ the caves
 ~
 ~
 0 -1 40170
+M 40169 1 1 o
 S
 #40172
 The Caves of Cloudy Mountain~
@@ -5269,6 +5441,7 @@ the caves
 ~
 ~
 0 -1 40173
+M 40170 1 1 o
 S
 #40173
 The Caves of Cloudy Mountain~
@@ -5291,6 +5464,7 @@ the caves
 ~
 ~
 0 -1 40174
+M 40171 1 1 o
 S
 #40174
 The Caves of Cloudy Mountain~
@@ -5313,6 +5487,7 @@ the caves
 ~
 ~
 0 -1 40152
+M 40172 1 1 o
 S
 #40175
 The Caves of Cloudy Mountain~
@@ -5335,6 +5510,7 @@ the caves
 ~
 ~
 0 -1 40174
+M 40173 1 1 o
 S
 #40176
 The Caves of Cloudy Mountain~
@@ -5357,6 +5533,7 @@ D5
 ~
 ~
 0 -1 40179
+M 40175 1 1 o
 S
 #40177
 The Caves of Cloudy Mountain~
@@ -5379,6 +5556,7 @@ the caves
 ~
 ~
 0 -1 40176
+M 40176 1 1 o
 S
 #40178
 The Caves of Cloudy Mountain~
@@ -5402,6 +5580,7 @@ the caves
 ~
 ~
 0 -1 40180
+M 40177 1 1 o
 S
 #40179
 The Caves of Cloudy Mountain~
@@ -5424,6 +5603,7 @@ the caves
 ~
 ~
 0 -1 40176
+M 40174 1 1 o
 S
 #40180
 The Caves of Cloudy Mountain~
@@ -5446,6 +5626,7 @@ the caves
 ~
 ~
 0 -1 40172
+M 40178 1 1 o
 S
 #40181
 The Caves of Cloudy Mountain~
@@ -5468,6 +5649,7 @@ the caves
 ~
 ~
 0 -1 40173
+M 40179 1 1 o
 S
 #40182
 The Caves of Cloudy Mountain~
@@ -5490,6 +5672,7 @@ the caves
 ~
 ~
 0 -1 40171
+M 40180 1 1 o
 S
 #40183
 A Cavern~
@@ -5507,6 +5690,7 @@ the caves
 ~
 ~
 0 -1 40182
+M 40181 1 1 o
 S
 #40184
 The Cavern~
@@ -5524,6 +5708,7 @@ the cavern
 ~
 ~
 0 -1 40183
+M 40182 1 2 o
 S
 #40185
 The Cavern~
@@ -5543,6 +5728,7 @@ the cavern
 ~
 ~
 0 -1 40184
+M 40182 2 2 o
 S
 #40186
 The Cavern~
@@ -5561,6 +5747,7 @@ D2
 ~
 ~
 0 -1 40185
+M 40182 2 1 o
 S
 #40187
 The Treasure Room~
@@ -5574,6 +5761,7 @@ the cavern
 ~
 ~
 0 -1 40186
+M 40183 1 1 ^
 S
 #40188
 Scourge's Storeroom~
@@ -5581,6 +5769,7 @@ This is a room where imms, if they choose, may find powerful equipment that
 mortals are not allowed to have.
 ~
 0 4 0 0
+M 40184 1 1 $
 S
 #40189
 Scourge' Room~
@@ -5614,6 +5803,7 @@ Scourge says, 'I am not here right now, if you would like to leave a message,
 please leave your name, number, and I'll get back to you as soon as possible.'
 *BEEP*
 ~
+M 40185 1 1 o
 S
 #40190
 A Dark Alley~
@@ -5631,6 +5821,7 @@ east market
 ~
 ~
 0 -1 40183
+M 40186 1 1 .
 S
 #40191
 The East Market~
@@ -5653,6 +5844,7 @@ market
 ~
 ~
 0 -1 40192
+M 40187 1 1 $
 S
 #40192
 The East Market~
@@ -5675,6 +5867,7 @@ market
 ~
 ~
 0 -1 40072
+M 40188 1 1 $
 S
 #0
 

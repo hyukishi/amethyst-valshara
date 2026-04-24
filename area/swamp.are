@@ -205,6 +205,7 @@ D5
 ~
 door~
 0 -1 11902
+M 11902 3 7 $
 S
 #11902
 In the swamp~
@@ -246,6 +247,7 @@ D9
 ~
 ~
 0 -1 11909
+M 11901 9 7 o
 S
 #11903
 In the swamp~
@@ -288,6 +290,7 @@ D9
 ~
 ~
 0 -1 11910
+M 11901 9 6 o
 S
 #11904
 In the swamp~
@@ -330,6 +333,7 @@ D9
 ~
 ~
 0 -1 11921
+M 11901 9 8 o
 S
 #11905
 In the swamp~
@@ -375,6 +379,7 @@ D9
 ~
 ~
 0 -1 11924
+M 11901 8 6 o
 S
 #11906
 In the swamp~
@@ -422,6 +427,7 @@ log~
 As you look closer, an eye opens on the log. The log swishes its thick, scaly
 tail and swims slowly to the east.
 ~
+M 11901 10 6 o
 S
 #11907
 In the swamp~
@@ -464,6 +470,7 @@ D9
 ~
 ~
 0 -1 11904
+M 11901 10 7 o
 S
 #11908
 In the swamp~
@@ -506,6 +513,7 @@ D9
 ~
 ~
 0 -1 11920
+M 11901 10 8 o
 S
 #11909
 In the swamp~
@@ -549,6 +557,7 @@ D9
 ~
 ~
 0 -1 11922
+M 11901 8 8 o
 S
 #11910
 In the swamp~
@@ -591,6 +600,7 @@ D9
 ~
 ~
 0 -1 11923
+M 11901 8 7 o
 S
 #11911
 In the swamp~
@@ -622,6 +632,7 @@ D9
 ~
 ~
 0 -1 11925
+M 11901 8 5 o
 S
 #11912
 In the swamp~
@@ -653,6 +664,7 @@ D9
 ~
 ~
 0 -1 11905
+M 11901 9 5 o
 S
 #11913
 In the swamp~
@@ -689,6 +701,7 @@ D9
 ~
 ~
 0 -1 11903
+M 11901 10 5 o
 S
 #11914
 in the swamp~
@@ -722,6 +735,7 @@ D9
 ~
 ~
 0 -1 11906
+M 11901 11 5 o
 S
 #11915
 In the swamp~
@@ -765,6 +779,7 @@ D9
 ~
 ~
 0 -1 11907
+M 11901 11 6 o
 S
 #11916
 In the swamp~
@@ -808,6 +823,7 @@ D9
 ~
 ~
 0 -1 11908
+M 11901 11 7 o
 S
 #11917
 In the swamp~
@@ -851,6 +867,7 @@ D9
 ~
 ~
 0 -1 11919
+M 11901 11 8 o
 S
 #11918
 In the swamp~
@@ -888,6 +905,7 @@ D8
 ~
 ~
 0 -1 11949
+M 11901 11 9 o
 S
 #11919
 In the swamp~
@@ -930,6 +948,7 @@ leech~
 A leech leaves a slimy trail on the tree trunk as it slowly makes its way
 back into the muck.
 ~
+M 11901 10 9 o
 S
 #11920
 In the swamp~
@@ -968,6 +987,7 @@ snake~
 The mottled brown snake slithers along with some difficulty as its two heads
 seem to prefer different directions.
 ~
+M 11901 9 9 o
 S
 #11921
 In the swamp~
@@ -1003,6 +1023,7 @@ E
 flowers stalks red fleshy~
 One of the flowers winks at you!
 ~
+M 11901 8 9 o
 S
 #11922
 In the swamp~
@@ -1045,6 +1066,7 @@ E
 frog bullfrog squat~
 The bullfrog is not intimidated by your stare. It croaks again, loudly!
 ~
+M 11901 7 9 o
 > rand_prog 30~
 mpasound Cccrrrooooaaaakkkkkk!!!
 ~
@@ -1099,6 +1121,7 @@ As you look at the putrid pile of wasted flesh a giant rat wriggles its
 head up through the pile. Panting for breath, the rat dives back into its
 meal.
 ~
+M 11901 7 8 o
 S
 #11924
 In the swamp~
@@ -1142,6 +1165,7 @@ D9
 ~
 ~
 0 -1 11933
+M 11901 7 7 o
 S
 #11925
 In the swamp~
@@ -1189,6 +1213,7 @@ E
 flatworms worms mud knot~
 The thick, pale worms wriggle through the mud stirring up the stench.
 ~
+M 11901 7 6 o
 S
 #11926
 In the swamp~
@@ -1235,6 +1260,7 @@ fronds shrubs~
 The ferns wave in an unfelt breeze. You notice that their movements have a
 particular rhythm.
 ~
+M 11901 7 5 o
 S
 #11927
 in the swamp~
@@ -1280,6 +1306,7 @@ sign~
             \  ' |    |  / ''
              \/\/\/\/\/\/\/\
 ~
+M 11901 12 5 o
 S
 #11928
 in the swamp~
@@ -1313,6 +1340,7 @@ D9
 ~
 ~
 0 -1 11916
+M 11901 12 6 o
 S
 #11929
 in the swamp~
@@ -1348,6 +1376,7 @@ D9
 ~
 ~
 0 -1 11917
+M 11901 12 7 o
 > act_prog p gets a speckled egg.~
 mpat 11929 mpmload 11930
 ~
@@ -1385,6 +1414,7 @@ D9
 ~
 ~
 0 -1 11918
+M 11901 12 8 o
 S
 #11931
 In the swamp~
@@ -1417,6 +1447,7 @@ slug slugs~
 A slug leaves a slimy trail on the tree trunk as it slowly makes its way
 back into the muck.
 ~
+M 11901 12 9 o
 S
 #11932
 In the swamp~
@@ -1449,6 +1480,7 @@ D9
 ~
 ~
 0 -1 11950
+M 11901 6 9 o
 S
 #11933
 In the swamp~
@@ -1482,6 +1514,7 @@ D8
 ~
 ~
 0 -1 11922
+M 11901 6 8 o
 S
 #11934
 In the swamp~
@@ -1517,6 +1550,7 @@ tree oak~
 The tree towers high and proud. One thick branch leans over low enough that you
 feel you might be able to jump high enough to reach it.
 ~
+M 11901 6 7 o
 > act_prog p jumps into the air.~
 mpechoat $n You leap into the air. Your hands grasp the low hanging limb.
 mpechoat $n You pull yourself up into the leafy boughs.
@@ -1555,6 +1589,7 @@ D8
 ~
 ~
 0 -1 11924
+M 11901 6 6 o
 S
 #11936
 In the swamp~
@@ -1585,6 +1620,7 @@ D9
 ~
 ~
 0 -1 11953
+M 11901 6 5 o
 S
 #11937
 Bayou Laterge~
@@ -1604,6 +1640,7 @@ D6
 ~
 ~
 0 -1 11938
+M 11901 13 8 o
 S
 #11938
 Bayou Laterge~
@@ -1626,6 +1663,7 @@ D9
 ~
 ~
 0 -1 11937
+M 11901 14 7 o
 S
 #11939
 In an underwater tunnel~
@@ -1642,6 +1680,7 @@ D3
 ~
 ~
 2048 -1 11938
+M 11901 15 7 o
 S
 #11940
 In an underwater tunnel~
@@ -1658,6 +1697,7 @@ D9
 ~
 ~
 2048 -1 11941
+M 11901 15 8 o
 S
 #11941
 A clearing in the bamboo thicket~
@@ -1676,6 +1716,7 @@ D5
 ~
 ~
 0 -1 11940
+M 11901 14 9 o
 S
 #11942
 A clearing in the bamboo thicket~
@@ -1693,6 +1734,7 @@ D5
 ~
 ~
 0 -1 11940
+M 11902 9 8 o
 S
 #11943
 On a path through the bamboo~
@@ -1712,6 +1754,7 @@ D2
 ~
 ~
 0 -1 11944
+M 11901 14 10 .
 S
 #11944
 A large clearing in the bamboo~
@@ -1728,6 +1771,7 @@ D0
 ~
 ~
 0 -1 11943
+M 11901 14 11 o
 S
 #11945
 Bayou Laterge~
@@ -1751,6 +1795,7 @@ E
 movement trees~
 High above you can see a corpse hanging by the neck from one of the trees.
 ~
+M 11901 15 6 o
 S
 #11946
 Bayou Laterge~
@@ -1771,6 +1816,7 @@ D2
 ~
 ~
 0 -1 11945
+M 11901 15 5 o
 S
 #11947
 Bayou Laterge~
@@ -1788,6 +1834,7 @@ D6
 ~
 ~
 0 -1 11948
+M 11901 15 4 o
 S
 #11948
 Bayou Laterge~
@@ -1801,6 +1848,7 @@ D9
 ~
 ~
 0 -1 11947
+M 11901 16 3 o
 S
 #11949
 On a seldom used trail~
@@ -1820,6 +1868,7 @@ D7
 ~
 ~
 0 -1 11918
+M 11901 12 10 .
 S
 #11950
 On a dirt path~
@@ -1837,6 +1886,7 @@ D6
 ~
 ~
 0 -1 11932
+M 11901 5 10 .
 S
 #11951
 On a dirt path~
@@ -1855,6 +1905,7 @@ D9
 ~
 ~
 0 -1 11976
+M 11901 5 9 .
 S
 #11952
 Up a tree~
@@ -1868,6 +1919,7 @@ D4
 ~
 ~
 0 -1 11963
+M 11903 1 1 o
 > act_prog p jumps into the air.~
 mpechoat $n You jump down to the ground.
 mpechoat $n The soggy muck breaks your fall. You are not hurt.
@@ -1891,6 +1943,7 @@ D6
 ~
 ~
 0 -1 11936
+M 11901 5 6 .
 S
 #11954
 On a leaf strewn trail~
@@ -1913,6 +1966,7 @@ D8
 ~
 ~
 0 -1 11936
+M 11901 5 4 .
 S
 #11955
 Through the bamboo gate~
@@ -1951,6 +2005,7 @@ and toes. They wear dirty loincloths made from some shiny reptile skin. The
 most distinguishing feature however is the head. Theses cretures have the head
 of a frog.
 ~
+M 11901 12 4 +
 S
 #11956
 A clearing in the village~
@@ -1989,6 +2044,7 @@ tall skinny grok~
 The Grok has the body of a lithe, muscular human and the wide lipped mouth of
 a frog.  Its skin and hair are both green.
 ~
+M 11901 12 3 o
 S
 #11957
 Beneath a hut~
@@ -2018,6 +2074,7 @@ D8
 ~
 ~
 0 -1 11955
+M 11901 11 3 o
 S
 #11958
 Beneath a hut~
@@ -2047,6 +2104,7 @@ D9
 ~
 ~
 0 -1 11955
+M 11901 13 3 o
 S
 #11959
 Beneath a hut~
@@ -2076,6 +2134,7 @@ D8
 ~
 ~
 0 -1 11956
+M 11901 11 2 o
 S
 #11960
 Beneath a hut~
@@ -2105,6 +2164,7 @@ D9
 ~
 ~
 0 -1 11956
+M 11901 13 2 o
 S
 #11961
 Beneath a large sturdy hut~
@@ -2143,6 +2203,7 @@ D9
 ~
 ~
 0 -1 11957
+M 11901 12 2 o
 S
 #11962
 Beneath a hut~
@@ -2168,6 +2229,7 @@ D9
 ~
 ~
 0 -1 11959
+M 11901 12 1 o
 S
 #11963
 Up a tree~
@@ -2190,6 +2252,7 @@ squirrel~
 The squirrel looks upset at your intrusion into its home. If you could speak
 squirrel your ears would probably be burning by now.
 ~
+M 11904 1 1 o
 S
 #11964
 High up in a tree~
@@ -2221,6 +2284,7 @@ D5
 ~
 ~
 0 -1 11963
+M 11905 2 2 o
 S
 #11965
 Out on a limb~
@@ -2245,6 +2309,7 @@ corpse mummy rags stench~
 The corpse is bloated and in an advanced stage of decay. Dark purplish blotches
 on the head and neck look like bites of some kind.
 ~
+M 11905 1 2 o
 S
 #11966
 Out on a limb~
@@ -2262,6 +2327,7 @@ D3
 ~
 ~
 0 -1 11964
+M 11905 3 2 o
 S
 #11967
 Out on a limb~
@@ -2276,6 +2342,7 @@ D2
 ~
 ~
 0 -1 11964
+M 11905 2 1 o
 S
 #11968
 Out on a limb~
@@ -2290,6 +2357,7 @@ D0
 ~
 ~
 0 -1 11964
+M 11905 2 3 o
 S
 #11969
 The Grok Chief's Chambers~
@@ -2325,6 +2393,7 @@ E
 carcass fowl~
 This is the half eaten carcass of some type of large bird.
 ~
+M 11902 2 6 o
 S
 #11970
 The Servant's Quarters~
@@ -2347,6 +2416,7 @@ E
 table~
 The table is a simple wooden affair.
 ~
+M 11902 1 7 o
 S
 #11971
 The Guard's Chambers~
@@ -2375,6 +2445,7 @@ rack weapons~
 The weapons rack is a simple bamboo frame which is designed to hold the
 sharp bamboo tridents that the Groks seem to favor.
 ~
+M 11902 2 8 o
 S
 #11972
 On a seldom used trail~
@@ -2391,6 +2462,7 @@ D2
 ~
 ~
 0 -1 11973
+M 11901 12 11 .
 S
 #11973
 On a seldom used trail~
@@ -2412,6 +2484,7 @@ D9
 ~
 ~
 0 -1 11975
+M 11901 12 12 .
 S
 #11974
 A small, shady clearing~
@@ -2426,6 +2499,7 @@ D1
 ~
 ~
 0 -1 11973
+M 11901 11 12 o
 S
 #11975
 A seldom used trail~
@@ -2440,6 +2514,7 @@ D6
 ~
 ~
 0 -1 11973
+M 11901 11 13 .
 S
 #11976
 On a dirt path~
@@ -2457,6 +2532,7 @@ D6
 ~
 ~
 0 -1 11951
+M 11901 4 10 .
 S
 #11977
 On a dirt path~
@@ -2474,6 +2550,7 @@ D8
 ~
 ~
 0 -1 11983
+M 11901 5 11 .
 S
 #11978
 On a dirt path~
@@ -2496,6 +2573,7 @@ D9
 ~
 ~
 0 -1 11981
+M 11901 4 11 .
 S
 #11979
 On a leaf strewn path~
@@ -2513,6 +2591,7 @@ D7
 ~
 ~
 0 -1 11980
+M 11901 3 11 .
 S
 #11980
 On a leaf strewn path~
@@ -2526,6 +2605,7 @@ D8
 ~
 ~
 0 -1 11979
+M 11901 2 10 .
 S
 #11981
 On a dirt path~
@@ -2543,6 +2623,7 @@ D6
 ~
 ~
 0 -1 11978
+M 11901 3 12 .
 S
 #11982
 On a dirt path~
@@ -2556,6 +2637,7 @@ D0
 ~
 ~
 0 -1 11981
+M 11901 3 13 .
 S
 #11983
 On a dirt path~
@@ -2573,6 +2655,7 @@ D7
 ~
 ~
 0 -1 11977
+M 11901 6 12 .
 S
 #11984
 On a Dirt Path, Before a Barricade~
@@ -2587,6 +2670,7 @@ D0
 ~
 ~
 0 -1 11983
+M 11901 6 13 .
 S
 #11985
 On a hard packed trail~
@@ -2604,6 +2688,7 @@ D3
 ~
 ~
 0 -1 11986
+M 11901 4 6 .
 S
 #11986
 On a hard packed trail~
@@ -2621,6 +2706,7 @@ D9
 ~
 ~
 0 -1 11987
+M 11901 3 6 .
 S
 #11987
 On a hard packed trail~
@@ -2639,6 +2725,7 @@ E
 trees firewood~
 The trees have been recently harvested. The stumps bleed sap freely.
 ~
+M 11901 2 7 .
 S
 #11988
 On a leaf strewn trail~
@@ -2661,6 +2748,7 @@ D9
 ~
 ~
 0 -1 11991
+M 11901 4 4 .
 S
 #11989
 On a leaf strewn trail~
@@ -2678,6 +2766,7 @@ D8
 ~
 ~
 0 -1 11988
+M 11901 3 3 .
 S
 #11990
 On a leaf strewn trail~
@@ -2695,6 +2784,7 @@ D3
 ~
 ~
 0 -1 11992
+M 11901 2 3 .
 S
 #11991
 On a leaf strewn trail~
@@ -2707,6 +2797,7 @@ D6
 ~
 ~
 0 -1 11988
+M 11901 3 5 .
 S
 #11992
 On a leaf strewn trail~
@@ -2724,6 +2815,7 @@ D3
 ~
 ~
 0 -1 12239
+M 11901 1 3 .
 S
 #11993
 On a dark, eerie path~
@@ -2743,6 +2835,7 @@ D9
 ~
 ~
 0 -1 11954
+M 11901 6 3 .
 S
 #11994
 On a dark, eerie path~
@@ -2758,6 +2851,7 @@ D2
 ~
 ~
 0 -1 11993
+M 11901 6 2 .
 S
 #11995
 Inside a hut~
@@ -2788,6 +2882,7 @@ dust~
 A combination of dust, mold and mildew. It covers everthing in a thick blanket
 of filth.
 ~
+M 11902 7 2 o
 S
 #11996
 Inside a hut~
@@ -2816,6 +2911,7 @@ Curved blades of extremely sharp material have been fastened to bamboo handles.
 Wooden bowls of some foul smelling substance clutter the table. This must be
 some type of homemade curing agent.
 ~
+M 11902 7 3 o
 S
 #11997
 Inside a hut~
@@ -2852,6 +2948,7 @@ The view out the west window shows the vast swamp extending in that direction.
 Looking out the south window you can see the bamboo gate and the workers busily
 hacking the thick vegetation away from the village.
 ~
+M 11902 5 3 o
 S
 #11998
 Inside a hut~
@@ -2887,6 +2984,7 @@ E
 cradle~
 The tiny bamboo cradle rocks gently in an unfelt breeze.
 ~
+M 11902 5 2 o
 S
 #11999
 Inside a hut~
@@ -2924,6 +3022,7 @@ Most of the runes make no sense at all. A few do stand out though.
                                                  
                                                  
 ~
+M 11902 6 1 o
 S
 #12000
 Inside the Chief's Hut~
@@ -2948,6 +3047,7 @@ D3
 ~
 ~
 0 -1 11970
+M 11902 2 7 o
 S
 #0
 

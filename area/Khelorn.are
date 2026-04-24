@@ -485,6 +485,7 @@ D8
 ~
 ~
 0 -1 11101
+M 11102 7 1 ,
 S
 #11101
 Atop a Small Ridge.~
@@ -513,6 +514,7 @@ D9
 ~
 ~
 0 -1 11104
+M 11102 8 2 ,
 S
 #11102
 Upon a Side Path~
@@ -529,6 +531,7 @@ D9
 ~
 ~
 0 -1 11101
+M 11102 9 1 .
 S
 #11103
 Gigantic Willow~
@@ -546,6 +549,7 @@ D4
 ~
 ~
 128 -1 11110
+M 11102 9 2 ,
 S
 #11104
 Approaching a Ridge~
@@ -563,6 +567,7 @@ D6
 ~
 ~
 0 -1 11101
+M 11102 7 3 ,
 S
 #11105
 Following the Path~
@@ -580,6 +585,7 @@ D8
 ~
 ~
 0 -1 11106
+M 11102 8 3 .
 S
 #11106
 Fording the Khelorn~
@@ -606,6 +612,7 @@ D9
 ~
 ~
 0 -1 11108
+M 11102 9 4 ,
 S
 #11107
 West of the Ford~
@@ -623,6 +630,7 @@ D3
 ~
 ~
 0 -1 11106
+M 11102 10 4 ~
 > rand_prog 50~
 if isaffected($r) != Flying
 else
@@ -656,6 +664,7 @@ D6
 ~
 ~
 0 -1 11106
+M 11102 8 5 ~
 > rand_prog 25~
 if isaffected($r) != Flying
 else
@@ -689,6 +698,7 @@ D8
 ~
 ~
 0 -1 11111
+M 11102 9 5 ,
 S
 #11110
 In the Branches~
@@ -723,6 +733,7 @@ D7
 ~
 ~
 0 -1 11165
+M 11103 2 3 *
 S
 #11111
 A Dusty Trail~
@@ -741,6 +752,7 @@ D9
 ~
 ~
 0 -1 11146
+M 11102 10 6 .
 S
 #11112
 Rocky Slope~
@@ -757,6 +769,7 @@ D6
 ~
 ~
 0 -1 11138
+M 11102 16 9 ,
 S
 #11113
 On the Top of the Ravine~
@@ -774,6 +787,7 @@ D9
 ~
 ~
 0 -1 11114
+M 11102 16 10 ,
 S
 #11114
 Approaching a Ravine~
@@ -791,6 +805,7 @@ D9
 ~
 ~
 0 -1 11018
+M 11102 15 11 ,
 S
 #11115
 The Khelorn Widens~
@@ -809,6 +824,7 @@ D3
 ~
 ~
 0 -1 11151
+M 11102 6 4 ~
 > rand_prog 25~
 if isaffected($r) != Flying
 else
@@ -836,6 +852,7 @@ D9
 ~
 ~
 0 -1 11118
+M 11102 13 3 *
 S
 #11117
 The Khelorn Narrows~
@@ -856,6 +873,7 @@ D7
 ~
 ~
 0 -1 11159
+M 11102 12 5 ~
 > rand_prog 70~
 if isaffected($r) != Flying
 else
@@ -886,6 +904,7 @@ D7
 ~
 ~
 0 -1 11149
+M 11102 12 4 *
 S
 #11119
 Entering the Rapids~
@@ -905,6 +924,7 @@ D3
 ~
 ~
 0 -1 11117
+M 11102 13 5 ~
 > rand_prog 100~
 if isaffected($r) != Flying
 else
@@ -934,6 +954,7 @@ D3
 ~
 ~
 0 -1 11119
+M 11102 14 5 ~
 > rand_prog 100~
 if isaffected($r) != Flying
 else
@@ -962,6 +983,7 @@ D6
 ~
 ~
 0 -1 11122
+M 11102 15 5 ~
 > rand_prog 50~
 if isaffected($r) != Flying
 else
@@ -998,6 +1020,7 @@ D9
 ~
 ~
 0 -1 11121
+M 11102 16 4 ~
 S
 #11123
 Along the Northern Shore~
@@ -1027,6 +1050,7 @@ D9
 ~
 ~
 0 -1 11122
+M 11102 17 3 ~
 S
 #11124
 Crossing Lake Khelorn~
@@ -1060,6 +1084,7 @@ D8
 ~
 ~
 0 -1 11129
+M 11102 17 4 ~
 S
 #11125
 Along the Southern Shore~
@@ -1092,6 +1117,7 @@ D8
 ~
 ~
 0 -1 11130
+M 11102 17 5 ~
 S
 #11126
 Northernmost Shores~
@@ -1114,6 +1140,7 @@ D9
 ~
 ~
 0 -1 11123
+M 11102 18 2 ~
 S
 #11127
 North of the Center~
@@ -1148,6 +1175,7 @@ D9
 ~
 ~
 0 -1 11124
+M 11102 18 3 ~
 S
 #11128
 Center of the Lake~
@@ -1192,6 +1220,7 @@ D9
 ~
 ~
 0 -1 11125
+M 11102 18 4 ~
 S
 #11129
 Approaching the Southern Shore~
@@ -1229,6 +1258,7 @@ D7
 ~
 ~
 0 -1 11124
+M 11102 18 5 ~
 S
 #11130
 Southernmost Shore~
@@ -1254,6 +1284,7 @@ D7
 ~
 ~
 0 -1 11125
+M 11102 18 6 ~
 S
 #11131
 Upon Lake Khelorn~
@@ -1291,6 +1322,7 @@ D9
 ~
 ~
 0 -1 11130
+M 11102 19 5 ~
 S
 #11132
 Traversing the Lake~
@@ -1325,6 +1357,7 @@ D9
 ~
 ~
 0 -1 11129
+M 11102 19 4 ~
 S
 #11133
 Before the Cave~
@@ -1359,6 +1392,7 @@ D9
 ~
 ~
 0 -1 11128
+M 11102 19 3 ~
 S
 #11134
 Westernmost Shores~
@@ -1382,6 +1416,7 @@ D9
 ~
 ~
 0 -1 11131
+M 11102 20 4 ~
 S
 #11135
 On the Shore~
@@ -1403,6 +1438,7 @@ D7
 ~
 ~
 0 -1 11131
+M 11102 20 6 ,
 S
 #11136
 The Khelorn Marsh~
@@ -1419,6 +1455,7 @@ D9
 ~
 ~
 0 -1 11137
+M 11102 20 7 *
 S
 #11137
 Into a Wetland Forest~
@@ -1436,6 +1473,7 @@ D6
 ~
 ~
 0 -1 11136
+M 11102 18 8 *
 S
 #11138
 Intersection of Paths~
@@ -1457,6 +1495,7 @@ D9
 ~
 ~
 0 -1 11112
+M 11102 17 8 .
 S
 #11139
 Deep in the Ravine~
@@ -1475,6 +1514,7 @@ D8
 ~
 ~
 0 -1 11138
+M 11102 16 7 *
 S
 #11140
 Emerging from a Ravine~
@@ -1492,6 +1532,7 @@ D9
 ~
 ~
 0 -1 11141
+M 11102 15 7 ,
 S
 #11141
 Before the Mountains~
@@ -1510,6 +1551,7 @@ D7
 ~
 ~
 0 -1 11142
+M 11102 14 8 ^
 S
 #11142
 A Mountian Path~
@@ -1533,6 +1575,7 @@ D9
 ~
 ~
 0 -1 11143
+M 11102 13 7 .
 S
 #11143
 Small Field.~
@@ -1552,6 +1595,7 @@ D7
 ~
 ~
 0 -1 11144
+M 11102 12 8 ,
 S
 #11144
 Winding Through the Foothills~
@@ -1569,6 +1613,7 @@ D9
 ~
 ~
 0 -1 11145
+M 11102 11 7 ^
 S
 #11145
 Alpine Trail~
@@ -1586,6 +1631,7 @@ D7
 ~
 ~
 0 -1 11146
+M 11102 10 8 .
 S
 #11146
 A Rocky Trail~
@@ -1603,6 +1649,7 @@ D8
 ~
 ~
 0 -1 11145
+M 11102 9 7 .
 S
 #11147
 A Path Around the Ridge~
@@ -1620,6 +1667,7 @@ D8
 ~
 ~
 0 -1 11148
+M 11102 10 1 .
 S
 #11148
 Along the Western Side~
@@ -1637,6 +1685,7 @@ D7
 ~
 ~
 0 -1 11147
+M 11102 11 2 *
 S
 #11149
 The Path Continues~
@@ -1656,6 +1705,7 @@ D8
 ~
 ~
 0 -1 11118
+M 11102 11 3 .
 S
 #11150
 A Dark Cave~
@@ -1669,6 +1719,7 @@ D8
 ~
 ~
 0 -1 11116
+M 11102 12 2 o
 S
 #11151
 Upon the Khelorn~
@@ -1690,6 +1741,7 @@ D7
 ~
 ~
 0 -1 11153
+M 11102 7 5 ~
 > rand_prog 30~
 if isaffected($r) != Flying
 else
@@ -1716,6 +1768,7 @@ D2
 ~
 ~
 0 -1 11151
+M 11102 7 4 .
 S
 #11153
 A Bend in the Khelorn~
@@ -1733,6 +1786,7 @@ D8
 ~
 ~
 0 -1 11151
+M 11102 5 3 ~
 > rand_prog 50~
 if isaffected($r) != Flying
 else
@@ -1760,6 +1814,7 @@ D7
 ~
 ~
 0 -1 11155
+M 11102 4 3 ~
 > rand_prog 80~
 if isaffected($r) != Flying
 else
@@ -1787,6 +1842,7 @@ D8
 ~
 ~
 0 -1 11154
+M 11102 3 2 ~
 > rand_prog 100~
 if isaffected($r) != Flying
 else
@@ -1814,6 +1870,7 @@ D7
 ~
 ~
 0 -1 11157
+M 11102 2 2 ~
 > rand_prog 100~
 if isaffected($r) != Flying
 else
@@ -1836,6 +1893,7 @@ D8
 ~
 ~
 0 -1 11156
+M 11102 1 1 ~
 S
 #11158
 The Boatman's Hut~
@@ -1851,6 +1909,7 @@ D1
 ~
 ~
 0 -1 11135
+M 11102 19 6 o
 S
 #11159
 A Bend in the Khelorn~
@@ -1868,6 +1927,7 @@ D8
 ~
 ~
 0 -1 11117
+M 11102 11 4 ~
 > rand_prog 60~
 if isaffected($r) != Flying
 else
@@ -1883,6 +1943,7 @@ S
 Local SuperMob's office~
 ~
 0 4 1 0
+M 11104 1 1 .
 S
 #11161
 Out on a Limb~
@@ -1895,6 +1956,7 @@ D9
 ~
 ~
 0 -1 11110
+M 11103 3 2 *
 > rand_prog 50~
 mpechoat $r A strong gust of wind causes the branch to sway unpredictably, causeing you to plummet towards the ground.
 mptransfer 0.$r 11162
@@ -1909,6 +1971,7 @@ would be a good time to seek assistance if any is available to you, for you
 have only moments before impact.
 ~
 0 2105476 9 0
+M 11105 1 1 "
 > rand_prog 100~
 if isaffected($r) == Flying
 mpechoat 0.$r You float gently to the ground.
@@ -1935,6 +1998,7 @@ D2
 ~
 ~
 0 -1 11110
+M 11103 1 1 *
 > rand_prog 100~
 mpecho The branch you are on breaks with a loud crack...
 if isaffected($r) == Flying
@@ -1965,6 +2029,7 @@ D5
 ~
 ~
 0 -1 11102
+M 11103 2 2 .
 S
 #11165
 A Filthy Nest~
@@ -1979,6 +2044,7 @@ D8
 ~
 ~
 0 -1 11110
+M 11103 1 2 *
 S
 #11166
 Over a Small Clearing~
@@ -1991,6 +2057,7 @@ D1
 ~
 ~
 0 -1 11110
+M 11103 1 3 *
 S
 #11167
 Inside the Willow's Trunk~
@@ -2006,6 +2073,7 @@ D3
 ~
 ~
 0 -1 11110
+M 11103 3 3 .
 S
 #11168
 Inside the Cave~
@@ -2018,26 +2086,31 @@ D9
 ~
 ~
 0 -1 11133
+M 11102 20 2 o
 S
 #11169
 Floating in a void~
 ~
 0 4 1 0
+M 11106 1 1 .
 S
 #11170
 Floating in a void~
 ~
 0 4 1 0
+M 11107 1 1 .
 S
 #11171
 Floating in a void~
 ~
 0 4 1 0
+M 11108 1 1 .
 S
 #11172
 Floating in a void~
 ~
 0 4 1 0
+M 11109 1 1 .
 S
 #11173
 Before the flaming gates~
@@ -2068,6 +2141,7 @@ D5
 ~
 ~
 0 -1 1
+M 11110 1 1 +
 S
 #11174
 Coders Sanctum~
@@ -2081,6 +2155,7 @@ D3
 ~
 ~
 0 -1 11173
+M 11110 2 1 o
 S
 #11175
 Down the Waterfall~
@@ -2103,6 +2178,7 @@ D5
 ~
 ~
 0 -1 11176
+M 11101 10 4 o
 S
 #11176
 Crushed upon the rocks~
@@ -2115,6 +2191,7 @@ D4
 ~
 ~
 0 -1 11175
+M 11100 1 1 o
 > rand_prog 99~
 if mortinroom($r)
 mpecho The crushing force of the water is too much for you!
@@ -2127,6 +2204,7 @@ S
 &wThe Guardian looks you over.~
 ~
 0 1613758468 1 0
+M 11101 7 4 .
 > entry_prog 100~
 mptransfer $n 11185
 mpat 0.$n mpforce 0.$n look
@@ -2152,6 +2230,7 @@ D9
 ~
 ~
 0 -1 11181
+M 11101 11 4 o
 S
 #11179
 Into the Glowing Tunnel~
@@ -2168,6 +2247,7 @@ D9
 ~
 ~
 0 -1 11180
+M 11101 10 3 o
 S
 #11180
 A Forboding Entrance~
@@ -2189,6 +2269,7 @@ D8
 ~
 ~
 0 -1 11181
+M 11101 9 4 o
 S
 #11181
 Into the Glowing Tunnel~
@@ -2205,6 +2286,7 @@ D7
 ~
 ~
 0 -1 11180
+M 11101 10 5 o
 S
 #11182
 Challenge Entrance~
@@ -2223,6 +2305,7 @@ D3
 ~
 ~
 16384 -1 11177
+M 11101 8 4 H
 S
 #11183
 A Hidden Pass~
@@ -2239,6 +2322,7 @@ D8
 ~
 ~
 0 -1 11184
+M 11102 13 8 ^
 S
 #11184
 End of the Trail~
@@ -2255,6 +2339,7 @@ D7
 ~
 ~
 0 -1 11183
+M 11102 14 9 .
 S
 #11185
 Room One of the Khelorn Challenge~
@@ -2272,6 +2357,7 @@ D3
 ~
 ~
 16384 -1 11186
+M 11101 6 3 H
 S
 #11186
 Room Two of the Khelorn Challenge~
@@ -2285,6 +2371,7 @@ D3
 ~
 ~
 16384 -1 11187
+M 11101 5 3 H
 S
 #11187
 Room Three of the Khelorn Challenge~
@@ -2297,6 +2384,7 @@ D3
 ~
 ~
 16384 -1 11188
+M 11101 4 3 H
 S
 #11188
 Room Four of the Khelorn Challenge~
@@ -2309,6 +2397,7 @@ D3
 ~
 ~
 16384 -1 11189
+M 11101 3 3 H
 S
 #11189
 Room Five of the Khelorn Challenge~
@@ -2322,6 +2411,7 @@ D0
 ~
 ~
 16384 -1 11190
+M 11101 2 3 H
 S
 #11190
 A Final Test~
@@ -2363,6 +2453,7 @@ D9
 ~
 ~
 16384 -1 11192
+M 11101 2 2 o
 S
 #11191
 A Just Reward~
@@ -2371,6 +2462,7 @@ Your life shall be spared this time, but be more careful in the future.
 You find yourself flying up out of the lake and floating in a void.
 ~
 0 1073741828 1 0
+M 11101 1 2 .
 > entry_prog 100~
 mptransfer $n 1
 mpat 0.$n mpforce 0.$n look
@@ -2384,6 +2476,7 @@ you find yourself floating high above the world, before being zipped halfway
 across it to the void.
 ~
 0 1073741828 1 0
+M 11101 1 3 .
 > entry_prog 100~
 mptransfer $n 1
 mpat 0.$n mpforce 0.$n look
@@ -2397,6 +2490,7 @@ of this transgression than they were of many of the others. As you find
 yourself flying upwards, you notice your eq is melting away.
 ~
 0 1073741830 1 0
+M 11101 1 1 .
 S
 #11194
 A Just Reward~
@@ -2406,6 +2500,7 @@ is the arms dealer of Tempra. You find yourself being forgivin for your
 ignorance this time and transported back to the void.
 ~
 0 1073741828 1 0
+M 11101 2 1 .
 > entry_prog 100~
 mptransfer $n 1
 mpat 0.$n mpforce 0.$n look
@@ -2419,6 +2514,7 @@ realm, and therefore you find yourself temporarlily sharing their oblivion.
 When you come to your weapons and armor are gone.
 ~
 0 1073741830 1 0
+M 11101 3 1 .
 S
 #11196
 A Just Reward~
@@ -2427,6 +2523,7 @@ immortal or higher and they will award you a token, provided you have all
 5 of the badges.
 ~
 0 1073741828 1 0
+M 11101 3 2 .
 S
 #11197
 A Just Reward~
@@ -2436,16 +2533,19 @@ the brink of a large pit of lava, until a sudden gust of wind comes along
 and knocks you in.
 ~
 0 1073741830 1 0
+M 11101 2 4 .
 S
 #11198
 Floating in a void~
 ~
 0 1073741828 1 0
+M 11111 1 1 .
 S
 #11199
 Floating in a void~
 ~
 0 1073741828 1 0
+M 11112 1 1 .
 S
 #0
 

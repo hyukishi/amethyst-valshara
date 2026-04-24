@@ -103,6 +103,7 @@ D8
 ~
 ~
 0 -1 10606
+M 10601 1 3 o
 S
 #10602
 Graveyard~
@@ -140,6 +141,7 @@ D9
 ~
 ~
 0 -1 10605
+M 10601 2 3 o
 S
 #10603
 Graveyard~
@@ -173,6 +175,7 @@ D9
 ~
 ~
 0 -1 10606
+M 10601 3 3 o
 S
 #10604
 Graveyard, Northeast Corner~
@@ -196,6 +199,7 @@ D9
 ~
 ~
 0 -1 10607
+M 10601 4 3 o
 S
 #10605
 Graveyard~
@@ -228,6 +232,7 @@ D8
 ~
 ~
 0 -1 10610
+M 10601 1 4 o
 S
 #10606
 Graveyard~
@@ -270,6 +275,7 @@ D9
 ~
 ~
 0 -1 10609
+M 10601 2 4 o
 S
 #10607
 Graveyard~
@@ -313,6 +319,7 @@ D9
 ~
 ~
 0 -1 10610
+M 10601 3 4 o
 S
 #10608
 Graveyard~
@@ -349,6 +356,7 @@ tablet~
 The tablet reads, "It's too late to tell young Brice that
 sometimes lightning can strike twice."
 ~
+M 10601 4 4 o
 S
 #10609
 Graveyard~
@@ -381,6 +389,7 @@ D8
 ~
 ~
 0 -1 10614
+M 10601 1 5 o
 S
 #10610
 Graveyard~
@@ -424,6 +433,7 @@ D9
 ~
 ~
 0 -1 10613
+M 10601 2 5 o
 S
 #10611
 Graveyard~
@@ -468,6 +478,7 @@ D9
 ~
 ~
 0 -1 10614
+M 10601 3 5 o
 S
 #10612
 Graveyard~
@@ -499,6 +510,7 @@ D9
 ~
 ~
 0 -1 10615
+M 10601 4 5 o
 S
 #10613
 Graveyard, Southwest Corner~
@@ -523,6 +535,7 @@ D6
 ~
 ~
 0 -1 10610
+M 10601 1 6 o
 S
 #10614
 Graveyard~
@@ -555,6 +568,7 @@ D7
 ~
 ~
 0 -1 10609
+M 10601 2 6 o
 S
 #10615
 Graveyard~
@@ -588,6 +602,7 @@ D7
 ~
 ~
 0 -1 10610
+M 10601 3 6 o
 S
 #10616
 Graveyard, Southeast Corner~
@@ -615,6 +630,7 @@ D8
 ~
 ~
 0 -1 10617
+M 10601 4 6 o
 S
 #10617
 Dark Tunnel~
@@ -634,6 +650,7 @@ D8
 ~
 ~
 0 -1 10618
+M 10601 5 7 o
 S
 #10618
 New Hope, Near a Dark Tunnel~
@@ -658,6 +675,7 @@ D9
 ~
 ~
 0 -1 12406
+M 10601 6 8 o
 S
 #10619
 Graveyard, at the old cathedral~
@@ -679,6 +697,7 @@ D10
 ~
 steps~
 526336 -1 10620
+M 10601 2 2 o
 S
 #10620
 Amongst the ruins~
@@ -696,6 +715,7 @@ D10
 ~
 steps~
 526336 -1 10619
+M 10601 1 1 o
 S
 #0
 

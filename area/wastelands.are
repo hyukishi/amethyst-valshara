@@ -570,6 +570,7 @@ D2
 ~
 ~
 0 -1 576
+M 401 7 14 :
 S
 #402
 A Fork in the Path~
@@ -595,6 +596,7 @@ D9
 ~
 ~
 0 -1 403
+M 401 7 13 .
 S
 #403
 In a Deep Ravine~
@@ -611,6 +613,7 @@ D7
 ~
 ~
 0 -1 404
+M 401 6 14 ^
 S
 #404
 In a Deep Ravine~
@@ -629,6 +632,7 @@ D8
 ~
 ~
 0 -1 403
+M 401 5 13 ^
 S
 #405
 In a Deep Ravine~
@@ -647,6 +651,7 @@ D9
 ~
 ~
 0 -1 404
+M 401 6 12 ^
 S
 #406
 Twisting Through the Wastelands~
@@ -664,6 +669,7 @@ D9
 ~
 ~
 0 -1 407
+M 401 6 11 ^
 S
 #407
 In a Ravine~
@@ -685,6 +691,7 @@ D9
 ~
 ~
 0 -1 485
+M 401 5 12 ^
 S
 #408
 At the Top of a Landslide~
@@ -702,6 +709,7 @@ D8
 ~
 ~
 128 -1 407
+M 401 4 11 ^
 S
 #409
 Upon the Ridge~
@@ -719,6 +727,7 @@ D9
 ~
 ~
 0 -1 410
+M 401 4 12 ,
 S
 #410
 Upon a Plateau~
@@ -749,6 +758,7 @@ D9
 ~
 ~
 0 -1 412
+M 401 3 13 ,
 S
 #411
 Edge of the Plateau~
@@ -762,6 +772,7 @@ D7
 ~
 ~
 0 -1 410
+M 401 4 14 ,
 S
 #412
 Edge of the Plateau~
@@ -776,6 +787,7 @@ D6
 ~
 ~
 0 -1 410
+M 401 2 14 ,
 S
 #413
 In the Wastelands~
@@ -799,6 +811,7 @@ D8
 ~
 ~
 0 -1 410
+M 401 2 12 ^
 S
 #414
 Upon a Rocky Path~
@@ -817,6 +830,7 @@ D9
 ~
 ~
 0 -1 413
+M 401 3 11 .
 S
 #415
 In the Wastelands~
@@ -834,6 +848,7 @@ D8
 ~
 ~
 0 -1 414
+M 401 2 10 ^
 S
 #416
 The Desolate Wastelands~
@@ -856,6 +871,7 @@ D9
 ~
 ~
 0 -1 415
+M 401 3 9 ^
 S
 #417
 Upon a Ridge~
@@ -874,6 +890,7 @@ D8
 ~
 ~
 0 -1 419
+M 401 4 10 ^
 S
 #418
 Upon a Ledge~
@@ -887,6 +904,7 @@ D0
 ~
 ~
 0 -1 416
+M 401 3 10 ,
 S
 #419
 Top of the Ridge~
@@ -905,6 +923,7 @@ D7
 ~
 ~
 0 -1 417
+M 401 5 11 ^
 S
 #420
 Upon a Ledge~
@@ -923,6 +942,7 @@ D7
 ~
 ~
 0 -1 421
+M 401 5 10 ^
 S
 #421
 A Narrow Ledge~
@@ -940,6 +960,7 @@ D8
 ~
 ~
 0 -1 420
+M 401 4 9 ^
 S
 #422
 An Obsidian Ledge~
@@ -958,6 +979,7 @@ D9
 ~
 ~
 0 -1 421
+M 401 5 8 ,
 S
 #423
 A Choice of Directions~
@@ -980,6 +1002,7 @@ D7
 ~
 ~
 0 -1 422
+M 401 6 9 ,
 S
 #424
 A Fork in the Path~
@@ -1002,6 +1025,7 @@ D9
 ~
 ~
 0 -1 423
+M 401 7 8 .
 S
 #425
 Upon a Narrow Ledge~
@@ -1021,6 +1045,7 @@ D8
 ~
 ~
 0 -1 424
+M 401 6 7 ,
 S
 #426
 Before a Cave~
@@ -1043,6 +1068,7 @@ D9
 ~
 ~
 0 -1 425
+M 401 7 6 ,
 S
 #427
 Upon a Narrow Pass~
@@ -1059,6 +1085,7 @@ D7
 ~
 ~
 0 -1 426
+M 401 8 7 ^
 S
 #428
 Near a Ridge~
@@ -1076,6 +1103,7 @@ D6
 ~
 ~
 0 -1 429
+M 401 8 6 ^
 S
 #429
 Before a Glacier~
@@ -1093,6 +1121,7 @@ D9
 ~
 ~
 0 -1 428
+M 401 9 5 ^
 S
 #430
 In the Wastelands~
@@ -1113,6 +1142,7 @@ D1
 ~
 ~
 0 -1 431
+M 401 9 6 ^
 S
 #431
 Across the Northern Wastes~
@@ -1132,6 +1162,7 @@ D8
 ~
 ~
 0 -1 432
+M 401 10 6 :
 S
 #432
 Before the Pass~
@@ -1153,6 +1184,7 @@ D8
 ~
 ~
 0 -1 439
+M 401 11 7 :
 S
 #433
 In the Rocky Pass~
@@ -1170,6 +1202,7 @@ D9
 ~
 ~
 0 -1 432
+M 401 12 6 ^
 S
 #434
 Creeping Across the Slope~
@@ -1186,6 +1219,7 @@ D8
 ~
 ~
 0 -1 433
+M 401 11 5 ^
 S
 #435
 At the Edge of the Slope~
@@ -1203,6 +1237,7 @@ D8
 ~
 ~
 0 -1 434
+M 401 10 4 ^
 S
 #436
 At the Top of the Slope~
@@ -1219,6 +1254,7 @@ D9
 ~
 ~
 0 -1 435
+M 401 11 3 ^
 S
 #437
 Upon the Plateau~
@@ -1237,6 +1273,7 @@ D9
 ~
 ~
 0 -1 436
+M 401 12 2 ^
 S
 #438
 Upon the Glacier~
@@ -1254,6 +1291,7 @@ D2
 ~
 ~
 0 -1 437
+M 401 12 1 ,
 S
 #439
 A Fork in the Path~
@@ -1281,6 +1319,7 @@ D9
 ~
 ~
 0 -1 460
+M 401 12 8 .
 S
 #440
 In a Gorge~
@@ -1298,6 +1337,7 @@ D9
 ~
 ~
 0 -1 441
+M 401 13 8 ^
 > rand_prog 5~
 mpecho _gre A small pebble drops on your head!
 mpdamage $r 1
@@ -1320,6 +1360,7 @@ D8
 ~
 ~
 0 -1 442
+M 401 12 9 ^
 > rand_prog 5~
 mpecho _gre A small pebble drops on your head!
 mpdamage $r 5
@@ -1352,6 +1393,7 @@ D9
 ~
 ~
 0 -1 443
+M 401 13 10 ^
 S
 #443
 In the Crevice~
@@ -1368,6 +1410,7 @@ D6
 ~
 ~
 0 -1 442
+M 401 12 11 ^
 > rand_prog 5~
 mpecho _gre A pebble falls upon your head!
 mpdamage $r 5
@@ -1390,6 +1433,7 @@ D3
 ~
 ~
 0 -1 445
+M 401 12 10 ^
 > rand_prog 10~
 mpecho _gre A pebble falls upon your head!
 mpdamage $r 10
@@ -1412,6 +1456,7 @@ D2
 ~
 ~
 0 -1 446
+M 401 11 10 ^
 > rand_prog 25~
 mpecho _gre A small rock falls from the cliff above!
 mpdamage $r 25
@@ -1434,6 +1479,7 @@ D7
 ~
 ~
 0 -1 447
+M 401 11 11 ^
 > rand_prog 15~
 mpecho _gre A pebble falls from the cliffs above!
 mpdamage $r 10
@@ -1457,6 +1503,7 @@ D9
 ~
 ~
 0 -1 448
+M 401 10 10 ^
 > rand_prog 15~
 mpecho _gre A pebble falls from the cliffs above!
 mpdamage $r 10
@@ -1480,6 +1527,7 @@ D8
 ~
 ~
 0 -1 449
+M 401 9 11 ^
 > rand_prog 10~
 mpecho _gre A small pebble drops on your head!
 mpdamage $r 5
@@ -1511,6 +1559,7 @@ D9
 ~
 ~
 128 -1 451
+M 401 10 12 ^
 S
 #450
 In a Ravine~
@@ -1527,6 +1576,7 @@ D9
 ~
 ~
 0 -1 452
+M 401 10 13 ^
 S
 #451
 In the Watch Tower~
@@ -1540,6 +1590,7 @@ D6
 ~
 ~
 0 -1 449
+M 401 9 13 #
 S
 #452
 South of the Mesa~
@@ -1558,6 +1609,7 @@ D7
 ~
 ~
 0 -1 453
+M 401 9 14 ^
 S
 #453
 A Path Around a Mesa~
@@ -1575,6 +1627,7 @@ D8
 ~
 ~
 0 -1 452
+M 401 8 13 .
 S
 #454
 In a Ravine~
@@ -1594,6 +1647,7 @@ D9
 ~
 ~
 0 -1 453
+M 401 9 12 :
 S
 #455
 Edge of a Ridge~
@@ -1612,6 +1666,7 @@ D9
 ~
 ~
 0 -1 456
+M 401 8 11 :
 S
 #456
 Upon a Ridge~
@@ -1633,6 +1688,7 @@ D9
 ~
 ~
 0 -1 496
+M 401 7 12 :
 S
 #457
 An Abandoned Campsite~
@@ -1647,6 +1703,7 @@ D9
 ~
 ~
 0 -1 402
+M 401 8 12 :
 S
 #458
 In the Wastelands~
@@ -1664,6 +1721,7 @@ D9
 ~
 ~
 0 -1 459
+M 401 11 8 ,
 S
 #459
 A Choice of Directions~
@@ -1684,6 +1742,7 @@ D6
 ~
 ~
 0 -1 458
+M 401 10 9 ,
 S
 #460
 In the Wastelands~
@@ -1702,6 +1761,7 @@ D6
 ~
 ~
 0 -1 439
+M 401 11 9 ,
 S
 #461
 Upon a Wasteland Trail~
@@ -1719,6 +1779,7 @@ D7
 ~
 ~
 0 -1 462
+M 401 10 8 .
 S
 #462
 Before the Mountain~
@@ -1737,6 +1798,7 @@ D8
 ~
 ~
 0 -1 461
+M 401 9 7 ^
 S
 #463
 Upon the Mountainside~
@@ -1754,6 +1816,7 @@ D9
 ~
 ~
 0 -1 464
+M 401 9 8 ^
 S
 #464
 Around the Mountain~
@@ -1772,6 +1835,7 @@ D6
 ~
 ~
 0 -1 463
+M 401 8 9 ^
 S
 #465
 Upon the Mountainside~
@@ -1789,6 +1853,7 @@ D9
 ~
 ~
 0 -1 466
+M 401 8 8 ^
 S
 #466
 Near the Top~
@@ -1808,6 +1873,7 @@ D6
 ~
 ~
 0 -1 465
+M 401 7 9 ^
 S
 #467
 At the Top~
@@ -1827,6 +1893,7 @@ D1
 ~
 ~
 0 -1 468
+M 401 7 10 ,
 S
 #468
 In the Elven Ruins~
@@ -1851,6 +1918,7 @@ D9
 ~
 ~
 0 -1 471
+M 401 8 10 .
 S
 #469
 Before the Shattered Doors~
@@ -1869,6 +1937,7 @@ D9
 ~
 ~
 0 -1 468
+M 401 9 9 .
 S
 #470
 Atop the Glittering Hoard~
@@ -1884,6 +1953,7 @@ D0
 ~
 ~
 0 -1 469
+M 401 9 10 o
 S
 #471
 Wandering Through the Ruins~
@@ -1903,6 +1973,7 @@ D7
 ~
 ~
 0 -1 472
+M 401 7 11 .
 S
 #472
 At the Edge of the Nest~
@@ -1923,6 +1994,7 @@ D8
 ~
 ~
 0 -1 471
+M 401 6 10 ,
 S
 #473
 In the Middle of the Nest~
@@ -1939,6 +2011,7 @@ D8
 ~
 ~
 0 -1 472
+M 401 5 9 ,
 S
 #474
 At the Base of a Hill~
@@ -1957,6 +2030,7 @@ D8
 ~
 ~
 0 -1 475
+M 401 10 11 ^
 S
 #475
 In a Ravine~
@@ -1974,6 +2048,7 @@ D7
 ~
 ~
 0 -1 474
+M 401 11 12 :
 S
 #476
 A Sharp Bend~
@@ -1991,6 +2066,7 @@ D6
 ~
 ~
 0 -1 477
+M 401 11 13 :
 > rand_prog 5~
 mpecho _gre A small pebble drops on your head!
 mpdamage $r 5
@@ -2012,6 +2088,7 @@ D9
 ~
 ~
 0 -1 476
+M 401 12 12 :
 S
 #478
 In the Hilly Wastes~
@@ -2028,6 +2105,7 @@ D9
 ~
 ~
 0 -1 477
+M 401 13 11 ^
 S
 #479
 In the Foothills~
@@ -2046,6 +2124,7 @@ D7
 ~
 ~
 0 -1 478
+M 401 14 12 ^
 S
 #480
 Before the Orocarni~
@@ -2064,6 +2143,7 @@ D9
 ~
 ~
 0 -1 479
+M 401 15 11 ^
 S
 #481
 In the Foothills~
@@ -2082,6 +2162,7 @@ D8
 ~
 ~
 0 -1 480
+M 401 14 10 ^
 S
 #482
 In the Foothills~
@@ -2100,6 +2181,7 @@ D9
 ~
 ~
 0 -1 442
+M 401 14 9 ^
 S
 #483
 A Road Through the Foothills~
@@ -2118,6 +2200,7 @@ D3
 ~
 ~
 0 -1 482
+M 401 15 9 .
 S
 #484
 The Orocarni Mountains~
@@ -2131,6 +2214,7 @@ D3
 ~
 ~
 0 -1 483
+M 401 16 9 ^
 S
 #485
 Deep in the Ravine~
@@ -2148,6 +2232,7 @@ D8
 ~
 ~
 0 -1 486
+M 401 4 13 ^
 S
 #486
 End of the Ravine~
@@ -2161,6 +2246,7 @@ D7
 ~
 ~
 0 -1 485
+M 401 5 14 ^
 S
 #487
 Overlooking a Pass~
@@ -2174,6 +2260,7 @@ D2
 ~
 ~
 0 -1 410
+M 401 3 12 ,
 S
 #488
 Broken Land~
@@ -2193,6 +2280,7 @@ D9
 ~
 ~
 0 -1 489
+M 401 2 11 ^
 S
 #489
 Winding Through the Boulders~
@@ -2210,6 +2298,7 @@ D8
 ~
 ~
 0 -1 490
+M 401 1 12 ,
 S
 #490
 A Cave Entrance~
@@ -2228,6 +2317,7 @@ D7
 ~
 ~
 0 -1 489
+M 401 2 13 ,
 S
 #491
 In a Cave~
@@ -2245,6 +2335,7 @@ D2
 ~
 ~
 0 -1 492
+M 401 1 13 o
 S
 #492
 In a Cave~
@@ -2259,6 +2350,7 @@ D0
 ~
 ~
 0 -1 491
+M 401 1 14 o
 S
 #493
 Upon the Volcano's Flank~
@@ -2280,6 +2372,7 @@ D7
 ~
 ~
 0 -1 494
+M 401 6 8 ^
 S
 #494
 Climbing the Spire~
@@ -2297,6 +2390,7 @@ D8
 ~
 ~
 0 -1 493
+M 401 5 7 ^
 S
 #495
 Approaching the Slabs~
@@ -2316,6 +2410,7 @@ D8
 ~
 ~
 0 -1 494
+M 401 4 6 ^
 S
 #496
 End of the Ridge~
@@ -2329,6 +2424,7 @@ D6
 ~
 ~
 0 -1 456
+M 401 6 13 ^
 S
 #497
 In the Cave~
@@ -2343,6 +2439,7 @@ D0
 ~
 ~
 0 -1 426
+M 401 7 7 o
 S
 #499
 Floating in a void~
@@ -2352,11 +2449,13 @@ D5
 ~
 ~
 0 -1 1
+M 402 1 1 .
 S
 #500
 Final Room~
 ~
 0 4 1 0
+M 403 1 1 .
 S
 #0
 

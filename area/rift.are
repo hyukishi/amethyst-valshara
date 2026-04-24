@@ -2606,6 +2606,7 @@ A dark passage.
 ~
 ~
 0 -1 32201
+M 32200 1 1 o
 > speech_prog p town~
 mptransfer 0.$n 12439
 mpat 12439 mpechoaround $n $n materializes before your very eyes.
@@ -2639,6 +2640,7 @@ A dark passage.
 ~
 ~
 0 -1 32202
+M 32201 1 1 o
 S
 #32202
 A Divided Tunnel~
@@ -2671,6 +2673,7 @@ A new path beckons.
 ~
 ~
 0 -1 32233
+M 32202 1 1 o
 S
 #32203
 The Rift~
@@ -2699,6 +2702,7 @@ A tunnel ascends sharply.
 ~
 ~
 0 -1 32202
+M 32203 1 1 o
 S
 #32204
 An Opening in the Rift Wall~
@@ -2730,6 +2734,7 @@ A ledge skirts the edge of the rift.
 ~
 ~
 0 -1 32214
+M 32204 1 1 #
 S
 #32205
 A Junction~
@@ -2762,6 +2767,7 @@ The rift edge.
 ~
 ~
 0 -1 32204
+M 32205 1 1 o
 S
 #32206
 An Icy Cave~
@@ -2783,6 +2789,7 @@ A meeting of passages.
 ~
 ~
 0 -1 32205
+M 32206 1 1 o
 S
 #32207
 An Icy Cavern~
@@ -2809,6 +2816,7 @@ A meeting of passages.
 ~
 ~
 0 -1 32205
+M 32207 1 1 o
 S
 #32208
 An Icy Passage~
@@ -2835,6 +2843,7 @@ An icy cavern filled with sleeping furs.
 ~
 ~
 16777216 -1 32207
+M 32208 1 1 o
 S
 #32209
 An Icy Passage~
@@ -2861,6 +2870,7 @@ This major passage continues.
 ~
 ~
 0 -1 32210
+M 32209 1 1 o
 > entry_prog 100~
 if ispc($n)
 if race($n) == half-troll
@@ -2909,6 +2919,7 @@ This major passage continues.
 ~
 ~
 0 -1 32211
+M 32210 1 1 o
 S
 #32211
 An Icy Passage~
@@ -2942,6 +2953,7 @@ The passage bends sharply.
 ~
 ~
 0 -1 32212
+M 32211 1 1 o
 S
 #32212
 An Icy Passage~
@@ -2968,6 +2980,7 @@ The passage bends sharply.
 ~
 ~
 0 -1 32211
+M 32212 1 1 o
 S
 #32213
 A Storage Cave~
@@ -2986,6 +2999,7 @@ An icy passage.
 ~
 ~
 0 -1 32211
+M 32213 1 1 o
 S
 #32214
 A Narrow Ledge~
@@ -3011,6 +3025,7 @@ Safer terrain.
 ~
 ~
 0 -1 32204
+M 32214 1 1 o
 S
 #32215
 A Rocky Platform~
@@ -3037,6 +3052,7 @@ The cave is swathed in gloom.
 ~
 ~
 0 -1 32216
+M 32215 1 1 o
 S
 #32216
 An Icy Cave~
@@ -3068,6 +3084,7 @@ The rocky platform without.
 ~
 ~
 0 -1 32215
+M 32216 1 1 o
 > rand_prog 50~
 if ispc($r)
 mea $r _lbl A large chunk of ice falls from the ceiling, striking you!
@@ -3108,6 +3125,7 @@ An icy cave.
 ~
 ~
 0 -1 32216
+M 32217 1 1 o
 S
 #32218
 A Burial Chamber, of Sorts~
@@ -3131,6 +3149,7 @@ An icy cave.
 ~
 ~
 0 -1 32216
+M 32218 1 1 o
 > act_prog p begins digging.~
 mea $n Excavating the ice is hard work...
 mea $n _lbl Additionally, your labors are causing the roof to vibrate...
@@ -3165,6 +3184,7 @@ The ledge continues.
 ~
 ~
 0 -1 32220
+M 32219 1 1 o
 S
 #32220
 An Icy Ledge~
@@ -3190,6 +3210,7 @@ Back inside.
 ~
 ~
 0 -1 32221
+M 32220 1 1 o
 S
 #32221
 A Junction~
@@ -3229,6 +3250,7 @@ A twisting passage that appears little-used.
 ~
 ~
 0 -1 32227
+M 32221 1 1 o
 S
 #32222
 The Ogre Caverns~
@@ -3254,6 +3276,7 @@ A collection of passages converge here.
 ~
 ~
 0 -1 32221
+M 32222 1 1 o
 S
 #32223
 The Ogre Caverns~
@@ -3274,6 +3297,7 @@ Ogre! Ogre!
 ~
 ~
 0 -1 32222
+M 32223 1 1 o
 S
 #32224
 A Major Passage~
@@ -3300,6 +3324,7 @@ The cavern guard barracks.
 ~
 ~
 0 -1 32225
+M 32224 1 1 o
 S
 #32225
 Caverns of the Elite~
@@ -3326,6 +3351,7 @@ Caverns of the elite.
 ~
 ~
 0 -1 32226
+M 32225 1 1 o
 S
 #32226
 Caverns of the Elite~
@@ -3352,6 +3378,7 @@ Caverns of the elite.
 ~
 ~
 0 -1 32225
+M 32226 1 1 o
 S
 #32227
 A Little-Used Passage~
@@ -3377,6 +3404,7 @@ Several passages converge here.
 ~
 ~
 0 -1 32221
+M 32227 1 1 o
 S
 #32228
 A Blizzard-Ridden Ledge~
@@ -3403,6 +3431,7 @@ The ledge continues.
 ~
 ~
 0 -1 32229
+M 32228 1 1 o
 S
 #32229
 A Blizzard-Ridden Ledge~
@@ -3428,6 +3457,7 @@ A large boulder fills most of the opening.
 ~
 boulder~
 35 -1 32230
+M 32229 1 1 o
 S
 #32230
 Cave of Bones~
@@ -3454,6 +3484,7 @@ A boulder fills most of the opening.
 ~
 boulder~
 35 -1 32229
+M 32230 1 1 o
 S
 #32231
 Cave of the Toad~
@@ -3478,6 +3509,7 @@ An icy ledge.
 ~
 ~
 0 -1 32232
+M 32231 1 1 o
 S
 #32232
 An Icy Ledge~
@@ -3499,6 +3531,7 @@ Weirdness.
 ~
 ~
 0 -1 32231
+M 32232 1 1 o
 S
 #32233
 A Long, Narrow Ledge~
@@ -3531,6 +3564,7 @@ The ledge continues.
 ~
 ~
 0 -1 32236
+M 32233 1 1 o
 S
 #32234
 The Yeti Camp~
@@ -3556,6 +3590,7 @@ The camp continues.
 ~
 ~
 0 -1 32235
+M 32234 1 1 o
 S
 #32235
 The Yeti Camp~
@@ -3576,6 +3611,7 @@ The camp continues.
 ~
 ~
 0 -1 32234
+M 32235 1 1 o
 S
 #32236
 A Narrow, Mist-Shrouded Ledge~
@@ -3607,6 +3643,7 @@ It is impossible to see through the mist. It would be inadvisable to wander blin
 ~
 ~
 0 -1 32237
+M 32236 1 1 o
 S
 #32237
 A Misty Cave~
@@ -3625,6 +3662,7 @@ undiscovered for, most likely, all eternity.
 ~
 ~
 0 3153935 0 0
+M 32237 1 1 o
 S
 #32238
 The Rift's Edge~
@@ -3656,6 +3694,7 @@ A feline lair.
 ~
 ~
 0 -1 32239
+M 32238 2 2 o
 S
 #32239
 Lair of the Leopards~
@@ -3672,6 +3711,7 @@ D8
 ~
 ~
 0 -1 32238
+M 32238 1 1 o
 S
 #32240
 A Sharp Bend in the Ledge~
@@ -3709,6 +3749,7 @@ A barracks cave.
 ~
 ~
 0 -1 32243
+M 32239 1 1 o
 S
 #32241
 The Barracks Complex~
@@ -3735,6 +3776,7 @@ The barracks continue.
 ~
 ~
 0 -1 32242
+M 32240 1 1 o
 S
 #32242
 The Barracks Complex~
@@ -3761,6 +3803,7 @@ The barracks continue.
 ~
 ~
 0 -1 32243
+M 32241 1 1 o
 S
 #32243
 The Barracks Complex~
@@ -3793,6 +3836,7 @@ The ledge outside.
 ~
 ~
 0 -1 32244
+M 32242 1 1 o
 S
 #32244
 The Barracks Complex~
@@ -3813,6 +3857,7 @@ The ledge outside.
 ~
 ~
 0 -1 32243
+M 32243 1 1 o
 S
 #32245
 The Icy Ledge~
@@ -3843,6 +3888,7 @@ A storage cavern.
 ~
 boulder~
 1059 -1 32246
+M 32244 2 1 o
 S
 #32246
 A Storage Cave~
@@ -3860,6 +3906,7 @@ D6
 ~
 boulder~
 1059 -1 32245
+M 32244 1 2 o
 S
 #32247
 The Edge of the Ledge~
@@ -3884,6 +3931,7 @@ A tunnel runs into the mountain.
 ~
 ~
 0 -1 32248
+M 32245 1 1 o
 S
 #32248
 A Junction~
@@ -3915,6 +3963,7 @@ The icy ledge.
 ~
 ~
 0 -1 32247
+M 32246 1 1 o
 S
 #32249
 A Dead End~
@@ -3942,6 +3991,7 @@ This section of the tunnel looks extremely unsafe.
 ~
 ~
 0 -1 32250
+M 32247 1 1 o
 S
 #32250
 A Grim Fate~
@@ -3955,6 +4005,7 @@ beneath hundreds of tons of rubble, never to be seen again.
 ~
 ~
 0 3153934 0 0
+M 32248 1 1 o
 S
 #32251
 A Dimly Lit Tunnel~
@@ -3979,6 +4030,7 @@ A guard chamber.
 ~
 ~
 0 -1 32252
+M 32249 1 1 o
 S
 #32252
 A Guard Chamber~
@@ -4005,6 +4057,7 @@ Back onto the ledge.
 ~
 ~
 0 -1 32253
+M 32250 1 1 o
 S
 #32253
 Back Out on the Ledge~
@@ -4031,6 +4084,7 @@ Back inside.
 ~
 ~
 0 -1 32252
+M 32251 1 1 o
 S
 #32254
 The Icy Ledge~
@@ -4062,6 +4116,7 @@ Another tunnel.
 ~
 ~
 0 -1 32260
+M 32252 1 1 o
 S
 #32255
 The Icy Ledge~
@@ -4094,6 +4149,7 @@ A small cave.
 ~
 ~
 0 -1 32256
+M 32253 1 1 o
 > entry_prog 100~
 if dex($n) > 16
 mea $n _lbl Strong winds threaten to tear you from the ledge!
@@ -4141,6 +4197,7 @@ The storm ravaged ledge.
 ~
 ~
 0 -1 32255
+M 32254 1 1 o
 S
 #32257
 The Icy Ledge~
@@ -4173,6 +4230,7 @@ A small cave.
 ~
 ~
 0 -1 32259
+M 32255 2 1 o
 S
 #32258
 The End of the Journey~
@@ -4193,6 +4251,7 @@ The only way back.
 ~
 ~
 0 -1 32257
+M 32256 1 1 o
 S
 #32259
 The Stone Giant Quarters~
@@ -4211,6 +4270,7 @@ D6
 ~
 ~
 0 -1 32257
+M 32255 1 2 o
 S
 #32260
 A Busy Passage~
@@ -4236,6 +4296,7 @@ The tunnel deepens.
 ~
 ~
 0 -1 32261
+M 32257 1 1 o
 S
 #32261
 A Bend in the Tunnel~
@@ -4261,6 +4322,7 @@ A busy passage.
 ~
 ~
 0 -1 32260
+M 32258 1 1 o
 S
 #32262
 An Unexpected Sensation~
@@ -4293,6 +4355,7 @@ Waves of heat strike you from this direction.
 ~
 ~
 16777216 -1 32263
+M 32259 1 1 o
 > entry_prog 100~
 mea $n _red An almost welcome wave of heat washes over you.
 
@@ -4318,6 +4381,7 @@ Back out in the cold.
 ~
 ~
 0 -1 32262
+M 32260 1 1 o
 S
 #32264
 The End of the Tunnel~
@@ -4343,6 +4407,7 @@ A long, even passage.
 ~
 ~
 0 -1 32265
+M 32261 1 1 o
 S
 #32265
 A Sloping Passage~
@@ -4367,6 +4432,7 @@ The passage slopes upwards.
 ~
 ~
 0 -1 32264
+M 32262 1 1 o
 S
 #32266
 A Sloping Passage~
@@ -4393,6 +4459,7 @@ The passage slopes upwards.
 ~
 ~
 0 -1 32265
+M 32263 1 1 o
 S
 #32267
 A Sloping Passage~
@@ -4424,6 +4491,7 @@ The passage slopes upward.
 ~
 ~
 0 -1 32266
+M 32264 1 1 o
 S
 #32268
 The Lower Levels~
@@ -4447,6 +4515,7 @@ D2
 ~
 ~
 0 -1 32269
+M 32264 1 2 o
 S
 #32269
 An Open Cavern~
@@ -4487,6 +4556,7 @@ A huge boulder conceals unknown perils.
 ~
 boulder~
 1059 -1 32273
+M 32264 1 3 o
 S
 #32270
 A Vaulted Cavern~
@@ -4519,6 +4589,7 @@ The marvels continue.
 ~
 ~
 0 -1 32271
+M 32265 1 1 o
 S
 #32271
 Mistress of the Wyrm~
@@ -4543,6 +4614,7 @@ The marvels continue.
 ~
 ~
 0 -1 32270
+M 32266 1 1 o
 S
 #32272
 A Dead End~
@@ -4561,6 +4633,7 @@ The open cavern.
 ~
 ~
 0 -1 32269
+M 32267 1 1 o
 S
 #32273
 The Jarl's Complex~
@@ -4587,6 +4660,7 @@ A junction.
 ~
 ~
 0 -1 32275
+M 32268 1 1 o
 S
 #32274
 Ogre Pens~
@@ -4606,6 +4680,7 @@ A junction.
 ~
 ~
 0 -1 32275
+M 32269 1 1 o
 S
 #32275
 A Junction~
@@ -4648,6 +4723,7 @@ Another guest cavern.
 ~
 ~
 0 -1 32276
+M 32270 1 1 o
 S
 #32276
 Emissaries' Cavern~
@@ -4668,6 +4744,7 @@ A junction.
 ~
 ~
 0 -1 32275
+M 32271 1 1 o
 S
 #32277
 A Guest Chamber~
@@ -4690,6 +4767,7 @@ A boulder bars the way.
 ~
 boulder~
 1059 -1 32275
+M 32272 1 1 o
 S
 #32278
 An Opulent Prison~
@@ -4708,6 +4786,7 @@ D2
 ~
 boulder~
 1059 -1 32279
+M 32273 1 1 o
 S
 #32279
 The Great Southern Passage~
@@ -4738,6 +4817,7 @@ The great southern passage continues.
 ~
 ~
 0 -1 32280
+M 32273 1 2 o
 S
 #32280
 The Great Southern Passage~
@@ -4764,6 +4844,7 @@ An antechamber.
 ~
 ~
 0 -1 32281
+M 32274 1 1 o
 S
 #32281
 The Jarl's Antechamber~
@@ -4788,6 +4869,7 @@ The great cavern of the Jarl.
 ~
 ~
 0 -1 32282
+M 32275 1 1 o
 S
 #32282
 The Great Cavern of the Jarl~
@@ -4819,6 +4901,7 @@ The great cavern of the Jarl.
 ~
 ~
 0 -1 32289
+M 32276 1 2 o
 S
 #32283
 The Great Cavern of the Jarl~
@@ -4847,6 +4930,7 @@ D3
 ~
 ~
 0 -1 32282
+M 32276 2 2 o
 S
 #32284
 The Kitchens~
@@ -4867,6 +4951,7 @@ The great cavern of the Jarl.
 ~
 ~
 0 -1 32283
+M 32276 2 1 o
 S
 #32285
 The Armory~
@@ -4893,6 +4978,7 @@ The great cavern of the Jarl.
 ~
 ~
 0 -1 32283
+M 32276 3 2 o
 S
 #32286
 Common Quarters~
@@ -4911,6 +4997,7 @@ The armory.
 ~
 ~
 0 -1 32285
+M 32276 3 1 o
 S
 #32287
 The Kennels~
@@ -4932,6 +5019,7 @@ D8
 ~
 boulder~
 1059 -1 32288
+M 32276 4 2 o
 S
 #32288
 Chamber of the Carls~
@@ -4954,6 +5042,7 @@ D7
 ~
 boulder~
 1059 -1 32287
+M 32276 5 3 o
 S
 #32289
 The Great Cavern of the Jarl~
@@ -4987,6 +5076,7 @@ A stair runs up to a narrow ledge.
 ~
 ~
 0 -1 32290
+M 32276 1 3 o
 S
 #32290
 A High Ledge~
@@ -5006,6 +5096,7 @@ The great cavern lies at the bottom of the stair.
 ~
 ~
 0 -1 32289
+M 32277 1 1 o
 S
 #32291
 The Great Cavern of the Jarl~
@@ -5041,6 +5132,7 @@ A stair runs up to a narrow ledge.
 ~
 ~
 0 -1 32292
+M 32276 2 3 o
 S
 #32292
 A High Ledge~
@@ -5060,6 +5152,7 @@ The great cavern lies at the bottom of the stair.
 ~
 ~
 0 -1 32291
+M 32278 1 1 o
 S
 #32293
 The Great Cavern of the Jarl~
@@ -5091,6 +5184,7 @@ The throne of the Jarl.
 ~
 ~
 0 -1 32295
+M 32279 1 1 o
 S
 #32294
 The Great Cavern of the Jarl~
@@ -5121,6 +5215,7 @@ The throne of the Jarl.
 ~
 ~
 0 -1 32295
+M 32280 1 1 o
 S
 #32295
 The Seat of Power~
@@ -5153,6 +5248,7 @@ Away from the throne.
 ~
 ~
 0 -1 32293
+M 32281 1 1 o
 S
 #32296
 A Short Passage~
@@ -5175,6 +5271,7 @@ The throne room.
 ~
 ~
 0 -1 32295
+M 32282 1 2 o
 S
 #32297
 A Macabre Trophy Chamber~
@@ -5209,6 +5306,7 @@ D3
 ~
 boulder~
 1059 -1 32296
+M 32282 2 2 o
 S
 #32298
 Chamber of the Carls~
@@ -5231,6 +5329,7 @@ D2
 ~
 ~
 0 -1 32297
+M 32282 2 1 o
 S
 #32299
 The Jarl's Private Chamber~
@@ -5251,6 +5350,7 @@ D3
 ~
 ~
 0 -1 32297
+M 32282 3 2 o
 S
 #0
 

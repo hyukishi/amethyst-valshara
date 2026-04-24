@@ -62,6 +62,7 @@ D0
 ~
 ~
 0 -1 15102
+M 15101 13 34 +
 S
 #15102
 Southern Gates of Valsharan~
@@ -76,6 +77,7 @@ D2
 ~
 ~
 0 -1 15101
+M 15101 13 33 +
 S
 #15103
 Southern Gates of Valsharan~
@@ -90,6 +92,7 @@ D2
 ~
 ~
 0 -1 15102
+M 15101 13 32 +
 S
 #15104
 Southern Gates of Valsharan~
@@ -104,6 +107,7 @@ D2
 ~
 ~
 0 -1 15103
+M 15101 13 31 +
 S
 #15105
 Southern Gates of Valsharan~
@@ -118,6 +122,7 @@ D2
 ~
 ~
 0 -1 15104
+M 15101 13 30 +
 S
 #15106
 Southern Gates of Valsharan~
@@ -132,6 +137,7 @@ D2
 ~
 ~
 0 -1 15105
+M 15101 13 29 +
 S
 #15107
 Southern Gates of Valsharan~
@@ -146,6 +152,7 @@ D2
 ~
 ~
 0 -1 15106
+M 15101 13 28 +
 S
 #15108
 Southern Gates of Valsharan~
@@ -160,6 +167,7 @@ D2
 ~
 ~
 0 -1 15107
+M 15101 13 27 +
 S
 #15109
 Southern Gates of Valsharan~
@@ -174,6 +182,7 @@ D2
 ~
 ~
 0 -1 15108
+M 15101 13 26 +
 S
 #15110
 Southern Gates of Valsharan~
@@ -188,6 +197,7 @@ D2
 ~
 ~
 0 -1 15109
+M 15101 13 25 +
 S
 #15111
 Southern Gates of Valsharan~
@@ -202,6 +212,7 @@ D2
 ~
 ~
 0 -1 15110
+M 15101 13 24 +
 S
 #15112
 Southern Gates of Valsharan~
@@ -216,6 +227,7 @@ D2
 ~
 ~
 0 -1 15111
+M 15101 13 23 +
 S
 #15113
 Southern Gates of Valsharan~
@@ -230,6 +242,7 @@ D2
 ~
 ~
 0 -1 15112
+M 15101 13 22 +
 S
 #15114
 Southern Gates of Valsharan~
@@ -244,6 +257,7 @@ D2
 ~
 ~
 0 -1 15113
+M 15101 13 21 +
 S
 #15115
 Southern Gates of Valsharan~
@@ -258,6 +272,7 @@ D2
 ~
 ~
 0 -1 15114
+M 15101 13 20 +
 S
 #15116
 Southern Gates of Valsharan~
@@ -272,6 +287,7 @@ D2
 ~
 ~
 0 -1 15115
+M 15101 13 19 +
 S
 #15117
 Southern Gates of Valsharan~
@@ -286,6 +302,7 @@ D2
 ~
 ~
 0 -1 15116
+M 15101 13 18 +
 S
 #15118
 Intersection of Paths~
@@ -308,6 +325,7 @@ D6
 ~
 ~
 0 -1 15134
+M 15101 13 17 .
 S
 #15119
 Southern Gates of Valsharan~
@@ -318,6 +336,7 @@ D2
 ~
 ~
 0 -1 15118
+M 15101 13 16 +
 S
 #15120
 Intersection of Paths~
@@ -332,6 +351,7 @@ D3
 ~
 ~
 0 -1 15121
+M 15101 12 17 .
 S
 #15121
 Intersection of Paths~
@@ -346,6 +366,7 @@ D3
 ~
 ~
 0 -1 15122
+M 15101 11 17 .
 S
 #15122
 Intersection of Paths~
@@ -360,6 +381,7 @@ D7
 ~
 ~
 0 -1 15123
+M 15101 10 17 .
 S
 #15123
 Intersection of Paths~
@@ -374,6 +396,7 @@ D8
 ~
 ~
 0 -1 15122
+M 15101 9 16 .
 S
 #15124
 Intersection of Paths~
@@ -388,6 +411,7 @@ D2
 ~
 ~
 0 -1 15125
+M 15101 8 16 .
 S
 #15125
 Intersection of Paths~
@@ -402,6 +426,7 @@ D9
 ~
 ~
 0 -1 15126
+M 15101 8 17 .
 S
 #15126
 Intersection of Paths~
@@ -416,6 +441,7 @@ D7
 ~
 ~
 0 -1 15127
+M 15101 7 18 .
 S
 #15127
 Intersection of Paths~
@@ -430,6 +456,7 @@ D8
 ~
 ~
 0 -1 15126
+M 15101 6 17 .
 S
 #15128
 Intersection of Paths~
@@ -444,6 +471,7 @@ D3
 ~
 ~
 0 -1 15129
+M 15101 6 16 .
 S
 #15129
 Intersection of Paths~
@@ -458,6 +486,7 @@ D3
 ~
 ~
 0 -1 15130
+M 15101 5 16 .
 S
 #15130
 Intersection of Paths~
@@ -472,6 +501,7 @@ D3
 ~
 ~
 0 -1 15131
+M 15101 4 16 .
 S
 #15131
 Intersection of Paths~
@@ -486,6 +516,7 @@ D3
 ~
 ~
 0 -1 15132
+M 15101 3 16 .
 S
 #15132
 Intersection of Paths~
@@ -500,6 +531,7 @@ D3
 ~
 ~
 0 -1 15133
+M 15101 2 16 .
 S
 #15133
 Western Gate Of Val'Sharan~
@@ -510,6 +542,7 @@ D1
 ~
 ~
 0 -1 15132
+M 15101 1 16 +
 S
 #15134
 Intersection of Paths~
@@ -524,6 +557,7 @@ D9
 ~
 ~
 0 -1 15118
+M 15101 14 16 .
 S
 #15135
 Intersection of Paths~
@@ -538,6 +572,7 @@ D8
 ~
 ~
 0 -1 15136
+M 15101 15 16 .
 S
 #15136
 Intersection of Paths~
@@ -552,6 +587,7 @@ D7
 ~
 ~
 0 -1 15135
+M 15101 16 17 .
 S
 #15137
 Intersection of Paths~
@@ -566,6 +602,7 @@ D6
 ~
 ~
 0 -1 15138
+M 15101 17 17 .
 S
 #15138
 Intersection of Paths~
@@ -580,6 +617,7 @@ D9
 ~
 ~
 0 -1 15137
+M 15101 18 16 .
 S
 #15139
 Intersection of Paths~
@@ -594,6 +632,7 @@ D8
 ~
 ~
 0 -1 15140
+M 15101 19 16 .
 S
 #15140
 Intersection of Paths~
@@ -608,6 +647,7 @@ D7
 ~
 ~
 0 -1 15139
+M 15101 20 17 .
 S
 #15141
 Intersection of Paths~
@@ -622,6 +662,7 @@ D6
 ~
 ~
 0 -1 15142
+M 15101 21 17 .
 S
 #15142
 Intersection of Paths~
@@ -640,6 +681,7 @@ D9
 ~
 ~
 0 -1 15141
+M 15101 22 16 .
 S
 #15143
 Intersection of Paths~
@@ -654,6 +696,7 @@ D2
 ~
 ~
 0 -1 15142
+M 15101 22 15 .
 S
 #15144
 Intersection of Paths~
@@ -668,6 +711,7 @@ D2
 ~
 ~
 0 -1 15143
+M 15101 22 14 .
 S
 #15145
 Intersection of Paths~
@@ -682,6 +726,7 @@ D2
 ~
 ~
 0 -1 15144
+M 15101 22 13 .
 S
 #15146
 Intersection of Paths~
@@ -696,6 +741,7 @@ D2
 ~
 ~
 0 -1 15145
+M 15101 22 12 .
 S
 #15147
 Intersection of Paths~
@@ -710,6 +756,7 @@ D2
 ~
 ~
 0 -1 15146
+M 15101 22 11 .
 S
 #15148
 Intersection of Paths~
@@ -724,6 +771,7 @@ D2
 ~
 ~
 0 -1 15147
+M 15101 22 10 .
 S
 #15149
 Intersection of Paths~
@@ -738,6 +786,7 @@ D2
 ~
 ~
 0 -1 15148
+M 15101 22 9 .
 S
 #15150
 Intersection of Paths~
@@ -752,6 +801,7 @@ D2
 ~
 ~
 0 -1 15149
+M 15101 22 8 .
 S
 #15151
 Intersection of Paths~
@@ -766,6 +816,7 @@ D6
 ~
 ~
 0 -1 15152
+M 15101 22 7 .
 S
 #15152
 Intersection of Paths~
@@ -780,6 +831,7 @@ D9
 ~
 ~
 0 -1 15151
+M 15101 23 6 .
 S
 #15153
 Intersection of Paths~
@@ -794,6 +846,7 @@ D2
 ~
 ~
 0 -1 15152
+M 15101 23 5 .
 S
 #15154
 Intersection of Paths~
@@ -808,6 +861,7 @@ D2
 ~
 ~
 0 -1 15153
+M 15101 23 4 .
 S
 #15155
 Intersection of Paths~
@@ -822,6 +876,7 @@ D2
 ~
 ~
 0 -1 15154
+M 15101 23 3 .
 S
 #15156
 Intersection of Paths~
@@ -836,6 +891,7 @@ D2
 ~
 ~
 0 -1 15155
+M 15101 23 2 .
 S
 #15157
 Northern Gate~
@@ -846,6 +902,7 @@ D2
 ~
 ~
 0 -1 15156
+M 15101 23 1 +
 S
 #15158
 Temple Gates~
@@ -860,6 +917,7 @@ D7
 ~
 ~
 0 -1 15142
+M 15101 23 17 +
 S
 #15159
 Within the Temple of Lloth~
@@ -878,6 +936,7 @@ D3
 ~
 ~
 0 -1 15160
+M 15101 23 18 T
 S
 #15160
 Within the Temple of Lloth~
@@ -900,6 +959,7 @@ D3
 ~
 ~
 0 -1 15162
+M 15101 22 18 T
 S
 #15161
 Within the Temple of Lloth~
@@ -910,6 +970,7 @@ D2
 ~
 ~
 0 -1 15160
+M 15101 22 17 T
 S
 #15162
 Within the Temple of Lloth~
@@ -920,6 +981,7 @@ D1
 ~
 ~
 0 -1 15160
+M 15101 21 18 T
 S
 #15163
 Within the Temple of Lloth~
@@ -934,6 +996,7 @@ D1
 ~
 ~
 0 -1 15164
+M 15101 22 19 T
 S
 #15164
 Within the Temple of Lloth~
@@ -952,6 +1015,7 @@ D4
 ~
 ~
 0 -1 15169
+M 15101 23 19 T
 S
 #15165
 Within the Temple of Lloth~
@@ -974,6 +1038,7 @@ D3
 ~
 ~
 0 -1 15159
+M 15101 24 18 T
 S
 #15166
 Within the Temple of Lloth~
@@ -984,6 +1049,7 @@ D2
 ~
 ~
 0 -1 15165
+M 15101 24 17 T
 S
 #15167
 Within the Temple of Lloth~
@@ -994,6 +1060,7 @@ D3
 ~
 ~
 0 -1 15165
+M 15101 25 18 T
 S
 #15168
 Within the Temple of Lloth~
@@ -1008,6 +1075,7 @@ D3
 ~
 ~
 0 -1 15164
+M 15101 24 19 T
 S
 #15169
 Level of the Neophytes~
@@ -1026,6 +1094,7 @@ D5
 ~
 ~
 0 -1 15164
+M 15102 3 5 .
 S
 #15170
 Level of the Neophytes~
@@ -1044,6 +1113,7 @@ D7
 ~
 ~
 0 -1 15171
+M 15102 3 4 .
 S
 #15171
 Level of the Neophytes~
@@ -1062,6 +1132,7 @@ D8
 ~
 ~
 0 -1 15170
+M 15102 2 3 .
 S
 #15172
 Level of the Neophytes~
@@ -1080,6 +1151,7 @@ D9
 ~
 ~
 0 -1 15171
+M 15102 3 2 .
 S
 #15173
 Level of the Neophytes~
@@ -1098,6 +1170,7 @@ D9
 ~
 ~
 0 -1 15170
+M 15102 4 3 .
 S
 #15174
 Sleeping Chambers~
@@ -1116,6 +1189,7 @@ D2
 ~
 ~
 0 -1 15176
+M 15102 1 3 .
 S
 #15175
 Sleeping Chambers~
@@ -1126,6 +1200,7 @@ D2
 ~
 ~
 0 -1 15174
+M 15102 1 2 .
 S
 #15176
 Sleeping Chambers~
@@ -1136,6 +1211,7 @@ D0
 ~
 ~
 0 -1 15174
+M 15102 1 4 .
 S
 #15177
 Meditation Room~
@@ -1154,6 +1230,7 @@ D3
 ~
 ~
 0 -1 15179
+M 15102 3 1 .
 S
 #15178
 Meditation Room~
@@ -1164,6 +1241,7 @@ D3
 ~
 ~
 0 -1 15177
+M 15102 4 1 .
 S
 #15179
 Meditation Room~
@@ -1174,6 +1252,7 @@ D1
 ~
 ~
 0 -1 15177
+M 15102 2 1 .
 S
 #15180
 Study Chamber~
@@ -1196,6 +1275,7 @@ D4
 ~
 ~
 0 -1 15183
+M 15102 5 3 .
 S
 #15181
 Study Chamber~
@@ -1206,6 +1286,7 @@ D2
 ~
 ~
 0 -1 15180
+M 15102 5 2 .
 S
 #15182
 Study Chamber~
@@ -1216,6 +1297,7 @@ D0
 ~
 ~
 0 -1 15180
+M 15102 5 4 .
 S
 #15183
 Chamber of The Mistress of Neophytes~
@@ -1226,6 +1308,7 @@ D5
 ~
 ~
 0 -1 15180
+M 15103 3 1 .
 S
 #15184
 Upon a Circular Stair~
@@ -1240,6 +1323,7 @@ D5
 ~
 ~
 0 -1 15169
+M 15103 1 3 .
 S
 #15185
 Upon a Circular Stair~
@@ -1254,6 +1338,7 @@ D5
 ~
 ~
 0 -1 15184
+M 15104 1 1 .
 S
 #15186
 Chambers of the Acolytes~
@@ -1264,6 +1349,7 @@ D5
 ~
 ~
 0 -1 15185
+M 15105 1 1 .
 S
 #0
 

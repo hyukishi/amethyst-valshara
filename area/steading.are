@@ -2333,6 +2333,7 @@ D3
 ~
 door west steading oaken portals~
 3 -1 29801
+M 29802 9 11 ^
 S
 #29801
 A Spacious Cloak Room~
@@ -2359,6 +2360,7 @@ D3
 ~
 ~
 0 -1 29802
+M 29802 8 11 o
 S
 #29802
 A Spacious Cloak Room~
@@ -2384,6 +2386,7 @@ D3
 ~
 ~
 0 -1 29803
+M 29802 7 11 o
 S
 #29803
 The Base of a Guard Tower~
@@ -2409,6 +2412,7 @@ D4
 ~
 ~
 0 -1 29804
+M 29802 6 11 #
 S
 #29804
 The Watch Tower~
@@ -2425,6 +2429,7 @@ D5
 ~
 ~
 0 -1 29803
+M 29803 1 1 #
 S
 #29805
 A Short Corridor~
@@ -2451,6 +2456,7 @@ A strange rune marks the door.
 ~
 ~
 3 -1 29806
+M 29802 8 10 o
 S
 #29806
 A Bedchamber~
@@ -2468,6 +2474,7 @@ D1
 ~
 ~
 3 -1 29805
+M 29802 7 10 o
 S
 #29807
 A Dark Junction~
@@ -2493,6 +2500,7 @@ D3
 ~
 ~
 0 -1 29812
+M 29802 8 9 o
 S
 #29808
 A Bend in the Corridor~
@@ -2517,6 +2525,7 @@ D3
 ~
 ~
 0 -1 29807
+M 29802 9 9 o
 S
 #29809
 Barracks Hall~
@@ -2533,10 +2542,12 @@ D0
 ~
 ~
 3 -1 29808
+M 29802 9 10 H
 S
 #29810
 A Dimly Lit Passageway~
 The passage runs north, past at this point a door set in the west wall.
+M 29802 9 8 .
 >From behind the door issue cries and shouts of merriment, albeit with
 a cruel edge to the laughter. The door is marked with another cryptic
 rune, though the meaning of this one is a little more obvious- two small
@@ -2577,6 +2588,7 @@ D3
 ~
 ~
 3 -1 29813
+M 29802 8 8 o
 S
 #29812
 A Bend in the Corridor~
@@ -2598,6 +2610,7 @@ D1
 ~
 ~
 0 -1 29807
+M 29802 7 9 o
 > rand_prog 100~
 if ispc($r)
 mea $r _red You cough and splutter as you inhale the smoke!
@@ -2625,6 +2638,7 @@ D2
 ~
 ~
 0 -1 29812
+M 29802 7 8 o
 S
 #29814
 The End of the Corridor~
@@ -2650,6 +2664,7 @@ D3
 ~
 ~
 3 -1 29815
+M 29802 9 7 o
 S
 #29815
 Maids' Chamber~
@@ -2667,6 +2682,7 @@ D1
 ~
 ~
 3 -1 29814
+M 29802 8 7 o
 S
 #29816
 A Spacious Hall~
@@ -2676,6 +2692,7 @@ brightly lit wing, which bends southward, and apparently houses the
 belongings of a giant of importance; even from here numerous trophies
 and tapestries are visible. To the west lies a large pair of double
 doors, equal in dimension to those at the entrance to the Steading.
+M 29802 9 6 H
 >From behind them issue various sounds, including shouts, cries, moans
 and belches.
 
@@ -2725,6 +2742,7 @@ D3
 ~
 ~
 0 -1 29816
+M 29802 10 6 H
 S
 #29818
 Hall of the Chief~
@@ -2745,6 +2763,7 @@ D2
 ~
 ~
 3 -1 29819
+M 29802 10 7 H
 S
 #29819
 A Dark Chamber~
@@ -2761,6 +2780,7 @@ D0
 ~
 ~
 3 -1 29818
+M 29802 10 8 o
 S
 #29820
 Chamber of the Chief~
@@ -2781,6 +2801,7 @@ D3
 ~
 bearskin~
 11 -1 29821
+M 29802 10 5 o
 S
 #29821
 A Short Passage~
@@ -2804,6 +2825,7 @@ D2
 ~
 ~
 0 -1 29816
+M 29802 9 5 o
 S
 #29822
 A Side Passage~
@@ -2828,6 +2850,7 @@ D3
 ~
 ~
 0 -1 29827
+M 29802 9 4 o
 S
 #29823
 The Chief's Private Council Chambers~
@@ -2853,6 +2876,7 @@ D3
 ~
 hide~
 11 -1 29824
+M 29802 7 4 o
 S
 #29824
 A Secret Stair~
@@ -2871,6 +2895,7 @@ D5
 ~
 ~
 0 -1 29874
+M 29802 6 4 o
 S
 #29825
 The Chief's Private Council Chambers~
@@ -2891,6 +2916,7 @@ D1
 ~
 ~
 3 -1 29826
+M 29802 7 5 o
 S
 #29826
 The Armory~
@@ -2907,6 +2933,7 @@ D3
 ~
 ~
 3 -1 29825
+M 29802 8 5 o
 S
 #29827
 Before a Door~
@@ -2926,6 +2953,7 @@ D3
 ~
 ~
 3 -1 29823
+M 29802 8 4 o
 S
 #29828
 The Long Hall~
@@ -2951,6 +2979,7 @@ D3
 ~
 ~
 3 -1 29829
+M 29802 6 9 H
 S
 #29829
 An Armory~
@@ -2973,6 +3002,7 @@ D1
 ~
 ~
 3 -1 29828
+M 29802 5 9 o
 S
 #29830
 Approaching the Great Hall~
@@ -2993,6 +3023,7 @@ D2
 ~
 ~
 0 -1 29828
+M 29802 6 8 H
 S
 #29831
 A Set of Douvle Doors~
@@ -3013,6 +3044,7 @@ D3
 ~
 ~
 3 -1 29837
+M 29802 8 6 o
 S
 #29832
 The Great Hall~
@@ -3033,6 +3065,7 @@ D1
 ~
 ~
 0 -1 29833
+M 29802 5 7 H
 S
 #29833
 The Great Hall~
@@ -3061,6 +3094,7 @@ D3
 ~
 ~
 0 -1 29832
+M 29802 6 7 H
 S
 #29834
 The Great Hall~
@@ -3081,6 +3115,7 @@ D3
 ~
 ~
 0 -1 29833
+M 29802 7 7 H
 S
 #29835
 The Great Hall~
@@ -3105,6 +3140,7 @@ D3
 ~
 ~
 16777219 -1 29838
+M 29802 5 6 H
 S
 #29836
 The Chief's Table~
@@ -3131,6 +3167,7 @@ D3
 ~
 ~
 0 -1 29835
+M 29802 6 6 o
 S
 #29837
 The Great Hall~
@@ -3155,6 +3192,7 @@ D3
 ~
 ~
 0 -1 29836
+M 29802 7 6 H
 S
 #29838
 A Set of Double Doors~
@@ -3184,6 +3222,7 @@ D3
 ~
 ~
 0 -1 29850
+M 29802 4 7 o
 S
 #29839
 A Short Passage~
@@ -3209,6 +3248,7 @@ D3
 ~
 ~
 0 -1 29842
+M 29802 6 10 o
 S
 #29840
 The Giants' Arsenel~
@@ -3229,6 +3269,7 @@ D2
 ~
 ~
 3 -1 29839
+M 29802 5 10 o
 S
 #29841
 The Giants' Arsenel~
@@ -3249,6 +3290,7 @@ D3
 ~
 ~
 0 -1 29840
+M 29802 5 8 o
 S
 #29842
 Before a Door~
@@ -3272,6 +3314,7 @@ D3
 ~
 ~
 3 -1 29843
+M 29802 4 9 o
 S
 #29843
 The Common Area~
@@ -3296,6 +3339,7 @@ D3
 ~
 ~
 0 -1 29845
+M 29802 3 9 o
 S
 #29844
 A Common Room~
@@ -3311,6 +3355,7 @@ D2
 ~
 ~
 3 -1 29843
+M 29802 3 8 o
 S
 #29845
 The Common Area~
@@ -3340,6 +3385,7 @@ D3
 ~
 ~
 0 -1 29847
+M 29802 2 9 o
 S
 #29846
 A Guest Chamber~
@@ -3358,6 +3404,7 @@ D0
 ~
 ~
 3 -1 29845
+M 29802 2 10 o
 > rand_prog 1~
 if ispc($r)
 mpforce $r sneeze
@@ -3391,6 +3438,7 @@ D1
 ~
 ~
 0 -1 29845
+M 29802 1 9 .
 S
 #29848
 A Common Room~
@@ -3406,6 +3454,7 @@ D2
 ~
 ~
 3 -1 29847
+M 29802 1 8 o
 S
 #29849
 A Narrow Access Corridor~
@@ -3426,6 +3475,7 @@ D2
 ~
 ~
 0 -1 29845
+M 29802 2 8 o
 S
 #29850
 The Kitchens~
@@ -3455,6 +3505,7 @@ D2
 ~
 ~
 16777219 -1 29849
+M 29802 3 7 o
 > rand_prog 50~
 if ispc($r)
 mea $r _blu A frying pan comes sailing across the room, striking you!
@@ -3482,6 +3533,7 @@ D2
 ~
 ~
 0 -1 29842
+M 29802 4 8 o
 S
 #29852
 The Kitchens~
@@ -3507,6 +3559,7 @@ D2
 ~
 ~
 0 -1 29850
+M 29802 3 6 o
 S
 #29853
 The Kitchens~
@@ -3532,6 +3585,7 @@ D2
 ~
 ~
 0 -1 29852
+M 29802 1 4 o
 S
 #29854
 The Kitchens~
@@ -3562,6 +3616,7 @@ D8
 ~
 ~
 3 -1 29856
+M 29802 3 5 o
 S
 #29855
 A Dark Storeroom~
@@ -3581,6 +3636,7 @@ D5
 ~
 ~
 0 -1 29883
+M 29802 2 5 $
 S
 #29856
 A Junction~
@@ -3604,6 +3660,7 @@ D7
 ~
 ~
 3 -1 29854
+M 29802 4 6 o
 S
 #29857
 A Shadowy Passage~
@@ -3628,6 +3685,7 @@ D9
 ~
 ~
 0 -1 29856
+M 29802 5 5 o
 S
 #29858
 Quarters of the Ogres~
@@ -3645,6 +3703,7 @@ D0
 ~
 ~
 3 -1 29857
+M 29802 4 5 o
 S
 #29859
 A Stout Oaken Portal~
@@ -3664,6 +3723,7 @@ D2
 ~
 ~
 0 -1 29857
+M 29802 5 4 +
 S
 #29860
 Chamber of the Keeper~
@@ -3684,6 +3744,7 @@ D2
 ~
 ~
 3 -1 29859
+M 29802 5 3 #
 S
 #29861
 Chamber of the Keeper~
@@ -3712,6 +3773,7 @@ D3
 ~
 ~
 0 -1 29860
+M 29802 6 3 #
 S
 #29862
 Servants' Quarters~
@@ -3728,6 +3790,7 @@ D0
 ~
 ~
 3 -1 29861
+M 29802 6 5 o
 S
 #29863
 Lair of the Wolves~
@@ -3750,6 +3813,7 @@ D3
 ~
 ~
 16777223 -1 29861
+M 29802 6 2 .
 S
 #29864
 Lair of the Wolves~
@@ -3773,6 +3837,7 @@ D2
 ~
 ~
 0 -1 29865
+M 29802 7 2 .
 S
 #29865
 Lair of the Wolves~
@@ -3792,6 +3857,7 @@ D1
 ~
 ~
 0 -1 29867
+M 29802 7 3 .
 S
 #29866
 Lair of the Wolves~
@@ -3818,6 +3884,7 @@ D3
 ~
 ~
 0 -1 29864
+M 29802 8 2 .
 S
 #29867
 Lair of the Wolves~
@@ -3841,6 +3908,7 @@ D3
 ~
 ~
 0 -1 29865
+M 29802 8 3 .
 S
 #29868
 Lair of the Wolves~
@@ -3865,6 +3933,7 @@ D3
 ~
 ~
 0 -1 29867
+M 29802 9 3 .
 S
 #29869
 Lair of the Wolves~
@@ -3880,6 +3949,7 @@ D3
 ~
 ~
 0 -1 29868
+M 29802 10 3 .
 S
 #29870
 A Guard Room~
@@ -3905,6 +3975,7 @@ D3
 ~
 ~
 3 -1 29866
+M 29802 9 2 o
 S
 #29871
 A Barracks Room~
@@ -3920,6 +3991,7 @@ D2
 ~
 ~
 3 -1 29870
+M 29802 9 1 o
 S
 #29872
 A Guard Room~
@@ -3939,6 +4011,7 @@ D3
 ~
 ~
 0 -1 29870
+M 29802 10 2 o
 S
 #29873
 A Barracks Room~
@@ -3954,6 +4027,7 @@ D2
 ~
 ~
 3 -1 29872
+M 29802 10 1 o
 S
 #29874
 A Dark Chamber~
@@ -3979,6 +4053,7 @@ D4
 ~
 ~
 0 -1 29824
+M 29801 9 5 o
 S
 #29875
 A Dusty Chamber~
@@ -3999,6 +4074,7 @@ D3
 ~
 crack~
 1035 -1 29874
+M 29801 10 5 o
 > entry_prog 50~
 mea $n _yel A magical force drags you down into a hidden pit!
 mer $n _yel A magical force drag $n down into a hidden pit!
@@ -4025,6 +4101,7 @@ D4
 ~
 ~
 71 -1 29875
+M 29800 1 1 !
 S
 #29877
 A King's Hoard~
@@ -4041,6 +4118,7 @@ D3
 ~
 ~
 0 -1 29875
+M 29801 11 5 o
 > rand_prog 5~
 if ispc($r)
 mea $r _red One of the runes suddenly explodes, searing you with flame!
@@ -4082,6 +4160,7 @@ D2
 ~
 ~
 0 -1 29879
+M 29801 8 5 o
 S
 #29879
 Animal Pen~
@@ -4107,6 +4186,7 @@ D2
 ~
 portcullis~
 7 -1 29880
+M 29801 4 5 o
 S
 #29880
 Animal Pen~
@@ -4128,6 +4208,7 @@ D1
 ~
 ~
 16777216 -1 29881
+M 29801 4 6 o
 S
 #29881
 A Small Treasure Chamber~
@@ -4144,6 +4225,7 @@ D3
 ~
 ~
 0 -1 29880
+M 29801 4 7 o
 S
 #29882
 Marshalling Area~
@@ -4168,6 +4250,7 @@ D3
 ~
 corpse~
 1035 -1 29879
+M 29801 5 5 H
 S
 #29883
 Marshalling Area~
@@ -4197,6 +4280,7 @@ D4
 ~
 ~
 16777216 -1 29855
+M 29801 5 6 H
 S
 #29884
 Marshalling Area~
@@ -4221,6 +4305,7 @@ D2
 ~
 ~
 0 -1 29903
+M 29801 5 7 H
 S
 #29885
 Marshalling Area~
@@ -4250,6 +4335,7 @@ D3
 ~
 ~
 0 -1 29882
+M 29801 6 5 H
 S
 #29886
 Marshalling Area~
@@ -4279,6 +4365,7 @@ D3
 ~
 ~
 0 -1 29883
+M 29801 6 6 H
 S
 #29887
 Marshalling Area~
@@ -4308,6 +4395,7 @@ D3
 ~
 ~
 0 -1 29884
+M 29801 6 7 H
 S
 #29888
 Chamber of the Keeper~
@@ -4325,6 +4413,7 @@ D3
 ~
 ~
 3 -1 29885
+M 29801 7 5 #
 S
 #29889
 A Gaol~
@@ -4341,6 +4430,7 @@ D3
 ~
 ~
 3 -1 29887
+M 29801 7 7 o
 S
 #29890
 A Dusty Passage~
@@ -4360,6 +4450,7 @@ D2
 ~
 ~
 0 -1 29885
+M 29801 6 4 o
 S
 #29891
 A Dusty Passage~
@@ -4379,6 +4470,7 @@ D3
 ~
 ~
 0 -1 29892
+M 29801 6 3 o
 S
 #29892
 A Junction~
@@ -4402,6 +4494,7 @@ D3
 ~
 ~
 0 -1 29895
+M 29801 5 3 o
 > rand_prog 1~
 mpe _lbl You hear voices raised in song, in a strange tongue.
 
@@ -4426,6 +4519,7 @@ D3
 ~
 ~
 0 -1 29894
+M 29801 5 2 o
 S
 #29894
 A New Excavation~
@@ -4441,6 +4535,7 @@ D1
 ~
 ~
 0 -1 29893
+M 29801 4 2 .
 S
 #29895
 A New Excavation~
@@ -4456,6 +4551,7 @@ D1
 ~
 ~
 0 -1 29892
+M 29801 4 3 .
 S
 #29896
 A Dark Hallway~
@@ -4477,6 +4573,7 @@ D9
 ~
 ~
 0 -1 29945
+M 29801 7 4 H
 S
 #29897
 A Dark Hallway~
@@ -4503,6 +4600,7 @@ D7
 ~
 ~
 0 -1 29900
+M 29801 7 3 H
 S
 #29898
 A Dark Hallway~
@@ -4523,6 +4621,7 @@ D2
 ~
 ~
 0 -1 29897
+M 29801 7 2 H
 S
 #29899
 The Cistern~
@@ -4540,6 +4639,7 @@ D2
 ~
 ~
 0 -1 29898
+M 29801 7 1 o
 S
 #29900
 A Dark Hallway~
@@ -4563,6 +4663,7 @@ D8
 ~
 ~
 0 -1 29897
+M 29801 6 2 H
 S
 #29901
 A Short Passage~
@@ -4588,6 +4689,7 @@ The glyph is certainly elvish, though of an archaic design; it could
 even be Drowic...
 
 ~
+M 29801 6 1 o
 S
 #29902
 A Storage Chamber~
@@ -4605,6 +4707,7 @@ D1
 ~
 ~
 7 -1 29901
+M 29801 5 1 o
 S
 #29903
 A Dark Corridor~
@@ -4626,6 +4729,7 @@ D2
 ~
 ~
 0 -1 29904
+M 29801 5 8 o
 S
 #29904
 A Dark Corridor~
@@ -4645,6 +4749,7 @@ D2
 ~
 ~
 0 -1 29905
+M 29801 5 9 o
 S
 #29905
 A Dark Corridor~
@@ -4664,6 +4769,7 @@ D2
 ~
 ~
 0 -1 29913
+M 29801 5 10 o
 S
 #29906
 Bugbear Chambers~
@@ -4688,6 +4794,7 @@ D2
 ~
 ~
 3 -1 29907
+M 29801 6 8 o
 S
 #29907
 A Darkened Antechamber~
@@ -4708,6 +4815,7 @@ D2
 ~
 ~
 3 -1 29908
+M 29801 6 9 o
 S
 #29908
 A Guard Room~
@@ -4728,6 +4836,7 @@ D2
 ~
 ~
 16777216 -1 29927
+M 29801 6 10 o
 S
 #29909
 Sleeping Area~
@@ -4755,6 +4864,7 @@ D3
 ~
 ~
 0 -1 29906
+M 29801 7 8 o
 S
 #29910
 Sleeping Area~
@@ -4770,6 +4880,7 @@ D2
 ~
 ~
 0 -1 29909
+M 29801 8 6 o
 S
 #29911
 Sleeping Area~
@@ -4785,6 +4896,7 @@ D0
 ~
 ~
 0 -1 29909
+M 29801 7 9 o
 S
 #29912
 Sleeping Area~
@@ -4800,6 +4912,7 @@ D3
 ~
 ~
 0 -1 29909
+M 29801 8 8 o
 S
 #29913
 A Shadowy Hallway~
@@ -4827,6 +4940,7 @@ D3
 ~
 ~
 0 -1 29914
+M 29801 5 11 H
 S
 #29914
 A Shadowy Hallway~
@@ -4850,6 +4964,7 @@ D3
 ~
 ~
 0 -1 29915
+M 29801 4 11 H
 S
 #29915
 A Long Hallway~
@@ -4875,6 +4990,7 @@ D9
 ~
 ~
 0 -1 29916
+M 29801 3 11 H
 S
 #29916
 The Armory~
@@ -4896,6 +5012,7 @@ D6
 ~
 ~
 0 -1 29915
+M 29801 2 12 o
 S
 #29917
 The Armory~
@@ -4917,6 +5034,7 @@ D9
 ~
 ~
 0 -1 29918
+M 29801 2 13 o
 S
 #29918
 The Smithy~
@@ -4933,6 +5051,7 @@ D6
 ~
 ~
 0 -1 29917
+M 29801 1 14 o
 S
 #29919
 A Long Hallway~
@@ -4959,6 +5078,7 @@ D3
 ~
 ~
 0 -1 29920
+M 29801 2 11 H
 S
 #29920
 The Torture Chamber~
@@ -4976,6 +5096,7 @@ D1
 ~
 ~
 0 -1 29919
+M 29801 1 11 o
 S
 #29921
 Slave Quarters~
@@ -5004,6 +5125,7 @@ D8
 ~
 ~
 7 29865 29922
+M 29801 2 10 o
 S
 #29922
 Orcish Prisoners~
@@ -5018,6 +5140,7 @@ D7
 ~
 ~
 7 29865 29921
+M 29801 3 10 o
 S
 #29923
 Orcish Prisoners~
@@ -5032,6 +5155,7 @@ D9
 ~
 ~
 7 29865 29921
+M 29801 3 9 o
 S
 #29924
 Orcish Prisoners~
@@ -5046,6 +5170,7 @@ D2
 ~
 ~
 7 29865 29921
+M 29801 2 9 o
 S
 #29925
 Orcish Prisoners~
@@ -5060,6 +5185,7 @@ D0
 ~
 ~
 7 29865 29914
+M 29801 4 12 o
 S
 #29926
 Orcish Prisoners~
@@ -5074,6 +5200,7 @@ D0
 ~
 ~
 7 29865 29913
+M 29801 5 12 o
 S
 #29927
 A Shadowy Hallway~
@@ -5106,6 +5233,7 @@ D3
 ~
 ~
 0 -1 29913
+M 29801 6 11 H
 S
 #29928
 Orcish Prisoners~
@@ -5120,6 +5248,7 @@ D0
 ~
 ~
 7 29865 29927
+M 29801 6 12 o
 S
 #29929
 Skirmish~
@@ -5146,6 +5275,7 @@ D8
 ~
 ~
 0 -1 29930
+M 29801 7 11 .
 S
 #29930
 A Dark Corridor~
@@ -5173,6 +5303,7 @@ D9
 ~
 rubble~
 16777219 -1 29931
+M 29801 8 12 o
 S
 #29931
 The Abandoned Temple~
@@ -5199,6 +5330,7 @@ D6
 ~
 rubble~
 3 -1 29930
+M 29801 7 13 T
 S
 #29932
 Chantry of Vile Evil~
@@ -5216,6 +5348,7 @@ D1
 ~
 ~
 0 -1 29931
+M 29801 6 13 o
 > rand_prog 50~
 if ispc($r)
 mea $r _yel The overwhelming alien nature of this place overcomes you!
@@ -5241,6 +5374,7 @@ D0
 ~
 ~
 0 -1 29931
+M 29801 7 14 o
 S
 #29934
 The Natural Caverns~
@@ -5260,6 +5394,7 @@ D7
 ~
 ~
 0 -1 29930
+M 29801 9 13 o
 S
 #29935
 The Natural Caverns~
@@ -5283,6 +5418,7 @@ D6
 ~
 ~
 0 -1 29938
+M 29801 8 11 o
 S
 #29936
 The Natural Caverns~
@@ -5306,6 +5442,7 @@ D8
 ~
 ~
 0 -1 29937
+M 29801 9 11 o
 S
 #29937
 The Natural Caverns~
@@ -5325,6 +5462,7 @@ D9
 ~
 ~
 0 -1 29934
+M 29801 10 12 o
 S
 #29938
 The Natural Caverns~
@@ -5348,6 +5486,7 @@ D9
 ~
 ~
 0 -1 29935
+M 29801 9 10 o
 S
 #29939
 Cave of Trogs~
@@ -5373,6 +5512,7 @@ D10
 ~
 stream~
 133120 -1 29941
+M 29801 9 9 o
 S
 #29940
 Realm of the Lizard~
@@ -5390,6 +5530,7 @@ D8
 ~
 ~
 0 -1 29939
+M 29801 8 7 o
 S
 #29941
 Diving into the Stream~
@@ -5409,6 +5550,7 @@ D10
 ~
 ~
 131072 -1 29939
+M 29801 8 10 o
 > entry_prog 100~
 mea $n Jagged rocks tear at you!
 mpdamage $n 50
@@ -5434,6 +5576,7 @@ D4
 ~
 ~
 0 -1 29943
+M 29801 8 9 o
 > entry_prog 100~
 mea $n You are hurled into the rocky end of the stream!
 mpdamage $n 50
@@ -5460,6 +5603,7 @@ D0
 ~
 ~
 0 -1 29944
+M 29802 3 10 o
 S
 #29944
 A Secret Cavern~
@@ -5478,6 +5622,7 @@ D2
 ~
 ~
 0 -1 29943
+M 29802 4 10 o
 S
 #29945
 A Dark Hallway~
@@ -5497,6 +5642,7 @@ D6
 ~
 ~
 0 -1 29896
+M 29801 7 6 H
 S
 #29946
 The Top of the Hill~
@@ -5520,6 +5666,7 @@ D5
 ~
 ~
 0 -1 29947
+M 29802 10 11 ^
 S
 #29947
 Climbing the Stair~
@@ -5540,6 +5687,7 @@ D5
 ~
 ~
 0 -1 29948
+M 29801 13 12 ^
 S
 #29948
 Approaching the Hill~
@@ -5562,6 +5710,7 @@ D4
 ~
 ~
 0 -1 29947
+M 29800 4 8 .
 S
 #29949
 Base of the Hill~
@@ -5582,6 +5731,7 @@ D3
 ~
 ~
 0 -1 29948
+M 29800 5 8 .
 S
 #0
 

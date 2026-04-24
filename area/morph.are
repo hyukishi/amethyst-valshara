@@ -404,6 +404,7 @@ D0
 ~
 ~
 0 -1 12802
+M 12804 2 6 o
 > entry_prog 20~
 if ispc($n)
 mpechoat $n _red Ouch!
@@ -431,6 +432,7 @@ D2
 ~
 ~
 0 -1 12801
+M 12804 2 5 .
 S
 #12803
 The darkening forest~
@@ -454,6 +456,7 @@ D2
 ~
 ~
 0 -1 12802
+M 12804 2 4 o
 S
 #12804
 A gurgling brook~
@@ -476,6 +479,7 @@ D3
 ~
 ~
 0 -1 12803
+M 12804 3 4 o
 S
 #12805
 Upstream~
@@ -495,6 +499,7 @@ D2
 ~
 ~
 0 -1 12804
+M 12804 3 2 o
 S
 #12806
 The Spring~
@@ -510,6 +515,7 @@ D2
 ~
 ~
 0 -1 12805
+M 12804 3 1 o
 S
 #12807
 The growing stream~
@@ -529,6 +535,7 @@ D2
 ~
 ~
 0 -1 12808
+M 12804 3 5 o
 S
 #12808
 A fast flowing river~
@@ -547,6 +554,7 @@ D2
 ~
 ~
 0 -1 12809
+M 12804 3 6 o
 S
 #12809
 The Rapids~
@@ -567,6 +575,7 @@ D2
 ~
 ~
 0 -1 12810
+M 12804 3 7 o
 S
 #12810
 The Waterfall~
@@ -585,6 +594,7 @@ D5
 ~
 ~
 0 -1 12843
+M 12804 3 8 o
 S
 #12811
 The Dark Forest~
@@ -611,6 +621,7 @@ D3
 ~
 ~
 0 -1 12812
+M 12804 2 3 o
 S
 #12812
 A small clearing~
@@ -626,6 +637,7 @@ D1
 ~
 ~
 0 -1 12811
+M 12804 1 3 o
 S
 #12813
 Before the cave~
@@ -645,6 +657,7 @@ D2
 ~
 ~
 0 -1 12811
+M 12804 2 2 o
 S
 #12814
 The Grizzly's Den~
@@ -660,6 +673,7 @@ D2
 ~
 ~
 0 -1 12813
+M 12804 2 1 o
 S
 #12815
 Deeper in the Dark Forest~
@@ -679,6 +693,7 @@ D3
 ~
 ~
 0 -1 12811
+M 12804 3 3 o
 > entry_prog 20~
 if ispc($n)
 mpechoat $n As you walk underneath the trees here, you are suddenly ambushed by something from overhead!
@@ -712,6 +727,7 @@ D3
 ~
 ~
 0 -1 12815
+M 12804 4 3 o
 S
 #12817
 A clearing~
@@ -731,6 +747,7 @@ D2
 ~
 ~
 0 -1 12816
+M 12804 4 2 o
 S
 #12818
 A small path~
@@ -750,6 +767,7 @@ D3
 ~
 ~
 0 -1 12816
+M 12804 5 3 .
 S
 #12819
 The heart of the Mist~
@@ -764,6 +782,7 @@ D0
 ~
 ~
 0 -1 12816
+M 12804 4 4 o
 S
 #12820
 The Druid's Grove~
@@ -780,6 +799,7 @@ D3
 ~
 ~
 0 -1 12817
+M 12804 5 2 o
 S
 #12821
 Overlooking a spring~
@@ -803,6 +823,7 @@ D3
 ~
 ~
 0 -1 12818
+M 12804 6 3 o
 S
 #12822
 A small berry patch~
@@ -822,6 +843,7 @@ D3
 ~
 ~
 0 -1 12821
+M 12804 7 3 o
 > time_prog 12~
 if ovnumroom(12803) == 1
 or ovnumroom(12804) == 1
@@ -866,6 +888,7 @@ D2
 ~
 ~
 0 -1 12821
+M 12804 6 2 .
 S
 #12824
 Thinning Trees~
@@ -884,6 +907,7 @@ D2
 ~
 ~
 0 -1 12823
+M 12804 6 1 I
 S
 #12825
 An ascending trail~
@@ -901,6 +925,7 @@ D3
 ~
 ~
 0 -1 12822
+M 12804 8 3 .
 S
 #12826
 Hilltop~
@@ -925,6 +950,7 @@ D5
 ~
 ~
 0 -1 12828
+M 12804 9 3 o
 S
 #12827
 Trading Post~
@@ -942,6 +968,7 @@ D2
 ~
 ~
 0 -1 12826
+M 12804 9 2 o
 S
 #12828
 Trail to the Forest Bed.~
@@ -960,6 +987,7 @@ D5
 ~
 ~
 0 -1 12829
+M 12803 7 1 .
 S
 #12829
 Beginning of the game trail~
@@ -979,6 +1007,7 @@ D4
 ~
 ~
 0 -1 12828
+M 12802 7 1 I
 S
 #12830
 Along the game trail~
@@ -998,6 +1027,7 @@ D3
 ~
 ~
 0 -1 12831
+M 12802 6 1 .
 S
 #12831
 Along the game trail~
@@ -1021,6 +1051,7 @@ D3
 ~
 ~
 0 -1 12832
+M 12802 5 1 .
 S
 #12832
 Along the game trail~
@@ -1040,6 +1071,7 @@ D3
 ~
 ~
 0 -1 12833
+M 12802 4 1 .
 S
 #12833
 The end of the game trail~
@@ -1054,6 +1086,7 @@ D1
 ~
 ~
 0 -1 12832
+M 12802 3 1 .
 S
 #12834
 Off the trail~
@@ -1072,6 +1105,7 @@ D2
 ~
 ~
 0 -1 12835
+M 12802 5 2 .
 S
 #12835
 Deep in the forest~
@@ -1090,6 +1124,7 @@ D2
 ~
 ~
 16777216 -1 12836
+M 12802 5 3 o
 S
 #12836
 Lost in the forest~
@@ -1115,6 +1150,7 @@ D3
 ~
 ~
 0 -1 12836
+M 12802 5 4 o
 S
 #12837
 Lost in the forest~
@@ -1140,6 +1176,7 @@ D3
 ~
 ~
 0 -1 12838
+M 12802 5 5 o
 S
 #12838
 Lost in the forest~
@@ -1165,6 +1202,7 @@ D3
 ~
 ~
 0 -1 12836
+M 12802 4 4 o
 S
 #12839
 Lost in the forest~
@@ -1190,6 +1228,7 @@ D3
 ~
 ~
 0 -1 12836
+M 12802 4 6 o
 S
 #12840
 Lost in the forest~
@@ -1215,6 +1254,7 @@ D3
 ~
 ~
 0 -1 12836
+M 12802 5 6 o
 S
 #12841
 Lost in the forest~
@@ -1240,6 +1280,7 @@ D3
 ~
 ~
 0 -1 12836
+M 12802 6 4 o
 S
 #12842
 Lost in the forest~
@@ -1265,6 +1306,7 @@ D3
 ~
 ~
 0 -1 12836
+M 12802 4 3 o
 S
 #12843
 The base of the Falls~
@@ -1284,6 +1326,7 @@ D2
 ~
 ~
 0 -1 12847
+M 12803 1 6 o
 > entry_prog 10~
 mpechoat $n While making your way through the river, you feel something grasp your leg, and with a tight grip pulling you down under the water...
 mptransfer $n 12849
@@ -1310,6 +1353,7 @@ D4
 ~
 ~
 0 -1 12845
+M 12803 2 4 .
 S
 #12845
 Beside the Falls~
@@ -1327,6 +1371,7 @@ D5
 ~
 ~
 0 -1 12844
+M 12804 4 6 o
 S
 #12846
 The paths end~
@@ -1345,6 +1390,7 @@ D3
 ~
 ~
 0 -1 12807
+M 12804 4 5 .
 S
 #12847
 The river slows~
@@ -1364,6 +1410,7 @@ D2
 ~
 ~
 0 -1 12848
+M 12803 1 7 o
 S
 #12848
 The River Delta~
@@ -1378,6 +1425,7 @@ D0
 ~
 ~
 0 -1 12847
+M 12803 1 8 o
 S
 #12849
 Under the water~
@@ -1395,6 +1443,7 @@ D5
 ~
 ~
 0 -1 12850
+M 12803 1 5 o
 S
 #12850
 Far down below the water's surface~
@@ -1413,6 +1462,7 @@ D5
 ~
 ~
 0 -1 12851
+M 12802 1 5 o
 S
 #12851
 End of the tunnel~
@@ -1427,12 +1477,14 @@ D4
 ~
 ~
 0 -1 12850
+M 12801 1 1 o
 S
 #12900
 Final Room~
 ~
 ~
 0 1073741828 1 0
+M 12805 1 1 o
 S
 #0
 
