@@ -1,4 +1,4 @@
-.PHONY: docker-build docker-shell docker-run docker-make docker-stop native-build
+.PHONY: docker-build docker-shell docker-run docker-make docker-stop native-build worlddb-refresh
 
 docker-build:
 	docker compose build mud
@@ -17,3 +17,6 @@ docker-stop:
 
 native-build:
 	make -C src
+
+worlddb-refresh:
+	python3 scripts/migrate_worlddb.py
