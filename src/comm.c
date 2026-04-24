@@ -357,7 +357,71 @@ static void show_account_menu( DESCRIPTOR_DATA *d )
         }
     }
 
-    write_to_buffer( d, "\n\rType a number or character name to play, NEW to create one, or QUIT.\n\rSelection: ", 0 );
+    sprintf( buf, "\n\rSlots used: %d/%d\n\r", count, MAX_ACCOUNT_CHARACTERS );
+    write_to_buffer( d, buf, 0 );
+    write_to_buffer( d, "Actions: PLAY <number/name>, NEW, IMPORT, QUIT\n\rSelection: ", 0 );
+}
+
+static int race_menu_index( int choice )
+{
+    int iRace;
+    int count;
+
+    count = 0;
+    for ( iRace = 0; iRace < MAX_RACE; iRace++ )
+    {
+        if ( iRace == RACE_VAMPIRE
+        ||   race_table[iRace]->race_name[0] == '\0'
+        ||   !str_cmp( race_table[iRace]->race_name, "unused" ) )
+            continue;
+        ++count;
+        if ( count == choice )
+            return iRace;
+    }
+
+    return -1;
+}
+
+static void show_race_menu( DESCRIPTOR_DATA *d )
+{
+    char buf[MAX_STRING_LENGTH];
+    char line[MAX_STRING_LENGTH];
+    int iRace;
+    int count;
+    int col;
+
+    write_to_buffer( d, "\n\rChoose your race:\n\r", 0 );
+    line[0] = '\0';
+    count = 0;
+    col = 0;
+
+    for ( iRace = 0; iRace < MAX_RACE; iRace++ )
+    {
+        if ( iRace == RACE_VAMPIRE
+        ||   race_table[iRace]->race_name[0] == '\0'
+        ||   !str_cmp( race_table[iRace]->race_name, "unused" ) )
+            continue;
+
+        ++count;
+        sprintf( buf, " %2d) %-14s", count, race_table[iRace]->race_name );
+        strcat( line, buf );
+        ++col;
+        if ( col == 3 )
+        {
+            strcat( line, "\n\r" );
+            write_to_buffer( d, line, 0 );
+            line[0] = '\0';
+            col = 0;
+        }
+    }
+
+    if ( line[0] != '\0' )
+    {
+        strcat( line, "\n\r" );
+        write_to_buffer( d, line, 0 );
+    }
+
+    write_to_buffer( d, "\n\rEnter a race number, name, or HELP <race>.\n\rRace: ", 0 );
 }
 
 static bool account_menu_select( DESCRIPTOR_DATA *d, const char *argument,
@@ -1367,6 +1431,8 @@ void init_descriptor( DESCRIPTOR_DATA *dnew, int desc)
     dnew->account_id    = 0;
     dnew->account_name  = NULL;
     dnew->account_pwd   = NULL;
+    dnew->pending_char_name = NULL;
+    dnew->pending_char_key = NULL;
     dnew->prevcolor	= 0x07;
 
     CREATE( dnew->outbuf, char, dnew->outsize );
@@ -1530,14 +1596,20 @@ void free_desc( DESCRIPTOR_DATA *d )
     kill_auth(d);
     closesocket( d->descriptor );
 #ifndef DNS_SLAVE
-    STRFREE( d->host );
+    if ( d->host )
+        STRFREE( d->host );
 #endif
     if ( d->account_name )
         STRFREE( d->account_name );
     if ( d->account_pwd )
         DISPOSE( d->account_pwd );
+    if ( d->pending_char_name )
+        STRFREE( d->pending_char_name );
+    if ( d->pending_char_key )
+        DISPOSE( d->pending_char_key );
     DISPOSE( d->outbuf );
-    STRFREE( d->user );    /* identd */
+    if ( d->user )
+        STRFREE( d->user );    /* identd */
     if ( d->pagebuf )
 	DISPOSE( d->pagebuf );
     DISPOSE( d );
@@ -2240,8 +2312,27 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
         if ( !str_cmp( argument, "new" ) )
         {
+            if ( playerdb_account_character_count( d->account_id ) >= MAX_ACCOUNT_CHARACTERS )
+            {
+                write_to_buffer( d, "That account is already at the 5 character limit.\n\r", 0 );
+                show_account_menu( d );
+                return;
+            }
             write_to_buffer( d, "\n\rChoose a name for your new character: ", 0 );
             d->connected = CON_GET_NEW_CHARACTER_NAME;
+            return;
+        }
+
+        if ( !str_cmp( argument, "import" ) || !str_cmp( argument, "i" ) )
+        {
+            if ( playerdb_account_character_count( d->account_id ) >= MAX_ACCOUNT_CHARACTERS )
+            {
+                write_to_buffer( d, "That account is already at the 5 character limit.\n\r", 0 );
+                show_account_menu( d );
+                return;
+            }
+            write_to_buffer( d, "\n\rEnter the existing character name to import: ", 0 );
+            d->connected = CON_ACCOUNT_IMPORT_NAME;
             return;
         }
 
@@ -2289,6 +2380,133 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
             return;
         }
 
+    case CON_ACCOUNT_IMPORT_NAME:
+        if ( argument[0] == '\0' )
+        {
+            show_account_menu( d );
+            d->connected = CON_ACCOUNT_MENU;
+            return;
+        }
+
+        if ( playerdb_account_character_count( d->account_id ) >= MAX_ACCOUNT_CHARACTERS )
+        {
+            write_to_buffer( d, "That account is already at the 5 character limit.\n\r", 0 );
+            show_account_menu( d );
+            d->connected = CON_ACCOUNT_MENU;
+            return;
+        }
+
+        strcpy( arg, capitalize_name( argument ) );
+        strcpy( buf, player_filename( arg ) );
+        if ( !player_file_exists( buf ) )
+        {
+            write_to_buffer( d, "No such character exists.\n\rImport character: ", 0 );
+            return;
+        }
+        if ( playerdb_account_owns_character( d->account_id, buf ) )
+        {
+            write_to_buffer( d, "That character is already on this account.\n\r", 0 );
+            show_account_menu( d );
+            d->connected = CON_ACCOUNT_MENU;
+            return;
+        }
+
+        if ( d->pending_char_name )
+            STRFREE( d->pending_char_name );
+        if ( d->pending_char_key )
+            DISPOSE( d->pending_char_key );
+        d->pending_char_name = STRALLOC( arg );
+        d->pending_char_key = str_dup( buf );
+        write_to_buffer( d, "Enter that character's current password: ", 0 );
+        write_to_buffer( d, echo_off_str, 0 );
+        d->connected = CON_ACCOUNT_IMPORT_PASSWORD;
+        return;
+
+    case CON_ACCOUNT_IMPORT_PASSWORD:
+        {
+            char password_hash[MAX_STRING_LENGTH];
+            DESCRIPTOR_DATA *tmpd;
+            CHAR_DATA *victim;
+
+            write_to_buffer( d, "\n\r", 2 );
+            password_hash[0] = '\0';
+            if ( !d->pending_char_key
+            ||   !playerdb_character_password_hash( d->pending_char_key, password_hash, sizeof(password_hash) )
+            ||   strcmp( crypt( argument, password_hash ), password_hash ) )
+            {
+                write_to_buffer( d, echo_on_str, 0 );
+                write_to_buffer( d, "Wrong password.\n\r", 0 );
+                show_account_menu( d );
+                d->connected = CON_ACCOUNT_MENU;
+                return;
+            }
+
+            write_to_buffer( d, echo_on_str, 0 );
+
+            CREATE( tmpd, DESCRIPTOR_DATA, 1 );
+            init_descriptor( tmpd, -1 );
+            tmpd->connected = CON_PLAYING;
+            tmpd->account_id = d->account_id;
+            if ( d->account_name )
+                tmpd->account_name = STRALLOC( d->account_name );
+            if ( d->account_pwd )
+                tmpd->account_pwd = str_dup( d->account_pwd );
+
+            if ( !load_char_obj_for_account( tmpd, d->pending_char_key, FALSE, 0 ) || !tmpd->character )
+            {
+                if ( tmpd->account_name )
+                    STRFREE( tmpd->account_name );
+                if ( tmpd->account_pwd )
+                    DISPOSE( tmpd->account_pwd );
+                DISPOSE( tmpd->outbuf );
+                if ( tmpd->user )
+                    STRFREE( tmpd->user );
+                DISPOSE( tmpd );
+                write_to_buffer( d, "Unable to import that character right now.\n\r", 0 );
+                show_account_menu( d );
+                d->connected = CON_ACCOUNT_MENU;
+                return;
+            }
+
+            victim = tmpd->character;
+            if ( victim->pcdata->account_name )
+                STRFREE( victim->pcdata->account_name );
+            victim->pcdata->account_name = STRALLOC( d->account_name ? d->account_name : "" );
+            victim->pcdata->account_id = d->account_id;
+            DISPOSE( victim->pcdata->pwd );
+            victim->pcdata->pwd = str_dup( d->account_pwd ? d->account_pwd : "" );
+            save_char_obj( victim );
+
+            victim->desc = NULL;
+            tmpd->character = NULL;
+            free_char( victim );
+            if ( tmpd->account_name )
+                STRFREE( tmpd->account_name );
+            if ( tmpd->account_pwd )
+                DISPOSE( tmpd->account_pwd );
+            DISPOSE( tmpd->outbuf );
+            if ( tmpd->user )
+                STRFREE( tmpd->user );
+            DISPOSE( tmpd );
+
+            if ( d->pending_char_name )
+            {
+                sprintf( buf, "%s has been imported to your account.\n\r", d->pending_char_name );
+                write_to_buffer( d, buf, 0 );
+                STRFREE( d->pending_char_name );
+                d->pending_char_name = NULL;
+            }
+            if ( d->pending_char_key )
+            {
+                DISPOSE( d->pending_char_key );
+                d->pending_char_key = NULL;
+            }
+
+            show_account_menu( d );
+            d->connected = CON_ACCOUNT_MENU;
+            return;
+        }
+
     case CON_GET_NEW_CHARACTER_NAME:
         if ( argument[0] == '\0' )
         {
@@ -2299,6 +2517,13 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
         strcpy( arg, capitalize_name(argument) );
         strcpy( buf, player_filename(arg) );
+        if ( playerdb_account_character_count( d->account_id ) >= MAX_ACCOUNT_CHARACTERS )
+        {
+            write_to_buffer( d, "That account is already at the 5 character limit.\n\r", 0 );
+            show_account_menu( d );
+            d->connected = CON_ACCOUNT_MENU;
+            return;
+        }
         if ( !check_parse_name( arg, TRUE ) )
         {
             write_to_buffer( d, "Illegal name, try another.\n\rCharacter name: ", 0 );
@@ -2708,31 +2933,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	    return;
 	}
         buf[0] = '\0';
-        write_to_buffer( d, "Choose your race from the following list:\r\n", 0);
-        strcat(buf,"[");
-        
-	for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-        {
-          if (iRace != RACE_VAMPIRE
-          && race_table[iRace]->race_name && race_table[iRace]->race_name[0] != '\0'
-          && str_cmp(race_table[iRace]->race_name,"unused") )
-          {
-            if ( iRace > 0 )
-            {
-                if ( strlen(buf)+strlen(race_table[iRace]->race_name) > 77 )
-                {
-                   strcat( buf, "\n\r" );
-                   write_to_buffer( d, buf, 0 );
-                   buf[0] = '\0';
-                }
-                else
-                   strcat( buf, " " );
-            }
-            strcat( buf, race_table[iRace]->race_name );
-          }
-        }
-        strcat( buf, "]\n\r: " );
-        write_to_buffer( d, buf, 0 );
+        show_race_menu( d );
 	d->connected = CON_GET_NEW_RACE;
 	break;
 
@@ -2764,7 +2965,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	  write_to_buffer( d, "That's not a valid class.\n\rEnter the number of your class? ", 0 );
 	  return;
 	}
-	for(iClass=0; iClass < MAX_CLASS; iClass++)
+	for(iClass=0; iClass < MAX_CLASS-1; iClass++)
 	      ch->level[iClass] = 0;
 
         write_to_buffer( d, "You may now roll for your character's stats.\n\rYou may roll as often as you like.\n\r",0);
@@ -2797,26 +2998,39 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	  return;
 	}
 
-	for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-	{
-	    if ( toupper(arg[0]) == toupper(race_table[iRace]->race_name[0])
-	    &&   !str_prefix( arg, race_table[iRace]->race_name ) )
+        if ( is_number( arg ) )
+            iRace = race_menu_index( atoi( arg ) );
+        else
+        {
+	    for ( iRace = 0; iRace < MAX_RACE; iRace++ )
 	    {
-		ch->race = iRace;
-                if( ch->race == 11 )
-                  ch->alignment = -500;
-		break;
+	        if ( toupper(arg[0]) == toupper(race_table[iRace]->race_name[0])
+	        &&   !str_prefix( arg, race_table[iRace]->race_name ) )
+	        {
+		    ch->race = iRace;
+                    if( ch->race == 11 )
+                      ch->alignment = -500;
+		    break;
+	        }
 	    }
-	}
+        }
+        if ( iRace >= 0 && iRace < MAX_RACE )
+        {
+            ch->race = iRace;
+            if ( ch->race == 11 )
+                ch->alignment = -500;
+        }
     if ( iRace == MAX_RACE
-    ||  !race_table[iRace]->race_name || race_table[iRace]->race_name[0] == '\0'
+    ||   iRace < 0
+    ||   race_table[iRace]->race_name[0] == '\0'
     ||   iRace == RACE_VAMPIRE
     ||   IS_SET(race_table[iRace]->class_restriction, 1 << max_sec_level(ch) ) 
     ||   !str_cmp(race_table[iRace]->race_name,"unused")
        )
 	{
 	    write_to_buffer( d,
-		"That's not a race.\n\rWhat IS your race? ", 0 );
+		"That's not a valid race choice.\n\r", 0 );
+            show_race_menu( d );
 	    return;
 	}
         d->connected = CON_GET_NEW_CLASS;
@@ -2943,7 +3157,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 	      /* name_stamp_stats( ch ); */
   
-	    for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
+	    for ( iClass = 0; iClass < MAX_CLASS-1; iClass++ )
                 ch->level[iClass] = xIS_SET( ch->class, iClass ) ? 1 : 0;
 	    ch->exp[max_sec_level(ch)]	= 0;
 	    ch->hit	= ch->max_hit;
@@ -2951,6 +3165,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
             ch->hit    += race_table[ch->race]->hit;
             ch->mana   += race_table[ch->race]->mana;
 	    ch->move	= ch->max_move;
+            /*
+             * Fresh account-backed characters can arrive here with a stale
+             * title pointer after the earlier creation prompts. Replace it
+             * outright before we assign the canonical level title.
+             */
+            ch->pcdata->title = STRALLOC( "" );
 	    sprintf( buf, "the %s",
 		title_table [max_sec_level(ch)] [ch->level[max_sec_level(ch)]]
 		[ch->sex == SEX_FEMALE ? 1 : 0] ); 

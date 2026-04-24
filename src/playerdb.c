@@ -406,6 +406,32 @@ bool playerdb_account_set_password(int account_id, const char *password_hash)
     return TRUE;
 }
 
+int playerdb_account_character_count(int account_id)
+{
+    sqlite3_stmt *stmt;
+    int rc;
+    int count;
+
+    if (!player_db || account_id <= 0)
+        return 0;
+
+    stmt = NULL;
+    rc = sqlite3_prepare_v2(player_db,
+        "SELECT COUNT(*) FROM characters WHERE account_id = ?1;",
+        -1, &stmt, NULL);
+    if (rc != SQLITE_OK)
+    {
+        playerdb_log_error("playerdb_account_character_count: prepare");
+        return 0;
+    }
+
+    sqlite3_bind_int(stmt, 1, account_id);
+    rc = sqlite3_step(stmt);
+    count = (rc == SQLITE_ROW) ? sqlite3_column_int(stmt, 0) : 0;
+    sqlite3_finalize(stmt);
+    return count;
+}
+
 bool playerdb_character_load_blob(const char *char_key, char **blob, int *blob_len,
     int *account_id, int *character_id, char **account_name, char **password_hash)
 {
@@ -463,6 +489,40 @@ bool playerdb_character_load_blob(const char *char_key, char **blob, int *blob_l
             const unsigned char *pwdcol = sqlite3_column_text(stmt, 4);
             *password_hash = str_dup(pwdcol ? (const char *)pwdcol : "");
         }
+        sqlite3_finalize(stmt);
+        return TRUE;
+    }
+
+    sqlite3_finalize(stmt);
+    return FALSE;
+}
+
+bool playerdb_character_password_hash(const char *char_key, char *password_hash_out, size_t pwd_size)
+{
+    sqlite3_stmt *stmt;
+    int rc;
+
+    if (!player_db || !char_key || char_key[0] == '\0' || !password_hash_out || pwd_size == 0)
+        return FALSE;
+
+    stmt = NULL;
+    rc = sqlite3_prepare_v2(player_db,
+        "SELECT a.password_hash "
+        "FROM characters c JOIN accounts a ON a.id = c.account_id "
+        "WHERE c.char_key = ?1 LIMIT 1;",
+        -1, &stmt, NULL);
+    if (rc != SQLITE_OK)
+    {
+        playerdb_log_error("playerdb_character_password_hash: prepare");
+        return FALSE;
+    }
+
+    sqlite3_bind_text(stmt, 1, char_key, -1, SQLITE_STATIC);
+    rc = sqlite3_step(stmt);
+    if (rc == SQLITE_ROW)
+    {
+        const unsigned char *pwdcol = sqlite3_column_text(stmt, 0);
+        snprintf(password_hash_out, pwd_size, "%s", pwdcol ? (const char *)pwdcol : "");
         sqlite3_finalize(stmt);
         return TRUE;
     }

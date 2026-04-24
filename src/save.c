@@ -157,7 +157,8 @@ void save_char_obj( CHAR_DATA *ch )
 	return;
     }
 
-    if ( IS_NPC(ch) || ch->level[max_sec_level(ch)] < 2 )
+    if ( IS_NPC(ch)
+    ||  ( ch->level[max_sec_level(ch)] < 2 && ch->pcdata->account_id <= 0 ) )
 	return;
 
     saving_char = ch;

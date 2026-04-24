@@ -718,7 +718,8 @@ struct	project_data
 typedef enum
 {
   CON_PLAYING = 0,	CON_GET_ACCOUNT_NAME = -120,
-  CON_GET_ACCOUNT_PASSWORD, CON_ACCOUNT_MENU, CON_GET_NEW_ACCOUNT_NAME,
+  CON_GET_ACCOUNT_PASSWORD, CON_ACCOUNT_MENU, CON_ACCOUNT_IMPORT_NAME,
+  CON_ACCOUNT_IMPORT_PASSWORD, CON_GET_NEW_ACCOUNT_NAME,
   CON_CONFIRM_NEW_ACCOUNT_NAME, CON_GET_NEW_ACCOUNT_PASSWORD,
   CON_CONFIRM_NEW_ACCOUNT_PASSWORD, CON_GET_NEW_CHARACTER_NAME,
   CON_GET_NAME = -100,	CON_GET_OLD_PASSWORD,
@@ -785,6 +786,8 @@ struct	descriptor_data
     int			account_id;
     char *		account_name;
     char *              account_pwd;
+    char *              pending_char_name;
+    char *              pending_char_key;
     unsigned char	prevcolor;
   #ifdef DNS_SLAVE
     int 	 	wait; /* wait for how many loops */
@@ -4487,6 +4490,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  */
 #define PLAYER_DIR	"../player/"	/* Player files			*/
 #define PLAYER_DB_FILE   "../system/playerdata.db"
+#define MAX_ACCOUNT_CHARACTERS 5
 #define BACKUP_DIR	"../backup/"    /* Backup Player files		*/
 #define GOD_DIR		"../gods/"	/* God Info Dir			*/
 #define BOARD_DIR	"../boards/"	/* Board data dir		*/
@@ -5210,10 +5214,13 @@ bool    playerdb_account_create args( ( const char *account_name,
                                 const char *password_hash, int *account_id ) );
 bool    playerdb_account_set_password args( ( int account_id,
                                 const char *password_hash ) );
+int     playerdb_account_character_count args( ( int account_id ) );
 bool    playerdb_character_load_blob args( ( const char *char_key,
                                 char **blob, int *blob_len, int *account_id,
                                 int *character_id, char **account_name,
                                 char **password_hash ) );
+bool    playerdb_character_password_hash args( ( const char *char_key,
+                                char *password_hash_out, size_t pwd_size ) );
 bool    playerdb_character_save_blob args( ( CHAR_DATA *ch,
                                 const char *blob, int blob_len ) );
 int     playerdb_account_list_characters args( ( int account_id,
