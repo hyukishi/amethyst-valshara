@@ -677,23 +677,26 @@ void boot_db( bool fCopyOver )
 	FILE *fpList;
 
 	log_string("Reading in area files...");
-	if ( ( fpList = fopen( AREA_LIST, "r" ) ) == NULL )
-	{
-	    perror( AREA_LIST );
-	    shutdown_mud( "Unable to open area list" );
-	    exit( 1 );
-	}
-
-	    for ( ; ; )
+        if ( !worlddb_init() || !worlddb_load_active_areas() )
+        {
+	    if ( ( fpList = fopen( AREA_LIST, "r" ) ) == NULL )
 	    {
-		strcpy( strArea, fread_word( fpList ) );
-	    if ( strArea[0] == '$' )
-		break;
-
-		load_area_file( last_area, strArea );
-	    
+	        perror( AREA_LIST );
+	        shutdown_mud( "Unable to open area list" );
+	        exit( 1 );
 	    }
-	    fclose( fpList );
+
+	        for ( ; ; )
+	        {
+		    strcpy( strArea, fread_word( fpList ) );
+	        if ( strArea[0] == '$' )
+		    break;
+
+		    load_area_file( last_area, strArea );
+	        
+	        }
+	        fclose( fpList );
+        }
 	}
 
         log_string("Validating reset references...");
@@ -5760,10 +5763,12 @@ void load_area_file( AREA_DATA *tarea, char *filename )
 	return;
     }
 
-    if ( ( fpArea = fopen( filename, "r" ) ) == NULL )
+    fpArea = worlddb_open_area_fp( filename );
+    if ( fpArea == NULL && ( fpArea = fopen( filename, "r" ) ) == NULL )
     {
         sprintf( areapath, "%s%s", AREA_DIR, filename );
-        if ( ( fpArea = fopen( areapath, "r" ) ) == NULL )
+        if ( ( fpArea = worlddb_open_area_fp( areapath ) ) == NULL
+        &&   ( fpArea = fopen( areapath, "r" ) ) == NULL )
         {
 	    perror( filename );
 	    bug( "load_area: error loading file (can't open)" );
@@ -5887,6 +5892,8 @@ void load_reserved( void )
  * them out of the area files. -- Altrag */
 void load_buildlist( void )
 {
+        if ( worlddb_load_buildlist() )
+            return;
 	DIR *dp;
 	struct dirent *dentry;
 	FILE *fp;

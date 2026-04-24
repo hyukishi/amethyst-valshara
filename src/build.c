@@ -6341,6 +6341,7 @@ void fold_area( AREA_DATA *tarea, char *filename, bool install )
     fprintf( fpout, "#$\n" );
     fclose( fpout );
     fpReserve = fopen( NULL_FILE, "r" );
+    worlddb_sync_area_from_disk( tarea, filename );
     return;
 }
 
@@ -6534,6 +6535,9 @@ void write_area_list( )
 {
     AREA_DATA *tarea;
     FILE *fpout;
+
+    if ( worlddb_sync_area_list() )
+        return;
 
     fpout = fopen( AREA_LIST, "w" );
     if ( !fpout )

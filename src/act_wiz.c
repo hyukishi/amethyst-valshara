@@ -4711,13 +4711,14 @@ void do_mortalize( CHAR_DATA *ch, char *argument )
         
     if ( !remove( buf ) )
       send_to_char( "Player's immortal data destroyed.\n\r", ch );
-    else if ( errno != ENOENT )
-    {
-      ch_printf( ch, "Unknown error #%d - %s (immortal data).  Report to Thoric\n\r",
-	errno, strerror( errno ) );
-      sprintf( buf2, "%s mortalizing %s", ch->name, buf );
-      perror( buf2 );
-    }
+	    else if ( errno != ENOENT )
+	    {
+	      ch_printf( ch, "Unknown error #%d - %s (immortal data).  Report to Thoric\n\r",
+		errno, strerror( errno ) );
+	      sprintf( buf2, "%s mortalizing %s", ch->name, buf );
+	      perror( buf2 );
+	    }
+            worlddb_delete_god( victim->pcdata->filename );
     sprintf( buf2, "%s.are", capitalize(argument) );
     for ( pArea = first_build; pArea; pArea = pArea->next )
       if ( !strcmp( pArea->filename, buf2 ) )
@@ -5730,13 +5731,14 @@ void do_destroy( CHAR_DATA *ch, char *argument )
     sprintf( buf, "%s%s", GOD_DIR, capitalize(filekey) );
     if ( !remove( buf ) )
       send_to_char( "Player's immortal data destroyed.\n\r", ch );
-    else if ( errno != ENOENT )
-    {
-      ch_printf( ch, "Unknown error #%d - %s (immortal data).  Report to Thoric.\n\r",
-              errno, strerror( errno ) );
-      sprintf( buf2, "%s destroying %s", ch->name, buf );
-      perror( buf2 );
-    }
+	    else if ( errno != ENOENT )
+	    {
+	      ch_printf( ch, "Unknown error #%d - %s (immortal data).  Report to Thoric.\n\r",
+	              errno, strerror( errno ) );
+	      sprintf( buf2, "%s destroying %s", ch->name, buf );
+	      perror( buf2 );
+	    }
+            worlddb_delete_god( filekey );
 
     sprintf( buf2, "%s.are", name );
     for ( pArea = first_build; pArea; pArea = pArea->next )
@@ -9972,12 +9974,13 @@ void do_pcrename( CHAR_DATA *ch, char *argument )
     }
 
     /* Have to remove the old god entry in the directories */
-    if ( IS_IMMORTAL( victim ) )
-    {
-	char godname[MAX_STRING_LENGTH];
-	sprintf(godname, "%s%s", GOD_DIR, capitalize(victim->pcdata->filename));
-	remove( godname );	
-    }
+	    if ( IS_IMMORTAL( victim ) )
+	    {
+		char godname[MAX_STRING_LENGTH];
+		sprintf(godname, "%s%s", GOD_DIR, capitalize(victim->pcdata->filename));
+		remove( godname );
+                worlddb_delete_god( victim->pcdata->filename );
+	    }
 
     /* Remember to change the names of the areas */
     if ( ch->pcdata->area )

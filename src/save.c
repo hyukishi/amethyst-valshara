@@ -218,6 +218,7 @@ void save_char_obj( CHAR_DATA *ch )
 	  				       ch->pcdata->m_range_hi	);
 	fclose( fp );
       }
+      worlddb_sync_god( ch );
     }
 
     fp = tmpfile();

@@ -73,8 +73,12 @@ void write_deity_list( )
 void save_deity( DEITY_DATA *deity )
 {
      FILE *fp;
+     FILE *tmpfp;
      char filename[256];
      char buf[MAX_STRING_LENGTH];
+     char *raw_text;
+     long raw_len;
+     size_t got;
 
      if ( !deity )
      {
@@ -90,6 +94,76 @@ void save_deity( DEITY_DATA *deity )
      }
 
      sprintf( filename, "%s%s", DEITY_DIR, deity->filename );
+
+     tmpfp = tmpfile();
+     raw_text = NULL;
+     if ( tmpfp != NULL )
+     {
+	fprintf( tmpfp, "#DEITY\n" );
+	fprintf( tmpfp, "Filename\t\t%s~\n",	deity->filename );
+	fprintf( tmpfp, "Name\t\t%s~\n",	deity->name	);
+	fprintf( tmpfp, "Description\t%s~\n",	deity->description );
+	fprintf( tmpfp, "Alignment\t\t%d\n",	deity->alignment );
+	fprintf( tmpfp, "Worshippers\t%d\n",	deity->worshippers );
+	fprintf( tmpfp, "Flee\t\t%d\n",	deity->flee );
+	fprintf( tmpfp, "Flee_npcrace\t%d\n",	deity->flee_npcrace );
+	fprintf( tmpfp, "Flee_npcfoe\t%d\n",	deity->flee_npcfoe );
+	fprintf( tmpfp, "Kill\t\t%d\n",	deity->kill );
+	fprintf( tmpfp, "Kill_npcrace\t%d\n",	deity->kill_npcrace );
+	fprintf( tmpfp, "Kill_npcfoe\t%d\n",	deity->kill_npcfoe );
+	fprintf( tmpfp, "Kill_magic\t%d\n",	deity->kill_magic );
+	fprintf( tmpfp, "Sac\t\t%d\n",	deity->sac );
+	fprintf( tmpfp, "Bury_corpse\t%d\n",	deity->bury_corpse );
+	fprintf( tmpfp, "Aid_spell\t\t%d\n",	deity->aid_spell );
+	fprintf( tmpfp, "Aid\t\t%d\n",	deity->aid );
+	fprintf( tmpfp, "Steal\t\t%d\n",	deity->steal );
+	fprintf( tmpfp, "Backstab\t\t%d\n",	deity->backstab );
+	fprintf( tmpfp, "Die\t\t%d\n",	deity->die );
+	fprintf( tmpfp, "Die_npcrace\t%d\n",	deity->die_npcrace );
+	fprintf( tmpfp, "Die_npcfoe\t%d\n",	deity->die_npcfoe );
+	fprintf( tmpfp, "Spell_aid\t\t%d\n",	deity->spell_aid );
+	fprintf( tmpfp, "Dig_corpse\t%d\n",	deity->dig_corpse );
+	fprintf( tmpfp, "Scorpse\t\t%d\n",	deity->scorpse );
+	fprintf( tmpfp, "Savatar\t\t%d\n",	deity->savatar );
+	fprintf( tmpfp, "Sdeityobj\t\t%d\n",	deity->sdeityobj );
+	fprintf( tmpfp, "Srecall\t\t%d\n",	deity->srecall );
+	fprintf( tmpfp, "Race\t\t%d\n",	deity->race );
+	fprintf( tmpfp, "Class\t\t%d\n",	deity->class );
+	fprintf( tmpfp, "Element\t\t%d\n",	deity->element );
+	fprintf( tmpfp, "Sex\t\t%d\n",	deity->sex );
+	fprintf( tmpfp, "Affected\t\t%s\n",	print_bitvector(&deity->affected) );
+	fprintf( tmpfp, "Npcrace\t\t%d\n",	deity->npcrace );
+	fprintf( tmpfp, "Npcfoe\t\t%d\n",	deity->npcfoe );
+	fprintf( tmpfp, "Suscept\t\t%d\n",	deity->suscept );
+	fprintf( tmpfp, "Race2\t\t%d\n",	deity->race2 );
+	fprintf( tmpfp, "Susceptnum\t%d\n",  deity->susceptnum );
+	fprintf( tmpfp, "Elementnum\t%d\n",  deity->elementnum );
+	fprintf( tmpfp, "Affectednum\t%d\n",	deity->affectednum );
+	fprintf( tmpfp, "Objstat\t\t%d\n",	deity->objstat	);
+	fprintf( tmpfp, "End\n\n" );
+	fprintf( tmpfp, "#END\n" );
+	fflush( tmpfp );
+	if ( fseek( tmpfp, 0, SEEK_END ) == 0 )
+	{
+	    raw_len = ftell( tmpfp );
+	    if ( raw_len >= 0 )
+	    {
+		rewind( tmpfp );
+		CREATE( raw_text, char, raw_len + 1 );
+		got = fread( raw_text, 1, raw_len, tmpfp );
+		raw_text[got] = '\0';
+	    }
+	}
+	fclose( tmpfp );
+     }
+
+     if ( raw_text != NULL && worlddb_deity_save( deity, raw_text ) )
+     {
+        DISPOSE( raw_text );
+        return;
+     }
+     if ( raw_text != NULL )
+        DISPOSE( raw_text );
 
      fclose( fpReserve );
      if ( ( fp = fopen( filename, "w" ) ) == NULL )
@@ -279,10 +353,61 @@ bool load_deity_file( char *deityfile )
      char filename[256];
      DEITY_DATA *deity;
      FILE *fp;
+     char *raw_text;
      bool found;
 
      found = FALSE;
      sprintf( filename, "%s%s", DEITY_DIR, deityfile );
+
+     raw_text = NULL;
+     if ( worlddb_deity_fetch_raw( deityfile, &raw_text ) )
+     {
+        fp = tmpfile();
+        if ( fp )
+        {
+            fputs( raw_text, fp );
+            rewind( fp );
+	    for ( ; ; )
+	    {
+	        char letter;
+	        char *word;
+
+	        letter = fread_letter( fp );
+	        if ( letter == '*' )
+	        {
+		    fread_to_eol( fp );
+		    continue;
+	        }
+
+	        if ( letter != '#' )
+	        {
+		    bug( "Load_deity_file: # not found.", 0 );
+		    break;
+	        }
+
+	        word = fread_word( fp );
+	        if ( !str_cmp( word, "DEITY" ) )
+	        {
+		    CREATE( deity, DEITY_DATA, 1 );
+		    fread_deity( deity, fp );
+		    LINK(deity, first_deity, last_deity, next, prev);
+		    found = TRUE;
+		    break;
+	        }
+	        else
+	        {
+		    char buf[MAX_STRING_LENGTH];
+		    sprintf( buf, "Load_deity_file: bad section: %s.", word );
+		    bug( buf, 0 );
+		    break;
+	        }
+	    }
+            fclose( fp );
+        }
+        DISPOSE( raw_text );
+        if ( found )
+            return TRUE;
+     }
 
      if ( ( fp = fopen( filename, "r" ) ) != NULL )
      {
@@ -333,6 +458,9 @@ void load_deity( )
 {
     FILE *fpList;
     char *filename;
+    char db_names[256][MAX_INPUT_LENGTH];
+    int db_count;
+    int db_index;
     char deitylist[256];
     char buf[MAX_STRING_LENGTH];
 
@@ -340,6 +468,22 @@ void load_deity( )
     last_deity  = NULL;
 
     log_string( "Loading deities..." );
+
+    db_count = 0;
+    if ( worlddb_deity_load_names( db_names, 256, &db_count ) )
+    {
+        for ( db_index = 0; db_index < db_count; ++db_index )
+        {
+            log_string( db_names[db_index] );
+            if ( !load_deity_file( db_names[db_index] ) )
+            {
+                sprintf( buf, "Cannot load deity row: %s", db_names[db_index] );
+                bug( buf, 0 );
+            }
+        }
+        log_string( " Done deities " );
+        return;
+    }
 
     sprintf( deitylist, "%s%s", DEITY_DIR, DEITY_LIST );
     if ( ( fpList = fopen ( deitylist, "r" ) ) == NULL )

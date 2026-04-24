@@ -4490,6 +4490,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  */
 #define PLAYER_DIR	"../player/"	/* Player files			*/
 #define PLAYER_DB_FILE   "../system/playerdata.db"
+#define WORLD_DB_FILE    "../system/worlddata.db"
 #define MAX_ACCOUNT_CHARACTERS 5
 #define BACKUP_DIR	"../backup/"    /* Backup Player files		*/
 #define GOD_DIR		"../gods/"	/* God Info Dir			*/
@@ -5229,6 +5230,19 @@ int     playerdb_account_list_characters args( ( int account_id,
 bool    playerdb_account_owns_character args( ( int account_id,
                                 const char *char_key ) );
 bool    playerdb_character_delete args( ( const char *char_key ) );
+bool    worlddb_init args( ( void ) );
+void    worlddb_shutdown args( ( void ) );
+FILE *  worlddb_open_area_fp args( ( const char *filename ) );
+bool    worlddb_load_active_areas args( ( void ) );
+bool    worlddb_sync_area_list args( ( void ) );
+bool    worlddb_sync_area_from_disk args( ( AREA_DATA *tarea, const char *filepath ) );
+bool    worlddb_sync_help_entries args( ( void ) );
+bool    worlddb_load_buildlist args( ( void ) );
+bool    worlddb_sync_god args( ( CHAR_DATA *ch ) );
+bool    worlddb_delete_god args( ( const char *god_key ) );
+bool    worlddb_deity_load_names args( ( char names[][MAX_INPUT_LENGTH], int max_names, int *count ) );
+bool    worlddb_deity_fetch_raw args( ( const char *deity_name, char **raw_text ) );
+bool    worlddb_deity_save args( ( DEITY_DATA *deity, const char *raw_text ) );
 
 /* track.c */
 void	found_prey	args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );

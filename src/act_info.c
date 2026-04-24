@@ -2209,6 +2209,12 @@ void do_hset( CHAR_DATA *ch, char *argument )
 
 	log_string_plus( "Saving help.are...", LOG_NORMAL, LEVEL_GREATER );
 
+        if ( worlddb_sync_help_entries() )
+        {
+            send_to_char( "Saved to worlddata.db.\n\r", ch );
+            return;
+        }
+
 	rename( "help.are", "help.are.bak" );
 	fclose( fpReserve );
 	if ( ( fpout = fopen( "help.are", "w" ) ) == NULL )
