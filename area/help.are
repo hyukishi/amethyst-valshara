@@ -11948,22 +11948,77 @@ DESCRIPTION
     This spell enables the caster to pass through closed doors.
 ~
 
+0 ACCOUNTS 'MASTER ACCOUNT' ACCOUNT~
+NAME
+    ACCOUNTS - Overview of master accounts and character slots
+
+SYNOPSIS
+    Login: enter your master account name at the greeting prompt
+    Menu: PLAY <number|name>, NEW, IMPORT, QUIT
+
+DESCRIPTION
+    Valshara now uses a master-account model. You log in once with the master
+    account name and password, then choose one of that account's characters
+    without entering a second password.
+
+    Each master account may own up to five characters at a time.
+
+    NEW creates a fresh character on the current account.
+
+    IMPORT adds an existing character to the current account after you prove
+    that you know that character's current password.
+
+    PLAY loads a listed character by menu number or by name.
+
+SEE ALSO
+    IMPORT, PASSWORD, RESETPASSWORD
+~
+
+0 IMPORT 'IMPORT CHARACTER'~
+NAME
+    IMPORT - Add an existing character to your current master account
+
+SYNOPSIS
+    From the account menu: IMPORT
+
+DESCRIPTION
+    IMPORT is used from the master-account menu after you have already logged in
+    to the account that will receive the character.
+
+    The game asks for the existing character name and then for that character's
+    current password. If the password is correct, the character is reassigned to
+    your current master account.
+
+    IMPORT does not ask for the master-account password a second time.
+
+    Accounts that already hold five characters cannot import more until one of
+    their existing characters is moved or removed.
+
+SEE ALSO
+    ACCOUNTS, PASSWORD
+~
+
 0 PASSWORD~
 NAME
-    PASSWORD - Change your own account password
+    PASSWORD - Change your own master-account password
 
 SYNOPSIS
     Syntax: password <new-password> <again>
 
 DESCRIPTION
-    PASSWORD changes the password on your own character. Enter the new password twice so the game can confirm that you typed it correctly.
+    PASSWORD changes the password on your current master account.
 
-    Passwords must be at least five characters long and may not contain spaces or certain file-breaking characters.
+    That master-account password is the one used at the greeting prompt. After
+    you log in successfully, you may select any character on that account
+    without entering another password.
+
+    Passwords must be at least five characters long and may not contain spaces
+    or certain file-breaking characters.
 
     The PASSWORD command is protected against being snooped or logged.
 
 SEE ALSO
-    RESETPASSWORD
+    ACCOUNTS, IMPORT, RESETPASSWORD
 ~
 
 0 RESETPASSWORD 'RESET PASSWORD'~
@@ -11975,16 +12030,21 @@ SYNOPSIS
     Syntax: resetpassword "multi word name" <new-password>
 
 DESCRIPTION
-    RESETPASSWORD lets a level 120 immortal assign a new password to another player account.
+    RESETPASSWORD lets a level 120 immortal assign a new password to another
+    player's master account.
 
-    This command works on both online and offline characters. It refuses self-use, and it will not reset the password of an immortal whose trust is equal to or higher than your own.
+    This command works on both online and offline characters. It refuses
+    self-use, and it will not reset the password of an immortal whose trust is
+    equal to or higher than your own.
 
-    Multi-word character names are supported. Use quotes around the character name when it contains spaces.
+    Multi-word character names are supported. Use quotes around the character
+    name when it contains spaces.
 
-    Like PASSWORD, this command is protected against normal command logging so the plaintext password is not exposed in logs.
+    Like PASSWORD, this command is protected against normal command logging so
+    the plaintext password is not exposed in logs.
 
 SEE ALSO
-    PASSWORD, FORMPASS
+    ACCOUNTS, PASSWORD, FORMPASS
 ~
 
 1 PC NPC~
