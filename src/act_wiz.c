@@ -2469,14 +2469,23 @@ void do_reboot( CHAR_DATA *ch, char *argument )
 
     if ( auction->item )
 	do_auction( ch, "stop");
-    sprintf( buf, "Reboot by %s.", ch->name );
-    do_echo( ch, buf );
 
     if ( !str_cmp(argument, "and sort skill table") )
     {
 	sort_skill_table();
 	save_skill_table();
     }
+
+    if ( str_cmp( argument, "nosave" ) )
+    {
+	sprintf( buf, "Warm reboot by %s.", ch->name );
+	do_echo( ch, buf );
+	do_copyover( ch, "" );
+	return;
+    }
+
+    sprintf( buf, "Cold reboot by %s.", ch->name );
+    do_echo( ch, buf );
 
     /* Save all characters before booting. */
     if ( str_cmp(argument, "nosave") )
