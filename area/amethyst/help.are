@@ -11934,17 +11934,41 @@ DESCRIPTION
 
 0 PASSWORD~
 NAME
-    PASSWORD - PASSWORD changes your character's password. The first argument must be
+    PASSWORD - Change your own account password
 
 SYNOPSIS
-    Syntax: password <old-password> <new-password>
+    Syntax: password <new-password> <again>
 
 DESCRIPTION
-    PASSWORD changes your character's password. The first argument must be your old password. The second argument is your new password.
+    PASSWORD changes the password on your own character. Enter the new password twice so the game can confirm that you typed it correctly.
+
+    Passwords must be at least five characters long and may not contain spaces or certain file-breaking characters.
 
     The PASSWORD command is protected against being snooped or logged.
 
-    Passwords can not contain certain characters, or spaces. As well, we advise that you use an alphanumeric password (containing both numbers and letters) as they are harder to guess.
+SEE ALSO
+    RESETPASSWORD
+~
+
+0 RESETPASSWORD 'RESET PASSWORD'~
+NAME
+    RESETPASSWORD - Reset another player's password as a top-level immortal
+
+SYNOPSIS
+    Syntax: resetpassword <player> <new-password>
+    Syntax: resetpassword "multi word name" <new-password>
+
+DESCRIPTION
+    RESETPASSWORD lets a LEVEL_SUPREME immortal assign a new password to another player account.
+
+    This command works on both online and offline characters. It refuses self-use, and it will not reset the password of an immortal whose trust is equal to or higher than your own.
+
+    Multi-word character names are supported. Use quotes around the character name when it contains spaces.
+
+    Like PASSWORD, this command is protected against normal command logging so the plaintext password is not exposed in logs.
+
+SEE ALSO
+    PASSWORD, FORMPASS
 ~
 
 1 PC NPC~
