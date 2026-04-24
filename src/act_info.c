@@ -72,6 +72,42 @@ void	show_char_to_char_1	args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
 void	show_char_to_char	args( ( CHAR_DATA *list, CHAR_DATA *ch ) );
 bool	check_blind		args( ( CHAR_DATA *ch ) );
 void    show_condition          args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
+char   *check_cmd_flags         args( ( CHAR_DATA *ch, CMDTYPE *cmd ) );
+
+extern CMDTYPE *command_hash[126];
+
+static bool can_view_command( CHAR_DATA *ch, CMDTYPE *command )
+{
+    int trust;
+
+    if ( command->level >= LEVEL_HERO )
+        return FALSE;
+
+    trust = get_trust( ch );
+    if ( command->level > trust
+    && ( IS_NPC( ch ) || !ch->pcdata->council
+    ||   !is_name( command->name, ch->pcdata->council->powers )
+    ||   command->level > ( trust + MAX_CPD ) )
+    && ( IS_NPC( ch ) || !ch->pcdata->bestowments
+    ||   ch->pcdata->bestowments[0] == '\0'
+    ||   !is_name( command->name, ch->pcdata->bestowments )
+    ||   command->level > ( trust + sysdata.bestow_dif ) ) )
+        return FALSE;
+
+    if ( command->name[0] == 'm' && command->name[1] == 'p' )
+        return FALSE;
+
+    if ( !IS_NPC( ch ) && xIS_SET( ch->act, PLR_FREEZE ) )
+        return FALSE;
+
+    if ( ch->position < command->position )
+        return FALSE;
+
+    if ( check_cmd_flags( ch, command )[0] != '\0' )
+        return FALSE;
+
+    return TRUE;
+}
 
 
 char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
@@ -3624,10 +3660,7 @@ void do_commands( CHAR_DATA *ch, char *argument )
     {
 	for ( hash = 0; hash < 126; hash++ )
 	    for ( command = command_hash[hash]; command; command = command->next )
-		if ( command->level <  LEVEL_HERO
-		&&   command->level <= get_trust( ch )
-		&&  (command->name[0] != 'm'
-		&&   command->name[1] != 'p') )
+		if ( can_view_command( ch, command ) )
 		{
 		    pager_printf( ch, "%-12s", command->name );
 		    if ( ++col % 6 == 0 )
@@ -3641,11 +3674,8 @@ void do_commands( CHAR_DATA *ch, char *argument )
 	found = FALSE;
 	for ( hash = 0; hash < 126; hash++ )
 	    for ( command = command_hash[hash]; command; command = command->next )
-		if ( command->level <  LEVEL_HERO
-		&&   command->level <= get_trust( ch )
-		&&  !str_prefix(argument, command->name)
-		&&  (command->name[0] != 'm'
-		&&   command->name[1] != 'p') )
+		if ( can_view_command( ch, command )
+		&&  !str_prefix(argument, command->name) )
 		{
 		    pager_printf( ch, "%-12s", command->name );
 		    found = TRUE;
