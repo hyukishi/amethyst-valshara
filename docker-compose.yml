@@ -1,0 +1,17 @@
+services:
+  mud:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: amethyst-valshara-dev
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    init: true
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/workspace
+    environment:
+      TZ: America/Chicago
+    command: bash
