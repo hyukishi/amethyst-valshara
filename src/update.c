@@ -138,16 +138,119 @@ static int racial_mana_bonus( CHAR_DATA *ch )
     return race_table[ch->race]->mana_regen;
 }
 
+static bool uses_food_and_drink( CHAR_DATA *ch )
+{
+    if ( IS_NPC( ch ) )
+        return FALSE;
+
+    return FALSE;
+}
+
+static sh_int *get_perm_stat_ptr( CHAR_DATA *ch, int apply_type )
+{
+    switch ( apply_type )
+    {
+        case APPLY_STR: return &ch->perm_str;
+        case APPLY_INT: return &ch->perm_int;
+        case APPLY_WIS: return &ch->perm_wis;
+        case APPLY_DEX: return &ch->perm_dex;
+        case APPLY_CON: return &ch->perm_con;
+        case APPLY_CHA: return &ch->perm_cha;
+        case APPLY_LCK: return &ch->perm_lck;
+    }
+
+    return NULL;
+}
+
+static const char *apply_type_name( int apply_type )
+{
+    switch ( apply_type )
+    {
+        case APPLY_STR: return "strength";
+        case APPLY_INT: return "intelligence";
+        case APPLY_WIS: return "wisdom";
+        case APPLY_DEX: return "dexterity";
+        case APPLY_CON: return "constitution";
+        case APPLY_CHA: return "charisma";
+        case APPLY_LCK: return "luck";
+    }
+
+    return "ability";
+}
+
+static int class_attribute_cap( int class_index, int apply_type )
+{
+    if ( class_index < 0 || class_index >= MAX_CLASS || class_table[class_index] == NULL )
+        return 20;
+
+    if ( class_table[class_index]->attr_prime == apply_type )
+        return 25;
+    if ( class_table[class_index]->attr_second == apply_type )
+        return 22;
+    if ( class_table[class_index]->attr_deficient == apply_type )
+        return 16;
+    return 20;
+}
+
+static int multiclass_attribute_cap( CHAR_DATA *ch, int apply_type )
+{
+    int cap;
+    int i;
+
+    cap = 20;
+    for ( i = 0; i < MAX_CLASS; ++i )
+    {
+        if ( !xIS_SET( ch->class, i ) || class_table[i] == NULL )
+            continue;
+
+        cap = UMAX( cap, class_attribute_cap( i, apply_type ) );
+    }
+
+    return cap;
+}
+
+static bool grant_level_milestone_stat_bonus( CHAR_DATA *ch, int class, char *buf )
+{
+    sh_int *stat;
+    int apply_type;
+    int cap;
+
+    if ( IS_NPC( ch ) || class < 0 || class >= MAX_CLASS || class_table[class] == NULL )
+        return FALSE;
+
+    if ( ch->level[class] <= 0 || ( ch->level[class] % 5 ) != 0 )
+        return FALSE;
+
+    apply_type = class_table[class]->attr_prime;
+    stat = get_perm_stat_ptr( ch, apply_type );
+    if ( stat == NULL )
+        return FALSE;
+
+    cap = multiclass_attribute_cap( ch, apply_type );
+    if ( *stat >= cap )
+        return FALSE;
+
+    ++(*stat);
+    sprintf( buf,
+        "Your training as a %s sharpens your %s. [%s +1]\n\r",
+        class_table[class]->who_name,
+        apply_type_name( apply_type ),
+        apply_type_name( apply_type ) );
+    return TRUE;
+}
+
 /*
  * Advancement stuff.
  */
 void advance_level( CHAR_DATA *ch, int class )
 {
     char buf[MAX_STRING_LENGTH];
+    char bonus_buf[MAX_STRING_LENGTH];
     int add_hp;
     int add_mana;
     int add_move;
     int add_prac;
+    bool gained_stat_bonus;
 
 	save_char_obj( ch );
     sprintf( buf, "the %s",
@@ -180,6 +283,7 @@ void advance_level( CHAR_DATA *ch, int class )
     ch->max_mana	+= add_mana;
     ch->max_move	+= add_move;
     ch->practice	+= add_prac;
+    gained_stat_bonus = grant_level_milestone_stat_bonus( ch, class, bonus_buf );
 
     if ( !IS_NPC(ch) )
 	xREMOVE_BIT( ch->act, PLR_BOUGHT_PET );
@@ -220,6 +324,11 @@ void advance_level( CHAR_DATA *ch, int class )
 	  );
       set_char_color( AT_WHITE, ch );
       send_to_char( buf, ch );
+      if ( gained_stat_bonus )
+      {
+          set_char_color( AT_IMMORT, ch );
+          send_to_char( bonus_buf, ch );
+      }
     }
     return;
 }   
@@ -329,10 +438,10 @@ int hit_gain( CHAR_DATA *ch )
       	    }
         }
 
-	if ( ch->pcdata->condition[COND_FULL]   == 0 )
+	if ( uses_food_and_drink( ch ) && ch->pcdata->condition[COND_FULL] == 0 )
 	    gain /= 2;
 
-	if ( ch->pcdata->condition[COND_THIRST] == 0 )
+	if ( uses_food_and_drink( ch ) && ch->pcdata->condition[COND_THIRST] == 0 )
 	    gain /= 2;
 
     }
@@ -376,10 +485,10 @@ int mana_gain( CHAR_DATA *ch )
         regen_bonus = passive_caster_mana_bonus( ch ) + racial_mana_bonus( ch );
         gain += regen_bonus;
 
-	if ( ch->pcdata->condition[COND_FULL]   == 0 )
+	if ( uses_food_and_drink( ch ) && ch->pcdata->condition[COND_FULL] == 0 )
 	    gain /= 2;
 
-	if ( ch->pcdata->condition[COND_THIRST] == 0 )
+	if ( uses_food_and_drink( ch ) && ch->pcdata->condition[COND_THIRST] == 0 )
 	    gain /= 2;
 
     }
@@ -438,10 +547,10 @@ int move_gain( CHAR_DATA *ch )
       	    }
         }
 
-	if ( ch->pcdata->condition[COND_FULL]   == 0 )
+	if ( uses_food_and_drink( ch ) && ch->pcdata->condition[COND_FULL] == 0 )
 	    gain /= 2;
 
-	if ( ch->pcdata->condition[COND_THIRST] == 0 )
+	if ( uses_food_and_drink( ch ) && ch->pcdata->condition[COND_THIRST] == 0 )
 	    gain /= 2;
     }
 
@@ -460,6 +569,13 @@ void gain_condition( CHAR_DATA *ch, int iCond, int value )
 
     if ( value == 0 || IS_NPC(ch) || ch->level[max_sec_level(ch)] >= LEVEL_IMMORTAL || NOT_AUTHED(ch))
 	return;
+
+    if ( !uses_food_and_drink( ch )
+    &&   ( iCond == COND_FULL || iCond == COND_THIRST ) )
+    {
+        ch->pcdata->condition[iCond] = 48;
+        return;
+    }
 
     condition				= ch->pcdata->condition[iCond];
     if ( iCond == COND_BLOODTHIRST )
@@ -1108,7 +1224,7 @@ void char_update( void )
 	    gain_condition( ch, COND_FULL,   -1 );
 */
 	    gain_condition( ch, COND_DRUNK,  -1 );
-            if (number_bits(7) > 120)
+            if ( uses_food_and_drink( ch ) && number_bits(7) > 120 )
 	        gain_condition( ch, COND_FULL,  -1 + race_table[ch->race]->hunger_mod );
 
             if ( number_bits(7) > 110 && xIS_SET( ch->class, CLASS_VAMPIRE ) && ch->level[max_sec_level(ch)] >= 10 )
@@ -1117,7 +1233,7 @@ void char_update( void )
 		  gain_condition( ch, COND_BLOODTHIRST, -1 );
 	    }
 
-	    if ( number_bits(7) > 123 )
+	    if ( uses_food_and_drink( ch ) && number_bits(7) > 123 )
 	      gain_condition( ch, COND_THIRST, -1 );
 
 	    if ( !IS_NPC( ch ) && ch->pcdata->nuisance )
@@ -1125,11 +1241,14 @@ void char_update( void )
 		int value;
 		
 		value = ((0 - ch->pcdata->nuisance->flags)*ch->pcdata->nuisance->power);
-		gain_condition ( ch, COND_THIRST, value );
-		gain_condition ( ch, COND_FULL, --value );
+		if ( uses_food_and_drink( ch ) )
+		{
+		    gain_condition ( ch, COND_THIRST, value );
+		    gain_condition ( ch, COND_FULL, --value );
+		}
 	    }
 
-	    if ( ch->in_room && number_bits(7) > 123 )
+	    if ( uses_food_and_drink( ch ) && ch->in_room && number_bits(7) > 123 )
 	      switch( ch->in_room->sector_type )
 	      {
 		default:

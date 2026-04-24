@@ -855,12 +855,12 @@ void do_sset( CHAR_DATA *ch, char *argument )
         for(i=0;i<MAX_CLASS;i++)
         {
              skill->skill_level[i]= LEVEL_IMMORTAL;
-             skill->skill_adept[i]= 95;
+             skill->skill_adept[i]= 100;
         }
         for(i=0;i<MAX_RACE;i++)
         {
              skill->race_level[i]= LEVEL_IMMORTAL;
-             skill->race_adept[i]= 95;
+             skill->race_adept[i]= 100;
         }
 	skill->noun_damage = "(none set)";
         skill->msg_off = "(none set)"; 

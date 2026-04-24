@@ -5488,8 +5488,8 @@ void rprog_act_trigger( char *buf, ROOM_INDEX_DATA *room, CHAR_DATA *ch,
 #endif
 
 
-#define GET_ADEPT(ch,sn)    (  skill_table[(sn)]->skill_adept[skill_level( ch, sn )] )
-#define LEARNED(ch,sn)	    (IS_NPC(ch) ? 80 : URANGE(0, ch->pcdata->learned[sn], 101))
+#define GET_ADEPT(ch,sn)    ( 100 )
+#define LEARNED(ch,sn)	    (IS_NPC(ch) ? 80 : URANGE(0, ch->pcdata->learned[sn], 100))
 
 /* Structure and macros for using long bit vectors */
 #define CHAR_SIZE sizeof(char)

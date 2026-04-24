@@ -3413,7 +3413,7 @@ void do_practice( CHAR_DATA *ch, char *argument )
 	}
 	 */
 
-	adept = class_table[skill_level(ch, sn)]->skill_adept * 0.2;
+	adept = UMAX( 1, GET_ADEPT( ch, sn ) / 5 );
 	if ( ch->pcdata->learned[sn] >= adept )
 	{
 	    sprintf( buf, "$n tells you, 'I've taught you everything I can about %s.'",

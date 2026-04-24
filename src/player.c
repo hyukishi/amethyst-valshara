@@ -320,10 +320,6 @@ void do_score(CHAR_DATA * ch, char *argument)
 
     if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
 	send_to_pager("You are drunk.\n\r", ch);
-    if (!IS_NPC(ch) && ch->pcdata->condition[COND_THIRST] == 0)
-	send_to_pager("You are in danger of dehydrating.\n\r", ch);
-    if (!IS_NPC(ch) && ch->pcdata->condition[COND_FULL] == 0)
-	send_to_pager("You are starving to death.\n\r", ch);
     if ( ch->position != POS_SLEEPING )
 	switch( ch->mental_state / 10 )
 	{
@@ -736,10 +732,6 @@ void do_newscore(CHAR_DATA * ch, char *argument)
 
     if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
 	send_to_pager("You are drunk.\n\r", ch);
-    if (!IS_NPC(ch) && ch->pcdata->condition[COND_THIRST] == 0)
-	send_to_pager("You are in danger of dehydrating.\n\r", ch);
-    if (!IS_NPC(ch) && ch->pcdata->condition[COND_FULL] == 0)
-	send_to_pager("You are starving to death.\n\r", ch);
     if ( ch->position != POS_SLEEPING )
 	switch( ch->mental_state / 10 )
 	{
@@ -1110,10 +1102,6 @@ void do_oldscore( CHAR_DATA *ch, char *argument )
     if ( !IS_NPC(ch) ) {
        if ( ch->pcdata->condition[COND_DRUNK]   > 10 )
 	   send_to_pager( "You are drunk.\n\r",   ch );
-       if ( ch->pcdata->condition[COND_THIRST] ==  0 )
-	   send_to_pager( "You are thirsty.\n\r", ch );
-       if ( ch->pcdata->condition[COND_FULL]   ==  0 )
-	   send_to_pager( "You are hungry.\n\r",  ch );
     }
 
     switch( ch->mental_state / 10 )
@@ -1890,4 +1878,3 @@ void do_delete( CHAR_DATA *ch, char *argument)
     ch->desc->connected = CON_DELETE;
     return;
 }
-
