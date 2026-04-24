@@ -8,16 +8,17 @@ RUN apt-get update \
        bash \
        build-essential \
        gdb \
+       libcrypt-dev \
        libsqlite3-dev \
-       libxcrypt-dev \
        make \
        netcat-openbsd \
        pkg-config \
        ripgrep \
        sqlite3 \
        telnet \
-       tini \
-    && rm -rf /var/lib/apt/lists/*
+       tini
+
+RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
 
