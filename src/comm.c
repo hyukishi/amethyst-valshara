@@ -179,52 +179,47 @@ void outfit_new_character( CHAR_DATA *ch, bool reoutfit )
 #endif
 bool set_class( DESCRIPTOR_DATA *d, char *argument )
 {
-   int numchoice, i=0, j=0, iClass=1;
-   char buf[MAX_STRING_LENGTH];
+   int numchoice, i, j, current_choice;
+
    numchoice = atoi( argument);
    if(numchoice== 0)
-   {
 	return FALSE;
-   }
-   bug(argument);
-   while(iClass<=numchoice)
+
+   current_choice = 1;
+   xCLEAR_BITS( d->character->class );
+
+   for ( i = 0; i < MAX_CLASS; i++ )
    {
-      if(i>MAX_CLASS)
+      if ( !class_table[i]->who_name
+      ||   class_table[i]->who_name[0] == '\0'
+      ||   IS_SET( race_table[d->character->race]->class_restriction, 1 << i ) )
+         continue;
+
+      if ( current_choice == numchoice )
       {
-        bug("THIS SHOULD NEVER BE SEEN");
-	return FALSE;
+         xSET_BIT( d->character->class, i );
+         return TRUE;
       }
-      if ( class_table[i]->who_name &&
-                !IS_SET(race_table[d->character->race]->class_restriction, 1 << i ) &&
-                class_table[i]->who_name[0] != '\0' )
+      current_choice++;
+
+      for ( j = i + 1; j < MAX_CLASS; j++ )
       {
-	if(iClass==numchoice )
-	{
-	  xSET_BIT(d->character->class, i);
-	  break;
-	}
-	iClass++;
-        for(j=i+1; j<MAX_CLASS; j++)	 
-         if ( class_table[j]->who_name &&
-                !IS_SET(race_table[d->character->race]->class_restriction, 1 << j ) &&
-                class_table[j]->who_name[0] != '\0' )
-	 {
-	    if(iClass==numchoice)
-	    {
-		xSET_BIT(d->character->class, i);
-                xSET_BIT(d->character->class, j);
-		 sprintf( buf, "i= %d, j=%d, numchoise = %d iClass=%d", i, j, numchoice, iClass);
- 	 bug(buf);
-		return TRUE;
-	    }
-	    iClass++;
-	 }
+         if ( !class_table[j]->who_name
+         ||   class_table[j]->who_name[0] == '\0'
+         ||   IS_SET( race_table[d->character->race]->class_restriction, 1 << j ) )
+            continue;
+
+         if ( current_choice == numchoice )
+         {
+            xSET_BIT( d->character->class, i );
+            xSET_BIT( d->character->class, j );
+            return TRUE;
+         }
+         current_choice++;
       }
-      i++;
    }
-  sprintf( buf, "i= %d, j=%d, numchoise = %d iClass=%d. IF I'M NOT SINGLE CLASS I'M SCREWED!!!", i, j, numchoice, iClass);
-  bug(buf);
-  return TRUE;
+
+   return FALSE;
 }
 void display_ch_class(DESCRIPTOR_DATA *d)
 {
@@ -285,6 +280,18 @@ int gethostname ( char *name, int namelen );
 const	char	echo_off_str	[] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const	char	echo_on_str	[] = { IAC, WONT, TELOPT_ECHO, '\0' };
 const	char 	go_ahead_str	[] = { IAC, GA, '\0' };
+
+static bool player_file_exists( const char *filekey )
+{
+    char fname[1024];
+    struct stat fst;
+
+    if ( filekey == NULL || filekey[0] == '\0' )
+        return FALSE;
+
+    sprintf( fname, "%s%c/%s", PLAYER_DIR, tolower(filekey[0]), capitalize(filekey) );
+    return stat( fname, &fst ) != -1;
+}
 
 void	auth_maxdesc	args( ( int *md, fd_set *ins, fd_set *outs,
 				fd_set *excs ) );
@@ -1999,7 +2006,8 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	strcpy( argument, player_filename(arg) );
 
 	/* Old players can keep their characters. -- Alty */
-	if ( !check_parse_name( arg, (d->newstate != 0) ) )
+	if ( !check_parse_name( arg, (d->newstate != 0) )
+	&& !( d->newstate == 0 && player_file_exists( argument ) ) )
 	{
 	    write_to_buffer( d, "Illegal name, try another.\n\rName: ", 0 );
 	    return;
@@ -2187,6 +2195,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
          case 'n': case 'N':
      
 	   name_stamp_stats(ch);
+	   apply_creation_stat_bonuses( ch );
 
          sprintf( buf, "\n\rStr: %d  Int: %d  Wis: %d  Dex: %d  Con: %d  Cha: %d  Lck: %d\n\rKeep? (Y/N)",
          ch->perm_str, ch->perm_int, ch->perm_wis, ch->perm_dex, ch->perm_con, 
@@ -2395,6 +2404,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
         write_to_buffer( d, "You may now roll for your character's stats.\n\rYou may roll as often as you like.\n\r",0);
 
           name_stamp_stats(ch);
+          apply_creation_stat_bonuses( ch );
        
         sprintf( buf, "\n\rStr: %d  Int: %d  Wis: %d  Dex: %d  Con: %d  Cha: %d  Lck: %d\n\rKeep? (Y/N)",
         ch->perm_str, ch->perm_int, ch->perm_wis, ch->perm_dex, ch->perm_con,
@@ -2526,14 +2536,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	    case APPLY_LCK: ch->perm_lck = 16; break;
 	    } fix this multiclassinig kyorlin */
 
-	    ch->perm_str	 += race_table[ch->race]->str_plus;
-	    ch->perm_int	 += race_table[ch->race]->int_plus;
-	    ch->perm_wis	 += race_table[ch->race]->wis_plus;
-	    ch->perm_dex	 += race_table[ch->race]->dex_plus;
-	    ch->perm_con	 += race_table[ch->race]->con_plus;
-	    ch->perm_cha	 += race_table[ch->race]->cha_plus;
 	    ch->affected_by	  = race_table[ch->race]->affected;
-	    ch->perm_lck	 += race_table[ch->race]->lck_plus;
 	   
             ch->armor		 += race_table[ch->race]->ac_plus;
             ch->alignment	 += race_table[ch->race]->alignment;
@@ -2574,8 +2577,8 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 	      /* name_stamp_stats( ch ); */
   
-	    for(iClass=0; iClass < MAX_CLASS; iClass++)
-                      ch->level[iClass] = 1;
+	    for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
+                ch->level[iClass] = xIS_SET( ch->class, iClass ) ? 1 : 0;
 	    ch->exp[max_sec_level(ch)]	= 0;
 	    ch->hit	= ch->max_hit;
 	    ch->mana	= ch->max_mana;

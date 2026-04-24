@@ -11968,14 +11968,14 @@ SEE ALSO
 
 0 RESETPASSWORD 'RESET PASSWORD'~
 NAME
-    RESETPASSWORD - Reset another player's password as a top-level immortal
+    RESETPASSWORD - Reset another player's password as a level 120 immortal
 
 SYNOPSIS
     Syntax: resetpassword <player> <new-password>
     Syntax: resetpassword "multi word name" <new-password>
 
 DESCRIPTION
-    RESETPASSWORD lets a LEVEL_SUPREME immortal assign a new password to another player account.
+    RESETPASSWORD lets a level 120 immortal assign a new password to another player account.
 
     This command works on both online and offline characters. It refuses self-use, and it will not reset the password of an immortal whose trust is equal to or higher than your own.
 

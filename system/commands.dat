@@ -2274,7 +2274,7 @@ End
 Name        resetpassword~
 Code        do_resetpassword
 Position    100
-Level       121
+Level       120
 Log         2
 End
 

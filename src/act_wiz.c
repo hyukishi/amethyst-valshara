@@ -5257,7 +5257,7 @@ void do_resetpassword( CHAR_DATA *ch, char *argument )
 
    set_char_color( AT_IMMORT, ch );
 
-   if ( get_trust( ch ) < LEVEL_SUPREME )
+   if ( get_trust( ch ) < LEVEL_INFINITE )
    {
       send_to_char( "You can't do that.\n\r", ch );
       return;

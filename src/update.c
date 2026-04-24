@@ -146,111 +146,16 @@ static bool uses_food_and_drink( CHAR_DATA *ch )
     return FALSE;
 }
 
-static sh_int *get_perm_stat_ptr( CHAR_DATA *ch, int apply_type )
-{
-    switch ( apply_type )
-    {
-        case APPLY_STR: return &ch->perm_str;
-        case APPLY_INT: return &ch->perm_int;
-        case APPLY_WIS: return &ch->perm_wis;
-        case APPLY_DEX: return &ch->perm_dex;
-        case APPLY_CON: return &ch->perm_con;
-        case APPLY_CHA: return &ch->perm_cha;
-        case APPLY_LCK: return &ch->perm_lck;
-    }
-
-    return NULL;
-}
-
-static const char *apply_type_name( int apply_type )
-{
-    switch ( apply_type )
-    {
-        case APPLY_STR: return "strength";
-        case APPLY_INT: return "intelligence";
-        case APPLY_WIS: return "wisdom";
-        case APPLY_DEX: return "dexterity";
-        case APPLY_CON: return "constitution";
-        case APPLY_CHA: return "charisma";
-        case APPLY_LCK: return "luck";
-    }
-
-    return "ability";
-}
-
-static int class_attribute_cap( int class_index, int apply_type )
-{
-    if ( class_index < 0 || class_index >= MAX_CLASS || class_table[class_index] == NULL )
-        return 20;
-
-    if ( class_table[class_index]->attr_prime == apply_type )
-        return 25;
-    if ( class_table[class_index]->attr_second == apply_type )
-        return 22;
-    if ( class_table[class_index]->attr_deficient == apply_type )
-        return 16;
-    return 20;
-}
-
-static int multiclass_attribute_cap( CHAR_DATA *ch, int apply_type )
-{
-    int cap;
-    int i;
-
-    cap = 20;
-    for ( i = 0; i < MAX_CLASS; ++i )
-    {
-        if ( !xIS_SET( ch->class, i ) || class_table[i] == NULL )
-            continue;
-
-        cap = UMAX( cap, class_attribute_cap( i, apply_type ) );
-    }
-
-    return cap;
-}
-
-static bool grant_level_milestone_stat_bonus( CHAR_DATA *ch, int class, char *buf )
-{
-    sh_int *stat;
-    int apply_type;
-    int cap;
-
-    if ( IS_NPC( ch ) || class < 0 || class >= MAX_CLASS || class_table[class] == NULL )
-        return FALSE;
-
-    if ( ch->level[class] <= 0 || ( ch->level[class] % 5 ) != 0 )
-        return FALSE;
-
-    apply_type = class_table[class]->attr_prime;
-    stat = get_perm_stat_ptr( ch, apply_type );
-    if ( stat == NULL )
-        return FALSE;
-
-    cap = multiclass_attribute_cap( ch, apply_type );
-    if ( *stat >= cap )
-        return FALSE;
-
-    ++(*stat);
-    sprintf( buf,
-        "Your training as a %s sharpens your %s. [%s +1]\n\r",
-        class_table[class]->who_name,
-        apply_type_name( apply_type ),
-        apply_type_name( apply_type ) );
-    return TRUE;
-}
-
 /*
  * Advancement stuff.
  */
 void advance_level( CHAR_DATA *ch, int class )
 {
     char buf[MAX_STRING_LENGTH];
-    char bonus_buf[MAX_STRING_LENGTH];
     int add_hp;
     int add_mana;
     int add_move;
     int add_prac;
-    bool gained_stat_bonus;
 
 	save_char_obj( ch );
     sprintf( buf, "the %s",
@@ -283,7 +188,6 @@ void advance_level( CHAR_DATA *ch, int class )
     ch->max_mana	+= add_mana;
     ch->max_move	+= add_move;
     ch->practice	+= add_prac;
-    gained_stat_bonus = grant_level_milestone_stat_bonus( ch, class, bonus_buf );
 
     if ( !IS_NPC(ch) )
 	xREMOVE_BIT( ch->act, PLR_BOUGHT_PET );
@@ -324,11 +228,6 @@ void advance_level( CHAR_DATA *ch, int class )
 	  );
       set_char_color( AT_WHITE, ch );
       send_to_char( buf, ch );
-      if ( gained_stat_bonus )
-      {
-          set_char_color( AT_IMMORT, ch );
-          send_to_char( bonus_buf, ch );
-      }
     }
     return;
 }   

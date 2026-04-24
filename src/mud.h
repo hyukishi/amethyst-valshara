@@ -3390,6 +3390,7 @@ do								\
 				    + VAMP_AC(ch))
 #define GET_HITROLL(ch)		((ch)->hitroll				    \
 				    +str_app[get_curr_str(ch)].tohit	    \
+				    +(xIS_SET((ch)->class, CLASS_MAGE) ? 2 : 0) \
 				    +(2-(abs((ch)->mental_state)/10)))
 
 /* Thanks to Chriss Baeke for noticing damplus was unused */
@@ -5052,6 +5053,7 @@ bool	is_trapped	args( ( OBJ_DATA *obj ) );
 OD *	get_trap	args( ( OBJ_DATA *obj ) );
 ch_ret	spring_trap     args( ( CHAR_DATA *ch, OBJ_DATA *obj ) );
 void	name_stamp_stats args( ( CHAR_DATA *ch ) );
+void	apply_creation_stat_bonuses args( ( CHAR_DATA *ch ) );
 void	fix_char	args( ( CHAR_DATA *ch ) );
 void	showaffect	args( ( CHAR_DATA *ch, AFFECT_DATA *paf ) );
 void	set_cur_obj	args( ( OBJ_DATA *obj ) );

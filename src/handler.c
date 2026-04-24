@@ -3397,14 +3397,187 @@ void name_stamp_stats( CHAR_DATA *ch )
      ch->perm_con = 6 + dice( 2,6 );
      ch->perm_cha = 6 + dice( 2,6 );
      ch->perm_lck = 6 + dice( 2,6 );
-     
-     ch->perm_str	+= race_table[ch->race]->str_plus;
-     ch->perm_int	+= race_table[ch->race]->int_plus;
-     ch->perm_wis	+= race_table[ch->race]->wis_plus;
-     ch->perm_dex	+= race_table[ch->race]->dex_plus;
-     ch->perm_con	+= race_table[ch->race]->con_plus;
-     ch->perm_cha	+= race_table[ch->race]->cha_plus; 
-     ch->perm_lck	+= race_table[ch->race]->lck_plus;
+}
+
+static sh_int *creation_stat_ptr( CHAR_DATA *ch, int apply_type )
+{
+    switch ( apply_type )
+    {
+        case APPLY_STR: return &ch->perm_str;
+        case APPLY_INT: return &ch->perm_int;
+        case APPLY_WIS: return &ch->perm_wis;
+        case APPLY_DEX: return &ch->perm_dex;
+        case APPLY_CON: return &ch->perm_con;
+        case APPLY_CHA: return &ch->perm_cha;
+        case APPLY_LCK: return &ch->perm_lck;
+    }
+
+    return NULL;
+}
+
+static void add_creation_bonus( CHAR_DATA *ch, int apply_type, int amount )
+{
+    sh_int *stat;
+
+    stat = creation_stat_ptr( ch, apply_type );
+    if ( stat == NULL )
+        return;
+
+    *stat = UMIN( 25, *stat + amount );
+}
+
+static void add_class_creation_bonus( CHAR_DATA *ch, int class_index )
+{
+    switch ( class_index )
+    {
+        case CLASS_MAGE:
+            add_creation_bonus( ch, APPLY_INT, 5 );
+            add_creation_bonus( ch, APPLY_WIS, 5 );
+            break;
+
+        case CLASS_CLERIC:
+            add_creation_bonus( ch, APPLY_WIS, 5 );
+            add_creation_bonus( ch, APPLY_CHA, 5 );
+            break;
+
+        case CLASS_THIEF:
+            add_creation_bonus( ch, APPLY_DEX, 5 );
+            add_creation_bonus( ch, APPLY_LCK, 5 );
+            break;
+
+        case CLASS_WARRIOR:
+        case CLASS_BARBARIAN:
+            add_creation_bonus( ch, APPLY_STR, 5 );
+            add_creation_bonus( ch, APPLY_CON, 5 );
+            break;
+
+        case CLASS_VAMPIRE:
+            add_creation_bonus( ch, APPLY_DEX, 5 );
+            add_creation_bonus( ch, APPLY_CHA, 5 );
+            break;
+
+        case CLASS_DRUID:
+            add_creation_bonus( ch, APPLY_WIS, 5 );
+            add_creation_bonus( ch, APPLY_CON, 5 );
+            break;
+
+        case CLASS_RANGER:
+            add_creation_bonus( ch, APPLY_STR, 5 );
+            add_creation_bonus( ch, APPLY_DEX, 5 );
+            break;
+
+        case CLASS_AUGURER:
+            add_creation_bonus( ch, APPLY_INT, 5 );
+            add_creation_bonus( ch, APPLY_WIS, 5 );
+            break;
+
+        case CLASS_PALADIN:
+            add_creation_bonus( ch, APPLY_STR, 5 );
+            add_creation_bonus( ch, APPLY_CHA, 5 );
+            break;
+
+        case CLASS_MONK:
+            add_creation_bonus( ch, APPLY_DEX, 5 );
+            add_creation_bonus( ch, APPLY_WIS, 5 );
+            break;
+
+        case CLASS_CALLER:
+            add_creation_bonus( ch, APPLY_WIS, 5 );
+            add_creation_bonus( ch, APPLY_CHA, 5 );
+            break;
+
+        case CLASS_NECROMANCER:
+            add_creation_bonus( ch, APPLY_INT, 5 );
+            add_creation_bonus( ch, APPLY_CON, 5 );
+            break;
+    }
+}
+
+static void add_race_creation_bonus( CHAR_DATA *ch )
+{
+    switch ( ch->race )
+    {
+        case RACE_HUMAN:
+            add_creation_bonus( ch, APPLY_CHA, 2 );
+            add_creation_bonus( ch, APPLY_LCK, 2 );
+            break;
+
+        case RACE_ELF:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_INT, 2 );
+            break;
+
+        case RACE_DWARF:
+            add_creation_bonus( ch, APPLY_STR, 2 );
+            add_creation_bonus( ch, APPLY_CON, 2 );
+            break;
+
+        case RACE_HALFLING:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_LCK, 2 );
+            break;
+
+        case RACE_PIXIE:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_CHA, 2 );
+            break;
+
+        case RACE_VAMPIRE:
+            add_creation_bonus( ch, APPLY_STR, 2 );
+            add_creation_bonus( ch, APPLY_CHA, 2 );
+            break;
+
+        case RACE_HALF_OGRE:
+        case RACE_HALF_ORC:
+        case RACE_HALF_TROLL:
+            add_creation_bonus( ch, APPLY_STR, 2 );
+            add_creation_bonus( ch, APPLY_CON, 2 );
+            break;
+
+        case RACE_HALF_ELF:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_CHA, 2 );
+            break;
+
+        case RACE_GITH:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_INT, 2 );
+            break;
+
+        case RACE_DROW:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_INT, 2 );
+            break;
+
+        case RACE_SEA_ELF:
+            add_creation_bonus( ch, APPLY_DEX, 2 );
+            add_creation_bonus( ch, APPLY_WIS, 2 );
+            break;
+
+        case RACE_GNOME:
+            add_creation_bonus( ch, APPLY_INT, 2 );
+            add_creation_bonus( ch, APPLY_LCK, 2 );
+            break;
+
+        case RACE_LIZARDMAN:
+            add_creation_bonus( ch, APPLY_STR, 2 );
+            add_creation_bonus( ch, APPLY_CON, 2 );
+            break;
+    }
+}
+
+void apply_creation_stat_bonuses( CHAR_DATA *ch )
+{
+    int class_index;
+
+    if ( ch == NULL || IS_NPC( ch ) )
+        return;
+
+    for ( class_index = 0; class_index < MAX_CLASS; class_index++ )
+        if ( xIS_SET( ch->class, class_index ) )
+            add_class_creation_bonus( ch, class_index );
+
+    add_race_creation_bonus( ch );
 }
 
 /*
