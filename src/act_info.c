@@ -3605,7 +3605,7 @@ void do_password( CHAR_DATA *ch, char *argument )
     /*
      * No tilde allowed because of player file format.
      */
-    pwdnew = crypt( arg2, ch->name );
+    pwdnew = crypt( arg2, password_salt_for_name( ch->pcdata->filename ) );
     for ( p = pwdnew; *p != '\0'; p++ )
     {
 	if ( *p == '~' )
@@ -3618,6 +3618,8 @@ void do_password( CHAR_DATA *ch, char *argument )
 
     DISPOSE( ch->pcdata->pwd );
     ch->pcdata->pwd = str_dup( pwdnew );
+    if ( ch->pcdata->account_id > 0 )
+        playerdb_account_set_password( ch->pcdata->account_id, ch->pcdata->pwd );
     if ( IS_SET(sysdata.save_flags, SV_PASSCHG) )
 	save_char_obj( ch );
     send_to_char( "Ok.\n\r", ch );

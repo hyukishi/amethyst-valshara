@@ -5371,7 +5371,7 @@ void do_resetpassword( CHAR_DATA *ch, char *argument )
       return;
    }
 
-   pwdnew = crypt( password, victim->name );
+   pwdnew = crypt( password, password_salt_for_name( victim->pcdata->filename ) );
    for ( p = pwdnew; *p != '\0'; p++ )
    {
       if ( *p == '~' )
@@ -5389,6 +5389,8 @@ void do_resetpassword( CHAR_DATA *ch, char *argument )
 
    DISPOSE( victim->pcdata->pwd );
    victim->pcdata->pwd = str_dup( pwdnew );
+   if ( victim->pcdata->account_id > 0 )
+      playerdb_account_set_password( victim->pcdata->account_id, victim->pcdata->pwd );
    save_char_obj( victim );
 
    ch_printf( ch, "Password for %s has been reset.\n\r", victim->name );

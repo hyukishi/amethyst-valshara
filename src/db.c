@@ -738,6 +738,8 @@ void boot_db( bool fCopyOver )
         load_banlist( );
         log_string( "Loading reserved names" );
         load_reserved( );
+        log_string( "Initializing player account database" );
+        playerdb_init( );
         log_string( "Loading corpses" );
         load_corpses( );
         log_string ("Loading Immortal Hosts");
@@ -2984,6 +2986,7 @@ void free_char( CHAR_DATA *ch )
     	}
     
 	STRFREE( ch->pcdata->filename   );
+	STRFREE( ch->pcdata->account_name );
 	STRFREE( ch->pcdata->deity_name );
 	STRFREE( ch->pcdata->clan_name	);
 	STRFREE( ch->pcdata->council_name );
@@ -4000,6 +4003,18 @@ char *player_filename( const char *str )
 	    fname[j++] = LOWER(str[i]);
     fname[j] = '\0';
     return fname;
+}
+
+char *password_salt_for_name( const char *str )
+{
+    static char salt[3];
+    char fname[MAX_INPUT_LENGTH];
+
+    strcpy( fname, player_filename( str ) );
+    salt[0] = fname[0] ? fname[0] : 'x';
+    salt[1] = fname[1] ? fname[1] : salt[0];
+    salt[2] = '\0';
+    return salt;
 }
 
 

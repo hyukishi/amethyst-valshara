@@ -1632,7 +1632,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
       /*
        * No tilde allowed because of player file format.
        */
-      pwdnew = crypt( arg3, victim->name );
+      pwdnew = crypt( arg3, password_salt_for_name( victim->pcdata->filename ) );
       for ( p = pwdnew; *p != '\0'; p++ )
       {
 	if ( *p == '~' )
@@ -1645,6 +1645,8 @@ void do_mset( CHAR_DATA *ch, char *argument )
 
       DISPOSE( victim->pcdata->pwd );
       victim->pcdata->pwd = str_dup( pwdnew );
+      if ( victim->pcdata->account_id > 0 )
+        playerdb_account_set_password( victim->pcdata->account_id, victim->pcdata->pwd );
       if ( IS_SET(sysdata.save_flags, SV_PASSCHG) )
  	save_char_obj( victim );
       send_to_char( "Ok.\n\r", ch );
@@ -9473,4 +9475,3 @@ void RelDestroy( relation_type tp, void *actor, void *subject ) {
          break;
          }
 }
-

@@ -289,6 +289,9 @@ static bool player_file_exists( const char *filekey )
     if ( filekey == NULL || filekey[0] == '\0' )
         return FALSE;
 
+    if ( playerdb_character_exists( filekey ) )
+        return TRUE;
+
     sprintf( fname, "%s%c/%s", PLAYER_DIR, tolower(filekey[0]), capitalize(filekey) );
     return stat( fname, &fst ) != -1;
 }
@@ -301,6 +304,103 @@ void	kill_auth	args( ( DESCRIPTOR_DATA *d ) );
 
 
 void    save_sysdata args( ( SYSTEM_DATA sys ) );
+
+static bool valid_account_name( const char *name )
+{
+    int i;
+    int letters;
+
+    if ( !name || name[0] == '\0' )
+        return FALSE;
+
+    letters = 0;
+    for ( i = 0; name[i] != '\0'; ++i )
+    {
+        if ( isalpha( name[i] ) )
+        {
+            ++letters;
+            continue;
+        }
+
+        if ( name[i] != ' ' )
+            return FALSE;
+    }
+
+    return letters >= 3;
+}
+
+static void show_account_menu( DESCRIPTOR_DATA *d )
+{
+    char names[32][MAX_INPUT_LENGTH];
+    char keys[32][MAX_INPUT_LENGTH];
+    char buf[MAX_STRING_LENGTH];
+    int count;
+    int i;
+
+    count = playerdb_account_list_characters( d->account_id, names, keys, 32 );
+    write_to_buffer( d, "\n\rAccount menu\n\r", 0 );
+    if ( d->account_name )
+    {
+        sprintf( buf, "Logged in as: %s\n\r", d->account_name );
+        write_to_buffer( d, buf, 0 );
+    }
+
+    if ( count <= 0 )
+        write_to_buffer( d, "You do not have any characters yet.\n\r", 0 );
+    else
+    {
+        write_to_buffer( d, "Characters:\n\r", 0 );
+        for ( i = 0; i < count; ++i )
+        {
+            sprintf( buf, "  %2d) %s\n\r", i + 1, names[i] );
+            write_to_buffer( d, buf, 0 );
+        }
+    }
+
+    write_to_buffer( d, "\n\rType a number or character name to play, NEW to create one, or QUIT.\n\rSelection: ", 0 );
+}
+
+static bool account_menu_select( DESCRIPTOR_DATA *d, const char *argument,
+    char *selected_name, char *selected_key )
+{
+    char names[32][MAX_INPUT_LENGTH];
+    char keys[32][MAX_INPUT_LENGTH];
+    char arg[MAX_INPUT_LENGTH];
+    int count;
+    int i;
+    int choice;
+
+    choice = 0;
+    count = playerdb_account_list_characters( d->account_id, names, keys, 32 );
+    if ( count <= 0 )
+        return FALSE;
+
+    strcpy( arg, argument );
+    while ( arg[0] == ' ' )
+        memmove( arg, arg + 1, strlen( arg ) );
+
+    if ( is_number( arg ) )
+    {
+        choice = atoi( arg );
+        if ( choice >= 1 && choice <= count )
+        {
+            strcpy( selected_name, names[choice - 1] );
+            strcpy( selected_key, keys[choice - 1] );
+            return TRUE;
+        }
+    }
+
+    for ( i = 0; i < count; ++i )
+        if ( !str_cmp( player_filename( arg ), keys[i] )
+        ||   !str_cmp( capitalize_name( arg ), names[i] ) )
+        {
+            strcpy( selected_name, names[i] );
+            strcpy( selected_key, keys[i] );
+            return TRUE;
+        }
+
+    return FALSE;
+}
 
 
 /*
@@ -1254,7 +1354,7 @@ void init_descriptor( DESCRIPTOR_DATA *dnew, int desc)
 {
     dnew->next		= NULL;
     dnew->descriptor	= desc;
-    dnew->connected	= CON_GET_NAME;
+    dnew->connected	= CON_GET_ACCOUNT_NAME;
     dnew->outsize	= 2000;
     dnew->idle		= 0;
     dnew->lines		= 0;
@@ -1264,6 +1364,9 @@ void init_descriptor( DESCRIPTOR_DATA *dnew, int desc)
     dnew->auth_inc	= 0;
     dnew->auth_state	= 0; not needed in 1.4 */
     dnew->newstate	= 0;
+    dnew->account_id    = 0;
+    dnew->account_name  = NULL;
+    dnew->account_pwd   = NULL;
     dnew->prevcolor	= 0x07;
 
     CREATE( dnew->outbuf, char, dnew->outsize );
@@ -1391,10 +1494,10 @@ void new_descriptor( int new_desc )
             write_to_buffer( dnew, help_greeting+1, 0 );                        
         else                                                                    
             write_to_buffer( dnew, help_greeting  , 0 );
-        write_to_buffer( dnew, "Enter your character's name, or type new: ", 0 );
+        write_to_buffer( dnew, "Enter your master account name, or type new: ", 0 );
     } 
 #else
-    write_to_buffer( dnew, "Enter your character's name, or type new: ", 0 );
+    write_to_buffer( dnew, "Enter your master account name, or type new: ", 0 );
 #endif
     /*
      * Send the greeting.
@@ -1429,6 +1532,10 @@ void free_desc( DESCRIPTOR_DATA *d )
 #ifndef DNS_SLAVE
     STRFREE( d->host );
 #endif
+    if ( d->account_name )
+        STRFREE( d->account_name );
+    if ( d->account_pwd )
+        DISPOSE( d->account_pwd );
     DISPOSE( d->outbuf );
     STRFREE( d->user );    /* identd */
     if ( d->pagebuf )
@@ -1975,6 +2082,248 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
     case CON_GETDNS:
 	return;
 #endif
+    case CON_GET_ACCOUNT_NAME:
+        if ( argument[0] == '\0' )
+        {
+            close_socket( d, FALSE );
+            return;
+        }
+
+        if ( !str_cmp( argument, "new" ) )
+        {
+            write_to_buffer( d, "\n\rChoose a name for your master account: ", 0 );
+            d->connected = CON_GET_NEW_ACCOUNT_NAME;
+            return;
+        }
+
+        {
+            int account_id;
+            char account_name[MAX_INPUT_LENGTH];
+            char password_hash[MAX_STRING_LENGTH];
+
+            account_id = 0;
+            account_name[0] = '\0';
+            password_hash[0] = '\0';
+            if ( !playerdb_account_load( capitalize_name(argument), &account_id,
+                    account_name, sizeof(account_name),
+                    password_hash, sizeof(password_hash) ) )
+            {
+                write_to_buffer( d, "No such account exists.\n\rAccount: ", 0 );
+                return;
+            }
+
+            if ( d->account_name )
+                STRFREE( d->account_name );
+            d->account_name = STRALLOC( account_name );
+            d->account_id = account_id;
+            if ( d->account_pwd )
+                DISPOSE( d->account_pwd );
+            d->account_pwd = str_dup( password_hash );
+            write_to_buffer( d, "Password: ", 0 );
+            write_to_buffer( d, echo_off_str, 0 );
+            d->connected = CON_GET_ACCOUNT_PASSWORD;
+            return;
+        }
+
+    case CON_GET_NEW_ACCOUNT_NAME:
+        if ( argument[0] == '\0' )
+        {
+            write_to_buffer( d, "Account: ", 0 );
+            d->connected = CON_GET_ACCOUNT_NAME;
+            return;
+        }
+
+        strcpy( arg, capitalize_name( argument ) );
+        if ( !valid_account_name( arg ) )
+        {
+            write_to_buffer( d, "Master account names may only use letters and spaces.\n\rAccount name: ", 0 );
+            return;
+        }
+
+        {
+            int account_id;
+            char existing_name[MAX_INPUT_LENGTH];
+            char existing_password[MAX_STRING_LENGTH];
+
+            account_id = 0;
+            existing_name[0] = '\0';
+            existing_password[0] = '\0';
+            if ( playerdb_account_load( arg, &account_id, existing_name,
+                    sizeof(existing_name), existing_password,
+                    sizeof(existing_password) ) )
+            {
+                write_to_buffer( d, "That account already exists.\n\rAccount name: ", 0 );
+                return;
+            }
+        }
+
+        if ( d->account_name )
+            STRFREE( d->account_name );
+        d->account_name = STRALLOC( arg );
+        write_to_buffer( d, "\n\rChoose a password for your master account: ", 0 );
+        write_to_buffer( d, echo_off_str, 0 );
+        d->connected = CON_GET_NEW_ACCOUNT_PASSWORD;
+        return;
+
+    case CON_GET_NEW_ACCOUNT_PASSWORD:
+        write_to_buffer( d, "\n\r", 2 );
+
+        if ( strlen(argument) < 5 )
+        {
+            write_to_buffer( d, "Password must be at least five characters long.\n\rPassword: ", 0 );
+            return;
+        }
+
+        pwdnew = crypt( argument, password_salt_for_name( d->account_name ? d->account_name : "account" ) );
+        for ( p = pwdnew; *p != '\0'; p++ )
+            if ( *p == '~' )
+            {
+                write_to_buffer( d, "New password not acceptable, try again.\n\rPassword: ", 0 );
+                return;
+            }
+
+        if ( d->account_pwd )
+            DISPOSE( d->account_pwd );
+        d->account_pwd = str_dup( pwdnew );
+        write_to_buffer( d, "\n\rPlease retype the password to confirm: ", 0 );
+        d->connected = CON_CONFIRM_NEW_ACCOUNT_PASSWORD;
+        return;
+
+    case CON_CONFIRM_NEW_ACCOUNT_PASSWORD:
+        write_to_buffer( d, "\n\r", 2 );
+
+        if ( strcmp( crypt( argument, password_salt_for_name( d->account_name ? d->account_name : "account" ) ), d->account_pwd ) )
+        {
+            write_to_buffer( d, "Passwords don't match.\n\rRetype password: ", 0 );
+            d->connected = CON_GET_NEW_ACCOUNT_PASSWORD;
+            return;
+        }
+
+        write_to_buffer( d, echo_on_str, 0 );
+        if ( !playerdb_account_create( d->account_name, d->account_pwd, &d->account_id ) )
+        {
+            write_to_buffer( d, "\n\rUnable to create that account right now.\n\rAccount: ", 0 );
+            d->connected = CON_GET_ACCOUNT_NAME;
+            return;
+        }
+
+        write_to_buffer( d, "\n\rMaster account created.\n\rChoose a name for your first character: ", 0 );
+        d->connected = CON_GET_NEW_CHARACTER_NAME;
+        return;
+
+    case CON_GET_ACCOUNT_PASSWORD:
+        write_to_buffer( d, "\n\r", 2 );
+        if ( !d->account_pwd || strcmp( crypt( argument, d->account_pwd ), d->account_pwd ) )
+        {
+            write_to_buffer( d, "Wrong password.\n\r", 0 );
+            close_socket( d, FALSE );
+            return;
+        }
+
+        write_to_buffer( d, echo_on_str, 0 );
+        show_account_menu( d );
+        d->connected = CON_ACCOUNT_MENU;
+        return;
+
+    case CON_ACCOUNT_MENU:
+        if ( argument[0] == '\0' )
+        {
+            show_account_menu( d );
+            return;
+        }
+
+        if ( !str_cmp( argument, "quit" ) )
+        {
+            close_socket( d, FALSE );
+            return;
+        }
+
+        if ( !str_cmp( argument, "new" ) )
+        {
+            write_to_buffer( d, "\n\rChoose a name for your new character: ", 0 );
+            d->connected = CON_GET_NEW_CHARACTER_NAME;
+            return;
+        }
+
+        {
+            char selected_name[MAX_INPUT_LENGTH];
+            char selected_key[MAX_INPUT_LENGTH];
+
+            if ( !account_menu_select( d, argument, selected_name, selected_key ) )
+            {
+                write_to_buffer( d, "That character is not on this account.\n\r", 0 );
+                show_account_menu( d );
+                return;
+            }
+
+            if ( check_playing( d, selected_key, TRUE ) == BERR )
+            {
+                show_account_menu( d );
+                return;
+            }
+
+            if ( check_reconnect( d, selected_key, FALSE ) == BERR )
+            {
+                show_account_menu( d );
+                return;
+            }
+
+            if ( !load_char_obj_for_account( d, selected_key, FALSE, d->account_id ) )
+            {
+                write_to_buffer( d, "Unable to load that character right now.\n\r", 0 );
+                show_account_menu( d );
+                return;
+            }
+
+            ch = d->character;
+            if ( ch->position == POS_FIGHTING
+            ||   ch->position == POS_EVASIVE
+            ||   ch->position == POS_DEFENSIVE
+            ||   ch->position == POS_AGGRESSIVE
+            ||   ch->position == POS_BERSERK )
+                ch->position = POS_STANDING;
+
+            sprintf( log_buf, "%s@%s(%s) has connected.", ch->pcdata->filename, d->host, d->user );
+            log_string_plus( log_buf, LOG_COMM, UMAX( sysdata.log_level, ch->level[max_sec_level(ch)] ) );
+            show_title( d );
+            return;
+        }
+
+    case CON_GET_NEW_CHARACTER_NAME:
+        if ( argument[0] == '\0' )
+        {
+            show_account_menu( d );
+            d->connected = CON_ACCOUNT_MENU;
+            return;
+        }
+
+        strcpy( arg, capitalize_name(argument) );
+        strcpy( buf, player_filename(arg) );
+        if ( !check_parse_name( arg, TRUE ) )
+        {
+            write_to_buffer( d, "Illegal name, try another.\n\rCharacter name: ", 0 );
+            return;
+        }
+        if ( player_file_exists( buf ) )
+        {
+            write_to_buffer( d, "That character name is already taken.\n\rCharacter name: ", 0 );
+            return;
+        }
+        if ( d->character )
+        {
+            d->character->desc = NULL;
+            free_char( d->character );
+            d->character = NULL;
+        }
+        load_char_obj_for_account( d, buf, TRUE, d->account_id );
+        ch = d->character;
+        STRFREE( ch->name );
+        ch->name = STRALLOC( arg );
+        sprintf( buf, "Did I get that right, %s (Y/N)? ", ch->name );
+        write_to_buffer( d, buf, 0 );
+        d->connected = CON_CONFIRM_NEW_NAME;
+        return;
+
     case CON_DELETE:
     write_to_buffer( d, "\n\r", 2 );
 
@@ -2264,11 +2613,25 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	switch ( *argument )
 	{
 	case 'y': case 'Y':
-	    sprintf( buf, "\n\rMake sure to use a password that won't be easily guessed by someone else."
+	    if ( d->account_id > 0 )
+	    {
+	        DISPOSE( ch->pcdata->pwd );
+	        ch->pcdata->pwd = str_dup( d->account_pwd ? d->account_pwd : "" );
+	        if ( ch->pcdata->account_name )
+	            STRFREE( ch->pcdata->account_name );
+	        ch->pcdata->account_name = STRALLOC( d->account_name ? d->account_name : "" );
+	        ch->pcdata->account_id = d->account_id;
+	        write_to_buffer( d, "\n\rWhat is your sex (M/F/N)? ", 0 );
+	        d->connected = CON_GET_NEW_SEX;
+	    }
+	    else
+	    {
+	        sprintf( buf, "\n\rMake sure to use a password that won't be easily guessed by someone else."
 	    		  "\n\rPick a good password for %s: %s",
-		ch->name, echo_off_str );
-	    write_to_buffer( d, buf, 0 );
-	    d->connected = CON_GET_NEW_PASSWORD;
+		    ch->name, echo_off_str );
+	        write_to_buffer( d, buf, 0 );
+	        d->connected = CON_GET_NEW_PASSWORD;
+	    }
 	    break;
 
 	case 'n': case 'N':
@@ -2277,7 +2640,10 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	    d->character->desc = NULL;
 	    free_char( d->character );
 	    d->character = NULL;
-	    d->connected = CON_GET_NAME;
+	    if ( d->account_id > 0 )
+	        d->connected = CON_GET_NEW_CHARACTER_NAME;
+	    else
+	        d->connected = CON_GET_NAME;
 	    break;
 
 	default:
@@ -2297,7 +2663,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	    return;
 	}
 
-	pwdnew = crypt( argument, ch->name );
+	pwdnew = crypt( argument, password_salt_for_name( ch->pcdata->filename ) );
 	for ( p = pwdnew; *p != '\0'; p++ )
 	{
 	    if ( *p == '~' )
@@ -2777,8 +3143,17 @@ bool check_reconnect( DESCRIPTOR_DATA *d, char *name, bool fConn )
 	{
 	    if ( fConn && ch->switched )
 	    {
-	      write_to_buffer( d, "Already playing.\n\rName: ", 0 );
-	      d->connected = CON_GET_NAME;
+	      write_to_buffer( d, "Already playing.\n\r", 0 );
+	      if ( d->account_id > 0 )
+	      {
+	          d->connected = CON_ACCOUNT_MENU;
+	          show_account_menu( d );
+	      }
+	      else
+	      {
+	          write_to_buffer( d, "Account: ", 0 );
+	          d->connected = CON_GET_ACCOUNT_NAME;
+	      }
 	      if ( d->character )
 	      {
 		 /* clear descriptor pointer to get rid of bug message in log */

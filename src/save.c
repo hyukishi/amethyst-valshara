@@ -149,6 +149,7 @@ void save_char_obj( CHAR_DATA *ch )
     char strsave[MAX_INPUT_LENGTH];
     char strback[MAX_INPUT_LENGTH];
     FILE *fp;
+    bool saved_to_db;
 
     if ( !ch )
     {
@@ -166,6 +167,7 @@ void save_char_obj( CHAR_DATA *ch )
 
     de_equip_char( ch );
     ch->save_time = current_time;
+    saved_to_db = FALSE;
     sprintf( strsave, "%s%c/%s",PLAYER_DIR,tolower(ch->pcdata->filename[0]),
 				 capitalize( ch->pcdata->filename ) );
 
@@ -217,12 +219,49 @@ void save_char_obj( CHAR_DATA *ch )
       }
     }
 
-    if ( ( fp = fopen( TEMP_FILE, "w" ) ) == NULL )
+    fp = tmpfile();
+    if ( fp != NULL )
+    {
+        char *blob;
+        long blob_len;
+
+	fwrite_char( ch, fp );
+        if ( ch->morph )
+        	fwrite_morph_data ( ch, fp );
+	if ( ch->first_carrying )
+	  fwrite_obj( ch, ch->last_carrying, fp, 0, OS_CARRY );
+
+	if ( sysdata.save_pets && ch->pcdata->pet )
+		fwrite_mobile( fp, ch->pcdata->pet );
+	if ( ch->comments )
+	  fwrite_comments( ch, fp );
+	fprintf( fp, "#END\n" );
+        fflush( fp );
+        fseek( fp, 0L, SEEK_END );
+        blob_len = ftell( fp );
+        rewind( fp );
+        if ( blob_len >= 0 )
+        {
+            blob = malloc( (size_t)blob_len + 1 );
+            if ( blob )
+            {
+                if ( fread( blob, 1, (size_t)blob_len, fp ) == (size_t)blob_len )
+                {
+                    blob[blob_len] = '\0';
+                    saved_to_db = playerdb_character_save_blob( ch, blob, (int)blob_len );
+                }
+                free( blob );
+            }
+        }
+        fclose( fp );
+    }
+
+    if ( !saved_to_db && ( fp = fopen( TEMP_FILE, "w" ) ) == NULL )
     {
 	perror( strsave );
         bug( "Save_char_obj: fopen", 0 );
     }
-    else
+    else if ( !saved_to_db )
     {
         bool ferr;
         fchmod(fileno(fp), S_IRUSR|S_IWUSR | S_IRGRP|S_IWGRP | S_IROTH|S_IWOTH);
@@ -270,6 +309,10 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
     fprintf( fp, "#PLAYER\n"		);
 
     fprintf( fp, "Name         %s~\n",	ch->name		);
+    if ( ch->pcdata->account_name && ch->pcdata->account_name[0] != '\0' )
+      fprintf( fp, "Account      %s~\n", ch->pcdata->account_name );
+    if ( ch->pcdata->account_id > 0 )
+      fprintf( fp, "AccountId    %d\n", ch->pcdata->account_id );
     if ( ch->description[0] != '\0' )
       fprintf( fp, "Description  %s~\n",	ch->description	);
     fprintf( fp, "Sex          %d\n",	ch->sex			);
@@ -725,16 +768,28 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest,
  */
 bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
 {
+    return load_char_obj_for_account( d, name, preload, 0 );
+}
+
+bool load_char_obj_for_account( DESCRIPTOR_DATA *d, char *name, bool preload, int account_id )
+{
     char fname[MAX_INPUT_LENGTH];
     char strsave[MAX_INPUT_LENGTH];
     CHAR_DATA *ch;
     FILE *fp;
     bool found;
+    bool loaded_from_db;
     struct stat fst;
     int i, x;
     extern FILE *fpArea;
     extern char strArea[MAX_INPUT_LENGTH];
     char buf[MAX_INPUT_LENGTH];
+    char *db_blob;
+    char *db_account_name;
+    char *db_password_hash;
+    int db_blob_len;
+    int db_account_id;
+    int db_character_id;
 
     CREATE( ch, CHAR_DATA, 1 );
     for ( x = 0; x < MAX_WEAR; x++ )
@@ -749,6 +804,9 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
     d->character		= ch;
     ch->desc			= d;
     ch->pcdata->filename	= STRALLOC( fname );
+    ch->pcdata->account_name      = NULL;
+    ch->pcdata->account_id        = 0;
+    ch->pcdata->character_id      = 0;
     ch->name			= NULL;
     ch->act			= multimeb(PLR_BLANK, PLR_COMBINE, PLR_PROMPT,
 				 PLR_AUTOLOOT, PLR_AUTOSAC, PLR_AUTOMAP, -1);
@@ -800,9 +858,32 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
        ch->pcdata->colorize[i] = -1;
     
     found = FALSE;
+    loaded_from_db = FALSE;
+    db_blob = NULL;
+    db_account_name = NULL;
+    db_password_hash = NULL;
+    db_blob_len = 0;
+    db_account_id = account_id;
+    db_character_id = 0;
+    fp = NULL;
     sprintf( strsave, "%s%c/%s", PLAYER_DIR, tolower(fname[0]),
 			capitalize( fname ) );
-    if ( stat( strsave, &fst ) != -1 )
+    if ( playerdb_character_load_blob( fname, &db_blob, &db_blob_len,
+            &db_account_id, &db_character_id, &db_account_name,
+            &db_password_hash ) )
+    {
+        sprintf( buf, "%s player data for: %s (sqlite)",
+            preload ? "Preloading" : "Loading", ch->pcdata->filename );
+        log_string_plus( buf, LOG_COMM, LEVEL_GREATER );
+        fp = tmpfile();
+        if ( fp )
+        {
+            fwrite( db_blob, 1, (size_t)db_blob_len, fp );
+            rewind( fp );
+            loaded_from_db = TRUE;
+        }
+    }
+    else if ( stat( strsave, &fst ) != -1 )
     {
       if ( fst.st_size == 0 )
       {
@@ -820,7 +901,10 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
     }
     /* else no player file */
 
-    if ( ( fp = fopen( strsave, "r" ) ) != NULL )
+    if ( !loaded_from_db && ( fp = fopen( strsave, "r" ) ) != NULL )
+      ;
+
+    if ( fp != NULL )
     {
 	int iNest;
 
@@ -901,6 +985,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
 	ch->description			= STRALLOC( "" );
 	ch->editor			= NULL;
 	ch->pcdata->clan_name		= STRALLOC( "" );
+	ch->pcdata->account_name       = STRALLOC( "" );
 	ch->pcdata->clan		= NULL;
 	ch->pcdata->council_name 	= STRALLOC( "" );
 	ch->pcdata->council 		= NULL;
@@ -928,7 +1013,36 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
 	ch->pcdata->o_range_hi		= 0;
 	ch->pcdata->wizinvis		= 0;
     }
-    else
+
+    if ( db_account_id > 0 )
+        ch->pcdata->account_id = db_account_id;
+    if ( db_character_id > 0 )
+        ch->pcdata->character_id = db_character_id;
+    if ( db_account_name )
+    {
+        if ( ch->pcdata->account_name )
+            STRFREE( ch->pcdata->account_name );
+        ch->pcdata->account_name = STRALLOC( db_account_name );
+        DISPOSE( db_account_name );
+    }
+    else if ( account_id > 0 )
+    {
+        ch->pcdata->account_id = account_id;
+        if ( d->account_name )
+            ch->pcdata->account_name = STRALLOC( d->account_name );
+    }
+
+    if ( db_password_hash )
+    {
+        if ( ch->pcdata->pwd )
+            DISPOSE( ch->pcdata->pwd );
+        ch->pcdata->pwd = str_dup( db_password_hash );
+        DISPOSE( db_password_hash );
+    }
+    if ( db_blob )
+        free( db_blob );
+
+    if ( found )
     {
 	if ( !ch->name )
     		ch->name	= STRALLOC( capitalize_name(name) );
@@ -937,6 +1051,8 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool preload )
 	  ch->pcdata->clan_name	= STRALLOC( "" );
 	  ch->pcdata->clan	= NULL;
 	}
+        if ( !ch->pcdata->account_name )
+          ch->pcdata->account_name = STRALLOC( "" );
 	if ( !ch->pcdata->council_name )
 	{
 	  ch->pcdata->council_name = STRALLOC( "" );
@@ -1019,6 +1135,8 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool preload )
 	    break;
 
 	case 'A':
+	    KEY( "Account",    ch->pcdata->account_name, fread_string( fp ) );
+	    KEY( "AccountId",  ch->pcdata->account_id, fread_number( fp ) );
 	    KEY( "Act",		ch->act,		fread_bitvector( fp ) );
 	    KEY( "AffectedBy",	ch->affected_by,	fread_bitvector( fp ) );
 	    KEY( "Alignment",	ch->alignment,		fread_number( fp ) );

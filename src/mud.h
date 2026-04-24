@@ -717,7 +717,11 @@ struct	project_data
  */
 typedef enum
 {
-  CON_PLAYING = 0,	CON_GET_NAME = -100,	CON_GET_OLD_PASSWORD,
+  CON_PLAYING = 0,	CON_GET_ACCOUNT_NAME = -120,
+  CON_GET_ACCOUNT_PASSWORD, CON_ACCOUNT_MENU, CON_GET_NEW_ACCOUNT_NAME,
+  CON_CONFIRM_NEW_ACCOUNT_NAME, CON_GET_NEW_ACCOUNT_PASSWORD,
+  CON_CONFIRM_NEW_ACCOUNT_PASSWORD, CON_GET_NEW_CHARACTER_NAME,
+  CON_GET_NAME = -100,	CON_GET_OLD_PASSWORD,
   CON_CONFIRM_NEW_NAME,	CON_GET_NEW_PASSWORD,	CON_CONFIRM_NEW_PASSWORD,
   CON_GET_NEW_SEX,	CON_GET_NEW_CLASS,	CON_READ_MOTD,
   CON_GET_NEW_RACE,	CON_GET_EMULATION,	CON_EDITING,
@@ -778,6 +782,9 @@ struct	descriptor_data
     char		pagecolor;
     char *		user;
     int			newstate;
+    int			account_id;
+    char *		account_name;
+    char *              account_pwd;
     unsigned char	prevcolor;
   #ifdef DNS_SLAVE
     int 	 	wait; /* wait for how many loops */
@@ -2441,6 +2448,9 @@ struct	pc_data
     char *		bamfin;
     char *		bamfout;
     char *		filename;       /* For the safe mset name -Shaddai */
+    char *              account_name;
+    int                 account_id;
+    int                 character_id;
     char *              rank;
     char *		title;
     char *		bestowments;	/* Special bestowed commands	   */
@@ -4476,6 +4486,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
 #define PLAYER_DIR	"../player/"	/* Player files			*/
+#define PLAYER_DB_FILE   "../system/playerdata.db"
 #define BACKUP_DIR	"../backup/"    /* Backup Player files		*/
 #define GOD_DIR		"../gods/"	/* God Info Dir			*/
 #define BOARD_DIR	"../boards/"	/* Board data dir		*/
@@ -4748,6 +4759,7 @@ bool	str_suffix	args( ( const char *astr, const char *bstr ) );
 char *	capitalize	args( ( const char *str ) );
 char *	capitalize_name	args( ( const char *str ) );
 char *	player_filename	args( ( const char *str ) );
+char *  password_salt_for_name args( ( const char *str ) );
 char *	strlower	args( ( const char *str ) );
 char *	strupper	args( ( const char *str ) );
 char *  aoran		args( ( const char *str ) );
@@ -5145,6 +5157,8 @@ void	check_requests		args( ( void ) );
 #define OS_CORPSE	1
 void	save_char_obj	args( ( CHAR_DATA *ch ) );
 bool	load_char_obj	args( ( DESCRIPTOR_DATA *d, char *name, bool preload ) );
+bool    load_char_obj_for_account args( ( DESCRIPTOR_DATA *d, char *name,
+                                bool preload, int account_id ) );
 void	set_alarm	args( ( long seconds ) );
 void	requip_char	args( ( CHAR_DATA *ch ) );
 void    fwrite_obj      args( ( CHAR_DATA *ch,  OBJ_DATA  *obj, FILE *fp, 
@@ -5184,6 +5198,30 @@ void	load_herb_table	args( ( void ) );
 void	save_herb_table	args( ( void ) );
 void	load_races	args( ( void ) );
 void	load_tongues	args( ( void ) );
+
+/* playerdb.c */
+bool    playerdb_init    args( ( void ) );
+void    playerdb_shutdown args( ( void ) );
+bool    playerdb_character_exists args( ( const char *char_key ) );
+bool    playerdb_account_load args( ( const char *account_name, int *account_id,
+                                char *account_name_out, size_t out_size,
+                                char *password_hash_out, size_t pwd_size ) );
+bool    playerdb_account_create args( ( const char *account_name,
+                                const char *password_hash, int *account_id ) );
+bool    playerdb_account_set_password args( ( int account_id,
+                                const char *password_hash ) );
+bool    playerdb_character_load_blob args( ( const char *char_key,
+                                char **blob, int *blob_len, int *account_id,
+                                int *character_id, char **account_name,
+                                char **password_hash ) );
+bool    playerdb_character_save_blob args( ( CHAR_DATA *ch,
+                                const char *blob, int blob_len ) );
+int     playerdb_account_list_characters args( ( int account_id,
+                                char names[][MAX_INPUT_LENGTH],
+                                char keys[][MAX_INPUT_LENGTH], int max_chars ) );
+bool    playerdb_account_owns_character args( ( int account_id,
+                                const char *char_key ) );
+bool    playerdb_character_delete args( ( const char *char_key ) );
 
 /* track.c */
 void	found_prey	args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
