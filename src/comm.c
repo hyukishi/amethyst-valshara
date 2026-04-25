@@ -3130,7 +3130,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	    else
 	    {
 	    	if ( (iLang = skill_lookup( lang_names[iLang] )) < 0 )
-	    		bug( "Nanny: cannot find racial language." );
+	    		;
 	    	else
 	    		ch->pcdata->learned[iLang] = 100;
 	    }
