@@ -359,7 +359,7 @@ static void show_account_menu( DESCRIPTOR_DATA *d )
 
     sprintf( buf, "\n\rSlots used: %d/%d\n\r", count, MAX_ACCOUNT_CHARACTERS );
     write_to_buffer( d, buf, 0 );
-    write_to_buffer( d, "Actions: PLAY <number/name>, NEW, IMPORT, QUIT\n\rSelection: ", 0 );
+    write_to_buffer( d, "Actions: PLAY <number/name>, NEW, QUIT\n\rSelection: ", 0 );
 }
 
 static int race_menu_index( int choice )
@@ -2323,19 +2323,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
             return;
         }
 
-        if ( !str_cmp( argument, "import" ) || !str_cmp( argument, "i" ) )
-        {
-            if ( playerdb_account_character_count( d->account_id ) >= MAX_ACCOUNT_CHARACTERS )
-            {
-                write_to_buffer( d, "That account is already at the 5 character limit.\n\r", 0 );
-                show_account_menu( d );
-                return;
-            }
-            write_to_buffer( d, "\n\rEnter the existing character name to import: ", 0 );
-            d->connected = CON_ACCOUNT_IMPORT_NAME;
-            return;
-        }
-
         {
             char selected_name[MAX_INPUT_LENGTH];
             char selected_key[MAX_INPUT_LENGTH];
@@ -2379,116 +2366,6 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
             show_title( d );
             return;
         }
-
-    case CON_ACCOUNT_IMPORT_NAME:
-        if ( argument[0] == '\0' )
-        {
-            show_account_menu( d );
-            d->connected = CON_ACCOUNT_MENU;
-            return;
-        }
-
-        if ( playerdb_account_character_count( d->account_id ) >= MAX_ACCOUNT_CHARACTERS )
-        {
-            write_to_buffer( d, "That account is already at the 5 character limit.\n\r", 0 );
-            show_account_menu( d );
-            d->connected = CON_ACCOUNT_MENU;
-            return;
-        }
-
-        strcpy( arg, capitalize_name( argument ) );
-        strcpy( buf, player_filename( arg ) );
-        if ( !player_file_exists( buf ) )
-        {
-            write_to_buffer( d, "No such character exists.\n\rImport character: ", 0 );
-            return;
-        }
-        if ( playerdb_account_owns_character( d->account_id, buf ) )
-        {
-            write_to_buffer( d, "That character is already on this account.\n\r", 0 );
-            show_account_menu( d );
-            d->connected = CON_ACCOUNT_MENU;
-            return;
-        }
-
-        if ( d->pending_char_name )
-            STRFREE( d->pending_char_name );
-        if ( d->pending_char_key )
-            DISPOSE( d->pending_char_key );
-        d->pending_char_name = STRALLOC( arg );
-        d->pending_char_key = str_dup( buf );
-        {
-            DESCRIPTOR_DATA *tmpd;
-            CHAR_DATA *victim;
-
-            CREATE( tmpd, DESCRIPTOR_DATA, 1 );
-            init_descriptor( tmpd, -1 );
-            tmpd->connected = CON_PLAYING;
-            tmpd->account_id = d->account_id;
-            if ( d->account_name )
-                tmpd->account_name = STRALLOC( d->account_name );
-            if ( d->account_pwd )
-                tmpd->account_pwd = str_dup( d->account_pwd );
-
-            if ( !load_char_obj_for_account( tmpd, d->pending_char_key, FALSE, 0 ) || !tmpd->character )
-            {
-                if ( tmpd->account_name )
-                    STRFREE( tmpd->account_name );
-                if ( tmpd->account_pwd )
-                    DISPOSE( tmpd->account_pwd );
-                DISPOSE( tmpd->outbuf );
-                if ( tmpd->user )
-                    STRFREE( tmpd->user );
-                DISPOSE( tmpd );
-                write_to_buffer( d, "Unable to import that character right now.\n\r", 0 );
-                show_account_menu( d );
-                d->connected = CON_ACCOUNT_MENU;
-                return;
-            }
-
-            victim = tmpd->character;
-            if ( victim->pcdata->account_name )
-                STRFREE( victim->pcdata->account_name );
-            victim->pcdata->account_name = STRALLOC( d->account_name ? d->account_name : "" );
-            victim->pcdata->account_id = d->account_id;
-            DISPOSE( victim->pcdata->pwd );
-            victim->pcdata->pwd = str_dup( d->account_pwd ? d->account_pwd : "" );
-            save_char_obj( victim );
-
-            victim->desc = NULL;
-            tmpd->character = NULL;
-            free_char( victim );
-            if ( tmpd->account_name )
-                STRFREE( tmpd->account_name );
-            if ( tmpd->account_pwd )
-                DISPOSE( tmpd->account_pwd );
-            DISPOSE( tmpd->outbuf );
-            if ( tmpd->user )
-                STRFREE( tmpd->user );
-            DISPOSE( tmpd );
-
-            if ( d->pending_char_name )
-            {
-                sprintf( buf, "%s has been imported to your account.\n\r", d->pending_char_name );
-                write_to_buffer( d, buf, 0 );
-                STRFREE( d->pending_char_name );
-                d->pending_char_name = NULL;
-            }
-            if ( d->pending_char_key )
-            {
-                DISPOSE( d->pending_char_key );
-                d->pending_char_key = NULL;
-            }
-
-            show_account_menu( d );
-            d->connected = CON_ACCOUNT_MENU;
-            return;
-        }
-
-    case CON_ACCOUNT_IMPORT_PASSWORD:
-        show_account_menu( d );
-        d->connected = CON_ACCOUNT_MENU;
-        return;
 
     case CON_GET_NEW_CHARACTER_NAME:
         if ( argument[0] == '\0' )

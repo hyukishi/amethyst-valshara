@@ -11954,7 +11954,7 @@ NAME
 
 SYNOPSIS
     Login: enter your master account name at the greeting prompt
-    Menu: PLAY <number|name>, NEW, IMPORT, QUIT
+    Menu: PLAY <number|name>, NEW, QUIT
 
 DESCRIPTION
     Valshara now uses a master-account model. You log in once with the master
@@ -11965,37 +11965,10 @@ DESCRIPTION
 
     NEW creates a fresh character on the current account.
 
-    IMPORT adds an existing character to the current account by selecting the
-    existing character name from the account menu.
-
     PLAY loads a listed character by menu number or by name.
 
 SEE ALSO
-    IMPORT, PASSWORD, RESETPASSWORD
-~
-
-0 IMPORT 'IMPORT CHARACTER'~
-NAME
-    IMPORT - Add an existing character to your current master account
-
-SYNOPSIS
-    From the account menu: IMPORT
-
-DESCRIPTION
-    IMPORT is used from the master-account menu after you have already logged in
-    to the account that will receive the character.
-
-    The game asks for the existing character name and then reassigns that
-    character to your current master account.
-
-    IMPORT does not ask for any password a second time. The master-account
-    login is the only password gate.
-
-    Accounts that already hold five characters cannot import more until one of
-    their existing characters is moved or removed.
-
-SEE ALSO
-    ACCOUNTS, PASSWORD
+    PASSWORD, RESETPASSWORD
 ~
 
 0 PASSWORD~
@@ -12018,7 +11991,7 @@ DESCRIPTION
     The PASSWORD command is protected against being snooped or logged.
 
 SEE ALSO
-    ACCOUNTS, IMPORT, RESETPASSWORD
+    ACCOUNTS, RESETPASSWORD
 ~
 
 0 RESETPASSWORD 'RESET PASSWORD'~
