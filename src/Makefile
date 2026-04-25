@@ -67,7 +67,7 @@ all:
 
 smaug: $(O_FILES)
 	rm -f smaug
-	$(CC) $(L_FLAGS) -o smaug $(O_FILES)
+	$(CC) -o smaug $(O_FILES) $(L_FLAGS)
 	chmod g+w smaug
 	chmod a+x smaug
 	chmod g+w $(O_FILES)
