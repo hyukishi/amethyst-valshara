@@ -67,6 +67,32 @@ static void playerdb_account_key(const char *account_name, char *account_key)
     strcpy(account_key, player_filename(account_name));
 }
 
+static void playerdb_trim_to_latest_player(char *blob, int *blob_len)
+{
+    char *cursor;
+    char *latest;
+
+    if (!blob || !blob_len || *blob_len <= 0)
+        return;
+
+    latest = blob;
+    cursor = strstr(blob, "\n#PLAYER");
+    while (cursor)
+    {
+        latest = cursor + 1;
+        cursor = strstr(cursor + 1, "\n#PLAYER");
+    }
+
+    if (latest != blob)
+    {
+        int new_len;
+
+        new_len = strlen(latest);
+        memmove(blob, latest, (size_t)new_len + 1);
+        *blob_len = new_len;
+    }
+}
+
 static void playerdb_log_error(const char *context)
 {
     if (player_db)
@@ -472,6 +498,7 @@ bool playerdb_character_load_blob(const char *char_key, char **blob, int *blob_l
             }
             memcpy(*blob, blobcol, (size_t)len);
             (*blob)[len] = '\0';
+            playerdb_trim_to_latest_player(*blob, &len);
         }
         if (blob_len)
             *blob_len = len;
