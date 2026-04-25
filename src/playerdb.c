@@ -306,7 +306,8 @@ bool playerdb_character_exists(const char *char_key)
 
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
-        "SELECT 1 FROM characters WHERE char_key = ?1 LIMIT 1;",
+        "SELECT 1 FROM characters WHERE lower(char_key) = lower(?1) "
+        "ORDER BY updated_at DESC, id DESC LIMIT 1;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
@@ -333,7 +334,9 @@ bool playerdb_account_load(const char *account_name, int *account_id,
     playerdb_account_key(account_name, account_key);
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
-        "SELECT id, account_name, password_hash FROM accounts WHERE account_key = ?1 LIMIT 1;",
+        "SELECT id, account_name, password_hash FROM accounts "
+        "WHERE lower(account_key) = lower(?1) "
+        "ORDER BY updated_at DESC, id DESC LIMIT 1;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
@@ -369,12 +372,20 @@ bool playerdb_account_create(const char *account_name, const char *password_hash
 {
     sqlite3_stmt *stmt;
     char account_key[MAX_INPUT_LENGTH];
+    char existing_name[MAX_INPUT_LENGTH];
+    char existing_hash[MAX_STRING_LENGTH];
     int rc;
 
     if (!player_db || !account_name || account_name[0] == '\0' || !password_hash)
         return FALSE;
 
     playerdb_account_key(account_name, account_key);
+    existing_name[0] = '\0';
+    existing_hash[0] = '\0';
+    if (playerdb_account_load(account_name, account_id, existing_name,
+        sizeof(existing_name), existing_hash, sizeof(existing_hash)))
+        return TRUE;
+
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
         "INSERT INTO accounts (account_name, account_key, password_hash, created_at, updated_at) "
@@ -471,7 +482,8 @@ bool playerdb_character_load_blob(const char *char_key, char **blob, int *blob_l
     rc = sqlite3_prepare_v2(player_db,
         "SELECT c.id, c.pfile_blob, a.id, a.account_name, a.password_hash "
         "FROM characters c JOIN accounts a ON a.id = c.account_id "
-        "WHERE c.char_key = ?1 LIMIT 1;",
+        "WHERE lower(c.char_key) = lower(?1) "
+        "ORDER BY c.updated_at DESC, c.id DESC LIMIT 1;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
@@ -536,7 +548,8 @@ bool playerdb_character_password_hash(const char *char_key, char *password_hash_
     rc = sqlite3_prepare_v2(player_db,
         "SELECT a.password_hash "
         "FROM characters c JOIN accounts a ON a.id = c.account_id "
-        "WHERE c.char_key = ?1 LIMIT 1;",
+        "WHERE lower(c.char_key) = lower(?1) "
+        "ORDER BY c.updated_at DESC, c.id DESC LIMIT 1;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
@@ -669,7 +682,7 @@ bool playerdb_account_owns_character(int account_id, const char *char_key)
 
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
-        "SELECT 1 FROM characters WHERE account_id = ?1 AND char_key = ?2 LIMIT 1;",
+        "SELECT 1 FROM characters WHERE account_id = ?1 AND lower(char_key) = lower(?2) LIMIT 1;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
@@ -694,7 +707,7 @@ bool playerdb_character_delete(const char *char_key)
 
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
-        "DELETE FROM characters WHERE char_key = ?1;",
+        "DELETE FROM characters WHERE lower(char_key) = lower(?1);",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
