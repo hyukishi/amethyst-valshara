@@ -2417,31 +2417,9 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
             DISPOSE( d->pending_char_key );
         d->pending_char_name = STRALLOC( arg );
         d->pending_char_key = str_dup( buf );
-        write_to_buffer( d, "Enter that character's current password: ", 0 );
-        write_to_buffer( d, echo_off_str, 0 );
-        d->connected = CON_ACCOUNT_IMPORT_PASSWORD;
-        return;
-
-    case CON_ACCOUNT_IMPORT_PASSWORD:
         {
-            char password_hash[MAX_STRING_LENGTH];
             DESCRIPTOR_DATA *tmpd;
             CHAR_DATA *victim;
-
-            write_to_buffer( d, "\n\r", 2 );
-            password_hash[0] = '\0';
-            if ( !d->pending_char_key
-            ||   !playerdb_character_password_hash( d->pending_char_key, password_hash, sizeof(password_hash) )
-            ||   strcmp( crypt( argument, password_hash ), password_hash ) )
-            {
-                write_to_buffer( d, echo_on_str, 0 );
-                write_to_buffer( d, "Wrong password.\n\r", 0 );
-                show_account_menu( d );
-                d->connected = CON_ACCOUNT_MENU;
-                return;
-            }
-
-            write_to_buffer( d, echo_on_str, 0 );
 
             CREATE( tmpd, DESCRIPTOR_DATA, 1 );
             init_descriptor( tmpd, -1 );
@@ -2506,6 +2484,11 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
             d->connected = CON_ACCOUNT_MENU;
             return;
         }
+
+    case CON_ACCOUNT_IMPORT_PASSWORD:
+        show_account_menu( d );
+        d->connected = CON_ACCOUNT_MENU;
+        return;
 
     case CON_GET_NEW_CHARACTER_NAME:
         if ( argument[0] == '\0' )

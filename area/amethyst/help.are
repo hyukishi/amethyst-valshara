@@ -11969,11 +11969,11 @@ DESCRIPTION
     IMPORT is used from the master-account menu after you have already logged in
     to the account that will receive the character.
 
-    The game asks for the existing character name and then for that character's
-    current password. If the password is correct, the character is reassigned to
-    your current master account.
+    The game asks for the existing character name and then reassigns that
+    character to your current master account.
 
-    IMPORT does not ask for the master-account password a second time.
+    IMPORT does not ask for any password a second time. The master-account
+    login is the only password gate.
 
     Accounts that already hold five characters cannot import more until one of
     their existing characters is moved or removed.
