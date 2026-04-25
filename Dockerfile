@@ -13,11 +13,9 @@ RUN dnf -y update \
        make \
        nc \
        pkgconf-pkg-config \
-       ripgrep \
        sqlite \
        sqlite-devel \
        telnet \
-       tini \
     && dnf clean all \
     && rm -rf /var/cache/dnf
 
@@ -31,5 +29,4 @@ RUN find src -maxdepth 1 -name '*.o' -delete \
 
 EXPOSE 4000
 
-ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["bash"]
