@@ -119,6 +119,14 @@
               <pre id="map-output" class="map-output"></pre>
             </section>
 
+            <section class="minimap-card">
+              <div class="panel-head compact">
+                <h2>Route Memory</h2>
+                <span class="muted">Recent rooms and travel trail</span>
+              </div>
+              <div id="minimap-trail" class="trail-list empty">Room history will appear here as you move.</div>
+            </section>
+
             <section class="channel-card">
               <div class="panel-head compact">
                 <h2>Channels</h2>
@@ -149,6 +157,7 @@
                 <button data-command="south">S</button>
                 <button data-command="down">D</button>
               </div>
+              <div id="dynamic-exits" class="dynamic-exits empty">Available exits will appear here.</div>
               <div class="quick-actions">
                 <button data-command="enter school">School</button>
                 <button data-command="inventory">Inventory</button>

@@ -355,9 +355,11 @@ def parse_room_summary(output: str):
     lines = recent_clean_lines(output, limit=60)
     room_name = ''
     exits = ''
+    exit_list = []
     for index, line in enumerate(lines):
         if line.startswith('Exits:'):
             exits = line
+            exit_list = [part.strip(' ,.') for part in line.replace('Exits:', '', 1).split() if part.strip(' ,.')]
             for candidate in reversed(lines[:index]):
                 if candidate.startswith('.') or candidate.startswith('`'):
                     continue
@@ -367,7 +369,7 @@ def parse_room_summary(output: str):
                     continue
                 room_name = candidate
                 break
-    return {'name': room_name, 'exits': exits}
+    return {'name': room_name, 'exits': exits, 'exitList': exit_list}
 
 
 def parse_prompt(output: str):

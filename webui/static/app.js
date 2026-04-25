@@ -6,6 +6,8 @@ const state = {
   aliases: [],
   pollTimer: null,
   lastAliasCharacter: '',
+  mapperTrail: [],
+  pendingMove: null,
 };
 
 const els = {
@@ -34,6 +36,8 @@ const els = {
   hudGold: document.getElementById('hud-gold'),
   channelFeed: document.getElementById('channel-feed'),
   combatFeed: document.getElementById('combat-feed'),
+  minimapTrail: document.getElementById('minimap-trail'),
+  dynamicExits: document.getElementById('dynamic-exits'),
 };
 
 function setStatus(snapshot) {
@@ -80,6 +84,49 @@ function renderFeed(container, lines, type, emptyMessage) {
   container.innerHTML = lines.map((line) => `
     <article class="feed-item ${type}">${escapeHtml(line)}</article>
   `).join('');
+}
+
+function renderMapper(snapshot) {
+  const room = snapshot?.state?.room || {};
+  const roomName = room.name || '';
+  if (roomName) {
+    const current = state.mapperTrail[state.mapperTrail.length - 1];
+    if (!current || current.name !== roomName) {
+      state.mapperTrail.push({
+        name: roomName,
+        exits: room.exits || '',
+        via: state.pendingMove || 'look',
+      });
+      if (state.mapperTrail.length > 12) {
+        state.mapperTrail = state.mapperTrail.slice(-12);
+      }
+    }
+  }
+  state.pendingMove = null;
+
+  if (!state.mapperTrail.length) {
+    els.minimapTrail.className = 'trail-list empty';
+    els.minimapTrail.textContent = 'Room history will appear here as you move.';
+  } else {
+    els.minimapTrail.className = 'trail-list';
+    els.minimapTrail.innerHTML = state.mapperTrail.slice().reverse().map((entry, index) => `
+      <article class="trail-node">
+        <strong>${escapeHtml(entry.name)}</strong>
+        <span>${index === 0 ? 'Current room' : `Arrived via ${escapeHtml(entry.via)}`}${entry.exits ? ` · ${escapeHtml(entry.exits)}` : ''}</span>
+      </article>
+    `).join('');
+  }
+
+  const exits = room.exitList || [];
+  if (!exits.length) {
+    els.dynamicExits.className = 'dynamic-exits empty';
+    els.dynamicExits.textContent = 'Available exits will appear here.';
+  } else {
+    els.dynamicExits.className = 'dynamic-exits';
+    els.dynamicExits.innerHTML = exits.map((exitName) => `
+      <button data-exit-command="${escapeAttr(exitName)}">${escapeHtml(exitName)}</button>
+    `).join('');
+  }
 }
 
 function updateNavActive(panel) {
@@ -198,11 +245,14 @@ async function startSession() {
   state.sessionId = snapshot.sessionId;
   state.cursor = snapshot.cursor || 0;
   state.output = '';
+  state.mapperTrail = [];
+  state.pendingMove = null;
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
+  renderMapper(snapshot);
   renderWizard(snapshot);
   if (state.pollTimer) clearInterval(state.pollTimer);
   state.pollTimer = setInterval(pollSession, 700);
@@ -217,6 +267,7 @@ async function pollSession() {
   setMap(snapshot.state?.mapText || '');
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
+  renderMapper(snapshot);
   renderWizard(snapshot);
   if (snapshot.state?.phase === 'playing') {
     updateNavActive('play');
@@ -240,6 +291,7 @@ async function sendInput(text) {
   setMap(snapshot.state?.mapText || '');
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
+  renderMapper(snapshot);
   renderWizard(snapshot);
 }
 
@@ -287,7 +339,10 @@ document.querySelectorAll('.nav-link').forEach((button) => {
 });
 
 document.querySelectorAll('[data-command]').forEach((button) => {
-  button.addEventListener('click', () => sendInput(button.dataset.command));
+  button.addEventListener('click', () => {
+    state.pendingMove = button.dataset.command;
+    sendInput(button.dataset.command);
+  });
 });
 
 document.getElementById('look-btn').addEventListener('click', () => sendInput('look'));
@@ -341,6 +396,13 @@ els.aliasList.addEventListener('click', (event) => {
   if (del) {
     removeAlias(del.dataset.deleteAlias).catch((error) => alert(error.message));
   }
+});
+
+els.dynamicExits.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-exit-command]');
+  if (!button) return;
+  state.pendingMove = button.dataset.exitCommand;
+  sendInput(button.dataset.exitCommand);
 });
 
 updateNavActive('connect');

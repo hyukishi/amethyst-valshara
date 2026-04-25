@@ -69,7 +69,7 @@ pre {
   min-height: 100vh;
   padding: 1.25rem;
 }
-.sidebar, .panel, .status-card, .wizard-card, .terminal-card, .map-card, .nav-card, .alias-form-card, .alias-list-card, .guide-card, .hud-card, .channel-card, .combat-card {
+.sidebar, .panel, .status-card, .wizard-card, .terminal-card, .map-card, .nav-card, .alias-form-card, .alias-list-card, .guide-card, .hud-card, .channel-card, .combat-card, .minimap-card {
   background: var(--panel);
   backdrop-filter: blur(12px);
   border: 1px solid var(--line);
@@ -135,7 +135,7 @@ pre {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
-.wizard-card, .alias-form-card, .alias-list-card, .guide-card, .terminal-card, .map-card, .nav-card, .hud-card, .channel-card, .combat-card {
+.wizard-card, .alias-form-card, .alias-list-card, .guide-card, .terminal-card, .map-card, .nav-card, .hud-card, .channel-card, .combat-card, .minimap-card {
   border-radius: 22px;
   padding: 1rem;
 }
@@ -218,6 +218,48 @@ pre {
 }
 .feed-item.combat {
   border-left: 3px solid rgba(196, 91, 77, 0.85);
+}
+.trail-list {
+  display: grid;
+  gap: 0.6rem;
+}
+.trail-node {
+  position: relative;
+  padding: 0.8rem 0.9rem 0.8rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.trail-node::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.95rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent-strong);
+  box-shadow: 0 0 0 4px rgba(224, 185, 93, 0.14);
+}
+.trail-node strong {
+  display: block;
+  font-family: var(--title);
+}
+.trail-node span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.dynamic-exits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+.dynamic-exits button {
+  flex: 1 0 30%;
+  min-width: 92px;
 }
 .compass {
   display: grid;
