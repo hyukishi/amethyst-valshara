@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: amethyst-valshara-dev
-    working_dir: /workspace
+    working_dir: /workspace/src
     stdin_open: true
     tty: true
     init: true
@@ -14,4 +14,4 @@ services:
       - .:/workspace
     environment:
       TZ: America/Chicago
-    command: ./src/smaug 4000
+    command: ./smaug 4000

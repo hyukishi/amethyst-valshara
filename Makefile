@@ -6,16 +6,16 @@ docker-build:
 	docker compose build --no-cache --pull mud
 
 docker-shell:
-	docker compose run --rm mud bash
+	docker compose run --rm --workdir /workspace mud bash
 
 docker-run:
-	docker compose run --rm --service-ports mud ./src/smaug 4000
+	docker compose run --rm --service-ports --workdir /workspace/src mud ./smaug 4000
 
 docker-up:
 	docker compose up --build mud
 
 docker-make:
-	docker compose run --rm mud make -C src
+	docker compose run --rm --workdir /workspace mud make -C src
 
 docker-stop:
 	docker compose down --remove-orphans
