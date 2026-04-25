@@ -180,8 +180,8 @@ code { font-family: var(--mono); }
   max-height: 60vh;
 }
 .terminal-output {
-  min-height: 18rem;
-  max-height: 38vh;
+  min-height: 9rem;
+  max-height: 19vh;
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -254,6 +254,8 @@ code { font-family: var(--mono); }
 .feed-list {
   display: grid;
   gap: 0.55rem;
+  max-height: 24rem;
+  overflow: auto;
 }
 .feed-item {
   padding: 0.7rem 0.8rem;
@@ -430,7 +432,7 @@ code { font-family: var(--mono); }
   position: fixed;
   left: 1rem;
   bottom: 1rem;
-  width: min(42rem, calc(100vw - 2rem));
+  width: min(34rem, calc(100vw - 2rem));
   z-index: 40;
   display: none;
 }

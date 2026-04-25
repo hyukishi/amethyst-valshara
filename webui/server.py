@@ -223,7 +223,7 @@ class SessionStore:
 SESSIONS = SessionStore()
 
 
-PROMPT_PREFIX_RE = re.compile(r'^<[^<>\n\r]+>\s*')
+PROMPT_PREFIX_RE = re.compile(r'^(?:<[^<>\n\r]+>\s*)+')
 
 
 def strip_prompt_prefix(line: str) -> str:
@@ -284,8 +284,24 @@ def parse_numbered_options(output: str, prompt_label: str):
     if idx == -1:
         return []
     snippet = output[max(0, idx - 5000):idx]
+    lines = snippet.splitlines()
+    option_lines = []
+    found_block = False
+    for raw_line in reversed(lines):
+        line = strip_prompt_prefix(raw_line).strip()
+        if not line:
+            if found_block:
+                break
+            continue
+        if re.search(r'\d+[\)>]\s*', line):
+            option_lines.append(line)
+            found_block = True
+            continue
+        if found_block:
+            break
+    snippet = '\n'.join(reversed(option_lines))
     options = []
-    for number, label in re.findall(r'(\d+)\)\s*([^\n\r]+?)(?=(?:\s+\d+\)|$))', snippet):
+    for number, label in re.findall(r'(\d+)[\)>]\s*([^\n\r]+?)(?=(?:\s+\d+[\)>]|$))', snippet):
         cleaned = ' '.join(label.split())
         if cleaned and not cleaned.startswith('Menu:'):
             options.append({'value': int(number), 'label': cleaned})
@@ -297,6 +313,12 @@ def parse_numbered_options(output: str, prompt_label: str):
             continue
         seen.add(key)
         deduped.append(option)
+    start_index = 0
+    for index in range(1, len(deduped)):
+        if deduped[index]['value'] <= deduped[index - 1]['value']:
+            start_index = index
+    if start_index:
+        deduped = deduped[start_index:]
     return deduped
 
 
@@ -308,6 +330,18 @@ def parse_character_name(output: str):
 
 
 def parse_prompt(output: str):
+    prompt_lines = []
+    for line in output.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if re.search(r'<[^<>\n\r]*\bhp\b[^<>\n\r]*>', stripped, re.I):
+            prompt_lines.append(stripped)
+            continue
+        if re.search(r'<[^<>\n\r]*\bxp:\d+/\d+[^<>\n\r]*>', stripped, re.I):
+            prompt_lines.append(stripped)
+    if prompt_lines:
+        return prompt_lines[-1]
     matches = re.findall(r'<[^<>\n\r]+>', output)
     return matches[-1] if matches else ''
 
@@ -315,17 +349,17 @@ def parse_prompt(output: str):
 def parse_prompt_stats(prompt: str):
     if not prompt:
         return {}
-    match = re.search(r'(?P<hp>\d+)hp', prompt, re.I)
-    resource = re.search(r'(?P<resource>\d+)(?P<resource_type>[mb])\b', prompt, re.I)
+    match = re.search(r'(?P<hp>\d+)\s*hp', prompt, re.I)
+    resource = re.search(r'(?P<resource>\d+)\s*(?P<resource_type>b(?:p)?|m)\b', prompt, re.I)
     mv = re.search(r'(?P<mv>\d+)mv', prompt, re.I)
     xp = re.search(r'xp:(?P<current>\d+)\/(?P<next>\d+)', prompt, re.I)
-    gold = re.search(r'g:(?P<gold>\d+)', prompt, re.I)
+    gold = re.search(r'\bg:(?P<gold>\d+)\b', prompt, re.I)
     data = {}
     if match:
         data['hp'] = int(match.group('hp'))
     if resource:
         data['resource'] = int(resource.group('resource'))
-        data['resourceType'] = 'blood' if resource.group('resource_type').lower() == 'b' else 'mana'
+        data['resourceType'] = 'blood' if resource.group('resource_type').lower().startswith('b') else 'mana'
     if mv:
         data['mv'] = int(mv.group('mv'))
     if xp:
@@ -376,9 +410,22 @@ def parse_room_summary(output: str):
                 continue
             if stripped.startswith('[') and 'Map' in stripped:
                 continue
+            if stripped.startswith('You ') or stripped.startswith('Room ') or stripped.startswith('Prompt '):
+                continue
             if len(stripped) > 80:
                 continue
             if stripped.endswith(':') or stripped.endswith('.'):
+                continue
+            room_name = stripped
+            break
+    if not room_name:
+        for candidate in reversed(lines):
+            stripped = candidate.strip()
+            if not stripped or stripped.startswith('Exits:') or stripped.startswith('<'):
+                continue
+            if stripped.startswith('You ') or stripped.startswith('[') or stripped.endswith(':') or stripped.endswith('.'):
+                continue
+            if len(stripped) > 80:
                 continue
             room_name = stripped
             break
@@ -417,23 +464,27 @@ def parse_inventory_sections(output: str):
 
     for index, raw_line in enumerate(lines):
         line = strip_prompt_prefix(raw_line)
-        if line.lower().startswith('you are carrying'):
+        if line.lower() == 'you are carrying:':
             chunk = []
             for candidate in lines[index + 1:index + 50]:
                 stripped = strip_prompt_prefix(candidate)
                 if not stripped:
+                    if chunk:
+                        break
                     continue
-                if stripped.startswith('Exits:') or stripped.startswith('You are using') or stripped.startswith('You '):
+                if stripped.startswith('Exits:') or stripped == 'You are using:' or stripped.startswith('You have '):
                     break
                 chunk.append(stripped)
             inventory = _parse_listing_lines(chunk, equipment=False)
-        if line.lower().startswith('you are using'):
+        if line.lower() == 'you are using:':
             chunk = []
             for candidate in lines[index + 1:index + 50]:
                 stripped = strip_prompt_prefix(candidate)
                 if not stripped:
+                    if chunk:
+                        break
                     continue
-                if stripped.startswith('Exits:') or stripped.startswith('You are carrying') or stripped.startswith('You '):
+                if stripped.startswith('Exits:') or stripped == 'You are carrying:' or stripped.startswith('You have '):
                     break
                 chunk.append(stripped)
             equipment = _parse_listing_lines(chunk, equipment=True)
@@ -465,12 +516,28 @@ def parse_skill_sections(output: str):
     return skills[-80:]
 
 
-def parse_target_candidates(output: str, room_name: str):
+def parse_target_candidates(output: str, room_name: str, character_name: str = ''):
     targets = []
-    for line in recent_clean_lines(output, limit=80):
+    lines = recent_clean_lines(output, limit=120)
+    start_index = 0
+    if room_name:
+        for index in range(len(lines) - 1, -1, -1):
+            if lines[index].strip() == room_name.strip():
+                start_index = index + 1
+                break
+    relevant = lines[start_index:]
+    for line in relevant:
         if line == room_name or line.startswith('Exits:') or line.startswith('<'):
             continue
         if line.startswith('You are carrying') or line.startswith('You are using'):
+            continue
+        if line in {'NAME', 'DESCRIPTION', 'Account menu'}:
+            continue
+        if line.startswith('Logged in as:') or line.startswith('Actions:'):
+            continue
+        if '(Link Dead)' in line:
+            continue
+        if re.match(r'^\d+\)\s+', line):
             continue
         if re.search(r'\b(is|are) (in|here|standing|sitting|resting|sleeping|bleeding|fighting)\b', line, re.I):
             name = line.split(' is ', 1)[0].split(' are ', 1)[0].strip()
@@ -482,6 +549,8 @@ def parse_target_candidates(output: str, room_name: str):
     seen = set()
     for target in targets:
         key = target.lower()
+        if character_name and key.startswith(character_name.lower()):
+            continue
         if key in seen:
             continue
         seen.add(key)
@@ -580,26 +649,28 @@ def detect_phase(output: str):
 
 
 def parse_state(output: str, raw_output: str = ''):
+    phase = detect_phase(output)
     prompt = parse_prompt(output)
-    items = parse_inventory_sections(output)
-    room = parse_room_summary(output)
-    skills = parse_skill_sections(output)
+    items = parse_inventory_sections(output) if phase == 'playing' else {'inventory': [], 'equipment': []}
+    room = parse_room_summary(output) if phase == 'playing' else {'name': '', 'exits': '', 'exitList': []}
+    skills = parse_skill_sections(output) if phase == 'playing' else []
+    character_name = parse_character_name(output)
     return {
-        'phase': detect_phase(output),
+        'phase': phase,
         'prompt': prompt,
         'promptStats': parse_prompt_stats(prompt),
         'mapText': extract_latest_map(raw_output or output),
-        'accountMenu': parse_account_menu(output),
-        'characterName': parse_character_name(output),
-        'raceOptions': parse_numbered_options(output, 'Race:'),
-        'classOptions': parse_numbered_options(output, 'Class?'),
+        'accountMenu': parse_account_menu(output) if phase == 'accountMenu' else None,
+        'characterName': character_name,
+        'raceOptions': parse_numbered_options(output, 'Race:') if phase == 'newRace' else [],
+        'classOptions': parse_numbered_options(output, 'Class?') if phase == 'newClass' else [],
         'chatLines': parse_chat_lines(output),
         'combatLines': parse_combat_lines(output),
         'room': room,
         'inventoryItems': items['inventory'],
         'equipmentItems': items['equipment'],
         'skills': skills,
-        'skillTargets': parse_target_candidates(output, room.get('name', '')),
+        'skillTargets': parse_target_candidates(output, room.get('name', ''), character_name) if phase == 'playing' else [],
         'suggestedCommands': COMMON_COMMANDS,
     }
 
@@ -794,6 +865,7 @@ class Handler(BaseHTTPRequestHandler):
             text = data.get('text', '')
             try:
                 current = session.snapshot(0).get('state', {})
+                selected_from_account_menu = False
                 if current.get('phase') == 'accountMenu':
                     selected = None
                     if text.strip().isdigit():
@@ -809,9 +881,21 @@ class Handler(BaseHTTPRequestHandler):
                     if selected:
                         session.character_name = selected['name']
                         session.character_key = player_filename(selected['name'])
+                        selected_from_account_menu = True
                 session.send_line(text)
-                time.sleep(0.3)
-                self._json(session.snapshot(data.get('since', 0)))
+                delay = 0.3
+                if selected_from_account_menu:
+                    delay = 0.8
+                time.sleep(delay)
+                snapshot = session.snapshot(data.get('since', 0))
+                if selected_from_account_menu:
+                    for _ in range(4):
+                        phase = snapshot.get('state', {}).get('phase')
+                        if phase == 'playing':
+                            break
+                        time.sleep(0.25)
+                        snapshot = session.snapshot(data.get('since', 0))
+                self._json(snapshot)
             except Exception as exc:
                 self._json({'error': str(exc)}, HTTPStatus.BAD_GATEWAY)
             return

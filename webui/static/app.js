@@ -26,6 +26,8 @@ const state = {
   skillTargets: [],
   recentChatSignatures: [],
   disconnectNoticeShown: false,
+  hydratedCharacter: '',
+  enteringGame: false,
 };
 
 const els = {
@@ -95,20 +97,24 @@ const COMMON_SKILL_TARGET_WORDS = ['self', 'me'];
 
 function setStatus(snapshot) {
   const info = snapshot?.state || {};
+  const previousState = state.latestState || {};
+  const previousStats = previousState.promptStats || {};
   state.latestState = info;
   els.statusConnection.textContent = snapshot?.connected ? 'Connected' : 'Offline';
   els.statusPhase.textContent = info.phase || 'unknown';
   els.statusCharacter.textContent = info.characterName || 'None';
-  els.statusRoom.textContent = info.room?.name || '-';
-  els.hudHp.textContent = info.promptStats?.hp ?? '-';
-  els.hudResource.textContent = info.promptStats?.resource != null
-    ? `${info.promptStats.resource} ${info.promptStats.resourceType || ''}`.trim()
+  els.statusRoom.textContent = info.room?.name || previousState.room?.name || '-';
+  const stats = { ...previousStats, ...(info.promptStats || {}) };
+  els.hudHp.textContent = stats.hp ?? '-';
+  els.hudResource.textContent = stats.resource != null
+    ? `${stats.resource} ${stats.resourceType || ''}`.trim()
     : '-';
-  els.hudMv.textContent = info.promptStats?.mv ?? '-';
-  els.hudXp.textContent = info.promptStats?.xpCurrent != null && info.promptStats?.xpNext != null
-    ? `${info.promptStats.xpCurrent}/${info.promptStats.xpNext}`
+  els.hudMv.textContent = stats.mv ?? '-';
+  els.hudXp.textContent = stats.xpCurrent != null && stats.xpNext != null
+    ? `${stats.xpCurrent}/${stats.xpNext}`
     : '-';
-  els.hudGold.textContent = info.promptStats?.gold ?? '-';
+  els.hudGold.textContent = stats.gold ?? '-';
+  state.latestState.promptStats = stats;
 }
 
 function escapeHtml(text) {
@@ -306,12 +312,12 @@ function renderFeed(container, lines, type, emptyMessage) {
   container.className = 'feed-list';
   container.innerHTML = lines.map((entry) => {
     if (typeof entry === 'string') {
-      return `<article class="feed-item ${type}"><span class="feed-message">${escapeHtml(entry)}</span></article>`;
+      return `<article class="feed-item ${type}"><span class="feed-message">${ansiToHtml(entry)}</span></article>`;
     }
     return `
       <article class="feed-item ${type}">
         ${entry.speaker ? `<span class="feed-speaker">${escapeHtml(entry.speaker)}</span>` : ''}
-        <span class="feed-message">${escapeHtml(entry.message || entry.raw || '')}</span>
+        <span class="feed-message">${ansiToHtml(entry.message || entry.raw || '')}</span>
       </article>
     `;
   }).join('');
@@ -330,7 +336,7 @@ function renderChannelToasts(lines) {
     toast.className = 'channel-toast';
     toast.innerHTML = `
       ${entry.speaker ? `<span class="feed-speaker">${escapeHtml(entry.speaker)}</span>` : ''}
-      <span class="feed-message">${escapeHtml(entry.message || entry.raw || '')}</span>
+      <span class="feed-message">${ansiToHtml(entry.message || entry.raw || '')}</span>
     `;
     els.toastStack.appendChild(toast);
     setTimeout(() => toast.classList.add('fade'), 4600);
@@ -533,6 +539,8 @@ function handleDisconnect(snapshot) {
   state.selectedItem = null;
   state.lastAliasCharacter = '';
   state.wizardSignature = '';
+  state.hydratedCharacter = '';
+  state.enteringGame = false;
   renderItemPanel({ state: { inventoryItems: [], equipmentItems: [] } });
   renderSkills({ state: {} });
   renderWizard(snapshot);
@@ -687,6 +695,8 @@ async function startSession() {
   state.wizardSignature = '';
   state.lastAliasCharacter = '';
   state.disconnectNoticeShown = false;
+  state.hydratedCharacter = '';
+  state.enteringGame = false;
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
@@ -697,8 +707,34 @@ async function startSession() {
   renderItemPanel(snapshot);
   renderSkills(snapshot);
   renderWizard(snapshot);
+  maybeAdvanceToPlay(snapshot);
   if (state.pollTimer) clearInterval(state.pollTimer);
   state.pollTimer = setInterval(() => pollSession().catch(() => {}), 700);
+}
+
+function maybeAdvanceToPlay(snapshot) {
+  const phase = snapshot?.state?.phase;
+  const characterName = snapshot?.state?.characterName || '';
+  if (phase === 'playing' && state.activePanel === 'connect') {
+    updateNavActive('play');
+    window.setTimeout(() => els.commandInput.focus(), 60);
+  }
+  if (phase === 'playing' && characterName && state.hydratedCharacter !== characterName && !state.enteringGame) {
+    state.hydratedCharacter = characterName;
+    state.enteringGame = true;
+    window.setTimeout(async () => {
+      try {
+        await sendInput('look');
+        await sendInput('inventory');
+        await sendInput('equipment');
+        await sendInput('practice');
+      } catch (error) {
+        console.warn(error);
+      } finally {
+        state.enteringGame = false;
+      }
+    }, 120);
+  }
 }
 
 async function pollSession() {
@@ -715,6 +751,7 @@ async function pollSession() {
   renderItemPanel(snapshot);
   renderSkills(snapshot);
   renderWizard(snapshot);
+  maybeAdvanceToPlay(snapshot);
   if (!snapshot.connected) {
     handleDisconnect(snapshot);
     return;
@@ -746,6 +783,7 @@ async function sendInput(text) {
   renderItemPanel(snapshot);
   renderSkills(snapshot);
   renderWizard(snapshot);
+  maybeAdvanceToPlay(snapshot);
   if (!snapshot.connected) {
     handleDisconnect(snapshot);
   }
@@ -934,7 +972,10 @@ els.commandForm.addEventListener('submit', async (event) => {
   await sendInput(value);
   els.commandInput.value = value;
   els.commandInput.focus();
-  els.commandInput.select();
+  if (typeof els.commandInput.setSelectionRange === 'function') {
+    const end = els.commandInput.value.length;
+    els.commandInput.setSelectionRange(end, end);
+  }
   resetAutocomplete(els.commandInput.value);
 });
 
@@ -944,6 +985,11 @@ els.commandInput.addEventListener('input', () => {
 });
 
 els.commandInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();
+    els.commandForm.requestSubmit();
+    return;
+  }
   if (event.key === 'Tab') {
     event.preventDefault();
     applyAutocomplete();
