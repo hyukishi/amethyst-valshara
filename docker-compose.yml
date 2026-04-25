@@ -14,4 +14,4 @@ services:
       - .:/workspace
     environment:
       TZ: America/Chicago
-    command: bash
+    command: ./src/smaug 4000

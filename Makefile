@@ -1,4 +1,6 @@
-.PHONY: docker-build docker-shell docker-run docker-make docker-stop native-build worlddb-refresh
+.PHONY: all docker-build docker-shell docker-run docker-up docker-make docker-stop native-build worlddb-refresh
+
+all: docker-up
 
 docker-build:
 	docker compose build --no-cache --pull mud
@@ -8,6 +10,9 @@ docker-shell:
 
 docker-run:
 	docker compose run --rm --service-ports mud ./src/smaug 4000
+
+docker-up:
+	docker compose up --build mud
 
 docker-make:
 	docker compose run --rm mud make -C src

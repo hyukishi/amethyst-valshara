@@ -4,11 +4,20 @@
 
 The preferred development workflow is now container-based.
 
-### Build the image
+### Build the image only
 
 ```sh
 make docker-build
 ```
+
+### Build and run the MUD
+
+```sh
+make
+```
+
+This is the default target now. It builds the image if needed and starts the
+`smaug` server on port `4000`.
 
 ### Open a shell in the dev container
 
@@ -22,7 +31,8 @@ make docker-shell
 make docker-run
 ```
 
-This publishes port `4000` from the container to port `4000` on the host.
+This launches a one-off container and runs `./src/smaug 4000` directly.
+For the normal long-running workflow, prefer `make`.
 
 ### Rebuild the game binary inside the container
 
