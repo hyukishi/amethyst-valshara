@@ -56,6 +56,9 @@ static void starter_weapon_choice( CHAR_DATA *ch, sh_int weapon_vnums[], int *we
 
     *weapon_count = 0;
 
+    if ( xIS_SET( ch->class, CLASS_SUMMONER ) && num_classes( ch ) == 1 )
+        return;
+
     switch ( ch->race )
     {
         case RACE_DWARF:
@@ -105,10 +108,12 @@ static void starter_weapon_choice( CHAR_DATA *ch, sh_int weapon_vnums[], int *we
 void outfit_new_character( CHAR_DATA *ch, bool reoutfit )
 {
     OBJ_DATA *obj;
+    bool summoner;
     sh_int weapon_vnums[3];
     int i;
     int weapon_count;
 
+    summoner = xIS_SET( ch->class, CLASS_SUMMONER ) ? TRUE : FALSE;
     starter_weapon_choice( ch, weapon_vnums, &weapon_count );
 
     if ( ( obj = starter_object( ch, OBJ_VNUM_SCHOOL_BANNER, 1 ) ) != NULL && !reoutfit )
@@ -136,7 +141,10 @@ void outfit_new_character( CHAR_DATA *ch, bool reoutfit )
             equip_char( ch, obj, WEAR_WIELD );
     }
 
-    if ( ( obj = starter_object( ch, OBJ_VNUM_ADVENTURERS_GUIDE, 1 ) ) != NULL && !reoutfit )
+    if ( summoner && ( obj = starter_object( ch, OBJ_VNUM_SUMMONER_WAND, 1 ) ) != NULL && !reoutfit )
+        equip_char( ch, obj, WEAR_HOLD );
+
+    if ( ( obj = starter_object( ch, OBJ_VNUM_ADVENTURERS_GUIDE, 1 ) ) != NULL && !reoutfit && !summoner )
         equip_char( ch, obj, WEAR_HOLD );
 
     starter_object( ch, OBJ_VNUM_BURLAP_SACK, 1 );
@@ -2154,12 +2162,14 @@ static void finish_character_entry( DESCRIPTOR_DATA *d )
     CHAR_DATA *ch;
     char buf[MAX_STRING_LENGTH];
     int iClass, iLang;
+    bool created_new;
 
     ch = d->character;
+    created_new = ( ch->level[max_sec_level(ch)] == 0 );
     add_char( ch );
     d->connected = CON_PLAYING;
 
-    if ( ch->level[max_sec_level(ch)] == 0 )
+    if ( created_new )
     {
         ch->pcdata->clan_name = STRALLOC( "" );
         ch->pcdata->clan      = NULL;
@@ -2279,6 +2289,9 @@ static void finish_character_entry( DESCRIPTOR_DATA *d )
         ch->was_in_room = get_room_index( ROOM_VNUM_TEMPLE );
     else if ( !ch->was_in_room )
         ch->was_in_room = ch->in_room;
+
+    if ( created_new && ch->pcdata->account_id > 0 )
+        save_char_obj( ch );
 }
 
 /*
@@ -3252,8 +3265,11 @@ bool check_reconnect( DESCRIPTOR_DATA *d, char *name, bool fConn )
 	    }
 	    if ( fConn == FALSE )
 	    {
-		DISPOSE( d->character->pcdata->pwd );
-		d->character->pcdata->pwd = str_dup( ch->pcdata->pwd );
+		if ( d->character && d->character->pcdata )
+		{
+		    DISPOSE( d->character->pcdata->pwd );
+		    d->character->pcdata->pwd = str_dup( ch->pcdata->pwd );
+		}
 	    }
 	    else
 	    {

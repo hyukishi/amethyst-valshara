@@ -699,6 +699,9 @@ void boot_db( bool fCopyOver )
         }
 	}
 
+        log_string( "Registering summoner summons..." );
+        init_summoner_skills();
+
         log_string("Validating reset references...");
         validate_resets();
 	    

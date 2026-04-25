@@ -1,0 +1,436 @@
+Name        Summoner~
+Class       10
+Attrprime   3
+Weapon      12429
+Guild       3018
+Skilladept  95
+Thac0       18
+Thac32      9
+Hpmin       7
+Hpmax       11
+Mana        1
+Expbase     1300
+Skill 'armor' 3 90
+Skill 'charm person' 14 85
+Skill 'detect hidden' 12 85
+Skill 'detect invis' 6 90
+Skill 'detect magic' 1 95
+Skill 'faerie fire' 10 80
+Skill 'float' 4 90
+Skill 'identify' 8 95
+Skill 'infravision' 7 80
+Skill 'invis' 16 80
+Skill 'kindred strength' 18 90
+Skill 'locate object' 14 85
+Skill 'refresh' 5 70
+Skill 'remove invis' 14 80
+Skill 'sanctuary' 26 80
+Skill 'scry' 20 85
+Skill 'shield' 12 85
+Skill 'true sight' 38 70
+Skill 'word of recall' 18 90
+Skill 'aid' 12 75
+Skill 'climb' 6 75
+Skill 'cook' 1 95
+Skill 'dig' 2 75
+Skill 'evasive style' 1 70
+Skill 'meditate' 8 95
+Skill 'mount' 5 70
+Skill 'scan' 4 80
+Skill 'search' 5 85
+Skill 'standard style' 1 70
+Skill 'bludgeons' 1 30
+Skill 'flexible arms' 1 35
+Skill 'long blades' 1 25
+Skill 'pugilism' 1 30
+Skill 'short blades' 1 40
+Skill 'talonous arms' 1 20
+Skill 'common' 1 99
+Skill 'dwarven' 1 99
+Skill 'elvish' 1 99
+Skill 'gith' 1 99
+Skill 'goblin' 1 99
+Skill 'halfling' 1 99
+Skill 'ogre' 1 99
+Skill 'orcish' 1 99
+Skill 'pixie' 1 99
+Skill 'trollese' 1 99
+Title
+Man~
+Woman~
+Title
+Caller of Sparrows~
+Caller of Sparrows~
+Title
+Caller of Sparrows~
+Caller of Sparrows~
+Title
+Caller of Sparrows~
+Caller of Sparrows~
+Title
+Caller of Sparrows~
+Caller of Sparrows~
+Title
+Caller of Sparrows~
+Caller of Sparrows~
+Title
+Binder of Foxfire~
+Binder of Foxfire~
+Title
+Binder of Foxfire~
+Binder of Foxfire~
+Title
+Binder of Foxfire~
+Binder of Foxfire~
+Title
+Binder of Foxfire~
+Binder of Foxfire~
+Title
+Binder of Foxfire~
+Binder of Foxfire~
+Title
+Companion Keeper~
+Companion Keeper~
+Title
+Companion Keeper~
+Companion Keeper~
+Title
+Companion Keeper~
+Companion Keeper~
+Title
+Companion Keeper~
+Companion Keeper~
+Title
+Companion Keeper~
+Companion Keeper~
+Title
+Conjurer of Claws~
+Conjurer of Claws~
+Title
+Conjurer of Claws~
+Conjurer of Claws~
+Title
+Conjurer of Claws~
+Conjurer of Claws~
+Title
+Conjurer of Claws~
+Conjurer of Claws~
+Title
+Conjurer of Claws~
+Conjurer of Claws~
+Title
+Shepherd of Echoes~
+Shepherd of Echoes~
+Title
+Shepherd of Echoes~
+Shepherd of Echoes~
+Title
+Shepherd of Echoes~
+Shepherd of Echoes~
+Title
+Shepherd of Echoes~
+Shepherd of Echoes~
+Title
+Shepherd of Echoes~
+Shepherd of Echoes~
+Title
+Warden of the Living Seal~
+Warden of the Living Seal~
+Title
+Warden of the Living Seal~
+Warden of the Living Seal~
+Title
+Warden of the Living Seal~
+Warden of the Living Seal~
+Title
+Warden of the Living Seal~
+Warden of the Living Seal~
+Title
+Warden of the Living Seal~
+Warden of the Living Seal~
+Title
+Voice of Bound Beasts~
+Voice of Bound Beasts~
+Title
+Voice of Bound Beasts~
+Voice of Bound Beasts~
+Title
+Voice of Bound Beasts~
+Voice of Bound Beasts~
+Title
+Voice of Bound Beasts~
+Voice of Bound Beasts~
+Title
+Voice of Bound Beasts~
+Voice of Bound Beasts~
+Title
+Master of Kindred Signs~
+Master of Kindred Signs~
+Title
+Master of Kindred Signs~
+Master of Kindred Signs~
+Title
+Master of Kindred Signs~
+Master of Kindred Signs~
+Title
+Master of Kindred Signs~
+Master of Kindred Signs~
+Title
+Master of Kindred Signs~
+Master of Kindred Signs~
+Title
+High Summoner~
+High Summoner~
+Title
+High Summoner~
+High Summoner~
+Title
+High Summoner~
+High Summoner~
+Title
+High Summoner~
+High Summoner~
+Title
+High Summoner~
+High Summoner~
+Title
+Arch Summoner~
+Arch Summoner~
+Title
+Arch Summoner~
+Arch Summoner~
+Title
+Arch Summoner~
+Arch Summoner~
+Title
+Arch Summoner~
+Arch Summoner~
+Title
+Arch Summoner~
+Arch Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Legendary Summoner~
+Legendary Summoner~
+Title
+Avatar~
+Avatar~
+Title
+Initiate Avatar~
+Initiate Avatar~
+Title
+Acolyte~
+Acolyte~
+Title
+Neophyte~
+Neophyte~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+Title
+Creator~
+Creator~
+End

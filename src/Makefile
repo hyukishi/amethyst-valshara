@@ -44,6 +44,7 @@ O_FILES = alias.o act_comm.o act_info.o act_move.o act_obj.o act_wiz.o boards.o 
 	  pfiles.o mapout.o misc.o mpxset.o mud_comm.o mud_prog.o player.o polymorph.o \
           kata.o requests.o reset.o save.o shops.o skills.o special.o tables.o \
           magic2.o track.o update.o grub.o stat_obj.o ban.o services.o planes.o \
+          summoner.o \
           playerdb.o worlddb.o \
           imm_host.o $(IMC_OFILES) colorize.o multiclass.o bank.o healer.o who.o \
           ansi.o
@@ -54,6 +55,7 @@ C_FILES = alias.c act_comm.c act_info.c act_move.c act_obj.c act_wiz.c boards.c 
 	  newarena.c mapout.c misc.c mpxset.c mud_comm.c mud_prog.c player.c polymorph.c \
           kata.c requests.c reset.c save.c shops.c skills.c special.c tables.c \
           magic2.c track.c update.c grub.c stat_obj.c ban.c services.c planes.c \
+          summoner.c \
           playerdb.c worlddb.c \
           imm_host.c $(IMC_CFILES) colorize.c multiclass.c bank.c healer.c who.c\
           ansi.c

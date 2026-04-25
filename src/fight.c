@@ -4162,7 +4162,7 @@ void do_flee( CHAR_DATA *ch, char *argument )
 	    }
           }
 	  if (!IS_NPC(ch) && panic) {
-	    if (!xIS_SET( ch->class, CLASS_MONK ) || !xIS_SET( ch->class, CLASS_WARRIOR ) )
+	    if (!xIS_SET( ch->class, CLASS_SUMMONER ) || !xIS_SET( ch->class, CLASS_WARRIOR ) )
 	      gain_exp(ch, -loose);
 	  }
   
@@ -4335,7 +4335,7 @@ void do_flee( CHAR_DATA *ch, char *argument )
 	  }
 	}
 	if (!IS_NPC(ch) && panic) {
-	  if (xIS_SET( ch->class, CLASS_MONK ) || !xIS_SET( ch->class, CLASS_WARRIOR ) )
+	  if (xIS_SET( ch->class, CLASS_SUMMONER ) || !xIS_SET( ch->class, CLASS_WARRIOR ) )
 	    gain_exp(ch, -loose);
 	}
 

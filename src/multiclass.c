@@ -207,6 +207,8 @@ int best_magic_class( CHAR_DATA *ch )
     return CLASS_DRUID;
   if(xIS_SET(ch->class, CLASS_AUGURER))
     return CLASS_AUGURER;
+  if(xIS_SET(ch->class, CLASS_SUMMONER))
+    return CLASS_SUMMONER;
   if(xIS_SET(ch->class, CLASS_VAMPIRE))
     return CLASS_VAMPIRE;
   if(xIS_SET(ch->class, CLASS_NECROMANCER))

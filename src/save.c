@@ -1090,6 +1090,7 @@ bool load_char_obj_for_account( DESCRIPTOR_DATA *d, char *name, bool preload, in
 		else
 		    break;
     }
+    sync_summoner_unlocks( ch );
     /* Rebuild affectedy and RIS to catch errors - FB */
     update_aris(ch); 
     loading_char = NULL;
@@ -1716,15 +1717,18 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool preload )
 	    {
 		int sn;
 		int value;
+                char *spell_name;
 
 		if ( preload )
 		  word = "End";
 		else
 		{
 		  value = fread_number( fp );
-
-		  sn = bsearch_skill_exact( fread_word( fp ), gsn_first_spell, gsn_first_skill-1 );
+                  spell_name = fread_word( fp );
+		  sn = bsearch_skill_exact( spell_name, gsn_first_spell, gsn_first_skill-1 );
 		  if ( sn < 0 )
+		    sn = skill_lookup( spell_name );
+		  if ( sn < 0 || skill_table[sn]->type != SKILL_SPELL )
 		    bug( "Fread_char: unknown spell.", 0 );
 		  else
 		  {

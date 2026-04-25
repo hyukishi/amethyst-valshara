@@ -3476,9 +3476,9 @@ static void add_class_creation_bonus( CHAR_DATA *ch, int class_index )
             add_creation_bonus( ch, APPLY_CHA, 5 );
             break;
 
-        case CLASS_MONK:
-            add_creation_bonus( ch, APPLY_DEX, 5 );
-            add_creation_bonus( ch, APPLY_WIS, 5 );
+        case CLASS_SUMMONER:
+            add_creation_bonus( ch, APPLY_INT, 5 );
+            add_creation_bonus( ch, APPLY_CHA, 5 );
             break;
 
         case CLASS_CALLER:
@@ -4373,6 +4373,7 @@ void add_kill( CHAR_DATA *ch, CHAR_DATA *mob )
 	{
 	    if ( ch->pcdata->killed[x].count < 50 )
 		++ch->pcdata->killed[x].count;
+            unlock_summoner_skill( ch, mob );
 	    return;
 	}
 	else
@@ -4382,6 +4383,7 @@ void add_kill( CHAR_DATA *ch, CHAR_DATA *mob )
 		ch->pcdata->killed, (track-1) * sizeof(KILLED_DATA) );
     ch->pcdata->killed[0].vnum  = vnum;
     ch->pcdata->killed[0].count = 1;
+    unlock_summoner_skill( ch, mob );
     if ( track < MAX_KILLTRACK )
 	ch->pcdata->killed[track].vnum = 0;
 }

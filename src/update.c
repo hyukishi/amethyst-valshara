@@ -78,6 +78,7 @@ static bool is_full_spellcaster_class( int class_index )
         case CLASS_CLERIC:
         case CLASS_DRUID:
         case CLASS_AUGURER:
+        case CLASS_SUMMONER:
         case CLASS_CALLER:
         case CLASS_NECROMANCER:
             return TRUE;
@@ -361,14 +362,14 @@ int mana_gain( CHAR_DATA *ch )
     gain = 0;
     if ( IS_NPC(ch) )
     {
-    if ( xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_VAMPIRE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) || xIS_SET( ch->class, CLASS_CALLER ) )
+    if ( xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_VAMPIRE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) || xIS_SET( ch->class, CLASS_CALLER ) || xIS_SET( ch->class, CLASS_SUMMONER ) )
         gain = ch->perm_int;
     if ( xIS_SET( ch->class, CLASS_DRUID ) || xIS_SET( ch->class, CLASS_AUGURER ) || xIS_SET( ch->class, CLASS_CLERIC ) || xIS_SET( ch->class, CLASS_RANGER ) || xIS_SET( ch->class, CLASS_PALADIN ) )
         gain = UMAX( gain, ch->perm_wis );
     }
     else
     {
-	if(xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_VAMPIRE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) || xIS_SET( ch->class, CLASS_CALLER ) )
+	if(xIS_SET( ch->class, CLASS_MAGE ) || xIS_SET( ch->class, CLASS_VAMPIRE ) || xIS_SET( ch->class, CLASS_NECROMANCER ) || xIS_SET( ch->class, CLASS_CALLER ) || xIS_SET( ch->class, CLASS_SUMMONER ) )
 	gain = UMIN( get_curr_int(ch)/5, UMAX( 1, ch->level[best_magic_class(ch)] / 4 ) );
         if(xIS_SET( ch->class, CLASS_CLERIC ) || xIS_SET( ch->class, CLASS_PALADIN ) || xIS_SET( ch->class, CLASS_AUGURER ) || xIS_SET( ch->class, CLASS_DRUID ) || xIS_SET( ch->class, CLASS_RANGER ) )
 	gain = UMAX( gain, UMIN( get_curr_wis(ch)/5, UMAX( 1, ch->level[best_magic_class(ch)] / 4 ) ) );

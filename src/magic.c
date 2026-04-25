@@ -289,10 +289,33 @@ int ch_bsearch_skill( CHAR_DATA *ch, const char *name, int first, int top )
 
 int find_spell( CHAR_DATA *ch, const char *name, bool know )
 {
+    int sn;
+
     if ( IS_NPC(ch) || !know )
-	return bsearch_skill( name, gsn_first_spell, gsn_first_skill-1 );
+        sn = bsearch_skill( name, gsn_first_spell, gsn_first_skill-1 );
     else
-	return ch_bsearch_skill( ch, name, gsn_first_spell, gsn_first_skill-1 );
+        sn = ch_bsearch_skill( ch, name, gsn_first_spell, gsn_first_skill-1 );
+
+    if ( sn >= 0 )
+        return sn;
+
+    for ( sn = gsn_top_sn; sn < top_sn; ++sn )
+    {
+        if ( !skill_table[sn] || !skill_table[sn]->name || skill_table[sn]->type != SKILL_SPELL )
+            continue;
+        if ( know && !IS_NPC( ch ) )
+        {
+            if ( ch->pcdata->learned[sn] <= 0 )
+                continue;
+            if ( ch->level[skill_level(ch, sn)] < skill_table[sn]->skill_level[skill_level(ch, sn)] )
+                continue;
+        }
+        if ( LOWER(name[0]) == LOWER(skill_table[sn]->name[0])
+        &&   !str_prefix( name, skill_table[sn]->name ) )
+            return sn;
+    }
+
+    return -1;
 }
 
 int find_skill( CHAR_DATA *ch, const char *name, bool know )

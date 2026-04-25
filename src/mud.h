@@ -236,7 +236,7 @@ typedef ch_ret	SPELL_FUN	args( ( int sn, int level, CHAR_DATA *ch, void *vo ) );
 #define MIN_EXP_WORTH		   20
 
 #define MAX_REXITS		   20	/* Maximum exits allowed in 1 room */
-#define MAX_SKILL		  400
+#define MAX_SKILL		 8192
 #define MAX_CLASS           	   12
 #define MAX_NPC_CLASS		   26
 #define MAX_RACE                   20  /* Trying to fix a bunch of problems-- Scryn*/  
@@ -863,7 +863,7 @@ typedef enum {
 #define CLASS_AUGURER	   7 /* 7-7-96 SB */
 #define CLASS_PALADIN	   8 /* 7-7-96 SB */
 #define CLASS_BARBARIAN    9
-#define CLASS_MONK	   10
+#define CLASS_SUMMONER	   10
 #define CLASS_CALLER	   12
 #define CLASS_NECROMANCER  13
 /*
@@ -1721,6 +1721,7 @@ typedef enum
 #define OBJ_VNUM_SCHOOL_VEST	  13314
 #define OBJ_VNUM_SCHOOL_SHIELD	  13315
 #define OBJ_VNUM_SCHOOL_BANNER    13316
+#define OBJ_VNUM_SUMMONER_WAND    12429
 
 /*
  * Item types.
@@ -5106,6 +5107,9 @@ bool	economy_has	args( ( AREA_DATA *tarea, int gold ) );
 void	add_kill	args( ( CHAR_DATA *ch, CHAR_DATA *mob ) );
 int	times_killed	args( ( CHAR_DATA *ch, CHAR_DATA *mob ) );
 void	update_aris	args( ( CHAR_DATA *ch) );
+void    init_summoner_skills args( ( void ) );
+void    sync_summoner_unlocks args( ( CHAR_DATA *ch ) );
+void    unlock_summoner_skill args( ( CHAR_DATA *ch, CHAR_DATA *mob ) );
 AREA_DATA *get_area	args( ( char *name ) ); /* FB */
 OD *	get_objtype	args( ( CHAR_DATA *ch, sh_int type ) );
 

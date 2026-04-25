@@ -118,7 +118,7 @@ CON_PLAYING)
             strcat(retbuf,"[-]e=experience a=alignment q=gold m=gains n=diety b=odds k=kills\n\r");
             strcat(retbuf,"[-]i=idle l=levels t=title h=hit/mana/move s=stats r=race f=fighting\n\r");
             strcat(retbuf,"[-]d=linkdead g=God o=Mort [1]Mage[2]Cleric[3]War[4]Thief[5]Druid\n\r");
-            strcat(retbuf,"[-][v]=invis lev [6]Monk[7]Barb[8]Sorc[9]Paladin[!]Ranger[@]Psi\n\r");
+            strcat(retbuf,"[-][v]=invis lev [6]Summ[7]Barb[8]Sorc[9]Paladin[!]Ranger[@]Psi\n\r");
             strcat(retbuf,"\n\rStatus Bar Key:\n\r");
             strcat(retbuf,color_str(AT_DGREY,ch));
             strcat(retbuf,"---------------\n\r");
@@ -155,7 +155,7 @@ CON_PLAYING)
                     if (!xIS_SET(person->class, CLASS_DRUID))
 			skip = TRUE;
 		if (index(flags, '6') != NULL)
-		    if (!xIS_SET(person->class, CLASS_MONK))
+		    if (!xIS_SET(person->class, CLASS_SUMMONER))
 			skip = TRUE;
 		if (index(flags, '7') != NULL)
 		    if (!xIS_SET(person->class, CLASS_BARBARIAN))
