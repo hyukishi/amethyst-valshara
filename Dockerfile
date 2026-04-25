@@ -1,24 +1,25 @@
-FROM ubuntu:24.04
+FROM rockylinux:9
 
-ENV DEBIAN_FRONTEND=noninteractive \
-    TZ=America/Chicago
+ENV TZ=America/Chicago
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN dnf -y update \
+    && dnf -y install \
        bash \
-       build-essential \
+       gcc \
+       gcc-c++ \
        gdb \
-       libcrypt-dev \
-       libsqlite3-dev \
+       glibc-devel \
+       libxcrypt-devel \
        make \
-       netcat-openbsd \
-       pkg-config \
+       nc \
+       pkgconf-pkg-config \
        ripgrep \
-       sqlite3 \
+       sqlite \
+       sqlite-devel \
        telnet \
-       tini
-
-RUN rm -rf /var/lib/apt/lists/*
+       tini \
+    && dnf clean all \
+    && rm -rf /var/cache/dnf
 
 WORKDIR /workspace
 
