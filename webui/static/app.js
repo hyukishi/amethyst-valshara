@@ -2,12 +2,15 @@ const state = {
   sessionId: null,
   cursor: 0,
   output: '',
+  terminalLines: [],
   status: null,
   aliases: [],
   pollTimer: null,
   lastAliasCharacter: '',
   mapperTrail: [],
   pendingMove: null,
+  automationRules: [],
+  ruleFireLog: {},
 };
 
 const els = {
@@ -24,6 +27,14 @@ const els = {
   aliasCommand: document.getElementById('alias-command'),
   aliasList: document.getElementById('alias-list'),
   refreshAliases: document.getElementById('refresh-aliases'),
+  automationForm: document.getElementById('automation-form'),
+  automationName: document.getElementById('automation-name'),
+  automationPattern: document.getElementById('automation-pattern'),
+  automationMode: document.getElementById('automation-mode'),
+  automationColor: document.getElementById('automation-color'),
+  automationCommand: document.getElementById('automation-command'),
+  automationList: document.getElementById('automation-list'),
+  refreshAutomation: document.getElementById('refresh-automation'),
   statusConnection: document.getElementById('status-connection'),
   statusPhase: document.getElementById('status-phase'),
   statusCharacter: document.getElementById('status-character'),
@@ -39,6 +50,8 @@ const els = {
   minimapTrail: document.getElementById('minimap-trail'),
   dynamicExits: document.getElementById('dynamic-exits'),
 };
+
+const AUTOMATION_STORAGE_KEY = 'valshara-web-automation-rules';
 
 function setStatus(snapshot) {
   const info = snapshot?.state || {};
@@ -62,12 +75,122 @@ function appendOutput(events = []) {
   if (!events.length) return;
   for (const event of events) {
     state.output += event.text;
+    processTerminalEvent(event.text);
   }
   const trimmed = state.output.slice(-120000);
   state.output = trimmed;
   els.connectPreview.textContent = trimmed.slice(-18000);
-  els.terminal.textContent = trimmed.slice(-90000);
+  renderTerminal();
   els.terminal.scrollTop = els.terminal.scrollHeight;
+}
+
+function renderTerminal() {
+  const lines = state.terminalLines.slice(-700);
+  els.terminal.innerHTML = lines.map((entry) => {
+    const classes = ['terminal-line'];
+    if (entry.highlighted) classes.push('highlighted');
+    if (entry.triggered) classes.push('triggered');
+    const style = entry.color ? ` style="border-left: 3px solid ${escapeAttr(entry.color)}; padding-left: 0.45rem;"` : '';
+    return `<span class="${classes.join(' ')}"${style}>${escapeHtml(entry.text || ' ')}</span>`;
+  }).join('');
+}
+
+function loadAutomationRules() {
+  try {
+    state.automationRules = JSON.parse(localStorage.getItem(AUTOMATION_STORAGE_KEY) || '[]');
+  } catch (error) {
+    state.automationRules = [];
+  }
+}
+
+function saveAutomationRules() {
+  localStorage.setItem(AUTOMATION_STORAGE_KEY, JSON.stringify(state.automationRules));
+}
+
+function renderAutomationRules() {
+  if (!state.automationRules.length) {
+    els.automationList.className = 'alias-list empty';
+    els.automationList.textContent = 'No automation rules saved yet.';
+    return;
+  }
+  els.automationList.className = 'alias-list';
+  els.automationList.innerHTML = state.automationRules.map((rule) => `
+    <article class="alias-item">
+      <header>
+        <h4>${escapeHtml(rule.name)}</h4>
+        <div class="alias-actions">
+          <button data-edit-rule="${escapeAttr(rule.id)}">Edit</button>
+          <button data-delete-rule="${escapeAttr(rule.id)}" class="danger">Delete</button>
+        </div>
+      </header>
+      <p>${escapeHtml(rule.pattern)}</p>
+      <div class="automation-meta">
+        <span class="automation-badge">${escapeHtml(rule.mode)}</span>
+        ${rule.color ? `<span class="automation-badge">${escapeHtml(rule.color)}</span>` : ''}
+        ${rule.command ? `<span class="automation-badge">${escapeHtml(rule.command)}</span>` : ''}
+      </div>
+    </article>
+  `).join('');
+}
+
+function normalizeAutomationRule(raw) {
+  return {
+    id: raw.id || `rule-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`,
+    name: raw.name || 'Unnamed Rule',
+    pattern: raw.pattern || '',
+    mode: raw.mode || 'highlight',
+    color: raw.color || '',
+    command: raw.command || '',
+  };
+}
+
+function getRuleRegex(rule) {
+  try {
+    return new RegExp(rule.pattern, 'i');
+  } catch (error) {
+    return null;
+  }
+}
+
+function maybeFireTrigger(rule, line) {
+  if (!state.sessionId || rule.mode !== 'trigger' || !rule.command) return false;
+  const now = Date.now();
+  const lastFired = state.ruleFireLog[rule.id] || 0;
+  if (now - lastFired < 1500) return false;
+  state.ruleFireLog[rule.id] = now;
+  sendInput(rule.command).catch(() => {});
+  return true;
+}
+
+function processTerminalEvent(text) {
+  const normalized = text.replace(/\r/g, '');
+  const fragments = normalized.split('\n');
+  for (const fragment of fragments) {
+    const line = fragment;
+    let gagged = false;
+    let highlighted = false;
+    let triggered = false;
+    let color = '';
+    for (const rawRule of state.automationRules) {
+      const rule = normalizeAutomationRule(rawRule);
+      const regex = getRuleRegex(rule);
+      if (!regex || !line || !regex.test(line)) continue;
+      if (rule.mode === 'gag') {
+        gagged = true;
+      } else if (rule.mode === 'highlight') {
+        highlighted = true;
+        color = rule.color || color;
+      } else if (rule.mode === 'trigger') {
+        triggered = maybeFireTrigger(rule, line) || triggered;
+      }
+    }
+    if (!gagged) {
+      state.terminalLines.push({ text: line, highlighted, triggered, color });
+    }
+  }
+  if (state.terminalLines.length > 1200) {
+    state.terminalLines = state.terminalLines.slice(-1200);
+  }
 }
 
 function setMap(mapText) {
@@ -245,6 +368,7 @@ async function startSession() {
   state.sessionId = snapshot.sessionId;
   state.cursor = snapshot.cursor || 0;
   state.output = '';
+  state.terminalLines = [];
   state.mapperTrail = [];
   state.pendingMove = null;
   appendOutput(snapshot.events || []);
@@ -317,6 +441,43 @@ async function saveAlias(event) {
   els.aliasForm.reset();
 }
 
+function saveAutomationRule(event) {
+  event.preventDefault();
+  const rule = normalizeAutomationRule({
+    id: els.automationForm.dataset.editRuleId || '',
+    name: els.automationName.value.trim(),
+    pattern: els.automationPattern.value.trim(),
+    mode: els.automationMode.value,
+    color: els.automationColor.value.trim(),
+    command: els.automationCommand.value.trim(),
+  });
+  if (!rule.pattern) return;
+  state.automationRules = state.automationRules.filter((entry) => entry.id !== rule.id);
+  state.automationRules.push(rule);
+  saveAutomationRules();
+  renderAutomationRules();
+  els.automationForm.reset();
+  delete els.automationForm.dataset.editRuleId;
+}
+
+function editAutomationRule(ruleId) {
+  const rule = state.automationRules.find((entry) => entry.id === ruleId);
+  if (!rule) return;
+  els.automationForm.dataset.editRuleId = rule.id;
+  els.automationName.value = rule.name;
+  els.automationPattern.value = rule.pattern;
+  els.automationMode.value = rule.mode;
+  els.automationColor.value = rule.color || '';
+  els.automationCommand.value = rule.command || '';
+  updateNavActive('automation');
+}
+
+function deleteAutomationRule(ruleId) {
+  state.automationRules = state.automationRules.filter((entry) => entry.id !== ruleId);
+  saveAutomationRules();
+  renderAutomationRules();
+}
+
 async function removeAlias(name) {
   if (!state.sessionId) return;
   const payload = await api(`/api/session/${state.sessionId}/aliases/${encodeURIComponent(name)}`, {
@@ -382,6 +543,11 @@ els.commandForm.addEventListener('submit', async (event) => {
 
 els.aliasForm.addEventListener('submit', saveAlias);
 els.refreshAliases.addEventListener('click', loadAliases);
+els.automationForm.addEventListener('submit', saveAutomationRule);
+els.refreshAutomation.addEventListener('click', () => {
+  loadAutomationRules();
+  renderAutomationRules();
+});
 els.aliasList.addEventListener('click', (event) => {
   const edit = event.target.closest('[data-edit-alias]');
   const del = event.target.closest('[data-delete-alias]');
@@ -398,6 +564,17 @@ els.aliasList.addEventListener('click', (event) => {
   }
 });
 
+els.automationList.addEventListener('click', (event) => {
+  const edit = event.target.closest('[data-edit-rule]');
+  const del = event.target.closest('[data-delete-rule]');
+  if (edit) {
+    editAutomationRule(edit.dataset.editRule);
+  }
+  if (del) {
+    deleteAutomationRule(del.dataset.deleteRule);
+  }
+});
+
 els.dynamicExits.addEventListener('click', (event) => {
   const button = event.target.closest('[data-exit-command]');
   if (!button) return;
@@ -406,5 +583,7 @@ els.dynamicExits.addEventListener('click', (event) => {
 });
 
 updateNavActive('connect');
+loadAutomationRules();
+renderAutomationRules();
 renderAliasList();
 renderWizard({ state: { phase: 'idle' } });

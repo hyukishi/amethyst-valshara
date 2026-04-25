@@ -19,6 +19,7 @@
         <button class="nav-link active" data-panel="connect">Connect</button>
         <button class="nav-link" data-panel="play">Play</button>
         <button class="nav-link" data-panel="aliases">Aliases</button>
+        <button class="nav-link" data-panel="automation">Automation</button>
         <button class="nav-link" data-panel="help">Guide</button>
       </nav>
 
@@ -74,7 +75,7 @@
                 <button id="quit-btn" class="danger">Quit</button>
               </div>
             </div>
-            <pre id="terminal-output" class="terminal-output"></pre>
+            <div id="terminal-output" class="terminal-output"></div>
             <form id="command-form" class="command-form">
               <input id="command-input" autocomplete="off" placeholder="Type a command and press Enter">
               <button class="primary" type="submit">Send</button>
@@ -192,6 +193,49 @@
           <section class="alias-list-card">
             <h3>Saved Aliases</h3>
             <div id="alias-list" class="alias-list empty">Select a character in the Play panel to load aliases.</div>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-automation">
+        <div class="panel-head">
+          <h2>Triggers, Gags, Highlights</h2>
+          <button id="refresh-automation">Reload Rules</button>
+        </div>
+        <div class="alias-grid">
+          <section class="alias-form-card">
+            <h3>Create Rule</h3>
+            <form id="automation-form" class="alias-form">
+              <label>
+                Rule name
+                <input id="automation-name" required placeholder="Low HP Warning">
+              </label>
+              <label>
+                Pattern
+                <input id="automation-pattern" required placeholder="bleeding|awful condition">
+              </label>
+              <label>
+                Mode
+                <select id="automation-mode">
+                  <option value="highlight">Highlight</option>
+                  <option value="gag">Gag</option>
+                  <option value="trigger">Trigger</option>
+                </select>
+              </label>
+              <label>
+                Accent color
+                <input id="automation-color" placeholder="#e0b95d">
+              </label>
+              <label>
+                Trigger command
+                <input id="automation-command" placeholder="cast heal self">
+              </label>
+              <button type="submit" class="primary">Save Rule</button>
+            </form>
+          </section>
+          <section class="alias-list-card">
+            <h3>Active Rules</h3>
+            <div id="automation-list" class="alias-list empty">No automation rules saved yet.</div>
           </section>
         </div>
       </section>
