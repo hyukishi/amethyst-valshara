@@ -1,7 +1,7 @@
 .PHONY: docker-build docker-shell docker-run docker-make docker-stop native-build worlddb-refresh
 
 docker-build:
-	docker compose build mud
+	docker compose build --no-cache --pull mud
 
 docker-shell:
 	docker compose run --rm mud bash
