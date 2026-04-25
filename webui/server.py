@@ -29,6 +29,12 @@ WILL = 251
 WONT = 252
 SB = 250
 SE = 240
+COMMON_COMMANDS = [
+    'north', 'south', 'east', 'west', 'up', 'down', 'look', 'score', 'who', 'inventory',
+    'equipment', 'skills', 'spells', 'affects', 'consider', 'cast', 'kill', 'flee', 'get',
+    'drop', 'wear', 'remove', 'wield', 'hold', 'drink', 'eat', 'quaff', 'recall', 'help',
+    'save', 'config', 'deities', 'supplicate', 'where', 'group', 'say', 'tell', 'reply',
+]
 
 
 def now_ms():
@@ -48,7 +54,8 @@ class TelnetSession:
         self.sock.settimeout(0.2)
         self.lock = threading.Lock()
         self.alive = True
-        self.output = ''
+        self.raw_output = ''
+        self.clean_output = ''
         self.events = []
         self.cursor = 0
         self.last_activity = now_ms()
@@ -78,13 +85,21 @@ class TelnetSession:
             return
         clean = strip_ansi(text)
         with self.lock:
-            self.output += clean
+            self.raw_output += text
+            self.clean_output += clean
             self.cursor += 1
-            self.events.append({'seq': self.cursor, 'text': clean, 'ts': now_ms()})
-            if len(self.events) > 400:
-                self.events = self.events[-400:]
-            if len(self.output) > 200000:
-                self.output = self.output[-200000:]
+            self.events.append({
+                'seq': self.cursor,
+                'text': clean,
+                'raw': text,
+                'ts': now_ms(),
+            })
+            if len(self.events) > 500:
+                self.events = self.events[-500:]
+            if len(self.raw_output) > 220000:
+                self.raw_output = self.raw_output[-220000:]
+            if len(self.clean_output) > 220000:
+                self.clean_output = self.clean_output[-220000:]
             self.last_activity = now_ms()
 
     def _reader_loop(self):
@@ -157,8 +172,8 @@ class TelnetSession:
     def snapshot(self, since: int = 0):
         with self.lock:
             events = [event for event in self.events if event['seq'] > since]
-            output = self.output[-POLL_LIMIT:]
-        state = parse_state(output)
+            clean_output = self.clean_output[-POLL_LIMIT:]
+        state = parse_state(clean_output)
         if state.get('accountMenu'):
             self.account_name = state['accountMenu'].get('loggedInAs') or self.account_name
         if state.get('characterName'):
@@ -207,17 +222,30 @@ class SessionStore:
 SESSIONS = SessionStore()
 
 
+def recent_clean_lines(output: str, limit: int = 220):
+    lines = [line.rstrip() for line in output.splitlines()]
+    return [line for line in lines if line.strip()][-limit:]
+
+
 def extract_latest_map(output: str) -> str:
-    start = output.rfind('.------[Map')
-    if start == -1:
-        return ''
-    end = output.find("`----------------------------------------------------------------------------'", start)
-    if end == -1:
-        return ''
-    end = output.find('\n', end)
-    if end == -1:
-        end = len(output)
-    return output[start:end].strip('\n')
+    lines = output.splitlines()
+    for idx in range(len(lines) - 1, -1, -1):
+        if '[Map' not in lines[idx]:
+            continue
+        start = idx
+        if idx > 0 and '---' in lines[idx - 1]:
+            start = idx - 1
+        block = []
+        for line in lines[start:start + 40]:
+            if not line.strip() and block:
+                break
+            block.append(line.rstrip())
+            if len(block) > 2 and '---' in line and ('`' in line or "'" in line or '.' in line):
+                break
+        text = '\n'.join(part for part in block if part.strip())
+        if '[Map' in text:
+            return text.strip()
+    return ''
 
 
 def parse_account_menu(output: str):
@@ -264,127 +292,104 @@ def parse_numbered_options(output: str, prompt_label: str):
 
 
 def parse_character_name(output: str):
-    matches = re.findall(r"A rasping voice answers '.*?, ([^\.']+)\.'", output)
+    matches = re.findall(r"A rasping voice answers '.*?, ([^\.']+)\.?'", output)
     if matches:
         return matches[-1].strip()
     return ''
 
 
+def parse_prompt(output: str):
+    matches = re.findall(r'<[^<>\n\r]+>', output)
+    return matches[-1] if matches else ''
+
+
 def parse_prompt_stats(prompt: str):
     if not prompt:
         return {}
-    match = re.search(
-        r'<(?P<hp>\d+)hp\s+(?P<resource>\d+)(?P<resource_type>[mb]?)\s+(?P<mv>\d+)mv(?:\s+xp:(?P<xp_current>\d+)/(?P<xp_next>\d+))?(?:\s+g:(?P<gold>\d+))?',
-        prompt
-    )
-    if not match:
-        return {}
-    data = match.groupdict()
-    return {
-        'hp': int(data['hp']),
-        'resource': int(data['resource']),
-        'resourceType': 'blood' if data.get('resource_type') == 'b' else 'mana',
-        'mv': int(data['mv']),
-        'xpCurrent': int(data['xp_current']) if data.get('xp_current') else None,
-        'xpNext': int(data['xp_next']) if data.get('xp_next') else None,
-        'gold': int(data['gold']) if data.get('gold') else None,
-    }
-
-
-def recent_clean_lines(output: str, limit: int = 180):
-    lines = [line.rstrip() for line in output.splitlines()]
-    return [line for line in lines if line.strip()][-limit:]
-
-
-def parse_chat_lines(output: str, limit: int = 24):
-    chat_patterns = [
-        r'\btells you\b',
-        r'\byou tell\b',
-        r'\bgossip\b',
-        r'\bauction\b',
-        r'\bgtell\b',
-        r'\bchat\b',
-        r'\bclan\b',
-        r'\bcouncil\b',
-        r'\bimmtalk\b',
-        r'\bnewbie\b',
-        r'\bsay[s]?\b',
-        r'\basks?\b',
-        r'\bshouts?\b',
-        r'\byells?\b',
-    ]
-    lines = recent_clean_lines(output)
-    picked = []
-    for line in lines:
-        lowered = line.lower()
-        if any(re.search(pattern, lowered) for pattern in chat_patterns):
-            picked.append(line)
-    return picked[-limit:]
-
-
-def parse_combat_lines(output: str, limit: int = 24):
-    combat_patterns = [
-        r'^you ',
-        r'^your ',
-        r' hits? ',
-        r' misses? ',
-        r' dodges? ',
-        r' parries? ',
-        r' blocks? ',
-        r' sears? ',
-        r' burns? ',
-        r' wounds? ',
-        r' attacks? ',
-        r' damage',
-        r' is dead',
-        r' has .*wounds',
-        r' is in awful condition',
-        r' is bleeding',
-        r' flee',
-    ]
-    lines = recent_clean_lines(output)
-    picked = []
-    for line in lines:
-        lowered = line.lower()
-        if any(re.search(pattern, lowered) for pattern in combat_patterns):
-            picked.append(line)
-    return picked[-limit:]
+    match = re.search(r'(?P<hp>\d+)hp', prompt, re.I)
+    resource = re.search(r'(?P<resource>\d+)(?P<resource_type>[mb])\b', prompt, re.I)
+    mv = re.search(r'(?P<mv>\d+)mv', prompt, re.I)
+    xp = re.search(r'xp:(?P<current>\d+)\/(?P<next>\d+)', prompt, re.I)
+    gold = re.search(r'g:(?P<gold>\d+)', prompt, re.I)
+    data = {}
+    if match:
+        data['hp'] = int(match.group('hp'))
+    if resource:
+        data['resource'] = int(resource.group('resource'))
+        data['resourceType'] = 'blood' if resource.group('resource_type').lower() == 'b' else 'mana'
+    if mv:
+        data['mv'] = int(mv.group('mv'))
+    if xp:
+        data['xpCurrent'] = int(xp.group('current'))
+        data['xpNext'] = int(xp.group('next'))
+    if gold:
+        data['gold'] = int(gold.group('gold'))
+    return data
 
 
 def parse_room_summary(output: str):
-    lines = recent_clean_lines(output, limit=60)
+    lines = recent_clean_lines(output, limit=120)
     room_name = ''
     exits = ''
     exit_list = []
     for index, line in enumerate(lines):
-        if line.startswith('Exits:'):
-            exits = line
-            exit_list = [part.strip(' ,.') for part in line.replace('Exits:', '', 1).split() if part.strip(' ,.')]
-            for candidate in reversed(lines[:index]):
-                if candidate.startswith('.') or candidate.startswith('`'):
-                    continue
-                if candidate.startswith('<'):
-                    continue
-                if len(candidate) > 80:
-                    continue
-                room_name = candidate
+        if not line.startswith('Exits:'):
+            continue
+        exits = line
+        cleaned = line.replace('Exits:', '', 1).replace(',', ' ')
+        exit_list = [part.strip(' .').lower() for part in cleaned.split() if part.strip(' .')]
+
+        map_index = -1
+        for rev_index in range(index - 1, -1, -1):
+            if '[Map' in lines[rev_index]:
+                map_index = rev_index
                 break
+
+        if map_index != -1:
+            for candidate in reversed(lines[max(0, map_index - 12):map_index]):
+                stripped = candidate.strip()
+                if not stripped or stripped.isupper():
+                    continue
+                if stripped.startswith('NAME') or stripped.startswith('DESCRIPTION'):
+                    continue
+                if re.match(r"^[A-Z][A-Za-z' -]+$", stripped):
+                    room_name = stripped
+                    break
+
+        if room_name:
+            break
+
+        for candidate in reversed(lines[:index]):
+            stripped = candidate.strip()
+            if not stripped:
+                continue
+            if stripped.startswith('<') or stripped.startswith('.') or stripped.startswith('`'):
+                continue
+            if stripped.startswith('[') and 'Map' in stripped:
+                continue
+            if len(stripped) > 80:
+                continue
+            if stripped.endswith(':') or stripped.endswith('.'):
+                continue
+            room_name = stripped
+            break
     return {'name': room_name, 'exits': exits, 'exitList': exit_list}
 
 
-def _parse_listing_lines(lines):
+def _parse_listing_lines(lines, equipment: bool = False):
     entries = []
     for line in lines:
         cleaned = line.strip()
-        if not cleaned:
+        if not cleaned or cleaned == 'Nothing.':
             continue
+        cleaned = re.sub(r'^<[^>]+>\s*', '', cleaned)
         cleaned = re.sub(r'^\[[^\]]+\]\s*', '', cleaned)
-        cleaned = re.sub(r'^[\(\[][^)\]]+[\)\]]\s*', '', cleaned)
+        cleaned = re.sub(r'^[\(\[][^\)\]]+[\)\]]\s*', '', cleaned)
         cleaned = re.sub(r'^\d+\)\s*', '', cleaned)
         cleaned = cleaned.strip('- ').strip()
         if not cleaned:
             continue
-        entries.append({'name': cleaned})
+        entries.append({'name': cleaned, 'context': 'equipped' if equipment else ''})
     deduped = []
     seen = set()
     for entry in entries:
@@ -400,38 +405,130 @@ def parse_inventory_sections(output: str):
     lines = output.splitlines()
     inventory = []
     equipment = []
+
+    def strip_prompt_prefix(line: str):
+        cleaned = line.strip()
+        cleaned = re.sub(r'^<\d+hp\s+\d+[mb]\s+\d+mv(?:\s+xp:\d+/\d+)?(?:\s+g:\d+)?>\s*', '', cleaned, flags=re.I)
+        return cleaned.strip()
+
     for index, raw_line in enumerate(lines):
-        line = raw_line.strip()
+        line = strip_prompt_prefix(raw_line)
         if line.lower().startswith('you are carrying'):
             chunk = []
-            for candidate in lines[index + 1:index + 40]:
-                stripped = candidate.strip()
+            for candidate in lines[index + 1:index + 50]:
+                stripped = strip_prompt_prefix(candidate)
                 if not stripped:
                     break
-                if stripped.startswith('<') or stripped.startswith('Exits:') or stripped.startswith('You are using'):
-                    break
-                if stripped.endswith(':') and not stripped.startswith('('):
+                if stripped.startswith('Exits:') or stripped.startswith('You are using'):
                     break
                 chunk.append(stripped)
-            inventory = _parse_listing_lines(chunk)
+            inventory = _parse_listing_lines(chunk, equipment=False)
         if line.lower().startswith('you are using'):
             chunk = []
-            for candidate in lines[index + 1:index + 40]:
-                stripped = candidate.strip()
+            for candidate in lines[index + 1:index + 50]:
+                stripped = strip_prompt_prefix(candidate)
                 if not stripped:
                     break
-                if stripped.startswith('<') or stripped.startswith('Exits:') or stripped.startswith('You are carrying'):
-                    break
-                if stripped.endswith(':') and not stripped.startswith('('):
+                if stripped.startswith('Exits:') or stripped.startswith('You are carrying'):
                     break
                 chunk.append(stripped)
-            equipment = _parse_listing_lines(chunk)
+            equipment = _parse_listing_lines(chunk, equipment=True)
     return {'inventory': inventory, 'equipment': equipment}
 
 
-def parse_prompt(output: str):
-    matches = re.findall(r'(?:^|\n)(<[^<>\n\r]+>)\s*$', output, re.MULTILINE)
-    return matches[-1] if matches else ''
+def parse_skill_sections(output: str):
+    lines = output.splitlines()
+    skills = []
+    current_section = ''
+    for index, raw_line in enumerate(lines):
+        line = raw_line.strip()
+        lowered = line.lower()
+        if any(marker in lowered for marker in ['you have knowledge of the following', 'you know the following', 'skills', 'spells']):
+            current_section = 'skills'
+            for candidate in lines[index + 1:index + 100]:
+                stripped = candidate.strip()
+                if not stripped:
+                    if skills:
+                        break
+                    continue
+                if stripped.startswith('<') or stripped.startswith('Exits:'):
+                    break
+                for match in re.finditer(r"([A-Za-z][A-Za-z'\- ]+?)\s+(\d{1,3})%", stripped):
+                    name = ' '.join(match.group(1).split())
+                    if name and name.lower() not in {entry['name'].lower() for entry in skills}:
+                        skills.append({'name': name, 'percent': int(match.group(2)), 'type': current_section})
+            break
+    return skills[-80:]
+
+
+def parse_target_candidates(output: str, room_name: str):
+    targets = []
+    for line in recent_clean_lines(output, limit=80):
+        if line == room_name or line.startswith('Exits:') or line.startswith('<'):
+            continue
+        if re.search(r'\b(is|are) (in|here|standing|sitting|resting|sleeping|bleeding|fighting)\b', line, re.I):
+            name = line.split(' is ', 1)[0].split(' are ', 1)[0].strip()
+            if name and name.lower() not in {'you'}:
+                targets.append(name)
+        elif re.match(r'^[A-Z][A-Za-z\'\- ]+$', line) and len(line) < 48:
+            targets.append(line.strip())
+    deduped = []
+    seen = set()
+    for target in targets:
+        key = target.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(target)
+    return deduped[-12:]
+
+
+def _chat_entry(speaker: str, message: str, raw: str):
+    return {'speaker': speaker.strip() or 'Unknown', 'message': message.strip() or raw.strip(), 'raw': raw.strip()}
+
+
+def parse_chat_lines(output: str, limit: int = 24):
+    lines = recent_clean_lines(output)
+    picked = []
+    for line in lines:
+        lowered = line.lower()
+        if 'tells you' in lowered:
+            match = re.match(r"^(.*?) tells you ['`]?(.+?)['`]?$", line, re.I)
+            if match:
+                picked.append(_chat_entry(match.group(1), match.group(2), line))
+                continue
+        if lowered.startswith('you tell '):
+            match = re.match(r"^You tell (.*?) ['`]?(.+?)['`]?$", line, re.I)
+            if match:
+                picked.append(_chat_entry(f'You -> {match.group(1)}', match.group(2), line))
+                continue
+        for verb in ['says', 'say', 'asks', 'ask', 'shouts', 'shout', 'yells', 'yell', 'gossips', 'gossip', 'chat', 'auction', 'gtell', 'clan', 'council', 'immtalk', 'newbie']:
+            if verb not in lowered:
+                continue
+            match = re.match(rf"^(.*?)(?:\s+{verb}|:{''})\s+['`]?(.+?)['`]?$", line, re.I)
+            if match:
+                picked.append(_chat_entry(match.group(1), match.group(2), line))
+                break
+        else:
+            colon = re.match(r'^(.*?):\s+(.+)$', line)
+            if colon and any(token in lowered for token in ['gossip', 'chat', 'auction', 'clan', 'council', 'tell']):
+                picked.append(_chat_entry(colon.group(1), colon.group(2), line))
+    return picked[-limit:]
+
+
+def parse_combat_lines(output: str, limit: int = 24):
+    combat_patterns = [
+        r'^you ', r'^your ', r' hits? ', r' misses? ', r' dodges? ', r' parries? ', r' blocks? ',
+        r' sears? ', r' burns? ', r' wounds? ', r' attacks? ', r' damage', r' is dead',
+        r' has .*wounds', r' is in awful condition', r' is bleeding', r' flee',
+    ]
+    lines = recent_clean_lines(output)
+    picked = []
+    for line in lines:
+        lowered = line.lower()
+        if any(re.search(pattern, lowered) for pattern in combat_patterns):
+            picked.append(line)
+    return picked[-limit:]
 
 
 def detect_phase(output: str):
@@ -471,7 +568,9 @@ def detect_phase(output: str):
 def parse_state(output: str):
     prompt = parse_prompt(output)
     items = parse_inventory_sections(output)
-    state = {
+    room = parse_room_summary(output)
+    skills = parse_skill_sections(output)
+    return {
         'phase': detect_phase(output),
         'prompt': prompt,
         'promptStats': parse_prompt_stats(prompt),
@@ -482,11 +581,13 @@ def parse_state(output: str):
         'classOptions': parse_numbered_options(output, 'Class?'),
         'chatLines': parse_chat_lines(output),
         'combatLines': parse_combat_lines(output),
-        'room': parse_room_summary(output),
+        'room': room,
         'inventoryItems': items['inventory'],
         'equipmentItems': items['equipment'],
+        'skills': skills,
+        'skillTargets': parse_target_candidates(output, room.get('name', '')),
+        'suggestedCommands': COMMON_COMMANDS,
     }
-    return state
 
 
 def db_connection():
@@ -667,8 +768,7 @@ class Handler(BaseHTTPRequestHandler):
                 time.sleep(0.25)
                 self._json(session.snapshot(0), HTTPStatus.CREATED)
             except OSError as exc:
-                self._json({'error': f'Unable to connect to the MUD on {MUD_HOST}:{MUD_PORT}: {exc}'},
-                           HTTPStatus.BAD_GATEWAY)
+                self._json({'error': f'Unable to connect to the MUD on {MUD_HOST}:{MUD_PORT}: {exc}'}, HTTPStatus.BAD_GATEWAY)
             return
         if parsed.path.startswith('/api/session/') and parsed.path.endswith('/input'):
             parts = parsed.path.split('/')

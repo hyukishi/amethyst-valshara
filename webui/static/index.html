@@ -15,33 +15,47 @@
         <p class="lede">A browser front end shaped by classic MUD clients: mapper-first navigation, alias management, and quick account flow.</p>
       </div>
 
-      <nav class="nav" aria-label="Primary">
-        <button class="nav-link active" data-panel="connect">Connect</button>
-        <button class="nav-link" data-panel="play">Play</button>
-        <button class="nav-link" data-panel="aliases">Aliases</button>
-        <button class="nav-link" data-panel="automation">Automation</button>
-        <button class="nav-link" data-panel="help">Guide</button>
-      </nav>
-
       <section class="status-card">
-        <h2>Session</h2>
+        <div class="status-head">
+          <h2>Session</h2>
+          <button id="toggle-terminal" type="button">Terminal</button>
+        </div>
         <dl>
           <div><dt>Connection</dt><dd id="status-connection">Offline</dd></div>
           <div><dt>Phase</dt><dd id="status-phase">Idle</dd></div>
           <div><dt>Character</dt><dd id="status-character">None</dd></div>
           <div><dt>Room</dt><dd id="status-room">-</dd></div>
-          <div><dt>Prompt</dt><dd id="status-prompt">-</dd></div>
         </dl>
       </section>
 
-      <section class="status-card inspiration">
-        <h2>Inspired By</h2>
-        <ul>
-          <li>Mudlet-style docked map and alias workflow</li>
-          <li>zMUD-style structured automation management</li>
-          <li>GMud-style straightforward connect-and-play flow</li>
-        </ul>
+      <section class="status-card nav-session-card">
+        <div class="panel-head compact">
+          <h2>Navigation</h2>
+          <span class="muted">Available exits update live</span>
+        </div>
+        <div class="compass compass-sidebar" id="compass-nav">
+          <button data-command="up" data-dir="up">Up</button>
+          <div class="compass-gap"></div>
+          <button data-command="north" data-dir="north">North</button>
+          <button data-command="west" data-dir="west">West</button>
+          <button data-command="look" class="center" data-dir="look">Look</button>
+          <button data-command="east" data-dir="east">East</button>
+          <div class="compass-gap"></div>
+          <button data-command="south" data-dir="south">South</button>
+          <div class="compass-gap"></div>
+          <button data-command="down" data-dir="down">Down</button>
+        </div>
+        <div id="dynamic-exits" class="dynamic-exits empty">Available exits will appear here.</div>
       </section>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-link active" data-panel="connect">Connect</button>
+        <button class="nav-link" data-panel="play">Play</button>
+        <button class="nav-link" data-panel="skills">Skills</button>
+        <button class="nav-link" data-panel="aliases">Aliases</button>
+        <button class="nav-link" data-panel="automation">Automation</button>
+        <button class="nav-link" data-panel="help">Guide</button>
+      </nav>
     </aside>
 
     <main class="main">
@@ -65,24 +79,24 @@
 
       <section class="panel" id="panel-play">
         <div class="play-grid">
-          <section class="terminal-card">
-            <div class="panel-head compact">
-              <h2>Game Feed</h2>
-              <div class="inline-actions">
-                <button id="look-btn">Look</button>
-                <button id="score-btn">Score</button>
-                <button id="who-btn">Who</button>
-                <button id="quit-btn" class="danger">Quit</button>
+          <section class="play-main-column">
+            <section class="command-card">
+              <div class="panel-head compact">
+                <h2>Command Deck</h2>
+                <div class="inline-actions">
+                  <button id="look-btn">Look</button>
+                  <button id="score-btn">Score</button>
+                  <button id="who-btn">Who</button>
+                  <button id="quit-btn" class="danger">Quit</button>
+                </div>
               </div>
-            </div>
-            <div id="terminal-output" class="terminal-output"></div>
-            <form id="command-form" class="command-form">
-              <input id="command-input" autocomplete="off" placeholder="Type a command and press Enter">
-              <button class="primary" type="submit">Send</button>
-            </form>
-          </section>
+              <form id="command-form" class="command-form">
+                <input id="command-input" autocomplete="off" placeholder="Type a command and press Enter">
+                <button class="primary" type="submit">Send</button>
+              </form>
+              <div id="autocomplete-hint" class="muted autocomplete-hint">Tab completes exits, aliases, items, and common commands.</div>
+            </section>
 
-          <section class="tools-column">
             <section class="hud-card">
               <div class="panel-head compact">
                 <h2>Adventure HUD</h2>
@@ -112,37 +126,23 @@
               </div>
             </section>
 
-            <section class="map-card">
-              <div class="panel-head compact">
-                <h2>Map</h2>
-                <span class="muted">Live ASCII panel</span>
-              </div>
-              <pre id="map-output" class="map-output"></pre>
-            </section>
+            <div class="play-support-grid">
+              <section class="map-card">
+                <div class="panel-head compact">
+                  <h2>Map</h2>
+                  <span class="muted">Live ASCII panel</span>
+                </div>
+                <pre id="map-output" class="map-output"></pre>
+              </section>
 
-            <section class="minimap-card">
-              <div class="panel-head compact">
-                <h2>Route Memory</h2>
-                <span class="muted">Recent rooms and travel trail</span>
-              </div>
-              <div id="minimap-trail" class="trail-list empty">Room history will appear here as you move.</div>
-            </section>
-
-            <section class="channel-card">
-              <div class="panel-head compact">
-                <h2>Channels</h2>
-                <span class="muted">Recent speech and chatter</span>
-              </div>
-              <div id="channel-feed" class="feed-list empty">Channel traffic will appear here.</div>
-            </section>
-
-            <section class="combat-card">
-              <div class="panel-head compact">
-                <h2>Combat</h2>
-                <span class="muted">Battle events and condition lines</span>
-              </div>
-              <div id="combat-feed" class="feed-list empty">Combat events will appear here.</div>
-            </section>
+              <section class="minimap-card">
+                <div class="panel-head compact">
+                  <h2>Route Memory</h2>
+                  <span class="muted">Recent rooms and travel trail</span>
+                </div>
+                <div id="minimap-trail" class="trail-list empty">Room history will appear here as you move.</div>
+              </section>
+            </div>
 
             <section class="inventory-card">
               <div class="panel-head compact">
@@ -169,29 +169,49 @@
                 </div>
               </div>
             </section>
+          </section>
 
-            <section class="nav-card">
+          <section class="tools-column">
+            <section class="channel-card">
               <div class="panel-head compact">
-                <h2>Navigation</h2>
-                <span class="muted">Click to move</span>
+                <h2>Channels</h2>
+                <span class="muted">Recent speech and chatter</span>
               </div>
-              <div class="compass">
-                <button data-command="north">N</button>
-                <button data-command="up">U</button>
-                <button data-command="west">W</button>
-                <button data-command="look" class="center">Look</button>
-                <button data-command="east">E</button>
-                <button data-command="south">S</button>
-                <button data-command="down">D</button>
-              </div>
-              <div id="dynamic-exits" class="dynamic-exits empty">Available exits will appear here.</div>
-              <div class="quick-actions">
-                <button data-command="enter school">School</button>
-                <button data-command="inventory">Inventory</button>
-                <button data-command="equipment">Equipment</button>
-                <button data-command="help commands">Commands</button>
-              </div>
+              <div id="channel-feed" class="feed-list empty">Channel traffic will appear here.</div>
             </section>
+
+            <section class="combat-card">
+              <div class="panel-head compact">
+                <h2>Combat</h2>
+                <span class="muted">Battle events and condition lines</span>
+              </div>
+              <div id="combat-feed" class="feed-list empty">Combat events will appear here.</div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-skills">
+        <div class="panel-head">
+          <h2>Skills & Spells</h2>
+          <button id="refresh-skills">Refresh</button>
+        </div>
+        <div class="skills-grid">
+          <section class="alias-list-card">
+            <h3>Available Skills</h3>
+            <div id="skill-list" class="alias-list empty">Skill parsing will appear here once the client receives a fresh skills listing.</div>
+          </section>
+          <section class="alias-form-card">
+            <h3>Skill Action</h3>
+            <div class="skill-detail-card">
+              <h4 id="selected-skill-name">Nothing Selected</h4>
+              <p id="selected-skill-context" class="muted">Choose a skill, spell, or utility ability to prepare a quick action.</p>
+              <div id="skill-targets" class="skill-targets empty">Targets will appear here when the selected skill needs one.</div>
+              <div class="item-actions">
+                <button id="use-skill-btn" class="primary">Use Selected Skill</button>
+                <button id="refresh-targets-btn">Refresh Targets</button>
+              </div>
+            </div>
           </section>
         </div>
       </section>
@@ -270,22 +290,37 @@
         <div class="guide-grid">
           <article class="guide-card">
             <h2>Why this layout</h2>
-            <p>This client keeps the terminal central, gives the map its own readable space, and surfaces clickable movement so the browser experience still feels like a MUD client instead of a plain telnet box.</p>
+            <p>This client keeps the moment-to-moment controls close at hand, moves the raw terminal into a summonable tool panel, and gives the map, chat, combat, and inventory their own breathing room.</p>
             <p>It also keeps account and character creation in the browser through the game’s live login flow, so the UI stays aligned with your real server logic.</p>
           </article>
           <article class="guide-card">
-            <h2>Suggested next features</h2>
+            <h2>Tips</h2>
             <ul>
-              <li>Trigger and gag management</li>
-              <li>Prompt parser for dedicated HP/mana/move meters</li>
-              <li>Clickable exits sourced from room output</li>
-              <li>GMCP/MXP support if you decide to expose richer protocols later</li>
+              <li>Use <code>?debug</code> in the URL to open the terminal by default.</li>
+              <li>Tab in the command box cycles local completions from exits, aliases, items, and skills.</li>
+              <li>The combat pane stays readable even if the raw terminal is minimized.</li>
             </ul>
           </article>
         </div>
       </section>
     </main>
   </div>
+
+  <section id="terminal-modal" class="terminal-modal" aria-label="Terminal Window">
+    <div class="terminal-modal-inner">
+      <div class="panel-head compact">
+        <h2>Terminal</h2>
+        <div class="inline-actions">
+          <button id="minimize-terminal" type="button">Minimize</button>
+          <button id="close-terminal" type="button">Hide</button>
+        </div>
+      </div>
+      <div id="terminal-output" class="terminal-output"></div>
+    </div>
+  </section>
+
+  <button id="restore-terminal" class="restore-terminal" type="button">Open Terminal</button>
+  <div id="channel-toast-stack" class="toast-stack" aria-live="polite"></div>
   <script src="/app.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@ const state = {
   cursor: 0,
   output: '',
   terminalLines: [],
-  status: null,
   aliases: [],
   pollTimer: null,
   lastAliasCharacter: '',
@@ -15,6 +14,17 @@ const state = {
   selectedItem: null,
   latestItems: { inventory: [], equipment: [] },
   wizardSignature: '',
+  activePanel: 'connect',
+  terminalVisible: new URLSearchParams(window.location.search).has('debug'),
+  autocomplete: { base: '', matches: [], index: -1 },
+  lastSentCommand: '',
+  commandHistory: [],
+  historyIndex: -1,
+  latestState: {},
+  latestSkills: [],
+  selectedSkill: null,
+  skillTargets: [],
+  recentChatSignatures: [],
 };
 
 const els = {
@@ -26,6 +36,7 @@ const els = {
   map: document.getElementById('map-output'),
   commandForm: document.getElementById('command-form'),
   commandInput: document.getElementById('command-input'),
+  autocompleteHint: document.getElementById('autocomplete-hint'),
   aliasForm: document.getElementById('alias-form'),
   aliasName: document.getElementById('alias-name'),
   aliasCommand: document.getElementById('alias-command'),
@@ -48,7 +59,6 @@ const els = {
   statusPhase: document.getElementById('status-phase'),
   statusCharacter: document.getElementById('status-character'),
   statusRoom: document.getElementById('status-room'),
-  statusPrompt: document.getElementById('status-prompt'),
   hudHp: document.getElementById('hud-hp'),
   hudResource: document.getElementById('hud-resource'),
   hudMv: document.getElementById('hud-mv'),
@@ -59,17 +69,36 @@ const els = {
   minimapTrail: document.getElementById('minimap-trail'),
   dynamicExits: document.getElementById('dynamic-exits'),
   itemTabs: document.getElementById('item-tabs'),
+  toggleTerminal: document.getElementById('toggle-terminal'),
+  terminalModal: document.getElementById('terminal-modal'),
+  minimizeTerminal: document.getElementById('minimize-terminal'),
+  closeTerminal: document.getElementById('close-terminal'),
+  restoreTerminal: document.getElementById('restore-terminal'),
+  toastStack: document.getElementById('channel-toast-stack'),
+  compassNav: document.getElementById('compass-nav'),
+  skillList: document.getElementById('skill-list'),
+  selectedSkillName: document.getElementById('selected-skill-name'),
+  selectedSkillContext: document.getElementById('selected-skill-context'),
+  skillTargets: document.getElementById('skill-targets'),
+  useSkillBtn: document.getElementById('use-skill-btn'),
+  refreshSkills: document.getElementById('refresh-skills'),
+  refreshTargets: document.getElementById('refresh-targets-btn'),
 };
 
 const AUTOMATION_STORAGE_KEY = 'valshara-web-automation-rules';
+const ANSI_COLOR_MAP = {
+  30: '#121212', 31: '#d96b6b', 32: '#7ec77e', 33: '#e7c96c', 34: '#6fa5ff', 35: '#cd7bf0', 36: '#6fd7d8', 37: '#e9dbc1',
+  90: '#7e7e7e', 91: '#ff8787', 92: '#8de48d', 93: '#f6dd81', 94: '#8db6ff', 95: '#e29bff', 96: '#8feff0', 97: '#fff6e5',
+};
+const COMMON_SKILL_TARGET_WORDS = ['self', 'me'];
 
 function setStatus(snapshot) {
   const info = snapshot?.state || {};
+  state.latestState = info;
   els.statusConnection.textContent = snapshot?.connected ? 'Connected' : 'Offline';
   els.statusPhase.textContent = info.phase || 'unknown';
   els.statusCharacter.textContent = info.characterName || 'None';
   els.statusRoom.textContent = info.room?.name || '-';
-  els.statusPrompt.textContent = info.prompt || '-';
   els.hudHp.textContent = info.promptStats?.hp ?? '-';
   els.hudResource.textContent = info.promptStats?.resource != null
     ? `${info.promptStats.resource} ${info.promptStats.resourceType || ''}`.trim()
@@ -81,11 +110,64 @@ function setStatus(snapshot) {
   els.hudGold.textContent = info.promptStats?.gold ?? '-';
 }
 
+function escapeHtml(text) {
+  return String(text ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
+
+function escapeAttr(text) {
+  return escapeHtml(text);
+}
+
+function ansiToHtml(text) {
+  const input = String(text ?? '');
+  const regex = /\x1b\[([0-9;]*)m/g;
+  let result = '';
+  let lastIndex = 0;
+  let openStyles = { color: '', bold: false };
+  let match;
+
+  const flushText = (chunk) => {
+    if (!chunk) return;
+    const styleParts = [];
+    if (openStyles.color) styleParts.push(`color:${openStyles.color}`);
+    if (openStyles.bold) styleParts.push('font-weight:bold');
+    const escaped = escapeHtml(chunk);
+    if (!styleParts.length) {
+      result += escaped;
+      return;
+    }
+    result += `<span style="${styleParts.join(';')}">${escaped}</span>`;
+  };
+
+  while ((match = regex.exec(input)) !== null) {
+    flushText(input.slice(lastIndex, match.index));
+    lastIndex = regex.lastIndex;
+    const codes = match[1] ? match[1].split(';').map((part) => Number(part || 0)) : [0];
+    for (const code of codes) {
+      if (code === 0) {
+        openStyles = { color: '', bold: false };
+      } else if (code === 1) {
+        openStyles.bold = true;
+      } else if (code === 22) {
+        openStyles.bold = false;
+      } else if (code === 39) {
+        openStyles.color = '';
+      } else if (ANSI_COLOR_MAP[code]) {
+        openStyles.color = ANSI_COLOR_MAP[code];
+      }
+    }
+  }
+  flushText(input.slice(lastIndex));
+  return result;
+}
+
 function appendOutput(events = []) {
   if (!events.length) return;
   for (const event of events) {
-    state.output += event.text;
-    processTerminalEvent(event.text);
+    const raw = event.raw ?? event.text ?? '';
+    const clean = event.text ?? raw;
+    state.output += clean;
+    processTerminalEvent(raw, clean);
   }
   const trimmed = state.output.slice(-120000);
   state.output = trimmed;
@@ -101,7 +183,7 @@ function renderTerminal() {
     if (entry.highlighted) classes.push('highlighted');
     if (entry.triggered) classes.push('triggered');
     const style = entry.color ? ` style="border-left: 3px solid ${escapeAttr(entry.color)}; padding-left: 0.45rem;"` : '';
-    return `<span class="${classes.join(' ')}"${style}>${escapeHtml(entry.text || ' ')}</span>`;
+    return `<span class="${classes.join(' ')}"${style}>${ansiToHtml(entry.raw || entry.text || ' ')}</span>`;
   }).join('');
 }
 
@@ -172,11 +254,14 @@ function maybeFireTrigger(rule, line) {
   return true;
 }
 
-function processTerminalEvent(text) {
-  const normalized = text.replace(/\r/g, '');
-  const fragments = normalized.split('\n');
-  for (const fragment of fragments) {
-    const line = fragment;
+function processTerminalEvent(rawText, cleanText) {
+  const normalizedRaw = String(rawText ?? '').replace(/\r/g, '');
+  const normalizedClean = String(cleanText ?? '').replace(/\r/g, '');
+  const rawFragments = normalizedRaw.split('\n');
+  const cleanFragments = normalizedClean.split('\n');
+  for (let index = 0; index < cleanFragments.length; index += 1) {
+    const line = cleanFragments[index];
+    const rawLine = rawFragments[index] ?? line;
     let gagged = false;
     let highlighted = false;
     let triggered = false;
@@ -195,7 +280,7 @@ function processTerminalEvent(text) {
       }
     }
     if (!gagged) {
-      state.terminalLines.push({ text: line, highlighted, triggered, color });
+      state.terminalLines.push({ text: line, raw: rawLine, highlighted, triggered, color });
     }
   }
   if (state.terminalLines.length > 1200) {
@@ -204,7 +289,11 @@ function processTerminalEvent(text) {
 }
 
 function setMap(mapText) {
-  els.map.textContent = mapText || 'Map output will appear here once the game sends an ASCII map.';
+  if (!mapText) {
+    els.map.textContent = 'Map output will appear here once the game sends an ASCII map.';
+    return;
+  }
+  els.map.innerHTML = ansiToHtml(mapText);
 }
 
 function renderFeed(container, lines, type, emptyMessage) {
@@ -214,9 +303,38 @@ function renderFeed(container, lines, type, emptyMessage) {
     return;
   }
   container.className = 'feed-list';
-  container.innerHTML = lines.map((line) => `
-    <article class="feed-item ${type}">${escapeHtml(line)}</article>
-  `).join('');
+  container.innerHTML = lines.map((entry) => {
+    if (typeof entry === 'string') {
+      return `<article class="feed-item ${type}"><span class="feed-message">${escapeHtml(entry)}</span></article>`;
+    }
+    return `
+      <article class="feed-item ${type}">
+        ${entry.speaker ? `<span class="feed-speaker">${escapeHtml(entry.speaker)}</span>` : ''}
+        <span class="feed-message">${escapeHtml(entry.message || entry.raw || '')}</span>
+      </article>
+    `;
+  }).join('');
+}
+
+function renderChannelToasts(lines) {
+  const entries = (lines || []).filter((entry) => entry && typeof entry === 'object');
+  for (const entry of entries) {
+    const signature = `${entry.speaker || ''}|${entry.message || entry.raw || ''}`;
+    if (!signature.trim() || state.recentChatSignatures.includes(signature)) continue;
+    state.recentChatSignatures.push(signature);
+    if (state.recentChatSignatures.length > 40) {
+      state.recentChatSignatures = state.recentChatSignatures.slice(-40);
+    }
+    const toast = document.createElement('article');
+    toast.className = 'channel-toast';
+    toast.innerHTML = `
+      ${entry.speaker ? `<span class="feed-speaker">${escapeHtml(entry.speaker)}</span>` : ''}
+      <span class="feed-message">${escapeHtml(entry.message || entry.raw || '')}</span>
+    `;
+    els.toastStack.appendChild(toast);
+    setTimeout(() => toast.classList.add('fade'), 4600);
+    setTimeout(() => toast.remove(), 5200);
+  }
 }
 
 function renderMapper(snapshot) {
@@ -260,6 +378,19 @@ function renderMapper(snapshot) {
       <button data-exit-command="${escapeAttr(exitName)}">${escapeHtml(exitName)}</button>
     `).join('');
   }
+
+  const compassDirections = ['north', 'south', 'east', 'west', 'up', 'down'];
+  document.querySelectorAll('#compass-nav [data-dir]').forEach((button) => {
+    const dir = button.dataset.dir;
+    if (dir === 'look') {
+      button.disabled = false;
+      button.classList.remove('is-disabled');
+      return;
+    }
+    const enabled = exits.includes(dir);
+    button.disabled = !enabled;
+    button.classList.toggle('is-disabled', !enabled);
+  });
 }
 
 function itemCommand(action, itemName, tab) {
@@ -267,9 +398,7 @@ function itemCommand(action, itemName, tab) {
   if (action === 'look') return `look ${safe}`;
   if (action === 'remove') return `remove ${safe}`;
   if (action === 'drop') return `drop ${safe}`;
-  if (action === 'wear') {
-    return tab === 'equipment' ? `remove ${safe}` : `wear ${safe}`;
-  }
+  if (action === 'wear') return tab === 'equipment' ? `remove ${safe}` : `wear ${safe}`;
   if (action === 'use') {
     if (tab === 'equipment') return `remove ${safe}`;
     return `use ${safe}`;
@@ -297,7 +426,7 @@ function renderItemPanel(snapshot) {
     container.innerHTML = items.map((entry, index) => `
       <article class="item-row${state.selectedItem?.name === entry.name && state.selectedItem?.tab === tab ? ' active' : ''}" data-item-name="${escapeAttr(entry.name)}" data-item-tab="${tab}">
         <strong>${escapeHtml(entry.name)}</strong>
-        <span>${tab === 'equipment' ? 'equipped' : `item ${index + 1}`}</span>
+        <span>${entry.context || (tab === 'equipment' ? 'equipped' : `item ${index + 1}`)}</span>
       </article>
     `).join('');
   };
@@ -323,7 +452,65 @@ function renderItemPanel(snapshot) {
   refreshItemSelectionStyles();
 }
 
+function renderSkills(snapshot) {
+  state.latestSkills = snapshot?.state?.skills || [];
+  state.skillTargets = snapshot?.state?.skillTargets || [];
+  if (state.selectedSkill && !state.latestSkills.find((entry) => entry.name === state.selectedSkill.name)) {
+    state.selectedSkill = null;
+  }
+
+  if (!state.latestSkills.length) {
+    els.skillList.className = 'alias-list empty';
+    els.skillList.textContent = 'Skill parsing will appear here once the client receives a fresh skills listing.';
+  } else {
+    els.skillList.className = 'alias-list';
+    els.skillList.innerHTML = state.latestSkills.map((skill) => `
+      <article class="alias-item item-row${state.selectedSkill?.name === skill.name ? ' active' : ''}" data-skill-name="${escapeAttr(skill.name)}">
+        <strong>${escapeHtml(skill.name)}</strong>
+        <span>${escapeHtml(`${skill.percent}%`)}</span>
+      </article>
+    `).join('');
+  }
+
+  if (!state.selectedSkill) {
+    els.selectedSkillName.textContent = 'Nothing Selected';
+    els.selectedSkillContext.textContent = 'Choose a skill, spell, or utility ability to prepare a quick action.';
+  } else {
+    els.selectedSkillName.textContent = state.selectedSkill.name;
+    const targetable = looksTargeted(state.selectedSkill.name);
+    els.selectedSkillContext.textContent = targetable
+      ? 'Pick a target or use the default target if the skill allows it.'
+      : 'This skill can be fired immediately from the browser client.';
+  }
+
+  if (!state.skillTargets.length) {
+    els.skillTargets.className = 'skill-targets empty';
+    els.skillTargets.textContent = 'Targets will appear here when the selected skill needs one.';
+  } else {
+    els.skillTargets.className = 'skill-targets';
+    els.skillTargets.innerHTML = state.skillTargets.map((target) => `
+      <button class="skill-target-button" data-skill-target="${escapeAttr(target)}">${escapeHtml(target)}</button>
+    `).join('');
+  }
+}
+
+function looksTargeted(skillName) {
+  const lowered = String(skillName || '').toLowerCase();
+  return /(cast|summon|curse|poison|heal|bolt|blast|touch|word|strike|smite|drain|harm|silence|sleep|dispel|teleport|gate)/.test(lowered);
+}
+
+function buildSkillCommand(skillName, target = '') {
+  const name = String(skillName || '').trim();
+  if (!name) return '';
+  const needsCast = /\b(armor|bless|cure|heal|fireball|bolt|missile|summon|word|silence|sleep|portal|teleport|gate|shield|sanctuary|curse|poison)\b/i.test(name);
+  const safeName = name.includes(' ') ? `'${name}'` : name;
+  const suffix = target ? ` ${target.includes(' ') ? `"${target}"` : target}` : '';
+  if (needsCast) return `cast ${safeName}${suffix}`;
+  return `${name}${suffix}`;
+}
+
 function updateNavActive(panel) {
+  state.activePanel = panel;
   document.querySelectorAll('.nav-link').forEach((button) => {
     button.classList.toggle('active', button.dataset.panel === panel);
   });
@@ -372,9 +559,7 @@ function renderWizard(snapshot) {
   let actions = '';
   const signature = wizardStateSignature(current);
 
-  if (signature === state.wizardSignature) {
-    return;
-  }
+  if (signature === state.wizardSignature) return;
 
   const activeField = els.wizardForm.querySelector('#wizard-input:focus');
   const activeValue = activeField ? activeField.value : '';
@@ -382,15 +567,8 @@ function renderWizard(snapshot) {
   if (!state.sessionId) {
     html = '<p class="muted">Start a session to open the live account flow.</p>';
   } else if (phase === 'accountName') {
-    html = `
-      <label>Master account name
-        <input id="wizard-input" placeholder="Hyu">
-      </label>
-    `;
-    actions = `
-      <button class="primary" data-send-input>Create or Login</button>
-      <button data-special="new-account">Create New Account</button>
-    `;
+    html = '<label>Master account name<input id="wizard-input" placeholder="Hyu"></label>';
+    actions = '<button class="primary" data-send-input>Create or Login</button><button data-special="new-account">Create New Account</button>';
   } else if (phase === 'newAccountName') {
     html = '<label>New master account name<input id="wizard-input" placeholder="Silver Branch"></label>';
     actions = '<button class="primary" data-send-input>Continue</button>';
@@ -404,8 +582,7 @@ function renderWizard(snapshot) {
     for (const character of chars) {
       actions += `<button data-choice="${character.index}">Play ${escapeHtml(character.name)}</button>`;
     }
-    actions += '<button class="primary" data-special="new-character">New Character</button>';
-    actions += '</div>';
+    actions += '<button class="primary" data-special="new-character">New Character</button></div>';
   } else if (phase === 'newCharacterName') {
     html = '<label>Character name<input id="wizard-input" placeholder="Kenichi"></label>';
     actions = '<button class="primary" data-send-input>Continue</button>';
@@ -428,10 +605,10 @@ function renderWizard(snapshot) {
     html = '<p class="muted">Pick the display mode for the new character.</p>';
     actions = '<button class="primary" data-choice="a">ANSI</button><button data-choice="n">Plain</button>';
   } else if (phase === 'pressEnter') {
-    html = '<p class="muted">Advance through the intro screens.</p>';
-    actions = '<button class="primary" data-choice="">Press Enter</button>';
+    html = '<p class="muted">The game is still waiting at a legacy enter prompt. The client will try to step through it automatically.</p>';
+    actions = '<button class="primary" data-choice="">Continue</button>';
   } else if (phase === 'playing') {
-    html = '<p class="muted">You are in the game now. Use the Play panel for commands and navigation.</p>';
+    html = '<p class="muted">You are in the game now. Use the Play, Skills, Aliases, and Automation panels freely.</p>';
     actions = '<button class="primary" data-open-panel="play">Open Play Panel</button>';
   } else {
     html = '<p class="muted">The server is waiting for input. You can continue through the preview or use the structured controls when a recognized step appears.</p>';
@@ -464,7 +641,19 @@ async function api(url, options = {}) {
   return response.json();
 }
 
+function syncTerminalVisibility() {
+  els.terminalModal.classList.toggle('visible', state.terminalVisible);
+  els.restoreTerminal.classList.toggle('visible', !state.terminalVisible);
+}
+
 async function startSession() {
+  if (state.sessionId) {
+    try {
+      await api(`/api/session/${state.sessionId}`, { method: 'DELETE' });
+    } catch (error) {
+      // ignore stale session cleanup errors
+    }
+  }
   const snapshot = await api('/api/session/start', { method: 'POST' });
   state.sessionId = snapshot.sessionId;
   state.cursor = snapshot.cursor || 0;
@@ -473,16 +662,19 @@ async function startSession() {
   state.mapperTrail = [];
   state.pendingMove = null;
   state.wizardSignature = '';
+  state.lastAliasCharacter = '';
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
+  renderChannelToasts(snapshot.state?.chatLines || []);
   renderMapper(snapshot);
   renderItemPanel(snapshot);
+  renderSkills(snapshot);
   renderWizard(snapshot);
   if (state.pollTimer) clearInterval(state.pollTimer);
-  state.pollTimer = setInterval(pollSession, 700);
+  state.pollTimer = setInterval(() => pollSession().catch(() => {}), 700);
 }
 
 async function pollSession() {
@@ -494,11 +686,17 @@ async function pollSession() {
   setMap(snapshot.state?.mapText || '');
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
+  renderChannelToasts(snapshot.state?.chatLines || []);
   renderMapper(snapshot);
   renderItemPanel(snapshot);
+  renderSkills(snapshot);
   renderWizard(snapshot);
-  if (snapshot.state?.phase === 'playing') {
-    updateNavActive('play');
+  if (!snapshot.connected && state.pollTimer) {
+    clearInterval(state.pollTimer);
+    state.pollTimer = null;
+  }
+  if (snapshot.state?.phase === 'pressEnter') {
+    sendInput('').catch(() => {});
   }
   const activeCharacter = snapshot.state?.characterName || '';
   if (activeCharacter && activeCharacter !== state.lastAliasCharacter && snapshot.state?.phase !== 'accountMenu') {
@@ -519,8 +717,10 @@ async function sendInput(text) {
   setMap(snapshot.state?.mapText || '');
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
+  renderChannelToasts(snapshot.state?.chatLines || []);
   renderMapper(snapshot);
   renderItemPanel(snapshot);
+  renderSkills(snapshot);
   renderWizard(snapshot);
 }
 
@@ -592,12 +792,72 @@ async function removeAlias(name) {
   renderAliasList();
 }
 
-function escapeHtml(text) {
-  return text.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+function resetAutocomplete(baseValue = '') {
+  state.autocomplete = { base: baseValue, matches: [], index: -1 };
 }
 
-function escapeAttr(text) {
-  return escapeHtml(text);
+function autocompleteSources() {
+  const exits = state.latestState?.room?.exitList || [];
+  const items = [...(state.latestItems.inventory || []), ...(state.latestItems.equipment || [])].map((entry) => entry.name);
+  const skills = (state.latestSkills || []).map((entry) => entry.name);
+  const aliases = (state.aliases || []).map((entry) => entry.name);
+  const commands = state.latestState?.suggestedCommands || [];
+  return [...new Set([...commands, ...exits, ...aliases, ...items, ...skills, ...COMMON_SKILL_TARGET_WORDS])];
+}
+
+function applyAutocomplete() {
+  const value = els.commandInput.value;
+  const trimmedEnd = value.replace(/\s+$/, '');
+  const parts = trimmedEnd.split(/\s+/);
+  const lastToken = parts[parts.length - 1] || '';
+  const prefixBase = value.endsWith(' ') ? value : value.slice(0, value.length - lastToken.length);
+  if (!lastToken && !value.endsWith(' ')) return;
+
+  const refreshNeeded = state.autocomplete.base !== value || !state.autocomplete.matches.length;
+  if (refreshNeeded) {
+    const needle = lastToken.toLowerCase();
+    const matches = autocompleteSources().filter((candidate) => candidate.toLowerCase().startsWith(needle));
+    if (!matches.length) {
+      els.autocompleteHint.textContent = 'No local completion matches found for that token yet.';
+      return;
+    }
+    state.autocomplete = { base: value, matches, index: 0 };
+  } else {
+    state.autocomplete.index = (state.autocomplete.index + 1) % state.autocomplete.matches.length;
+  }
+
+  const replacement = state.autocomplete.matches[state.autocomplete.index];
+  els.commandInput.value = `${prefixBase}${replacement}`;
+  els.autocompleteHint.textContent = `Tab completion: ${state.autocomplete.matches.join(' · ')}`;
+}
+
+function rememberCommand(command) {
+  if (!command) return;
+  state.lastSentCommand = command;
+  if (state.commandHistory[0] !== command) {
+    state.commandHistory.unshift(command);
+    if (state.commandHistory.length > 40) state.commandHistory = state.commandHistory.slice(0, 40);
+  }
+  state.historyIndex = -1;
+}
+
+function useHistory(direction) {
+  if (!state.commandHistory.length) return;
+  if (direction < 0) {
+    state.historyIndex = Math.min(state.historyIndex + 1, state.commandHistory.length - 1);
+  } else {
+    state.historyIndex = Math.max(state.historyIndex - 1, -1);
+  }
+  els.commandInput.value = state.historyIndex >= 0 ? state.commandHistory[state.historyIndex] : state.lastSentCommand;
+}
+
+function refreshItemSelectionStyles() {
+  document.querySelectorAll('.item-row').forEach((row) => {
+    row.classList.toggle(
+      'active',
+      !!state.selectedItem && row.dataset.itemName === state.selectedItem.name && row.dataset.itemTab === state.selectedItem.tab
+    );
+  });
 }
 
 document.querySelectorAll('.nav-link').forEach((button) => {
@@ -606,6 +866,7 @@ document.querySelectorAll('.nav-link').forEach((button) => {
 
 document.querySelectorAll('[data-command]').forEach((button) => {
   button.addEventListener('click', () => {
+    if (button.disabled) return;
     state.pendingMove = button.dataset.command;
     sendInput(button.dataset.command);
   });
@@ -642,8 +903,34 @@ els.commandForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const value = els.commandInput.value.trim();
   if (!value) return;
-  els.commandInput.value = '';
+  rememberCommand(value);
   await sendInput(value);
+  els.commandInput.value = value;
+  els.commandInput.focus();
+  els.commandInput.select();
+  resetAutocomplete(els.commandInput.value);
+});
+
+els.commandInput.addEventListener('input', () => {
+  resetAutocomplete(els.commandInput.value);
+  els.autocompleteHint.textContent = 'Tab completes exits, aliases, items, and common commands.';
+});
+
+els.commandInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    applyAutocomplete();
+    return;
+  }
+  if (event.key === 'ArrowUp') {
+    event.preventDefault();
+    useHistory(-1);
+    return;
+  }
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    useHistory(1);
+  }
 });
 
 els.aliasForm.addEventListener('submit', saveAlias);
@@ -657,6 +944,13 @@ els.refreshItems.addEventListener('click', async () => {
   await sendInput('inventory');
   await sendInput('equipment');
 });
+els.refreshSkills.addEventListener('click', async () => {
+  await sendInput('slist');
+});
+els.refreshTargets.addEventListener('click', async () => {
+  await sendInput('look');
+});
+
 els.aliasList.addEventListener('click', (event) => {
   const edit = event.target.closest('[data-edit-alias]');
   const del = event.target.closest('[data-delete-alias]');
@@ -676,12 +970,8 @@ els.aliasList.addEventListener('click', (event) => {
 els.automationList.addEventListener('click', (event) => {
   const edit = event.target.closest('[data-edit-rule]');
   const del = event.target.closest('[data-delete-rule]');
-  if (edit) {
-    editAutomationRule(edit.dataset.editRule);
-  }
-  if (del) {
-    deleteAutomationRule(del.dataset.deleteRule);
-  }
+  if (edit) editAutomationRule(edit.dataset.editRule);
+  if (del) deleteAutomationRule(del.dataset.deleteRule);
 });
 
 els.dynamicExits.addEventListener('click', (event) => {
@@ -698,19 +988,8 @@ els.itemTabs.addEventListener('click', (event) => {
   if (state.selectedItem?.tab !== state.activeItemTab) {
     state.selectedItem = null;
   }
-  renderItemPanel({ state: state.latestItems });
+  renderItemPanel({ state: { inventoryItems: state.latestItems.inventory, equipmentItems: state.latestItems.equipment } });
 });
-
-function refreshItemSelectionStyles() {
-  document.querySelectorAll('.item-row').forEach((row) => {
-    row.classList.toggle(
-      'active',
-      state.selectedItem &&
-      row.dataset.itemName === state.selectedItem.name &&
-      row.dataset.itemTab === state.selectedItem.tab
-    );
-  });
-}
 
 els.inventoryList.addEventListener('click', (event) => {
   const row = event.target.closest('.item-row');
@@ -737,8 +1016,46 @@ document.querySelectorAll('[data-item-action]').forEach((button) => {
   });
 });
 
+els.skillList.addEventListener('click', (event) => {
+  const row = event.target.closest('[data-skill-name]');
+  if (!row) return;
+  state.selectedSkill = { name: row.dataset.skillName };
+  renderSkills({ state: state.latestState });
+});
+
+els.skillTargets.addEventListener('click', (event) => {
+  const target = event.target.closest('[data-skill-target]');
+  if (!target || !state.selectedSkill) return;
+  sendInput(buildSkillCommand(state.selectedSkill.name, target.dataset.skillTarget));
+});
+
+els.useSkillBtn.addEventListener('click', () => {
+  if (!state.selectedSkill) return;
+  const defaultTarget = looksTargeted(state.selectedSkill.name) ? (state.skillTargets[0] || 'self') : '';
+  sendInput(buildSkillCommand(state.selectedSkill.name, defaultTarget));
+});
+
+els.toggleTerminal.addEventListener('click', () => {
+  state.terminalVisible = !state.terminalVisible;
+  syncTerminalVisibility();
+});
+els.minimizeTerminal.addEventListener('click', () => {
+  state.terminalVisible = false;
+  syncTerminalVisibility();
+});
+els.closeTerminal.addEventListener('click', () => {
+  state.terminalVisible = false;
+  syncTerminalVisibility();
+});
+els.restoreTerminal.addEventListener('click', () => {
+  state.terminalVisible = true;
+  syncTerminalVisibility();
+});
+
 updateNavActive('connect');
 loadAutomationRules();
 renderAutomationRules();
 renderAliasList();
 renderWizard({ state: { phase: 'idle' } });
+syncTerminalVisibility();
+renderSkills({ state: {} });

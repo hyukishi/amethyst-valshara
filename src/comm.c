@@ -2122,6 +2122,165 @@ void show_title( DESCRIPTOR_DATA *d )
     d->connected = CON_PRESS_ENTER;
 }
 
+static void show_login_intro( DESCRIPTOR_DATA *d )
+{
+    CHAR_DATA *ch;
+
+    ch = d->character;
+
+    if ( chk_watch(get_trust(ch), ch->name, d->host) )
+       SET_BIT( ch->pcdata->flags, PCFLAG_WATCH );
+    else
+       REMOVE_BIT( ch->pcdata->flags, PCFLAG_WATCH );
+
+    if ( xIS_SET(ch->act, PLR_RIP) )
+      send_rip_screen(ch);
+    if ( xIS_SET(ch->act, PLR_ANSI) )
+      send_to_pager( "\033[2J", ch );
+    else
+      send_to_pager( "\014", ch );
+    if ( IS_IMMORTAL(ch) )
+      do_help( ch, "imotd" );
+    if ( ch->level[max_sec_level(ch)] == 90)
+      do_help( ch, "amotd" );
+    if ( ch->level[max_sec_level(ch)] < 50 && ch->level > 0 )
+      do_help( ch, "motd" );
+    if ( ch->level[max_sec_level(ch)] == 0 )
+      do_help( ch, "nmotd" );
+}
+
+static void finish_character_entry( DESCRIPTOR_DATA *d )
+{
+    CHAR_DATA *ch;
+    char buf[MAX_STRING_LENGTH];
+    int iClass, iLang;
+
+    ch = d->character;
+    add_char( ch );
+    d->connected = CON_PLAYING;
+
+    if ( ch->level[max_sec_level(ch)] == 0 )
+    {
+        ch->pcdata->clan_name = STRALLOC( "" );
+        ch->pcdata->clan      = NULL;
+
+        ch->affected_by       = race_table[ch->race]->affected;
+        ch->armor            += race_table[ch->race]->ac_plus;
+        ch->alignment        += race_table[ch->race]->alignment;
+        ch->attacks           = race_table[ch->race]->attacks;
+        ch->defenses          = race_table[ch->race]->defenses;
+        ch->saving_poison_death = race_table[ch->race]->saving_poison_death;
+        ch->saving_wand         = race_table[ch->race]->saving_wand;
+        ch->saving_para_petri   = race_table[ch->race]->saving_para_petri;
+        ch->saving_breath       = race_table[ch->race]->saving_breath;
+        ch->saving_spell_staff  = race_table[ch->race]->saving_spell_staff;
+
+        ch->height = number_range(race_table[ch->race]->height *.9, race_table[ch->race]->height *1.1);
+        ch->weight = number_range(race_table[ch->race]->weight *.9, race_table[ch->race]->weight *1.1);
+
+        if ( xIS_SET( ch->class, CLASS_PALADIN ) )
+            ch->alignment = 1000;
+
+        if ( (iLang = skill_lookup( "common" )) < 0 )
+            bug( "Nanny: cannot find common language." );
+        else
+            ch->pcdata->learned[iLang] = 100;
+
+        for ( iLang = 0; lang_array[iLang] != LANG_UNKNOWN; iLang++ )
+            if ( lang_array[iLang] == race_table[ch->race]->language )
+                break;
+        if ( lang_array[iLang] == LANG_UNKNOWN )
+            bug( "Nanny: invalid racial language." );
+        else
+        {
+            if ( (iLang = skill_lookup( lang_names[iLang] )) < 0 )
+                ;
+            else
+                ch->pcdata->learned[iLang] = 100;
+        }
+
+        for ( iClass = 0; iClass < MAX_CLASS-1; iClass++ )
+            ch->level[iClass] = xIS_SET( ch->class, iClass ) ? 1 : 0;
+        ch->exp[max_sec_level(ch)] = 0;
+        ch->hit  = ch->max_hit;
+        ch->mana = ch->max_mana;
+        ch->hit += race_table[ch->race]->hit;
+        ch->mana += race_table[ch->race]->mana;
+        ch->move = ch->max_move;
+        ch->pcdata->title = STRALLOC( "" );
+        sprintf( buf, "the %s",
+            title_table [max_sec_level(ch)] [ch->level[max_sec_level(ch)]]
+            [ch->sex == SEX_FEMALE ? 1 : 0] );
+        set_title( ch, buf );
+
+        xSET_BIT( ch->act, PLR_AUTOGOLD );
+        xSET_BIT( ch->act, PLR_AUTOEXIT );
+        xSET_BIT( ch->act, PLR_AUTOLOOT );
+        xSET_BIT( ch->act, PLR_AUTOSAC );
+        xSET_BIT( ch->act, PLR_AUTOMAP );
+        outfit_new_character( ch, FALSE );
+        if (!sysdata.WAIT_FOR_AUTH)
+            char_to_room( ch, get_room_index( ROOM_VNUM_SCHOOL ) );
+        else
+        {
+            char_to_room( ch, get_room_index( ROOM_AUTH_START ) );
+            ch->pcdata->auth_state = 0;
+            SET_BIT(ch->pcdata->flags, PCFLAG_UNAUTHED);
+        }
+        ch->pcdata->prompt = STRALLOC("");
+    }
+    else
+    if ( !IS_IMMORTAL(ch) && ch->pcdata->release_date > 0 &&
+        ch->pcdata->release_date > current_time )
+    {
+        if ( ch->in_room->vnum == 6
+        ||   ch->in_room->vnum == 8
+        ||   ch->in_room->vnum == 1206 )
+            char_to_room( ch, ch->in_room );
+        else
+            char_to_room( ch, get_room_index(8) );
+    }
+    else
+    if ( ch->in_room && ( IS_IMMORTAL( ch )
+         || !IS_SET( ch->in_room->room_flags, ROOM_PROTOTYPE ) ) )
+    {
+        char_to_room( ch, ch->in_room );
+    }
+    else
+    if ( IS_IMMORTAL(ch) )
+    {
+        char_to_room( ch, get_room_index( ROOM_VNUM_CHAT ) );
+    }
+    else
+    {
+        char_to_room( ch, get_room_index( ROOM_VNUM_TEMPLE ) );
+    }
+
+    if ( get_timer( ch, TIMER_SHOVEDRAG ) > 0 )
+        remove_timer( ch, TIMER_SHOVEDRAG );
+
+    if ( get_timer( ch, TIMER_PKILLED ) > 0 )
+        remove_timer( ch, TIMER_PKILLED );
+
+    act( AT_ACTION, "$n has entered the game.", ch, NULL, NULL, TO_CANSEE );
+    if ( ch->pcdata->pet )
+    {
+        act( AT_ACTION, "$n returns to $s master from the Void.",
+             ch->pcdata->pet, NULL, ch, TO_NOTVICT );
+        act( AT_ACTION, "$N returns with you to the realms.",
+             ch, NULL, ch->pcdata->pet, TO_CHAR );
+    }
+    do_look( ch, "auto" );
+    mail_count(ch);
+
+    if ( !ch->was_in_room && ch->in_room == get_room_index( ROOM_VNUM_TEMPLE ))
+        ch->was_in_room = get_room_index( ROOM_VNUM_TEMPLE );
+    else if ( ch->was_in_room == get_room_index( ROOM_VNUM_TEMPLE ))
+        ch->was_in_room = get_room_index( ROOM_VNUM_TEMPLE );
+    else if ( !ch->was_in_room )
+        ch->was_in_room = ch->in_room;
+}
+
 /*
  * Deal with sockets that haven't logged in yet.
  */
@@ -2363,7 +2522,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
             sprintf( log_buf, "%s@%s(%s) has connected.", ch->pcdata->filename, d->host, d->user );
             log_string_plus( log_buf, LOG_COMM, UMAX( sysdata.log_level, ch->level[max_sec_level(ch)] ) );
-            show_title( d );
+            if ( d->account_id > 0 )
+            {
+                write_to_buffer( d, "\n\rWelcome to Valshara...\n\r", 0 );
+                show_login_intro( d );
+                finish_character_entry( d );
+            }
+            else
+                show_title( d );
             return;
         }
 
@@ -2916,34 +3082,25 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		race_table[ch->race]->race_name, who_classes( ch ) );
 	log_string_plus( log_buf, LOG_COMM, sysdata.log_level);
 	to_channel( log_buf, CHANNEL_MONITOR, "Monitor", LEVEL_IMMORTAL );
-	write_to_buffer( d, "Press [ENTER] ", 0 );
-	show_title(d);
         ch->practice += 2;
 	ch->position = POS_STANDING;
-	d->connected = CON_PRESS_ENTER;
+        if ( d->account_id > 0 )
+        {
+            write_to_buffer( d, "\n\rWelcome to Valshara...\n\r", 0 );
+            show_login_intro( d );
+            finish_character_entry( d );
+        }
+        else
+        {
+	    write_to_buffer( d, "Press [ENTER] ", 0 );
+	    show_title(d);
+	    d->connected = CON_PRESS_ENTER;
+        }
 	return;
 	break;
 
     case CON_PRESS_ENTER:
-        if ( chk_watch(get_trust(ch), ch->name, d->host) ) /*  --Gorog */
-           SET_BIT( ch->pcdata->flags, PCFLAG_WATCH );
-        else
-           REMOVE_BIT( ch->pcdata->flags, PCFLAG_WATCH );
-
-	if ( xIS_SET(ch->act, PLR_RIP) )
-	  send_rip_screen(ch);
-	if ( xIS_SET(ch->act, PLR_ANSI) )
-	  send_to_pager( "\033[2J", ch );
-	else
-	  send_to_pager( "\014", ch );
-	if ( IS_IMMORTAL(ch) )
-	  do_help( ch, "imotd" );
-	if ( ch->level[max_sec_level(ch)] == 90)
-	  do_help( ch, "amotd" );
-	if ( ch->level[max_sec_level(ch)] < 50 && ch->level > 0 )
-	  do_help( ch, "motd" );
-	if ( ch->level[max_sec_level(ch)] == 0 )
-	  do_help( ch, "nmotd" );
+        show_login_intro( d );
 	send_to_pager( "\n\rPress [ENTER] ", ch );
         d->connected = CON_READ_MOTD;
         break;
@@ -2955,157 +3112,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	  sprintf( motdbuf, "\n\rWelcome to %s...\n\r", sysdata.mud_name);
 	  write_to_buffer( d, motdbuf, 0 );
 	}
-	add_char( ch );
-	d->connected	= CON_PLAYING;
-
-	if ( ch->level[max_sec_level(ch)] == 0 )
-	{
-	    int iLang;
-
-	    ch->pcdata->clan_name = STRALLOC( "" );
-	    ch->pcdata->clan	  = NULL;
-/*
-	    switch ( class_table[ch->class]->attr_prime )
-	    {
-	    case APPLY_STR: ch->perm_str = 16; break;
-	    case APPLY_INT: ch->perm_int = 16; break;
-	    case APPLY_WIS: ch->perm_wis = 16; break;
-	    case APPLY_DEX: ch->perm_dex = 16; break;
-	    case APPLY_CON: ch->perm_con = 16; break;
-	    case APPLY_CHA: ch->perm_cha = 16; break;
-	    case APPLY_LCK: ch->perm_lck = 16; break;
-	    } fix this multiclassinig kyorlin */
-
-	    ch->affected_by	  = race_table[ch->race]->affected;
-	   
-            ch->armor		 += race_table[ch->race]->ac_plus;
-            ch->alignment	 += race_table[ch->race]->alignment;
-            ch->attacks              = race_table[ch->race]->attacks;
-            ch->defenses             = race_table[ch->race]->defenses;
-	    ch->saving_poison_death  	= race_table[ch->race]->saving_poison_death;
-	    ch->saving_wand  		= race_table[ch->race]->saving_wand;
-	    ch->saving_para_petri  	= race_table[ch->race]->saving_para_petri;
-	    ch->saving_breath  		= race_table[ch->race]->saving_breath;
-	    ch->saving_spell_staff	= race_table[ch->race]->saving_spell_staff;
-
-	    ch->height = number_range(race_table[ch->race]->height *.9, race_table[ch->race]->height *1.1);
-	    ch->weight = number_range(race_table[ch->race]->weight *.9, race_table[ch->race]->weight *1.1);
-
-            if ( xIS_SET( ch->class, CLASS_PALADIN ) )
-		ch->alignment = 1000;
-
-	    if ( (iLang = skill_lookup( "common" )) < 0 )
-	    	bug( "Nanny: cannot find common language." );
-	    else
-	    	ch->pcdata->learned[iLang] = 100;
-	    	
-	    for ( iLang = 0; lang_array[iLang] != LANG_UNKNOWN; iLang++ )
-	    	if ( lang_array[iLang] == race_table[ch->race]->language )
-	    		break;
-	    if ( lang_array[iLang] == LANG_UNKNOWN )
-	    	bug( "Nanny: invalid racial language." );
-	    else
-	    {
-	    	if ( (iLang = skill_lookup( lang_names[iLang] )) < 0 )
-	    		;
-	    	else
-	    		ch->pcdata->learned[iLang] = 100;
-	    }
-
-            /* ch->resist           += race_table[ch->race]->resist;    drats */
-            /* ch->susceptible     += race_table[ch->race]->suscept;    drats */
-
-	      /* name_stamp_stats( ch ); */
-  
-	    for ( iClass = 0; iClass < MAX_CLASS-1; iClass++ )
-                ch->level[iClass] = xIS_SET( ch->class, iClass ) ? 1 : 0;
-	    ch->exp[max_sec_level(ch)]	= 0;
-	    ch->hit	= ch->max_hit;
-	    ch->mana	= ch->max_mana;
-            ch->hit    += race_table[ch->race]->hit;
-            ch->mana   += race_table[ch->race]->mana;
-	    ch->move	= ch->max_move;
-            /*
-             * Fresh account-backed characters can arrive here with a stale
-             * title pointer after the earlier creation prompts. Replace it
-             * outright before we assign the canonical level title.
-             */
-            ch->pcdata->title = STRALLOC( "" );
-	    sprintf( buf, "the %s",
-		title_table [max_sec_level(ch)] [ch->level[max_sec_level(ch)]]
-		[ch->sex == SEX_FEMALE ? 1 : 0] ); 
-	    set_title( ch, buf ); 
-
-            /* Start new characters with the most commonly used defaults. */
-	    xSET_BIT( ch->act, PLR_AUTOGOLD ); 
-	    xSET_BIT( ch->act, PLR_AUTOEXIT ); 
-	    xSET_BIT( ch->act, PLR_AUTOLOOT );
-	    xSET_BIT( ch->act, PLR_AUTOSAC );
-	    xSET_BIT( ch->act, PLR_AUTOMAP );
-	    outfit_new_character( ch, FALSE );
-	    if (!sysdata.WAIT_FOR_AUTH)
-	      char_to_room( ch, get_room_index( ROOM_VNUM_SCHOOL ) );
-	    else
-	    {
-	      char_to_room( ch, get_room_index( ROOM_AUTH_START ) );
-	      ch->pcdata->auth_state = 0;
-	      SET_BIT(ch->pcdata->flags, PCFLAG_UNAUTHED);
-	    }
-	    /* Display_prompt interprets blank as default */
-	    ch->pcdata->prompt = STRALLOC("");
-	}
-	else
-	if ( !IS_IMMORTAL(ch) && ch->pcdata->release_date > 0 && 
-		ch->pcdata->release_date > current_time )
-	{
-	    if ( ch->in_room->vnum == 6
-	    ||   ch->in_room->vnum == 8
-	    ||   ch->in_room->vnum == 1206 )
-		char_to_room( ch, ch->in_room );
-	    else
-	      char_to_room( ch, get_room_index(8) );
-	}
-	else
-	if ( ch->in_room && ( IS_IMMORTAL( ch ) 
-             || !IS_SET( ch->in_room->room_flags, ROOM_PROTOTYPE ) ) )
-	{
-	    char_to_room( ch, ch->in_room );
-	}
-	else
-	if ( IS_IMMORTAL(ch) )
-	{
-	    char_to_room( ch, get_room_index( ROOM_VNUM_CHAT ) );
-	}
-	else
-	{
-	    char_to_room( ch, get_room_index( ROOM_VNUM_TEMPLE ) );
-	}
-
-
-    if ( get_timer( ch, TIMER_SHOVEDRAG ) > 0 )
-        remove_timer( ch, TIMER_SHOVEDRAG );
-
-    if ( get_timer( ch, TIMER_PKILLED ) > 0 )
-	remove_timer( ch, TIMER_PKILLED );
-
-    act( AT_ACTION, "$n has entered the game.", ch, NULL, NULL, TO_CANSEE );
-    if ( ch->pcdata->pet )
-    {
-           act( AT_ACTION, "$n returns to $s master from the Void.",
-                      ch->pcdata->pet, NULL, ch, TO_NOTVICT );
-           act( AT_ACTION, "$N returns with you to the realms.",
-                        ch, NULL, ch->pcdata->pet, TO_CHAR );
-    }         
-    do_look( ch, "auto" );
-    mail_count(ch);
-
-    if ( !ch->was_in_room && ch->in_room == get_room_index( ROOM_VNUM_TEMPLE ))
-      	ch->was_in_room = get_room_index( ROOM_VNUM_TEMPLE );
-    else if ( ch->was_in_room == get_room_index( ROOM_VNUM_TEMPLE ))
-        ch->was_in_room = get_room_index( ROOM_VNUM_TEMPLE );
-    else if ( !ch->was_in_room )
-    	ch->was_in_room = ch->in_room;
-
+	finish_character_entry( d );
     break;
 
     }
