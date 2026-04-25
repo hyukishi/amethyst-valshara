@@ -25,7 +25,15 @@ const els = {
   statusConnection: document.getElementById('status-connection'),
   statusPhase: document.getElementById('status-phase'),
   statusCharacter: document.getElementById('status-character'),
+  statusRoom: document.getElementById('status-room'),
   statusPrompt: document.getElementById('status-prompt'),
+  hudHp: document.getElementById('hud-hp'),
+  hudResource: document.getElementById('hud-resource'),
+  hudMv: document.getElementById('hud-mv'),
+  hudXp: document.getElementById('hud-xp'),
+  hudGold: document.getElementById('hud-gold'),
+  channelFeed: document.getElementById('channel-feed'),
+  combatFeed: document.getElementById('combat-feed'),
 };
 
 function setStatus(snapshot) {
@@ -33,7 +41,17 @@ function setStatus(snapshot) {
   els.statusConnection.textContent = snapshot?.connected ? 'Connected' : 'Offline';
   els.statusPhase.textContent = info.phase || 'unknown';
   els.statusCharacter.textContent = info.characterName || 'None';
+  els.statusRoom.textContent = info.room?.name || '-';
   els.statusPrompt.textContent = info.prompt || '-';
+  els.hudHp.textContent = info.promptStats?.hp ?? '-';
+  els.hudResource.textContent = info.promptStats?.resource != null
+    ? `${info.promptStats.resource} ${info.promptStats.resourceType || ''}`.trim()
+    : '-';
+  els.hudMv.textContent = info.promptStats?.mv ?? '-';
+  els.hudXp.textContent = info.promptStats?.xpCurrent != null && info.promptStats?.xpNext != null
+    ? `${info.promptStats.xpCurrent}/${info.promptStats.xpNext}`
+    : '-';
+  els.hudGold.textContent = info.promptStats?.gold ?? '-';
 }
 
 function appendOutput(events = []) {
@@ -50,6 +68,18 @@ function appendOutput(events = []) {
 
 function setMap(mapText) {
   els.map.textContent = mapText || 'Map output will appear here once the game sends an ASCII map.';
+}
+
+function renderFeed(container, lines, type, emptyMessage) {
+  if (!lines?.length) {
+    container.className = 'feed-list empty';
+    container.textContent = emptyMessage;
+    return;
+  }
+  container.className = 'feed-list';
+  container.innerHTML = lines.map((line) => `
+    <article class="feed-item ${type}">${escapeHtml(line)}</article>
+  `).join('');
 }
 
 function updateNavActive(panel) {
@@ -171,6 +201,8 @@ async function startSession() {
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
+  renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
+  renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
   renderWizard(snapshot);
   if (state.pollTimer) clearInterval(state.pollTimer);
   state.pollTimer = setInterval(pollSession, 700);
@@ -183,6 +215,8 @@ async function pollSession() {
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
+  renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
+  renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
   renderWizard(snapshot);
   if (snapshot.state?.phase === 'playing') {
     updateNavActive('play');
@@ -204,6 +238,8 @@ async function sendInput(text) {
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
+  renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
+  renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
   renderWizard(snapshot);
 }
 

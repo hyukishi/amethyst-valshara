@@ -270,6 +270,106 @@ def parse_character_name(output: str):
     return ''
 
 
+def parse_prompt_stats(prompt: str):
+    if not prompt:
+        return {}
+    match = re.search(
+        r'<(?P<hp>\d+)hp\s+(?P<resource>\d+)(?P<resource_type>[mb]?)\s+(?P<mv>\d+)mv(?:\s+xp:(?P<xp_current>\d+)/(?P<xp_next>\d+))?(?:\s+g:(?P<gold>\d+))?',
+        prompt
+    )
+    if not match:
+        return {}
+    data = match.groupdict()
+    return {
+        'hp': int(data['hp']),
+        'resource': int(data['resource']),
+        'resourceType': 'blood' if data.get('resource_type') == 'b' else 'mana',
+        'mv': int(data['mv']),
+        'xpCurrent': int(data['xp_current']) if data.get('xp_current') else None,
+        'xpNext': int(data['xp_next']) if data.get('xp_next') else None,
+        'gold': int(data['gold']) if data.get('gold') else None,
+    }
+
+
+def recent_clean_lines(output: str, limit: int = 180):
+    lines = [line.rstrip() for line in output.splitlines()]
+    return [line for line in lines if line.strip()][-limit:]
+
+
+def parse_chat_lines(output: str, limit: int = 24):
+    chat_patterns = [
+        r'\btells you\b',
+        r'\byou tell\b',
+        r'\bgossip\b',
+        r'\bauction\b',
+        r'\bgtell\b',
+        r'\bchat\b',
+        r'\bclan\b',
+        r'\bcouncil\b',
+        r'\bimmtalk\b',
+        r'\bnewbie\b',
+        r'\bsay[s]?\b',
+        r'\basks?\b',
+        r'\bshouts?\b',
+        r'\byells?\b',
+    ]
+    lines = recent_clean_lines(output)
+    picked = []
+    for line in lines:
+        lowered = line.lower()
+        if any(re.search(pattern, lowered) for pattern in chat_patterns):
+            picked.append(line)
+    return picked[-limit:]
+
+
+def parse_combat_lines(output: str, limit: int = 24):
+    combat_patterns = [
+        r'^you ',
+        r'^your ',
+        r' hits? ',
+        r' misses? ',
+        r' dodges? ',
+        r' parries? ',
+        r' blocks? ',
+        r' sears? ',
+        r' burns? ',
+        r' wounds? ',
+        r' attacks? ',
+        r' damage',
+        r' is dead',
+        r' has .*wounds',
+        r' is in awful condition',
+        r' is bleeding',
+        r' flee',
+    ]
+    lines = recent_clean_lines(output)
+    picked = []
+    for line in lines:
+        lowered = line.lower()
+        if any(re.search(pattern, lowered) for pattern in combat_patterns):
+            picked.append(line)
+    return picked[-limit:]
+
+
+def parse_room_summary(output: str):
+    lines = recent_clean_lines(output, limit=60)
+    room_name = ''
+    exits = ''
+    for index, line in enumerate(lines):
+        if line.startswith('Exits:'):
+            exits = line
+            for candidate in reversed(lines[:index]):
+                if candidate.startswith('.') or candidate.startswith('`'):
+                    continue
+                if candidate.startswith('<'):
+                    continue
+                if len(candidate) > 80:
+                    continue
+                room_name = candidate
+                break
+    return {'name': room_name, 'exits': exits}
+
+
 def parse_prompt(output: str):
     matches = re.findall(r'(?:^|\n)(<[^<>\n\r]+>)\s*$', output, re.MULTILINE)
     return matches[-1] if matches else ''
@@ -310,14 +410,19 @@ def detect_phase(output: str):
 
 
 def parse_state(output: str):
+    prompt = parse_prompt(output)
     state = {
         'phase': detect_phase(output),
-        'prompt': parse_prompt(output),
+        'prompt': prompt,
+        'promptStats': parse_prompt_stats(prompt),
         'mapText': extract_latest_map(output),
         'accountMenu': parse_account_menu(output),
         'characterName': parse_character_name(output),
         'raceOptions': parse_numbered_options(output, 'Race:'),
         'classOptions': parse_numbered_options(output, 'Class?'),
+        'chatLines': parse_chat_lines(output),
+        'combatLines': parse_combat_lines(output),
+        'room': parse_room_summary(output),
     }
     return state
 
