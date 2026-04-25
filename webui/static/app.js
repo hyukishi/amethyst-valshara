@@ -25,6 +25,7 @@ const state = {
   selectedSkill: null,
   skillTargets: [],
   recentChatSignatures: [],
+  disconnectNoticeShown: false,
 };
 
 const els = {
@@ -519,6 +520,28 @@ function updateNavActive(panel) {
   });
 }
 
+function handleDisconnect(snapshot) {
+  if (state.pollTimer) {
+    clearInterval(state.pollTimer);
+    state.pollTimer = null;
+  }
+  state.pendingMove = null;
+  state.latestSkills = [];
+  state.selectedSkill = null;
+  state.skillTargets = [];
+  state.latestItems = { inventory: [], equipment: [] };
+  state.selectedItem = null;
+  state.lastAliasCharacter = '';
+  state.wizardSignature = '';
+  renderItemPanel({ state: { inventoryItems: [], equipmentItems: [] } });
+  renderSkills({ state: {} });
+  renderWizard(snapshot);
+  if (!state.disconnectNoticeShown) {
+    state.disconnectNoticeShown = true;
+    updateNavActive('connect');
+  }
+}
+
 function renderAliasList() {
   if (!state.aliases.length) {
     els.aliasList.className = 'alias-list empty';
@@ -663,6 +686,7 @@ async function startSession() {
   state.pendingMove = null;
   state.wizardSignature = '';
   state.lastAliasCharacter = '';
+  state.disconnectNoticeShown = false;
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
@@ -691,9 +715,9 @@ async function pollSession() {
   renderItemPanel(snapshot);
   renderSkills(snapshot);
   renderWizard(snapshot);
-  if (!snapshot.connected && state.pollTimer) {
-    clearInterval(state.pollTimer);
-    state.pollTimer = null;
+  if (!snapshot.connected) {
+    handleDisconnect(snapshot);
+    return;
   }
   if (snapshot.state?.phase === 'pressEnter') {
     sendInput('').catch(() => {});
@@ -722,6 +746,9 @@ async function sendInput(text) {
   renderItemPanel(snapshot);
   renderSkills(snapshot);
   renderWizard(snapshot);
+  if (!snapshot.connected) {
+    handleDisconnect(snapshot);
+  }
 }
 
 async function loadAliases() {
@@ -945,7 +972,7 @@ els.refreshItems.addEventListener('click', async () => {
   await sendInput('equipment');
 });
 els.refreshSkills.addEventListener('click', async () => {
-  await sendInput('slist');
+  await sendInput('practice');
 });
 els.refreshTargets.addEventListener('click', async () => {
   await sendInput('look');

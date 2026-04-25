@@ -173,7 +173,8 @@ class TelnetSession:
         with self.lock:
             events = [event for event in self.events if event['seq'] > since]
             clean_output = self.clean_output[-POLL_LIMIT:]
-        state = parse_state(clean_output)
+            raw_output = self.raw_output[-POLL_LIMIT:]
+        state = parse_state(clean_output, raw_output)
         if state.get('accountMenu'):
             self.account_name = state['accountMenu'].get('loggedInAs') or self.account_name
         if state.get('characterName'):
@@ -222,13 +223,20 @@ class SessionStore:
 SESSIONS = SessionStore()
 
 
+PROMPT_PREFIX_RE = re.compile(r'^<[^<>\n\r]+>\s*')
+
+
+def strip_prompt_prefix(line: str) -> str:
+    return PROMPT_PREFIX_RE.sub('', line.rstrip()).strip()
+
+
 def recent_clean_lines(output: str, limit: int = 220):
-    lines = [line.rstrip() for line in output.splitlines()]
+    lines = [strip_prompt_prefix(line) for line in output.splitlines()]
     return [line for line in lines if line.strip()][-limit:]
 
 
 def extract_latest_map(output: str) -> str:
-    lines = output.splitlines()
+    lines = [line.rstrip('\r') for line in output.splitlines()]
     for idx in range(len(lines) - 1, -1, -1):
         if '[Map' not in lines[idx]:
             continue
@@ -237,10 +245,11 @@ def extract_latest_map(output: str) -> str:
             start = idx - 1
         block = []
         for line in lines[start:start + 40]:
-            if not line.strip() and block:
+            stripped = line.strip()
+            if not stripped and block:
                 break
             block.append(line.rstrip())
-            if len(block) > 2 and '---' in line and ('`' in line or "'" in line or '.' in line):
+            if stripped.startswith('`') and stripped.endswith("'"):
                 break
         text = '\n'.join(part for part in block if part.strip())
         if '[Map' in text:
@@ -406,11 +415,6 @@ def parse_inventory_sections(output: str):
     inventory = []
     equipment = []
 
-    def strip_prompt_prefix(line: str):
-        cleaned = line.strip()
-        cleaned = re.sub(r'^<\d+hp\s+\d+[mb]\s+\d+mv(?:\s+xp:\d+/\d+)?(?:\s+g:\d+)?>\s*', '', cleaned, flags=re.I)
-        return cleaned.strip()
-
     for index, raw_line in enumerate(lines):
         line = strip_prompt_prefix(raw_line)
         if line.lower().startswith('you are carrying'):
@@ -418,8 +422,8 @@ def parse_inventory_sections(output: str):
             for candidate in lines[index + 1:index + 50]:
                 stripped = strip_prompt_prefix(candidate)
                 if not stripped:
-                    break
-                if stripped.startswith('Exits:') or stripped.startswith('You are using'):
+                    continue
+                if stripped.startswith('Exits:') or stripped.startswith('You are using') or stripped.startswith('You '):
                     break
                 chunk.append(stripped)
             inventory = _parse_listing_lines(chunk, equipment=False)
@@ -428,8 +432,8 @@ def parse_inventory_sections(output: str):
             for candidate in lines[index + 1:index + 50]:
                 stripped = strip_prompt_prefix(candidate)
                 if not stripped:
-                    break
-                if stripped.startswith('Exits:') or stripped.startswith('You are carrying'):
+                    continue
+                if stripped.startswith('Exits:') or stripped.startswith('You are carrying') or stripped.startswith('You '):
                     break
                 chunk.append(stripped)
             equipment = _parse_listing_lines(chunk, equipment=True)
@@ -439,25 +443,25 @@ def parse_inventory_sections(output: str):
 def parse_skill_sections(output: str):
     lines = output.splitlines()
     skills = []
-    current_section = ''
+    in_skill_listing = False
     for index, raw_line in enumerate(lines):
-        line = raw_line.strip()
+        line = strip_prompt_prefix(raw_line)
         lowered = line.lower()
-        if any(marker in lowered for marker in ['you have knowledge of the following', 'you know the following', 'skills', 'spells']):
-            current_section = 'skills'
-            for candidate in lines[index + 1:index + 100]:
-                stripped = candidate.strip()
-                if not stripped:
-                    if skills:
-                        break
-                    continue
-                if stripped.startswith('<') or stripped.startswith('Exits:'):
-                    break
-                for match in re.finditer(r"([A-Za-z][A-Za-z'\- ]+?)\s+(\d{1,3})%", stripped):
-                    name = ' '.join(match.group(1).split())
-                    if name and name.lower() not in {entry['name'].lower() for entry in skills}:
-                        skills.append({'name': name, 'percent': int(match.group(2)), 'type': current_section})
+        if 'practice sessions left' in lowered and in_skill_listing:
             break
+        if 'spells' in lowered or 'skills' in lowered:
+            in_skill_listing = True
+            continue
+        if not in_skill_listing:
+            continue
+        if not line:
+            continue
+        if line.startswith('Exits:'):
+            break
+        for match in re.finditer(r"([A-Za-z][A-Za-z'\- ]+?)\s+(\d{1,3})%", line):
+            name = ' '.join(match.group(1).split())
+            if name and name.lower() not in {entry['name'].lower() for entry in skills}:
+                skills.append({'name': name, 'percent': int(match.group(2)), 'type': 'known'})
     return skills[-80:]
 
 
@@ -465,6 +469,8 @@ def parse_target_candidates(output: str, room_name: str):
     targets = []
     for line in recent_clean_lines(output, limit=80):
         if line == room_name or line.startswith('Exits:') or line.startswith('<'):
+            continue
+        if line.startswith('You are carrying') or line.startswith('You are using'):
             continue
         if re.search(r'\b(is|are) (in|here|standing|sitting|resting|sleeping|bleeding|fighting)\b', line, re.I):
             name = line.split(' is ', 1)[0].split(' are ', 1)[0].strip()
@@ -491,6 +497,8 @@ def parse_chat_lines(output: str, limit: int = 24):
     lines = recent_clean_lines(output)
     picked = []
     for line in lines:
+        if not line or line.startswith('Exits:'):
+            continue
         lowered = line.lower()
         if 'tells you' in lowered:
             match = re.match(r"^(.*?) tells you ['`]?(.+?)['`]?$", line, re.I)
@@ -525,7 +533,13 @@ def parse_combat_lines(output: str, limit: int = 24):
     lines = recent_clean_lines(output)
     picked = []
     for line in lines:
+        if not line or line.startswith('Exits:'):
+            continue
         lowered = line.lower()
+        if lowered.startswith('you have ') and 'practice sessions left' in lowered:
+            continue
+        if lowered.startswith('you are carrying') or lowered.startswith('you are using'):
+            continue
         if any(re.search(pattern, lowered) for pattern in combat_patterns):
             picked.append(line)
     return picked[-limit:]
@@ -565,7 +579,7 @@ def detect_phase(output: str):
     return 'unknown'
 
 
-def parse_state(output: str):
+def parse_state(output: str, raw_output: str = ''):
     prompt = parse_prompt(output)
     items = parse_inventory_sections(output)
     room = parse_room_summary(output)
@@ -574,7 +588,7 @@ def parse_state(output: str):
         'phase': detect_phase(output),
         'prompt': prompt,
         'promptStats': parse_prompt_stats(prompt),
-        'mapText': extract_latest_map(output),
+        'mapText': extract_latest_map(raw_output or output),
         'accountMenu': parse_account_menu(output),
         'characterName': parse_character_name(output),
         'raceOptions': parse_numbered_options(output, 'Race:'),
