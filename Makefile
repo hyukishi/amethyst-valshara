@@ -1,4 +1,4 @@
-.PHONY: all docker-build docker-shell docker-run docker-up docker-make docker-stop native-build worlddb-refresh
+.PHONY: all docker-build docker-shell docker-run docker-up docker-make docker-stop native-build worlddb-refresh web-ui
 
 all: docker-up
 
@@ -25,3 +25,6 @@ native-build:
 
 worlddb-refresh:
 	python3 scripts/migrate_worlddb.py
+
+web-ui:
+	python3 webui/server.py

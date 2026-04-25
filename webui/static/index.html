@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valshara Web Client</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <p class="eyebrow">Valshara</p>
+        <h1>Web Client</h1>
+        <p class="lede">A browser front end shaped by classic MUD clients: mapper-first navigation, alias management, and quick account flow.</p>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-link active" data-panel="connect">Connect</button>
+        <button class="nav-link" data-panel="play">Play</button>
+        <button class="nav-link" data-panel="aliases">Aliases</button>
+        <button class="nav-link" data-panel="help">Guide</button>
+      </nav>
+
+      <section class="status-card">
+        <h2>Session</h2>
+        <dl>
+          <div><dt>Connection</dt><dd id="status-connection">Offline</dd></div>
+          <div><dt>Phase</dt><dd id="status-phase">Idle</dd></div>
+          <div><dt>Character</dt><dd id="status-character">None</dd></div>
+          <div><dt>Prompt</dt><dd id="status-prompt">-</dd></div>
+        </dl>
+      </section>
+
+      <section class="status-card inspiration">
+        <h2>Inspired By</h2>
+        <ul>
+          <li>Mudlet-style docked map and alias workflow</li>
+          <li>zMUD-style structured automation management</li>
+          <li>GMud-style straightforward connect-and-play flow</li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="panel active" id="panel-connect">
+        <div class="panel-head">
+          <h2>Account & Character Flow</h2>
+          <button id="start-session" class="primary">Start Session</button>
+        </div>
+        <div class="wizard-grid">
+          <div class="wizard-card">
+            <h3>Structured Input</h3>
+            <form id="wizard-form" class="wizard-form"></form>
+            <div id="wizard-actions" class="wizard-actions"></div>
+          </div>
+          <div class="wizard-card terminal-preview">
+            <h3>Session Preview</h3>
+            <pre id="connect-preview"></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-play">
+        <div class="play-grid">
+          <section class="terminal-card">
+            <div class="panel-head compact">
+              <h2>Game Feed</h2>
+              <div class="inline-actions">
+                <button id="look-btn">Look</button>
+                <button id="score-btn">Score</button>
+                <button id="who-btn">Who</button>
+                <button id="quit-btn" class="danger">Quit</button>
+              </div>
+            </div>
+            <pre id="terminal-output" class="terminal-output"></pre>
+            <form id="command-form" class="command-form">
+              <input id="command-input" autocomplete="off" placeholder="Type a command and press Enter">
+              <button class="primary" type="submit">Send</button>
+            </form>
+          </section>
+
+          <section class="tools-column">
+            <section class="map-card">
+              <div class="panel-head compact">
+                <h2>Map</h2>
+                <span class="muted">Live ASCII panel</span>
+              </div>
+              <pre id="map-output" class="map-output"></pre>
+            </section>
+
+            <section class="nav-card">
+              <div class="panel-head compact">
+                <h2>Navigation</h2>
+                <span class="muted">Click to move</span>
+              </div>
+              <div class="compass">
+                <button data-command="north">N</button>
+                <button data-command="up">U</button>
+                <button data-command="west">W</button>
+                <button data-command="look" class="center">Look</button>
+                <button data-command="east">E</button>
+                <button data-command="south">S</button>
+                <button data-command="down">D</button>
+              </div>
+              <div class="quick-actions">
+                <button data-command="enter school">School</button>
+                <button data-command="inventory">Inventory</button>
+                <button data-command="equipment">Equipment</button>
+                <button data-command="help commands">Commands</button>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-aliases">
+        <div class="panel-head">
+          <h2>Alias Manager</h2>
+          <button id="refresh-aliases">Refresh From Character</button>
+        </div>
+        <div class="alias-grid">
+          <section class="alias-form-card">
+            <h3>Create or Update</h3>
+            <form id="alias-form" class="alias-form">
+              <label>
+                Alias
+                <input id="alias-name" required placeholder="healme">
+              </label>
+              <label>
+                Command
+                <textarea id="alias-command" required placeholder="cast heal self"></textarea>
+              </label>
+              <button type="submit" class="primary">Save Alias</button>
+            </form>
+          </section>
+          <section class="alias-list-card">
+            <h3>Saved Aliases</h3>
+            <div id="alias-list" class="alias-list empty">Select a character in the Play panel to load aliases.</div>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-help">
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h2>Why this layout</h2>
+            <p>This client keeps the terminal central, gives the map its own readable space, and surfaces clickable movement so the browser experience still feels like a MUD client instead of a plain telnet box.</p>
+            <p>It also keeps account and character creation in the browser through the game’s live login flow, so the UI stays aligned with your real server logic.</p>
+          </article>
+          <article class="guide-card">
+            <h2>Suggested next features</h2>
+            <ul>
+              <li>Trigger and gag management</li>
+              <li>Prompt parser for dedicated HP/mana/move meters</li>
+              <li>Clickable exits sourced from room output</li>
+              <li>GMCP/MXP support if you decide to expose richer protocols later</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
