@@ -14,6 +14,7 @@ const state = {
   activeItemTab: 'inventory',
   selectedItem: null,
   latestItems: { inventory: [], equipment: [] },
+  wizardSignature: '',
 };
 
 const els = {
@@ -352,11 +353,31 @@ function renderAliasList() {
   `).join('');
 }
 
+function wizardStateSignature(current) {
+  return JSON.stringify({
+    phase: current.phase || '',
+    accountMenu: {
+      loggedInAs: current.accountMenu?.loggedInAs || '',
+      characters: (current.accountMenu?.characters || []).map((character) => `${character.index}:${character.name}`),
+    },
+    raceOptions: (current.raceOptions || []).map((option) => `${option.value}:${option.label}`),
+    classOptions: (current.classOptions || []).map((option) => `${option.value}:${option.label}`),
+  });
+}
+
 function renderWizard(snapshot) {
   const current = snapshot?.state || {};
   const phase = current.phase;
   let html = '';
   let actions = '';
+  const signature = wizardStateSignature(current);
+
+  if (signature === state.wizardSignature) {
+    return;
+  }
+
+  const activeField = els.wizardForm.querySelector('#wizard-input:focus');
+  const activeValue = activeField ? activeField.value : '';
 
   if (!state.sessionId) {
     html = '<p class="muted">Start a session to open the live account flow.</p>';
@@ -419,6 +440,16 @@ function renderWizard(snapshot) {
 
   els.wizardForm.innerHTML = html;
   els.wizardActions.innerHTML = actions;
+  state.wizardSignature = signature;
+
+  const replacementField = els.wizardForm.querySelector('#wizard-input');
+  if (replacementField && activeField) {
+    replacementField.value = activeValue;
+    replacementField.focus();
+    if (typeof replacementField.setSelectionRange === 'function') {
+      replacementField.setSelectionRange(activeValue.length, activeValue.length);
+    }
+  }
 }
 
 async function api(url, options = {}) {
@@ -441,6 +472,7 @@ async function startSession() {
   state.terminalLines = [];
   state.mapperTrail = [];
   state.pendingMove = null;
+  state.wizardSignature = '';
   appendOutput(snapshot.events || []);
   setStatus(snapshot);
   setMap(snapshot.state?.mapText || '');
