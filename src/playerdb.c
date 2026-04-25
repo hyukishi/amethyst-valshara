@@ -454,7 +454,7 @@ int playerdb_account_character_count(int account_id)
 
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
-        "SELECT COUNT(*) FROM characters WHERE account_id = ?1;",
+        "SELECT COUNT(DISTINCT lower(char_key)) FROM characters WHERE account_id = ?1;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
@@ -651,7 +651,16 @@ int playerdb_account_list_characters(int account_id, char names[][MAX_INPUT_LENG
     count = 0;
     stmt = NULL;
     rc = sqlite3_prepare_v2(player_db,
-        "SELECT char_name, char_key FROM characters WHERE account_id = ?1 ORDER BY updated_at DESC, char_name ASC;",
+        "SELECT c.char_name, c.char_key "
+        "FROM characters c "
+        "WHERE c.account_id = ?1 "
+        "AND c.id = ("
+        "  SELECT c2.id FROM characters c2 "
+        "  WHERE c2.account_id = c.account_id "
+        "  AND lower(c2.char_key) = lower(c.char_key) "
+        "  ORDER BY c2.updated_at DESC, c2.id DESC LIMIT 1"
+        ") "
+        "ORDER BY c.updated_at DESC, c.char_name ASC;",
         -1, &stmt, NULL);
     if (rc != SQLITE_OK)
     {
