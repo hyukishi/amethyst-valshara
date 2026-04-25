@@ -11,6 +11,9 @@ const state = {
   pendingMove: null,
   automationRules: [],
   ruleFireLog: {},
+  activeItemTab: 'inventory',
+  selectedItem: null,
+  latestItems: { inventory: [], equipment: [] },
 };
 
 const els = {
@@ -35,6 +38,11 @@ const els = {
   automationCommand: document.getElementById('automation-command'),
   automationList: document.getElementById('automation-list'),
   refreshAutomation: document.getElementById('refresh-automation'),
+  refreshItems: document.getElementById('refresh-items'),
+  inventoryList: document.getElementById('inventory-list'),
+  equipmentList: document.getElementById('equipment-list'),
+  selectedItemName: document.getElementById('selected-item-name'),
+  selectedItemContext: document.getElementById('selected-item-context'),
   statusConnection: document.getElementById('status-connection'),
   statusPhase: document.getElementById('status-phase'),
   statusCharacter: document.getElementById('status-character'),
@@ -49,6 +57,7 @@ const els = {
   combatFeed: document.getElementById('combat-feed'),
   minimapTrail: document.getElementById('minimap-trail'),
   dynamicExits: document.getElementById('dynamic-exits'),
+  itemTabs: document.getElementById('item-tabs'),
 };
 
 const AUTOMATION_STORAGE_KEY = 'valshara-web-automation-rules';
@@ -252,6 +261,67 @@ function renderMapper(snapshot) {
   }
 }
 
+function itemCommand(action, itemName, tab) {
+  const safe = itemName.includes(' ') ? `"${itemName}"` : itemName;
+  if (action === 'look') return `look ${safe}`;
+  if (action === 'remove') return `remove ${safe}`;
+  if (action === 'drop') return `drop ${safe}`;
+  if (action === 'wear') {
+    return tab === 'equipment' ? `remove ${safe}` : `wear ${safe}`;
+  }
+  if (action === 'use') {
+    if (tab === 'equipment') return `remove ${safe}`;
+    return `use ${safe}`;
+  }
+  return `${action} ${safe}`;
+}
+
+function renderItemPanel(snapshot) {
+  const inventory = snapshot?.state?.inventoryItems || [];
+  const equipment = snapshot?.state?.equipmentItems || [];
+  state.latestItems = { inventory, equipment };
+  const lists = { inventory, equipment };
+  const currentItems = lists[state.activeItemTab] || [];
+  if (state.selectedItem && !currentItems.find((entry) => entry.name === state.selectedItem.name)) {
+    state.selectedItem = null;
+  }
+
+  const renderList = (container, items, tab) => {
+    if (!items.length) {
+      container.className = `item-list${state.activeItemTab === tab ? ' active' : ''}`;
+      container.innerHTML = '<div class="empty">No entries are available in this tab yet.</div>';
+      return;
+    }
+    container.className = `item-list${state.activeItemTab === tab ? ' active' : ''}`;
+    container.innerHTML = items.map((entry, index) => `
+      <article class="item-row${state.selectedItem?.name === entry.name && state.selectedItem?.tab === tab ? ' active' : ''}" data-item-name="${escapeAttr(entry.name)}" data-item-tab="${tab}">
+        <strong>${escapeHtml(entry.name)}</strong>
+        <span>${tab === 'equipment' ? 'equipped' : `item ${index + 1}`}</span>
+      </article>
+    `).join('');
+  };
+
+  renderList(els.inventoryList, inventory, 'inventory');
+  renderList(els.equipmentList, equipment, 'equipment');
+
+  document.querySelectorAll('#item-tabs .tab-link').forEach((button) => {
+    button.classList.toggle('active', button.dataset.itemTab === state.activeItemTab);
+  });
+
+  if (!state.selectedItem) {
+    els.selectedItemName.textContent = 'Nothing Selected';
+    els.selectedItemContext.textContent = state.activeItemTab === 'inventory'
+      ? 'Choose an inventory item to examine, use, wear, or drop it.'
+      : 'Choose an equipped item to examine or remove it.';
+  } else {
+    els.selectedItemName.textContent = state.selectedItem.name;
+    els.selectedItemContext.textContent = state.selectedItem.tab === 'inventory'
+      ? 'Ready for inventory actions.'
+      : 'Ready for equipment actions.';
+  }
+  refreshItemSelectionStyles();
+}
+
 function updateNavActive(panel) {
   document.querySelectorAll('.nav-link').forEach((button) => {
     button.classList.toggle('active', button.dataset.panel === panel);
@@ -377,6 +447,7 @@ async function startSession() {
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
   renderMapper(snapshot);
+  renderItemPanel(snapshot);
   renderWizard(snapshot);
   if (state.pollTimer) clearInterval(state.pollTimer);
   state.pollTimer = setInterval(pollSession, 700);
@@ -392,6 +463,7 @@ async function pollSession() {
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
   renderMapper(snapshot);
+  renderItemPanel(snapshot);
   renderWizard(snapshot);
   if (snapshot.state?.phase === 'playing') {
     updateNavActive('play');
@@ -416,6 +488,7 @@ async function sendInput(text) {
   renderFeed(els.channelFeed, snapshot.state?.chatLines || [], 'chat', 'Channel traffic will appear here.');
   renderFeed(els.combatFeed, snapshot.state?.combatLines || [], 'combat', 'Combat events will appear here.');
   renderMapper(snapshot);
+  renderItemPanel(snapshot);
   renderWizard(snapshot);
 }
 
@@ -548,6 +621,10 @@ els.refreshAutomation.addEventListener('click', () => {
   loadAutomationRules();
   renderAutomationRules();
 });
+els.refreshItems.addEventListener('click', async () => {
+  await sendInput('inventory');
+  await sendInput('equipment');
+});
 els.aliasList.addEventListener('click', (event) => {
   const edit = event.target.closest('[data-edit-alias]');
   const del = event.target.closest('[data-delete-alias]');
@@ -580,6 +657,52 @@ els.dynamicExits.addEventListener('click', (event) => {
   if (!button) return;
   state.pendingMove = button.dataset.exitCommand;
   sendInput(button.dataset.exitCommand);
+});
+
+els.itemTabs.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-item-tab]');
+  if (!button) return;
+  state.activeItemTab = button.dataset.itemTab;
+  if (state.selectedItem?.tab !== state.activeItemTab) {
+    state.selectedItem = null;
+  }
+  renderItemPanel({ state: state.latestItems });
+});
+
+function refreshItemSelectionStyles() {
+  document.querySelectorAll('.item-row').forEach((row) => {
+    row.classList.toggle(
+      'active',
+      state.selectedItem &&
+      row.dataset.itemName === state.selectedItem.name &&
+      row.dataset.itemTab === state.selectedItem.tab
+    );
+  });
+}
+
+els.inventoryList.addEventListener('click', (event) => {
+  const row = event.target.closest('.item-row');
+  if (!row) return;
+  state.selectedItem = { name: row.dataset.itemName, tab: 'inventory' };
+  refreshItemSelectionStyles();
+  els.selectedItemName.textContent = state.selectedItem.name;
+  els.selectedItemContext.textContent = 'Ready for inventory actions.';
+});
+
+els.equipmentList.addEventListener('click', (event) => {
+  const row = event.target.closest('.item-row');
+  if (!row) return;
+  state.selectedItem = { name: row.dataset.itemName, tab: 'equipment' };
+  refreshItemSelectionStyles();
+  els.selectedItemName.textContent = state.selectedItem.name;
+  els.selectedItemContext.textContent = 'Ready for equipment actions.';
+});
+
+document.querySelectorAll('[data-item-action]').forEach((button) => {
+  button.addEventListener('click', () => {
+    if (!state.selectedItem) return;
+    sendInput(itemCommand(button.dataset.itemAction, state.selectedItem.name, state.selectedItem.tab));
+  });
 });
 
 updateNavActive('connect');

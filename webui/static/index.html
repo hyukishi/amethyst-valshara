@@ -144,6 +144,32 @@
               <div id="combat-feed" class="feed-list empty">Combat events will appear here.</div>
             </section>
 
+            <section class="inventory-card">
+              <div class="panel-head compact">
+                <h2>Items & Equipment</h2>
+                <button id="refresh-items">Refresh</button>
+              </div>
+              <div class="tab-strip" id="item-tabs">
+                <button class="tab-link active" data-item-tab="inventory">Inventory</button>
+                <button class="tab-link" data-item-tab="equipment">Equipment</button>
+              </div>
+              <div class="item-layout">
+                <div id="inventory-list" class="item-list active"></div>
+                <div id="equipment-list" class="item-list"></div>
+                <div class="item-detail-card">
+                  <h3 id="selected-item-name">Nothing Selected</h3>
+                  <p id="selected-item-context" class="muted">Choose an item from either tab to act on it quickly.</p>
+                  <div class="item-actions">
+                    <button data-item-action="look">Examine</button>
+                    <button data-item-action="use">Use</button>
+                    <button data-item-action="wear">Wear</button>
+                    <button data-item-action="remove">Remove</button>
+                    <button data-item-action="drop" class="danger">Drop</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section class="nav-card">
               <div class="panel-head compact">
                 <h2>Navigation</h2>

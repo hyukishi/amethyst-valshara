@@ -372,6 +372,63 @@ def parse_room_summary(output: str):
     return {'name': room_name, 'exits': exits, 'exitList': exit_list}
 
 
+def _parse_listing_lines(lines):
+    entries = []
+    for line in lines:
+        cleaned = line.strip()
+        if not cleaned:
+            continue
+        cleaned = re.sub(r'^\[[^\]]+\]\s*', '', cleaned)
+        cleaned = re.sub(r'^[\(\[][^)\]]+[\)\]]\s*', '', cleaned)
+        cleaned = re.sub(r'^\d+\)\s*', '', cleaned)
+        cleaned = cleaned.strip('- ').strip()
+        if not cleaned:
+            continue
+        entries.append({'name': cleaned})
+    deduped = []
+    seen = set()
+    for entry in entries:
+        key = entry['name'].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(entry)
+    return deduped
+
+
+def parse_inventory_sections(output: str):
+    lines = output.splitlines()
+    inventory = []
+    equipment = []
+    for index, raw_line in enumerate(lines):
+        line = raw_line.strip()
+        if line.lower().startswith('you are carrying'):
+            chunk = []
+            for candidate in lines[index + 1:index + 40]:
+                stripped = candidate.strip()
+                if not stripped:
+                    break
+                if stripped.startswith('<') or stripped.startswith('Exits:') or stripped.startswith('You are using'):
+                    break
+                if stripped.endswith(':') and not stripped.startswith('('):
+                    break
+                chunk.append(stripped)
+            inventory = _parse_listing_lines(chunk)
+        if line.lower().startswith('you are using'):
+            chunk = []
+            for candidate in lines[index + 1:index + 40]:
+                stripped = candidate.strip()
+                if not stripped:
+                    break
+                if stripped.startswith('<') or stripped.startswith('Exits:') or stripped.startswith('You are carrying'):
+                    break
+                if stripped.endswith(':') and not stripped.startswith('('):
+                    break
+                chunk.append(stripped)
+            equipment = _parse_listing_lines(chunk)
+    return {'inventory': inventory, 'equipment': equipment}
+
+
 def parse_prompt(output: str):
     matches = re.findall(r'(?:^|\n)(<[^<>\n\r]+>)\s*$', output, re.MULTILINE)
     return matches[-1] if matches else ''
@@ -413,6 +470,7 @@ def detect_phase(output: str):
 
 def parse_state(output: str):
     prompt = parse_prompt(output)
+    items = parse_inventory_sections(output)
     state = {
         'phase': detect_phase(output),
         'prompt': prompt,
@@ -425,6 +483,8 @@ def parse_state(output: str):
         'chatLines': parse_chat_lines(output),
         'combatLines': parse_combat_lines(output),
         'room': parse_room_summary(output),
+        'inventoryItems': items['inventory'],
+        'equipmentItems': items['equipment'],
     }
     return state
 
